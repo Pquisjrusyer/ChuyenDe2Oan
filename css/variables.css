@@ -1,0 +1,104 @@
+/* ============================================
+   OAN Horror Game — CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* ---- Colors ---- */
+  --color-gold-400: #D9B74C;
+  --color-gold-500: #C4A43B;
+  --color-gold-600: #9C7E21;
+  --color-gold-700: #7A6319;
+  --color-red-900: #330000;
+  --color-red-800: #4A0000;
+  --color-red-700: #660000;
+  --color-red-600: #8B0000;
+  --color-bg-dark: #0A0000;
+  --color-bg-darker: #050000;
+  --color-bg-card: #0e0e0e;
+  --color-bg-input: #1a1a1a;
+  --color-surface: #111111;
+  --color-surface-elevated: #1a1010;
+  --color-overlay: rgba(3, 5, 8, 0.8);
+  --color-overlay-light: rgba(3, 5, 8, 0.5);
+  --color-white: #FFFFFF;
+  --color-gray-100: #F3F4F6;
+  --color-gray-200: #E5E7EB;
+  --color-gray-300: #D1D5DB;
+  --color-gray-400: #9CA3AF;
+  --color-gray-500: #6B7280;
+  --color-gray-600: #4B5563;
+  --color-gray-700: #374151;
+  --color-line-icon: #33363F;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #C4C7C8;
+  --color-text-muted: #9CA3AF;
+  --color-text-gold: #D9B74C;
+  --color-text-gold-dark: #9C7E21;
+
+  /* ---- Typography ---- */
+  --font-display: 'Space Mono', monospace;
+  --font-body: 'Roboto', sans-serif;
+  --font-iceberg: 'Iceberg', cursive, sans-serif;
+
+  /* Font sizes */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 28px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 64px;
+  --text-7xl: 80px;
+  --text-8xl: 96px;
+
+  /* ---- Spacing ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  /* ---- Layout ---- */
+  --max-width: 1920px;
+  --content-width: 1440px;
+  --content-padding: 80px;
+  --nav-height: 70px;
+
+  /* ---- Borders ---- */
+  --border-gold: 2px solid var(--color-gold-400);
+  --border-gold-thin: 1px solid var(--color-gold-400);
+  --border-red: 2px solid var(--color-red-900);
+  --border-subtle: 1px solid rgba(255, 255, 255, 0.1);
+  --border-input: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* ---- Shadows ---- */
+  --shadow-glow-gold: 0 0 20px rgba(217, 183, 76, 0.3);
+  --shadow-glow-red: 0 0 30px rgba(139, 0, 0, 0.5);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-deep: 0 8px 40px rgba(0, 0, 0, 0.8);
+
+  /* ---- Transitions ---- */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+  --transition-crawl: 800ms ease;
+
+  /* ---- Z-index ---- */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 20;
+  --z-navbar: 100;
+  --z-modal-backdrop: 200;
+  --z-modal: 300;
+  --z-tooltip: 400;
+}
