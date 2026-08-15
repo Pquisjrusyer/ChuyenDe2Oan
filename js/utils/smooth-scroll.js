@@ -69,98 +69,71 @@ export function initHomeScrollTriggers() {
     });
   }
 
-  // 2. Scene 1 Khám Phá
+  // 2. Scene 1 Khám Phá (Sticky Pinning ScrollTrigger Effect)
   const scene1 = document.querySelector('.scene-1-explore');
   if (scene1) {
     const s1Img = scene1.querySelector('.scene-explore-bg-img');
-    const s1Badge = scene1.querySelector('.scene-title-badge-centered');
+    const s1Badge = scene1.querySelector('.scene-title-badge-floating');
+
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: scene1,
+        start: 'top top',
+        end: '+=100%',
+        pin: true,
+        pinSpacing: true,
+        scrub: 1,
+        anticipatePin: 1,
+      },
+    });
+
     if (s1Img) {
-      gsap.fromTo(s1Img, 
-        { yPercent: -12, scale: 1.1 }, 
-        {
-          yPercent: 12,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: scene1,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          },
-        }
-      );
+      tl1.fromTo(s1Img, { scale: 1.15, yPercent: -4 }, { scale: 1, yPercent: 4, ease: 'none' }, 0);
     }
     if (s1Badge) {
-      gsap.fromTo(s1Badge, 
-        { opacity: 0, scale: 0.85, y: 50 }, 
-        {
-          opacity: 1,
-          scale: 1,
-          y: 0,
-          duration: 1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: scene1,
-            start: 'top 70%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
+      tl1
+        .fromTo(s1Badge, 
+          { opacity: 0, scale: 0.8, y: 50, filter: 'blur(6px)' }, 
+          { opacity: 1, scale: 1, y: 0, filter: 'blur(0px)', ease: 'power2.out' }, 
+          0.05
+        )
+        .to(s1Badge, { opacity: 1, scale: 1, ease: 'none' }, 0.7);
     }
   }
 
-  // 3. Scene 2 Hồi Hộp
+  // 3. Scene 2 Hồi Hộp (Sticky Pinning ScrollTrigger Effect)
   const scene2 = document.querySelector('.scene-2-suspense');
   if (scene2) {
     const s2Img = scene2.querySelector('.suspense-bg-img');
-    const s2Badge = scene2.querySelector('.scene-title-badge-centered');
+    const s2Badge = scene2.querySelector('.scene-title-badge-floating');
     const s2Glow = scene2.querySelector('.blood-red-glow');
+
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: scene2,
+        start: 'top top',
+        end: '+=100%',
+        pin: true,
+        pinSpacing: true,
+        scrub: 1,
+        anticipatePin: 1,
+      },
+    });
+
     if (s2Img) {
-      gsap.fromTo(s2Img, 
-        { yPercent: -12, scale: 1.1 }, 
-        {
-          yPercent: 12,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: scene2,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: true,
-          },
-        }
-      );
-    }
-    if (s2Badge) {
-      gsap.fromTo(s2Badge,
-        { opacity: 0, x: 80, filter: 'blur(6px)' },
-        {
-          opacity: 1,
-          x: 0,
-          filter: 'blur(0px)',
-          duration: 1.1,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: scene2,
-            start: 'top 70%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
+      tl2.fromTo(s2Img, { scale: 1.15, yPercent: -4 }, { scale: 1, yPercent: 4, ease: 'none' }, 0);
     }
     if (s2Glow) {
-      gsap.fromTo(s2Glow,
-        { opacity: 0.2 },
-        {
-          opacity: 0.85,
-          duration: 1.5,
-          repeat: -1,
-          yoyo: true,
-          ease: 'sine.inOut',
-          scrollTrigger: {
-            trigger: scene2,
-            start: 'top 80%',
-          },
-        }
-      );
+      tl2.fromTo(s2Glow, { opacity: 0.2 }, { opacity: 0.95, ease: 'sine.inOut' }, 0.1);
+    }
+    if (s2Badge) {
+      tl2
+        .fromTo(s2Badge,
+          { opacity: 0, x: 80, filter: 'blur(6px)' },
+          { opacity: 1, x: 0, filter: 'blur(0px)', ease: 'power2.out' },
+          0.05
+        )
+        .to(s2Badge, { opacity: 1, ease: 'none' }, 0.7);
     }
   }
 

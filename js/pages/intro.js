@@ -16,17 +16,17 @@ export async function renderIntro(container) {
         
         <!-- Background Banner (thumbnailintro 1) -->
         <div class="intro-bg-wrapper" data-node-id="706:1495">
-          <img src="/assets/05c144f89e828a494931997cf02740c7540f6f7a.png" alt="OAN Intro" class="intro-bg-image" />
+          <img src="./assets/05c144f89e828a494931997cf02740c7540f6f7a.png" alt="OAN Intro" class="intro-bg-image" />
         </div>
 
         <!-- Brand Logo (logo cd2 1) -->
         <div class="intro-logo-box" data-node-id="704:1445">
-          <img src="/assets/c734b8f8c6d11e95ee68a838154234358d976d54.svg" alt="OAN" class="intro-logo-svg" />
+          <img src="./assets/c734b8f8c6d11e95ee68a838154234358d976d54.svg" alt="OAN" class="intro-logo-svg" />
         </div>
 
         <!-- Cancel / Close Icon -->
         <button class="intro-cancel-btn" id="intro-cancel-btn" data-node-id="707:1560" title="Đóng">
-          <img src="/assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="✕" />
+          <img src="./assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="✕" />
         </button>
 
         <!-- Overlay Layers when Modal is active -->
@@ -66,8 +66,8 @@ export async function renderIntro(container) {
             <!-- Button 1: Tôi đã đủ 18 tuổi (708:633) -->
             <div class="btn-horror-choice" id="btn-over-18" data-node-id="I708:1274;708:633">
               <div class="horror-corners">
-                <img src="/assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
-                <img src="/assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
               </div>
               <div class="choice-field">
                 <span class="choice-text">Tôi đã đủ 18 tuổi</span>
@@ -77,8 +77,8 @@ export async function renderIntro(container) {
             <!-- Button 2: Tôi chưa đủ 18 tuổi (708:650) -->
             <div class="btn-horror-choice" id="btn-under-18" data-node-id="I708:1274;708:650">
               <div class="horror-corners">
-                <img src="/assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
-                <img src="/assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
               </div>
               <div class="choice-field">
                 <span class="choice-text">Tôi chưa đủ 18 tuổi</span>
@@ -125,8 +125,8 @@ export async function renderIntro(container) {
             <!-- Confirm Button (708:1111) -->
             <div class="btn-horror-choice btn-confirm-year" id="btn-confirm-year" data-node-id="I708:1618;708:1111">
               <div class="horror-corners">
-                <img src="/assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
-                <img src="/assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
               </div>
               <div class="choice-field">
                 <span class="choice-text">Xác nhận</span>
@@ -152,7 +152,7 @@ export async function renderIntro(container) {
 
           <div class="modal-heading-row centered-cancel" data-node-id="I708:1846;708:1227">
             <div class="underage-cancel-icon">
-              <img src="/assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="✕" />
+              <img src="./assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="✕" />
             </div>
             <h2 class="modal-title-text" data-node-id="I708:1846;708:1228">
               Xin lỗi, bạn chưa đủ<br/>tuổi để tiếp tục
@@ -169,8 +169,8 @@ export async function renderIntro(container) {
           <div class="modal-options-row">
             <div class="btn-horror-choice btn-underage-back" id="btn-underage-retry" data-node-id="I708:1846;708:1232">
               <div class="horror-corners">
-                <img src="/assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
-                <img src="/assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="c-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="c-right" />
               </div>
               <div class="choice-field">
                 <span class="choice-text">Xác nhận</span>
