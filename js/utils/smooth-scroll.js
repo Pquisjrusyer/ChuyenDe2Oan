@@ -178,44 +178,96 @@ export function initHomeScrollTriggers() {
     }
   }
 
-  // 5. Mechanics Tag & 3 Cards
+  // 5. Mechanics Tag & 3 Cards (Scroll in from respective sides, hold, then exit)
   const mechTag = document.querySelector('.mechanics-badge-container');
   if (mechTag) {
-    gsap.fromTo(mechTag,
-      { opacity: 0, y: 40, scale: 0.95 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.9,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: mechTag,
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
+    const tlTag = gsap.timeline({
+      scrollTrigger: {
+        trigger: mechTag,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+
+    tlTag
+      .fromTo(mechTag,
+        { x: -200, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(mechTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(mechTag,
+        { x: -200, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
   }
 
   const mechCards = document.querySelectorAll('.mechanic-card-item');
-  if (mechCards.length) {
-    gsap.fromTo(mechCards,
-      { opacity: 0, y: 60, scale: 0.92 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.9,
-        stagger: 0.18,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.mechanics-cards-flex',
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
+  if (mechCards.length >= 3) {
+    const cardLeft = mechCards[0];
+    const cardCenter = mechCards[1];
+    const cardRight = mechCards[2];
+
+    const tlCards = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.mechanics-cards-container',
+        start: 'top 90%',
+        end: 'bottom 12%',
+        scrub: 1.2,
+      },
+    });
+
+    // Card 1 (Left - ĐIỀU TRA): Enters from Left, holds, exits to Left
+    tlCards
+      .fromTo(cardLeft,
+        { x: -260, opacity: 0, scale: 0.86, rotateY: 15 },
+        { x: 0, opacity: 1, scale: 1, rotateY: 0, ease: 'power2.out' },
+        0
+      )
+      .to(cardLeft,
+        { x: 0, opacity: 1, scale: 1, rotateY: 0, ease: 'none' },
+        0.35
+      )
+      .to(cardLeft,
+        { x: -260, opacity: 0, scale: 0.86, rotateY: 15, ease: 'power2.in' },
+        0.7
+      );
+
+    // Card 2 (Center - GIẢI ĐỐ): Enters by fading in & expanding, holds, exits by fading out & shrinking
+    tlCards
+      .fromTo(cardCenter,
+        { opacity: 0, scale: 0.76, filter: 'blur(10px)', y: 60 },
+        { opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, ease: 'power2.out' },
+        0
+      )
+      .to(cardCenter,
+        { opacity: 1, scale: 1, filter: 'blur(0px)', y: 0, ease: 'none' },
+        0.35
+      )
+      .to(cardCenter,
+        { opacity: 0, scale: 0.76, filter: 'blur(10px)', y: -60, ease: 'power2.in' },
+        0.7
+      );
+
+    // Card 3 (Right - THU THẬP MANH MỐI): Enters from Right, holds, exits to Right
+    tlCards
+      .fromTo(cardRight,
+        { x: 260, opacity: 0, scale: 0.86, rotateY: -15 },
+        { x: 0, opacity: 1, scale: 1, rotateY: 0, ease: 'power2.out' },
+        0
+      )
+      .to(cardRight,
+        { x: 0, opacity: 1, scale: 1, rotateY: 0, ease: 'none' },
+        0.35
+      )
+      .to(cardRight,
+        { x: 260, opacity: 0, scale: 0.86, rotateY: -15, ease: 'power2.in' },
+        0.7
+      );
   }
 
   // 6. Horror Ribbon Line

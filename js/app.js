@@ -6,6 +6,7 @@ import { router } from './router.js';
 import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { initSmoothScroll, getLenis } from './utils/smooth-scroll.js';
+import { initBGM } from './utils/audio.js';
 
 // Page imports
 import { renderIntro } from './pages/intro.js';
@@ -57,6 +58,9 @@ function initApp() {
 
   // Initialize Lenis smooth scrolling engine
   const lenis = initSmoothScroll();
+
+  // Initialize global ambient background audio
+  initBGM();
 
   // Update navbar and footer on navigation
   router.onAfterNavigate = (hash) => {

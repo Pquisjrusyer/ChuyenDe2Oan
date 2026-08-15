@@ -2,6 +2,8 @@
    OAN Horror Game — Navbar Component (Figma 1363:86771)
    ============================================ */
 
+import { toggleBGM, isBGMPlaying, updateSoundButtonsUI } from '../utils/audio.js';
+
 export function renderNavbar(container, currentHash) {
   const showNavbar = !['intro', 'mail-confirm', 'fullscreen'].includes(currentHash);
   
@@ -136,10 +138,10 @@ export function renderNavbar(container, currentHash) {
   // Sound toggle effect
   const soundBtn = document.getElementById('sound-btn');
   if (soundBtn) {
-    let isPlaying = false;
-    soundBtn.addEventListener('click', () => {
-      isPlaying = !isPlaying;
-      soundBtn.classList.toggle('sound-muted', !isPlaying);
+    updateSoundButtonsUI(isBGMPlaying());
+    soundBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleBGM();
     });
   }
 }
