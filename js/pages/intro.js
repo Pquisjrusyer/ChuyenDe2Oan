@@ -8,7 +8,7 @@
    ============================================ */
 
 export async function renderIntro(container) {
-  let currentState = 'prompt'; // 'banner' | 'prompt' | 'birthyear' | 'underage'
+  let currentState = 'banner'; // 'banner' | 'prompt' | 'birthyear' | 'underage'
 
   function render() {
     container.innerHTML = `

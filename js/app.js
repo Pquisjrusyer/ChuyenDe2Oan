@@ -6,7 +6,7 @@ import { router } from './router.js';
 import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { initSmoothScroll, getLenis } from './utils/smooth-scroll.js';
-import { initBGM } from './utils/audio.js';
+import { initBGM, initSFX, handleRouteBGM } from './utils/audio.js';
 
 // Page imports
 import { renderIntro } from './pages/intro.js';
@@ -59,8 +59,26 @@ function initApp() {
   // Initialize Lenis smooth scrolling engine
   const lenis = initSmoothScroll();
 
-  // Initialize global ambient background audio
+  // Initialize global sound effects & background audio
+  initSFX();
   initBGM();
+
+  // Ensure ALL video elements across the whole website are strictly muted with 0 volume
+  function muteAllVideos() {
+    document.querySelectorAll('video').forEach(video => {
+      video.muted = true;
+      video.volume = 0;
+      video.defaultMuted = true;
+      video.removeAttribute('controls');
+    });
+  }
+
+  // Observe DOM mutations to mute any dynamically injected videos immediately
+  const videoObserver = new MutationObserver(() => {
+    muteAllVideos();
+  });
+  videoObserver.observe(document.body, { childList: true, subtree: true });
+  muteAllVideos();
 
   // Update navbar and footer on navigation
   router.onAfterNavigate = (hash) => {
@@ -73,6 +91,9 @@ function initApp() {
 
     renderNavbar(navbarRoot, hash);
     renderFooter(footerRoot, hash);
+    
+    // Update background music based on active route
+    handleRouteBGM(hash);
     
     // Update page title
     const titles = {

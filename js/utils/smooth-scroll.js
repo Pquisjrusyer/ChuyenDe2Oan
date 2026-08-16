@@ -367,25 +367,134 @@ export function initHomeScrollTriggers() {
     }
   }
 
-  // 8. Character Cards Grid
-  const charCards = document.querySelectorAll('.figma-char-card-item');
-  if (charCards.length) {
-    gsap.fromTo(charCards,
-      { opacity: 0, y: 70, scale: 0.94 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.9,
-        stagger: 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.character-cards-grid-figma',
-          start: 'top 80%',
-          toggleActions: 'play none none reverse',
-        },
-      }
-    );
+  // 7.5. Character Tag & Golden Line (Scroll in from the Right, hold, then exit - Section 5)
+  const charTagBox = document.querySelector('.char-tag-right-box');
+  const charTagLine = document.querySelector('.char-tag-gold-line');
+  const charTagWrapper = document.querySelector('.char-tag-right-container');
+
+  if (charTagWrapper) {
+    const tlCharTag = gsap.timeline({
+      scrollTrigger: {
+        trigger: charTagWrapper,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+
+    if (charTagBox) {
+      tlCharTag
+        .fromTo(charTagBox,
+          { x: 260, opacity: 0, scale: 0.9 },
+          { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+          0
+        )
+        .to(charTagBox,
+          { x: 0, opacity: 1, scale: 1, ease: 'none' },
+          0.35
+        )
+        .to(charTagBox,
+          { x: 260, opacity: 0, scale: 0.9, ease: 'power2.in' },
+          0.7
+        );
+    }
+
+    if (charTagLine) {
+      tlCharTag
+        .fromTo(charTagLine,
+          { x: 320, opacity: 0, scaleX: 0.85 },
+          { x: 0, opacity: 1, scaleX: 1, ease: 'power2.out' },
+          0.05
+        )
+        .to(charTagLine,
+          { x: 0, opacity: 1, scaleX: 1, ease: 'none' },
+          0.35
+        )
+        .to(charTagLine,
+          { x: 320, opacity: 0, scaleX: 0.85, ease: 'power2.in' },
+          0.7
+        );
+    }
+  }
+
+  // 8. Character Cards & Wanted Dossier Board ScrollTrigger (Figma 1301:82038 -> 1301:82037)
+  const charStage = document.querySelector('.char-interactive-stage-area');
+  const cardsFlexWrapper = document.querySelector('#char-cards-flex-wrapper');
+  const wantedBoard = document.querySelector('#wanted-dossier-board');
+
+  if (charStage && cardsFlexWrapper && wantedBoard) {
+    ScrollTrigger.create({
+      trigger: charStage,
+      start: 'top 35%',
+      onEnter: () => {
+        cardsFlexWrapper.classList.remove('state-default');
+        cardsFlexWrapper.classList.add('state-selected');
+        wantedBoard.classList.add('active-board');
+        wantedBoard.classList.remove('has-character-selected');
+        document.querySelectorAll('.char-card-interactive-item').forEach(c => {
+          c.classList.remove('active-selected');
+          c.classList.remove('blood-crossed');
+        });
+      },
+      onLeaveBack: () => {
+        cardsFlexWrapper.classList.remove('state-selected');
+        cardsFlexWrapper.classList.add('state-default');
+        wantedBoard.classList.remove('active-board');
+        wantedBoard.classList.remove('has-character-selected');
+        document.querySelectorAll('.char-card-interactive-item').forEach(c => {
+          c.classList.remove('active-selected');
+          c.classList.remove('blood-crossed');
+        });
+      },
+    });
+  }
+
+  // 8.5. NHÀ HỨA Subblock & Tag Scroll Animation (Matching "CƠ CHẾ TRÒ CHƠI" Tag scrub animation)
+  const nhaHuaTag = document.querySelector('.nha-hua-tag-left-box');
+  const nhaHuaHallway = document.querySelector('.nha-hua-fear-hallway-frame');
+  const nhaHuaBlock = document.querySelector('.nha-hua-fear-subblock');
+
+  if (nhaHuaTag) {
+    const tlNhaHua = gsap.timeline({
+      scrollTrigger: {
+        trigger: nhaHuaBlock || nhaHuaTag,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+
+    tlNhaHua
+      .fromTo(nhaHuaTag,
+        { x: -220, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(nhaHuaTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(nhaHuaTag,
+        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
+
+    if (nhaHuaHallway) {
+      tlNhaHua
+        .fromTo(nhaHuaHallway,
+          { x: 220, opacity: 0, scale: 0.94 },
+          { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+          0.05
+        )
+        .to(nhaHuaHallway,
+          { x: 0, opacity: 1, scale: 1, ease: 'none' },
+          0.35
+        )
+        .to(nhaHuaHallway,
+          { x: 220, opacity: 0, scale: 0.94, ease: 'power2.in' },
+          0.7
+        );
+    }
   }
 
   // 9. Philosophy Banner

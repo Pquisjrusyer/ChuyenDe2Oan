@@ -203,7 +203,7 @@ export async function renderHome(container) {
           <!-- Left: Intro Video Player (734:2235) -->
           <div class="intro-visual-preview" data-node-id="734:2235">
             <div class="intro-haunted-house-frame">
-              <video class="intro-preview-video" autoplay loop muted playsinline controls poster="./assets/intro-thumbnail.png">
+              <video class="intro-preview-video" autoplay loop muted playsinline poster="./assets/intro-thumbnail.png">
                 <source src="./assets/intro-game-video.mp4" type="video/mp4">
                 <source src="./assets/intro-game-video-2.mp4" type="video/mp4">
                 <img src="./assets/73240ed6730c1a47cf16f08d416c9d0f49066a7f.png" alt="Nhà Họ Hứa" class="preview-house-img" />
@@ -323,7 +323,7 @@ export async function renderHome(container) {
         <div class="container investigation-scene-box" data-node-id="782:1928">
           <div class="investigation-scene-visual" data-node-id="782:1926" id="investigation-screen-display">
             <!-- Video Mode (Default & Button 2) -->
-            <video class="investigation-scene-video" id="investigation-main-video" autoplay loop muted playsinline controls poster="./assets/9ebe0ae5ac1b5cafa35d80422474abb970a6f2e6.png">
+            <video class="investigation-scene-video" id="investigation-main-video" autoplay loop muted playsinline poster="./assets/9ebe0ae5ac1b5cafa35d80422474abb970a6f2e6.png">
               <source src="./assets/investigation-video.mp4" type="video/mp4">
               <source src="./assets/investigation-video-alt.mp4" type="video/mp4">
               <img src="./assets/9ebe0ae5ac1b5cafa35d80422474abb970a6f2e6.png" alt="Investigation Scene" class="room-scene-img" />
@@ -396,95 +396,229 @@ export async function renderHome(container) {
       </section>
 
       <!-- ========================================================
-           5. NHÂN VẬT SECTION (1363:86581)
+           5. NHÂN VẬT SECTION (Figma 1301:82038 / 1301:82041 / 1301:82039 / 1301:82040 / 1301:82036 / 1301:82042)
            ======================================================== -->
-      <section class="figma-characters-section" data-node-id="1363:86581">
-        <div class="container">
+      <section class="figma-characters-section" id="characters" data-node-id="1301:82038">
+        
+        <!-- Background Blood Texture Layers (1301:81881 / 1301:81882) -->
+        <div class="char-section-bg-blood" data-node-id="1301:81881">
+          <img src="./assets/ebce7d117f8249d5870594e3ee0332d470ca4e98.png" alt="" class="bg-blood-surface" data-node-id="1301:81882" />
+        </div>
+
+        <!-- Top Multiply Blend Layer (1301:82166) -->
+        <div class="char-section-multiply-overlay" data-node-id="1301:82166">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="multiply-overlay-img" />
+        </div>
+
+        <!-- Top-Right Tag Section (1301:81887) -->
+        <div class="char-tag-right-container" data-node-id="1301:81887">
+          <div class="char-tag-right-box" data-node-id="1301:81888">
+            <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="char-tag-bg-img" />
+            <div class="char-tag-text-wrap">
+              <h2 class="char-tag-title-main">NHÂN VẬT</h2>
+              <p class="char-tag-sub-desc">Xây dựng dựa trên truyền thuyết</p>
+            </div>
+          </div>
+          <div class="char-tag-gold-line" data-node-id="1301:81884">
+            <img src="./assets/4499824ab8f777971d907526193fbb60268e565b.svg" alt="" />
+          </div>
+        </div>
+
+        <!-- Interactive Main Character Stage Area (1301:81896) -->
+        <div class="char-interactive-stage-area" data-node-id="1301:81896">
           
-          <!-- Tag section title -->
-          <div class="tag-section-badge-wrapper">
-            <div class="figma-tag-section">
-              <div class="tag-section-bg">
-                <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
-              </div>
-              <div class="tag-section-content">
-                <h2 class="tag-heading-bold">NHÂN VẬT</h2>
-                <p class="tag-subheading-light">Bi kịch trong từng lời nguyền cổ truyền</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- 4 Character Cards with Real Figma Artwork -->
-          <div class="character-cards-grid-figma">
+          <!-- Cards Wrapper: Starts in state-default, transitions to state-selected when clicked -->
+          <div class="char-cards-flex-wrapper state-default" id="char-cards-flex-wrapper" data-node-id="1301:81897">
             
-            <!-- 1. Minh (node 823:1336) -->
-            <div class="figma-char-card-item" data-node-id="823:1336" onclick="window.location.hash='character?id=minh'">
-              <div class="char-portrait-box" data-node-id="815:737">
-                <img src="./assets/72cb7e1d35b96eac40bc86451109f1fb5fc22dd7.png" alt="Minh" class="char-photo-img" />
+            <!-- 1. Minh (1301:81903) -->
+            <div class="char-card-interactive-item" data-char="minh" data-node-id="1301:81903">
+              <div class="card-portrait-stage">
+                <img src="./assets/72cb7e1d35b96eac40bc86451109f1fb5fc22dd7.png" alt="Minh" class="card-portrait-image" />
               </div>
-              <div class="char-name-plate" data-node-id="815:1274">
-                <div class="plate-background-group">
-                  <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="plate-3element" />
-                  <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="plate-mask-texture" />
-                </div>
-                <h3 class="char-title-name" data-node-id="815:739">Minh</h3>
-                <p class="char-desc-role" data-node-id="815:740">Một Blogger đi khám phá</p>
+              <div class="card-nameplate-stage">
+                <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="nameplate-bg-element" />
+                <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="nameplate-mask-texture" />
+                <h3 class="card-char-name-text">Minh</h3>
+                <p class="card-char-role-text">Một Blogger đi khám phá</p>
               </div>
-            </div>
-
-            <!-- 2. Khang (node 823:1334) -->
-            <div class="figma-char-card-item" data-node-id="823:1334" onclick="window.location.hash='character?id=minh'">
-              <div class="char-portrait-box" data-node-id="823:1300">
-                <img src="./assets/06108d6a32c6b959fbb88b8e7fcc55f617e6b82d.png" alt="Khang" class="char-photo-img" />
-              </div>
-              <div class="char-name-plate" data-node-id="823:1303">
-                <div class="plate-background-group">
-                  <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="plate-3element" />
-                  <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="plate-mask-texture" />
-                </div>
-                <h3 class="char-title-name" data-node-id="823:1310">Khang</h3>
-                <p class="char-desc-role" data-node-id="823:1312">“Bạn của Minh, cùng Minh đi khám phá”</p>
+              <div class="char-card-blood-cross-marker">
+                <svg viewBox="0 0 200 220" class="blood-cross-svg">
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                </svg>
               </div>
             </div>
 
-            <!-- 3. Hứa Văn Lộc (node 823:1335) -->
-            <div class="figma-char-card-item" data-node-id="823:1335" onclick="window.location.hash='character?id=hua-an'">
-              <div class="char-portrait-box" data-node-id="815:1276">
-                <img src="./assets/24688bb05ebb5d4e8b2b074d60bc3cc966dfa17c.png" alt="Hứa Văn Lộc" class="char-photo-img" />
+            <!-- 2. Khang (1301:81905) -->
+            <div class="char-card-interactive-item" data-char="khang" data-node-id="1301:81905">
+              <div class="card-portrait-stage">
+                <img src="./assets/06108d6a32c6b959fbb88b8e7fcc55f617e6b82d.png" alt="Khang" class="card-portrait-image" />
               </div>
-              <div class="char-name-plate" data-node-id="815:1278">
-                <div class="plate-background-group">
-                  <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="plate-3element" />
-                  <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="plate-mask-texture" />
-                </div>
-                <h3 class="char-title-name" data-node-id="815:1285">Hứa Văn Lộc</h3>
-                <p class="char-desc-role" data-node-id="815:1287">“Gia trưởng, quyền lực, ám ảnh việc bảo vệ dòng họ”</p>
+              <div class="card-nameplate-stage">
+                <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="nameplate-bg-element" />
+                <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="nameplate-mask-texture" />
+                <h3 class="card-char-name-text">Khang</h3>
+                <p class="card-char-role-text">“Bạn của Minh, cùng Minh đi khám phá”</p>
+              </div>
+              <div class="char-card-blood-cross-marker">
+                <svg viewBox="0 0 200 220" class="blood-cross-svg">
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                </svg>
               </div>
             </div>
 
-            <!-- 4. Hứa Ngọc (node 823:1333) -->
-            <div class="figma-char-card-item" data-node-id="823:1333" onclick="window.location.hash='character?id=female'">
-              <div class="char-portrait-box" data-node-id="823:1314">
-                <img src="./assets/2c9d80e984a0e3cf97699642b5308eecc1791abe.png" alt="Hứa Ngọc" class="char-photo-img" />
+            <!-- 3. Hứa Văn Lộc (1301:81907) -->
+            <div class="char-card-interactive-item" data-char="hua-van-loc" data-node-id="1301:81907">
+              <div class="card-portrait-stage">
+                <img src="./assets/24688bb05ebb5d4e8b2b074d60bc3cc966dfa17c.png" alt="Hứa Văn Lộc" class="card-portrait-image" />
               </div>
-              <div class="char-name-plate" data-node-id="823:1318">
-                <div class="plate-background-group">
-                  <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="plate-3element" />
-                  <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="plate-mask-texture" />
-                </div>
-                <h3 class="char-title-name" data-node-id="823:1325">Hứa Ngọc</h3>
-                <p class="char-desc-role" data-node-id="823:1327">“người phụ nữ mặc cảm tội lỗi suốt 20 năm”</p>
+              <div class="card-nameplate-stage">
+                <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="nameplate-bg-element" />
+                <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="nameplate-mask-texture" />
+                <h3 class="card-char-name-text">Hứa Văn Lộc</h3>
+                <p class="card-char-role-text">“Gia trưởng, quyền lực, ám ảnh việc bảo vệ dòng họ”</p>
+              </div>
+              <div class="char-card-blood-cross-marker">
+                <svg viewBox="0 0 200 220" class="blood-cross-svg">
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- 4. Hứa Ngọc (1301:81909) -->
+            <div class="char-card-interactive-item" data-char="hua-ngoc" data-node-id="1301:81909">
+              <div class="card-portrait-stage">
+                <img src="./assets/2c9d80e984a0e3cf97699642b5308eecc1791abe.png" alt="Hứa Ngọc" class="card-portrait-image" />
+              </div>
+              <div class="card-nameplate-stage">
+                <img src="./assets/b6f87ac59763ae763887dcb36e77095e4736f402.svg" alt="" class="nameplate-bg-element" />
+                <img src="./assets/b54688f4a2177859de11c78883b411be33182ae4.png" alt="" class="nameplate-mask-texture" />
+                <h3 class="card-char-name-text">Hứa Ngọc</h3>
+                <p class="card-char-role-text">“người phụ nữ mặc cảm tội lỗi suốt 20 năm”</p>
+              </div>
+              <div class="char-card-blood-cross-marker">
+                <svg viewBox="0 0 200 220" class="blood-cross-svg">
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 30 20 Q 95 105 170 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#7a0000" stroke-width="16" stroke-linecap="round" fill="none" opacity="0.85" />
+                  <path d="M 170 20 Q 105 105 30 200" stroke="#d60000" stroke-width="9" stroke-linecap="round" fill="none" opacity="0.95" />
+                </svg>
               </div>
             </div>
           </div>
 
-          <!-- Philosophy statement banner -->
-          <div class="character-philosophy-banner">
-            <h3 class="philosophy-title">NHÂN VẬT ĐƯỢC THIẾT KẾ DỰA THEO YẾU TỐ KINH DỊ</h3>
-            <p class="philosophy-sub">Nhân vật mang yếu tố tâm linh vào câu chuyện kinh dị</p>
+          <!-- WANTED DOSSIER BOARD COMPONENT (Figma 1301:79930 / wanted) -->
+          <div class="wanted-dossier-board-container" id="wanted-dossier-board" data-node-id="1301:79930">
+            <img src="./assets/009598e5de655ae1ea0ffe52379d05a6fd18d6a7.png" alt="" class="wanted-board-bg-parchment" data-node-id="1301:79803" />
+            
+            <!-- Cancel Button (1301:79835) -->
+            <button class="wanted-board-cancel-btn" id="wanted-board-cancel-btn" data-node-id="1301:79835">
+              <img src="./assets/9517f12ed9631b397b808b649565065da918966f.svg" alt="Close" />
+            </button>
+
+            <!-- DEFAULT VIEW (1301:80823): Only big text centered -->
+            <div class="wanted-board-default-view">
+              <p class="wanted-board-callout-text" data-node-id="1301:79929">
+                CHỌN ĐỂ XEM HỒ SƠ NHÂN VẬT
+              </p>
+            </div>
+
+            <!-- DETAILS DOSSIER VIEW (Figma 1301:81315, 1301:81461, 1301:81771, 1301:81608) -->
+            <div class="wanted-board-details-view" id="wanted-board-details-view">
+              <h3 class="wanted-dossier-header-title">HỒ SƠ NHÂN VẬT</h3>
+
+              <div class="wanted-dossier-top-row">
+                <!-- Left: Photo in clip frame -->
+                <div class="wanted-dossier-photo-frame">
+                  <img src="./assets/72cb7e1d35b96eac40bc86451109f1fb5fc22dd7.png" alt="Portrait" class="dossier-char-photo-img" id="dossier-char-photo" />
+                </div>
+
+                <!-- Right: Meta Info -->
+                <div class="wanted-dossier-meta-col">
+                  <h2 class="dossier-meta-name" id="dossier-meta-name">MINH</h2>
+                  <p class="dossier-meta-stat" id="dossier-meta-age">24 Tuổi</p>
+                  <p class="dossier-meta-stat" id="dossier-meta-role">Blogger</p>
+                  <p class="dossier-meta-stat" id="dossier-meta-sub">Người khám phá</p>
+                  <p class="dossier-meta-quote" id="dossier-meta-quote">“ Tôi chỉ muốn biết điều gì đã xảy ra trong ngôi nhà đó “</p>
+                </div>
+              </div>
+
+              <!-- Bottom Sections -->
+              <div class="wanted-dossier-bottom-content">
+                <div class="dossier-section-entry">
+                  <h4 class="dossier-section-heading">THÔNG TIN</h4>
+                  <p class="dossier-section-paragraph" id="dossier-section-info">
+                    Là một blogger làm phim tài liệu. Đến Nhà Hứa để tìm cảm hứng mới cho dự án, nhưng không ai biết điều gì xảy ra sau đó.
+                  </p>
+                </div>
+
+                <div class="dossier-section-entry">
+                  <h4 class="dossier-section-heading">QUAN HỆ</h4>
+                  <p class="dossier-section-paragraph dossier-relation-line" id="dossier-section-relation">
+                    Khang . . . . . . . . . . . . . . . Bạn đồng hành
+                  </p>
+                </div>
+
+                <div class="dossier-section-entry">
+                  <h4 class="dossier-section-heading">LẦN CUỐI ĐƯỢC TÌM THẤY</h4>
+                  <p class="dossier-section-paragraph" id="dossier-section-lastseen">
+                    Chưa rõ thông tin
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Button: ĐÓNG HỒ SƠ (1301:79880 / HSBtn) -->
+            <button class="wanted-board-hsbtn-close" id="wanted-board-close-btn" data-node-id="1301:79880">
+              <span class="hsbtn-text" data-node-id="1301:79876">ĐÓNG HỒ SƠ</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle Horror Typography Statement (1301:82184 & 1301:82191) -->
+        <div class="char-statement-block">
+          <h3 class="char-statement-title" data-node-id="1301:82184">NHÂN VẬT ĐƯỢC THIẾT KẾ DỰA THEO YẾU TỐ KINH DỊ</h3>
+          <p class="char-statement-sub" data-node-id="1301:82191">Nhân vật mang yếu tố của câu chuyện kinh dị</p>
+        </div>
+
+        <!-- Sub-Section: NHÀ HỨA (1301:81889 & 1301:81891) -->
+        <div class="nha-hua-fear-subblock">
+          
+          <!-- Left Tag Section (1301:81889) -->
+          <div class="nha-hua-tag-left-box" data-node-id="1301:81889">
+            <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="char-tag-bg-img" />
+            <div class="char-tag-text-wrap">
+              <h2 class="char-tag-title-main">NHÀ HỨA</h2>
+              <p class="char-tag-sub-desc">Mở màn cho kết cục !!!</p>
+            </div>
+          </div>
+
+          <!-- Hallway Image Frame (1301:81891) -->
+          <div class="nha-hua-fear-hallway-frame" data-node-id="1301:81891">
+            <img src="./assets/0fe014ce699e815b5f0c37ab312e59523a60c820.png" alt="Nhà Hứa" class="hallway-bg-img" data-node-id="1301:81892" />
+            <div class="hallway-overlay-dark"></div>
+            <h2 class="hallway-fear-text" data-node-id="1301:81893">Nỗi sợ bao trùm</h2>
           </div>
         </div>
       </section>
+
+      <!-- ========================================================
+           IN-PAGE CHARACTER DOSSIER POPUP MODAL (1301:79930 / 1332:82867)
+           ======================================================== -->
+      <div id="home-char-modal-overlay" class="home-char-modal-overlay hidden">
+        <div class="home-char-modal-dialog">
+          <button id="home-char-modal-close-btn" class="home-char-modal-close" title="Đóng hồ sơ">✕</button>
+          <div id="home-char-modal-content" class="home-char-modal-body"></div>
+        </div>
+      </div>
 
       <!-- ========================================================
            6. NHÀ HỨA & MEDIA GALLERY (1363:86582)
@@ -739,10 +873,13 @@ export async function renderHome(container) {
     });
   });
 
-  // Auto-play all background videos seamlessly
+  // Auto-play all background videos seamlessly with strict mute
   const bgVideos = container.querySelectorAll('video');
   bgVideos.forEach(v => {
     v.muted = true;
+    v.volume = 0;
+    v.defaultMuted = true;
+    v.removeAttribute('controls');
     v.play().catch(e => console.log('Autoplay handled:', e));
   });
 
@@ -782,6 +919,393 @@ export async function renderHome(container) {
     });
   });
 
+  // ========================================================
+  // IN-PAGE CHARACTER DOSSIER MODAL LOGIC (1301:82044 / 1332:82867)
+  // ========================================================
+  const charCards = container.querySelectorAll('.figma-char-card-item');
+  const modalOverlay = container.querySelector('#home-char-modal-overlay');
+  const modalCloseBtn = container.querySelector('#home-char-modal-close-btn');
+  const modalBody = container.querySelector('#home-char-modal-content');
+
+  const characterData = {
+    minh: {
+      id: 'minh',
+      name: 'MINH',
+      role: 'Blogger',
+      sub: 'Người khám phá',
+      quote: '“ Tôi chỉ muốn biết điều  gì đã xảy ra trong ngôi nhà đó “',
+      age: '24 Tuổi',
+      info: 'Là một blogger làm phim tài liệu. Đến Nhà Hứa để tìm cảm hứng mới cho dự án, nhưng không ai biết điều gì xảy ra sau đó.',
+      relation: 'Khang . . . . . . . . . . . . . . . Bạn đồng hành',
+      lastSeen: 'Chưa rõ thông tin',
+      is3D: true,
+      portrait: './assets/72cb7e1d35b96eac40bc86451109f1fb5fc22dd7.png'
+    },
+    khang: {
+      id: 'khang',
+      name: 'KHANG',
+      role: 'Sinh viên kỹ thuật',
+      sub: 'Người đồng hành',
+      quote: '“ Bạn của Minh, cùng Minh đi khám phá những bí ẩn trong ngôi nhà “',
+      age: '24 Tuổi',
+      info: 'Bạn thân từ đại học của Minh, thông thạo thiết bị kỹ thuật điện tử. Đi cùng Minh để hỗ trợ quay phim và bảo vệ bạn.',
+      relation: 'Minh . . . . . . . . . . . . . . . Bạn đồng hành',
+      lastSeen: 'Chưa rõ thông tin',
+      is3D: false,
+      portrait: './assets/06108d6a32c6b959fbb88b8e7fcc55f617e6b82d.png'
+    },
+    'hua-van-loc': {
+      id: 'hua-van-loc',
+      name: 'HỨA VĂN LỘC',
+      role: 'Trưởng tộc',
+      sub: 'Chủ nhân Hứa gia',
+      quote: '“ Gia trưởng, quyền lực, ám ảnh việc bảo vệ dòng họ bằng mọi giá “',
+      age: '58 Tuổi',
+      info: 'Từng là một thương nhân giàu có nức tiếng vùng Sài Gòn xưa. Sự sụp đổ của gia tộc cùng cái chết bí ẩn của cô con gái út đã biến ông trở thành một kẻ bảo thủ, tàn nhẫn.',
+      relation: 'Hứa Ngọc . . . . . . . . . . . . . Con gái út',
+      lastSeen: 'Tại gian phòng thờ chính Hứa gia',
+      is3D: false,
+      portrait: './assets/24688bb05ebb5d4e8b2b074d60bc3cc966dfa17c.png'
+    },
+    'hua-ngoc': {
+      id: 'hua-ngoc',
+      name: 'HỨA NGỌC',
+      role: 'Tiểu thư',
+      sub: 'Oán hồn nữ',
+      quote: '“ Người phụ nữ mặc cảm tội lỗi suốt 20 năm, linh hồn vương vấn chốn trần gian “',
+      age: '19 Tuổi',
+      info: 'Con gái út của ông Hứa Văn Lộc, mắc bệnh hiểm nghèo và bị giam cầm trong căn phòng áp mái suốt nhiều năm cho đến khi qua đời trong cô độc và oán hận.',
+      relation: 'Hứa Văn Lộc . . . . . . . . . . . Cha',
+      lastSeen: 'Căn phòng áp mái tầng 3',
+      is3D: false,
+      portrait: './assets/2c9d80e984a0e3cf97699642b5308eecc1791abe.png'
+    }
+  };
+
+  let turntableInterval = null;
+  let currentFrameIndex = 1;
+
+  function renderModalDossier(charKey) {
+    const char = characterData[charKey] || characterData.minh;
+    if (turntableInterval) clearInterval(turntableInterval);
+
+    modalBody.innerHTML = `
+      <div class="dossier-char-tabs-strip">
+        <button class="dossier-tab-btn ${char.id === 'minh' ? 'active' : ''}" data-key="minh">Minh</button>
+        <button class="dossier-tab-btn ${char.id === 'khang' ? 'active' : ''}" data-key="khang">Khang</button>
+        <button class="dossier-tab-btn ${char.id === 'hua-van-loc' ? 'active' : ''}" data-key="hua-van-loc">Hứa Văn Lộc</button>
+        <button class="dossier-tab-btn ${char.id === 'hua-ngoc' ? 'active' : ''}" data-key="hua-ngoc">Hứa Ngọc</button>
+      </div>
+
+      <div class="dossier-grid-layout">
+        <!-- LEFT COLUMN -->
+        <div class="dossier-col-left">
+          <span class="dossier-role-tag">${char.role}</span>
+          <h1 class="dossier-char-name">${char.name}</h1>
+          <div class="dossier-class-tag">
+            <span>${char.class}</span>
+          </div>
+          <blockquote class="dossier-char-quote">${char.quote}</blockquote>
+          <div class="dossier-actions-group">
+            <a href="#storyline" class="btn-dossier-action btn-dossier-gold">KHÁM PHÁ CỐT TRUYỆN</a>
+            <a href="#trailer" class="btn-dossier-action btn-dossier-ghost">XEM TRAILER</a>
+            <button class="btn-dossier-action btn-dossier-gold" id="btn-modal-close-dossier" style="margin-top:8px;">ĐÓNG HỒ SƠ</button>
+          </div>
+        </div>
+
+        <!-- CENTER COLUMN -->
+        <div class="dossier-col-center">
+          <div class="dossier-visual-frame">
+            ${char.is3D ? `
+              <div class="turntable-3d-wrapper" id="home-turntable-box">
+                <img src="./assets/minh-3d/minh_00001.png" alt="${char.name}" id="home-turntable-frame" class="turntable-img" />
+                <div class="turntable-hint">
+                  <span>↻ Kéo rê chuột để xoay 360°</span>
+                </div>
+              </div>
+            ` : `
+              <div class="dossier-static-portrait">
+                <img src="${char.portrait}" alt="${char.name}" class="static-portrait-img" />
+              </div>
+            `}
+
+            <div class="dossier-outfits-row">
+              <button class="outfit-tab-btn active">Trang phục 1</button>
+              <button class="outfit-tab-btn">Trang phục 2</button>
+              <button class="outfit-tab-btn">Trang phục 3</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="dossier-col-right">
+          <div class="dossier-info-card">
+            <div class="info-card-header">
+              <h3 class="info-card-title">THÔNG TIN CƠ BẢN</h3>
+            </div>
+            <div class="info-card-body">
+              <div class="info-data-row">
+                <span class="info-data-label">Tuổi</span>
+                <span class="info-data-value">${char.age}</span>
+              </div>
+              <div class="info-data-row">
+                <span class="info-data-label">Chiều cao</span>
+                <span class="info-data-value">${char.height}</span>
+              </div>
+              <div class="info-data-row">
+                <span class="info-data-label">Quê quán</span>
+                <span class="info-data-value">${char.origin}</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dossier-info-card">
+            <div class="info-card-header">
+              <h3 class="info-card-title">LỚP NHÂN VẬT</h3>
+            </div>
+            <div class="info-card-body tags-grid">
+              ${char.classes.map(c => `
+                <div class="char-class-badge">
+                  <span>${c}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="dossier-info-card">
+            <div class="info-card-header">
+              <h3 class="info-card-title">HỒ SƠ TÓM TẮT</h3>
+            </div>
+            <div class="info-card-body">
+              <p class="summary-paragraph-text">${char.summary}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Reattach modal tabs
+    const tabBtns = modalBody.querySelectorAll('.dossier-tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-key');
+        renderModalDossier(key);
+      });
+    });
+
+    // Close button inside modal actions
+    const closeBtnDossier = modalBody.querySelector('#btn-modal-close-dossier');
+    if (closeBtnDossier) {
+      closeBtnDossier.addEventListener('click', () => {
+        if (modalOverlay) modalOverlay.classList.add('hidden');
+        if (turntableInterval) clearInterval(turntableInterval);
+      });
+    }
+
+    // Outfit tabs
+    const outfitBtns = modalBody.querySelectorAll('.outfit-tab-btn');
+    outfitBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        outfitBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+
+    // 3D Turntable rotation for Minh
+    if (char.is3D) {
+      const turntableBox = modalBody.querySelector('#home-turntable-box');
+      const turntableImg = modalBody.querySelector('#home-turntable-frame');
+      const totalFrames = 82;
+      let isDragging = false;
+      let startX = 0;
+      let lastFrame = 1;
+
+      const setFrame = (idx) => {
+        let cleanIdx = ((idx - 1) % totalFrames) + 1;
+        if (cleanIdx < 1) cleanIdx += totalFrames;
+        const padStr = String(cleanIdx).padStart(5, '0');
+        if (turntableImg) {
+          turntableImg.src = `./assets/minh-3d/minh_${padStr}.png`;
+        }
+        currentFrameIndex = cleanIdx;
+      };
+
+      if (turntableBox) {
+        turntableBox.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          startX = e.clientX;
+          lastFrame = currentFrameIndex;
+          if (turntableInterval) clearInterval(turntableInterval);
+        });
+
+        window.addEventListener('mousemove', (e) => {
+          if (!isDragging) return;
+          const deltaX = e.clientX - startX;
+          const frameOffset = Math.round(deltaX / 8);
+          setFrame(lastFrame + frameOffset);
+        });
+
+        window.addEventListener('mouseup', () => {
+          if (isDragging) {
+            isDragging = false;
+            startAutoRotate();
+          }
+        });
+
+        // Touch events
+        turntableBox.addEventListener('touchstart', (e) => {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+          lastFrame = currentFrameIndex;
+          if (turntableInterval) clearInterval(turntableInterval);
+        }, { passive: true });
+
+        window.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          const deltaX = e.touches[0].clientX - startX;
+          const frameOffset = Math.round(deltaX / 8);
+          setFrame(lastFrame + frameOffset);
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => {
+          if (isDragging) {
+            isDragging = false;
+            startAutoRotate();
+          }
+        });
+      }
+
+      function startAutoRotate() {
+        if (turntableInterval) clearInterval(turntableInterval);
+        turntableInterval = setInterval(() => {
+          if (!isDragging) {
+            setFrame(currentFrameIndex + 1);
+          }
+        }, 90);
+      }
+
+      startAutoRotate();
+    }
+  }
+
+  // ========================================================
+  // FIGMA PROTOTYPE 7-VARIANT INTERACTIVE LOGIC (1301:82038 -> 1301:82041/39/40/36 -> 1301:82042)
+  // ========================================================
+  const interactiveCards = container.querySelectorAll('.char-card-interactive-item');
+  const cardsFlexWrapper = container.querySelector('#char-cards-flex-wrapper');
+  const wantedBoard = container.querySelector('#wanted-dossier-board');
+  const wantedCancelBtn = container.querySelector('#wanted-board-cancel-btn');
+  const wantedCloseBtn = container.querySelector('#wanted-board-close-btn');
+  const wantedCoverTrigger = container.querySelector('#wanted-cover-trigger');
+  const wantedCoverArt = container.querySelector('#wanted-cover-art');
+  let currentActiveChar = 'minh';
+
+  function activateCharacterVariant(charKey) {
+    currentActiveChar = charKey;
+    const data = characterData[charKey] || characterData.minh;
+    if (cardsFlexWrapper) {
+      cardsFlexWrapper.classList.remove('state-default');
+      cardsFlexWrapper.classList.add('state-selected');
+    }
+
+    interactiveCards.forEach(card => {
+      const k = card.getAttribute('data-char');
+      if (k === charKey) {
+        card.classList.add('active-selected');
+        card.classList.remove('blood-crossed');
+      } else {
+        card.classList.remove('active-selected');
+        card.classList.add('blood-crossed');
+      }
+    });
+
+    const photoElem = container.querySelector('#dossier-char-photo');
+    const nameElem = container.querySelector('#dossier-meta-name');
+    const ageElem = container.querySelector('#dossier-meta-age');
+    const roleElem = container.querySelector('#dossier-meta-role');
+    const subElem = container.querySelector('#dossier-meta-sub');
+    const quoteElem = container.querySelector('#dossier-meta-quote');
+    const infoElem = container.querySelector('#dossier-section-info');
+    const relElem = container.querySelector('#dossier-section-relation');
+    const lastElem = container.querySelector('#dossier-section-lastseen');
+
+    if (photoElem) {
+      photoElem.src = data.portrait;
+      photoElem.alt = data.name;
+    }
+    if (nameElem) nameElem.textContent = data.name;
+    if (ageElem) ageElem.textContent = data.age;
+    if (roleElem) roleElem.textContent = data.role;
+    if (subElem) subElem.textContent = data.sub;
+    if (quoteElem) quoteElem.textContent = data.quote;
+    if (infoElem) infoElem.textContent = data.info;
+    if (relElem) relElem.textContent = data.relation;
+    if (lastElem) lastElem.textContent = data.lastSeen;
+
+    if (wantedBoard) {
+      wantedBoard.classList.add('active-board');
+      wantedBoard.classList.add('has-character-selected');
+    }
+  }
+
+  function resetCharacterSectionToDefault() {
+    if (wantedBoard) {
+      wantedBoard.classList.remove('active-board');
+      wantedBoard.classList.remove('has-character-selected');
+    }
+    if (cardsFlexWrapper) {
+      cardsFlexWrapper.classList.remove('state-selected');
+      cardsFlexWrapper.classList.add('state-default');
+    }
+    interactiveCards.forEach(card => {
+      card.classList.remove('active-selected');
+      card.classList.remove('blood-crossed');
+    });
+  }
+
+  // Clicking a character card switches variant
+  interactiveCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      e.preventDefault();
+      const charKey = card.getAttribute('data-char') || 'minh';
+      activateCharacterVariant(charKey);
+    });
+  });
+
+  // Clicking "ĐÓNG HỒ SƠ" or Cancel '✕' on Wanted Board resets to default state (1301:82042 -> 1301:82038)
+  if (wantedCancelBtn) {
+    wantedCancelBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      resetCharacterSectionToDefault();
+    });
+  }
+
+  if (wantedCloseBtn) {
+    wantedCloseBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      resetCharacterSectionToDefault();
+    });
+  }
+
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', () => {
+      if (modalOverlay) modalOverlay.classList.add('hidden');
+      if (turntableInterval) clearInterval(turntableInterval);
+    });
+  }
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.add('hidden');
+        if (turntableInterval) clearInterval(turntableInterval);
+      }
+    });
+  }
+
   // Initialize GSAP ScrollTrigger animations
   initHomeScrollTriggers();
 }
+
