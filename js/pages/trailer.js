@@ -3,6 +3,7 @@
    ============================================ */
 
 import { pauseBGM, playBGM, isBGMPlaying } from '../utils/audio.js';
+import { initTrailerScrollTriggers } from '../utils/smooth-scroll.js';
 
 export async function renderTrailer(container) {
   const galleryImages = [
@@ -18,13 +19,21 @@ export async function renderTrailer(container) {
     <div class="figma-trailer-page" data-node-id="928:1608">
       
       <!-- ========================================================
+           BACKGROUND AMBIENT TEXTURE LAYER (954:385689)
+           ======================================================== -->
+      <div class="trailer-page-bg-ambient" data-node-id="954:385689">
+        <img src="./assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png" alt="" class="trailer-page-bg-img" />
+        <div class="trailer-page-bg-overlay"></div>
+      </div>
+
+      <!-- ========================================================
            1. TRAILER HERO & VIDEO SECTION (928:2214)
            ======================================================== -->
       <section class="trailer-showcase-section" data-node-id="928:2214">
         <div class="trailer-hero-container">
           
           <!-- Big Video Frame with Horror Border & Glow (928:2346) -->
-          <div class="trailer-video-display-box" data-node-id="928:2346">
+          <div class="trailer-video-display-box trailer-scroll-reveal trailer-reveal-scale" data-node-id="928:2346">
             <video class="trailer-main-video-player" id="main-trailer-video" autoplay loop muted playsinline poster="./assets/scene-explore-ghost.png">
               <source src="./assets/official-trailer.mp4" type="video/mp4">
               <source src="./assets/investigation-video.mp4" type="video/mp4">
@@ -37,7 +46,7 @@ export async function renderTrailer(container) {
           <div class="trailer-info-bar-grid" data-node-id="928:2220">
             
             <!-- Left Info (928:2221) -->
-            <div class="trailer-title-desc-col" data-node-id="928:2221">
+            <div class="trailer-title-desc-col trailer-scroll-reveal trailer-reveal-left delay-150" data-node-id="928:2221">
               <h1 class="trailer-main-title" data-node-id="928:2223">TRAILER CHÍNH THỨC</h1>
               <p class="trailer-sub-desc" data-node-id="928:2225">
                 Khám phá nỗi kinh hoàng ẩn giấu trong Nhà Hứa. Một hành trình tâm linh rùng rợn qua những góc khuất của lịch sử gia đình.
@@ -45,7 +54,7 @@ export async function renderTrailer(container) {
             </div>
 
             <!-- Right Actions (928:2292) -->
-            <div class="trailer-action-buttons-group" data-node-id="928:2292">
+            <div class="trailer-action-buttons-group trailer-scroll-reveal trailer-reveal-right delay-200" data-node-id="928:2292">
               
               <!-- Button 1: Xem Toàn Màn Hình (928:2246) -->
               <a href="#fullscreen" class="figma-btn-trailer-fullscreen" id="btn-trailer-fullscreen" data-node-id="928:2246" style="text-decoration: none;">
@@ -77,46 +86,46 @@ export async function renderTrailer(container) {
         <div class="trailer-specs-container">
           
           <!-- Left: Vertical Poster Frame (715:403 / 928:2353) -->
-          <div class="trailer-poster-col" data-node-id="928:2353">
+          <div class="trailer-poster-col trailer-scroll-reveal trailer-reveal-left" data-node-id="928:2353">
             <div class="trailer-poster-frame" data-node-id="928:2354">
-              <img src="./assets/scene-explore-ghost.png" alt="OAN Poster" class="trailer-poster-img" data-node-id="715:403" />
+              <img src="./assets/32b8253be54f293f616639b649ed77cb41dc2c7f.png" alt="OAN Poster" class="trailer-poster-img" data-node-id="715:403" />
               <div class="poster-inner-gold-border"></div>
               <div class="poster-stamp-corner">OÁN 18+</div>
             </div>
           </div>
 
           <!-- Right: Specs Table & Narrative Summary (928:2355) -->
-          <div class="trailer-narrative-col" data-node-id="928:2355">
+          <div class="trailer-narrative-col trailer-scroll-reveal trailer-reveal-right delay-150" data-node-id="928:2355">
             
             <!-- Specs Grid (928:2356) -->
             <div class="trailer-specs-grid" data-node-id="928:2356">
               
               <!-- Ngày phát hành -->
-              <div class="spec-cell-item" data-node-id="928:2357">
+              <div class="spec-cell-item trailer-scroll-reveal trailer-reveal-fade delay-100" data-node-id="928:2357">
                 <span class="spec-cell-label" data-node-id="928:2359">NGÀY PHÁT HÀNH</span>
                 <span class="spec-cell-value" data-node-id="928:2361">31.12.2027</span>
               </div>
 
               <!-- Thời lượng -->
-              <div class="spec-cell-item" data-node-id="928:2362">
+              <div class="spec-cell-item trailer-scroll-reveal trailer-reveal-fade delay-150" data-node-id="928:2362">
                 <span class="spec-cell-label" data-node-id="928:2364">THỜI LƯỢNG</span>
                 <span class="spec-cell-value" data-node-id="928:2366">2:30</span>
               </div>
 
               <!-- Thể loại -->
-              <div class="spec-cell-item" data-node-id="928:2367">
+              <div class="spec-cell-item trailer-scroll-reveal trailer-reveal-fade delay-200" data-node-id="928:2367">
                 <span class="spec-cell-label" data-node-id="928:2369">THỂ LOẠI</span>
                 <span class="spec-cell-value" data-node-id="928:2371">Kinh dị tâm lý</span>
               </div>
 
               <!-- Phát triển -->
-              <div class="spec-cell-item" data-node-id="928:2372">
+              <div class="spec-cell-item trailer-scroll-reveal trailer-reveal-fade delay-250" data-node-id="928:2372">
                 <span class="spec-cell-label" data-node-id="928:2374">PHÁT TRIỂN</span>
                 <span class="spec-cell-value" data-node-id="928:2376">OÁN Horror Studio</span>
               </div>
 
               <!-- Nền tảng -->
-              <div class="spec-cell-item span-2-cols" data-node-id="928:2377">
+              <div class="spec-cell-item span-2-cols trailer-scroll-reveal trailer-reveal-fade delay-300" data-node-id="928:2377">
                 <span class="spec-cell-label" data-node-id="928:2379">NỀN TẢNG</span>
                 <span class="spec-cell-value" data-node-id="928:2381">PC, Xbox, Play Station</span>
               </div>
@@ -124,7 +133,7 @@ export async function renderTrailer(container) {
             </div>
 
             <!-- Narrative Paragraph (928:2382 / 928:2385) -->
-            <div class="trailer-narrative-box" data-node-id="928:2382">
+            <div class="trailer-narrative-box trailer-scroll-reveal trailer-reveal-fade-up delay-350" data-node-id="928:2382">
               <div class="narrative-divider-line"></div>
               <p class="trailer-story-text" data-node-id="928:2385">
                 Lấy cảm hứng từ những truyền thuyết đô thị Việt Nam những năm 90, OÁN đưa người chơi vào vai một thám tử tâm linh đang tìm kiếm sự thật đằng sau vụ mất tích bí ẩn của gia đình họ Hứa. Trò chơi kết hợp các yếu tố giải đố logic với bầu không khí căng thẳng cực độ, nơi mỗi bước chân trong bóng tối đều có thể là bước cuối cùng của bạn.
@@ -140,41 +149,80 @@ export async function renderTrailer(container) {
            3. THƯ VIỆN ẢNH SECTION (928:2387)
            ======================================================== -->
       <section class="trailer-gallery-section" data-node-id="928:2387">
-        <div class="container">
+        <div class="trailer-gallery-container">
           
-          <!-- Tag Section Badge: THƯ VIỆN ẢNH (953:1450) -->
-          <div class="tag-section-badge-wrapper" data-node-id="953:1450">
-            <div class="figma-tag-section">
-              <div class="tag-section-bg">
-                <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
-              </div>
-              <div class="tag-section-content">
-                <h2 class="tag-heading-bold">THƯ VIỆN ẢNH</h2>
-                <p class="tag-subheading-light">Những khoảnh khắc rùng rợn ghi lại từ hiện trường</p>
-              </div>
+          <!-- Tag Section Badge: Thư viện ảnh (953:1450) -->
+          <div class="gallery-tag-section-badge" data-node-id="953:1450">
+            <div class="tag-section-bg">
+              <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
+            </div>
+            <div class="tag-section-content">
+              <h2 class="tag-heading-bold">Thư viện ảnh</h2>
+              <p class="tag-subheading-light">Những bức ảnh minh họa</p>
             </div>
           </div>
 
-          <!-- Horror Gallery Frame & Thumbnails (954:385388 / 954:319012) -->
-          <div class="trailer-gallery-viewer-box" data-node-id="954:385388">
+          <!-- Asymmetric Horror Photo Collage (954:385388 / 954:319012) -->
+          <div class="figma-horrorframe-collage" data-node-id="954:319012">
             
-            <!-- Main Large Preview -->
-            <div class="gallery-main-viewport" data-node-id="954:319012">
-              <img src="${galleryImages[0].src}" alt="${galleryImages[0].title}" id="trailer-gallery-main-img" class="gallery-expanded-img" />
-              <div class="gallery-caption-overlay">
-                <h4 id="trailer-gallery-caption-title" class="gallery-caption-title">${galleryImages[0].title}</h4>
-                <p id="trailer-gallery-caption-desc" class="gallery-caption-desc">${galleryImages[0].desc}</p>
+            <!-- Frame 1: Left Giant (954:252601) -->
+            <div class="hf-item hf-item-1 trailer-scroll-reveal trailer-reveal-scale delay-100" data-node-id="954:252601" title="Hành lang bóng ma">
+              <div class="hf-img-container">
+                <img src="./assets/e26b4764d1dd9b78ddbe223fbf52d7d304165c83.png" alt="OAN Scene 1" class="hf-photo" />
+                <div class="hf-horror-vignette"></div>
+                <div class="hf-blood-glitch"></div>
+              </div>
+              <div class="hf-ornate-border">
+                <img src="./assets/1a5b74d7cb5aead1841ee129ce4399d74b277efa.svg" alt="" />
               </div>
             </div>
 
-            <!-- Thumbnail Selector Strip -->
-            <div class="gallery-thumbnails-strip">
-              ${galleryImages.map((item, index) => `
-                <div class="gallery-thumb-card ${index === 0 ? 'active' : ''}" data-index="${index}">
-                  <img src="${item.src}" alt="${item.title}" class="thumb-img" />
-                  <div class="thumb-gold-border"></div>
-                </div>
-              `).join('')}
+            <!-- Frame 2: Top Center (954:265890) -->
+            <div class="hf-item hf-item-2 trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="954:265890" title="Căn phòng ám ảnh">
+              <div class="hf-img-container">
+                <img src="./assets/5b1f96dba84e508bc260d61529c98412d108bded.png" alt="OAN Scene 2" class="hf-photo" />
+                <div class="hf-horror-vignette"></div>
+                <div class="hf-blood-glitch"></div>
+              </div>
+              <div class="hf-ornate-border">
+                <img src="./assets/a12f10aa4d6d5f33dff4e511e1a7560944a5811f.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Frame 3: Bottom Center (954:279169) -->
+            <div class="hf-item hf-item-3 trailer-scroll-reveal trailer-reveal-fade-up delay-300" data-node-id="954:279169" title="Hồi ức kinh hoàng">
+              <div class="hf-img-container">
+                <img src="./assets/4a421713a357e43a8d8625ab7d8b5b98a3849329.png" alt="OAN Scene 3" class="hf-photo" />
+                <div class="hf-horror-vignette"></div>
+                <div class="hf-blood-glitch"></div>
+              </div>
+              <div class="hf-ornate-border">
+                <img src="./assets/a12f10aa4d6d5f33dff4e511e1a7560944a5811f.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Frame 4: Top Right (954:292444) -->
+            <div class="hf-item hf-item-4 trailer-scroll-reveal trailer-reveal-fade-up delay-250" data-node-id="954:292444" title="Dinh thự Họ Hứa">
+              <div class="hf-img-container">
+                <img src="./assets/73240ed6730c1a47cf16f08d416c9d0f49066a7f.png" alt="OAN Scene 4" class="hf-photo" />
+                <div class="hf-horror-vignette"></div>
+                <div class="hf-blood-glitch"></div>
+              </div>
+              <div class="hf-ornate-border">
+                <img src="./assets/e3ef10d0bda9d2e3a0430b78a2cad974a185481e.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- Frame 5: Bottom Right (954:305732) -->
+            <div class="hf-item hf-item-5 trailer-scroll-reveal trailer-reveal-fade-up delay-350" data-node-id="954:305732" title="Cửa oan hồn">
+              <div class="hf-img-container">
+                <img src="./assets/d12aeecd85e350c97e6383573eba77d848ca1eaa.png" alt="OAN Scene 5" class="hf-photo" />
+                <div class="hf-horror-vignette"></div>
+                <div class="hf-blood-glitch"></div>
+              </div>
+              <div class="hf-ornate-border">
+                <img src="./assets/47746c61ab1ab1417f7e627dc3d5f0c0af1f21ea.svg" alt="" />
+              </div>
             </div>
 
           </div>
@@ -186,82 +234,96 @@ export async function renderTrailer(container) {
            4. KHÁM PHÁ THÊM SECTION (954:385691)
            ======================================================== -->
       <section class="trailer-explore-section" data-node-id="954:385691">
-        <div class="container">
+        <div class="trailer-explore-container">
           
           <!-- Tag Title: Khám phá (954:392309) -->
-          <div class="tag-section-badge-wrapper" data-node-id="954:392309">
-            <div class="figma-tag-section">
-              <div class="tag-section-bg">
-                <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
-              </div>
-              <div class="tag-section-content">
-                <h2 class="tag-heading-bold">KHÁM PHÁ</h2>
-                <p class="tag-subheading-light">Bạn muốn khám phá gì thêm?</p>
-              </div>
+          <div class="gallery-tag-section-badge" data-node-id="954:392309">
+            <div class="tag-section-bg">
+              <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
+            </div>
+            <div class="tag-section-content">
+              <h2 class="tag-heading-bold">KHÁM PHÁ</h2>
+              <p class="tag-subheading-light">Bạn muốn khám phá gì thêm?</p>
             </div>
           </div>
 
           <!-- 4 Explore Cards (954:396902) -->
           <div class="trailer-explore-cards-grid" data-node-id="954:396902">
             
-            <!-- Card 1: CÂU CHUYỆN -->
-            <a href="#storyline" class="explore-horror-card" data-node-id="954:392314">
-              <div class="explore-card-bg">
-                <img src="./assets/5af1160b5e6bd34a450d6078f05c69de40fe1f51.png" alt="" class="explore-card-texture" />
+            <!-- Card 1: CÂU CHUYỆN (954:392314) -->
+            <a href="#storyline" class="explore-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-100" data-node-id="954:392314">
+              <div class="explore-card-ornate-border">
+                <img src="./assets/explore-ornate-frame.png" alt="" class="explore-frame-border-img" />
               </div>
-              <div class="explore-card-content">
-                <div class="explore-card-icon-wrap">
-                  <img src="./assets/85e836b5902a33978179ca3708504d5b1b743653.svg" alt="" class="explore-card-icon" />
+              <div class="explore-card-inner-canvas">
+                <div class="explore-card-top-icon">
+                  <img src="./assets/85fe655a1b8348dcb9b4253280d8ff19a8b8c801.svg" alt="Story Icon" class="explore-icon-svg" />
                 </div>
-                <h3 class="explore-card-title">CÂU CHUYỆN</h3>
-                <p class="explore-card-sub">Khám phá nguồn gốc lời nguyền</p>
+                <div class="explore-card-body-content">
+                  <h3 class="explore-card-main-title">CÂU CHUYỆN</h3>
+                  <p class="explore-card-desc-text">Tìm hiểu bí mật Nhà Hứa và quá khứ bị lãng quên của những linh hồn oán than.</p>
+                </div>
+                <div class="explore-card-action-link">
+                  <span class="explore-action-text">XEM CỐT TRUYỆN</span>
+                </div>
               </div>
-              <div class="explore-card-border"></div>
             </a>
 
-            <!-- Card 2: TRÒ CHƠI -->
-            <a href="#gameplay" class="explore-horror-card" data-node-id="954:393461">
-              <div class="explore-card-bg">
-                <img src="./assets/5af1160b5e6bd34a450d6078f05c69de40fe1f51.png" alt="" class="explore-card-texture" />
+            <!-- Card 2: TRÒ CHƠI (954:393461) -->
+            <a href="#gameplay" class="explore-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="954:393461">
+              <div class="explore-card-ornate-border">
+                <img src="./assets/explore-ornate-frame.png" alt="" class="explore-frame-border-img" />
               </div>
-              <div class="explore-card-content">
-                <div class="explore-card-icon-wrap">
-                  <img src="./assets/85e836b5902a33978179ca3708504d5b1b743653.svg" alt="" class="explore-card-icon" />
+              <div class="explore-card-inner-canvas">
+                <div class="explore-card-top-icon">
+                  <img src="./assets/9d90401575deb16971cf9cc4cae96d917601fffe.svg" alt="Gameplay Icon" class="explore-icon-svg" />
                 </div>
-                <h3 class="explore-card-title">TRÒ CHƠI</h3>
-                <p class="explore-card-sub">Cơ chế gameplay & giải đố</p>
+                <div class="explore-card-body-content">
+                  <h3 class="explore-card-main-title">TRÒ CHƠI</h3>
+                  <p class="explore-card-desc-text">Khám phá cơ chế điều tra thực tế ảo và hệ thống giải đố dựa trên ngũ hành.</p>
+                </div>
+                <div class="explore-card-action-link">
+                  <span class="explore-action-text">XEM GAMEPLAY</span>
+                </div>
               </div>
-              <div class="explore-card-border"></div>
             </a>
 
-            <!-- Card 3: NHÂN VẬT -->
-            <a href="#character" class="explore-horror-card" data-node-id="954:394608">
-              <div class="explore-card-bg">
-                <img src="./assets/5af1160b5e6bd34a450d6078f05c69de40fe1f51.png" alt="" class="explore-card-texture" />
+            <!-- Card 3: NHÂN VẬT (954:394608) -->
+            <a href="#character" class="explore-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-300" data-node-id="954:394608">
+              <div class="explore-card-ornate-border">
+                <img src="./assets/explore-ornate-frame.png" alt="" class="explore-frame-border-img" />
               </div>
-              <div class="explore-card-content">
-                <div class="explore-card-icon-wrap">
-                  <img src="./assets/85e836b5902a33978179ca3708504d5b1b743653.svg" alt="" class="explore-card-icon" />
+              <div class="explore-card-inner-canvas">
+                <div class="explore-card-top-icon">
+                  <img src="./assets/75e411825df404857b2902a10f428c72e01f92d3.svg" alt="Character Icon" class="explore-icon-svg" />
                 </div>
-                <h3 class="explore-card-title">NHÂN VẬT</h3>
-                <p class="explore-card-sub">Hồ sơ 4 nhân vật bí ẩn</p>
+                <div class="explore-card-body-content">
+                  <h3 class="explore-card-main-title">NHÂN VẬT</h3>
+                  <p class="explore-card-desc-text">Gặp gỡ gia đình họ Hứa. Mỗi nhân vật đều mang theo một lời nguyền riêng biệt.</p>
+                </div>
+                <div class="explore-card-action-link">
+                  <span class="explore-action-text">XEM NHÂN VẬT</span>
+                </div>
               </div>
-              <div class="explore-card-border"></div>
             </a>
 
-            <!-- Card 4: TẢI XUỐNG -->
-            <a href="#download" class="explore-horror-card" data-node-id="954:395755">
-              <div class="explore-card-bg">
-                <img src="./assets/5af1160b5e6bd34a450d6078f05c69de40fe1f51.png" alt="" class="explore-card-texture" />
+            <!-- Card 4: TẢI XUỐNG (954:395755) -->
+            <a href="#download" class="explore-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-400" data-node-id="954:395755">
+              <div class="explore-card-ornate-border">
+                <img src="./assets/explore-ornate-frame.png" alt="" class="explore-frame-border-img" />
               </div>
-              <div class="explore-card-content">
-                <div class="explore-card-icon-wrap">
-                  <img src="./assets/85e836b5902a33978179ca3708504d5b1b743653.svg" alt="" class="explore-card-icon" />
+              <div class="explore-card-inner-canvas">
+                <div class="explore-card-top-icon">
+                  <img src="./assets/6e37cb11525bcb2224d854b8aa693cd2049b1479.svg" alt="Download Icon" class="explore-icon-svg" />
                 </div>
-                <h3 class="explore-card-title">TẢI XUỐNG</h3>
-                <p class="explore-card-sub">Sẵn sàng trải nghiệm ngay</p>
+                <div class="explore-card-body-content">
+                  <h3 class="explore-card-main-title">TẢI XUỐNG</h3>
+                  <p class="explore-card-desc-text">Sẵn sàng đối mặt với nỗi sợ hãi? Tải bản thử nghiệm ngay hôm nay.</p>
+                </div>
+                <div class="explore-card-action-link">
+                  <span class="explore-action-text">TẢI XUỐNG NGAY</span>
+                </div>
               </div>
-              <div class="explore-card-border"></div>
             </a>
 
           </div>
@@ -270,55 +332,113 @@ export async function renderTrailer(container) {
       </section>
 
       <!-- ========================================================
-           5. CTA BANNER SECTION (954:396948)
+           5. SẴN SÀNG SECTION (1363:86758)
            ======================================================== -->
-      <section class="trailer-cta-section" data-node-id="954:396948">
-        <div class="trailer-cta-container" data-node-id="954:396906">
-          <h2 class="trailer-cta-title" data-node-id="954:396908">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</h2>
-          
-          <div class="trailer-cta-buttons-row" data-node-id="954:396909">
-            <a href="#login" class="btn-trailer-cta-gold" data-node-id="954:396910">
-              <span>CHƠI NGAY</span>
+      <section class="figma-ready-section" data-node-id="1363:86758">
+        <div class="ready-bg-layer" data-node-id="1363:86759">
+          <img src="./assets/8d535e5186d5115ccc9a5c72e883cc54bda667bd.png" alt="" class="ready-bg-img" />
+        </div>
+
+        <div class="ready-content-container container" data-node-id="1363:86761">
+          <div class="ready-heading-box trailer-scroll-reveal trailer-reveal-scale" data-node-id="1363:86762">
+            <h2 class="ready-heading-text" data-node-id="1363:86763">
+              BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?
+            </h2>
+          </div>
+
+          <!-- 2 Buttons: CHƠI NGAY & TẢI NGAY (1363:86764) -->
+          <div class="ready-buttons-row trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="1363:86764">
+            
+            <!-- Button 2: CHƠI NGAY (1363:86765) -> Links to #login -->
+            <a href="#login" class="figma-btn-horror-frame" data-node-id="1363:86765" style="text-decoration: none;">
+              <div class="horror-frame-corners">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+              </div>
+              <div class="horror-frame-body">
+                <span class="horror-btn-text">CHƠI NGAY</span>
+              </div>
             </a>
-            <a href="#download" class="btn-trailer-cta-dark" data-node-id="954:396911">
-              <span>TẢI NGAY</span>
+
+            <!-- Button 1: TẢI NGAY (1363:86766) -> Links to #download -->
+            <a href="#download" class="figma-btn-horror-frame" data-node-id="1363:86766" style="text-decoration: none;">
+              <div class="horror-frame-corners">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+              </div>
+              <div class="horror-frame-body">
+                <span class="horror-btn-text">TẢI NGAY</span>
+              </div>
             </a>
           </div>
 
-          <p class="trailer-hardware-req" data-node-id="954:396913">
-            YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
-          </p>
+          <!-- Requirements (1363:86767) -->
+          <div class="ready-sysreq-box trailer-scroll-reveal trailer-reveal-fade delay-350" data-node-id="1363:86767">
+            <p class="sysreq-text" data-node-id="1363:86768">
+              YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
+            </p>
+          </div>
         </div>
       </section>
 
     </div>
   `;
 
-  // Gallery Interactive Switcher Logic
-  const mainImg = container.querySelector('#trailer-gallery-main-img');
-  const captionTitle = container.querySelector('#trailer-gallery-caption-title');
-  const captionDesc = container.querySelector('#trailer-gallery-caption-desc');
-  const thumbCards = container.querySelectorAll('.gallery-thumb-card');
-
-  thumbCards.forEach(thumb => {
-    thumb.addEventListener('click', () => {
-      const idx = parseInt(thumb.getAttribute('data-index'), 10);
-      const data = galleryImages[idx];
-      if (!data) return;
-
-      thumbCards.forEach(t => t.classList.remove('active'));
-      thumb.classList.add('active');
-
-      if (mainImg) {
-        mainImg.style.opacity = '0.3';
-        setTimeout(() => {
-          mainImg.src = data.src;
-          mainImg.alt = data.title;
-          if (captionTitle) captionTitle.textContent = data.title;
-          if (captionDesc) captionDesc.textContent = data.desc;
-          mainImg.style.opacity = '1';
-        }, 150);
+  // Scroll-Triggered Reveal Animations Observer
+  const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
       }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  scrollTargets.forEach(el => scrollObserver.observe(el));
+
+  // Trigger initial visibility for elements already in viewport
+  setTimeout(() => {
+    scrollTargets.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add('revealed');
+      }
+    });
+    // Activate GSAP ScrollTrigger timeline for Thư viện ảnh & Khám phá tags
+    initTrailerScrollTriggers();
+  }, 100);
+
+  // Interactive Horror Collage Lightbox / Zoom
+  const collageItems = container.querySelectorAll('.hf-item');
+  collageItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item.querySelector('.hf-photo');
+      if (!img) return;
+      
+      const title = item.getAttribute('title') || 'OÁN — Thư viện ảnh';
+      const lightbox = document.createElement('div');
+      lightbox.className = 'figma-fullscreen-overlay';
+      lightbox.innerHTML = `
+        <div class="fullscreen-video-wrapper" style="display: flex; align-items: center; justify-content: center;">
+          <img src="${img.src}" alt="${title}" style="max-width: 90vw; max-height: 85vh; object-fit: contain; border: 3px solid #6a571a; box-shadow: 0 0 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(217, 183, 76, 0.4);" />
+        </div>
+        <button class="fullscreen-close-btn" id="btn-close-gallery-lightbox" aria-label="Đóng" type="button">
+          <img src="./assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="Đóng" class="cancel-icon-img" />
+        </button>
+      `;
+      document.body.appendChild(lightbox);
+
+      const closeLightbox = () => {
+        lightbox.remove();
+        document.removeEventListener('keydown', handleEsc);
+      };
+
+      const handleEsc = (e) => {
+        if (e.key === 'Escape') closeLightbox();
+      };
+
+      document.addEventListener('keydown', handleEsc);
+      lightbox.querySelector('#btn-close-gallery-lightbox')?.addEventListener('click', closeLightbox);
     });
   });
 

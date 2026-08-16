@@ -457,7 +457,7 @@ export function initHomeScrollTriggers() {
   if (nhaHuaTag) {
     const tlNhaHua = gsap.timeline({
       scrollTrigger: {
-        trigger: nhaHuaBlock || nhaHuaTag,
+        trigger: nhaHuaTag,
         start: 'top 92%',
         end: 'bottom 10%',
         scrub: 1,
@@ -558,4 +558,121 @@ export function initHomeScrollTriggers() {
   setTimeout(() => {
     ScrollTrigger.refresh();
   }, 100);
+}
+
+// 11. TRAILER PAGE — Thư viện ảnh & Khám phá Tag Scrub Animations (Matching "CƠ CHẾ TRÒ CHƠI")
+export function initTrailerScrollTriggers() {
+  const trailerGalleryTag = document.querySelector('.trailer-gallery-section .gallery-tag-section-badge');
+  if (trailerGalleryTag) {
+    const tlGalleryTag = gsap.timeline({
+      scrollTrigger: {
+        trigger: trailerGalleryTag,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+
+    tlGalleryTag
+      .fromTo(trailerGalleryTag,
+        { x: -220, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(trailerGalleryTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(trailerGalleryTag,
+        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
+  }
+
+  const trailerExploreTag = document.querySelector('.trailer-explore-section .gallery-tag-section-badge');
+  if (trailerExploreTag) {
+    const tlExploreTag = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.trailer-explore-section',
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+
+    tlExploreTag
+      .fromTo(trailerExploreTag,
+        { x: -220, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(trailerExploreTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(trailerExploreTag,
+        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
+  }
+
+  // Refresh after layout calculations
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}
+
+// 12. INFO PAGE � Custom triggers
+export function initInfoScrollTriggers() {
+  const featuredTag = document.querySelector('.info-featured-tag-badge');
+  if (featuredTag) {
+    const tlFeatured = gsap.timeline({
+      scrollTrigger: {
+        trigger: featuredTag,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+    tlFeatured
+      .fromTo(featuredTag,
+        { x: -220, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(featuredTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(featuredTag,
+        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
+  }
+
+  const newsTag = document.querySelector('.info-news-tag-badge');
+  if (newsTag) {
+    const tlNews = gsap.timeline({
+      scrollTrigger: {
+        trigger: newsTag,
+        start: 'top 92%',
+        end: 'bottom 10%',
+        scrub: 1,
+      },
+    });
+    tlNews
+      .fromTo(newsTag,
+        { x: 220, opacity: 0, scale: 0.92 },
+        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
+        0
+      )
+      .to(newsTag,
+        { x: 0, opacity: 1, scale: 1, ease: 'none' },
+        0.35
+      )
+      .to(newsTag,
+        { x: 220, opacity: 0, scale: 0.92, ease: 'power2.in' },
+        0.7
+      );
+  }
 }
