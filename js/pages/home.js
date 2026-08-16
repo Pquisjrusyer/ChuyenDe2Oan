@@ -57,8 +57,8 @@ export async function renderHome(container) {
               <div class="btn-frame-glow-1"></div>
             </a>
 
-            <!-- Button: CHƠI NGAY (727:1631) -->
-            <div class="figma-btn-play-now-wrapper" data-node-id="727:1631" onclick="window.location.hash='download'">
+            <!-- Button: CHƠI NGAY (727:1631) -> Links to #login -->
+            <a href="#login" class="figma-btn-play-now-wrapper" data-node-id="727:1631" style="text-decoration: none;">
               <div class="horror-frame-corners">
                 <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
                 <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
@@ -67,7 +67,7 @@ export async function renderHome(container) {
                 <span class="btn-play-now-caption">CHƠI NGAY</span>
                 <div class="btn-play-now-glow"></div>
               </div>
-            </div>
+            </a>
 
             <!-- Text button: Xem Trailer (727:1677) -->
             <a href="#trailer" class="btn-watch-trailer-text" data-node-id="727:1677">
@@ -605,7 +605,7 @@ export async function renderHome(container) {
           <div class="nha-hua-fear-hallway-frame" data-node-id="1301:81891">
             <img src="./assets/0fe014ce699e815b5f0c37ab312e59523a60c820.png" alt="Nhà Hứa" class="hallway-bg-img" data-node-id="1301:81892" />
             <div class="hallway-overlay-dark"></div>
-            <h2 class="hallway-fear-text" data-node-id="1301:81893">Nỗi sợ bao trùm</h2>
+            <h2 class="hallway-fear-text" data-text="Nỗi sợ bao trùm" data-node-id="1301:81893">Nỗi sợ bao trùm</h2>
           </div>
         </div>
       </section>
@@ -723,18 +723,23 @@ export async function renderHome(container) {
 
             <!-- Right: Connect Box (1363:86616) -->
             <div class="connect-social-col" data-node-id="1363:86616">
+              <!-- Black Card (1363:86617) -->
               <div class="connect-bordered-card" data-node-id="1363:86617">
+                <!-- Blood Texture shifted to the left (1363:86620) -->
+                <img src="./assets/278b0fac7f3b287f74867a1861b629f059373513.png" alt="" class="connect-ambient-bg" data-node-id="1363:86620" />
                 
+                <!-- Heading (1363:86618) -->
                 <div class="connect-card-header" data-node-id="1363:86618">
                   <h3 class="connect-title-text" data-node-id="1363:86619">KẾT NỐI</h3>
-                  <img src="./assets/278b0fac7f3b287f74867a1861b629f059373513.png" alt="" class="connect-ambient-bg" data-node-id="1363:86620" />
-                  <img src="./assets/695f80586e381ccdef09653aec06c99619731400.svg" alt="" class="connect-symbol-icon" data-node-id="1363:86621" />
+                  <div class="connect-symbol-box" data-node-id="1363:86621">
+                    <img src="./assets/695f80586e381ccdef09653aec06c99619731400.svg" alt="Symbol" class="connect-symbol-icon" />
+                  </div>
                 </div>
 
+                <!-- Social links (1363:86635) -->
                 <div class="social-channels-links" data-node-id="1363:86635">
-                  
                   <!-- Facebook (1363:86636) -->
-                  <a href="#" class="social-row-link" data-node-id="1363:86636">
+                  <a href="https://www.facebook.com/login.php" target="_blank" rel="noopener noreferrer" class="social-row-link" data-node-id="1363:86636" title="Đăng nhập Facebook">
                     <div class="social-icon-box" data-node-id="1363:86637">
                       <img src="./assets/0f7ddffb5d788ce2cb19167eabb559841e8fa1c4.svg" alt="Facebook" />
                     </div>
@@ -742,7 +747,7 @@ export async function renderHome(container) {
                   </a>
 
                   <!-- TikTok (1363:86644) -->
-                  <a href="#" class="social-row-link" data-node-id="1363:86644">
+                  <a href="https://www.tiktok.com/login" target="_blank" rel="noopener noreferrer" class="social-row-link" data-node-id="1363:86644" title="Đăng nhập TikTok">
                     <div class="social-icon-box" data-node-id="1363:86645">
                       <img src="./assets/5c52f798d7c7bdc3230da07286ab6f7c2d72dd20.svg" alt="TikTok" />
                     </div>
@@ -750,20 +755,32 @@ export async function renderHome(container) {
                   </a>
 
                   <!-- Instagram (1363:86741) -->
-                  <a href="#" class="social-row-link" data-node-id="1363:86741">
+                  <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-row-link" data-node-id="1363:86741" title="Đăng nhập Instagram">
                     <div class="social-icon-box" data-node-id="1363:86742">
                       <img src="./assets/b3d1851d66545a96e4c4c58b9de0380549725b19.svg" alt="Instagram" />
                     </div>
                     <span class="social-network-name" data-node-id="1363:86751">INSTAGRAM</span>
                   </a>
                 </div>
+              </div>
 
-                <!-- Join Now Button (1363:86753) -->
-                <div class="connect-action-btn-row" data-node-id="1363:86752">
-                  <a href="#community" class="btn-figma-join-now" data-node-id="1363:86753">
-                    <span>THAM GIA NGAY</span>
-                  </a>
-                </div>
+              <!-- Join Now Button: Sits below card (1363:86752 / 1363:86753) -->
+              <div class="connect-action-btn-row" data-node-id="1363:86752">
+                <a href="#community" class="btn-figma-join-now" data-node-id="1363:86753">
+                  <div class="join-btn-frame-parts">
+                    <div class="join-fp1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
+                    <div class="join-fp2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                    <div class="join-fp4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                    <div class="join-fp5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
+                  </div>
+                  <div class="join-btn-inner-bg">
+                    <img src="./assets/eaccffbcce48af8641f102b997377af376790f2c.png" class="join-btn-texture" alt="" />
+                  </div>
+                  <div class="join-btn-glow-3"></div>
+                  <div class="join-btn-glow-2"></div>
+                  <div class="join-btn-glow-1"></div>
+                  <span class="join-btn-caption">THAM GIA NGAY</span>
+                </a>
               </div>
             </div>
           </div>
@@ -776,28 +793,34 @@ export async function renderHome(container) {
       <section class="figma-trailer-official-section" data-node-id="1363:86754">
         <div class="container">
           
-          <!-- Tag section title -->
-          <div class="tag-section-badge-wrapper" data-node-id="1363:86755">
-            <div class="figma-tag-section">
+          <!-- Tag section title (1363:86755) -->
+          <div class="tag-section-badge-wrapper trailer-title-tag-wrapper" data-node-id="1363:86755">
+            <div class="figma-tag-section trailer-stamp-badge">
               <div class="tag-section-bg">
                 <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="title-bg-img" />
               </div>
               <div class="tag-section-content">
-                <h2 class="tag-heading-bold">TRAILER CHÍNH THỨC</h2>
+                <h2 class="tag-heading-bold trailer-tag-text">TRAILER CHÍNH THỨC</h2>
               </div>
             </div>
           </div>
 
-          <!-- Video Player Box with Grunge Border (1363:86757) -->
+          <!-- Video Player Box with Grunge Border (1363:86756 / 879:1301) -->
           <div class="figma-trailer-box-wrapper" data-node-id="1363:86756">
-            <div class="trailer-grunge-frame" data-node-id="1363:86757" onclick="window.location.hash='trailer'">
-              <img src="./assets/e76ecda0d692864bfa2f45cdf168a58e7724c37e.png" alt="" class="grunge-texture-img" />
+            <a href="#trailer" class="trailer-grunge-frame" data-node-id="879:1301" title="Xem Trailer Chính Thức">
+              <!-- Official Trailer Preview Video Loop -->
+              <video class="trailer-preview-video" poster="./assets/scene-explore-ghost.png" autoplay loop muted playsinline>
+                <source src="./assets/official-trailer.mp4" type="video/mp4">
+                <source src="./assets/investigation-video.mp4" type="video/mp4">
+                <source src="./assets/scene-explore.mp4" type="video/mp4">
+              </video>
+              <div class="trailer-video-dark-overlay"></div>
               
               <!-- Large Play Button (879:1292) -->
               <div class="figma-large-play-btn" data-node-id="879:1292">
                 <img src="./assets/79865e542615851eb9071015d22e671958feb5a7.svg" alt="Play" class="play-svg-icon" />
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -820,8 +843,8 @@ export async function renderHome(container) {
           <!-- 2 Buttons: CHƠI NGAY & TẢI NGAY (1363:86764) -->
           <div class="ready-buttons-row" data-node-id="1363:86764">
             
-            <!-- Button 2: CHƠI NGAY (1363:86765) -->
-            <div class="figma-btn-horror-frame" data-node-id="1363:86765" onclick="window.location.hash='download'">
+            <!-- Button 2: CHƠI NGAY (1363:86765) -> Links to #login -->
+            <a href="#login" class="figma-btn-horror-frame" data-node-id="1363:86765" style="text-decoration: none;">
               <div class="horror-frame-corners">
                 <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
                 <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
@@ -829,10 +852,10 @@ export async function renderHome(container) {
               <div class="horror-frame-body">
                 <span class="horror-btn-text">CHƠI NGAY</span>
               </div>
-            </div>
+            </a>
 
-            <!-- Button 1: TẢI NGAY (1363:86766) -->
-            <div class="figma-btn-horror-frame" data-node-id="1363:86766" onclick="window.location.hash='download'">
+            <!-- Button 1: TẢI NGAY (1363:86766) -> Links to #download -->
+            <a href="#download" class="figma-btn-horror-frame" data-node-id="1363:86766" style="text-decoration: none;">
               <div class="horror-frame-corners">
                 <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
                 <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
@@ -840,7 +863,7 @@ export async function renderHome(container) {
               <div class="horror-frame-body">
                 <span class="horror-btn-text">TẢI NGAY</span>
               </div>
-            </div>
+            </a>
           </div>
 
           <!-- Requirements (1363:86767) -->
@@ -1307,5 +1330,12 @@ export async function renderHome(container) {
 
   // Initialize GSAP ScrollTrigger animations
   initHomeScrollTriggers();
+
+  // Ensure Section 8 Trailer preview video starts playing
+  const trailerPreviewVid = container.querySelector('.trailer-preview-video');
+  if (trailerPreviewVid) {
+    trailerPreviewVid.muted = true;
+    trailerPreviewVid.play().catch(() => {});
+  }
 }
 
