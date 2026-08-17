@@ -1908,14 +1908,37 @@
 }
 
 /* Stagger Delays */
-.delay-100 { transition-delay: 0.1s; }
-.delay-150 { transition-delay: 0.15s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-250 { transition-delay: 0.25s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-350 { transition-delay: 0.35s; }
-.delay-400 { transition-delay: 0.4s; }
-.delay-450 { transition-delay: 0.45s; }
+.delay-100 {
+  transition-delay: 0.1s;
+}
+
+.delay-150 {
+  transition-delay: 0.15s;
+}
+
+.delay-200 {
+  transition-delay: 0.2s;
+}
+
+.delay-250 {
+  transition-delay: 0.25s;
+}
+
+.delay-300 {
+  transition-delay: 0.3s;
+}
+
+.delay-350 {
+  transition-delay: 0.35s;
+}
+
+.delay-400 {
+  transition-delay: 0.4s;
+}
+
+.delay-450 {
+  transition-delay: 0.45s;
+}
 
 /* 5. CTA BANNER SECTION (954:396948) */
 .trailer-cta-section {
@@ -6169,7 +6192,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 30%, rgba(100, 0, 0, 0.15), transparent 70%),
-              linear-gradient(to bottom, rgba(3, 1, 1, 0.5) 0%, rgba(3, 1, 1, 0.95) 100%);
+    linear-gradient(to bottom, rgba(3, 1, 1, 0.5) 0%, rgba(3, 1, 1, 0.95) 100%);
 }
 
 /* ========================================================
@@ -6201,6 +6224,7 @@
   border: 1px solid rgba(80, 20, 20, 0.4);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.95), 0 0 80px rgba(50, 0, 0, 0.3);
   overflow: hidden;
+  top: 24px;
 }
 
 .info-board-bg-texture {
@@ -6317,9 +6341,17 @@
 }
 
 @keyframes pulseHotspot {
-  0% { box-shadow: 0 0 0 0 rgba(217, 183, 76, 0.7); }
-  70% { box-shadow: 0 0 0 15px rgba(217, 183, 76, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(217, 183, 76, 0); }
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 183, 76, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(217, 183, 76, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 183, 76, 0);
+  }
 }
 
 /* Profile Sidebar */
@@ -6716,9 +6748,11 @@
   .info-story-gallery-grid {
     grid-template-columns: 1fr;
   }
+
   .info-news-cards-grid {
     grid-template-columns: 1fr;
   }
+
   .info-profile-sidebar {
     position: relative;
     top: auto;
@@ -6794,7 +6828,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(ellipse at 50% 40%, rgba(140, 0, 0, 0.45) 0%, rgba(70, 0, 0, 0.25) 50%, rgba(3, 1, 1, 0.95) 100%),
-              linear-gradient(to bottom, rgba(3, 1, 1, 0.8) 0%, transparent 20%, transparent 80%, rgba(3, 1, 1, 0.9) 100%);
+    linear-gradient(to bottom, rgba(3, 1, 1, 0.8) 0%, transparent 20%, transparent 80%, rgba(3, 1, 1, 0.9) 100%);
 }
 
 .info-story-gallery-grid {
@@ -6930,4 +6964,318 @@
 .story-scene-horror-card:hover .story-card-red-action {
   color: #ffffff;
   border-color: #ff3333;
+}
+
+
+/* ========================================================
+   1. HERO SECTION: GIA PHẢ HỌ HỨA FULL BLEED CANVAS (Figma 954:397856)
+   ======================================================== */
+.info-hero-board-section {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--nav-height, 80px));
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #000;
+  z-index: 1;
+}
+
+.info-board-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  min-height: calc(100vh - var(--nav-height, 80px));
+  max-height: 100vh;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-bg-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hotspots on Board */
+.info-character-hotspots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.char-hotspot-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: clamp(30px, 2.6vw, 44px);
+  height: clamp(30px, 2.6vw, 44px);
+  border-radius: 50%;
+  background: rgba(226, 183, 68, 0.15);
+  border: 2px solid #e2b744;
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+  box-shadow: 0 0 14px rgba(226, 183, 68, 0.7), inset 0 0 10px rgba(226, 183, 68, 0.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: hotspotPulsate 2.4s infinite ease-in-out;
+}
+
+.char-hotspot-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px #fff;
+}
+
+.char-hotspot-btn:hover {
+  transform: translate(-50%, -50%) scale(1.22);
+  background: rgba(255, 215, 0, 0.45);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 1), inset 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+.char-hotspot-btn.active {
+  transform: translate(-50%, -50%) scale(1.28);
+  background: rgba(255, 215, 0, 0.85);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 0, 0, 0.6), inset 0 0 15px #fff;
+  animation: none;
+}
+
+@keyframes hotspotPulsate {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(226, 183, 68, 0.5), inset 0 0 6px rgba(226, 183, 68, 0.4);
+    border-color: rgba(226, 183, 68, 0.8);
+  }
+
+  50% {
+    box-shadow: 0 0 22px rgba(226, 183, 68, 0.95), inset 0 0 14px rgba(226, 183, 68, 0.7);
+    border-color: #ffffff;
+  }
+}
+
+/* Character Profile Sidebar */
+.info-profile-sidebar {
+  position: absolute;
+  top: 3.5%;
+  right: 2.2%;
+  width: clamp(220px, 16vw, 290px);
+  background: rgba(10, 4, 3, 0.92);
+  border: 1px solid rgba(139, 0, 0, 0.6);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 15px rgba(100, 0, 0, 0.35);
+  padding: clamp(12px, 1.2vw, 18px);
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.profile-portrait-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(100, 70, 40, 0.6);
+  background: #000;
+  margin-bottom: 12px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+/* ========================================================
+   1. HERO SECTION: GIA PHẢ HỌ HỨA FULL BLEED CANVAS (Figma 954:397856)
+   ======================================================== */
+.info-hero-board-section {
+  position: relative;
+  width: 100%;
+  padding-top: var(--nav-height, 80px);
+  padding-bottom: 30px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: #000;
+  z-index: 1;
+}
+
+.info-board-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  min-height: 520px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-bg-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hotspots on Board */
+.info-character-hotspots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.char-hotspot-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: clamp(26px, 2.4vw, 42px);
+  height: clamp(26px, 2.4vw, 42px);
+  border-radius: 50%;
+  background: rgba(226, 183, 68, 0.15);
+  border: 2px solid #e2b744;
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+  box-shadow: 0 0 14px rgba(226, 183, 68, 0.7), inset 0 0 10px rgba(226, 183, 68, 0.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: hotspotPulsate 2.4s infinite ease-in-out;
+}
+
+.char-hotspot-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px #fff;
+}
+
+.char-hotspot-btn:hover {
+  transform: translate(-50%, -50%) scale(1.22);
+  background: rgba(255, 215, 0, 0.45);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 1), inset 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+.char-hotspot-btn.active {
+  transform: translate(-50%, -50%) scale(1.28);
+  background: rgba(255, 215, 0, 0.85);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 0, 0, 0.6), inset 0 0 15px #fff;
+  animation: none;
+}
+
+/* Character Profile Sidebar */
+.info-profile-sidebar {
+  position: absolute;
+  top: 3.5%;
+  right: 2.2%;
+  width: clamp(210px, 16vw, 290px);
+  background: rgba(10, 4, 3, 0.94);
+  border: 1px solid rgba(139, 0, 0, 0.6);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 15px rgba(100, 0, 0, 0.35);
+  padding: clamp(10px, 1.1vw, 18px);
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.profile-portrait-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(100, 70, 40, 0.6);
+  background: #000;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+/* Hotkey Bar */
+.info-board-hotkey-bar {
+  position: absolute;
+  bottom: clamp(12px, 1.8vw, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(10px, 1.6vw, 22px);
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 18px;
+  border-radius: 20px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .info-profile-sidebar {
+    width: clamp(180px, 20vw, 230px);
+    top: 2%;
+    right: 2%;
+    padding: 8px 12px;
+  }
 }

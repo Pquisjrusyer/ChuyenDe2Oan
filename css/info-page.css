@@ -33,7 +33,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at 50% 30%, rgba(100, 0, 0, 0.15), transparent 70%),
-              linear-gradient(to bottom, rgba(3, 1, 1, 0.5) 0%, rgba(3, 1, 1, 0.95) 100%);
+    linear-gradient(to bottom, rgba(3, 1, 1, 0.5) 0%, rgba(3, 1, 1, 0.95) 100%);
 }
 
 /* ========================================================
@@ -134,10 +134,12 @@
     transform: scale(0.85);
     opacity: 1;
   }
+
   70% {
     transform: scale(2);
     opacity: 0.2;
   }
+
   100% {
     transform: scale(2.3);
     opacity: 0;
@@ -341,43 +343,111 @@
 }
 
 /* ========================================================
-   2. 4 STORY SCENES PHOTO GALLERY GRID (957:429546)
+   2. 4 STORY SCENES PHOTO GALLERY GRID (Figma 957:413974)
    ======================================================== */
 .info-story-gallery-section {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 60px 0;
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 45%, rgba(140, 0, 0, 0.45) 0%, rgba(60, 0, 0, 0.25) 50%, rgba(2, 0, 0, 0.95) 100%),
+    url('/assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png') center/cover no-repeat;
+}
+
+.info-story-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-story-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(140, 0, 0, 0.4) 0%, rgba(50, 0, 0, 0.2) 55%, rgba(2, 0, 0, 0.92) 100%),
+    linear-gradient(to bottom, rgba(2, 0, 0, 0.8) 0%, transparent 15%, transparent 85%, rgba(2, 0, 0, 0.9) 100%);
 }
 
 .info-story-gallery-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: clamp(20px, 3vw, 40px);
+  gap: clamp(24px, 3.5vw, 44px);
+  justify-items: center;
 }
 
 .story-scene-horror-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 681 / 470;
-  min-height: 320px;
-  background: #0d0202;
-  border: 1px solid #200000;
+  max-width: 681px;
+  aspect-ratio: 659 / 448;
+  border: 1px solid rgba(0, 0, 0, 0.9);
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.95);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: #000;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(80, 0, 0, 0.35);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease;
 }
 
 .story-scene-horror-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  box-shadow: 0 0 40px rgba(100, 0, 0, 0.6), 0 0 60px rgba(0, 0, 0, 0.95);
+  transform: translateY(-8px) scale(1.015);
+  box-shadow: 0 0 45px rgba(160, 0, 0, 0.7), 0 0 65px rgba(0, 0, 0, 0.95);
 }
 
-.story-card-frame-border {
+/* Inner Photo Aperture - Perfectly bounded inside the window opening */
+.story-card-inner-photo {
+  position: absolute;
+  left: 5.92%;
+  top: 11.16%;
+  width: 88.01%;
+  height: 64.95%;
+  overflow: hidden;
+  z-index: 1;
+  background: #000;
+}
+
+.scene-photo-img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.story-scene-horror-card:hover .scene-photo-img {
+  transform: scale(1.08);
+}
+
+/* Grunge / Blood Splatter Overlay Layer */
+.story-card-grunge-layer {
+  position: absolute;
+  left: 0.76%;
+  top: 5.36%;
+  width: 99.24%;
+  height: 88.39%;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.story-card-grunge-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Wooden Outer Frame - Scaled to match Figma container exactly */
+.story-card-frame-border {
+  position: absolute;
+  left: -2.04%;
+  top: -13.87%;
+  width: 104.88%;
+  height: 130.36%;
   z-index: 3;
   pointer-events: none;
 }
@@ -388,79 +458,52 @@
   object-fit: fill;
 }
 
-.story-card-inner-photo {
-  position: absolute;
-  inset: 8%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.scene-photo-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.story-scene-horror-card:hover .scene-photo-img {
-  transform: scale(1.08);
-}
-
-.story-card-grunge-layer {
-  position: absolute;
-  inset: 0;
-  mix-blend-mode: multiply;
-  pointer-events: none;
-  opacity: 0.85;
-}
-
-.story-card-grunge-layer img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
+/* Footer Bar with Titles printed directly on bottom wooden border */
 .story-card-footer-bar {
   position: absolute;
-  bottom: 5%;
-  left: 8%;
-  right: 8%;
+  left: 4.85%;
+  right: 5.5%;
+  bottom: 8.5%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   z-index: 4;
+  pointer-events: none;
 }
 
 .story-card-red-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(22px, 2.3vw, 32px);
   font-weight: 700;
-  color: #660000;
+  color: #7a0000;
   margin: 0;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.64px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .story-card-red-action {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
   font-weight: 400;
-  color: #660000;
+  color: #7a0000;
   text-decoration: none;
   border-bottom: 1px solid #e2e2e2;
   padding-bottom: 2px;
   text-transform: uppercase;
+  pointer-events: auto;
+  letter-spacing: 0.5px;
   transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .story-scene-horror-card:hover .story-card-red-title {
-  color: #ff2222;
-  text-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+  color: #ff1a1a;
+  text-shadow: 0 0 16px rgba(255, 26, 26, 0.9);
 }
 
 .story-scene-horror-card:hover .story-card-red-action {
   color: #ffffff;
-  border-color: #ff2222;
+  border-color: #ff3333;
 }
 
 /* ========================================================
@@ -512,72 +555,146 @@
 }
 
 /* ========================================================
-   4. LATEST NEWS & UPDATES SECTION (957:429832)
+   4. LATEST NEWS & UPDATES SECTION (Figma 957:429612)
    ======================================================== */
 .info-updates-section {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 70px 0 90px 0;
+  padding: clamp(60px, 7vw, 100px) 0 clamp(80px, 9vw, 120px) 0;
 }
 
 .updates-header-flex-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: clamp(36px, 4.5vw, 60px);
 }
 
 .updates-view-all-link {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  color: #a6a6a6;
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  font-size: clamp(18px, 1.6vw, 24px);
+  font-weight: 300;
+  color: #ffffff;
   text-decoration: underline;
-  transition: color 0.3s ease;
+  letter-spacing: -0.48px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .updates-view-all-link:hover {
-  color: #d9b74c;
+  color: #ffd700;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.6);
+}
+
+.updates-tag-badge {
+  position: relative;
+  width: clamp(320px, 35vw, 662px);
+  height: clamp(90px, 11vw, 195px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.updates-tag-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(0 0 20px rgba(220, 20, 10, 0.4));
+}
+
+.updates-tag-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+}
+
+.updates-tag-heading-bold {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  font-size: clamp(26px, 3.4vw, 54px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  letter-spacing: -1.44px;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.45), 0 0 30px rgba(255, 50, 0, 0.5);
+}
+
+.updates-tag-subheading {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.8vw, 26px);
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 1.2;
+  letter-spacing: -0.72px;
+  margin: 4px 0 0 0;
 }
 
 .info-news-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(20px, 2.5vw, 36px);
+  gap: clamp(24px, 3vw, 44px);
 }
 
 .info-news-card {
   position: relative;
   background: #200000;
   border: 1px solid #000000;
-  padding: 20px;
+  padding: clamp(16px, 1.6vw, 24px);
   display: flex;
   flex-direction: column;
   gap: 14px;
   box-sizing: border-box;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.95);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .info-news-card:hover {
   transform: translateY(-8px);
   border-color: #660000;
-  box-shadow: 0 0 35px rgba(100, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 45px rgba(120, 0, 0, 0.65), 0 0 60px rgba(0, 0, 0, 0.95);
+}
+
+.news-card-grunge-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  z-index: 2;
+}
+
+.news-card-grunge-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .news-card-photo-box {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
   border: 1px solid #000000;
   overflow: hidden;
   background: #000;
+  z-index: 1;
 }
 
 .news-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  display: block;
+  transition: transform 0.5s ease;
 }
 
 .info-news-card:hover .news-photo-img {
@@ -585,6 +702,8 @@
 }
 
 .news-card-category-date {
+  position: relative;
+  z-index: 1;
   font-family: 'Space Mono', monospace;
   font-size: 10px;
   font-weight: 700;
@@ -592,11 +711,14 @@
   opacity: 0.6;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  margin-top: 4px;
 }
 
 .news-card-title-bold {
+  position: relative;
+  z-index: 1;
   font-family: 'Space Mono', monospace;
-  font-size: clamp(15px, 1.25vw, 18px);
+  font-size: clamp(15px, 1.2vw, 18px);
   font-weight: 700;
   color: #e2e2e2;
   line-height: 1.35;
@@ -605,18 +727,103 @@
 }
 
 .news-card-desc-text {
+  position: relative;
+  z-index: 1;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: #c7c6c6;
-  line-height: 20px;
+  line-height: 1.45;
   margin: 0;
   flex-grow: 1;
 }
 
-.news-detail-btn {
+/* ========================================================
+   HORROR "Chi tiết" CTA BUTTON (Figma 957:429654)
+   ======================================================== */
+.news-card-cta-btn {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  margin-top: 8px;
+  height: 48px;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 10px;
+  transition: transform 0.25s ease, filter 0.25s ease;
+  box-sizing: border-box;
+}
+
+.news-card-cta-btn:hover {
+  transform: scale(1.02);
+  filter: brightness(1.15);
+}
+
+.horror-frame-corners {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.corner-svg-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.corner-svg-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.news-cta-body {
+  position: absolute;
+  inset: 2px;
+  border: 2px solid #9c7e21;
+  background: #161a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.news-cta-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.5px;
+  z-index: 4;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.news-card-cta-btn:hover .news-cta-body {
+  border-color: #ffd700;
+  background: #222a2a;
+  box-shadow: 0 0 20px rgba(218, 165, 32, 0.6), inset 0 0 15px rgba(218, 165, 32, 0.3);
+}
+
+.news-card-cta-btn:hover .news-cta-text {
+  color: #ffd700;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
 }
 
 /* ========================================================
@@ -626,9 +833,11 @@
   .info-story-gallery-grid {
     grid-template-columns: 1fr;
   }
+
   .info-news-cards-grid {
     grid-template-columns: 1fr;
   }
+
   .info-profile-sidebar {
     position: relative;
     top: auto;
@@ -636,4 +845,250 @@
     width: 100%;
     margin-top: 20px;
   }
+}
+
+/* ========================================================
+   1. HERO SECTION: GIA PHẢ HỌ HỨA FULL BLEED CANVAS (Figma 954:397856)
+   ======================================================== */
+.info-hero-board-section {
+  position: relative;
+  width: 100%;
+  padding-top: var(--nav-height, 80px);
+  padding-bottom: 30px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  background: #000;
+  z-index: 1;
+}
+
+.info-board-container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-canvas {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  min-height: 520px;
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-board-bg-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hotspots on Board */
+.info-character-hotspots {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.char-hotspot-btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: clamp(26px, 2.4vw, 42px);
+  height: clamp(26px, 2.4vw, 42px);
+  border-radius: 50%;
+  background: rgba(226, 183, 68, 0.15);
+  border: 2px solid #e2b744;
+  cursor: pointer;
+  pointer-events: auto;
+  outline: none;
+  box-shadow: 0 0 14px rgba(226, 183, 68, 0.7), inset 0 0 10px rgba(226, 183, 68, 0.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation: hotspotPulsate 2.4s infinite ease-in-out;
+}
+
+.char-hotspot-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 6px #fff;
+}
+
+.char-hotspot-btn:hover {
+  transform: translate(-50%, -50%) scale(1.22);
+  background: rgba(255, 215, 0, 0.45);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 1), inset 0 0 15px rgba(255, 215, 0, 0.9);
+}
+
+.char-hotspot-btn.active {
+  transform: translate(-50%, -50%) scale(1.28);
+  background: rgba(255, 215, 0, 0.85);
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 35px rgba(255, 215, 0, 1), 0 0 50px rgba(255, 0, 0, 0.6), inset 0 0 15px #fff;
+  animation: none;
+}
+
+/* Character Profile Sidebar */
+.info-profile-sidebar {
+  position: absolute;
+  top: 3.5%;
+  right: 2.2%;
+  width: clamp(210px, 16vw, 290px);
+  background: rgba(10, 4, 3, 0.94);
+  border: 1px solid rgba(139, 0, 0, 0.6);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 15px rgba(100, 0, 0, 0.35);
+  padding: clamp(10px, 1.1vw, 18px);
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease;
+}
+
+.profile-portrait-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(100, 70, 40, 0.6);
+  background: #000;
+  margin-bottom: 10px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+/* Hotkey Bar */
+.info-board-hotkey-bar {
+  position: absolute;
+  bottom: clamp(12px, 1.8vw, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(10px, 1.6vw, 22px);
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 18px;
+  border-radius: 20px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .info-profile-sidebar {
+    width: clamp(180px, 20vw, 230px);
+    top: 2%;
+    right: 2%;
+    padding: 8px 12px;
+  }
+}
+
+/* ========================================================
+   BACKGROUND AMBIENT TEXTURE LAYER (Figma 954:397644)
+   ======================================================== */
+.figma-info-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #010101;
+  color: #e2e2e2;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.info-page-bg-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background-color: #010101;
+}
+
+.info-bg-texture-layer {
+  position: relative;
+  width: 100%;
+  height: 2680px;
+  mix-blend-mode: color-dodge;
+  opacity: 0.28;
+  overflow: hidden;
+}
+
+.info-bg-texture-layer img {
+  position: absolute;
+  width: 2680px;
+  height: 1919px;
+  max-width: none;
+  object-fit: cover;
+  transform: rotate(-90deg);
+  transform-origin: center center;
+  top: calc(50% - 960px);
+  left: calc(50% - 1340px);
+}
+
+.info-page-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 15%, rgba(140, 0, 0, 0.25) 0%, transparent 60%),
+    radial-gradient(circle at 50% 45%, rgba(160, 0, 0, 0.32) 0%, transparent 65%),
+    radial-gradient(circle at 50% 75%, rgba(140, 0, 0, 0.28) 0%, transparent 60%),
+    linear-gradient(to bottom, rgba(1, 1, 1, 0.1) 0%, rgba(1, 1, 1, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* Antique Broken Glass / Scratched Mirror Overlay across Section 2 (Figma 957:413986) */
+.info-story-broken-glass-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: screen;
+  opacity: 0.65;
+  transition: opacity 0.4s ease;
+}
+
+.broken-glass-texture-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(140%) brightness(110%);
+}
+
+.broken-glass-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 40%, rgba(0, 0, 0, 0.45) 100%);
 }
