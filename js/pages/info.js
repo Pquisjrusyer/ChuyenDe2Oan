@@ -10,7 +10,7 @@ export async function renderInfo(container) {
       name: 'HỨA MINH ĐỨC',
       years: '(1930 - 2002)',
       role: 'Trưởng nam',
-      avatar: './assets/scene-explore-ghost.png',
+      avatar: './assets/portrait-hua-minh-duc.jpg',
       desc: [
         'Trưởng nam của cụ Hứa Bá Kiên.',
         'Từng du học Pháp.',
@@ -23,7 +23,7 @@ export async function renderInfo(container) {
       name: 'HỨA TÔNG CHI',
       years: '(1868 - 1935)',
       role: 'Gia chủ đời thứ nhất',
-      avatar: './assets/scene-suspense-door.png',
+      avatar: './assets/portrait-hua-tong-chi.jpg',
       desc: [
         'Người đặt nền móng cho cơ nghiệp họ Hứa.',
         'Khai phá đất đai và lập nên dinh thự tráng lệ.',
@@ -31,11 +31,24 @@ export async function renderInfo(container) {
       ],
       warning: 'Khởi nguồn của lời nguyền gia tộc.'
     },
+    'tran-thi-nga': {
+      name: 'TRẦN THỊ NGA',
+      years: '(1870 - 1942)',
+      role: 'Chính thất',
+      avatar: './assets/portrait-tran-thi-nga.jpg',
+      desc: [
+        'Phu nhân của cụ Hứa Tông Chi.',
+        'Gìn giữ gia quy nghiêm ngặt.',
+        'Quản lý toàn bộ phòng thờ tổ tiên.',
+        'Người đầu tiên chứng kiến điềm báo.'
+      ],
+      warning: 'Linh cảm điềm gở của căn nhà cổ.'
+    },
     'hua-ba-kien': {
       name: 'HỨA BÁ KIÊN',
       years: '(1905 - 1984)',
       role: 'Gia chủ đời thứ hai',
-      avatar: './assets/73240ed6730c1a47cf16f08d416c9d0f49066a7f.png',
+      avatar: './assets/portrait-hua-ba-kien.jpg',
       desc: [
         'Thừa kế toàn bộ điền sản miền Nam.',
         'Mở rộng hầm mộ phía Tây và niêm phong căn phòng thờ.',
@@ -43,11 +56,35 @@ export async function renderInfo(container) {
       ],
       warning: 'Người che giấu chân tướng sự thật.'
     },
+    'hua-ba-thang': {
+      name: 'HỨA BÁ THẮNG',
+      years: '(1898 - 1972)',
+      role: 'Nhị công tử',
+      avatar: './assets/portrait-hua-ba-thang.jpg',
+      desc: [
+        'Học giả nghiên cứu cổ thư và phong thủy.',
+        'Nhiều lần cảnh báo về điềm gở của dinh thự.',
+        'Ghi chép lại toàn bộ bản đồ giải mã hầm mộ.'
+      ],
+      warning: 'Nắm giữ chìa khóa giải mã phong ấn.'
+    },
+    'hua-thi-lan': {
+      name: 'HỨA THỊ LAN',
+      years: '(1908 - 1991)',
+      role: 'Tiểu thư út',
+      avatar: './assets/portrait-hua-thi-lan.jpg',
+      desc: [
+        'Rời khỏi dinh thự trước ngày biến cố.',
+        'Người duy nhất sống sót ngoài vòng xoáy lời nguyền.',
+        'Mang nỗi ám ảnh khôn nguôi về người cháu gái.'
+      ],
+      warning: 'Nhân chứng sống cuối cùng của dòng họ.'
+    },
     'hua-an': {
       name: 'HỨA AN',
       years: '(1965 - 1985)',
       role: 'Tiểu thư út',
-      avatar: './assets/scene-explore-ghost.png',
+      avatar: './assets/portrait-hua-an.jpg',
       desc: [
         'Cô con gái út tài hoa bạc mệnh.',
         'Mắc chứng bệnh lạ và bị cách ly trong phòng kín.',
@@ -78,6 +115,13 @@ export async function renderInfo(container) {
           <div class="info-board-canvas" data-node-id="849:765">
             <img src="./assets/info-hero-board.png" alt="Gia Phả Họ Hứa" class="info-board-bg-texture" />
             
+            <!-- OLD SCRATCHED MIRROR / GLASS REFLECTION OVERLAY (Figma 954:397857) -->
+            <div class="info-board-scratched-mirror-overlay" data-node-id="954:397857">
+              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-scratches-img" />
+              <div class="glass-reflection-sheen"></div>
+              <div class="glass-grunge-vignette"></div>
+            </div>
+
             <!-- Objective Clue HUD (Top Left) -->
             <div class="info-board-hud-objective trailer-scroll-reveal trailer-reveal-fade">
               <div class="hud-goal-badge">
@@ -100,14 +144,17 @@ export async function renderInfo(container) {
             <div class="info-character-hotspots">
               <button class="char-hotspot-btn active" data-char="hua-minh-duc" style="top: 55%; left: 52%;" title="Hứa Minh Đức"></button>
               <button class="char-hotspot-btn" data-char="hua-tong-chi" style="top: 22%; left: 40%;" title="Hứa Tông Chi"></button>
+              <button class="char-hotspot-btn" data-char="tran-thi-nga" style="top: 22%; left: 56%;" title="Trần Thị Nga"></button>
+              <button class="char-hotspot-btn" data-char="hua-ba-thang" style="top: 38%; left: 29%;" title="Hứa Bá Thắng"></button>
               <button class="char-hotspot-btn" data-char="hua-ba-kien" style="top: 38%; left: 54%;" title="Hứa Bá Kiên"></button>
+              <button class="char-hotspot-btn" data-char="hua-thi-lan" style="top: 38%; left: 68%;" title="Hứa Thị Lan"></button>
               <button class="char-hotspot-btn" data-char="hua-an" style="top: 75%; left: 39%;" title="Hứa An"></button>
             </div>
 
             <!-- Character Profile Sidebar (Right Side of Board) -->
             <div class="info-profile-sidebar trailer-scroll-reveal trailer-reveal-right" id="info-char-profile-card">
               <div class="profile-portrait-box">
-                <img src="./assets/scene-explore-ghost.png" alt="Hứa Minh Đức" class="profile-portrait-img" id="profile-card-img" />
+                <img src="./assets/portrait-hua-minh-duc.jpg" alt="Hứa Minh Đức" class="profile-portrait-img" id="profile-card-img" />
               </div>
               <div class="profile-info-body">
                 <h3 class="profile-name-text" id="profile-card-name">HỨA MINH ĐỨC</h3>
@@ -140,20 +187,26 @@ export async function renderInfo(container) {
       <!-- ========================================================
            2. 4 STORY SCENES PHOTO GALLERY GRID (957:429546)
            ======================================================== -->
-      <section class="info-story-gallery-section" data-node-id="957:429546">
+      <section class="info-story-gallery-section" data-node-id="957:413974">
+        
+        <!-- Deep Blood Red Ambient Background (957:413986) -->
+        <div class="info-story-bg-layer" data-node-id="957:413986">
+          <div class="info-story-bg-vignette"></div>
+        </div>
+
         <div class="container">
           <div class="info-story-gallery-grid" data-node-id="957:429546">
             
-            <!-- Card 1: 0e5d792e9bc9ba502ded578888d8321bdf366431.png -->
-            <div class="story-scene-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-100" data-node-id="957:413973">
-              <div class="story-card-frame-border">
-                <img src="./assets/610459ac7da9e2d76eadcb1b9d7aa2a5521d0a00.png" alt="" class="frame-border-img" />
-              </div>
+            <!-- Card 1: 0e5d792e9bc9ba502ded578888d8321bdf366431.png (957:413975) -->
+            <div class="story-scene-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-100" data-node-id="957:413975">
               <div class="story-card-inner-photo">
                 <img src="./assets/0e5d792e9bc9ba502ded578888d8321bdf366431.png" alt="Thờ cúng oan hồn" class="scene-photo-img" />
-                <div class="story-card-grunge-layer">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
+              </div>
+              <div class="story-card-grunge-layer">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+              <div class="story-card-frame-border">
+                <img src="./assets/610459ac7da9e2d76eadcb1b9d7aa2a5521d0a00.png" alt="" class="frame-border-img" />
               </div>
               <div class="story-card-footer-bar">
                 <h3 class="story-card-red-title" data-node-id="957:413960">CỐT TRUYỆN</h3>
@@ -161,16 +214,16 @@ export async function renderInfo(container) {
               </div>
             </div>
 
-            <!-- Card 2: 73240ed6730c1a47cf16f08d416c9d0f49066a7f.png -->
+            <!-- Card 2: 73240ed6730c1a47cf16f08d416c9d0f49066a7f.png (957:429513) -->
             <div class="story-scene-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="957:429513">
+              <div class="story-card-inner-photo">
+                <img src="./assets/73240ed6730c1a47cf16f08d416c9d0f49066a7f.png" alt="Căn phòng bí mật" class="scene-photo-img" />
+              </div>
+              <div class="story-card-grunge-layer">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
               <div class="story-card-frame-border">
                 <img src="./assets/610459ac7da9e2d76eadcb1b9d7aa2a5521d0a00.png" alt="" class="frame-border-img" />
-              </div>
-              <div class="story-card-inner-photo">
-                <img src="./assets/73240ed6730c1a47cf16f08d416c9d0f49066a7f.png" alt="Dinh thự nhà họ Hứa" class="scene-photo-img" />
-                <div class="story-card-grunge-layer">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
               </div>
               <div class="story-card-footer-bar">
                 <h3 class="story-card-red-title">CỐT TRUYỆN</h3>
@@ -178,16 +231,16 @@ export async function renderInfo(container) {
               </div>
             </div>
 
-            <!-- Card 3: b76c78172d6e968ff30b0ac750540bc810f0b636.png -->
+            <!-- Card 3: b76c78172d6e968ff30b0ac750540bc810f0b636.png (957:429535) -->
             <div class="story-scene-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-300" data-node-id="957:429535">
+              <div class="story-card-inner-photo">
+                <img src="./assets/b76c78172d6e968ff30b0ac750540bc810f0b636.png" alt="Hành lang bóng ma" class="scene-photo-img" />
+              </div>
+              <div class="story-card-grunge-layer">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
               <div class="story-card-frame-border">
                 <img src="./assets/610459ac7da9e2d76eadcb1b9d7aa2a5521d0a00.png" alt="" class="frame-border-img" />
-              </div>
-              <div class="story-card-inner-photo">
-                <img src="./assets/b76c78172d6e968ff30b0ac750540bc810f0b636.png" alt="Góc tối hành lang" class="scene-photo-img" />
-                <div class="story-card-grunge-layer">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
               </div>
               <div class="story-card-footer-bar">
                 <h3 class="story-card-red-title">CỐT TRUYỆN</h3>
@@ -195,16 +248,16 @@ export async function renderInfo(container) {
               </div>
             </div>
 
-            <!-- Card 4: 5cd0da7475fc2d3e62605f4cd60ff8d2fcb7546f.png -->
+            <!-- Card 4: 5cd0da7475fc2d3e62605f4cd60ff8d2fcb7546f.png (957:429524) -->
             <div class="story-scene-horror-card trailer-scroll-reveal trailer-reveal-fade-up delay-400" data-node-id="957:429524">
+              <div class="story-card-inner-photo">
+                <img src="./assets/5cd0da7475fc2d3e62605f4cd60ff8d2fcb7546f.png" alt="Máy quay ghi hình" class="scene-photo-img" />
+              </div>
+              <div class="story-card-grunge-layer">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
               <div class="story-card-frame-border">
                 <img src="./assets/610459ac7da9e2d76eadcb1b9d7aa2a5521d0a00.png" alt="" class="frame-border-img" />
-              </div>
-              <div class="story-card-inner-photo">
-                <img src="./assets/5cd0da7475fc2d3e62605f4cd60ff8d2fcb7546f.png" alt="Căn phòng bí mật" class="scene-photo-img" />
-                <div class="story-card-grunge-layer">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
               </div>
               <div class="story-card-footer-bar">
                 <h3 class="story-card-red-title">CỐT TRUYỆN</h3>
@@ -430,7 +483,14 @@ export async function renderInfo(container) {
       const charKey = btn.getAttribute('data-char');
       const data = familyCharacters[charKey];
       if (data) {
-        if (pImg) pImg.src = data.avatar;
+        if (pImg) {
+          pImg.style.opacity = '0';
+          setTimeout(() => {
+            pImg.src = data.avatar;
+            pImg.alt = data.name;
+            pImg.style.opacity = '1';
+          }, 150);
+        }
         if (pName) pName.textContent = data.name;
         if (pYears) pYears.textContent = data.years;
         if (pDesc) {

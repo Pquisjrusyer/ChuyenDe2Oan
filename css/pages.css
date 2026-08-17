@@ -1,5 +1,5 @@
-/* ============================================
-   OAN Horror Game — Page-Specific Styles
+﻿/* ============================================
+   OAN Horror Game â€” Page-Specific Styles
    ============================================ */
 
 /* =========== FIGMA INTRO & AGE VERIFICATION (703:1362, 708:1346, 708:1512, 708:1750) =========== */
@@ -1135,7 +1135,7 @@
   }
 }
 
-/* Button 1: XEM TOÀN MÀN HÌNH (928:2246) */
+/* Button 1: XEM TOÃ€N MÃ€N HÃŒNH (928:2246) */
 .figma-btn-trailer-fullscreen {
   position: relative;
   display: flex;
@@ -1202,7 +1202,7 @@
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
 
-/* Button 2: CHIA SẺ (928:2226 / 928:2229) */
+/* Button 2: CHIA Sáºº (928:2226 / 928:2229) */
 .btn-figma-trailer-share {
   display: inline-flex;
   align-items: center;
@@ -1246,7 +1246,7 @@
   transition: color 0.25s ease;
 }
 
-/* 2. THÔNG TIN TỪ TRAILER SECTION (928:2352) */
+/* 2. THÃ”NG TIN Tá»ª TRAILER SECTION (928:2352) */
 .trailer-specs-section {
   position: relative;
   padding: clamp(60px, 7vw, 100px) clamp(20px, 4vw, 60px);
@@ -1392,7 +1392,7 @@
   margin: 0;
 }
 
-/* 3. THƯ VIỆN ẢNH SECTION (928:2387) */
+/* 3. THÆ¯ VIá»†N áº¢NH SECTION (928:2387) */
 .trailer-gallery-section {
   position: relative;
   z-index: 1;
@@ -1693,7 +1693,7 @@
   }
 }
 
-/* 4. KHÁM PHÁ THÊM SECTION (954:385691) */
+/* 4. KHÃM PHÃ THÃŠM SECTION (954:385691) */
 .trailer-explore-section {
   position: relative;
   z-index: 1;
@@ -3802,7 +3802,7 @@
   margin: 0 auto;
 }
 
-/* TẢI NGAY button (727:1604) */
+/* Táº¢I NGAY button (727:1604) */
 .figma-btn-download-now {
   position: relative;
   display: flex;
@@ -3973,7 +3973,7 @@
   display: none;
 }
 
-/* CHƠI NGAY button (727:1631) — Identical styling & prototype to Đọc thêm (741:2241) */
+/* CHÆ I NGAY button (727:1631) â€” Identical styling & prototype to Äá»c thÃªm (741:2241) */
 .figma-btn-play-now-wrapper {
   position: relative;
   display: flex;
@@ -4174,7 +4174,7 @@
   }
 }
 
-/* ---- 2 & 3. SCENES: KHÁM PHÁ (770:696) & HỒI HỘP (770:742) ---- */
+/* ---- 2 & 3. SCENES: KHÃM PHÃ (770:696) & Há»’I Há»˜P (770:742) ---- */
 .figma-atmosphere-scene {
   position: relative;
   width: 100%;
@@ -4307,7 +4307,7 @@
   text-shadow: 0 0 25px rgba(238, 27, 16, 0.85);
 }
 
-/* ---- 4. GIỚI THIỆU & CƠ CHẾ SECTION (770:834 / 1363:82461) ---- */
+/* ---- 4. GIá»šI THIá»†U & CÆ  CHáº¾ SECTION (770:834 / 1363:82461) ---- */
 .figma-intro-mechanics-section {
   position: relative;
   padding: clamp(60px, 8vw, 120px) 0;
@@ -4409,7 +4409,7 @@
   text-align: center;
 }
 
-/* Đọc thêm Button (I1363:85060;1363:82468 / 741:2241) */
+/* Äá»c thÃªm Button (I1363:85060;1363:82468 / 741:2241) */
 .figma-btn-read-more-wrapper {
   position: relative;
   display: inline-flex;
@@ -4479,7 +4479,7 @@
   transition: all 0.25s ease;
 }
 
-/* Tag Section Badge: CƠ CHẾ TRÒ CHƠI (770:900 / 770:937 — Left Aligned) */
+/* Tag Section Badge: CÆ  CHáº¾ TRÃ’ CHÆ I (770:900 / 770:937 â€” Left Aligned) */
 .mechanics-badge-container {
   display: flex;
   justify-content: flex-start;
@@ -4991,7 +4991,7 @@
   transition: all 0.25s ease;
 }
 
-/* ---- 5. NHÂN VẬT SECTION (Figma 1301:82038 / 1301:82044) ---- */
+/* ---- 5. NHÃ‚N Váº¬T SECTION (Figma 1301:82038 / 1301:82044) ---- */
 .figma-characters-section {
   position: relative;
   padding: clamp(80px, 8vw, 140px) 0 0;
@@ -5215,7 +5215,7 @@
   line-height: 1.4;
 }
 
-/* Sub-Section: NHÀ HỨA (1301:81889 & 1301:81891) */
+/* Sub-Section: NHÃ€ Há»¨A (1301:81889 & 1301:81891) */
 .nha-hua-fear-subblock {
   position: relative;
   width: 100%;
@@ -5326,7 +5326,7 @@
   box-shadow: 0 0 15px #ffd700;
 }
 
-/* ---- 6. NHÀ HỨA & MEDIA GALLERY (1363:86582) ---- */
+/* ---- 6. NHÃ€ Há»¨A & MEDIA GALLERY (1363:86582) ---- */
 .figma-nha-hua-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #030508;
@@ -5453,7 +5453,7 @@
   transform: scale(1.04);
 }
 
-/* ---- 7. TIN TỨC & KẾT NỐI (1363:86595) ---- */
+/* ---- 7. TIN Tá»¨C & Káº¾T Ná»I (1363:86595) ---- */
 .figma-news-connect-section {
   padding: clamp(60px, 8vw, 100px) 0;
   background: #030508;
@@ -5950,7 +5950,7 @@
   display: block;
 }
 
-/* ---- 9. SẴN SÀNG SECTION (1363:86758) ---- */
+/* ---- 9. Sáº´N SÃ€NG SECTION (1363:86758) ---- */
 .figma-ready-section {
   position: relative;
   min-height: clamp(480px, 60vh, 750px);
@@ -6131,272 +6131,9 @@
   .figma-btn-horror-frame {
     max-width: 100%;
   }
-}/* ==========================================================================
-   INFO PAGE (TH�NG TIN) - 928:2008
-   ========================================================================== */
-.figma-info-page {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  color: #fff;
-  padding-top: 100px;
 }
 
-.info-page-bg-ambient {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
-}
-.info-page-bg-img {
-  width: 100%; height: 100%; object-fit: cover; opacity: 0.8;
-}
-.info-page-bg-overlay {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(20,5,5,0.7) 100%);
-}
 
-/* HERO SECTION (Gia Ph?) */
-.info-hero-section {
-  position: relative;
-  max-width: 1400px;
-  margin: 0 auto 100px;
-  padding: 40px;
-}
-.info-hero-bg {
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  z-index: -1;
-  opacity: 0.6;
-}
-.info-hero-bg img {
-  width: 100%; height: 100%; object-fit: cover;
-  border-radius: 10px;
-}
-.info-hero-bg-vignette {
-  position: absolute; top:0; left:0; right:0; bottom:0;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.9);
-}
-
-.info-hero-content-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  min-height: 600px;
-}
-.info-hero-left {
-  max-width: 400px;
-}
-.info-main-title {
-  font-family: var(--font-display, 'Iceberg', cursive);
-  font-size: 4rem;
-  color: #fff;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-  margin-bottom: 20px;
-}
-.info-sub-desc {
-  font-size: 1rem;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.info-hero-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.info-char-card {
-  background: rgba(10, 0, 0, 0.7);
-  border: 1px solid rgba(139, 0, 0, 0.4);
-  padding: 20px;
-  max-width: 350px;
-  backdrop-filter: blur(5px);
-}
-.char-card-header {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding-bottom: 15px;
-}
-.char-avatar {
-  width: 80px; height: 80px; object-fit: cover;
-  border: 1px solid rgba(212, 175, 55, 0.5); /* Gold border */
-}
-.char-title-box h4 {
-  color: #D4AF37; /* Gold */
-  font-family: var(--font-display, 'Iceberg', cursive);
-  font-size: 1.2rem;
-  margin: 0;
-}
-.char-card-body p {
-  font-size: 0.9rem;
-  color: #bbb;
-  margin-bottom: 15px;
-  line-height: 1.5;
-}
-.char-link {
-  color: #D4AF37;
-  font-size: 0.8rem;
-  text-decoration: underline;
-}
-
-/* KEY HINTS */
-.info-key-hints {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-}
-.key-hint {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 0.85rem;
-  color: #aaa;
-  font-family: monospace;
-}
-.key-btn {
-  background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 4px 8px;
-  border-radius: 4px;
-  color: #fff;
-}
-
-/* HORROR COLLAGE (C?T TRUY?N) */
-.info-gallery-section {
-  padding: 80px 40px;
-}
-.info-gallery-container .grid-2x2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.hf-tag-badge {
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #8B0000;
-  color: #fff;
-  padding: 5px 20px;
-  font-family: var(--font-display, 'Iceberg', cursive);
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  border: 1px solid #4a0404;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  z-index: 10;
-}
-
-/* FEATURED STORY SECTION */
-.info-featured-section {
-  padding: 80px 20px;
-  text-align: center;
-  position: relative;
-}
-.info-featured-tag-badge {
-  display: inline-block;
-  position: relative;
-  margin-bottom: 60px;
-}
-.info-featured-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.info-featured-title {
-  font-family: var(--font-display, 'Iceberg', cursive);
-  font-size: 3.5rem;
-  color: #fff;
-  margin-bottom: 30px;
-}
-.info-featured-desc {
-  font-size: 1.1rem;
-  color: #ccc;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-/* NEWS SECTION */
-.info-news-section {
-  padding: 80px 40px;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-.info-news-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
-}
-.news-see-all {
-  color: #D4AF37;
-  text-decoration: underline;
-  font-size: 1rem;
-  transition: 0.3s;
-}
-.news-see-all:hover { color: #fff; }
-.info-news-tag-badge { position: relative; }
-.info-news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-.info-news-card {
-  background: rgba(10,0,0,0.6);
-  border: 1px solid rgba(139,0,0,0.3);
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.info-news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(139,0,0,0.3);
-  border-color: rgba(139,0,0,0.8);
-}
-.news-card-img img {
-  width: 100%; height: 200px; object-fit: cover;
-  border-bottom: 2px solid #8B0000;
-  margin-bottom: 20px;
-}
-.news-meta {
-  font-size: 0.8rem; color: #888; margin-bottom: 10px;
-}
-.news-title {
-  font-family: var(--font-display, 'Iceberg', cursive);
-  color: #fff; font-size: 1.4rem; margin-bottom: 15px;
-}
-.news-desc {
-  font-size: 0.95rem; color: #aaa; margin-bottom: 25px;
-}
-.news-btn { margin: 0 auto; display: block; max-width: 150px; }
-
-/* CTA SECTION */
-.info-cta-section {
-  padding: 100px 20px;
-  text-align: center;
-}
-.info-cta-title {
-  font-family: var(--font-display, 'Iceberg', cursive);
-  font-size: 3rem; color: #fff; margin-bottom: 50px;
-}
-
-/* SCROLL REVEAL ANIMATIONS */
-.info-scroll-reveal { opacity: 0; transition: 1s ease; }
-.info-reveal-fade-up { transform: translateY(40px); }
-.info-reveal-fade-up.revealed { opacity: 1; transform: translateY(0); }
-.info-reveal-left { transform: translateX(-40px); }
-.info-reveal-left.revealed { opacity: 1; transform: translateX(0); }
-.info-reveal-fade { opacity: 0; }
-.info-reveal-fade.revealed { opacity: 1; }
-.delay-100 { transition-delay: 0.1s; }
-.delay-200 { transition-delay: 0.2s; }
-.delay-300 { transition-delay: 0.3s; }
-.delay-400 { transition-delay: 0.4s; }
-
 
 /* ========================================================
    FIGMA INFO / THÔNG TIN PAGE (928:2008)
@@ -6567,15 +6304,15 @@
   cursor: pointer;
   pointer-events: auto;
   transform: translate(-50%, -50%);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: pulseHotspot 2s infinite;
 }
 
 .char-hotspot-btn.active,
 .char-hotspot-btn:hover {
-  background: rgba(255, 215, 0, 0.8);
+  background: rgba(255, 215, 0, 0.85);
   border-color: #ffffff;
-  transform: translate(-50%, -50%) scale(1.3);
+  transform: translate(-50%, -50%) scale(1.35);
   box-shadow: 0 0 25px #ffd700, 0 0 40px rgba(255, 0, 0, 0.6);
 }
 
@@ -6591,20 +6328,22 @@
   top: clamp(20px, 3.5vw, 60px);
   right: clamp(16px, 2.5vw, 40px);
   width: clamp(220px, 20vw, 290px);
-  background: rgba(10, 4, 4, 0.85);
-  border: 1px solid rgba(80, 20, 20, 0.7);
+  background: rgba(10, 4, 4, 0.9);
+  border: 1px solid rgba(120, 20, 20, 0.8);
   backdrop-filter: blur(12px);
   padding: 16px;
   box-sizing: border-box;
   z-index: 5;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(100, 0, 0, 0.4);
 }
 
 .profile-portrait-box {
+  position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   background: #000;
-  border: 1px solid rgba(217, 183, 76, 0.4);
+  border: 1px solid rgba(217, 183, 76, 0.6);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9), 0 0 15px rgba(217, 183, 76, 0.2);
   overflow: hidden;
   margin-bottom: 14px;
 }
@@ -6613,7 +6352,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: sepia(30%) contrast(110%);
+  filter: contrast(108%) brightness(96%);
+  transition: opacity 0.25s ease, transform 0.4s ease;
+}
+
+.info-profile-sidebar:hover .profile-portrait-img {
+  transform: scale(1.04);
 }
 
 .profile-name-text {
@@ -6982,4 +6726,208 @@
     width: 100%;
     margin-top: 20px;
   }
+}
+
+
+/* Old Scratched Mirror / Dirty Glass Overlay (Figma 954:397857) */
+.info-board-scratched-mirror-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  mix-blend-mode: screen;
+  opacity: 0.55;
+  transition: opacity 0.4s ease;
+}
+
+.glass-scratches-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(135%) brightness(115%);
+}
+
+.glass-reflection-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, transparent 40%, rgba(255, 255, 255, 0.03) 70%, transparent 100%);
+  pointer-events: none;
+}
+
+.glass-grunge-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.45) 100%);
+  pointer-events: none;
+}
+
+.info-board-canvas:hover .info-board-scratched-mirror-overlay {
+  opacity: 0.7;
+}
+
+
+/* ========================================================
+   2. 4 STORY SCENES PHOTO GALLERY GRID (Figma 957:413974)
+   ======================================================== */
+.info-story-gallery-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 80px 0 100px 0;
+  overflow: hidden;
+}
+
+.info-story-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-story-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(140, 0, 0, 0.45) 0%, rgba(70, 0, 0, 0.25) 50%, rgba(3, 1, 1, 0.95) 100%),
+              linear-gradient(to bottom, rgba(3, 1, 1, 0.8) 0%, transparent 20%, transparent 80%, rgba(3, 1, 1, 0.9) 100%);
+}
+
+.info-story-gallery-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(24px, 3.5vw, 44px);
+  justify-items: center;
+}
+
+.story-scene-horror-card {
+  position: relative;
+  width: 100%;
+  max-width: 681px;
+  aspect-ratio: 681 / 470;
+  border: 1px solid rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(60, 0, 0, 0.3);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.story-scene-horror-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 0 45px rgba(140, 0, 0, 0.65), 0 0 65px rgba(0, 0, 0, 0.95);
+}
+
+/* Inner Photo Aperture - Perfectly fitting the wooden window frame opening */
+.story-card-inner-photo {
+  position: absolute;
+  left: 5.8%;
+  top: 10.8%;
+  width: 88.4%;
+  height: 62.5%;
+  overflow: hidden;
+  z-index: 1;
+  background: #000;
+}
+
+.scene-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.story-scene-horror-card:hover .scene-photo-img {
+  transform: scale(1.08);
+}
+
+/* Grunge / Blood Splatter Layer */
+.story-card-grunge-layer {
+  position: absolute;
+  left: 0.8%;
+  top: 5.2%;
+  width: 98.4%;
+  height: 84.8%;
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.85;
+}
+
+.story-card-grunge-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Wooden Outer Frame - Scaled to match Figma container exactly */
+.story-card-frame-border {
+  position: absolute;
+  left: -2.04%;
+  top: -13.87%;
+  width: 104.88%;
+  height: 130.36%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.story-card-frame-border .frame-border-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+/* Footer Bar with Titles printed directly on bottom wooden border */
+.story-card-footer-bar {
+  position: absolute;
+  left: 4.8%;
+  right: 5.8%;
+  bottom: 8.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.story-card-red-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(22px, 2.3vw, 32px);
+  font-weight: 700;
+  color: #880000;
+  margin: 0;
+  letter-spacing: -0.64px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.story-card-red-action {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  color: #880000;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  pointer-events: auto;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.story-scene-horror-card:hover .story-card-red-title {
+  color: #e60000;
+  text-shadow: 0 0 16px rgba(230, 0, 0, 0.85);
+}
+
+.story-scene-horror-card:hover .story-card-red-action {
+  color: #ffffff;
+  border-color: #ff3333;
 }

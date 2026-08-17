@@ -449,51 +449,64 @@ export function initHomeScrollTriggers() {
     });
   }
 
-  // 8.5. NHÀ HỨA Subblock & Tag Scroll Animation (Matching "CƠ CHẾ TRÒ CHƠI" Tag scrub animation)
+  // 8.5. NHÀ HỨA Subblock & Tag Scroll Animation (Smooth, Stable Horror Entrance)
+  const nhaHuaBlock = document.querySelector('.nha-hua-fear-subblock');
   const nhaHuaTag = document.querySelector('.nha-hua-tag-left-box');
   const nhaHuaHallway = document.querySelector('.nha-hua-fear-hallway-frame');
-  const nhaHuaBlock = document.querySelector('.nha-hua-fear-subblock');
+  const fearText = document.querySelector('.hallway-fear-text');
 
-  if (nhaHuaTag) {
-    const tlNhaHua = gsap.timeline({
-      scrollTrigger: {
-        trigger: nhaHuaTag,
-        start: 'top 92%',
-        end: 'bottom 10%',
-        scrub: 1,
-      },
-    });
-
-    tlNhaHua
-      .fromTo(nhaHuaTag,
-        { x: -220, opacity: 0, scale: 0.92 },
-        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
-        0
-      )
-      .to(nhaHuaTag,
-        { x: 0, opacity: 1, scale: 1, ease: 'none' },
-        0.35
-      )
-      .to(nhaHuaTag,
-        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
-        0.7
+  if (nhaHuaBlock) {
+    if (nhaHuaTag) {
+      gsap.fromTo(nhaHuaTag,
+        { x: -100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: nhaHuaTag,
+            start: 'top 88%',
+            toggleActions: 'play none none reverse',
+          },
+        }
       );
+    }
 
     if (nhaHuaHallway) {
-      tlNhaHua
-        .fromTo(nhaHuaHallway,
-          { x: 220, opacity: 0, scale: 0.94 },
-          { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
-          0.05
-        )
-        .to(nhaHuaHallway,
-          { x: 0, opacity: 1, scale: 1, ease: 'none' },
-          0.35
-        )
-        .to(nhaHuaHallway,
-          { x: 220, opacity: 0, scale: 0.94, ease: 'power2.in' },
-          0.7
-        );
+      gsap.fromTo(nhaHuaHallway,
+        { opacity: 0, scale: 0.96, y: 30 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: nhaHuaHallway,
+            start: 'top 82%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (fearText) {
+      gsap.fromTo(fearText,
+        { opacity: 0, scale: 0.88, filter: 'blur(8px)' },
+        {
+          opacity: 1,
+          scale: 1,
+          filter: 'blur(0px)',
+          duration: 1.4,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: nhaHuaHallway || fearText,
+            start: 'top 65%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
     }
   }
 
@@ -622,7 +635,7 @@ export function initTrailerScrollTriggers() {
   }, 100);
 }
 
-// 12. INFO PAGE � Custom triggers
+// 12. INFO PAGE � Custom triggers
 export function initInfoScrollTriggers() {
   const featuredTag = document.querySelector('.info-featured-tag-badge');
   if (featuredTag) {
@@ -676,3 +689,4 @@ export function initInfoScrollTriggers() {
       );
   }
 }
+

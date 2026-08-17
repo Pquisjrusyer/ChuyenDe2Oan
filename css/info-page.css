@@ -1,0 +1,639 @@
+/* ========================================================
+   FIGMA INFO / THÔNG TIN PAGE (928:2008 & 954:397856)
+   ======================================================== */
+.figma-info-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #030101;
+  color: #e2e2e2;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding-top: 0;
+}
+
+.info-page-bg-ambient {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.info-page-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: contrast(130%) brightness(55%);
+}
+
+.info-page-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(100, 0, 0, 0.15), transparent 70%),
+              linear-gradient(to bottom, rgba(3, 1, 1, 0.5) 0%, rgba(3, 1, 1, 0.95) 100%);
+}
+
+/* ========================================================
+   1. HERO INVESTIGATION BOARD (954:397856)
+   ======================================================== */
+.info-hero-board-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  display: block;
+}
+
+.info-hero-board-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+  min-height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.info-hero-board-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.info-interactive-tree-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.tree-node-dot {
+  position: absolute;
+  width: clamp(26px, 2.2vw, 36px);
+  height: clamp(26px, 2.2vw, 36px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(139, 0, 0, 0.6) 80%, rgba(10, 0, 0, 0.9) 100%);
+  border: 2px solid #d9b74c;
+  box-shadow: 0 0 15px rgba(217, 183, 76, 0.85), inset 0 0 8px rgba(255, 215, 0, 0.6);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  outline: none;
+}
+
+.tree-node-dot::before {
+  content: '';
+  width: clamp(8px, 0.7vw, 12px);
+  height: clamp(8px, 0.7vw, 12px);
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 0 10px #ffd700, 0 0 15px #ffd700;
+  transition: all 0.3s ease;
+}
+
+.node-pulse-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(217, 183, 76, 0.75);
+  animation: pulseNodeRing 2.2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  pointer-events: none;
+}
+
+.tree-node-dot:hover,
+.tree-node-dot.active {
+  transform: translate(-50%, -50%) scale(1.35);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(217, 183, 76, 0.8) 50%, rgba(139, 0, 0, 0.9) 100%);
+  border-color: #ffffff;
+  box-shadow: 0 0 25px #ffd700, 0 0 40px rgba(255, 0, 0, 0.8), inset 0 0 12px #ffffff;
+  z-index: 25;
+}
+
+.tree-node-dot:hover::before,
+.tree-node-dot.active::before {
+  background: #ff2222;
+  box-shadow: 0 0 12px #ff0000, 0 0 20px #ff0000;
+}
+
+@keyframes pulseNodeRing {
+  0% {
+    transform: scale(0.85);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(2);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}
+
+/* Objective HUD (Top Left) */
+.info-board-hud-objective {
+  position: absolute;
+  top: clamp(80px, 9vh, 110px);
+  left: clamp(24px, 4.5vw, 60px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+  background: rgba(8, 3, 3, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 14px 22px;
+  border-left: 3px solid #d9b74c;
+  border-top: 1px solid rgba(217, 183, 76, 0.2);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
+}
+
+.hud-goal-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-diamond-icon {
+  color: #d9b74c;
+  font-size: 15px;
+}
+
+.hud-goal-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hud-status-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #d9b74c;
+  margin-top: 2px;
+}
+
+.hud-subtext {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+/* Title & Narrative Overlay (Bottom Left: Frame 427318933 - 954:413382) */
+.info-hero-title-overlay {
+  position: absolute;
+  bottom: clamp(60px, 9vh, 110px);
+  left: clamp(24px, 5vw, 70px);
+  max-width: 480px;
+  z-index: 5;
+  padding: 14px 20px;
+  background: radial-gradient(circle at left, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 75%, transparent 100%);
+  border-radius: 4px;
+}
+
+.info-hero-main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(36px, 4.2vw, 56px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(217, 183, 76, 0.3);
+}
+
+.info-hero-sub-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.15vw, 16px);
+  font-weight: 400;
+  color: #c7c6c6;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+/* Character Profile Sidebar (Right: 928:2008) */
+.info-profile-sidebar {
+  position: absolute;
+  top: clamp(80px, 9vh, 110px);
+  right: clamp(24px, 4vw, 60px);
+  width: clamp(240px, 18vw, 290px);
+  background: rgba(10, 4, 4, 0.9);
+  border: 1px solid rgba(120, 30, 30, 0.7);
+  backdrop-filter: blur(12px);
+  padding: 18px;
+  box-sizing: border-box;
+  z-index: 5;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95);
+  transition: all 0.35s ease;
+}
+
+.profile-portrait-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #000;
+  border: 1px solid rgba(217, 183, 76, 0.4);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(35%) contrast(115%);
+}
+
+.profile-name-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.profile-years-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #d9b74c;
+  margin-bottom: 12px;
+}
+
+.profile-desc-list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5px;
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+.profile-desc-list p {
+  margin: 0 0 6px 0;
+}
+
+.profile-warning-red {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #ff3333;
+  line-height: 15px;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(100, 0, 0, 0.4);
+  padding-top: 8px;
+}
+
+/* Hotkey Control Bar (Bottom Center) */
+.info-board-hotkey-bar {
+  position: absolute;
+  bottom: clamp(14px, 2vh, 24px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: clamp(12px, 2vw, 24px);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 22px;
+  border-radius: 20px;
+  z-index: 5;
+}
+
+.hotkey-item {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #a6a6a6;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.hk-key {
+  display: inline-block;
+  background: #222;
+  border: 1px solid #555;
+  padding: 1px 6px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 10px;
+}
+
+@media (max-width: 1024px) {
+  .info-profile-sidebar {
+    display: none;
+  }
+}
+
+/* ========================================================
+   2. 4 STORY SCENES PHOTO GALLERY GRID (957:429546)
+   ======================================================== */
+.info-story-gallery-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 60px 0;
+}
+
+.info-story-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.story-scene-horror-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 681 / 470;
+  min-height: 320px;
+  background: #0d0202;
+  border: 1px solid #200000;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.95);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.story-scene-horror-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 0 40px rgba(100, 0, 0, 0.6), 0 0 60px rgba(0, 0, 0, 0.95);
+}
+
+.story-card-frame-border {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.story-card-frame-border .frame-border-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.story-card-inner-photo {
+  position: absolute;
+  inset: 8%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.scene-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.story-scene-horror-card:hover .scene-photo-img {
+  transform: scale(1.08);
+}
+
+.story-card-grunge-layer {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.story-card-grunge-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-card-footer-bar {
+  position: absolute;
+  bottom: 5%;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 4;
+}
+
+.story-card-red-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(20px, 2vw, 28px);
+  font-weight: 700;
+  color: #660000;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+}
+
+.story-card-red-action {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 400;
+  color: #660000;
+  text-decoration: none;
+  border-bottom: 1px solid #e2e2e2;
+  padding-bottom: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.story-scene-horror-card:hover .story-card-red-title {
+  color: #ff2222;
+  text-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+}
+
+.story-scene-horror-card:hover .story-card-red-action {
+  color: #ffffff;
+  border-color: #ff2222;
+}
+
+/* ========================================================
+   3. STORY HIGHLIGHT FEATURE: BI KỊCH CỦA NHÀ HỨA (957:413974)
+   ======================================================== */
+.info-feature-story-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+}
+
+.feature-story-narrative-box {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feature-main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(34px, 4.2vw, 56px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 0 0 25px rgba(217, 183, 76, 0.3);
+}
+
+.feature-sub-desc {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 1.7;
+  max-width: 680px;
+  margin: 0;
+}
+
+.btn-read-more {
+  margin-top: 10px;
+}
+
+/* ========================================================
+   4. LATEST NEWS & UPDATES SECTION (957:429832)
+   ======================================================== */
+.info-updates-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 70px 0 90px 0;
+}
+
+.updates-header-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.updates-view-all-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #a6a6a6;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.updates-view-all-link:hover {
+  color: #d9b74c;
+}
+
+.info-news-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 2.5vw, 36px);
+}
+
+.info-news-card {
+  position: relative;
+  background: #200000;
+  border: 1px solid #000000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.info-news-card:hover {
+  transform: translateY(-8px);
+  border-color: #660000;
+  box-shadow: 0 0 35px rgba(100, 0, 0, 0.5), 0 0 50px rgba(0, 0, 0, 0.95);
+}
+
+.news-card-photo-box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #000000;
+  overflow: hidden;
+  background: #000;
+}
+
+.news-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.info-news-card:hover .news-photo-img {
+  transform: scale(1.06);
+}
+
+.news-card-category-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  color: #c7c6c6;
+  opacity: 0.6;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.news-card-title-bold {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(15px, 1.25vw, 18px);
+  font-weight: 700;
+  color: #e2e2e2;
+  line-height: 1.35;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.news-card-desc-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 20px;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.news-detail-btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+/* ========================================================
+   RESPONSIVE
+   ======================================================== */
+@media (max-width: 992px) {
+  .info-story-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-news-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-profile-sidebar {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
