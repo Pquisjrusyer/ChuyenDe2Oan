@@ -7,6 +7,7 @@ import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
 import { initSmoothScroll, getLenis } from './utils/smooth-scroll.js';
 import { initBGM, initSFX, handleRouteBGM } from './utils/audio.js';
+import { initSpiderCursor } from './utils/spider-cursor.js';
 
 // Page imports
 import { renderIntro } from './pages/intro.js';
@@ -62,6 +63,9 @@ function initApp() {
   // Initialize global sound effects & background audio
   initSFX();
   initBGM();
+
+  // Initialize interactive spider cursor effect
+  initSpiderCursor();
 
   // Ensure ALL video elements across the whole website are strictly muted with 0 volume
   function muteAllVideos() {

@@ -9,8 +9,7 @@
   width: 100%;
   padding: clamp(60px, 7vw, 110px) 0 clamp(80px, 9vw, 130px) 0;
   overflow: hidden;
-  background: radial-gradient(circle at 60% 40%, rgba(140, 0, 0, 0.38) 0%, rgba(50, 0, 0, 0.18) 50%, rgba(2, 0, 0, 0.96) 100%),
-    url('/assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png') center/cover no-repeat;
+  background: transparent;
 }
 
 .feature-story-bg-layer {
@@ -32,11 +31,11 @@
 /* ========================================================
    1. TAG SECTION BADGE: "Nổi bật trong cốt truyện" (957:429588)
    ======================================================== */
-.feature-tag-badge-center {
+.feature-tag-badge-left {
   position: relative;
   width: clamp(340px, 45vw, 785px);
   height: clamp(95px, 12vw, 195px);
-  margin: 0 auto;
+  margin: 0 0 clamp(20px, 3vw, 40px) 0;
   display: flex;
   align-items: center;
   justify-content: center;

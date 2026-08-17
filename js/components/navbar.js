@@ -3,6 +3,7 @@
    ============================================ */
 
 import { toggleBGM, isBGMPlaying, updateSoundButtonsUI } from '../utils/audio.js';
+import { getLenis } from '../utils/smooth-scroll.js';
 
 export function renderNavbar(container, currentHash) {
   const showNavbar = !['intro', 'mail-confirm', 'fullscreen'].includes(currentHash);
@@ -144,4 +145,29 @@ export function renderNavbar(container, currentHash) {
       toggleBGM();
     });
   }
+
+  // Smooth scroll to top when clicking on the menu item of the active / current page
+  const navClickables = container.querySelectorAll('.nav-item, .navbar-brand-logo');
+  navClickables.forEach((item) => {
+    item.addEventListener('click', (e) => {
+      const targetHash = (item.getAttribute('href') || '').replace('#', '');
+      const currentRoute = (window.location.hash || '#home').replace('#', '');
+
+      // Close mobile menu if open
+      if (navLinks && navLinks.classList.contains('is-open')) {
+        navLinks.classList.remove('is-open');
+      }
+
+      // If user is already on this page and clicks the menu link
+      if (targetHash === currentRoute || (!targetHash && currentRoute === 'home')) {
+        e.preventDefault();
+        const lenisInstance = getLenis();
+        if (lenisInstance) {
+          lenisInstance.scrollTo(0, { duration: 1.2 });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+    });
+  });
 }

@@ -2,7 +2,8 @@
    OAN Horror Game — Info / Thông Tin Page (Figma 928:2008)
    ============================================ */
 
-import { initTrailerScrollTriggers } from '../utils/smooth-scroll.js';
+import { initInfoScrollTriggers } from '../utils/smooth-scroll.js';
+import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderInfo(container) {
   const familyCharacters = {
@@ -183,11 +184,12 @@ export async function renderInfo(container) {
           <div class="info-board-canvas" data-node-id="849:765">
             <img src="./assets/info-hero-board.png" alt="Gia Phả Họ Hứa" class="info-board-bg-texture" />
             
-            <!-- OLD SCRATCHED MIRROR / GLASS REFLECTION OVERLAY (Figma 954:397857) -->
-            <div class="info-board-scratched-mirror-overlay" data-node-id="954:397857">
-              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-scratches-img" />
-              <div class="glass-reflection-sheen"></div>
-              <div class="glass-grunge-vignette"></div>
+            <!-- OLD SCRATCHED MIRROR / GLASS REFLECTION ON 2 SIDES (Figma 954:397857) -->
+            <div class="info-hero-glass-left">
+              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+            </div>
+            <div class="info-hero-glass-right">
+              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
             </div>
 
             <!-- Objective Clue HUD (Top Left) -->
@@ -274,10 +276,12 @@ export async function renderInfo(container) {
           <div class="info-story-bg-vignette"></div>
         </div>
 
-        <!-- Antique Broken Glass / Scratched Mirror Overlay across Section 2 (Figma 957:413986) -->
-        <div class="info-story-broken-glass-overlay" data-node-id="957:413986">
-          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="broken-glass-texture-img" />
-          <div class="broken-glass-vignette"></div>
+        <!-- Broken Glass & Scratch Effects on the 2 Sides (Figma 957:413986) -->
+        <div class="info-story-glass-left">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+        </div>
+        <div class="info-story-glass-right">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
         </div>
 
         <div class="container">
@@ -365,17 +369,18 @@ export async function renderInfo(container) {
 
         <div class="container">
           
-          <!-- Tag Section: Nổi bật trong cốt truyện (957:429588) -->
-          <div class="feature-tag-badge-center trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="957:429588">
-            <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="feature-tag-bg-img" />
-            <div class="feature-tag-text-wrap">
-              <h2 class="feature-tag-title-bold" data-node-id="957:429591">Nổi bật trong
-cốt truyện</h2>
-            </div>
-          </div>
-
           <!-- Feature Narrative Content Block (Left Aligned 957:429611) -->
           <div class="feature-story-narrative-container trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="957:429611">
+            
+            <!-- Tag Section: Nổi bật trong cốt truyện (957:429588) -->
+            <div class="feature-tag-badge-left" data-node-id="957:429588">
+              <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="feature-tag-bg-img" />
+              <div class="feature-tag-text-wrap">
+                <h2 class="feature-tag-title-bold" data-node-id="957:429591">Nổi bật trong
+cốt truyện</h2>
+              </div>
+            </div>
+
             <h2 class="feature-story-title" data-node-id="957:429595">
               BI KỊCH CỦA<br/>NHÀ HỨA
             </h2>
@@ -420,7 +425,7 @@ cốt truyện</h2>
             </a>
             
             <div class="updates-tag-badge" data-node-id="957:429678">
-              <img src="./assets/07092503416c73ca4af4965cb97a13f4c989250d.png" alt="" class="updates-tag-bg-img" />
+              <img src="./assets/a8296e45104dffbbccc5a21543cae16549fa6b7c.png" alt="" class="updates-tag-bg-img" />
               <div class="updates-tag-content">
                 <h2 class="updates-tag-heading-bold" data-node-id="957:429681">Cập nhật mới nhất</h2>
                 <p class="updates-tag-subheading" data-node-id="957:429682">Cập nhật cuối</p>
@@ -521,53 +526,9 @@ cốt truyện</h2>
       </section>
 
       <!-- ========================================================
-           5. READY SECTION: BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA? (957:429834)
+           5. READY SECTION: BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA? (1363:86758)
            ======================================================== -->
-      <section class="figma-ready-section" data-node-id="957:429834">
-        <div class="ready-bg-layer" data-node-id="1363:86759">
-          <img src="./assets/756885dfb2824df927ddb06dbefba60759082c5f.png" alt="" class="ready-bg-img" />
-          <div class="ready-bg-vignette"></div>
-        </div>
-
-        <div class="ready-content-container container" data-node-id="1363:86761">
-          <div class="ready-heading-box trailer-scroll-reveal trailer-reveal-scale" data-node-id="1363:86762">
-            <h2 class="ready-heading-text" data-node-id="957:429836">
-              BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?
-            </h2>
-          </div>
-
-          <!-- 2 Buttons: CHƠI NGAY & TẢI NGAY (1363:86764) -->
-          <div class="ready-buttons-row trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="1363:86764">
-            
-            <a href="#login" class="figma-btn-horror-frame" data-node-id="1363:86765" style="text-decoration: none;">
-              <div class="horror-frame-corners">
-                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
-              </div>
-              <div class="horror-frame-body">
-                <span class="horror-btn-text">CHƠI NGAY</span>
-              </div>
-            </a>
-
-            <a href="#download" class="figma-btn-horror-frame" data-node-id="1363:86766" style="text-decoration: none;">
-              <div class="horror-frame-corners">
-                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
-              </div>
-              <div class="horror-frame-body">
-                <span class="horror-btn-text">TẢI NGAY</span>
-              </div>
-            </a>
-          </div>
-
-          <!-- Requirements (957:429841) -->
-          <div class="ready-sysreq-box trailer-scroll-reveal trailer-reveal-fade delay-350" data-node-id="957:429841">
-            <p class="sysreq-text">
-              YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
-            </p>
-          </div>
-        </div>
-      </section>
+      ${getReadySectionHTML()}
 
     </div>
   `;
@@ -625,6 +586,6 @@ cốt truyện</h2>
         el.classList.add('revealed');
       }
     });
-    initTrailerScrollTriggers();
+    initInfoScrollTriggers();
   }, 100);
 }

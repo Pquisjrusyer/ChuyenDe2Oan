@@ -1,0 +1,193 @@
+function CngDngDesktop() {
+  return (
+    <div className="bg-gradient-to-b content-stretch flex flex-col from-[#0d0904] items-center relative size-full to-[#170000] via-1/2 via-black" data-node-id="1024:73961" data-name="cộng đồng desktop">
+      <div className="h-[1018px] overflow-clip relative shrink-0 w-full" data-node-id="1024:74064" data-name="herosection">
+        <div className="absolute h-[809px] left-[calc(25%+93px)] top-[149px] w-[698px]" data-node-id="1024:74090" data-name="OÁN">
+          <div className="absolute inset-[16.48%_3.81%_20.95%_74.95%]" data-node-id="I1024:74090;953:1471" data-name="Vector">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector50} />
+          </div>
+          <div className="absolute inset-[0_0_0_38.15%]" data-node-id="I1024:74090;953:1472" data-name="Vector">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector51} />
+          </div>
+          <div className="absolute inset-[18.38%_55.09%_23.43%_0]" data-node-id="I1024:74090;953:1473" data-name="Vector">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector52} />
+          </div>
+        </div>
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Roboto:Regular'] font-normal leading-[24px] left-[calc(8.33%+390px)] text-[16px] text-black text-center top-[72px] w-[520px]" data-node-id="1024:74067" style={{ fontVariationSettings: '"wdth" 100' }}>
+          Kết nối, thảo luận và cập nhật các xu hướng mới nhất từ nhiều nền tảng.
+        </p>
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[61px] items-center justify-center left-[calc(50%+0.5px)] top-1/2 w-[511px]" data-node-id="1024:74089">
+          <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[48px] text-center text-white tracking-[-0.96px] w-full" data-node-id="1024:74065">
+            <p className="leading-[1.3]">CỘNG ĐỒNG</p>
+          </div>
+          <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[20px] relative shrink-0 text-[16px] text-center text-white tracking-[-0.32px] w-full" data-node-id="1024:74069" style={{ fontVariationSettings: '"wdth" 100' }}>
+            Kết nối, thảo luận và cập nhật các xu hướng mới nhất từ nhiều nền tảng.
+          </p>
+          <div className="content-stretch flex gap-[34px] items-center relative shrink-0 w-full" data-node-id="1024:74088">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="1024:74082" data-name="Đang ký tải xún">
+              <div className="content-stretch flex flex-col gap-[10px] h-[57px] items-center justify-center px-[76px] py-[13px] relative shrink-0 w-[217px]" data-node-id="I1024:74082;906:1714" data-name="Dang ngap">
+                <div className="absolute h-[57px] left-0 top-0 w-[217px]" data-node-id="I1024:74082;906:1715">
+                  <div className="absolute h-[57px] left-0 right-0 top-0" data-node-id="I1024:74082;906:1716" data-name="Title background">
+                    <div className="absolute inset-[0_1.05%_0_0]">
+                      <img alt="" className="block max-w-none size-full" height="57" src={imgTitleBackground} width="214.724" />
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[64px]" data-node-id="I1024:74082;906:1717">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] left-[calc(50%-49.5px)] not-italic text-[24px] text-white top-[15.5px] tracking-[-0.48px] whitespace-nowrap" data-node-id="I1024:74082;906:1718">
+                    <p className="leading-[1.3]">ĐĂNG NHẬP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="h-[70px] relative shrink-0 w-[255px]" data-node-id="1024:74070" data-name="CTA btn">
+              <div className="absolute content-stretch flex inset-0 items-center justify-center" data-node-id="I1024:74070;906:1550" data-name="Button background">
+                <div className="h-[70px] relative shrink-0 w-[15px]" data-node-id="I1024:74070;906:1551" data-name="frame_part_1">
+                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart1} />
+                </div>
+                <div className="bg-size-[25px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1024:74070;906:1552" style={{ backgroundImage: `url("${imgFramePart2}")` }} data-name="frame_part_2" />
+                <div className="h-[70px] relative shrink-0 w-[146px]" data-node-id="I1024:74070;906:1553" data-name="frame_part_3">
+                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart3} />
+                </div>
+                <div className="bg-size-[18px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1024:74070;906:1554" style={{ backgroundImage: `url("${imgFramePart4}")` }} data-name="frame_part_4" />
+                <div className="h-[70px] relative shrink-0 w-[30px]" data-node-id="I1024:74070;906:1555" data-name="frame_part_5">
+                  <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart5} />
+                </div>
+              </div>
+              <div className="absolute border border-black border-solid inset-[4.29%_4px]" data-node-id="I1024:74070;906:1556">
+                <div aria-hidden className="absolute inset-0 pointer-events-none">
+                  <div className="absolute bg-gradient-to-b from-[#593b0c] inset-0 to-[#b10e07]" />
+                  <div className="absolute inset-0 mix-blend-multiply opacity-50 overflow-hidden">
+                    <img alt="" className="absolute h-[489.23%] left-[-7.94%] max-w-none top-[-180.33%] w-[192.27%]" src={imgRectangle37} />
+                  </div>
+                  <div className="absolute bg-gradient-to-b from-[rgba(45,1,0,0.53)] inset-0 to-[rgba(177,14,7,0)]" />
+                </div>
+              </div>
+              <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[1.3] left-[calc(50%-0.26px)] not-italic text-[20px] text-center text-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] text-white top-[calc(50%-13px)] tracking-[-0.4px] w-[208.48px]" data-node-id="I1024:74070;906:1557">
+                THAM GIA NGAY
+              </p>
+              <div className="absolute blur-[1.2px] border-5 border-[#ee1b10] border-solid inset-[8.57%_1.58%]" data-node-id="I1024:74070;906:1558" data-name="Button frame 3" />
+              <div className="absolute border-3 border-[#ee1b10] border-solid inset-[8.57%_1.58%] shadow-[0px_0px_2.5px_0px_red]" data-node-id="I1024:74070;906:1559" data-name="Button frame 2" />
+              <div className="absolute border-[#c0552f] border-[0.6px] border-solid inset-[8.57%_1.58%]" data-node-id="I1024:74070;906:1560" data-name="Button frame 1" />
+            </div>
+          </div>
+        </div>
+        <div className="absolute h-[40px] left-[calc(8.33%+12px)] top-[182px] w-[184px]" data-node-id="1058:78396" data-name="left">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft} />
+        </div>
+        <div className="absolute flex h-[40px] items-center justify-center left-[calc(75%+124px)] top-[865px] w-[184px]" data-node-id="1058:78398">
+          <div className="flex-none rotate-180">
+            <div className="h-[40px] relative w-[184px]" data-name="left">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft1} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center relative shrink-0 w-full" data-node-id="1024:74098">
+        <div className="-scale-y-100 flex-none rotate-180 w-full">
+          <div className="h-[855px] overflow-clip relative w-full" data-name="articlesection">
+            <div className="absolute content-stretch flex flex-col gap-[20px] items-center left-[12px] top-[55px] w-[1896px]" data-node-id="1024:74129" data-name="title">
+              <div className="content-stretch flex gap-[10px] items-center justify-center px-[282px] py-[10px] relative shrink-0 w-full" data-node-id="1024:74099" data-name="ctaline">
+                <div className="flex h-full items-center justify-center relative shrink-0">
+                  <div className="-scale-y-100 flex-none h-full rotate-180">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Bold'] h-full justify-center leading-[0] not-italic relative text-[#900] text-[40px] text-center tracking-[-0.8px] w-[357px]">
+                      <p className="leading-[1.3]">TIN TỨC NỔI BẬT</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="-translate-x-1/2 absolute h-[79px] left-[calc(50%-0.5px)] top-0 w-[1653px]" data-node-id="1024:74101" data-name="Horror frame 1">
+                  <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1024:74101;708:35" data-name="Left">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft2} />
+                  </div>
+                  <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1024:74101;708:38" data-name="Spacer left" />
+                  <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1024:74101;708:42" data-name="Spacer right" />
+                  <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1024:74101;708:43" style={{ containerType: "size" }}>
+                    <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+                      <div className="relative size-full" data-name="Left">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft3} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center relative shrink-0 w-full" data-node-id="1024:74127">
+                <div className="-scale-y-100 flex-none rotate-180 w-full">
+                  <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative text-[24px] text-center text-white tracking-[-0.48px] w-full">
+                    <p className="leading-[1.3]">Cập nhật nhanh từ cộng đồng</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[83px] items-center justify-center left-[calc(50%-1px)] p-[60px] top-1/2 w-[1652px]" data-node-id="1030:73730" data-name="tagarticle">
+              <div className="content-stretch flex gap-[146px] items-center justify-center relative shrink-0 w-full" data-node-id="1030:73728">
+                <div className="flex items-center justify-center relative shrink-0" data-node-id="1030:73686">
+                  <div className="-scale-y-100 flex-none rotate-180">
+                    <div className="border border-[#890000] border-solid content-stretch flex gap-[16px] items-start justify-center overflow-clip p-[16px] relative rounded-[10px] w-[530px]" style={{ backgroundImage: "linear-gradient(111.1338197322354deg, rgb(40, 1, 1) 2.0856%, rgb(0, 0, 0) 98.236%)" }} data-name="article">
+                      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(50%-0.5px)] mix-blend-soft-light size-[553px] top-1/2" data-node-id="I1030:73686;1030:353" data-name="78042 2">
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img780422} />
+                      </div>
+                      <div className="border border-[#5c0101] border-solid content-stretch flex items-start overflow-clip relative rounded-[10px] shrink-0 size-[100px]" data-node-id="I1030:73686;1024:74131" data-name="image container">
+                        <div className="bg-[rgba(217,217,217,0.5)] flex-[1_0_0] h-full min-w-px relative" data-node-id="I1030:73686;1024:74132" data-name="image">
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[103px] left-[calc(50%+10px)] top-[calc(50%+0.5px)] w-[154px]" data-node-id="I1030:73686;1024:74148" data-name="image 17" />
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[106px] top-1/2" data-node-id="I1030:73686;1058:77967" data-name="fb vuông 1">
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFbVuong1} />
+                          </div>
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[106px] top-1/2" data-node-id="I1030:73686;1058:77968" data-name="dr vuông 1">
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDrVuong1} />
+                          </div>
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[106px] left-[calc(50%-0.5px)] top-1/2 w-[107px]" data-node-id="I1030:73686;1058:77969" data-name="str 1">
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgStr1} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative" data-node-id="I1030:73686;1024:74133">
+                        <p className="[word-break:break-word] font-['Space_Mono:Bold'] leading-[1.3] not-italic relative shrink-0 text-[#900] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1030:73686;1024:74134">
+                          Cách tối ưu nội dung để tăng tương tác
+                        </p>
+                        <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[20px] relative shrink-0 text-[#c6a02a] text-[12px] tracking-[-0.24px] w-full" data-node-id="I1030:73686;1024:74135" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          Hướng dẫn • 5 phút đọc
+                        </p>
+                        <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1030:73686;1024:74136" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          Gợi ý khung nội dung, thời điểm đăng và mẹo viết caption thu hút.
+                        </p>
+                        <div className="content-stretch flex gap-[6px] items-center overflow-clip py-[4px] relative shrink-0 w-full" data-node-id="I1030:73686;1024:74137" data-name="Selection">
+                          <div className="bg-gradient-to-b border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex from-[rgba(92,1,1,0.5)] items-center justify-center overflow-clip px-[8px] py-[4px] relative rounded-[2px] shrink-0 to-[rgba(98,30,30,0.5)]" data-node-id="I1030:73686;1024:74138" data-name="label-normal">
+                            <p className="[word-break:break-word] font-['Montserrat:Regular'] font-normal leading-[16px] relative shrink-0 text-[#c6a02a] text-[12px] whitespace-nowrap" data-node-id="I1030:73686;1024:74139">
+                              Hướng dẫn
+                            </p>
+                          </div>
+                          <div className="bg-gradient-to-b border-[0.5px] border-[rgba(0,0,0,0.1)] border-solid content-stretch flex from-[rgba(92,1,1,0.5)] items-center justify-center overflow-clip px-[8px] py-[4px] relative rounded-[2px] shrink-0 to-[rgba(98,30,30,0.5)]" data-node-id="I1030:73686;1024:74140" data-name="label-normal">
+                            <p className="[word-break:break-word] font-['Montserrat:Regular'] font-normal leading-[16px] relative shrink-0 text-[#c6a02a] text-[12px] whitespace-nowrap" data-node-id="I1030:73686;1024:74141">
+                              Tương tác
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <Article className="flex items-center justify-center relative shrink-0" />
+              </div>
+              <div className="content-stretch flex gap-[146px] items-center justify-center relative shrink-0 w-full" data-node-id="1030:73729">
+                <div className="flex items-center justify-center relative shrink-0" data-node-id="1030:73701">
+                  <div className="-scale-y-100 flex-none rotate-180">
+                    <div className="border border-[#890000] border-solid content-stretch flex gap-[16px] items-start justify-center overflow-clip p-[16px] relative rounded-[10px] w-[530px]" style={{ backgroundImage: "linear-gradient(111.1338197322354deg, rgb(40, 1, 1) 2.0856%, rgb(0, 0, 0) 98.236%)" }} data-name="article">
+                      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-[calc(50%-0.5px)] mix-blend-soft-light size-[553px] top-1/2" data-node-id="I1030:73701;1030:353" data-name="78042 2">
+                        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img780422} />
+                      </div>
+                      <div className="border border-[#5c0101] border-solid content-stretch flex items-start overflow-clip relative rounded-[10px] shrink-0 size-[100px]" data-node-id="I1030:73701;1024:74131" data-name="image container">
+                        <div className="bg-[rgba(217,217,217,0.5)] flex-[1_0_0] h-full min-w-px relative" data-node-id="I1030:73701;1024:74132" data-name="image">
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[103px] left-[calc(50%+10px)] top-[calc(50%+0.5px)] w-[154px]" data-node-id="I1030:73701;1024:74148" data-name="image 17" />
+                          <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 size-[106px] top-1/2" data-node-id="I1030:73701;1058:77967" data-name="fb vuông 1">
+                            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFbVuong1} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative" data-node-id="I1030:73701;1024:74133">
+                        <p className="[word-break:break-word] font-['Space_Mono:Bold'] leading-[1.3] not-italic relative shrink-0 text-[#900] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1030:73701;1024:74134">
+                          Cập nhật chính sách: Quy tắc đăng bài
+                        </p>
+                        <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[20px] relative shrink-0 text-[#c6a02a] text-[12px] tracking-[-0.24px] w-full" data-node-id="I1030:73701;1024:74135" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          Thông báo • 5 phút đọc
+                        </p>
+                        <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[20px] re

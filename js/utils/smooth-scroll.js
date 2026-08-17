@@ -417,92 +417,102 @@ export function initHomeScrollTriggers() {
     }
   }
 
-  // 8. Character Cards & Wanted Dossier Board ScrollTrigger (Figma 1301:82038 -> 1301:82037)
+  // 8. Character Cards ScrollTrigger
   const charStage = document.querySelector('.char-interactive-stage-area');
   const cardsFlexWrapper = document.querySelector('#char-cards-flex-wrapper');
-  const wantedBoard = document.querySelector('#wanted-dossier-board');
 
-  if (charStage && cardsFlexWrapper && wantedBoard) {
-    ScrollTrigger.create({
-      trigger: charStage,
-      start: 'top 35%',
-      onEnter: () => {
-        cardsFlexWrapper.classList.remove('state-default');
-        cardsFlexWrapper.classList.add('state-selected');
-        wantedBoard.classList.add('active-board');
-        wantedBoard.classList.remove('has-character-selected');
-        document.querySelectorAll('.char-card-interactive-item').forEach(c => {
-          c.classList.remove('active-selected');
-          c.classList.remove('blood-crossed');
-        });
-      },
-      onLeaveBack: () => {
-        cardsFlexWrapper.classList.remove('state-selected');
-        cardsFlexWrapper.classList.add('state-default');
-        wantedBoard.classList.remove('active-board');
-        wantedBoard.classList.remove('has-character-selected');
-        document.querySelectorAll('.char-card-interactive-item').forEach(c => {
-          c.classList.remove('active-selected');
-          c.classList.remove('blood-crossed');
-        });
-      },
-    });
+  if (charStage && cardsFlexWrapper) {
+    gsap.fromTo(cardsFlexWrapper,
+      { opacity: 0, y: 30 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: charStage,
+          start: 'top 75%',
+          toggleActions: 'play none none reverse',
+        },
+      }
+    );
   }
 
-  // 8.5. NHÀ HỨA Subblock & Tag Scroll Animation (Smooth, Stable Horror Entrance)
+  // 8.5. NHÀ HỨA Subblock & Tag Scroll Animation (Snappy, Fast-Revealing Horror Entrance)
   const nhaHuaBlock = document.querySelector('.nha-hua-fear-subblock');
   const nhaHuaTag = document.querySelector('.nha-hua-tag-left-box');
   const nhaHuaHallway = document.querySelector('.nha-hua-fear-hallway-frame');
-  const fearText = document.querySelector('.hallway-fear-text');
 
   if (nhaHuaBlock) {
     if (nhaHuaTag) {
+      const nhaHuaTitle = nhaHuaTag.querySelector('.char-tag-title-main');
+      const nhaHuaDesc = nhaHuaTag.querySelector('.char-tag-sub-desc');
+
+      // Fast, responsive entrance as soon as user scrolls near
       gsap.fromTo(nhaHuaTag,
-        { x: -100, opacity: 0 },
+        { x: -80, opacity: 0 },
         {
           x: 0,
           opacity: 1,
-          duration: 1,
+          duration: 0.5,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: nhaHuaTag,
-            start: 'top 88%',
+            start: 'top 90%',
             toggleActions: 'play none none reverse',
           },
         }
       );
+
+      if (nhaHuaTitle) {
+        gsap.fromTo(nhaHuaTitle,
+          { opacity: 0, x: -30 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            delay: 0.1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: nhaHuaTag,
+              start: 'top 90%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      }
+
+      if (nhaHuaDesc) {
+        gsap.fromTo(nhaHuaDesc,
+          { opacity: 0, x: -20 },
+          {
+            opacity: 1,
+            x: 0,
+            duration: 0.5,
+            delay: 0.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: nhaHuaTag,
+              start: 'top 90%',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        );
+      }
     }
 
     if (nhaHuaHallway) {
       gsap.fromTo(nhaHuaHallway,
-        { opacity: 0, scale: 0.96, y: 30 },
+        { opacity: 0, scale: 0.97, y: 25 },
         {
           opacity: 1,
           scale: 1,
           y: 0,
-          duration: 1.2,
+          duration: 0.6,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: nhaHuaHallway,
-            start: 'top 82%',
-            toggleActions: 'play none none reverse',
-          },
-        }
-      );
-    }
-
-    if (fearText) {
-      gsap.fromTo(fearText,
-        { opacity: 0, scale: 0.88, filter: 'blur(8px)' },
-        {
-          opacity: 1,
-          scale: 1,
-          filter: 'blur(0px)',
-          duration: 1.4,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: nhaHuaHallway || fearText,
-            start: 'top 65%',
+            start: 'top 85%',
             toggleActions: 'play none none reverse',
           },
         }
@@ -602,6 +612,44 @@ export function initTrailerScrollTriggers() {
       );
   }
 
+  // 5-Frame Gallery Scroll Scrub Animation
+  const collage = document.querySelector('.figma-horrorframe-collage');
+  if (collage) {
+    const f1 = collage.querySelector('.hf-item-1');
+    const f2 = collage.querySelector('.hf-item-2');
+    const f3 = collage.querySelector('.hf-item-3');
+    const f4 = collage.querySelector('.hf-item-4');
+    const f5 = collage.querySelector('.hf-item-5');
+
+    const tlCollage = gsap.timeline({
+      scrollTrigger: {
+        trigger: collage,
+        start: 'top 85%',
+        end: 'bottom 15%',
+        scrub: 1.2,
+      },
+    });
+
+    if (f1) {
+      tlCollage
+        .fromTo(f1, { x: -140, opacity: 0.2, scale: 0.92 }, { x: 0, opacity: 1, scale: 1, ease: 'power2.out' }, 0)
+        .to(f1, { x: 0, opacity: 1, scale: 1, ease: 'none' }, 0.35)
+        .to(f1, { x: -100, opacity: 0.3, scale: 0.94, ease: 'power2.in' }, 0.7);
+    }
+    if (f2 && f3) {
+      tlCollage
+        .fromTo([f2, f3], { y: 60, opacity: 0.2, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, ease: 'power2.out' }, 0)
+        .to([f2, f3], { y: 0, opacity: 1, scale: 1, ease: 'none' }, 0.35)
+        .to([f2, f3], { y: -60, opacity: 0.3, scale: 0.92, ease: 'power2.in' }, 0.7);
+    }
+    if (f4 && f5) {
+      tlCollage
+        .fromTo([f4, f5], { x: 140, opacity: 0.2, scale: 0.92 }, { x: 0, opacity: 1, scale: 1, ease: 'power2.out' }, 0)
+        .to([f4, f5], { x: 0, opacity: 1, scale: 1, ease: 'none' }, 0.35)
+        .to([f4, f5], { x: 100, opacity: 0.3, scale: 0.94, ease: 'power2.in' }, 0.7);
+    }
+  }
+
   const trailerExploreTag = document.querySelector('.trailer-explore-section .gallery-tag-section-badge');
   if (trailerExploreTag) {
     const tlExploreTag = gsap.timeline({
@@ -635,58 +683,314 @@ export function initTrailerScrollTriggers() {
   }, 100);
 }
 
-// 12. INFO PAGE � Custom triggers
+// 12. INFO PAGE — GSAP ScrollTrigger Animations
 export function initInfoScrollTriggers() {
-  const featuredTag = document.querySelector('.info-featured-tag-badge');
-  if (featuredTag) {
-    const tlFeatured = gsap.timeline({
-      scrollTrigger: {
-        trigger: featuredTag,
-        start: 'top 92%',
-        end: 'bottom 10%',
-        scrub: 1,
-      },
-    });
-    tlFeatured
-      .fromTo(featuredTag,
-        { x: -220, opacity: 0, scale: 0.92 },
-        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
-        0
-      )
-      .to(featuredTag,
-        { x: 0, opacity: 1, scale: 1, ease: 'none' },
-        0.35
-      )
-      .to(featuredTag,
-        { x: -220, opacity: 0, scale: 0.92, ease: 'power2.in' },
-        0.7
+  ScrollTrigger.getAll().forEach(t => t.kill());
+
+  // 1. Hero Section Animations
+  const heroBoard = document.querySelector('.info-hero-board-section');
+  if (heroBoard) {
+    const titleOverlay = heroBoard.querySelector('.info-hero-title-overlay');
+    const hudObj = heroBoard.querySelector('.info-board-hud-objective');
+    const profileCard = heroBoard.querySelector('.info-profile-sidebar');
+    const hotspots = heroBoard.querySelectorAll('.char-hotspot-btn');
+    const hotkeyBar = heroBoard.querySelector('.info-board-hotkey-bar');
+
+    if (titleOverlay) {
+      gsap.fromTo(titleOverlay,
+        { opacity: 0, x: -60, filter: 'blur(6px)' },
+        { opacity: 1, x: 0, filter: 'blur(0px)', duration: 0.9, delay: 0.2, ease: 'power3.out' }
       );
+    }
+    if (hudObj) {
+      gsap.fromTo(hudObj,
+        { opacity: 0, y: -30 },
+        { opacity: 1, y: 0, duration: 0.8, delay: 0.3, ease: 'power2.out' }
+      );
+    }
+    if (profileCard) {
+      gsap.fromTo(profileCard,
+        { opacity: 0, x: 60 },
+        { opacity: 1, x: 0, duration: 0.9, delay: 0.4, ease: 'power3.out' }
+      );
+    }
+    if (hotspots.length) {
+      gsap.fromTo(hotspots,
+        { scale: 0, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, stagger: 0.04, delay: 0.4, ease: 'back.out(1.7)' }
+      );
+    }
+    if (hotkeyBar) {
+      gsap.fromTo(hotkeyBar,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7, delay: 0.6, ease: 'power2.out' }
+      );
+    }
   }
 
-  const newsTag = document.querySelector('.info-news-tag-badge');
-  if (newsTag) {
-    const tlNews = gsap.timeline({
-      scrollTrigger: {
-        trigger: newsTag,
-        start: 'top 92%',
-        end: 'bottom 10%',
-        scrub: 1,
-      },
-    });
-    tlNews
-      .fromTo(newsTag,
-        { x: 220, opacity: 0, scale: 0.92 },
-        { x: 0, opacity: 1, scale: 1, ease: 'power2.out' },
-        0
-      )
-      .to(newsTag,
-        { x: 0, opacity: 1, scale: 1, ease: 'none' },
-        0.35
-      )
-      .to(newsTag,
-        { x: 220, opacity: 0, scale: 0.92, ease: 'power2.in' },
-        0.7
+  // 2. Section 2: 4 Story Scenes Photo Gallery Grid
+  const storyGrid = document.querySelector('.info-story-gallery-grid');
+  if (storyGrid) {
+    const cards = storyGrid.querySelectorAll('.story-scene-horror-card');
+    if (cards.length >= 4) {
+      // Card 1 (Top-Left): slide in from left
+      gsap.fromTo(cards[0],
+        { x: -80, opacity: 0, scale: 0.94 },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: storyGrid,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
       );
+      // Card 2 (Top-Right): slide in from right
+      gsap.fromTo(cards[1],
+        { x: 80, opacity: 0, scale: 0.94 },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: storyGrid,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+      // Card 3 (Bottom-Left): slide in from left
+      gsap.fromTo(cards[2],
+        { x: -80, opacity: 0, scale: 0.94 },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.25,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: storyGrid,
+            start: 'top 65%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+      // Card 4 (Bottom-Right): slide in from right
+      gsap.fromTo(cards[3],
+        { x: 80, opacity: 0, scale: 0.94 },
+        {
+          x: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.4,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: storyGrid,
+            start: 'top 65%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
   }
+
+  // 3. Section 3: Feature Story Highlight (BI KỊCH CỦA NHÀ HỨA)
+  const featureSection = document.querySelector('.info-feature-story-section');
+  if (featureSection) {
+    const tagBadge = featureSection.querySelector('.feature-tag-badge-left');
+    const fTitle = featureSection.querySelector('.feature-story-title');
+    const fDesc = featureSection.querySelector('.feature-story-desc');
+    const fBtn = featureSection.querySelector('.btn-horror-cta-readmore');
+
+    if (tagBadge) {
+      gsap.fromTo(tagBadge,
+        { x: -90, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: featureSection,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (fTitle) {
+      gsap.fromTo(fTitle,
+        { x: -60, opacity: 0, filter: 'blur(6px)' },
+        {
+          x: 0,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.8,
+          delay: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: featureSection,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (fDesc) {
+      gsap.fromTo(fDesc,
+        { opacity: 0, y: 25 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.3,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: featureSection,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (fBtn) {
+      gsap.fromTo(fBtn,
+        { scale: 0.85, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 0.7,
+          delay: 0.45,
+          ease: 'back.out(1.5)',
+          scrollTrigger: {
+            trigger: featureSection,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 4. Section 4: Latest News & Updates (CẬP NHẬT MỚI NHẤT)
+  const updatesSection = document.querySelector('.info-updates-section');
+  if (updatesSection) {
+    const upTag = updatesSection.querySelector('.updates-tag-badge');
+    const viewAllLink = updatesSection.querySelector('.updates-view-all-link');
+    const newsCards = updatesSection.querySelectorAll('.info-news-card');
+
+    if (upTag) {
+      gsap.fromTo(upTag,
+        { x: 90, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: updatesSection,
+            start: 'top 82%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (viewAllLink) {
+      gsap.fromTo(viewAllLink,
+        { x: -40, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: updatesSection,
+            start: 'top 82%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (newsCards.length) {
+      gsap.fromTo(newsCards,
+        { y: 50, opacity: 0, scale: 0.94 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.15,
+          delay: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: updatesSection,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 5. Ready Section
+  const readySec = document.querySelector('.figma-ready-section');
+  if (readySec) {
+    const heading = readySec.querySelector('.ready-heading-text');
+    const btns = readySec.querySelectorAll('.figma-btn-horror-frame');
+    if (heading) {
+      gsap.fromTo(heading,
+        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+    if (btns.length) {
+      gsap.fromTo(btns,
+        { opacity: 0, scale: 0.9, y: 20 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.12,
+          delay: 0.2,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
 }
-
