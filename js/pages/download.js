@@ -277,19 +277,15 @@ export async function renderDownload(container) {
           <!-- Card 1: Windows PC (1218:78471 & 1218:78535) -->
           <a href="#dl-specs-section" class="dl-platform-card-unit unit-win" data-node-id="1218:78471">
             <div class="dl-platform-card-box card-box-win" data-node-id="1218:78424">
-              <!-- Inner Content Box with Dark Gradient (1218:78424) -->
+              <!-- Full-height Inner Content Box (1218:78424) -->
               <div class="dl-platform-inner-wrap wrap-win">
                 <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78427) -->
                 <div class="dl-platform-diff-bg" data-node-id="1218:78427">
                   <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
                 </div>
-                <!-- Default Stone Carved Windows 11 Logo (1218:78435) -->
-                <div class="dl-platform-stone-icon icon-win default-stone-icon" data-node-id="1218:78435">
+                <!-- Stone Carved Windows 11 Logo (1218:78435) -->
+                <div class="dl-platform-stone-icon icon-win" data-node-id="1218:78435">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Windows 11" />
-                </div>
-                <!-- Hover Glowing Silver Stone Windows 11 Logo (1218:78447) -->
-                <div class="dl-platform-stone-icon icon-win-glow hover-stone-icon" data-node-id="1218:78447">
-                  <img src="./assets/c63459ce5d908ac036f2048f1fef8dcf875aa387.png" alt="Windows 11 Hover" />
                 </div>
               </div>
               <!-- Weathered Photo Frame Overlay (1218:78425) -->
@@ -307,19 +303,15 @@ export async function renderDownload(container) {
           <!-- Card 2: Steam Store (1218:78473 & 1218:78536) -->
           <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="dl-platform-card-unit unit-steam" data-node-id="1218:78473">
             <div class="dl-platform-card-box card-box-steam" data-node-id="1218:78418">
-              <!-- Inner Content Box with Dark Gradient (1218:78418) -->
+              <!-- Full-height Inner Content Box (1218:78418) -->
               <div class="dl-platform-inner-wrap wrap-steam">
                 <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78462) -->
                 <div class="dl-platform-diff-bg" data-node-id="1218:78462">
                   <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
                 </div>
-                <!-- Default Stone Carved Steam Logo (1218:78437) -->
-                <div class="dl-platform-stone-icon icon-steam default-stone-icon" data-node-id="1218:78437">
+                <!-- Stone Carved Steam Logo (1218:78437) -->
+                <div class="dl-platform-stone-icon icon-steam" data-node-id="1218:78437">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Steam" />
-                </div>
-                <!-- Hover Glowing Silver Stone Steam Logo (1218:78451) -->
-                <div class="dl-platform-stone-icon icon-steam-glow hover-stone-icon" data-node-id="1218:78451">
-                  <img src="./assets/7420527cd3e6f6161944f47ace446832463abe65.png" alt="Steam Hover" />
                 </div>
               </div>
               <!-- Weathered Photo Frame Overlay (1218:78419) -->
@@ -337,19 +329,15 @@ export async function renderDownload(container) {
           <!-- Card 3: Epic Store (1218:78472 & 1218:78537) -->
           <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="dl-platform-card-unit unit-epic" data-node-id="1218:78472">
             <div class="dl-platform-card-box card-box-epic" data-node-id="1218:78421">
-              <!-- Inner Content Box with Dark Gradient (1218:78421) -->
+              <!-- Full-height Inner Content Box (1218:78421) -->
               <div class="dl-platform-inner-wrap wrap-epic">
                 <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78463) -->
                 <div class="dl-platform-diff-bg" data-node-id="1218:78463">
                   <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
                 </div>
-                <!-- Default Stone Carved Epic Games Logo (1218:78438) -->
-                <div class="dl-platform-stone-icon icon-epic default-stone-icon" data-node-id="1218:78438">
+                <!-- Stone Carved Epic Games Logo (1218:78438) -->
+                <div class="dl-platform-stone-icon icon-epic" data-node-id="1218:78438">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Epic Games" />
-                </div>
-                <!-- Hover Glowing Silver Stone Epic Games Logo (1218:78455) -->
-                <div class="dl-platform-stone-icon icon-epic-glow hover-stone-icon" data-node-id="1218:78455">
-                  <img src="./assets/9f67985d386c37e608c662e9f7425d62c905ac6a.png" alt="Epic Games Hover" />
                 </div>
               </div>
               <!-- Weathered Photo Frame Overlay (1218:78422) -->
@@ -363,6 +351,7 @@ export async function renderDownload(container) {
               <p class="dl-platform-sub" data-node-id="1218:78534">Xem thêm trên Epic Game</p>
             </div>
           </a>
+        </div>
 
         </div>
       </section>
