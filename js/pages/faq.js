@@ -3,6 +3,7 @@
    ======================================================== */
 
 import { initFaqScrollTriggers } from '../utils/smooth-scroll.js';
+import { initFaqGsapScroll } from '../utils/page-gsap-animations.js';
 
 export async function renderFaq(container) {
   container.innerHTML = `
@@ -515,5 +516,6 @@ export async function renderFaq(container) {
     if (typeof initFaqScrollTriggers === 'function') {
       initFaqScrollTriggers();
     }
+    initFaqGsapScroll(container);
   }, 100);
 }

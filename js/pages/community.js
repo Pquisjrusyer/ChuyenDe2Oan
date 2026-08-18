@@ -4,6 +4,7 @@
 
 import { getReadySectionHTML } from '../components/ready-section.js';
 import { initCommunityScrollTriggers } from '../utils/smooth-scroll.js';
+import { initCommunityGsapScroll } from '../utils/page-gsap-animations.js';
 import { sendSubscriptionEmail } from '../services/email-service.js';
 import { showThankYouLetterModal } from '../components/thank-you-letter-modal.js';
 
@@ -304,5 +305,6 @@ export async function renderCommunity(container) {
       }
     });
     initCommunityScrollTriggers();
+    initCommunityGsapScroll(container);
   }, 100);
 }
