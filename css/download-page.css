@@ -168,7 +168,7 @@
   flex-wrap: wrap;
 }
 
-/* Button 1: TẢI NGAY (1191:80344) */
+/* Button 1: TẢI NGAY (1191:80345) */
 .btn-dl-metal-crimson {
   position: relative;
   width: clamp(220px, 20vw, 320px);
@@ -182,12 +182,12 @@
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .btn-dl-metal-crimson:hover {
   transform: translateY(-3px) scale(1.02);
-  filter: brightness(1.18) drop-shadow(0 0 20px rgba(180, 20, 20, 0.6));
+  filter: brightness(1.18) drop-shadow(0 0 25px rgba(217, 183, 76, 0.6));
 }
 
 .btn-dl-metal-crimson .btn-metal-texture-bg {
@@ -206,34 +206,51 @@
 
 .btn-dl-metal-crimson .btn-metal-vector-top {
   position: absolute;
-  top: 5px;
+  top: -4px;
   left: 10px;
   width: 60%;
-  height: 5px;
+  height: 6px;
   z-index: 4;
   pointer-events: none;
   transform: rotate(180deg) scaleY(-1);
 }
 
-.btn-dl-metal-crimson .btn-metal-vector-top img,
-.btn-dl-metal-crimson .btn-metal-vector-bottom img {
+.btn-dl-metal-crimson .btn-metal-vector-bottom {
+  position: absolute;
+  bottom: -4px;
+  right: 10px;
+  width: 60%;
+  height: 6px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.btn-metal-vector-top img,
+.btn-metal-vector-bottom img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
 }
 
-.btn-dl-metal-crimson .btn-metal-vector-bottom {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-  width: 60%;
-  height: 5px;
-  z-index: 4;
-  pointer-events: none;
+.vector-default {
+  display: block;
+}
+
+.vector-hover {
+  display: none;
+}
+
+.btn-dl-metal-crimson:hover .vector-default {
+  display: none;
+}
+
+.btn-dl-metal-crimson:hover .vector-hover {
+  display: block;
 }
 
 .btn-dl-metal-crimson .btn-metal-inner-frame {
+  position: relative;
   border: 3px solid #832714;
   background: linear-gradient(180deg, #370b06 0%, #210403 100%);
   width: 100%;
@@ -245,7 +262,49 @@
   box-sizing: border-box;
 }
 
+/* Ornate Corner Brackets */
+.btn-bracket {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.corner-tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.btn-bracket img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 .btn-dl-metal-crimson .btn-metal-content {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: clamp(10px, 1.2vw, 16px);
@@ -255,12 +314,29 @@
   width: clamp(36px, 3.2vw, 52px);
   height: clamp(36px, 3.2vw, 52px);
   flex-shrink: 0;
+  position: relative;
 }
 
 .btn-dl-metal-crimson .btn-metal-icon img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.icon-default {
+  display: block;
+}
+
+.icon-hover {
+  display: none;
+}
+
+.btn-dl-metal-crimson:hover .icon-default {
+  display: none;
+}
+
+.btn-dl-metal-crimson:hover .icon-hover {
+  display: block;
 }
 
 .btn-dl-metal-crimson .btn-metal-label {
@@ -270,9 +346,14 @@
   color: #ffffff;
   letter-spacing: -0.3px;
   white-space: nowrap;
+  transition: color 0.25s ease;
 }
 
-/* Button 2: CẤU HÌNH HỆ THỐNG (1191:80340) */
+.btn-dl-metal-crimson:hover .btn-metal-label {
+  color: #d9b74c;
+}
+
+/* Button 2: CẤU HÌNH HỆ THỐNG (1191:80341) */
 .btn-dl-metal-stone {
   position: relative;
   width: clamp(340px, 32vw, 520px);
@@ -286,12 +367,12 @@
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .btn-dl-metal-stone:hover {
   transform: translateY(-3px) scale(1.02);
-  filter: brightness(1.15) drop-shadow(0 0 20px rgba(180, 20, 20, 0.4));
+  filter: brightness(1.15) drop-shadow(0 0 25px rgba(217, 183, 76, 0.4));
 }
 
 .btn-dl-metal-stone .btn-metal-stone-bg {
@@ -309,6 +390,7 @@
 }
 
 .btn-dl-metal-stone .btn-metal-stone-frame {
+  position: relative;
   border: 3px solid #747474;
   background: linear-gradient(180deg, #595959 0%, #3a3a3a 100%);
   width: 100%;
@@ -320,6 +402,15 @@
   box-sizing: border-box;
 }
 
+.btn-metal-stone-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .btn-dl-metal-stone .btn-metal-stone-label {
   font-family: 'Space Mono', monospace;
   font-size: clamp(18px, 1.8vw, 28px);
@@ -328,6 +419,33 @@
   letter-spacing: -0.3px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.btn-metal-stone-arrow {
+  width: clamp(24px, 2.5vw, 36px);
+  height: clamp(24px, 2.5vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-metal-stone-arrow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn-dl-metal-stone:hover .btn-metal-stone-label {
+  color: #d9b74c;
+}
+
+.btn-dl-metal-stone:hover .btn-metal-stone-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Bottom 4 Feature Tiles Strip (1195:78481) */
@@ -335,7 +453,7 @@
   position: relative;
   width: 100%;
   max-width: 1050px;
-  height: clamp(190px, 20vh, 260px);
+  height: clamp(190px, 30vh, 260px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -633,7 +751,7 @@
 .dl-polaroid-curse-text {
   position: absolute;
   bottom: -6%;
-  left: 50%;
+  left: 60%;
   transform: translateX(-50%);
   font-family: 'Space Mono', monospace;
   font-size: clamp(16px, 1.6vw, 24px);

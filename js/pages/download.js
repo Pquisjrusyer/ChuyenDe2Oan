@@ -47,39 +47,61 @@ export async function renderDownload(container) {
                 </p>
               </div>
 
-              <!-- 2 Action Buttons (1195:78478) -->
+              <!-- 2 Action Buttons (1191:80345 & 1191:80341) -->
               <div class="dl-hero-actions-row" data-node-id="1195:78478">
-                <!-- Button 1: TẢI NGAY (1191:80344) -->
+                
+                <!-- Button 1: TẢI NGAY (1191:80345) -->
                 <a href="#download-stores" class="btn-dl-metal-crimson" data-node-id="1191:80344">
-                  <!-- Top Accent Vector (1191:80225) -->
+                  <!-- Top Accent Vector (Default & Hover) -->
                   <div class="btn-metal-vector-top" data-node-id="1191:80225">
-                    <img src="./assets/493ada44689bcb87ec64c7b44d4805b8d6e975c4.svg" alt="" />
+                    <img src="./assets/493ada44689bcb87ec64c7b44d4805b8d6e975c4.svg" alt="" class="vector-default" />
+                    <img src="./assets/85f8b3b35786048d6f866d3fdaf7a52539f6a376.svg" alt="" class="vector-hover" />
                   </div>
+                  
                   <div class="btn-metal-texture-bg">
                     <img src="./assets/5caa891f8a3fbb082b8f6ca116e8eeb5002cfede.png" alt="" />
                   </div>
-                  <div class="btn-metal-inner-frame">
-                    <div class="btn-metal-content">
+
+                  <div class="btn-metal-inner-frame" data-node-id="1191:80147">
+                    <!-- 4 Ornate Metal Corner Brackets -->
+                    <div class="btn-bracket corner-tl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-bl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-tr"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-br"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+
+                    <div class="btn-metal-content" data-node-id="1191:80229">
                       <div class="btn-metal-icon" data-node-id="1191:80184">
-                        <img src="./assets/71f4010765d55b89e2f0095263de34cb57a0180b.svg" alt="" />
+                        <img src="./assets/71f4010765d55b89e2f0095263de34cb57a0180b.svg" alt="" class="icon-default" />
+                        <img src="./assets/29e97033bafe510027bd0bb5149a33cab5050404.svg" alt="" class="icon-hover" />
                       </div>
                       <span class="btn-metal-label" data-node-id="1191:80228">TẢI NGAY</span>
                     </div>
                   </div>
-                  <!-- Bottom Accent Vector (1191:80227) -->
+
+                  <!-- Bottom Accent Vector (Default & Hover) -->
                   <div class="btn-metal-vector-bottom" data-node-id="1191:80227">
-                    <img src="./assets/7f80af830bd0e83c801d68b7904c77f446fa398a.svg" alt="" />
+                    <img src="./assets/7f80af830bd0e83c801d68b7904c77f446fa398a.svg" alt="" class="vector-default" />
+                    <img src="./assets/d12b79a2bfa4c3551ba8c086948fda048ce2d1d4.svg" alt="" class="vector-hover" />
                   </div>
                 </a>
 
-                <!-- Button 2: CẤU HÌNH HỆ THỐNG (1191:80340) -->
+                <!-- Button 2: CẤU HÌNH HỆ THỐNG (1191:80341) -->
                 <a href="#dl-specs-section" class="btn-dl-metal-stone" data-node-id="1191:80340">
                   <div class="btn-metal-stone-bg">
                     <img src="./assets/9d2c1d4893b4588362b331a915cdf59b07e9c40a.png" alt="" />
                   </div>
-                  <div class="btn-metal-stone-frame">
-                    <div class="btn-metal-stone-content">
+                  <div class="btn-metal-stone-frame" data-node-id="1191:80233">
+                    <!-- 4 Ornate Metal Corner Brackets -->
+                    <div class="btn-bracket corner-tl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-bl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-tr"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+                    <div class="btn-bracket corner-br"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
+
+                    <div class="btn-metal-stone-content" data-node-id="1191:80235">
                       <span class="btn-metal-stone-label" data-node-id="1191:80244">CẤU HÌNH HỆ THỐNG</span>
+                      <div class="btn-metal-stone-arrow" data-node-id="1191:80336">
+                        <img src="./assets/192cf9259df8b701f862b816fdd2ee84ebd7111a.svg" alt="" />
+                      </div>
                     </div>
                   </div>
                 </a>
