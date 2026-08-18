@@ -56,7 +56,7 @@ export async function renderDownload(container) {
                 </a>
 
                 <!-- Button 2: CẤU HÌNH HỆ THỐNG (1195:78480 / 1191:80340) using exact SVG -->
-                <a href="#dl-specs-section" class="btn-dl-cauhinh-svg" data-node-id="1191:80340">
+                <a href="#dl-specs-modal" class="btn-dl-cauhinh-svg" id="btnSpecsModalTrigger" data-node-id="1191:80340">
                   <img src="./assets/cau_hinh_btn.svg" alt="CẤU HÌNH HỆ THỐNG" class="btn-cauhinh-img" />
                 </a>
               </div>
@@ -467,8 +467,153 @@ export async function renderDownload(container) {
         </div>
       </section>
 
+      <!-- ========================================================
+           SYSTEM REQUIREMENTS MODAL POPUP (1332:84830)
+           ======================================================== -->
+      <div class="dl-specs-modal-backdrop" id="dlSpecsModal" aria-hidden="true">
+        <div class="dl-specs-modal-window" data-node-id="1332:84830">
+          
+          <!-- Background Grunge Texture Overlay (1332:84893) -->
+          <div class="dl-specs-modal-bg-overlay" data-node-id="1332:84893">
+            <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+          </div>
+
+          <!-- Close / Cancel Icon (707:1560) -->
+          <button type="button" class="dl-specs-modal-close" id="dlSpecsModalClose" aria-label="Đóng popup">
+            <img src="./assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="Đóng" />
+          </button>
+
+          <!-- Top CTA Line Header (1332:84890) -->
+          <div class="dl-specs-modal-header" data-node-id="1332:84890">
+            <div class="faq-ctaline-frame">
+              <div class="faq-frame-bracket-left">
+                <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" />
+              </div>
+              <h2 class="dl-specs-modal-heading">CẤU HÌNH</h2>
+              <div class="faq-frame-bracket-right">
+                <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 Columns Container: Tối Thiểu vs Đề Nghị (1332:84831) -->
+          <div class="dl-specs-modal-grid" data-node-id="1332:84831">
+            
+            <!-- Column 1: TỐI THIỂU (1332:84832) -->
+            <div class="dl-specs-modal-col" data-node-id="1332:84832">
+              <h3 class="dl-specs-modal-col-title" data-node-id="1332:84834">TỐI THIỂU</h3>
+              <div class="dl-specs-modal-border" data-node-id="1332:84835">
+                
+                <div class="dl-specs-modal-item" data-node-id="1332:84836">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84838">HỆ ĐIỀU HÀNH</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84840">Windows 10 64-bit</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84841">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84843">PHẦN CỨNG</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84845">Intel Core i5-8400 / AMD Ryzen 5 1600</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84846">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84848">BỘ NHỚ</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84850">12 GB RAM</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84851">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84853">ĐỒ HỌA</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84855">NVIDIA GeForce GTX 1060 (6GB) / AMD Radeon RX 580</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84856">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84858">DUNG LƯỢNG</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84860">50 GB available space (SSD Recommended)</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Column 2: ĐỀ NGHỊ (1332:84861) -->
+            <div class="dl-specs-modal-col" data-node-id="1332:84861">
+              <h3 class="dl-specs-modal-col-title" data-node-id="1332:84863">ĐỀ NGHỊ</h3>
+              <div class="dl-specs-modal-border" data-node-id="1332:84864">
+                
+                <div class="dl-specs-modal-item" data-node-id="1332:84865">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84867">HỆ ĐIỀU HÀNH</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84869">Windows 11 64-bit</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84870">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84872">PHẦN CỨNG</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84874">Intel Core i7-10700 / AMD Ryzen 7 3700X</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84875">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84877">BỘ NHỚ</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84879">16 GB RAM</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84880">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84882">ĐỒ HỌA</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84884">NVIDIA RTX 3060 Ti / AMD RX 6700 XT</span>
+                </div>
+
+                <div class="dl-specs-modal-item" data-node-id="1332:84885">
+                  <span class="dl-specs-modal-label" data-node-id="1332:84887">DUNG LƯỢNG</span>
+                  <span class="dl-specs-modal-val" data-node-id="1332:84889">50 GB available space (NVMe SSD)</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
     </div>
   `;
+
+  // Bind System Requirements Popup (1332:84830)
+  const specsModal = container.querySelector('#dlSpecsModal');
+  const specsTrigger = container.querySelector('#btnSpecsModalTrigger');
+  const specsClose = container.querySelector('#dlSpecsModalClose');
+
+  function openSpecsModal(e) {
+    if (e) e.preventDefault();
+    if (specsModal) {
+      specsModal.classList.add('active');
+      specsModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeSpecsModal() {
+    if (specsModal) {
+      specsModal.classList.remove('active');
+      specsModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  if (specsTrigger) {
+    specsTrigger.addEventListener('click', openSpecsModal);
+  }
+  if (specsClose) {
+    specsClose.addEventListener('click', closeSpecsModal);
+  }
+  if (specsModal) {
+    specsModal.addEventListener('click', (e) => {
+      if (e.target === specsModal) {
+        closeSpecsModal();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && specsModal && specsModal.classList.contains('active')) {
+      closeSpecsModal();
+    }
+  });
 
   // Bind Accordion Interaction
   const accordionItems = container.querySelectorAll('.faq-accordion-item');

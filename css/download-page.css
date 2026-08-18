@@ -763,11 +763,12 @@
 .dl-platform-bg-img {
   position: absolute;
   inset: 0;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
   pointer-events: none;
   z-index: 1;
+  left: 40px;
 }
 
 /* Stone Carved Icons - Uniform Proportional Scale on Hover (1218:78435 / 78437 / 78438) */
@@ -1263,4 +1264,184 @@
   .btn-dl-specs {
     width: 100%;
   }
+}
+
+/* ========================================================
+   SYSTEM REQUIREMENTS MODAL POPUP (1332:84830)
+   ======================================================== */
+.dl-specs-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.dl-specs-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dl-specs-modal-window {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  max-height: 90vh;
+  background: #000000;
+  border: 1px solid #9c7e21;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.98), 0 0 35px rgba(156, 126, 33, 0.35);
+  padding: clamp(36px, 5vh, 60px) clamp(24px, 4vw, 64px);
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 3.5vh, 44px);
+  transform: scale(0.92) translateY(20px);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-specs-modal-backdrop.active .dl-specs-modal-window {
+  transform: scale(1) translateY(0);
+}
+
+.dl-specs-modal-bg-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+  opacity: 0.45;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.dl-specs-modal-bg-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dl-specs-modal-close {
+  position: absolute;
+  top: clamp(16px, 2.5vh, 28px);
+  right: clamp(16px, 2.5vw, 32px);
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+}
+
+.dl-specs-modal-close:hover {
+  transform: rotate(90deg) scale(1.15);
+  filter: drop-shadow(0 0 12px #d9b74c) brightness(1.3);
+}
+
+.dl-specs-modal-close img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.dl-specs-modal-header {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dl-specs-modal-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 700;
+  color: #990000;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(153, 0, 0, 0.6);
+}
+
+.dl-specs-modal-grid {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: clamp(24px, 4vw, 64px);
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.dl-specs-modal-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 450px;
+  max-width: 540px;
+}
+
+.dl-specs-modal-col-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(32px, 3.5vw, 56px);
+  font-weight: 700;
+  color: #d9b74c;
+  letter-spacing: 0.96px;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(217, 183, 76, 0.4);
+}
+
+.dl-specs-modal-border {
+  border-left: 1px solid #9c7e21;
+  padding-left: clamp(20px, 2.5vw, 33px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dl-specs-modal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dl-specs-modal-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: #c7c6c6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dl-specs-modal-val {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 400;
+  color: #e2e2e2;
+  letter-spacing: -0.48px;
+  line-height: 1.3;
 }
