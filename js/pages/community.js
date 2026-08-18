@@ -38,7 +38,7 @@ export async function renderCommunity(container) {
           </div>
         </div>
 
-        <div class="community-hero-content animate-fade-in-up">
+        <div class="community-hero-content">
           <h1 class="community-hero-title" data-node-id="1024:74065">CỘNG ĐỒNG</h1>
           <p class="community-hero-subtitle" data-node-id="1024:74069">
             Kết nối, thảo luận và cập nhật các xu hướng mới nhất từ nhiều nền tảng.
