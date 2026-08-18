@@ -184,9 +184,10 @@
 /* Button 1: TẢI NGAY (1195:78479 / 1191:80344) */
 .btn-dl-metal-crimson {
   position: relative;
-  width: clamp(220px, 20vw, 300px);
+  width: clamp(260px, 24vw, 384px);
   max-width: 100%;
-  height: clamp(68px, 7.5vh, 92px);
+  height: clamp(80px, 8.5vh, 118px);
+  aspect-ratio: 384 / 154;
   border: 2px solid #802510;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -271,33 +272,34 @@
 /* Ornate Corner Brackets (1191:80150 to 80162) */
 .btn-bracket {
   position: absolute;
-  width: 28px;
-  height: 28px;
+  width: clamp(38px, 4.2vw, 67px);
+  height: clamp(27px, 3vw, 48px);
+  aspect-ratio: 67 / 48;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .corner-tl {
-  top: -2px;
-  left: -2px;
+  top: 0;
+  left: 0;
 }
 
 .corner-bl {
-  bottom: -2px;
-  left: -2px;
+  bottom: 0;
+  left: 0;
   transform: scaleY(-1);
 }
 
 .corner-tr {
-  top: -2px;
-  right: -2px;
+  top: 0;
+  right: 0;
   transform: scaleX(-1);
 }
 
 .corner-br {
-  bottom: -2px;
-  right: -2px;
+  bottom: 0;
+  right: 0;
   transform: rotate(180deg);
 }
 
@@ -315,12 +317,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(8px, 1.2vw, 16px);
+  gap: clamp(10px, 1.4vw, 18px);
 }
 
 .btn-dl-metal-crimson .btn-metal-icon {
-  width: clamp(32px, 3.2vw, 46px);
-  height: clamp(32px, 3.2vw, 46px);
+  width: clamp(38px, 3.8vw, 56px);
+  height: clamp(38px, 3.8vw, 56px);
   flex-shrink: 0;
   position: relative;
 }
@@ -349,10 +351,10 @@
 
 .btn-dl-metal-crimson .btn-metal-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(19px, 1.9vw, 28px);
+  font-size: clamp(22px, 2.2vw, 34px);
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.5px;
   white-space: nowrap;
   transition: color 0.25s ease;
 }
@@ -385,9 +387,9 @@
 .btn-dl-metal-crimson .btn-metal-vector-top {
   position: absolute;
   top: -4px;
-  left: 11px;
+  left: 3%;
   width: 64%;
-  height: 6.5px;
+  height: clamp(5px, 0.6vw, 7px);
   z-index: 5;
   pointer-events: none;
   transform: rotate(180deg) scaleY(-1);
@@ -397,9 +399,9 @@
 .btn-dl-metal-crimson .btn-metal-vector-bottom {
   position: absolute;
   bottom: -4px;
-  right: 11px;
+  right: 3%;
   width: 64%;
-  height: 6.5px;
+  height: clamp(5px, 0.6vw, 7px);
   z-index: 5;
   pointer-events: none;
 }
@@ -431,9 +433,10 @@
 /* Button 2: CẤU HÌNH HỆ THỐNG (1195:78480 / 1191:80340) */
 .btn-dl-metal-stone {
   position: relative;
-  width: clamp(330px, 34vw, 510px);
+  width: clamp(450px, 44vw, 713px);
   max-width: 100%;
-  height: clamp(68px, 7.5vh, 92px);
+  height: clamp(80px, 8.5vh, 118px);
+  aspect-ratio: 713 / 154;
   border: 2px solid #616161;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -499,23 +502,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: clamp(10px, 1.4vw, 18px);
 }
 
 .btn-dl-metal-stone .btn-metal-stone-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(17px, 1.7vw, 25px);
+  font-size: clamp(20px, 2vw, 32px);
   font-weight: 700;
   color: #990000;
-  letter-spacing: -0.3px;
+  letter-spacing: 0.5px;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
   white-space: nowrap;
   transition: color 0.25s ease;
 }
 
 .btn-metal-stone-arrow {
-  width: clamp(24px, 2.4vw, 34px);
-  height: clamp(24px, 2.4vw, 34px);
+  width: clamp(26px, 2.6vw, 40px);
+  height: clamp(26px, 2.6vw, 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -953,17 +956,16 @@
   margin: 0 auto clamp(30px, 4vh, 50px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: start;
   gap: 12px;
+  padding-left: 80px;
 }
 
 .dl-stores-header-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 12px;
-  text-align: center;
 }
 
 .dl-stores-title {
@@ -982,16 +984,16 @@
   font-size: clamp(13px, 1.1vw, 16px);
   color: #9ca3af;
   margin: 0;
-  text-align: center;
+  text-align: start;
 }
 
-.dl-stores-divider-line {
+/* .dl-stores-divider-line {
   width: clamp(240px, 24vw, 344.5px);
   height: 2px;
   margin: 4px auto 0;
   display: flex;
-  justify-content: center;
-}
+  justify-content: flex-start;
+} */
 
 .dl-stores-divider-line img {
   width: 100%;
@@ -1057,13 +1059,14 @@
   height: 100%;
   background: transparent;
   overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95);
+  /* box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95); */
   transition: box-shadow 0.35s ease;
 }
 
+/* 
 .dl-platform-card-unit:hover .dl-platform-inner-wrap {
   box-shadow: 0 0 40px rgba(217, 183, 76, 0.45), 0 25px 50px rgba(0, 0, 0, 0.98);
-}
+} */
 
 .wrap-win,
 .wrap-steam,
@@ -1116,8 +1119,8 @@
 
 /* Win Icon Positions (1218:78435) */
 .icon-win {
-  left: 50%;
-  top: 38%;
+  left: 55%;
+  top: 50%;
   width: 56%;
   aspect-ratio: 248 / 322;
 }
@@ -1129,13 +1132,12 @@
   left: -11.26%;
   top: -31.23%;
   max-width: none;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
 }
 
 /* Steam Icon Positions (1218:78437) */
 .icon-steam {
   left: 50%;
-  top: 38%;
+  top: 50%;
   width: 62%;
   aspect-ratio: 272 / 322;
 }
@@ -1147,13 +1149,13 @@
   left: -100.56%;
   top: -31.23%;
   max-width: none;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+  /* filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95)); */
 }
 
 /* Epic Icon Positions (1218:78438) */
 .icon-epic {
   left: 50%;
-  top: 38%;
+  top: 50%;
   width: 56%;
   aspect-ratio: 244 / 322;
 }
@@ -1165,7 +1167,7 @@
   left: -227.59%;
   top: -31.23%;
   max-width: none;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+  /* filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95)); */
 }
 
 /* Weathered Card Frame Overlay (1218:78425 / 78419 / 78422) */
@@ -1248,10 +1250,11 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  gap: clamp(30px, 6vw, 80px);
+  /* gap: clamp(30px, 6vw, 80px); */
   max-width: 1100px;
   margin: 0 auto;
   flex-wrap: wrap;
+  padding-left: 200px;
 }
 
 .dl-specs-col {
