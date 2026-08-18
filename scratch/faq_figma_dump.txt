@@ -1,0 +1,67 @@
+<frame id="1030:74110" name="FAQ desktop" x="7844" y="-2601" width="1920" height="5234">
+  <frame id="1030:75968" name="hero" x="0" y="0" width="1920" height="971">
+    <rounded-rectangle id="1040:76493" name="image 9" x="1" y="-27" width="1919" height="1024" />
+    <frame id="1040:76489" name="Frame 427318961" x="172" y="377" width="936" height="216.35589599609375">
+      <instance id="1040:76369" name="hỗ trợ" x="20" y="0" width="896" height="216.35589599609375" />
+    </frame>
+    <rounded-rectangle id="1040:76496" name="Rectangle 8" x="-53" y="615" width="2027" height="386" />
+  </frame>
+  <frame id="1040:76498" name="cau hoi" x="0" y="971" width="1920" height="950">
+    <rounded-rectangle id="1048:77001" name="detailed-scratched-grunge-texture-background 2" x="-27" y="-512" width="1974" height="1974" hidden="true" />
+    <rounded-rectangle id="1048:76999" name="Rectangle 8" x="-53" y="386" width="2027" height="386" />
+    <frame id="1048:76996" name="cauhoi" x="172" y="283" width="1256" height="420">
+      <instance id="1048:76932" name="options" x="68" y="0" width="1120" height="420" />
+    </frame>
+    <rounded-rectangle id="1048:76997" name="Rectangle 9" x="-64" y="-46" width="607" height="996" />
+    <rounded-rectangle id="1048:76998" name="Rectangle 10" x="1947" y="-46" width="1173" height="996" />
+    <rounded-rectangle id="1048:77003" name="image 10" x="1216" y="210" width="758" height="758" />
+    <frame id="1048:76921" name="ctaline" x="1908" y="93" width="1896" height="72">
+      <text id="1048:76922" name="CÂU HỎI PHỔ BIẾN" x="1138" y="10" width="380" height="52" />
+      <instance id="1048:76923" name="Horror frame 1" x="121" y="0" width="1653" height="79" />
+    </frame>
+    <rounded-rectangle id="1048:77000" name="Rectangle 11" x="-53" y="703" width="2027" height="386" />
+  </frame>
+  <frame id="1048:77005" name="Frame 427318962" x="0" y="1921" width="1920" height="561">
+    <rounded-rectangle id="1048:77006" name="Rectangle 11" x="1974" y="450" width="2027" height="450" />
+    <frame id="1048:77417" name="Frame 427318963" x="12" y="132" width="1896" height="295.05999755859375">
+      <instance id="1048:77292" name="link" x="217" y="0" width="226.8000030517578" height="295.05999755859375" />
+      <instance id="1048:77260" name="link" x="525.7999877929688" y="0" width="226.8000030517578" height="295.05999755859375" />
+      <instance id="1048:77164" name="link" x="834.5999755859375" y="0" width="226.8000030517578" height="295.05999755859375" />
+      <instance id="1048:77196" name="link" x="1143.39990234375" y="0" width="226.8000030517578" height="295.05999755859375" />
+      <instance id="1048:77228" name="link" x="1452.199951171875" y="0" width="226.8000030517578" height="295.05999755859375" />
+    </frame>
+    <rounded-rectangle id="1048:77419" name="Rectangle 12" x="-53" y="241" width="2027" height="450" />
+  </frame>
+  <frame id="1048:77420" name="yêu cầu" x="0" y="2482" width="1920" height="1068">
+    <ellipse id="1060:75228" name="Ellipse 48" x="309" y="-117" width="1303" height="1303" />
+    <frame id="1058:77603" name="Frame 427318965" x="332" y="126" width="1256" height="816">
+      <instance id="1058:77526" name="Section - Still Need Help" x="68" y="55" width="1120" height="706" />
+    </frame>
+    <rounded-rectangle id="1058:77656" name="Rectangle 14" x="488" y="1632" width="692.0000275678276" height="2027.000030248278" />
+    <rounded-rectangle id="1058:77657" name="Rectangle 15" x="1392" y="1632" width="692.0000275678285" height="2027.000030248278" />
+    <rounded-rectangle id="1048:77422" name="Rectangle 12" x="-53" y="362" width="2027" height="450" />
+    <rounded-rectangle id="1058:77602" name="Rectangle 13" x="-53" y="657" width="2027" height="450" />
+  </frame>
+  <frame id="1058:77658" name="sẵn sàng" x="0" y="3550" width="1920" height="1077">
+    <rounded-rectangle id="1058:77966" name="Rectangle 14" x="-53" y="707" width="2027" height="450" />
+    <rounded-rectangle id="1058:77965" name="Rectangle 13" x="-53.5" y="450" width="2027" height="450" />
+    <frame id="1058:77660" name="CTA" x="379.5" y="177" width="1161" height="263">
+      <frame id="1058:77661" name="Heading 2" x="80" y="0" width="1001" height="56">
+        <text id="1058:77662" name="BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?" x="0" y="0" width="1001" height="56" />
+      </frame>
+      <frame id="1058:77663" name="Container" x="80" y="104" width="1001" height="91">
+        <instance id="1058:77664" name="Button 2" x="263.4949951171875" y="0" width="225" height="91" />
+        <instance id="1058:77665" name="Button 1" x="512.5050048828125" y="0" width="225" height="91" />
+      </frame>
+      <frame id="1058:77666" name="Container" x="80" y="243" width="1001" height="20">
+        <text id="1058:77667" name="YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+" x="354.5" y="0" width="292" height="20" />
+      </frame>
+    </frame>
+    <instance id="1058:77751" name="Liên hệ hỗ trợ" x="659.5" y="580" width="601" height="320" />
+    <rounded-rectangle id="1058:78283" name="image 11" x="-34" y="182" width="676" height="1014" />
+    <instance id="1058:78285" name="OÁN" x="1351" y="295" width="569" height="661" />
+  </frame>
+  <instance id="1058:77795" name="Footer (Desktop)" x="0" y="4627" width="1920" height="607" />
+  <instance id="1135:78289" name="Menu/Navbar" x="0" y="0" width="1920" height="103" />
+</frame>
+IMPORTANT: The design was too large to fit into context with get_design_context. Instead you have received a sparse metadata response, you MUST call get_design_context on the IDs of the sublayers to get the full code. Split up the calls to ensure the sublayers do not also exceed the context limit.

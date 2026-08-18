@@ -1,0 +1,68 @@
+const imgGroup = "http://localhost:3845/assets/5733013ce340f93a90860314609ce6dbf3a321e3.svg";
+const imgGroup1 = "http://localhost:3845/assets/61f01055dc94f8b8e16acb65c39b6f2a3b52b0ed.svg";
+const imgIns = "http://localhost:3845/assets/58f5b1be1bcfe52b6857777eb026615c1efb33d8.svg";
+const imgGroup2 = "http://localhost:3845/assets/8632807d8657ff43b145b6b33e59ce3c0cfe4d16.svg";
+const imgImage9 = "http://localhost:3845/assets/71b72823b4bd885af68974e506d508879070bc60.png";
+
+function HTr({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[16px] items-start max-w-[896px] relative w-[896px]"} data-node-id="1040:76368" data-name="hỗ trợ">
+      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1030:76123" data-name="Heading 1">
+        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] not-italic relative shrink-0 text-[#e2e2e2] text-[80px] tracking-[4px] uppercase w-full" data-node-id="1030:76124">
+          <p className="leading-[88px]">BẠN CẦN HỖ TRỢ?</p>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col gap-[11px] items-start justify-center max-w-[672px] relative shrink-0 w-[672px]" data-node-id="1030:76125" data-name="Container">
+        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1030:76126" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <p className="leading-[20px]">Tìm kiếm câu trả lời cho các vấn đề kỹ thuật, thông tin trò chơi và cộng đồng OÁN.</p>
+        </div>
+        <div className="content-stretch flex flex-col items-start max-w-[672px] relative shrink-0 w-[672px]" data-node-id="1040:76253" data-name="Container">
+          <div className="[word-break:break-word] flex flex-col font-['Roboto:Medium'] font-medium justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="1040:76254" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="leading-[20px]">Hãy tìm kiếm chúng tôi trên</p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[16px] items-center relative shrink-0" data-node-id="1040:76367" data-name="social">
+        <div className="h-[45.047px] relative shrink-0 w-[45.048px]" data-node-id="1040:76255" data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup} />
+        </div>
+        <div className="h-[45.356px] relative shrink-0 w-[45.422px]" data-node-id="1040:76349" data-name="Group">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup1} />
+        </div>
+        <div className="h-[43.536px] relative shrink-0 w-[43.613px]" data-node-id="1040:76353" data-name="Ins">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgIns} />
+        </div>
+        <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid leading-[0] place-items-start relative shrink-0" data-node-id="1040:76361" data-name="Ytb">
+          <div className="col-1 h-[44.789px] ml-0 mt-0 relative row-1 w-[44.874px]" data-node-id="1040:76362" data-name="Group">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGroup2} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function Hero() {
+  return (
+    <div className="relative size-full" data-node-id="1030:75968" data-name="hero">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[1024px] left-[calc(50%+0.5px)] top-[calc(50%-0.5px)] w-[1919px]" data-node-id="1040:76493" data-name="image 9">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage9} />
+      </div>
+      <div className="absolute content-stretch flex flex-col items-center justify-center left-[calc(8.33%+12px)] top-[377px] w-[936px]" data-node-id="1040:76489">
+        <HTr className="content-stretch flex flex-col gap-[16px] items-start max-w-[896px] relative shrink-0 w-full" />
+      </div>
+      <div className="-translate-x-1/2 absolute bottom-[-30px] h-[386px] left-[calc(50%+0.5px)] w-[2027px]" data-node-id="1040:76496" style={{ backgroundImage: "linear-gradient(178.01700895152808deg, rgba(38, 0, 0, 0) 0.32987%, rgb(0, 0, 0) 50.364%)" }} />
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Desktop/Heading 4/h4-light: Font(family: "Roboto", style: Light, size: 16, weight: 300, lineHeight: 20, letterSpacing: -2), Desktop/Heading 4/h4-med: Font(family: "Roboto", style: Medium, size: 16, weight: 500, lineHeight: 20, letterSpacing: -2).
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

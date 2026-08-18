@@ -664,9 +664,10 @@
   box-shadow: 0 0 15px rgba(217, 183, 76, 0.4);
 }
 
-.horror-frame-corners {
+.news-card-cta-btn .horror-frame-corners {
   position: absolute;
   inset: 0;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -674,11 +675,13 @@
   pointer-events: none;
 }
 
-.corner-svg-left,
-.corner-svg-right {
+.news-card-cta-btn .corner-svg-left,
+.news-card-cta-btn .corner-svg-right {
+  position: static;
   height: 32px;
   width: auto;
   opacity: 0.7;
+  transform: none;
 }
 
 .news-cta-body {

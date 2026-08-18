@@ -1222,3 +1222,402 @@ export function initCommunityScrollTriggers() {
     ScrollTrigger.refresh();
   }, 100);
 }
+
+/**
+ * GSAP ScrollTrigger Animations for FAQ / Support Page (Figma 1030:74110)
+ */
+export function initFaqScrollTriggers() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  killPageTriggers();
+
+  // 1. FAQ Hero Section
+  const faqHero = document.querySelector('.faq-hero-section');
+  if (faqHero) {
+    const title = faqHero.querySelector('.faq-hero-title');
+    const desc = faqHero.querySelector('.faq-hero-desc');
+    const socialLead = faqHero.querySelector('.faq-hero-social-lead');
+    const socialRow = faqHero.querySelector('.faq-hero-social-row');
+
+    if (title) {
+      gsap.fromTo(title,
+        { opacity: 0, y: 40, filter: 'blur(8px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.0, ease: 'power3.out' }
+      );
+    }
+    if (desc) {
+      gsap.fromTo(desc,
+        { opacity: 0, y: 25 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 }
+      );
+    }
+    if (socialLead) {
+      gsap.fromTo(socialLead,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.35 }
+      );
+    }
+    if (socialRow) {
+      gsap.fromTo(socialRow.children,
+        { opacity: 0, scale: 0.7, y: 15 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.6, stagger: 0.1, ease: 'back.out(1.8)', delay: 0.45 }
+      );
+    }
+  }
+
+  // 2. FAQ Questions Section
+  const questionsSec = document.querySelector('.faq-questions-section');
+  if (questionsSec) {
+    const header = questionsSec.querySelector('.faq-questions-header');
+    const accordions = questionsSec.querySelectorAll('.faq-accordion-item');
+    const charFlank = questionsSec.querySelector('.faq-character-flank');
+
+    if (header) {
+      gsap.fromTo(header,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: header,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (accordions.length > 0) {
+      gsap.fromTo(accordions,
+        { opacity: 0, x: -30 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.7,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: accordions[0],
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (charFlank) {
+      gsap.fromTo(charFlank,
+        { opacity: 0, scale: 0.85, x: 40 },
+        {
+          opacity: 1,
+          scale: 1,
+          x: 0,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: charFlank,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 3. FAQ Quick Link Cards
+  const linksSec = document.querySelector('.faq-quick-links-section');
+  if (linksSec) {
+    const cards = linksSec.querySelectorAll('.faq-link-card');
+    if (cards.length > 0) {
+      gsap.fromTo(cards,
+        { opacity: 0, y: 45, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'back.out(1.3)',
+          scrollTrigger: {
+            trigger: linksSec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 4. FAQ Still Need Help Section
+  const stillHelpSec = document.querySelector('.faq-still-help-section');
+  if (stillHelpSec) {
+    const largeCard = stillHelpSec.querySelector('.faq-help-large-card');
+    const smallCards = stillHelpSec.querySelectorAll('.faq-help-small-card');
+
+    if (largeCard) {
+      gsap.fromTo(largeCard,
+        { opacity: 0, x: -40 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.85,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: largeCard,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (smallCards.length > 0) {
+      gsap.fromTo(smallCards,
+        { opacity: 0, x: 40 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 0.75,
+          stagger: 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: smallCards[0],
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 5. FAQ Ready & Contact Section
+  const readySec = document.querySelector('.faq-ready-section');
+  if (readySec) {
+    const watermark = readySec.querySelector('.faq-ready-watermark');
+    const charFlank = readySec.querySelector('.faq-ready-char-flank');
+    const core = readySec.querySelector('.faq-ready-core');
+    const bottomBox = readySec.querySelector('.faq-support-bottom-box');
+
+    if (watermark) {
+      gsap.fromTo(watermark,
+        { opacity: 0, scale: 0.88 },
+        {
+          opacity: 0.88,
+          scale: 1,
+          duration: 1.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (charFlank) {
+      gsap.fromTo(charFlank,
+        { opacity: 0, x: -50 },
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1.0,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (core) {
+      gsap.fromTo(core,
+        { opacity: 0, scale: 0.9, y: 30 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: core,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (bottomBox) {
+      gsap.fromTo(bottomBox,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: bottomBox,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}
+
+/**
+ * GSAP ScrollTrigger Animations for Download Page (Figma 1170:80024)
+ */
+export function initDownloadScrollTriggers() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  killPageTriggers();
+
+  // 1. Download Hero Section
+  const dlHero = document.querySelector('.dl-hero-section');
+  if (dlHero) {
+    const title = dlHero.querySelector('.dl-hero-title');
+    const desc = dlHero.querySelector('.dl-hero-desc');
+    const actions = dlHero.querySelector('.dl-hero-actions-row');
+    const tiles = dlHero.querySelectorAll('.dl-hero-tile');
+    const polaroid = dlHero.querySelector('.dl-hero-right-polaroid');
+
+    if (title) {
+      gsap.fromTo(title,
+        { opacity: 0, y: 40, filter: 'blur(8px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 1.0, ease: 'power3.out' }
+      );
+    }
+    if (desc) {
+      gsap.fromTo(desc,
+        { opacity: 0, y: 25 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.2 }
+      );
+    }
+    if (actions) {
+      gsap.fromTo(actions.children,
+        { opacity: 0, scale: 0.9, y: 20 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.6, stagger: 0.12, ease: 'back.out(1.5)', delay: 0.35 }
+      );
+    }
+    if (tiles.length > 0) {
+      gsap.fromTo(tiles,
+        { opacity: 0, y: 30, scale: 0.92 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out', delay: 0.5 }
+      );
+    }
+    if (polaroid) {
+      gsap.fromTo(polaroid,
+        { opacity: 0, scale: 0.8, rotate: 6, x: 40 },
+        { opacity: 1, scale: 1, rotate: 2, x: 0, duration: 1.1, ease: 'back.out(1.3)', delay: 0.3 }
+      );
+    }
+  }
+
+  // 2. Stores Section
+  const storesSec = document.querySelector('.dl-stores-section');
+  if (storesSec) {
+    const cards = storesSec.querySelectorAll('.dl-store-card');
+    if (cards.length > 0) {
+      gsap.fromTo(cards,
+        { opacity: 0, y: 50, scale: 0.92 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: storesSec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 3. Specs Section
+  const specsSec = document.querySelector('.dl-specs-section');
+  if (specsSec) {
+    const cols = specsSec.querySelectorAll('.dl-specs-col');
+    if (cols.length > 0) {
+      gsap.fromTo(cols,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: specsSec,
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 4. Ready CTA
+  const readySec = document.querySelector('.dl-ready-section');
+  if (readySec) {
+    const title = readySec.querySelector('.dl-ready-title');
+    const btn = readySec.querySelector('.btn-dl-final-submit');
+
+    if (title) {
+      gsap.fromTo(title,
+        { opacity: 0, scale: 0.9, y: 30 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+    if (btn) {
+      gsap.fromTo(btn,
+        { opacity: 0, scale: 0.85, y: 20 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.6,
+          ease: 'back.out(1.6)',
+          delay: 0.2,
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}
+
+

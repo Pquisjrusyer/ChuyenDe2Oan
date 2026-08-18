@@ -4,6 +4,8 @@
 
 import { getReadySectionHTML } from '../components/ready-section.js';
 import { initCommunityScrollTriggers } from '../utils/smooth-scroll.js';
+import { sendSubscriptionEmail } from '../services/email-service.js';
+import { showThankYouLetterModal } from '../components/thank-you-letter-modal.js';
 
 export async function renderCommunity(container) {
   container.innerHTML = `
@@ -189,14 +191,14 @@ export async function renderCommunity(container) {
           </div>
 
           <!-- Centered Subscription Form (1030:73844) -->
-          <form class="comm-sub-form-box" data-node-id="1030:73844" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận tin từ OAN!');">
+          <form class="comm-sub-form-box" id="commSubscribeForm" data-node-id="1030:73844">
             <div class="comm-form-row">
               
               <!-- Field 1: Email (1030:73777) -->
               <div class="comm-form-group" data-node-id="1030:73777">
-                <label class="comm-form-label">Email</label>
+                <label class="comm-form-label" for="commEmailInput">Email</label>
                 <div class="comm-input-wrapper">
-                  <input type="email" class="comm-form-input" placeholder="Entered text" required />
+                  <input type="email" id="commEmailInput" name="email" class="comm-form-input" placeholder="Entered text" required />
                   <span class="comm-input-cursor">|</span>
                 </div>
                 <span class="comm-form-helper">Không spam. Có thể hủy bất kỳ lúc nào.</span>
@@ -204,9 +206,9 @@ export async function renderCommunity(container) {
 
               <!-- Field 2: Sở thích (1030:73782) -->
               <div class="comm-form-group" data-node-id="1030:73782">
-                <label class="comm-form-label">Sở thích</label>
+                <label class="comm-form-label" for="commHobbyInput">Sở thích</label>
                 <div class="comm-input-wrapper">
-                  <input type="text" class="comm-form-input" placeholder="Entered text" />
+                  <input type="text" id="commHobbyInput" name="hobby" class="comm-form-input" placeholder="Entered text" />
                   <span class="comm-input-cursor">|</span>
                 </div>
                 <span class="comm-form-helper">Gợi ý nội dung phù hợp theo lựa chọn.</span>
@@ -216,9 +218,9 @@ export async function renderCommunity(container) {
             <!-- Centered Action Buttons Row (1030:73787) -->
             <div class="comm-form-actions-row">
               <!-- Button 1: ĐĂNG KÝ (1030:73830) -->
-              <button type="submit" class="btn-comm-sub-submit" data-node-id="1030:73830">
+              <button type="submit" class="btn-comm-sub-submit" id="commSubSubmitBtn" data-node-id="1030:73830">
                 <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="btn-comm-sub-submit-bg" />
-                <span class="btn-comm-sub-submit-text">ĐĂNG KÝ</span>
+                <span class="btn-comm-sub-submit-text" id="commSubSubmitText">ĐĂNG KÝ</span>
               </button>
 
               <!-- Button 2: Xem tin (1030:73812 with horror frame corners) -->
@@ -243,6 +245,44 @@ export async function renderCommunity(container) {
 
     </div>
   `;
+
+  // Form Submission Handler: Send Email & Show Antique Thank-You Letter Modal
+  const subscribeForm = container.querySelector('#commSubscribeForm');
+  if (subscribeForm) {
+    subscribeForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const emailInput = subscribeForm.querySelector('#commEmailInput');
+      const hobbyInput = subscribeForm.querySelector('#commHobbyInput');
+      const submitBtn = subscribeForm.querySelector('#commSubSubmitBtn');
+      const submitText = subscribeForm.querySelector('#commSubSubmitText');
+
+      const email = emailInput ? emailInput.value.trim() : '';
+      const hobby = hobbyInput ? hobbyInput.value.trim() : '';
+
+      if (!email) return;
+
+      // Loading state
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitText) submitText.textContent = 'ĐANG NIÊM PHONG...';
+
+      try {
+        // Send email via Resend Service
+        await sendSubscriptionEmail({ email, hobby });
+
+        // Show Antique Thank-You Letter
+        showThankYouLetterModal({ email, hobby });
+
+        // Reset form
+        subscribeForm.reset();
+      } catch (err) {
+        console.error('Subscription error:', err);
+        showThankYouLetterModal({ email, hobby });
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.textContent = 'ĐĂNG KÝ';
+      }
+    });
+  }
 
   // Scroll Reveal Observer for Community Page & Ready Section
   const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
