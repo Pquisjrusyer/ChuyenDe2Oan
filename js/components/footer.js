@@ -128,9 +128,9 @@ export function renderFooter(container, currentHash) {
             © 2026 OÁN HORROR EXPERIENCE. ALL RIGHTS RESERVED.
           </div>
           <div class="footer-legal-links">
-            <a href="#">CHÍNH SÁCH BẢO MẬT</a>
-            <a href="#">ĐIỀU KHOẢN DỊCH VỤ</a>
-            <a href="#">COOKIE POLICY</a>
+            <a href="#privacy">CHÍNH SÁCH BẢO MẬT</a>
+            <a href="#terms">ĐIỀU KHOẢN DỊCH VỤ</a>
+            <a href="#cookie">COOKIE POLICY</a>
           </div>
         </div>
       </div>

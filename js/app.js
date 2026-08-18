@@ -29,6 +29,8 @@ import { renderInvestigation } from './pages/investigation.js';
 import { renderPuzzle } from './pages/puzzle.js';
 import { renderCollection } from './pages/collection.js';
 import { renderFullscreen } from './pages/fullscreen.js';
+import { renderPrivacy, renderTerms, renderCookiePolicy } from './pages/legal.js';
+import { initCookieBanner } from './components/cookie-banner.js';
 
 // ---- Initialize App ---- //
 function initApp() {
@@ -56,6 +58,12 @@ function initApp() {
   router.addRoute('puzzle', renderPuzzle);
   router.addRoute('collection', renderCollection);
   router.addRoute('fullscreen', renderFullscreen);
+  router.addRoute('privacy', renderPrivacy);
+  router.addRoute('terms', renderTerms);
+  router.addRoute('cookie', renderCookiePolicy);
+
+  // Initialize Horror Cookie Consent Banner
+  initCookieBanner();
 
   // Initialize Lenis smooth scrolling engine
   const lenis = initSmoothScroll();
