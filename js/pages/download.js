@@ -279,10 +279,6 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-win" data-node-id="1218:78424">
               <!-- Full-height Inner Content Box (1218:78424) -->
               <div class="dl-platform-inner-wrap wrap-win">
-                <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78427) -->
-                <div class="dl-platform-diff-bg" data-node-id="1218:78427">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
-                </div>
                 <!-- Stone Carved Windows 11 Logo (1218:78435) -->
                 <div class="dl-platform-stone-icon icon-win" data-node-id="1218:78435">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Windows 11" />
@@ -305,10 +301,6 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-steam" data-node-id="1218:78418">
               <!-- Full-height Inner Content Box (1218:78418) -->
               <div class="dl-platform-inner-wrap wrap-steam">
-                <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78462) -->
-                <div class="dl-platform-diff-bg" data-node-id="1218:78462">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
-                </div>
                 <!-- Stone Carved Steam Logo (1218:78437) -->
                 <div class="dl-platform-stone-icon icon-steam" data-node-id="1218:78437">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Steam" />
@@ -331,10 +323,6 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-epic" data-node-id="1218:78421">
               <!-- Full-height Inner Content Box (1218:78421) -->
               <div class="dl-platform-inner-wrap wrap-epic">
-                <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78463) -->
-                <div class="dl-platform-diff-bg" data-node-id="1218:78463">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
-                </div>
                 <!-- Stone Carved Epic Games Logo (1218:78438) -->
                 <div class="dl-platform-stone-icon icon-epic" data-node-id="1218:78438">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Epic Games" />
