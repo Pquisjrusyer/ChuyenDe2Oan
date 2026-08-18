@@ -35,11 +35,11 @@ export async function renderFaq(container) {
           <!-- Social Links (1040:76367) -->
           <div class="faq-hero-social-row trailer-scroll-reveal trailer-reveal-fade-up delay-350" data-node-id="1040:76367">
             <!-- Facebook -->
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="faq-social-link" aria-label="Facebook" data-node-id="1040:76255">
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="faq-social-link" aria-label="Facebook" data-node-id="1040:76255">
               <img src="./assets/5733013ce340f93a90860314609ce6dbf3a321e3.svg" alt="Facebook" />
             </a>
             <!-- Discord -->
-            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="faq-social-link" aria-label="Discord" data-node-id="1040:76349">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="faq-social-link" aria-label="Discord" data-node-id="1040:76349">
               <img src="./assets/61f01055dc94f8b8e16acb65c39b6f2a3b52b0ed.svg" alt="Discord" />
             </a>
             <!-- Instagram -->
@@ -58,9 +58,15 @@ export async function renderFaq(container) {
            2. CÂU HỎI PHỔ BIẾN SECTION (1040:76498)
            ======================================================== -->
       <section class="faq-questions-section" data-node-id="1040:76498">
-        <!-- Vignettes -->
+        <!-- Top Section Intersection Overlay with Hero (1040:76496 / 1048:76999) -->
+        <div class="faq-section-top-overlay" data-node-id="1040:76496"></div>
+
+        <!-- Left & Right Vignettes (1048:76997 & 1048:76998) -->
         <div class="faq-vignette-left" data-node-id="1048:76997"></div>
         <div class="faq-vignette-right" data-node-id="1048:76998"></div>
+        
+        <!-- Bottom Transition Overlay (1048:77000) -->
+        <div class="faq-section-bottom-overlay" data-node-id="1048:77000"></div>
         
         <!-- Section Header with Metal Horror Line (1048:76921) -->
         <div class="faq-questions-header trailer-scroll-reveal trailer-reveal-fade-up">
@@ -161,6 +167,8 @@ export async function renderFaq(container) {
            3. QUICK LINK CARDS SECTION (1048:77005)
            ======================================================== -->
       <section class="faq-quick-links-section" data-node-id="1048:77005">
+        <div class="faq-links-top-overlay" data-node-id="1048:77006"></div>
+        <div class="faq-links-bottom-overlay"></div>
         <div class="faq-links-grid trailer-scroll-reveal trailer-reveal-fade-up">
           
           <!-- Card 1: GAMEPLAY (1048:77292) -->
@@ -250,6 +258,8 @@ export async function renderFaq(container) {
            4. VẪN CẦN HỖ TRỢ? SECTION (1048:77420)
            ======================================================== -->
       <section class="faq-still-help-section" data-node-id="1048:77420">
+        <div class="faq-help-top-overlay"></div>
+        <div class="faq-help-bottom-overlay"></div>
         <div class="faq-still-help-grid">
           
           <!-- Left Large Block: Trò chuyện với đội ngũ OÁN (1048:77424) -->

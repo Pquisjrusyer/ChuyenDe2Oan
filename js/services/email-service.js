@@ -3,9 +3,8 @@
    ======================================================== */
 
 // Resend API configuration
-// The user can provide their RESEND_API_KEY in localStorage or config
 const DEFAULT_CONFIG = {
-  apiKey: localStorage.getItem('OAN_RESEND_API_KEY') || '',
+  apiKey: (typeof localStorage !== 'undefined' && localStorage.getItem('OAN_RESEND_API_KEY')) || (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_RESEND_API_KEY) || '',
   fromEmail: 'OAN Game <onboarding@resend.dev>', // Default Resend test sender
 };
 
@@ -15,7 +14,7 @@ const DEFAULT_CONFIG = {
  */
 export function setResendApiKey(key) {
   if (key) {
-    localStorage.setItem('OAN_RESEND_API_KEY', key);
+    if (typeof localStorage !== 'undefined') localStorage.setItem('OAN_RESEND_API_KEY', key);
     DEFAULT_CONFIG.apiKey = key;
   }
 }
@@ -24,7 +23,7 @@ export function setResendApiKey(key) {
  * Get current configured API key
  */
 export function getResendApiKey() {
-  return DEFAULT_CONFIG.apiKey || localStorage.getItem('OAN_RESEND_API_KEY') || '';
+  return DEFAULT_CONFIG.apiKey || (typeof localStorage !== 'undefined' && localStorage.getItem('OAN_RESEND_API_KEY')) || (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_RESEND_API_KEY) || '';
 }
 
 /**

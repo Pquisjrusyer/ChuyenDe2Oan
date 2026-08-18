@@ -1,47 +1,52 @@
-import { defineConfig } from 'vite';
+import { defineConfig, loadEnv } from 'vite';
 import https from 'https';
 
-export default defineConfig({
-  base: './',
-  root: '.',
-  publicDir: 'public',
-  build: {
-    outDir: 'dist',
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  plugins: [
-    {
-      name: 'resend-email-api-server',
-      configureServer(server) {
-        server.middlewares.use('/api/send-email', async (req, res) => {
-          if (req.method !== 'POST') {
-            res.statusCode = 405;
-            res.end(JSON.stringify({ error: 'Method Not Allowed' }));
-            return;
-          }
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
 
-          let body = '';
-          req.on('data', chunk => {
-            body += chunk;
-          });
+  return {
+    base: './',
+    root: '.',
+    publicDir: 'public',
+    build: {
+      outDir: 'dist',
+    },
+    server: {
+      port: 3000,
+      open: true,
+    },
+    plugins: [
+      {
+        name: 'resend-email-api-server',
+        configureServer(server) {
+          server.middlewares.use('/api/send-email', async (req, res) => {
+            if (req.method !== 'POST') {
+              res.statusCode = 405;
+              res.end(JSON.stringify({ error: 'Method Not Allowed' }));
+              return;
+            }
 
-          req.on('end', async () => {
-            try {
-              const data = JSON.parse(body || '{}');
-              const { apiKey, from, to, subject, html } = data;
+            let body = '';
+            req.on('data', chunk => {
+              body += chunk;
+            });
 
-              if (!apiKey) {
-                res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify({
-                  success: false,
-                  simulated: true,
-                  message: 'Chưa có Resend API Key. Vui lòng cung cấp key re_... để gửi mail thực tế.',
-                }));
-                return;
-              }
+            req.on('end', async () => {
+              try {
+                const data = JSON.parse(body || '{}');
+                const { apiKey, from, to, subject, html } = data;
+
+                const activeApiKey = apiKey || env.RESEND_API_KEY || env.VITE_RESEND_API_KEY || process.env.RESEND_API_KEY || process.env.VITE_RESEND_API_KEY || '';
+
+                if (!activeApiKey) {
+                  res.setHeader('Content-Type', 'application/json');
+                  res.end(JSON.stringify({
+                    success: false,
+                    simulated: true,
+                    message: 'Chưa có Resend API Key. Vui lòng cung cấp key re_... để gửi mail thực tế.',
+                  }));
+                  return;
+                }
 
               const payload = JSON.stringify({
                 from: from || 'OAN Game <onboarding@resend.dev>',
@@ -55,7 +60,7 @@ export default defineConfig({
                 path: '/emails',
                 method: 'POST',
                 headers: {
-                  'Authorization': `Bearer ${apiKey}`,
+                  'Authorization': `Bearer ${activeApiKey}`,
                   'Content-Type': 'application/json',
                   'Content-Length': Buffer.byteLength(payload),
                 },
@@ -96,5 +101,7 @@ export default defineConfig({
       },
     },
   ],
+};
 });
+
 
