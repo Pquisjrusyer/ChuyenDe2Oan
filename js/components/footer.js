@@ -1,6 +1,4 @@
-/* ============================================
-   OAN Horror Game — Footer Component (Figma 1363:86770)
-   ============================================ */
+import { sendSubscriptionEmail } from '../services/email-service.js';
 
 export function renderFooter(container, currentHash) {
   const hideFooter = ['intro', 'mail-confirm', 'fullscreen', 'character'].includes(currentHash);
@@ -142,8 +140,9 @@ export function renderFooter(container, currentHash) {
   // Newsletter Submit Listener
   const newsletterInput = container.querySelector('.footer-newsletter-input');
   const newsletterBtn = container.querySelector('.btn-footer-newsletter-submit');
+  const newsletterBtnCaption = container.querySelector('.footer-btn-caption');
 
-  const handleSubscribe = () => {
+  const handleSubscribe = async () => {
     if (!newsletterInput) return;
     const email = newsletterInput.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -159,8 +158,23 @@ export function renderFooter(container, currentHash) {
       return;
     }
 
-    localStorage.setItem('oan_subscribed_email', email);
-    window.location.hash = 'mail-confirm';
+    if (newsletterBtn) newsletterBtn.disabled = true;
+    if (newsletterBtnCaption) newsletterBtnCaption.textContent = 'ĐANG GỬI...';
+
+    try {
+      localStorage.setItem('oan_subscribed_email', email);
+      // Send real Thank-You Email via Resend
+      await sendSubscriptionEmail({
+        email: email,
+        hobby: 'Nhận bản tin tuyệt mật từ Dinh Thự Nhà Hứa',
+      });
+    } catch (err) {
+      console.error('[Footer Subscribe Error]', err);
+    } finally {
+      if (newsletterBtn) newsletterBtn.disabled = false;
+      if (newsletterBtnCaption) newsletterBtnCaption.textContent = 'GỬI NGAY';
+      window.location.hash = 'mail-confirm';
+    }
   };
 
   newsletterBtn?.addEventListener('click', handleSubscribe);
@@ -171,3 +185,4 @@ export function renderFooter(container, currentHash) {
     }
   });
 }
+
