@@ -718,114 +718,222 @@
 }
 
 /* ========================================================
-   2. KHÁM PHÁ THÊM / STORES SECTION
+   2. KHÁM PHÁ THÊM / PLATFORM SECTION (1195:78620)
    ======================================================== */
 .dl-stores-section {
   position: relative;
   width: 100%;
   background: transparent;
-  padding: 80px clamp(20px, 8.33vw, 160px) 100px;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 5vw, 100px);
   box-sizing: border-box;
   overflow: hidden;
 }
 
-.dl-stores-header {
-  text-align: center;
-  margin-bottom: 50px;
+.dl-stores-header-wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto clamp(30px, 4vh, 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.dl-stores-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
 }
 
 .dl-stores-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(28px, 3.5vw, 42px);
+  font-size: clamp(28px, 3.2vw, 48px);
   font-weight: 700;
   color: #d9b74c;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0;
   text-shadow: 0 0 20px rgba(217, 183, 76, 0.4);
 }
 
 .dl-stores-sub {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  color: #8c8273;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(13px, 1.1vw, 16px);
+  color: #9ca3af;
   margin: 0;
 }
 
-.dl-stores-grid {
+.dl-stores-divider-line {
+  width: clamp(240px, 24vw, 344.5px);
+  height: 2px;
+  margin-top: 4px;
+}
+
+.dl-stores-divider-line img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 3 Platform Cards Row (1218:78516) */
+.dl-stores-cards-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: clamp(20px, 3.5vw, 60px);
+  max-width: 1440px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.dl-platform-card-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  flex: 0 1 auto;
+}
+
+.dl-platform-card-unit:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Base Card Box with Dark Gradient & Difference Texture */
+.dl-platform-card-box {
+  position: relative;
+  background: linear-gradient(180deg, #110000 0%, #1b0000 100%);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.dl-platform-card-unit:hover .dl-platform-card-box {
+  box-shadow: 0 0 35px rgba(217, 183, 76, 0.4), 0 25px 50px rgba(0, 0, 0, 0.98);
+}
+
+.card-box-win {
+  width: clamp(260px, 24vw, 390px);
+  height: clamp(380px, 35vw, 570px);
+}
+
+.card-box-steam {
+  width: clamp(260px, 24vw, 390px);
+  height: clamp(380px, 35vw, 570px);
+}
+
+.card-box-epic {
+  width: clamp(260px, 24vw, 390px);
+  height: clamp(380px, 35vw, 570px);
+}
+
+/* Background Grunge Texture (1218:78427 / 78462 / 78463) */
+.dl-platform-diff-bg {
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(20px, 4vw, 48px);
-  flex-wrap: wrap;
-  max-width: 1300px;
-  margin: 0 auto;
-}
-
-.dl-store-card {
-  position: relative;
-  width: 320px;
-  height: 440px;
-  background: #0f0505;
-  border: 1.5px solid rgba(198, 160, 42, 0.35);
-  border-radius: 6px;
+  mix-blend-mode: difference;
+  opacity: 0.85;
+  pointer-events: none;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 24px 20px;
-  box-sizing: border-box;
-  text-decoration: none;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
 }
 
-.dl-store-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  border-color: #ffd700;
-  box-shadow: 0 0 30px rgba(217, 183, 76, 0.5), 0 20px 50px rgba(0, 0, 0, 0.95);
-}
-
-.dl-store-card-bg {
+.dl-platform-diff-bg img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 150%;
+  height: 150%;
+  transform: rotate(90deg);
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
   pointer-events: none;
 }
 
-.dl-store-card:hover .dl-store-card-bg {
-  transform: scale(1.06);
-  filter: brightness(1.1);
+/* Center Stone Carved Icon (1218:78435 / 78437 / 78438) */
+.dl-platform-stone-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65%;
+  height: 52%;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.dl-store-card-content {
-  position: relative;
+.dl-platform-stone-icon img {
+  position: absolute;
+  max-width: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+  pointer-events: none;
+}
+
+.icon-win img {
+  width: 332.47%;
+  height: 170.1%;
+  left: -11.26%;
+  top: -31.23%;
+}
+
+.icon-steam img {
+  width: 301.18%;
+  height: 170.1%;
+  left: -100.56%;
+  top: -31.23%;
+}
+
+.icon-epic img {
+  width: 336.84%;
+  height: 170.1%;
+  left: -227.59%;
+  top: -31.23%;
+}
+
+/* Weathered Card Frame Overlay (1218:78425 / 78419 / 78422) */
+.dl-platform-frame-overlay {
+  position: absolute;
+  inset: 0;
   z-index: 3;
-  text-align: center;
-  background: rgba(8, 2, 2, 0.75);
-  backdrop-filter: blur(4px);
-  padding: 12px 10px;
-  border-radius: 4px;
-  border: 1px solid rgba(198, 160, 42, 0.2);
+  pointer-events: none;
 }
 
-.dl-store-card-title {
+.dl-platform-frame-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.95));
+}
+
+/* Text Label Below Card (1218:78538) */
+.dl-platform-caption-box {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dl-platform-title {
   font-family: 'Space Mono', monospace;
-  font-size: 20px;
+  font-size: clamp(20px, 1.8vw, 28px);
   font-weight: 700;
   color: #ffffff;
   margin: 0;
   letter-spacing: -0.3px;
 }
 
-.dl-store-card-sub {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-  color: #c4c7c8;
-  margin: 4px 0 0 0;
+.dl-platform-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 400;
+  color: #c6a02a;
+  margin: 0;
 }
 
 /* ========================================================

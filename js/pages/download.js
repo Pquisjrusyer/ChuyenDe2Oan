@@ -199,40 +199,92 @@ export async function renderDownload(container) {
       </section>
 
       <!-- ========================================================
-           2. KHÁM PHÁ THÊM / STORE DOWNLOADS
+           2. KHÁM PHÁ THÊM / PLATFORM SECTION (1195:78620)
            ======================================================== -->
-      <section class="dl-stores-section" id="download-stores">
-        <div class="dl-stores-header trailer-scroll-reveal trailer-reveal-fade-up">
-          <h2 class="dl-stores-title">KHÁM PHÁ THÊM</h2>
-          <p class="dl-stores-sub">Trải nghiệm trên nhiều nền tảng và các cổng phân phối</p>
+      <section class="dl-stores-section" id="download-stores" data-node-id="1195:78620">
+        <!-- Section Header (1218:78496) -->
+        <div class="dl-stores-header-wrap trailer-scroll-reveal trailer-reveal-fade-up">
+          <div class="dl-stores-header-content" data-node-id="1218:78496">
+            <h2 class="dl-stores-title" data-node-id="1218:78494">KHÁM PHÁ THÊM</h2>
+            <p class="dl-stores-sub" data-node-id="1218:78495">
+              Tải xuống Trò chơi đang có mặt tại các nền tảng
+            </p>
+          </div>
+          <!-- Decorative Divider Line (1218:78497) -->
+          <div class="dl-stores-divider-line" data-node-id="1218:78497">
+            <img src="./assets/053392dd32a0d7cad857d683b49a10eea5d13941.svg" alt="" />
+          </div>
         </div>
 
-        <div class="dl-stores-grid trailer-scroll-reveal trailer-reveal-fade-up delay-150">
+        <!-- 3 Platform Cards (1218:78516) -->
+        <div class="dl-stores-cards-row trailer-scroll-reveal trailer-reveal-fade-up delay-150" data-node-id="1218:78516">
           
-          <!-- Store 1: Windows PC -->
-          <a href="#dl-specs-section" class="dl-store-card">
-            <img src="./assets/396fb7eb2459880afb4fb6d8cbb13aadca0cfc8e.png" alt="Windows PC" class="dl-store-card-bg" />
-            <div class="dl-store-card-content">
-              <h3 class="dl-store-card-title">Window PC</h3>
-              <p class="dl-store-card-sub">Tương thích hoàn thiện</p>
+          <!-- Card 1: Windows PC (1218:78471 & 1218:78535) -->
+          <a href="#dl-specs-section" class="dl-platform-card-unit" data-node-id="1218:78471">
+            <div class="dl-platform-card-box card-box-win" data-node-id="1218:78424">
+              <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78427) -->
+              <div class="dl-platform-diff-bg" data-node-id="1218:78427">
+                <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+              </div>
+              <!-- Stone Carved Windows 11 Logo (1218:78435) -->
+              <div class="dl-platform-stone-icon icon-win" data-node-id="1218:78435">
+                <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Windows 11" />
+              </div>
+              <!-- Weathered Photo Frame Overlay (1218:78425) -->
+              <div class="dl-platform-frame-overlay frame-win" data-node-id="1218:78425">
+                <img src="./assets/1c6cda58361a8d0ab3edc74677ddbcd773711e4d.png" alt="" />
+              </div>
+            </div>
+            <!-- Text Label & Subtitle Below Card (1218:78535) -->
+            <div class="dl-platform-caption-box" data-node-id="1218:78535">
+              <h3 class="dl-platform-title" data-node-id="1218:78529">Window PC</h3>
+              <p class="dl-platform-sub" data-node-id="1218:78532">Trình cài đặt trực tiếp</p>
             </div>
           </a>
 
-          <!-- Store 2: Steam Store -->
-          <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="dl-store-card">
-            <img src="./assets/5caa891f8a3fbb082b8f6ca116e8eeb5002cfede.png" alt="Steam Store" class="dl-store-card-bg" />
-            <div class="dl-store-card-content">
-              <h3 class="dl-store-card-title">Steam Store</h3>
-              <p class="dl-store-card-sub">Trải nghiệm trực tuyến</p>
+          <!-- Card 2: Steam Store (1218:78473 & 1218:78536) -->
+          <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="dl-platform-card-unit" data-node-id="1218:78473">
+            <div class="dl-platform-card-box card-box-steam" data-node-id="1218:78418">
+              <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78462) -->
+              <div class="dl-platform-diff-bg" data-node-id="1218:78462">
+                <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+              </div>
+              <!-- Stone Carved Steam Logo (1218:78437) -->
+              <div class="dl-platform-stone-icon icon-steam" data-node-id="1218:78437">
+                <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Steam" />
+              </div>
+              <!-- Weathered Photo Frame Overlay (1218:78419) -->
+              <div class="dl-platform-frame-overlay frame-steam" data-node-id="1218:78419">
+                <img src="./assets/396fb7eb2459880afb4fb6d8cbb13aadca0cfc8e.png" alt="" />
+              </div>
+            </div>
+            <!-- Text Label & Subtitle Below Card (1218:78536) -->
+            <div class="dl-platform-caption-box" data-node-id="1218:78536">
+              <h3 class="dl-platform-title" data-node-id="1218:78530">Steam Store</h3>
+              <p class="dl-platform-sub" data-node-id="1218:78533">Xem thêm trên Steam</p>
             </div>
           </a>
 
-          <!-- Store 3: Epic Store -->
-          <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="dl-store-card">
-            <img src="./assets/2486c6adcf88fddc97c440c78c0892707c2e7708.png" alt="Epic Store" class="dl-store-card-bg" />
-            <div class="dl-store-card-content">
-              <h3 class="dl-store-card-title">Epic Store</h3>
-              <p class="dl-store-card-sub">Trải nghiệm trực tuyến</p>
+          <!-- Card 3: Epic Store (1218:78472 & 1218:78537) -->
+          <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="dl-platform-card-unit" data-node-id="1218:78472">
+            <div class="dl-platform-card-box card-box-epic" data-node-id="1218:78421">
+              <!-- Background Grunge Texture with 90deg rotation & difference blend (1218:78463) -->
+              <div class="dl-platform-diff-bg" data-node-id="1218:78463">
+                <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+              </div>
+              <!-- Stone Carved Epic Games Logo (1218:78438) -->
+              <div class="dl-platform-stone-icon icon-epic" data-node-id="1218:78438">
+                <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Epic Games" />
+              </div>
+              <!-- Weathered Photo Frame Overlay (1218:78422) -->
+              <div class="dl-platform-frame-overlay frame-epic" data-node-id="1218:78422">
+                <img src="./assets/f0bd77fc2b99127f1c30b1e9a618569a04ed519f.png" alt="" />
+              </div>
+            </div>
+            <!-- Text Label & Subtitle Below Card (1218:78537) -->
+            <div class="dl-platform-caption-box" data-node-id="1218:78537">
+              <h3 class="dl-platform-title" data-node-id="1218:78531">Epic Store</h3>
+              <p class="dl-platform-sub" data-node-id="1218:78534">Xem thêm trên Epic Game</p>
             </div>
           </a>
 
