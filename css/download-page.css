@@ -7,7 +7,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #030000;
+  background: linear-gradient(180deg, #1d0000 0%, #0c0000 20%, #040000 50%, #090000 75%, #000000 100%);
   color: #ffffff;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -20,7 +20,7 @@
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: #000000;
+  background: transparent;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -603,7 +603,7 @@
 .dl-stores-section {
   position: relative;
   width: 100%;
-  background: linear-gradient(180deg, #030000 0%, #0d0202 50%, #050000 100%);
+  background: transparent;
   padding: 80px clamp(20px, 8.33vw, 160px) 100px;
   box-sizing: border-box;
   overflow: hidden;
@@ -714,7 +714,7 @@
 .dl-specs-section {
   position: relative;
   width: 100%;
-  background: #030000;
+  background: transparent;
   padding: 80px clamp(20px, 8.33vw, 160px) 100px;
   box-sizing: border-box;
   overflow: hidden;
@@ -798,7 +798,7 @@
 .dl-faq-section {
   position: relative;
   width: 100%;
-  background: #030000;
+  background: transparent;
   padding: 60px clamp(20px, 8.33vw, 160px) 100px;
   box-sizing: border-box;
   overflow: hidden;
@@ -818,7 +818,7 @@
 .dl-ready-section {
   position: relative;
   width: 100%;
-  background: #030000;
+  background: transparent;
   padding: 100px clamp(20px, 5vw, 100px) 140px;
   box-sizing: border-box;
   overflow: hidden;
