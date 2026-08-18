@@ -274,17 +274,17 @@ export async function renderRegister(container) {
           
           <!-- Steam (1284:79476) -->
           <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79476" aria-label="Đăng ký với Steam">
-            <img src="./assets/efe9683bc85804059d472260803fb9d037a6894d.png" alt="Steam" />
+            <img src="./assets/platform_steam_true_circle.png" alt="Steam" />
           </a>
 
           <!-- Epic Games (1284:79478) -->
           <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79478" aria-label="Đăng ký với Epic Games">
-            <img src="./assets/0ba3f8714f3943a121ff8f7c2df272a3410e25a4.png" alt="Epic Games" />
+            <img src="./assets/platform_epic_true_circle.png" alt="Epic Games" />
           </a>
 
           <!-- Xbox (1284:79480) -->
           <a href="https://xbox.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79480" aria-label="Đăng ký với Xbox">
-            <img src="./assets/6554ae6fd57b46bda098add06ae5d7f16e378a1d.png" alt="Xbox" />
+            <img src="./assets/platform_xbox_true_circle.png" alt="Xbox" />
           </a>
 
         </div>
