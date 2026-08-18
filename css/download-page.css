@@ -948,7 +948,7 @@
   transform: translateY(-8px) scale(1.02);
 }
 
-/* Base Card Box with Outer Frame exact Figma dimensions (1218:78516) */
+/* Base Card Box with Outer Frame exact Figma dimensions (1218:78516 & 1218:78498) */
 .dl-platform-card-box {
   position: relative;
   overflow: visible;
@@ -956,20 +956,20 @@
 }
 
 .card-box-win {
-  width: clamp(280px, 27vw, 420px);
+  width: clamp(280px, 26vw, 420px);
   aspect-ratio: 521 / 712;
 }
 
 .card-box-steam {
-  width: clamp(252px, 24.3vw, 378px);
+  width: clamp(252px, 23.45vw, 378px);
   aspect-ratio: 470 / 680;
-  margin-top: clamp(10px, 1.2vw, 20px);
+  margin-top: clamp(12px, 1.2vw, 20px);
 }
 
 .card-box-epic {
-  width: clamp(266px, 25.7vw, 400px);
+  width: clamp(266px, 24.8vw, 400px);
   aspect-ratio: 497 / 680;
-  margin-top: clamp(10px, 1.2vw, 20px);
+  margin-top: clamp(12px, 1.2vw, 20px);
 }
 
 /* Inner Content Box with Dark Gradient & Exact Figma Insets (1218:78424 / 78418 / 78421) */
@@ -1028,7 +1028,7 @@
   pointer-events: none;
 }
 
-/* Stone Carved Icons - Default State (1218:78435 / 78437 / 78438) */
+/* Stone Carved Icons - Default & Hover States (1218:78435 / 78437 / 78438) */
 .dl-platform-stone-icon {
   position: absolute;
   overflow: hidden;
@@ -1047,20 +1047,19 @@
 
 .dl-platform-card-unit:hover .default-stone-icon {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.95);
+  transform: scale(0.96);
 }
 
 .dl-platform-card-unit:hover .hover-stone-icon {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1.05);
+  transform: scale(1.04);
   filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.9));
 }
 
-/* Win Icon Positions */
+/* Win Icon Positions (1218:78435) */
 .icon-win {
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
+  left: 24.71%;
+  top: 22.19%;
   width: 57.27%;
   height: 51.03%;
 }
@@ -1076,11 +1075,10 @@
 }
 
 .icon-win-glow {
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
-  width: 72%;
-  height: 60%;
+  left: 19.51%;
+  top: 17.43%;
+  width: 67.67%;
+  height: 60.54%;
 }
 
 .icon-win-glow img {
@@ -1089,11 +1087,10 @@
   object-fit: contain;
 }
 
-/* Steam Icon Positions */
+/* Steam Icon Positions (1218:78437) */
 .icon-steam {
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
+  left: 27.23%;
+  top: 22.08%;
   width: 62.24%;
   height: 50.79%;
 }
@@ -1109,11 +1106,10 @@
 }
 
 .icon-steam-glow {
-  left: 50%;
-  top: 48%;
-  transform: translate(-50%, -50%);
-  width: 74%;
-  height: 60%;
+  left: 21.17%;
+  top: 17.35%;
+  width: 74.37%;
+  height: 60.25%;
 }
 
 .icon-steam-glow img {
@@ -1122,11 +1118,10 @@
   object-fit: contain;
 }
 
-/* Epic Icon Positions */
+/* Epic Icon Positions (1218:78438) */
 .icon-epic {
-  left: calc(50% - 2px);
-  top: 48%;
-  transform: translate(-50%, -50%);
+  left: 25.36%;
+  top: 22.15%;
   width: 58.37%;
   height: 50.95%;
 }
@@ -1142,11 +1137,10 @@
 }
 
 .icon-epic-glow {
-  left: calc(50% - 2px);
-  top: 48%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 60%;
+  left: 19.86%;
+  top: 17.41%;
+  width: 69.38%;
+  height: 60.44%;
 }
 
 .icon-epic-glow img {
@@ -1172,11 +1166,12 @@
 
 /* Text Label Below Card (1218:78538) */
 .dl-platform-caption-box {
-  margin-top: 20px;
+  margin-top: clamp(16px, 1.8vh, 24px);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  align-items: center;
+  gap: 8px;
 }
 
 .dl-platform-title {
