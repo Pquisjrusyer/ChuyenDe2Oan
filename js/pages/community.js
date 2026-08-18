@@ -3,19 +3,36 @@
    ======================================================== */
 
 import { getReadySectionHTML } from '../components/ready-section.js';
+import { initCommunityScrollTriggers } from '../utils/smooth-scroll.js';
 
 export async function renderCommunity(container) {
   container.innerHTML = `
     <div class="figma-community-page" data-node-id="1024:73961">
       
       <!-- ========================================================
-           1. HERO SECTION (1024:74064)
+           1. HERO SECTION (Figma 1024:74064)
            ======================================================== -->
       <section class="community-hero-section" data-node-id="1024:74064">
         
-        <!-- Giant Calligraphy Watermark (1024:74090) -->
+        <!-- Ornate Red Framing Brackets on Top-Left & Bottom-Right (1058:78396 / 1058:78398) -->
+        <div class="comm-hero-bracket-top-left" data-node-id="1058:78396">
+          <img src="./assets/29c8d8e61a51a7dca3e06353a167471c1ce53bb2.svg" alt="" />
+        </div>
+        <div class="comm-hero-bracket-bottom-right" data-node-id="1058:78398">
+          <img src="./assets/461dce353ff817734c9a55b5694b8e357d811db0.svg" alt="" />
+        </div>
+
+        <!-- Giant Calligraphy Watermark "OÁN" (Figma 1024:74090 - All 3 SVG Vectors) -->
         <div class="community-hero-watermark" data-node-id="1024:74090">
-          <img src="./assets/fb7bd6783686bce6effc7db50fd54349a7b6c50b.svg" alt="OAN" class="community-hero-watermark-img" />
+          <div class="oan-vector-1">
+            <img src="./assets/99af38ef66e56ca1d9ebbe549864aba2a4ed367a.svg" alt="" />
+          </div>
+          <div class="oan-vector-2">
+            <img src="./assets/d5e33112df0e56f51ddc82588bd34220fd8888d4.svg" alt="" />
+          </div>
+          <div class="oan-vector-3">
+            <img src="./assets/fb7bd6783686bce6effc7db50fd54349a7b6c50b.svg" alt="" />
+          </div>
         </div>
 
         <div class="community-hero-content animate-fade-in-up">
@@ -31,9 +48,24 @@ export async function renderCommunity(container) {
               <span class="btn-comm-login-text">ĐĂNG NHẬP</span>
             </a>
 
-            <!-- Button 2: THAM GIA NGAY (1024:74070) -->
-            <a href="#register" class="btn-comm-join" data-node-id="1024:74070">
-              <span class="btn-comm-join-text">THAM GIA NGAY</span>
+            <!-- Button 2: THAM GIA NGAY (1024:74070 with Figma 906:1550 Multi-frame parts & Glow) -->
+            <a href="#register" class="btn-comm-join-figma" data-node-id="1024:74070">
+              <div class="comm-join-frame-parts" data-node-id="906:1550">
+                <div class="comm-fp1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
+                <div class="comm-fp2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                <div class="comm-fp3"><img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" /></div>
+                <div class="comm-fp4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                <div class="comm-fp5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
+              </div>
+              <div class="comm-join-inner-bg">
+                <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" class="comm-join-rect-texture" alt="" />
+              </div>
+              <div class="comm-join-content">
+                <span class="comm-join-caption">THAM GIA NGAY</span>
+              </div>
+              <div class="comm-join-glow-3"></div>
+              <div class="comm-join-glow-2"></div>
+              <div class="comm-join-glow-1"></div>
             </a>
           </div>
         </div>
@@ -135,9 +167,9 @@ export async function renderCommunity(container) {
       </section>
 
       <!-- ========================================================
-           3. SUBSCRIBE SECTION (1024:74088)
+           3. SUBSCRIBE SECTION (Figma 1030:73731)
            ======================================================== -->
-      <section class="community-subscribe-section" data-node-id="1024:74088">
+      <section class="community-subscribe-section" data-node-id="1030:73731">
         
         <!-- Tag Section Badge: Subcribe để nhận tin (1030:73837) -->
         <div class="comm-sub-tag-badge" data-node-id="1030:73837">
@@ -150,41 +182,54 @@ export async function renderCommunity(container) {
           </div>
         </div>
 
-        <!-- 3D Character Figure + Form Stage -->
         <div class="comm-sub-interactive-stage">
-          
-          <!-- 3D Character Figure (1030:73939) -->
+          <!-- 3D Character Figure on the Left (1030:73939) -->
           <div class="comm-sub-char-figure" data-node-id="1030:73939">
-            <img src="./assets/344f476af8afbb59f9d7e3c3440c0fe8b36fd681.png" alt="Nhân vật hướng dẫn" />
+            <img src="./assets/344f476af8afbb59f9d7e3c3440c0fe8b36fd681.png" alt="Nhân vật chỉ tay" />
           </div>
 
-          <!-- Subscription Form Box (1030:73844) -->
+          <!-- Centered Subscription Form (1030:73844) -->
           <form class="comm-sub-form-box" data-node-id="1030:73844" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký nhận tin từ OAN!');">
             <div class="comm-form-row">
               
               <!-- Field 1: Email (1030:73777) -->
               <div class="comm-form-group" data-node-id="1030:73777">
                 <label class="comm-form-label">Email</label>
-                <input type="email" class="comm-form-input" placeholder="Entered text" required />
+                <div class="comm-input-wrapper">
+                  <input type="email" class="comm-form-input" placeholder="Entered text" required />
+                  <span class="comm-input-cursor">|</span>
+                </div>
                 <span class="comm-form-helper">Không spam. Có thể hủy bất kỳ lúc nào.</span>
               </div>
 
               <!-- Field 2: Sở thích (1030:73782) -->
               <div class="comm-form-group" data-node-id="1030:73782">
                 <label class="comm-form-label">Sở thích</label>
-                <input type="text" class="comm-form-input" placeholder="Entered text" />
+                <div class="comm-input-wrapper">
+                  <input type="text" class="comm-form-input" placeholder="Entered text" />
+                  <span class="comm-input-cursor">|</span>
+                </div>
                 <span class="comm-form-helper">Gợi ý nội dung phù hợp theo lựa chọn.</span>
               </div>
             </div>
 
-            <!-- Action Buttons Row (1030:73845) -->
+            <!-- Centered Action Buttons Row (1030:73787) -->
             <div class="comm-form-actions-row">
-              <button type="submit" class="btn-comm-sub-submit" data-node-id="1030:73846">
+              <!-- Button 1: ĐĂNG KÝ (1030:73830) -->
+              <button type="submit" class="btn-comm-sub-submit" data-node-id="1030:73830">
                 <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="btn-comm-sub-submit-bg" />
                 <span class="btn-comm-sub-submit-text">ĐĂNG KÝ</span>
               </button>
-              <button type="button" class="btn-comm-sub-view" onclick="window.location.hash='storyline'">
-                Xem tin
+
+              <!-- Button 2: Xem tin (1030:73812 with horror frame corners) -->
+              <button type="button" class="btn-comm-sub-view-figma" data-node-id="1030:73812" onclick="window.location.hash='storyline'">
+                <div class="sub-view-horror-corners">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="sub-corner-left" />
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="sub-corner-right" />
+                </div>
+                <div class="sub-view-inner-field">
+                  <span class="sub-view-caption">Xem tin</span>
+                </div>
               </button>
             </div>
           </form>
@@ -198,4 +243,26 @@ export async function renderCommunity(container) {
 
     </div>
   `;
+
+  // Scroll Reveal Observer for Community Page & Ready Section
+  const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  scrollTargets.forEach(el => scrollObserver.observe(el));
+
+  setTimeout(() => {
+    scrollTargets.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add('revealed');
+      }
+    });
+    initCommunityScrollTriggers();
+  }, 100);
 }

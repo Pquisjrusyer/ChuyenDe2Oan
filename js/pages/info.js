@@ -367,6 +367,14 @@ export async function renderInfo(container) {
           <div class="feature-story-bg-overlay"></div>
         </div>
 
+        <!-- Broken Glass & Scratch Effects on 2 Sides -->
+        <div class="info-section-glass-left">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+        </div>
+        <div class="info-section-glass-right">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+        </div>
+
         <div class="container">
           
           <!-- Feature Narrative Content Block (Left Aligned 957:429611) -->
@@ -416,6 +424,15 @@ cốt truyện</h2>
            4. LATEST NEWS & UPDATES SECTION (957:429612)
            ======================================================== -->
       <section class="info-updates-section" data-node-id="957:429612">
+        
+        <!-- Broken Glass & Scratch Effects on 2 Sides -->
+        <div class="info-section-glass-left">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+        </div>
+        <div class="info-section-glass-right">
+          <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+        </div>
+
         <div class="container">
           
           <!-- Top Row: Link Xem tất cả tin tức & Tag Badge Cập nhật mới nhất -->

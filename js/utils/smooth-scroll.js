@@ -994,3 +994,231 @@ export function initInfoScrollTriggers() {
     ScrollTrigger.refresh();
   }, 100);
 }
+
+/**
+ * GSAP ScrollTrigger Animations for Community Page (Figma 1024:73961)
+ */
+export function initCommunityScrollTriggers() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+
+  killPageTriggers();
+
+  // 1. Community Hero Section
+  const commHero = document.querySelector('.community-hero-section');
+  if (commHero) {
+    const watermark = commHero.querySelector('.community-hero-watermark');
+    const title = commHero.querySelector('.community-hero-title');
+    const subtitle = commHero.querySelector('.community-hero-subtitle');
+    const actions = commHero.querySelector('.community-hero-actions');
+    const bracketL = commHero.querySelector('.comm-hero-bracket-top-left');
+    const bracketR = commHero.querySelector('.comm-hero-bracket-bottom-right');
+
+    if (watermark) {
+      gsap.fromTo(watermark,
+        { opacity: 0, scale: 0.88, xPercent: -50, yPercent: -50 },
+        { opacity: 0.92, scale: 1, xPercent: -50, yPercent: -50, duration: 1.2, ease: 'power3.out' }
+      );
+    }
+    if (bracketL) {
+      gsap.fromTo(bracketL,
+        { opacity: 0, x: -30, y: -20 },
+        { opacity: 0.85, x: 0, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.2 }
+      );
+    }
+    if (bracketR) {
+      gsap.fromTo(bracketR,
+        { opacity: 0, x: 30, y: 20 },
+        { opacity: 0.85, x: 0, y: 0, duration: 0.9, ease: 'power3.out', delay: 0.2 }
+      );
+    }
+    if (title) {
+      gsap.fromTo(title,
+        { opacity: 0, y: 35, filter: 'blur(8px)' },
+        { opacity: 1, y: 0, filter: 'blur(0px)', duration: 0.9, ease: 'power3.out', delay: 0.15 }
+      );
+    }
+    if (subtitle) {
+      gsap.fromTo(subtitle,
+        { opacity: 0, y: 25 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 }
+      );
+    }
+    if (actions) {
+      gsap.fromTo(actions.children,
+        { opacity: 0, scale: 0.9, y: 20 },
+        { opacity: 1, scale: 1, y: 0, duration: 0.7, stagger: 0.12, ease: 'back.out(1.5)', delay: 0.4 }
+      );
+    }
+  }
+
+  // 2. Community News Section (1024:74098)
+  const newsSec = document.querySelector('.community-news-section');
+  if (newsSec) {
+    const newsHeader = newsSec.querySelector('.community-news-header');
+    const newsCards = newsSec.querySelectorAll('.comm-article-card');
+
+    if (newsHeader) {
+      gsap.fromTo(newsHeader,
+        { opacity: 0, y: 30, scale: 0.96 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: newsSec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (newsCards.length) {
+      gsap.fromTo(newsCards,
+        { opacity: 0, y: 40, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: newsSec,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 3. Community Subscribe Section (1030:73731)
+  const subSec = document.querySelector('.community-subscribe-section');
+  if (subSec) {
+    const subBadge = subSec.querySelector('.comm-sub-tag-badge');
+    const charFigure = subSec.querySelector('.comm-sub-char-figure');
+    const formBox = subSec.querySelector('.comm-sub-form-box');
+
+    if (subBadge) {
+      gsap.fromTo(subBadge,
+        { opacity: 0, y: 40, scale: 0.92 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.9,
+          ease: 'back.out(1.3)',
+          scrollTrigger: {
+            trigger: subSec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (charFigure) {
+      gsap.fromTo(charFigure,
+        { opacity: 0, x: -60, scale: 0.92 },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: subSec,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+
+    if (formBox) {
+      gsap.fromTo(formBox,
+        { opacity: 0, y: 35 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: subSec,
+            start: 'top 75%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  // 4. Shared Ready Section (1363:86758)
+  const readySec = document.querySelector('.figma-ready-section');
+  if (readySec) {
+    const heading = readySec.querySelector('.ready-heading-text');
+    const btns = readySec.querySelectorAll('.figma-btn-horror-frame');
+    const sysreq = readySec.querySelector('.ready-sysreq-box');
+
+    if (heading) {
+      gsap.fromTo(heading,
+        { opacity: 0, y: 30, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+    if (btns.length) {
+      gsap.fromTo(btns,
+        { opacity: 0, scale: 0.9, y: 20 },
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.12,
+          delay: 0.15,
+          ease: 'back.out(1.4)',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+    if (sysreq) {
+      gsap.fromTo(sysreq,
+        { opacity: 0, y: 15 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: 0.35,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: readySec,
+            start: 'top 85%',
+            toggleActions: 'play none none reverse',
+          },
+        }
+      );
+    }
+  }
+
+  setTimeout(() => {
+    ScrollTrigger.refresh();
+  }, 100);
+}

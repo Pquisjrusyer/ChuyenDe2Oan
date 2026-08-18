@@ -314,6 +314,7 @@
   z-index: 0;
 }
 
+.info-section-glass-left,
 .info-story-glass-left {
   position: absolute;
   top: 0;
@@ -329,6 +330,7 @@
   -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 45%, transparent 100%);
 }
 
+.info-section-glass-right,
 .info-story-glass-right {
   position: absolute;
   top: 0;

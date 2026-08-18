@@ -1,0 +1,150 @@
+>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-[960px] overflow-clip relative shrink-0 w-[1920px]" data-node-id="1030:73731">
+        <div className="-translate-x-1/2 absolute content-stretch flex flex-col items-center justify-center left-1/2 top-[55px] w-[794px]" data-node-id="1030:73837" data-name="Tag Section">
+          <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[794px]" data-node-id="I1030:73837;770:899">
+            <div className="h-[205px] relative shrink-0 w-[1104px]" data-node-id="I1030:73837;770:898">
+              <div className="absolute h-[205px] left-[155px] top-0 w-[794px]" data-node-id="I1030:73837;708:1187" data-name="Title background">
+                <div className="absolute inset-[0_1.05%_0_0]">
+                  <img alt="" className="block max-w-none size-full" height="205" src={imgTitleBackground1} width="785.673" />
+                </div>
+              </div>
+              <div className="-translate-y-1/2 [word-break:break-word] absolute content-stretch flex flex-col gap-[10px] h-[192px] items-center justify-center leading-[1.3] left-[164px] px-[40px] py-[20px] right-[164px] text-center top-[calc(50%-0.5px)]" data-node-id="I1030:73837;770:892" data-name="Cơ chế trò chơi">
+                <p className="font-['Roboto:Bold'] font-bold relative shrink-0 text-[72px] text-white tracking-[-1.44px] w-full" data-node-id="I1030:73837;770:893" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Subcribe để nhận tin
+                </p>
+                <p className="font-['Roboto:Regular'] font-normal relative shrink-0 text-[#c6a02a] text-[24px] tracking-[-0.48px] w-full" data-node-id="I1030:73837;770:894" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Nhận tin tức, bảng xếp hạng và thông báo sự kiện trực tiếp qua email.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute left-[62px] size-[566px] top-[490px]" data-node-id="1030:73939" data-name="image 8">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+        </div>
+        <div className="absolute bg-gradient-to-b from-[35.908%] from-[rgba(27,2,2,0)] h-[557px] left-0 to-[84.47%] to-black top-[445px] w-[1920px]" data-node-id="1030:73941" />
+        <div className="-translate-x-1/2 absolute content-stretch flex flex-col gap-[40px] items-center justify-center left-[calc(50%-0.5px)] top-[418px]" data-node-id="1030:73844" data-name="list">
+          <div className="content-stretch flex gap-[80px] items-center justify-center relative shrink-0 w-full" data-node-id="I1030:73844;1030:73776" data-name="row">
+            <div className="content-stretch flex flex-col gap-[4px] items-start justify-center overflow-clip p-[4px] relative shrink-0 w-[510px]" data-node-id="I1030:73844;1030:73777" data-name="Input">
+              <p className="[word-break:break-word] font-['Roboto:Medium'] font-medium leading-[20px] relative shrink-0 text-[#c6a02a] text-[14px] w-full" data-node-id="I1030:73844;1030:73778" style={{ fontVariationSettings: '"wdth" 100' }}>
+                Email
+              </p>
+              <div className="h-[60px] relative shrink-0 w-full" data-node-id="I1030:73844;1030:73810">
+                <Field className="absolute border-2 border-[#767676] border-solid content-stretch flex items-center left-0 opacity-60 px-[20px] py-[16px] top-0 w-[502px]" />
+              </div>
+              <p className="[word-break:break-word] font-['Roboto:Regular'] font-normal leading-[16px] relative shrink-0 text-[#9c7e21] text-[12px] w-full" data-node-id="I1030:73844;1030:73781" style={{ fontVariationSettings: '"wdth" 100' }}>
+                Không spam. Có thể hủy bất kỳ lúc nào.
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[4px] items-start justify-center overflow-clip p-[4px] relative shrink-0 w-[559px]" data-node-id="I1030:73844;1030:73782" data-name="Input">
+              <p className="[word-break:break-word] font-['Roboto:Medium'] font-medium leading-[20px] relative shrink-0 text-[#d9b74c] text-[14px] w-full" data-node-id="I1030:73844;1030:73783" style={{ fontVariationSettings: '"wdth" 100' }}>
+                Sở thích
+              </p>
+              <div className="h-[60px] relative shrink-0 w-full" data-node-id="I1030:73844;1030:73811">
+                <div className="absolute border-2 border-[#767676] border-solid content-stretch flex items-center left-0 opacity-60 px-[20px] py-[16px] top-0 w-[551px]" data-node-id="I1030:73844;1030:73802" data-name="Field">
+                  <div aria-hidden className="absolute inset-0 pointer-events-none">
+                    <div className="absolute bg-[#161a1a] inset-0" />
+                    <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable}")` }} />
+                    <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable1}")` }} />
+                    <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgProperty1NhpDisable2}")` }} />
+                  </div>
+                  <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[28px] relative shrink-0 text-[#cdbda0] text-[20px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1030:73844;1030:73802;838:2075" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    Entered text
+                  </p>
+                  <div className="flex flex-row items-center self-stretch" data-node-id="I1030:73844;1030:73802;838:2076">
+                    <div className="bg-[#cdbda0] h-full relative rounded-[1px] shrink-0 w-px" data-name="Indicator Right" />
+                  </div>
+                  <div className="h-[22px] relative shrink-0 w-[233px]" data-node-id="I1030:73844;1030:73802;838:2077" data-name="Spacer" />
+                </div>
+              </div>
+              <p className="[word-break:break-word] font-['Roboto:Regular'] font-normal leading-[16px] relative shrink-0 text-[#9c7e21] text-[12px] w-full" data-node-id="I1030:73844;1030:73786" style={{ fontVariationSettings: '"wdth" 100' }}>
+                Gợi ý nội dung phù hợp theo lựa chọn.
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[12px] items-center justify-center overflow-clip relative shrink-0" data-node-id="I1030:73844;1030:73787" data-name="Button">
+            <div className="flex flex-row items-center self-stretch" data-node-id="I1030:73844;1030:73830">
+              <div className="content-stretch flex h-full items-center relative shrink-0" data-name="Đang ký tải xún">
+                <div className="content-stretch flex flex-col gap-[10px] h-[57px] items-center justify-center px-[76px] py-[13px] relative shrink-0 w-[217px]" data-node-id="I1030:73844;1030:73830;906:1714" data-name="Dang ngap">
+                  <div className="absolute h-[57px] left-0 top-0 w-[217px]" data-node-id="I1030:73844;1030:73830;906:1715">
+                    <div className="absolute h-[57px] left-0 right-0 top-0" data-node-id="I1030:73844;1030:73830;906:1716" data-name="Title background">
+                      <div className="absolute inset-[0_1.05%_0_0]">
+                        <img alt="" className="block max-w-none size-full" height="57" src={imgTitleBackground} width="214.724" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="h-[31px] relative shrink-0 w-[64px]" data-node-id="I1030:73844;1030:73830;906:1717">
+                    <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] left-[calc(50%-49.5px)] not-italic text-[24px] text-white top-[15.5px] tracking-[-0.48px] whitespace-nowrap" data-node-id="I1030:73844;1030:73830;906:1718">
+                      <p className="leading-[1.3]">ĐĂNG KÝ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[10px] h-[91px] items-center justify-center px-[17px] py-[12px] relative shrink-0 w-[225px]" data-node-id="I1030:73844;1030:73812" data-name="Button 1">
+              <div className="absolute h-[91px] left-0 right-0 top-0" data-node-id="I1030:73844;1030:73812;708:592" data-name="Horror frame 2">
+                <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1030:73844;1030:73812;708:592;708:35" data-name="Left">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft4} />
+                </div>
+                <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1030:73844;1030:73812;708:592;708:38" data-name="Spacer left" />
+                <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1030:73844;1030:73812;708:592;708:42" data-name="Spacer right" />
+                <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1030:73844;1030:73812;708:592;708:43" style={{ containerType: "size" }}>
+                  <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+                    <div className="relative size-full" data-name="Left">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft5} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="border-2 border-[#9c7e21] border-solid content-stretch flex flex-[1_0_0] gap-[10px] items-center justify-center min-w-px overflow-clip px-[20px] py-[16px] relative" data-node-id="I1030:73844;1030:73812;708:582" data-name="Field">
+                <div aria-hidden className="absolute inset-0 pointer-events-none">
+                  <div className="absolute bg-[#161a1a] inset-0" />
+                  <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable}")` }} />
+                  <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable1}")` }} />
+                  <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgProperty1NhpDisable2}")` }} />
+                </div>
+                <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[1.3] not-italic relative shrink-0 text-[24px] text-center text-white tracking-[-0.48px] whitespace-nowrap" data-node-id="I1030:73844;1030:73812;708:606">
+                  Xem tin
+                </p>
+                <div className="-translate-x-1/2 -translate-y-1/2 absolute blur-[23.4px] h-[62px] left-1/2 mix-blend-plus-lighter overflow-clip top-[calc(50%-0.5px)] w-[195px]" data-node-id="I1030:73844;1030:73812;879:1077" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-[362px] overflow-clip relative shrink-0 w-full" data-node-id="1030:73895">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[48px] items-center justify-center left-[calc(50%+0.5px)] px-[80px] top-[calc(50%+0.5px)] w-[1161px]" data-node-id="1030:73896" data-name="CTA">
+          <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1030:73897" data-name="Heading 2">
+            <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[48px] text-center text-white tracking-[0.96px] whitespace-nowrap" data-node-id="1030:73898">
+              <p className="leading-[56px]">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</p>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[24.01px] items-start justify-center relative shrink-0 w-full" data-node-id="1030:73899" data-name="Container">
+            <div className="content-stretch flex gap-[10px] h-[91px] items-center justify-center px-[17px] py-[12px] relative shrink-0 w-[225px]" data-node-id="1030:73900" data-name="Button 2">
+              <div className="absolute h-[91px] left-0 right-0 top-0" data-node-id="I1030:73900;708:592" data-name="Horror frame 2">
+                <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1030:73900;708:592;708:35" data-name="Left">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft4} />
+                </div>
+                <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1030:73900;708:592;708:38" data-name="Spacer left" />
+                <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1030:73900;708:592;708:42" data-name="Spacer right" />
+                <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1030:73900;708:592;708:43" style={{ containerType: "size" }}>
+                  <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+                    <div className="relative size-full" data-name="Left">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft5} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="border-2 border-[#9c7e21] border-solid content-stretch flex flex-[1_0_0] gap-[10px] items-center justify-center min-w-px overflow-clip px-[20px] py-[16px] relative" data-node-id="I1030:73900;708:582" data-name="Field">
+                <div aria-hidden className="absolute inset-0 pointer-events-none">
+                  <div className="absolute bg-[#161a1a] inset-0" />
+                  <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable}")` }} />
+                  <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgProperty1NhpDisable1}")` }} />
+                  <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgProperty1NhpDisable2}")` }} />
+     
