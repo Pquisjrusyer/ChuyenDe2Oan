@@ -1,0 +1,758 @@
+/* ========================================================
+   OAN — REGISTER PAGE STYLES (Figma Node 1227:79552)
+   ======================================================== */
+
+.reg-page-wrapper {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   1. HERO SECTION (1249:77950)
+   ======================================================== */
+.reg-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(650px, 85vh, 1020px);
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(100px, 12vh, 147px) 20px 60px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reg-banner-slide-box {
+  position: relative;
+  width: 100%;
+  max-width: 1576px;
+  aspect-ratio: 1576 / 814;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #0d0101;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95);
+}
+
+.reg-carousel-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reg-carousel-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.reg-carousel-slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.reg-carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texture Multiply Overlay (1250:79020) */
+.reg-banner-texture-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.reg-banner-texture-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dots Indicator (1250:79019) */
+.reg-carousel-dots {
+  position: absolute;
+  bottom: clamp(16px, 3vh, 32px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 5;
+}
+
+.reg-dot-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #d9b74c;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.reg-dot-btn.active,
+.reg-dot-btn:hover {
+  background: #d9b74c;
+  box-shadow: 0 0 12px #d9b74c;
+  transform: scale(1.2);
+}
+
+/* Bottom Fade to Black */
+.reg-hero-bottom-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(to top, #000000 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* ========================================================
+   2. CTA TẠO TÀI KHOẢN & 4 CARDS (1250:79066)
+   ======================================================== */
+.reg-cta-section {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 5vw, 172px);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 6vh, 60px);
+}
+
+/* Scratched Grunge Background (1250:79145) */
+.reg-scratched-bg {
+  position: absolute;
+  inset: -100px;
+  mix-blend-mode: color-burn;
+  opacity: 0.65;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reg-scratched-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Top Row: Contents (1250:79069) */
+.reg-cta-top-row {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(32px, 4vw, 60px);
+  max-width: 1577px;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: clamp(32px, 4vh, 50px);
+  border-bottom: 1px solid rgba(217, 183, 76, 0.25);
+}
+
+.reg-cta-heading-col {
+  flex: 1 1 500px;
+  max-width: 689px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reg-cta-main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(26px, 2.5vw, 40px);
+  font-weight: 700;
+  color: #d9b74c;
+  line-height: 1.25;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(217, 183, 76, 0.35);
+}
+
+.reg-cta-main-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.4;
+  letter-spacing: -0.32px;
+}
+
+/* Right Article Card (1250:79073) */
+.reg-cta-article-box {
+  flex: 1 1 500px;
+  max-width: 748px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 16px;
+  box-sizing: border-box;
+  background: rgba(14, 0, 0, 0.6);
+}
+
+.reg-cta-article-inner {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.reg-cta-article-thumb {
+  width: 174px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.reg-cta-article-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reg-cta-article-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reg-cta-art-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.reg-cta-art-sub1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.reg-cta-art-sub2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* 4 Category Exploration Cards (1250:79213) */
+.reg-explore-cards-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1575px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.reg-explore-card {
+  position: relative;
+  height: 255px;
+  background: linear-gradient(144.5deg, rgba(87, 7, 7, 0.32) 0%, rgba(87, 7, 7, 0) 65%);
+  border: 1px solid rgba(232, 223, 207, 0.2);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reg-explore-card:hover {
+  transform: translateY(-5px);
+  border-color: #9c7e21;
+  background: linear-gradient(144.5deg, rgba(139, 0, 0, 0.45) 0%, rgba(87, 7, 7, 0.1) 75%);
+  box-shadow: 0 15px 35px rgba(153, 0, 0, 0.4), 0 0 20px rgba(156, 126, 33, 0.25);
+}
+
+.reg-card-num {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #c69b3c;
+  margin: 0;
+  font-weight: 700;
+}
+
+.reg-card-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(22px, 1.8vw, 30px);
+  font-weight: 700;
+  color: #e8dfcf;
+  letter-spacing: 1.2px;
+  margin: 8px 0 4px 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.reg-card-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #b3a99d;
+  line-height: 1.35;
+  margin: 0;
+  letter-spacing: -0.32px;
+}
+
+.reg-card-action {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #e8dfcf;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.reg-card-action .arrow {
+  color: #b11313;
+  font-size: 18px;
+  font-weight: 700;
+  transition: transform 0.25s ease;
+}
+
+.reg-explore-card:hover .reg-card-action .arrow {
+  transform: translate(3px, -3px);
+  color: #d9b74c;
+}
+
+/* ========================================================
+   3. REGISTRATION FORM SECTION (1250:79262)
+   ======================================================== */
+.reg-form-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #0e0000 0%, rgba(9,0,0,0.6) 45%, #0f0202 100%);
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 6vw, 169px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reg-form-main-grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: clamp(40px, 5vw, 80px);
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left Column (1218:79289) */
+.reg-form-left-col {
+  flex: 1 1 500px;
+  max-width: 651px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 4vh, 48px);
+}
+
+.reg-form-hero-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reg-title-big {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(40px, 4vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+  text-shadow: 0 0 25px rgba(217, 183, 76, 0.4);
+}
+
+.reg-title-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(22px, 2.2vw, 36px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.reg-form-lead {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #e2e2e2;
+  margin: 12px 0 0 0;
+}
+
+/* Checkbox Terms (1284:79399) */
+.reg-terms-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  max-width: 520px;
+}
+
+.reg-custom-checkbox {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #9c7e21;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: #d9b74c;
+  font-size: 18px;
+  font-weight: 700;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.reg-custom-checkbox.checked {
+  background: #990000;
+  border-color: #d9b74c;
+  box-shadow: 0 0 12px rgba(217, 183, 76, 0.6);
+}
+
+.reg-terms-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.reg-terms-link {
+  color: #9c7e21;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.reg-terms-link:hover {
+  color: #d9b74c;
+  text-decoration: underline;
+}
+
+/* Quick Login Box (1284:79544) */
+.reg-alt-login-box {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 20px 0;
+}
+
+.reg-alt-login-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reg-alt-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.48px;
+}
+
+.reg-alt-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.reg-alt-sub:hover {
+  color: #d9b74c;
+}
+
+.reg-alt-lock-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.reg-alt-lock-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Right Form Column (1283:79146) */
+.reg-form-right-col {
+  flex: 1 1 550px;
+  max-width: 881px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reg-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.reg-field-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d9b74c;
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+
+.reg-field-input-box {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: 2px solid #767676;
+  background: #161a1a;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.reg-field-input-box:focus-within {
+  border-color: #d9b74c;
+  box-shadow: 0 0 15px rgba(217, 183, 76, 0.4);
+}
+
+.reg-input-element {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+}
+
+.reg-input-element::placeholder {
+  color: #cdbda0;
+  opacity: 0.7;
+}
+
+.reg-field-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+}
+
+.reg-field-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Submit Button (1283:79247) */
+.reg-submit-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.reg-submit-btn {
+  position: relative;
+  width: 237px;
+  height: 77px;
+  border: 1px solid #b3b3b3;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+}
+
+.reg-submit-btn:hover {
+  transform: scale(1.04);
+  filter: brightness(1.2) drop-shadow(0 0 20px rgba(153, 0, 0, 0.6));
+}
+
+.reg-submit-btn-inner {
+  position: relative;
+  width: 100%;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.reg-submit-btn-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.reg-submit-btn-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reg-submit-btn-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  margin: 0;
+}
+
+/* ========================================================
+   4. THIRD PARTY REGISTRATION SECTION (1284:79446)
+   ======================================================== */
+.reg-third-party-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #180101 0%, #050101 100%);
+  padding: clamp(60px, 8vh, 100px) 20px clamp(80px, 10vh, 120px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(40px, 6vh, 64px);
+  overflow: hidden;
+}
+
+.reg-third-party-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: #990000;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(153, 0, 0, 0.6);
+}
+
+.reg-platform-icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 7vw, 131px);
+  flex-wrap: wrap;
+}
+
+.reg-platform-btn {
+  position: relative;
+  width: clamp(100px, 10vw, 134px);
+  height: clamp(100px, 10vw, 134px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.reg-platform-btn:hover {
+  transform: translateY(-6px) scale(1.08);
+  filter: brightness(1.25) drop-shadow(0 0 25px rgba(217, 183, 76, 0.6));
+}
+
+.reg-platform-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+@media (max-width: 1200px) {
+  .reg-explore-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .reg-explore-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reg-form-main-grid {
+    flex-direction: column;
+  }
+
+  .reg-form-left-col,
+  .reg-form-right-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .reg-title-big {
+    font-size: 36px;
+  }
+
+  .reg-title-sub {
+    font-size: 22px;
+  }
+}
