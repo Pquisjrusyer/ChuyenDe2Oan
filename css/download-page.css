@@ -203,6 +203,35 @@
   object-fit: cover;
 }
 
+.btn-dl-metal-crimson .btn-metal-vector-top {
+  position: absolute;
+  top: 8px;
+  left: 11px;
+  width: 245.7px;
+  height: 6.5px;
+  z-index: 4;
+  pointer-events: none;
+  transform: rotate(180deg) scaleY(-1);
+}
+
+.btn-dl-metal-crimson .btn-metal-vector-top img,
+.btn-dl-metal-crimson .btn-metal-vector-bottom img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-dl-metal-crimson .btn-metal-vector-bottom {
+  position: absolute;
+  bottom: 8px;
+  right: 11px;
+  width: 245.7px;
+  height: 6.5px;
+  z-index: 4;
+  pointer-events: none;
+}
+
 .btn-dl-metal-crimson .btn-metal-inner-frame {
   border: 4px solid #832714;
   background: linear-gradient(180deg, #370b06 0%, #210403 100%);
@@ -326,6 +355,19 @@
   object-fit: fill;
 }
 
+.dl-strip-blur-shadow {
+  position: absolute;
+  top: -39px;
+  left: 132px;
+  width: 904px;
+  height: 445px;
+  background: #000000;
+  filter: blur(126.7px);
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .dl-strip-tiles-flex {
   position: relative;
   z-index: 2;
@@ -339,12 +381,22 @@
 }
 
 .dl-strip-tile {
+  background: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 4px;
   flex: 1 1 0;
+  padding: 0;
+  transition: transform 0.25s ease, filter 0.25s;
+}
+
+.dl-strip-tile:hover {
+  transform: translateY(-4px) scale(1.03);
+  filter: brightness(1.2) drop-shadow(0 0 15px rgba(217, 183, 76, 0.4));
 }
 
 .dl-tile-icon-box {
@@ -433,6 +485,12 @@
   position: relative;
   width: 100%;
   height: 100%;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dl-polaroid-haunted-frame:hover {
+  transform: scale(1.03) rotate(-1deg);
 }
 
 .dl-polaroid-under-paper {
@@ -465,6 +523,43 @@
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.95));
+}
+
+.dl-polaroid-tape-seal {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 317px;
+  height: 110px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.dl-polaroid-tape-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Secret Document / Envelope (1195:78572) */
+.dl-hero-secret-dossier {
+  position: absolute;
+  bottom: 20px;
+  right: 60px;
+  width: 437px;
+  max-width: 30vw;
+  height: 279px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+  transform: rotate(-4deg);
+}
+
+.dl-hero-secret-dossier img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 @media (max-width: 1200px) {
