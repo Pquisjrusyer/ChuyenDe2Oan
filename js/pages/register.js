@@ -321,7 +321,7 @@ export async function renderRegister(container) {
 
   function startCarousel() {
     stopCarousel();
-    carouselTimer = setInterval(nextSlide, 4000);
+    carouselTimer = setInterval(nextSlide, 3000);
   }
 
   function stopCarousel() {
