@@ -208,116 +208,31 @@
   display: block;
 }
 
-/* Button 2: CẤU HÌNH HỆ THỐNG (1195:78480 / 1191:80340) */
-.btn-dl-metal-stone {
+/* Button 2: CẤU HÌNH HỆ THỐNG SVG (1195:78480 / 1191:80340) */
+.btn-dl-cauhinh-svg {
   position: relative;
-  width: clamp(450px, 44vw, 713px);
-  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(450px, 44vw, 717px);
+  aspect-ratio: 717 / 152;
   height: clamp(80px, 8.5vh, 118px);
-  aspect-ratio: 713 / 154;
-  border: 2px solid #616161;
-  box-sizing: border-box;
-  padding: 6px 8px;
-  display: flex;
-  flex-direction: column;
   cursor: pointer;
   text-decoration: none;
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
   overflow: visible;
 }
 
-.btn-dl-metal-stone:hover {
+.btn-dl-cauhinh-svg:hover {
   transform: translateY(-3px) scale(1.02);
-  filter: brightness(1.15) drop-shadow(0 0 25px rgba(217, 183, 76, 0.4));
+  filter: brightness(1.15) drop-shadow(0 0 25px rgba(217, 183, 76, 0.5));
 }
 
-/* Background Lighten Texture (1191:80232) */
-.btn-dl-metal-stone .btn-metal-stone-bg {
-  position: absolute;
-  inset: -15px;
-  mix-blend-mode: lighten;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.btn-dl-metal-stone .btn-metal-stone-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Inner Frame (1191:80233) */
-.btn-dl-metal-stone .btn-metal-stone-frame {
-  position: relative;
-  z-index: 2;
-  border: 4px solid #747474;
-  padding: 4px;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* Inner Gradient Box (1191:80234) */
-.btn-metal-stone-gradient-box {
-  position: relative;
-  background: linear-gradient(180deg, #595959 0%, #3a3a3a 100%);
-  border: 1px solid #707070;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-/* Center Content (1191:80235) */
-.btn-metal-stone-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: clamp(10px, 1.4vw, 18px);
-}
-
-.btn-dl-metal-stone .btn-metal-stone-label {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2vw, 32px);
-  font-weight: 700;
-  color: #990000;
-  letter-spacing: 0.5px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-  white-space: nowrap;
-  transition: color 0.25s ease;
-}
-
-.btn-metal-stone-arrow {
-  width: clamp(26px, 2.6vw, 40px);
-  height: clamp(26px, 2.6vw, 40px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateX(-8px);
-  transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btn-metal-stone-arrow img {
+.btn-dl-cauhinh-svg img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-
-.btn-dl-metal-stone:hover .btn-metal-stone-label {
-  color: #d9b74c;
-}
-
-.btn-dl-metal-stone:hover .btn-metal-stone-arrow {
-  opacity: 1;
-  transform: translateX(0);
+  display: block;
 }
 
 /* Bottom 4 Feature Tiles Strip Wrap (1195:78481 & 1195:78572) */

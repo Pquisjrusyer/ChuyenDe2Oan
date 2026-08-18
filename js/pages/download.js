@@ -55,41 +55,9 @@ export async function renderDownload(container) {
                   <img src="./assets/tai_ngay_btn.svg" alt="TẢI NGAY" class="btn-tai-ngay-img" />
                 </a>
 
-                <!-- Button 2: CẤU HÌNH HỆ THỐNG (1195:78480 / 1191:80340) -->
-                <a href="#dl-specs-section" class="btn-dl-metal-stone" data-node-id="1191:80340">
-                  <!-- Background Lighten Texture (1191:80232) -->
-                  <div class="btn-metal-stone-bg" data-node-id="1191:80232">
-                    <img src="./assets/9d2c1d4893b4588362b331a915cdf59b07e9c40a.png" alt="" />
-                  </div>
-
-                  <!-- Inner Frame (1191:80233 & 1191:80234) -->
-                  <div class="btn-metal-stone-frame" data-node-id="1191:80233">
-                    <div class="btn-metal-stone-gradient-box" data-node-id="1191:80234">
-                      <!-- Texture Overlay (1191:80245) -->
-                      <div class="btn-metal-overlay-tex">
-                        <img src="./assets/faa5318b0c96bbbc58ac7c92fbed4e6131a85f11.png" alt="" />
-                      </div>
-
-                      <!-- 4 Ornate Metal Corner Brackets (1191:80246 to 80258) -->
-                      <div class="btn-bracket corner-tl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
-                      <div class="btn-bracket corner-bl"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
-                      <div class="btn-bracket corner-tr"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
-                      <div class="btn-bracket corner-br"><img src="./assets/6708c3ababfa699494fe07311f2e92a329315f00.svg" alt="" /></div>
-
-                      <!-- Center Content (1191:80235) -->
-                      <div class="btn-metal-stone-content" data-node-id="1191:80235">
-                        <span class="btn-metal-stone-label" data-node-id="1191:80244">CẤU HÌNH HỆ THỐNG</span>
-                        <div class="btn-metal-stone-arrow" data-node-id="1191:80336">
-                          <img src="./assets/192cf9259df8b701f862b816fdd2ee84ebd7111a.svg" alt="" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Hard Light Overlay (1191:80262) -->
-                  <div class="btn-metal-texture-hardlight" data-node-id="1191:80262">
-                    <img src="./assets/f010562a6a64f04aa83734d2abbffe57b1cd728c.png" alt="" />
-                  </div>
+                <!-- Button 2: CẤU HÌNH HỆ THỐNG (1195:78480 / 1191:80340) using exact SVG -->
+                <a href="#dl-specs-section" class="btn-dl-cauhinh-svg" data-node-id="1191:80340">
+                  <img src="./assets/cau_hinh_btn.svg" alt="CẤU HÌNH HỆ THỐNG" class="btn-cauhinh-img" />
                 </a>
               </div>
 
