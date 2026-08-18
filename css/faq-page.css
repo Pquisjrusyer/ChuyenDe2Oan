@@ -875,7 +875,7 @@
   position: absolute;
   top: -180%;
   left: -8%;
-  width: 192%;
+  width: 100%;
   height: 489%;
   mix-blend-mode: multiply;
   opacity: 0.5;
@@ -1057,29 +1057,31 @@
 .faq-ready-section {
   position: relative;
   width: 100%;
-  background: #030000;
-  padding: 100px clamp(20px, 5vw, 100px) 120px;
+  background: #000000;
+  padding: 177px clamp(20px, 6vw, 379px) 160px;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 100px;
 }
 
-/* Character pointing on the left flank */
+/* Character pointing on the left flank (1058:78283) */
 .faq-ready-char-flank {
   position: absolute;
-  bottom: 0;
-  left: clamp(10px, 4vw, 80px);
-  width: clamp(240px, 22vw, 360px);
-  z-index: 3;
+  top: 182px;
+  left: -34px;
+  width: clamp(450px, 45vw, 676px);
+  height: 1014px;
+  max-height: 1014px;
+  z-index: 2;
   pointer-events: none;
 }
 
 .faq-ready-char-flank img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.95));
 }
@@ -1087,14 +1089,14 @@
 /* Giant Red OAN Calligraphy Watermark on the right flank (1058:78285) */
 .faq-ready-watermark {
   position: absolute;
-  top: 50%;
-  right: clamp(10px, 5vw, 100px);
-  transform: translateY(-50%);
-  width: clamp(300px, 28vw, 440px);
-  height: clamp(350px, 32vw, 520px);
+  top: 295px;
+  right: -40px;
+  width: 569px;
+  height: 661px;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.88;
+  mix-blend-mode: difference;
+  opacity: 0.1;
 }
 
 .faq-ready-watermark .oan-vector-1 {
@@ -1118,29 +1120,31 @@
   width: 100%;
   height: 100%;
   object-fit: fill;
-  filter: drop-shadow(0 0 25px rgba(220, 20, 20, 0.65));
 }
 
-/* Central Ready Container */
+/* Central Ready Container (1058:77660) */
 .faq-ready-core {
   position: relative;
   z-index: 5;
-  max-width: 900px;
+  max-width: 1161px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 32px;
+  gap: 48px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .faq-ready-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(26px, 3.8vw, 44px);
+  font-size: clamp(28px, 4vw, 48px);
   font-weight: 700;
   color: #ffffff;
   letter-spacing: 0.96px;
   margin: 0;
   text-align: center;
+  line-height: 56px;
 }
 
 .faq-ready-buttons-row {
@@ -1153,65 +1157,161 @@
 
 .faq-ready-sysreq {
   font-family: 'Roboto', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: #c4c7c8;
   letter-spacing: -0.32px;
   margin: 0;
+  text-transform: uppercase;
 }
 
-/* Support Box Underneath (1058:77749) */
+/* Support Box Underneath (1058:77749 / 1058:77751) */
 .faq-support-bottom-box {
   position: relative;
   z-index: 5;
-  width: 100%;
-  max-width: 580px;
-  background: radial-gradient(circle at center, rgba(30, 4, 4, 0.8) 0%, rgba(10, 1, 1, 0.95) 100%);
-  border: 1px solid rgba(156, 126, 33, 0.4);
-  border-radius: 4px;
-  padding: 36px 24px;
+  width: 601px;
+  max-width: 100%;
+  height: 320px;
+  padding: 40px 18px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  gap: 27px;
+  background: transparent;
+  border: none;
+  opacity: 0.9;
+}
+
+/* Horror Frame 1 around Support Box (1058:77726) */
+.faq-support-box-frame {
+  position: absolute;
+  inset: 0 0 -3px 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.faq-support-box-frame .support-frame-left {
+  position: absolute;
+  top: 4.05%;
+  bottom: 4.05%;
+  left: 0;
+  width: 34.86%;
+}
+
+.faq-support-box-frame .support-frame-right {
+  position: absolute;
+  top: 4.05%;
+  bottom: 4.05%;
+  right: 0;
+  width: 34.86%;
+  transform: scaleX(-1);
+}
+
+.faq-support-box-frame .support-frame-left img,
+.faq-support-box-frame .support-frame-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
 }
 
 .faq-support-bottom-tag {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
   color: #c4c7c8;
-  letter-spacing: 3.5px;
+  letter-spacing: 4.8px;
   text-transform: uppercase;
   margin: 0;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .btn-faq-bottom-contact {
   position: relative;
-  width: clamp(240px, 80%, 335px);
-  height: 58px;
-  background: #161a1a;
-  border: 1.5px solid #9c7e21;
-  border-radius: 2px;
-  display: flex;
+  width: 335px;
+  max-width: 100%;
+  height: 91px;
+  padding: 12px 17px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s;
+  z-index: 2;
 }
 
 .btn-faq-bottom-contact:hover {
   transform: translateY(-3px) scale(1.02);
-  border-color: #ffd700;
-  background: #240a0a;
-  box-shadow: 0 0 20px rgba(217, 183, 76, 0.5), 0 0 25px rgba(180, 0, 0, 0.4);
+  filter: brightness(1.15) drop-shadow(0 0 15px rgba(217, 183, 76, 0.6));
+}
+
+.btn-faq-bottom-contact .horror-frame-corners {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 91px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.btn-faq-bottom-contact .corner-horn-left {
+  position: absolute;
+  top: 4.05%;
+  bottom: 4.05%;
+  left: 0;
+  width: 34.86%;
+}
+
+.btn-faq-bottom-contact .corner-horn-right {
+  position: absolute;
+  top: 4.05%;
+  bottom: 4.05%;
+  right: 0;
+  width: 34.86%;
+  transform: scaleX(-1);
+}
+
+.btn-faq-bottom-contact .corner-horn-left img,
+.btn-faq-bottom-contact .corner-horn-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-faq-bottom-contact .horror-btn-body {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: #161a1a;
+  border: 2px solid #9c7e21;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  overflow: hidden;
 }
 
 .btn-faq-bottom-contact .horror-btn-text {
-  font-size: 18px;
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ========================================================

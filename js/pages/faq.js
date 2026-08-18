@@ -403,25 +403,33 @@ export async function renderFaq(container) {
           </h2>
 
           <div class="faq-ready-buttons-row">
-            <!-- CHƠI NGAY -->
-            <a href="#login" class="figma-btn-horror-frame" data-node-id="1058:77664">
+            <!-- CHƠI NGAY (1058:77664) -->
+            <a href="#login" class="btn-faq-small-horror" data-node-id="1058:77664">
               <div class="horror-frame-corners">
-                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+                <div class="corner-horn corner-horn-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="corner-horn corner-horn-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
               </div>
-              <div class="horror-frame-body">
-                <span class="horror-btn-text">CHƠI NGAY</span>
+              <div class="horror-btn-body">
+                <span class="horror-btn-text" data-node-id="I1058:77664;708:606">CHƠI NGAY</span>
               </div>
             </a>
 
-            <!-- TẢI NGAY -->
-            <a href="#download" class="figma-btn-horror-frame" data-node-id="1058:77665">
+            <!-- TẢI NGAY (1058:77665) -->
+            <a href="#download" class="btn-faq-small-horror" data-node-id="1058:77665">
               <div class="horror-frame-corners">
-                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+                <div class="corner-horn corner-horn-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="corner-horn corner-horn-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
               </div>
-              <div class="horror-frame-body">
-                <span class="horror-btn-text">TẢI NGAY</span>
+              <div class="horror-btn-body">
+                <span class="horror-btn-text" data-node-id="I1058:77665;708:606">TẢI NGAY</span>
               </div>
             </a>
           </div>
@@ -431,16 +439,33 @@ export async function renderFaq(container) {
           </p>
         </div>
 
-        <!-- Support Box Below (1058:77749) -->
+        <!-- Support Box Below (1058:77749 / 1058:77751) -->
         <div class="faq-support-bottom-box trailer-scroll-reveal trailer-reveal-fade-up delay-200" data-node-id="1058:77749">
-          <p class="faq-support-bottom-tag">TÔI CHƯA TÌM THẤY CÂU TRẢ LỜI.</p>
-          <a href="#faq" class="btn-faq-bottom-contact" onclick="alert('Đội ngũ CSKH OÁN luôn sẵn sàng hỗ trợ 24/7 qua email support@oan-game.vn.');">
-            <div class="horror-frame-corners">
-              <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-              <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+          <!-- Horror Frame 1 around Support Box (1058:77726) -->
+          <div class="faq-support-box-frame" data-node-id="1058:77726">
+            <div class="support-frame-left">
+              <img src="./assets/57b0bf322aa2948f965f666152adf35b2ac6baad.svg" alt="" />
             </div>
-            <span class="horror-btn-text">LIÊN HỆ HỖ TRỢ</span>
-          </a>
+            <div class="support-frame-right">
+              <img src="./assets/8b5546e740a3ef3af9459d8cf1cd40e775958d8f.svg" alt="" />
+            </div>
+          </div>
+
+          <p class="faq-support-bottom-tag" data-node-id="1058:77704">TÔI CHƯA TÌM THẤY CÂU TRẢ LỜI.</p>
+          
+          <button type="button" class="btn-faq-bottom-contact" data-node-id="1058:77708" onclick="alert('Đội ngũ CSKH OÁN luôn sẵn sàng hỗ trợ 24/7 qua email support@oan-game.vn.');">
+            <div class="horror-frame-corners">
+              <div class="corner-horn corner-horn-left">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+              </div>
+              <div class="corner-horn corner-horn-right">
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+              </div>
+            </div>
+            <div class="horror-btn-body">
+              <span class="horror-btn-text" data-node-id="I1058:77708;708:606">LIÊN HỆ HỖ TRỢ</span>
+            </div>
+          </button>
         </div>
 
       </section>
