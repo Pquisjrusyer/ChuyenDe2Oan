@@ -780,7 +780,7 @@
 /* 3 Platform Cards Row (1218:78516) */
 .dl-stores-cards-row {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
   gap: clamp(20px, 3.5vw, 60px);
   max-width: 1440px;
@@ -794,43 +794,71 @@
   align-items: center;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   flex: 0 1 auto;
 }
 
 .dl-platform-card-unit:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-10px) scale(1.02);
 }
 
-/* Base Card Box with Dark Gradient & Difference Texture */
+/* Base Card Box with Outer Frame dimensions */
 .dl-platform-card-box {
   position: relative;
-  background: linear-gradient(180deg, #110000 0%, #1b0000 100%);
-  overflow: hidden;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.dl-platform-card-unit:hover .dl-platform-card-box {
-  box-shadow: 0 0 35px rgba(217, 183, 76, 0.4), 0 25px 50px rgba(0, 0, 0, 0.98);
+  overflow: visible;
+  transition: box-shadow 0.35s ease;
 }
 
 .card-box-win {
-  width: clamp(260px, 24vw, 390px);
-  height: clamp(380px, 35vw, 570px);
+  width: clamp(270px, 26vw, 420px);
+  aspect-ratio: 521 / 712;
 }
 
 .card-box-steam {
-  width: clamp(260px, 24vw, 390px);
-  height: clamp(380px, 35vw, 570px);
+  width: clamp(245px, 23.5vw, 380px);
+  aspect-ratio: 470 / 680;
 }
 
 .card-box-epic {
-  width: clamp(260px, 24vw, 390px);
-  height: clamp(380px, 35vw, 570px);
+  width: clamp(260px, 24.8vw, 400px);
+  aspect-ratio: 497 / 680;
 }
 
-/* Background Grunge Texture (1218:78427 / 78462 / 78463) */
+/* Inner Content Box with Dark Gradient & Exact Figma Insets (1218:78424 / 78418 / 78421) */
+.dl-platform-inner-wrap {
+  position: absolute;
+  background: linear-gradient(180deg, #110000 0%, #1b0000 100%);
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.95);
+  transition: box-shadow 0.35s ease;
+}
+
+.dl-platform-card-unit:hover .dl-platform-inner-wrap {
+  box-shadow: 0 0 40px rgba(217, 183, 76, 0.45), 0 25px 50px rgba(0, 0, 0, 0.98);
+}
+
+.wrap-win {
+  left: 11.71%;
+  top: 9.13%;
+  width: 83.11%;
+  height: 88.62%;
+}
+
+.wrap-steam {
+  left: 4.04%;
+  top: 3.09%;
+  width: 92.98%;
+  height: 93.24%;
+}
+
+.wrap-epic {
+  left: 6.44%;
+  top: 3.97%;
+  width: 84.1%;
+  height: 92.94%;
+}
+
+/* Background Grunge Texture with 90deg rotation & difference blend (1218:78427 / 78462 / 78463) */
 .dl-platform-diff-bg {
   position: absolute;
   inset: 0;
@@ -845,62 +873,139 @@
 
 .dl-platform-diff-bg img {
   position: absolute;
-  width: 150%;
-  height: 150%;
+  width: 140%;
+  height: 140%;
   transform: rotate(90deg);
   object-fit: cover;
   pointer-events: none;
 }
 
-/* Center Stone Carved Icon (1218:78435 / 78437 / 78438) */
+/* Stone Carved Icons - Default State (1218:78435 / 78437 / 78438) */
 .dl-platform-stone-icon {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 65%;
-  height: 52%;
   overflow: hidden;
   z-index: 2;
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
 }
 
-.dl-platform-stone-icon img {
-  position: absolute;
-  max-width: none;
-  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
-  pointer-events: none;
+.default-stone-icon {
+  opacity: 1;
+}
+
+.hover-stone-icon {
+  opacity: 0;
+}
+
+.dl-platform-card-unit:hover .default-stone-icon {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.dl-platform-card-unit:hover .hover-stone-icon {
+  opacity: 1;
+  transform: scale(1.03);
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.85));
+}
+
+/* Win Icon Positions */
+.icon-win {
+  left: 24.71%;
+  top: 22.19%;
+  width: 57.27%;
+  height: 51.03%;
 }
 
 .icon-win img {
+  position: absolute;
   width: 332.47%;
   height: 170.1%;
   left: -11.26%;
   top: -31.23%;
+  max-width: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+}
+
+.icon-win-glow {
+  left: 19.51%;
+  top: 17.43%;
+  width: 67.67%;
+  height: 60.54%;
+}
+
+.icon-win-glow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Steam Icon Positions */
+.icon-steam {
+  left: 27.23%;
+  top: 22.08%;
+  width: 62.24%;
+  height: 50.79%;
 }
 
 .icon-steam img {
+  position: absolute;
   width: 301.18%;
   height: 170.1%;
   left: -100.56%;
   top: -31.23%;
+  max-width: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+}
+
+.icon-steam-glow {
+  left: 21.17%;
+  top: 17.35%;
+  width: 74.37%;
+  height: 60.25%;
+}
+
+.icon-steam-glow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Epic Icon Positions */
+.icon-epic {
+  left: 25.36%;
+  top: 22.15%;
+  width: 58.37%;
+  height: 50.95%;
 }
 
 .icon-epic img {
+  position: absolute;
   width: 336.84%;
   height: 170.1%;
   left: -227.59%;
   top: -31.23%;
+  max-width: none;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.95));
+}
+
+.icon-epic-glow {
+  left: 19.86%;
+  top: 17.41%;
+  width: 69.38%;
+  height: 60.44%;
+}
+
+.icon-epic-glow img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* Weathered Card Frame Overlay (1218:78425 / 78419 / 78422) */
 .dl-platform-frame-overlay {
   position: absolute;
   inset: 0;
-  z-index: 3;
+  z-index: 5;
   pointer-events: none;
 }
 
