@@ -9,72 +9,154 @@ export async function renderDownload(container) {
     <div class="figma-download-page" data-node-id="1170:80024">
       
       <!-- ========================================================
-           1. HERO SECTION (1170:80024)
+           1. HERO SECTION (1170:80129)
            ======================================================== -->
-      <section class="dl-hero-section">
-        <div class="dl-hero-content-wrapper">
+      <section class="dl-hero-section" data-node-id="1170:80129">
+        <!-- Background Grunge 78042 (1195:78612) -->
+        <div class="dl-hero-bg-grunge" data-node-id="1195:78612">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+        <!-- 3 Vignettes (Left, Right, Bottom) -->
+        <div class="dl-hero-vignette-left" data-node-id="1195:78614"></div>
+        <div class="dl-hero-vignette-right" data-node-id="1195:78613"></div>
+        <div class="dl-hero-vignette-bottom" data-node-id="1195:78618"></div>
+
+        <div class="dl-hero-main-container">
           
-          <!-- Left Column -->
-          <div class="dl-hero-left">
-            <h1 class="dl-hero-title trailer-scroll-reveal trailer-reveal-fade-up">
-              TẢI OÁN
-            </h1>
+          <!-- Left Column (1195:78465) -->
+          <div class="dl-hero-col-left" data-node-id="1195:78465">
+            
+            <!-- Title & CTA Top (1195:78466) -->
+            <div class="dl-hero-top-block" data-node-id="1195:78466">
+              
+              <!-- Giant Stone Cut Header: TẢI OÁN (1195:78467) -->
+              <div class="dl-hero-stone-title" data-node-id="1195:78467">
+                <div class="stone-part-tai">
+                  <img src="./assets/f40e310091f944c3bc33beca5b22539c57cc2e86.svg" alt="TẢI" />
+                </div>
+                <div class="stone-part-oan">
+                  <img src="./assets/535d2e1003d5e932c4e62d0ec790fce5f9859145.svg" alt="OÁN" />
+                </div>
+              </div>
 
-            <p class="dl-hero-desc trailer-scroll-reveal trailer-reveal-fade-up delay-150">
-              Bóng tối không chỉ là nơi sự thật bị chôn vùi. Hãy cầm đèn pin, ghi lại dấu vết và khám phá bí ẩn trong <strong>Ngôi Nhà Hứa</strong>.
-            </p>
+              <!-- Quote / Description with Red Left Border (1195:78476) -->
+              <div class="dl-hero-quote-box" data-node-id="1195:78476">
+                <p class="dl-hero-quote-text" data-node-id="1195:78477">
+                  Bóng tối không chỉ là nơi sự thật bị chôn vùi.<br />
+                  Hãy cầm đèn pin, ghi lại dấu vết và khám phá bí ẩn trong <span class="text-crimson-hua">Ngôi Nhà Hứa.</span>
+                </p>
+              </div>
 
-            <!-- 2 Hero CTA Buttons -->
-            <div class="dl-hero-actions-row trailer-scroll-reveal trailer-reveal-fade-up delay-250">
-              <!-- Button 1: TẢI NGAY -->
-              <a href="#download-stores" class="btn-dl-primary" id="btnDlPrimary">
-                <img src="./assets/f40e310091f944c3bc33beca5b22539c57cc2e86.svg" alt="" class="btn-dl-primary-icon" />
-                <span class="btn-dl-primary-text">TẢI NGAY</span>
-              </a>
+              <!-- 2 Action Buttons (1195:78478) -->
+              <div class="dl-hero-actions-row" data-node-id="1195:78478">
+                <!-- Button 1: TẢI NGAY (1191:80344) -->
+                <a href="#download-stores" class="btn-dl-metal-crimson" data-node-id="1191:80344">
+                  <div class="btn-metal-texture-bg">
+                    <img src="./assets/5caa891f8a3fbb082b8f6ca116e8eeb5002cfede.png" alt="" />
+                  </div>
+                  <div class="btn-metal-inner-frame">
+                    <div class="btn-metal-content">
+                      <div class="btn-metal-icon">
+                        <img src="./assets/71f4010765d55b89e2f0095263de34cb57a0180b.svg" alt="" />
+                      </div>
+                      <span class="btn-metal-label">TẢI NGAY</span>
+                    </div>
+                  </div>
+                </a>
 
-              <!-- Button 2: CẤU HÌNH HỆ THỐNG -->
-              <a href="#dl-specs-section" class="btn-dl-specs" id="btnDlSpecs">
-                <span class="btn-dl-specs-text">CẤU HÌNH HỆ THỐNG</span>
-              </a>
+                <!-- Button 2: CẤU HÌNH HỆ THỐNG (1191:80340) -->
+                <a href="#dl-specs-section" class="btn-dl-metal-stone" data-node-id="1191:80340">
+                  <div class="btn-metal-stone-bg">
+                    <img src="./assets/9d2c1d4893b4588362b331a915cdf59b07e9c40a.png" alt="" />
+                  </div>
+                  <div class="btn-metal-stone-frame">
+                    <div class="btn-metal-stone-content">
+                      <span class="btn-metal-stone-label">CẤU HÌNH HỆ THỐNG</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
             </div>
 
-            <!-- 4 Step Tiles Grid -->
-            <div class="dl-hero-tiles-grid trailer-scroll-reveal trailer-reveal-fade-up delay-350">
-              <!-- Tile 1: GHI LẠI -->
-              <div class="dl-hero-tile">
-                <img src="./assets/c4c37be083bde9786d096c773d05f1c7ab10b771.png" alt="Ghi lại" class="dl-hero-tile-thumb" />
-                <h4 class="dl-hero-tile-title">GHI LẠI</h4>
-                <p class="dl-hero-tile-sub">Mọi dấu vết</p>
+            <!-- Bottom 4 Feature Tiles Strip (1195:78481) -->
+            <div class="dl-hero-bottom-strip" data-node-id="1195:78481">
+              <!-- Panel Background (1195:78483) -->
+              <div class="dl-strip-bg-panel" data-node-id="1195:78483">
+                <img src="./assets/67aec6f569e9c46b6c54699002eed1e0eed782fb.png" alt="" />
               </div>
 
-              <!-- Tile 2: PHÂN TÍCH -->
-              <div class="dl-hero-tile">
-                <img src="./assets/faa5318b0c96bbbc58ac7c92fbed4e6131a85f11.png" alt="Phân tích" class="dl-hero-tile-thumb" />
-                <h4 class="dl-hero-tile-title">PHÂN TÍCH</h4>
-                <p class="dl-hero-tile-sub">Lời thì thầm</p>
-              </div>
+              <!-- 4 Tiles Container (1195:78485) -->
+              <div class="dl-strip-tiles-flex" data-node-id="1195:78485">
+                
+                <!-- Tile 1: GHI LẠI (1195:1711) -->
+                <div class="dl-strip-tile" data-node-id="1195:1711">
+                  <div class="dl-tile-icon-box">
+                    <div class="dl-tile-icon-crop icon-crop-1">
+                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Ghi lại" />
+                    </div>
+                  </div>
+                  <div class="dl-tile-text-col">
+                    <h3 class="dl-tile-title">GHI LẠI</h3>
+                    <p class="dl-tile-sub">Mọi dấu vết</p>
+                  </div>
+                </div>
 
-              <!-- Tile 3: KHÁM PHÁ -->
-              <div class="dl-hero-tile">
-                <img src="./assets/f0bd77fc2b99127f1c30b1e9a618569a04ed519f.png" alt="Khám phá" class="dl-hero-tile-thumb" />
-                <h4 class="dl-hero-tile-title">KHÁM PHÁ</h4>
-                <p class="dl-hero-tile-sub">Ngôi nhà ma</p>
-              </div>
+                <!-- Tile 2: PHÂN TÍCH (1195:78487) -->
+                <div class="dl-strip-tile" data-node-id="1195:78487">
+                  <div class="dl-tile-icon-box">
+                    <div class="dl-tile-icon-crop icon-crop-2">
+                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Phân tích" />
+                    </div>
+                  </div>
+                  <div class="dl-tile-text-col">
+                    <h3 class="dl-tile-title">PHÂN TÍCH</h3>
+                    <p class="dl-tile-sub">Lời thì thầm</p>
+                  </div>
+                </div>
 
-              <!-- Tile 4: ĐỐI MẶT -->
-              <div class="dl-hero-tile">
-                <img src="./assets/f010562a6a64f04aa83734d2abbffe57b1cd728c.png" alt="Đối mặt" class="dl-hero-tile-thumb" />
-                <h4 class="dl-hero-tile-title">ĐỐI MẶT</h4>
-                <p class="dl-hero-tile-sub">Sự thật</p>
+                <!-- Tile 3: KHÁM PHÁ (1195:78488) -->
+                <div class="dl-strip-tile" data-node-id="1195:78488">
+                  <div class="dl-tile-icon-box">
+                    <div class="dl-tile-icon-crop icon-crop-3">
+                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Khám phá" />
+                    </div>
+                  </div>
+                  <div class="dl-tile-text-col">
+                    <h3 class="dl-tile-title">KHÁM PHÁ</h3>
+                    <p class="dl-tile-sub">Ngôi Nhà Hứa</p>
+                  </div>
+                </div>
+
+                <!-- Tile 4: ĐỐI MẶT (1195:78489) -->
+                <div class="dl-strip-tile" data-node-id="1195:78489">
+                  <div class="dl-tile-icon-box">
+                    <div class="dl-tile-icon-crop icon-crop-4">
+                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Đối mặt" />
+                    </div>
+                  </div>
+                  <div class="dl-tile-text-col">
+                    <h3 class="dl-tile-title">ĐỐI MẶT</h3>
+                    <p class="dl-tile-sub">Sự thật</p>
+                  </div>
+                </div>
+
               </div>
             </div>
 
           </div>
 
-          <!-- Right Column: Spooky Hallway Polaroid Frame -->
-          <div class="dl-hero-right-polaroid trailer-scroll-reveal trailer-reveal-scale delay-200">
-            <div class="dl-polaroid-frame">
-              <img src="./assets/9d2c1d4893b4588362b331a915cdf59b07e9c40a.png" alt="Hành lang Nhà Hứa" class="dl-polaroid-img" />
+          <!-- Right Column: Haunted Polaroid Frame (1195:78583) -->
+          <div class="dl-hero-col-right" data-node-id="1195:78583">
+            <div class="dl-polaroid-haunted-frame">
+              <!-- Underneath tape / blood paper (1195:78578) -->
+              <div class="dl-polaroid-under-paper" data-node-id="1195:78578">
+                <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="" />
+              </div>
+              <!-- Main photo frame (1195:78577) -->
+              <div class="dl-polaroid-photo-main" data-node-id="1195:78577">
+                <img src="./assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png" alt="Hành lang Nhà Hứa" />
+              </div>
             </div>
           </div>
 
