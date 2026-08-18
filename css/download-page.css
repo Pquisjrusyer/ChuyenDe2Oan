@@ -164,21 +164,15 @@
   text-shadow: 0 0 10px rgba(153, 0, 0, 0.5);
 }
 
-/* 2 Action Buttons (1195:78478) */
+/* 2 Action Buttons (1195:78478) - Strictly Single Row Horizontal Alignment */
 .dl-hero-actions-row {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: clamp(14px, 1.6vw, 24px);
-  flex-wrap: wrap;
-}
-
-/* 2 Action Buttons (1191:80345 & 1191:80341) */
-.dl-hero-actions-row {
-  display: flex;
-  align-items: center;
-  gap: clamp(14px, 1.8vw, 24px);
-  flex-wrap: wrap;
+  gap: clamp(12px, 1.5vw, 24px);
+  flex-wrap: nowrap;
   padding: 4px 0;
+  width: 100%;
 }
 
 /* Button 1: TẢI NGAY SVG (1195:78479 / 1191:80344) */
@@ -187,9 +181,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(260px, 24vw, 388px);
+  height: clamp(54px, 5.8vw, 84px);
   aspect-ratio: 388 / 152;
-  height: clamp(80px, 8.5vh, 118px);
+  width: auto;
+  flex-shrink: 0;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
@@ -202,7 +197,7 @@
 }
 
 .btn-dl-tai-ngay-svg img {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: contain;
   display: block;
@@ -214,9 +209,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(450px, 44vw, 717px);
+  height: clamp(54px, 5.8vw, 84px);
   aspect-ratio: 717 / 152;
-  height: clamp(80px, 8.5vh, 118px);
+  width: auto;
+  flex-shrink: 0;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
@@ -229,7 +225,7 @@
 }
 
 .btn-dl-cauhinh-svg img {
-  width: 100%;
+  width: auto;
   height: 100%;
   object-fit: contain;
   display: block;
