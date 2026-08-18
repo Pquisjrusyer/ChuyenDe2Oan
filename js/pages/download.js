@@ -155,27 +155,44 @@ export async function renderDownload(container) {
 
           </div>
 
-          <!-- Right Column: Haunted Polaroid Frame (1195:78583 / 1195:78596) -->
-          <div class="dl-hero-col-right" data-node-id="1195:78583">
-            <div class="dl-polaroid-haunted-frame">
-              <!-- Underneath tape / blood paper (1195:78578) -->
+          <!-- Right Column: Haunted Polaroid Frame Prototype (1195:78584 - Default & Variant2) -->
+          <div class="dl-hero-col-right" data-node-id="1195:78584">
+            <button type="button" class="dl-polaroid-haunted-frame" id="dlKhungDiChuyen" data-node-id="1195:78583" aria-label="Khung di chuyển Nhà Hứa">
+              <!-- Top Expanded Seal Banner (Variant 2) (1195:78591) -->
+              <div class="dl-polaroid-expanded-banner" data-node-id="1195:78591">
+                <div class="dl-banner-bg-tape">
+                  <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="" />
+                </div>
+                <span class="dl-banner-text-hua" data-node-id="1195:78593">NHÀ HỨA</span>
+              </div>
+
+              <!-- Underneath tape / blood paper (1195:78578 / 1195:78589) -->
               <div class="dl-polaroid-under-paper" data-node-id="1195:78578">
                 <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="" />
               </div>
-              <!-- Main photo frame (1195:78577) -->
+
+              <!-- Main photo frame (1195:78577 / 1195:78590) -->
               <div class="dl-polaroid-photo-main" data-node-id="1195:78577">
                 <img src="./assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png" alt="Hành lang Nhà Hứa" />
               </div>
-              <!-- Bottom Tape Seal (1195:78581) -->
+
+              <!-- Bottom Tape Seal (Default State) (1195:78581) -->
               <div class="dl-polaroid-tape-seal" data-node-id="1195:78581">
                 <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="" />
               </div>
-            </div>
+
+              <!-- Bottom Curse Text (Variant 2) (1195:78594) -->
+              <div class="dl-polaroid-curse-text" data-node-id="1195:78594">
+                <span>Không có gì là mãi mãi</span>
+              </div>
+            </button>
           </div>
 
-          <!-- Secret Document / Envelope on bottom right (1195:78572) -->
+          <!-- Secret Document / Envelope under strip on bottom right (1195:78572 - image 63) -->
           <div class="dl-hero-secret-dossier" data-node-id="1195:78572">
-            <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="Hồ sơ mật" />
+            <div class="dl-secret-dossier-crop">
+              <img src="./assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png" alt="image 63" />
+            </div>
           </div>
 
         </div>
@@ -404,6 +421,16 @@ export async function renderDownload(container) {
       });
     }
   });
+
+  // Bind Khung Di Chuyen Interactive Prototype (Variant 1 <-> Variant 2)
+  const khungDiChuyen = container.querySelector('#dlKhungDiChuyen');
+  if (khungDiChuyen) {
+    khungDiChuyen.addEventListener('click', () => {
+      khungDiChuyen.classList.toggle('variant-2');
+    });
+    khungDiChuyen.addEventListener('mouseenter', () => khungDiChuyen.classList.add('hovered'));
+    khungDiChuyen.addEventListener('mouseleave', () => khungDiChuyen.classList.remove('hovered'));
+  }
 
   // Scroll Reveal Observer
   const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
