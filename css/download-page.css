@@ -19,14 +19,14 @@
 .dl-hero-section {
   position: relative;
   width: 100%;
-  min-height: calc(100vh - var(--nav-height, 80px));
+  min-height: 100vh;
   background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   box-sizing: border-box;
-  padding: clamp(30px, 4vh, 70px) clamp(20px, 4vw, 80px);
+  padding: clamp(110px, 14vh, 160px) clamp(20px, 4vw, 80px) clamp(60px, 7vh, 100px);
 }
 
 /* Background Grunge Texture 78042 (1195:78612) */
@@ -815,6 +815,7 @@
 }
 
 .card-box-win {
+  width: clamp(270px, 26vw, 420px);
   width: clamp(270px, 26vw, 420px);
   aspect-ratio: 521 / 712;
 }
