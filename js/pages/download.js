@@ -460,17 +460,50 @@ export async function renderDownload(container) {
       </section>
 
       <!-- ========================================================
-           5. FINAL READY CTA SECTION
+           5. FINAL READY CTA SECTION (1218:78984)
            ======================================================== -->
-      <section class="dl-ready-section trailer-scroll-reveal trailer-reveal-scale">
-        <p class="dl-ready-sub">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</p>
-        <h2 class="dl-ready-title">HÃY ĐẾN VỚI NỖI SỢ ĐỂ KHÁM PHÁ</h2>
+      <section class="dl-ready-section trailer-scroll-reveal trailer-reveal-scale" data-node-id="1218:78984">
+        <div class="dl-ready-cta-container" data-node-id="1218:78985">
+          
+          <div class="dl-ready-headings" data-node-id="1218:78986">
+            <p class="dl-ready-sub" data-node-id="1218:78987">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</p>
+            <h2 class="dl-ready-title" data-node-id="1218:78987">HÃY ĐẾN VỚI NỖI SỢ ĐỂ KHÁM PHÁ</h2>
+          </div>
 
-        <a href="#download-stores" class="btn-dl-final-submit" onclick="alert('Đang chuyển hướng tới cổng tải bản cài đặt OÁN...');">
-          <span class="btn-dl-final-text">TẢI XUỐNG</span>
-        </a>
+          <!-- Exact Figma CTA Button (1218:79027 / 906:1550) -->
+          <a href="#download-stores" class="btn-dl-ready-horror" data-node-id="1218:79027">
+            <!-- 5-part metal corner frame background -->
+            <div class="btn-horror-frame-bg" data-node-id="I1218:79027;906:1550">
+              <div class="frame-part part-1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
+              <div class="frame-part part-2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+              <div class="frame-part part-3"><img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" /></div>
+              <div class="frame-part part-4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+              <div class="frame-part part-5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
+            </div>
 
-        <p class="dl-ready-req">YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+</p>
+            <!-- Inner Red Blood Texture Fill -->
+            <div class="btn-horror-inner-body" data-node-id="I1218:79027;906:1556">
+              <div class="btn-horror-gradient-base"></div>
+              <div class="btn-horror-grunge-tex">
+                <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" alt="" />
+              </div>
+              <div class="btn-horror-shadow-overlay"></div>
+            </div>
+
+            <!-- Text -->
+            <span class="btn-horror-text" data-node-id="I1218:79027;906:1557">TẢI XUỐNG</span>
+
+            <!-- Glowing Red Frame Borders -->
+            <div class="btn-horror-border-glow" data-node-id="I1218:79027;906:1558"></div>
+            <div class="btn-horror-border-red" data-node-id="I1218:79027;906:1559"></div>
+            <div class="btn-horror-border-fine" data-node-id="I1218:79027;906:1560"></div>
+          </a>
+
+          <div class="dl-ready-req-box" data-node-id="1218:78991">
+            <p class="dl-ready-req" data-node-id="1218:78992">YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+</p>
+          </div>
+
+        </div>
       </section>
 
     </div>
