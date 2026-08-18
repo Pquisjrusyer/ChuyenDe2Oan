@@ -258,22 +258,50 @@ export async function renderFaq(container) {
            4. VẪN CẦN HỖ TRỢ? SECTION (1048:77420)
            ======================================================== -->
       <section class="faq-still-help-section" data-node-id="1048:77420">
-        <div class="faq-help-top-overlay"></div>
-        <div class="faq-help-bottom-overlay"></div>
-        <div class="faq-still-help-grid">
+        <!-- Center Blood Red Aura Ellipse (1060:75228) -->
+        <div class="faq-help-center-aura" data-node-id="1060:75228">
+          <img src="./assets/c9e0867ae98aca0c125a6c7c4767026a387066fb.svg" alt="" />
+        </div>
+
+        <!-- 4 Dark Overlays (Top 1048:77422, Bottom 1058:77602, Left 1058:77656, Right 1058:77657) -->
+        <div class="faq-help-top-overlay" data-node-id="1048:77422"></div>
+        <div class="faq-help-bottom-overlay" data-node-id="1058:77602"></div>
+        <div class="faq-help-left-overlay" data-node-id="1058:77656"></div>
+        <div class="faq-help-right-overlay" data-node-id="1058:77657"></div>
+
+        <div class="faq-still-help-grid" data-node-id="1058:77525">
           
           <!-- Left Large Block: Trò chuyện với đội ngũ OÁN (1048:77424) -->
           <div class="faq-help-large-card trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1048:77424">
-            <div style="display: flex; flex-direction: column; gap: 16px;">
-              <p class="faq-help-tag">LIÊN HỆ TRỰC TIẾP</p>
-              <h2 class="faq-help-large-title">TRÒ CHUYỆN VỚI ĐỘI NGŨ OÁN</h2>
-              <p class="faq-help-desc">
+            <!-- Background Grunge 78042 (1058:77522) -->
+            <div class="faq-help-card-bg-grunge" data-node-id="1058:77522">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+            </div>
+
+            <div class="faq-help-card-content">
+              <p class="faq-help-tag" data-node-id="1048:77426">LIÊN HỆ TRỰC TIẾP</p>
+              <h2 class="faq-help-large-title" data-node-id="1048:77428">TRÒ CHUYỆN VỚI ĐỘI NGŨ OÁN</h2>
+              <p class="faq-help-desc" data-node-id="1048:77430">
                 Nhận hỗ trợ 1:1 cho các vấn đề liên quan đến thanh toán hoặc khiếu nại tài khoản nghiêm trọng.
               </p>
             </div>
 
-            <button type="button" class="btn-faq-crimson-cta" onclick="alert('Đang kết nối tới kênh hỗ trợ 1:1 của OÁN. Vui lòng gửi email tới: support@oan-game.vn hoặc liên hệ qua Discord.');">
-              <span class="btn-faq-crimson-text">YÊU CẦU HỖ TRỢ</span>
+            <!-- Authentic 5-part Crimson CTA Button (1058:77474) -->
+            <button type="button" class="btn-faq-crimson-cta" data-node-id="1058:77474" onclick="alert('Đang kết nối tới kênh hỗ trợ 1:1 của OÁN. Vui lòng gửi email tới: support@oan-game.vn hoặc liên hệ qua Discord.');">
+              <div class="faq-btn-parts-wrap">
+                <div class="faq-bp1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
+                <div class="faq-bp2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                <div class="faq-bp3"><img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" /></div>
+                <div class="faq-bp4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                <div class="faq-bp5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
+              </div>
+              <div class="faq-btn-inner-rect">
+                <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" alt="" class="faq-btn-inner-texture" />
+              </div>
+              <div class="faq-btn-glow-3"></div>
+              <div class="faq-btn-glow-2"></div>
+              <div class="faq-btn-glow-1"></div>
+              <span class="btn-faq-crimson-text" data-node-id="I1058:77474;906:1557">YÊU CẦU HỖ TRỢ</span>
             </button>
           </div>
 
@@ -282,39 +310,61 @@ export async function renderFaq(container) {
             
             <!-- Block 1: Discord (1048:77437) -->
             <div class="faq-help-small-card" data-node-id="1048:77437">
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="faq-help-tag">DISCORD</p>
-                <h3 class="faq-help-small-title">CỘNG ĐỒNG THỢ SĂN BÓNG ĐÊM</h3>
-                <p class="faq-help-desc">
+              <!-- Background Grunge 78042 (1058:77523) -->
+              <div class="faq-help-card-bg-grunge" data-node-id="1058:77523">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+
+              <div class="faq-help-card-content">
+                <p class="faq-help-tag" data-node-id="1048:77440">DISCORD</p>
+                <h3 class="faq-help-small-title" data-node-id="1048:77442">CỘNG ĐỒNG THỢ SĂN BÓNG ĐÊM</h3>
+                <p class="faq-help-desc" data-node-id="1048:77444">
                   Tham gia cùng hơn 50,000 người chơi khác để trao đổi mẹo vặt và hướng dẫn gameplay.
                 </p>
               </div>
 
-              <a href="#community" class="btn-faq-small-horror">
+              <a href="#community" class="btn-faq-small-horror" data-node-id="1058:77486">
                 <div class="horror-frame-corners">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+                  <div class="corner-horn corner-horn-left">
+                    <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                  </div>
+                  <div class="corner-horn corner-horn-right">
+                    <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                  </div>
                 </div>
-                <span class="horror-btn-text">THAM GIA NGAY</span>
+                <div class="horror-btn-body">
+                  <span class="horror-btn-text" data-node-id="I1058:77486;708:606">THAM GIA NGAY</span>
+                </div>
               </a>
             </div>
 
             <!-- Block 2: Bug Tracker (1048:77449) -->
             <div class="faq-help-small-card card-bug" data-node-id="1048:77449">
-              <div style="display: flex; flex-direction: column; gap: 8px;">
-                <p class="faq-help-tag">BUG TRACKER</p>
-                <h3 class="faq-help-small-title">BÁO CÁO LỖI & GÓP Ý</h3>
-                <p class="faq-help-desc">
+              <!-- Background Grunge 78042 (1058:77524) -->
+              <div class="faq-help-card-bg-grunge" data-node-id="1058:77524">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+
+              <div class="faq-help-card-content">
+                <p class="faq-help-tag" data-node-id="1048:77452">BUG TRACKER</p>
+                <h3 class="faq-help-small-title" data-node-id="1048:77454">BÁO CÁO LỖI & GÓP Ý</h3>
+                <p class="faq-help-desc" data-node-id="1048:77456">
                   Giúp chúng tôi hoàn thiện trò chơi bằng cách cung cấp thông tin chi tiết về các lỗi bạn gặp phải.
                 </p>
               </div>
 
-              <button type="button" class="btn-faq-small-horror" onclick="alert('Cảm ơn bạn! Hãy gửi log và mô tả lỗi tới support@oan-game.vn.');">
+              <button type="button" class="btn-faq-small-horror" data-node-id="1058:77504" onclick="alert('Cảm ơn bạn! Hãy gửi log và mô tả lỗi tới support@oan-game.vn.');">
                 <div class="horror-frame-corners">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="corner-svg-left" />
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="corner-svg-right" />
+                  <div class="corner-horn corner-horn-left">
+                    <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                  </div>
+                  <div class="corner-horn corner-horn-right">
+                    <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                  </div>
                 </div>
-                <span class="horror-btn-text">BÁO CÁO NGAY</span>
+                <div class="horror-btn-body">
+                  <span class="horror-btn-text" data-node-id="I1058:77504;708:606">XEM BÁO CÁO</span>
+                </div>
               </button>
             </div>
 
