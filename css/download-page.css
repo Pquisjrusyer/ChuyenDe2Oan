@@ -30,7 +30,8 @@
 }
 
 /* Topmost Overlay Texture 78042 (1195:78612) */
-.dl-hero-bg-grunge {
+.dl-hero-bg-grunge,
+.dl-section-overlay-texture {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -41,7 +42,8 @@
   overflow: hidden;
 }
 
-.dl-hero-bg-grunge img {
+.dl-hero-bg-grunge img,
+.dl-section-overlay-texture img {
   width: 100%;
   height: 100%;
   object-fit: cover;

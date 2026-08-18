@@ -180,6 +180,11 @@ export async function renderDownload(container) {
            2. KHÁM PHÁ THÊM / PLATFORM SECTION (1195:78620)
            ======================================================== -->
       <section class="dl-stores-section" id="download-stores" data-node-id="1195:78620">
+        <!-- Top Overlay Texture (1195:78612) -->
+        <div class="dl-section-overlay-texture" data-node-id="1195:78612">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+
         <!-- Section Header (1218:78496) -->
         <div class="dl-stores-header-wrap trailer-scroll-reveal trailer-reveal-fade-up">
           <div class="dl-stores-header-content" data-node-id="1218:78496">
@@ -270,13 +275,16 @@ export async function renderDownload(container) {
           </a>
         </div>
 
-        </div>
       </section>
 
       <!-- ========================================================
            3. CẤU HÌNH HỆ THỐNG (SYSTEM REQUIREMENTS)
            ======================================================== -->
       <section class="dl-specs-section" id="dl-specs-section">
+        <!-- Top Overlay Texture (1195:78612) -->
+        <div class="dl-section-overlay-texture" data-node-id="1195:78612">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
         
         <!-- Header with Metal Bracket Frame Line -->
         <div class="dl-specs-header trailer-scroll-reveal trailer-reveal-fade-up">
@@ -361,6 +369,11 @@ export async function renderDownload(container) {
            4. FAQ QUESTIONS SECTION
            ======================================================== -->
       <section class="dl-faq-section">
+        <!-- Top Overlay Texture (1195:78612) -->
+        <div class="dl-section-overlay-texture" data-node-id="1195:78612">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+
         <div class="dl-faq-container trailer-scroll-reveal trailer-reveal-fade-up">
           
           <!-- FAQ Item 1 -->
@@ -424,6 +437,11 @@ export async function renderDownload(container) {
            5. FINAL READY CTA SECTION (1218:78984)
            ======================================================== -->
       <section class="dl-ready-section trailer-scroll-reveal trailer-reveal-scale" data-node-id="1218:78984">
+        <!-- Top Overlay Texture (1195:78612) -->
+        <div class="dl-section-overlay-texture" data-node-id="1195:78612">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+
         <div class="dl-ready-cta-container" data-node-id="1218:78985">
           
           <div class="dl-ready-headings" data-node-id="1218:78986">
