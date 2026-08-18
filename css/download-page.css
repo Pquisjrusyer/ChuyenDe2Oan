@@ -19,13 +19,13 @@
 .dl-hero-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: auto;
   background: transparent;
   display: flex;
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
-  padding: 105px clamp(20px, 4.33vw, 80px) 100px;
+  padding: clamp(40px, 5vh, 70px) clamp(20px, 3.5vw, 60px) clamp(50px, 6vh, 80px);
 }
 
 /* Background Grunge Texture 78042 (1195:78612) */
@@ -87,48 +87,48 @@
   position: relative;
   z-index: 5;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1720px;
+  max-width: 1440px;
   margin: 0 auto;
-  gap: 30px;
+  gap: clamp(24px, 3vw, 48px);
 }
 
 /* Left Column (1195:78465) */
 .dl-hero-col-left {
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  flex: 1 1 1150px;
-  max-width: 1255px;
+  gap: clamp(20px, 2.5vh, 32px);
+  flex: 1 1 760px;
+  max-width: 840px;
 }
 
 .dl-hero-top-block {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: clamp(14px, 1.8vh, 22px);
 }
 
 /* Stone Header: TẢI OÁN (1195:78467) */
 .dl-hero-stone-title {
   display: flex;
   align-items: flex-end;
-  gap: 40px;
-  padding: 10px 0;
+  gap: clamp(14px, 1.8vw, 26px);
+  padding: 0;
 }
 
 .dl-hero-stone-title .stone-part-tai {
-  width: 368px;
-  max-width: 48%;
-  height: 198px;
+  width: clamp(180px, 15vw, 240px);
+  height: auto;
+  aspect-ratio: 368 / 198;
   flex-shrink: 0;
 }
 
 .dl-hero-stone-title .stone-part-oan {
-  width: 375px;
-  max-width: 48%;
-  height: 187px;
+  width: clamp(185px, 15.5vw, 245px);
+  height: auto;
+  aspect-ratio: 375 / 187;
   flex-shrink: 0;
 }
 
@@ -136,22 +136,22 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 25px rgba(217, 183, 76, 0.4));
+  filter: drop-shadow(0 0 20px rgba(217, 183, 76, 0.4));
 }
 
 /* Quote Description (1195:78476) */
 .dl-hero-quote-box {
-  border-left: 2.5px solid #990000;
-  padding: 8px 0 8px 24px;
+  border-left: 2px solid #990000;
+  padding: 4px 0 4px 16px;
 }
 
 .dl-hero-quote-text {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2.2vw, 32px);
+  font-size: clamp(15px, 1.25vw, 19px);
   color: #9c7e21;
-  line-height: 1.42;
+  line-height: 1.45;
   margin: 0;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 .text-crimson-hua {
@@ -163,19 +163,19 @@
 .dl-hero-actions-row {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
 /* Button 1: TẢI NGAY (1191:80344) */
 .btn-dl-metal-crimson {
   position: relative;
-  width: 384px;
+  width: clamp(190px, 17vw, 240px);
   max-width: 100%;
-  height: 128px;
-  border: 2px solid #802510;
+  height: clamp(62px, 6.8vh, 74px);
+  border: 1.5px solid #802510;
   box-sizing: border-box;
-  padding: 8px 10px;
+  padding: 5px 6px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -185,8 +185,8 @@
 }
 
 .btn-dl-metal-crimson:hover {
-  transform: translateY(-3px) scale(1.02);
-  filter: brightness(1.18) drop-shadow(0 0 20px rgba(180, 20, 20, 0.6));
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.18) drop-shadow(0 0 16px rgba(180, 20, 20, 0.6));
 }
 
 .btn-dl-metal-crimson .btn-metal-texture-bg {
@@ -205,10 +205,10 @@
 
 .btn-dl-metal-crimson .btn-metal-vector-top {
   position: absolute;
-  top: 8px;
-  left: 11px;
-  width: 245.7px;
-  height: 6.5px;
+  top: 4px;
+  left: 8px;
+  width: 60%;
+  height: 4px;
   z-index: 4;
   pointer-events: none;
   transform: rotate(180deg) scaleY(-1);
@@ -224,16 +224,16 @@
 
 .btn-dl-metal-crimson .btn-metal-vector-bottom {
   position: absolute;
-  bottom: 8px;
-  right: 11px;
-  width: 245.7px;
-  height: 6.5px;
+  bottom: 4px;
+  right: 8px;
+  width: 60%;
+  height: 4px;
   z-index: 4;
   pointer-events: none;
 }
 
 .btn-dl-metal-crimson .btn-metal-inner-frame {
-  border: 4px solid #832714;
+  border: 2.5px solid #832714;
   background: linear-gradient(180deg, #370b06 0%, #210403 100%);
   width: 100%;
   height: 100%;
@@ -247,12 +247,12 @@
 .btn-dl-metal-crimson .btn-metal-content {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 .btn-dl-metal-crimson .btn-metal-icon {
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
 }
 
@@ -264,22 +264,22 @@
 
 .btn-dl-metal-crimson .btn-metal-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(32px, 3vw, 48px);
+  font-size: clamp(18px, 1.5vw, 24px);
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   white-space: nowrap;
 }
 
 /* Button 2: CẤU HÌNH HỆ THỐNG (1191:80340) */
 .btn-dl-metal-stone {
   position: relative;
-  width: 713px;
+  width: clamp(300px, 27vw, 400px);
   max-width: 100%;
-  height: 128px;
-  border: 2px solid #616161;
+  height: clamp(62px, 6.8vh, 74px);
+  border: 1.5px solid #616161;
   box-sizing: border-box;
-  padding: 8px 10px;
+  padding: 5px 6px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
@@ -289,8 +289,8 @@
 }
 
 .btn-dl-metal-stone:hover {
-  transform: translateY(-3px) scale(1.02);
-  filter: brightness(1.15) drop-shadow(0 0 20px rgba(180, 20, 20, 0.4));
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.15) drop-shadow(0 0 16px rgba(180, 20, 20, 0.4));
 }
 
 .btn-dl-metal-stone .btn-metal-stone-bg {
@@ -308,7 +308,7 @@
 }
 
 .btn-dl-metal-stone .btn-metal-stone-frame {
-  border: 4px solid #747474;
+  border: 2.5px solid #747474;
   background: linear-gradient(180deg, #595959 0%, #3a3a3a 100%);
   width: 100%;
   height: 100%;
@@ -321,11 +321,11 @@
 
 .btn-dl-metal-stone .btn-metal-stone-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(24px, 2.6vw, 48px);
+  font-size: clamp(17px, 1.4vw, 22px);
   font-weight: 700;
   color: #990000;
-  letter-spacing: -0.5px;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  letter-spacing: -0.3px;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
   white-space: nowrap;
 }
 
@@ -333,8 +333,8 @@
 .dl-hero-bottom-strip {
   position: relative;
   width: 100%;
-  max-width: 1255px;
-  height: 367px;
+  max-width: 840px;
+  height: clamp(160px, 17vh, 200px);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -357,12 +357,12 @@
 
 .dl-strip-blur-shadow {
   position: absolute;
-  top: -39px;
-  left: 132px;
-  width: 904px;
-  height: 445px;
+  top: -20px;
+  left: 80px;
+  width: 75%;
+  height: 120%;
   background: #000000;
-  filter: blur(126.7px);
+  filter: blur(80px);
   opacity: 0.8;
   pointer-events: none;
   z-index: 1;
@@ -375,9 +375,9 @@
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 16px;
   box-sizing: border-box;
-  gap: 10px;
+  gap: 8px;
 }
 
 .dl-strip-tile {
@@ -388,20 +388,20 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 4px;
+  gap: 2px;
   flex: 1 1 0;
   padding: 0;
   transition: transform 0.25s ease, filter 0.25s;
 }
 
 .dl-strip-tile:hover {
-  transform: translateY(-4px) scale(1.03);
-  filter: brightness(1.2) drop-shadow(0 0 15px rgba(217, 183, 76, 0.4));
+  transform: translateY(-3px) scale(1.03);
+  filter: brightness(1.2) drop-shadow(0 0 12px rgba(217, 183, 76, 0.4));
 }
 
 .dl-tile-icon-box {
-  width: 147px;
-  height: 138px;
+  width: clamp(60px, 5.8vw, 84px);
+  height: clamp(56px, 5.4vw, 78px);
   position: relative;
   overflow: hidden;
   display: flex;
@@ -448,12 +448,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .dl-tile-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 1.8vw, 32px);
+  font-size: clamp(13px, 1.05vw, 17px);
   font-weight: 700;
   color: #98826e;
   margin: 0;
@@ -463,7 +463,7 @@
 
 .dl-tile-sub {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(14px, 1.3vw, 24px);
+  font-size: clamp(10px, 0.8vw, 13px);
   font-weight: 400;
   color: #98826e;
   margin: 0;
@@ -473,8 +473,8 @@
 /* Right Column: Haunted Polaroid Frame Prototype (1195:78584 - Default & Variant2) */
 .dl-hero-col-right {
   position: relative;
-  width: clamp(420px, 38vw, 727px);
-  height: clamp(460px, 42vw, 756px);
+  width: clamp(320px, 30vw, 480px);
+  height: clamp(340px, 32vw, 500px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -504,11 +504,10 @@
 /* Underneath tape / blood paper (1195:78578 / 1195:78589) */
 .dl-polaroid-under-paper {
   position: absolute;
-  top: 391px;
-  left: 169px;
-  width: 642px;
-  max-width: 88%;
-  height: 435px;
+  top: 50%;
+  left: 20%;
+  width: 85%;
+  height: 55%;
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
@@ -526,7 +525,7 @@
 
 .dl-polaroid-haunted-frame:hover .dl-polaroid-under-paper,
 .dl-polaroid-haunted-frame.variant-2 .dl-polaroid-under-paper {
-  top: 520px;
+  top: 65%;
 }
 
 /* Main photo frame (1195:78577 / 1195:78590) */
@@ -547,17 +546,17 @@
   left: -17.81%;
   top: -33.46%;
   max-width: none;
-  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.98));
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.98));
 }
 
 /* Bottom Tape Seal (Default State) (1195:78581) */
 .dl-polaroid-tape-seal {
   position: absolute;
-  top: 687px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 317px;
-  height: 110px;
+  width: 45%;
+  height: 16%;
   z-index: 3;
   pointer-events: none;
   overflow: hidden;
@@ -576,18 +575,17 @@
 .dl-polaroid-haunted-frame:hover .dl-polaroid-tape-seal,
 .dl-polaroid-haunted-frame.variant-2 .dl-polaroid-tape-seal {
   opacity: 0;
-  transform: translateX(-50%) translateY(20px);
+  transform: translateX(-50%) translateY(15px);
 }
 
 /* Top Expanded Banner (Variant 2 State) (1195:78591) */
 .dl-polaroid-expanded-banner {
   position: absolute;
-  top: -67px;
+  top: -12%;
   left: 50%;
-  transform: translateX(-50%) translateY(15px);
-  width: 661px;
-  max-width: 95%;
-  height: 228px;
+  transform: translateX(-50%) translateY(10px);
+  width: 90%;
+  height: 30%;
   z-index: 4;
   pointer-events: none;
   opacity: 0;
@@ -622,31 +620,31 @@
   position: relative;
   z-index: 2;
   font-family: 'Space Mono', monospace;
-  font-size: clamp(36px, 4vw, 64px);
+  font-size: clamp(24px, 2.8vw, 42px);
   font-weight: 700;
   color: #660000;
   letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(102, 0, 0, 0.8);
+  text-shadow: 0 0 15px rgba(102, 0, 0, 0.8);
   white-space: nowrap;
 }
 
 /* Bottom Curse Text (Variant 2 State) (1195:78594) */
 .dl-polaroid-curse-text {
   position: absolute;
-  top: 739px;
+  bottom: -6%;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2.2vw, 32px);
+  font-size: clamp(14px, 1.4vw, 22px);
   font-weight: 700;
   color: #990000;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   white-space: nowrap;
   z-index: 4;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease, transform 0.4s ease;
-  text-shadow: 0 0 16px rgba(153, 0, 0, 0.9);
+  text-shadow: 0 0 12px rgba(153, 0, 0, 0.9);
 }
 
 .dl-polaroid-haunted-frame:hover .dl-polaroid-curse-text,
@@ -657,14 +655,14 @@
 /* Secret Document / Envelope under strip on bottom right (1195:78572 - image 63) */
 .dl-hero-secret-dossier {
   position: absolute;
-  left: calc(58.33% + 14px);
-  top: 1138px;
-  width: 437px;
-  max-width: 32vw;
-  height: 279px;
+  right: clamp(10px, 3vw, 40px);
+  bottom: clamp(10px, 2vh, 30px);
+  width: clamp(180px, 18vw, 280px);
+  height: auto;
+  aspect-ratio: 437 / 279;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.95;
+  opacity: 0.92;
   transform: rotate(-3deg);
 }
 
@@ -681,7 +679,7 @@
   left: -130.54%;
   top: -149.15%;
   max-width: none;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.95));
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
 }
 
 @media (max-width: 1200px) {
