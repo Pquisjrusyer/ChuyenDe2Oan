@@ -202,8 +202,8 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-win" data-node-id="1218:78424">
               <!-- Full-height Inner Content Box (1218:78424) -->
               <div class="dl-platform-inner-wrap wrap-win">
-                <!-- Background Image (nenchofrae.png) -->
-                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img" />
+                <!-- Background Image Windows PC (nenchofrae.png) -->
+                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img bg-img-win" />
                 <!-- Stone Carved Windows 11 Logo (1218:78435) -->
                 <div class="dl-platform-stone-icon icon-win" data-node-id="1218:78435">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Windows 11" />
@@ -226,8 +226,8 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-steam" data-node-id="1218:78418">
               <!-- Full-height Inner Content Box (1218:78418) -->
               <div class="dl-platform-inner-wrap wrap-steam">
-                <!-- Background Image (nenchofrae.png) -->
-                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img" />
+                <!-- Background Image Steam Store (nenchofrae.png) -->
+                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img bg-img-steam" />
                 <!-- Stone Carved Steam Logo (1218:78437) -->
                 <div class="dl-platform-stone-icon icon-steam" data-node-id="1218:78437">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Steam" />
@@ -250,8 +250,8 @@ export async function renderDownload(container) {
             <div class="dl-platform-card-box card-box-epic" data-node-id="1218:78421">
               <!-- Full-height Inner Content Box (1218:78421) -->
               <div class="dl-platform-inner-wrap wrap-epic">
-                <!-- Background Image (nenchofrae.png) -->
-                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img" />
+                <!-- Background Image Epic Store (nenchofrae.png) -->
+                <img src="./assets/nenchofrae.png" alt="" class="dl-platform-bg-img bg-img-epic" />
                 <!-- Stone Carved Epic Games Logo (1218:78438) -->
                 <div class="dl-platform-stone-icon icon-epic" data-node-id="1218:78438">
                   <img src="./assets/8125135145016de6d6938ba0751148484d32d775.png" alt="Epic Games" />

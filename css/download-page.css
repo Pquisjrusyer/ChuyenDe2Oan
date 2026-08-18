@@ -759,16 +759,35 @@
   height: 100%;
 }
 
-/* Background Image for each card (nenchofrae.png) - exact 100% card dimensions */
+/* Background Image for each card (separated per platform) */
 .dl-platform-bg-img {
   position: absolute;
-  inset: 0;
-  width: 80%;
-  height: 100%;
-  /* object-fit: cover; */
   pointer-events: none;
   z-index: 1;
-  left: 40px;
+}
+
+/* Card 1: Windows PC Background */
+.bg-img-win {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card 2: Steam Store Background */
+.bg-img-steam {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Card 3: Epic Store Background */
+.bg-img-epic {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Stone Carved Icons - Uniform Proportional Scale on Hover (1218:78435 / 78437 / 78438) */
