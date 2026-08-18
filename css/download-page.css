@@ -115,19 +115,19 @@
 .dl-hero-stone-title {
   display: flex;
   align-items: flex-end;
-  gap: clamp(18px, 2.5vw, 40px);
+  gap: clamp(24px, 4vw, 71px);
   padding: 0;
 }
 
 .dl-hero-stone-title .stone-part-tai {
-  width: clamp(220px, 19vw, 330px);
+  width: clamp(240px, 20vw, 368px);
   height: auto;
   aspect-ratio: 368 / 198;
   flex-shrink: 0;
 }
 
 .dl-hero-stone-title .stone-part-oan {
-  width: clamp(225px, 19.5vw, 335px);
+  width: clamp(245px, 20.4vw, 375px);
   height: auto;
   aspect-ratio: 375 / 187;
   flex-shrink: 0;
@@ -137,27 +137,31 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 0 25px rgba(217, 183, 76, 0.45));
+  filter: drop-shadow(0 0 30px rgba(217, 183, 76, 0.45)) drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
+  display: block;
 }
 
 /* Quote Description (1195:78476) */
 .dl-hero-quote-box {
-  border-left: 2.5px solid #990000;
-  padding: 6px 0 6px 20px;
+  border-left: 2px solid #990000;
+  padding: 8px 0 8px 20px;
+  box-sizing: border-box;
 }
 
 .dl-hero-quote-text {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(17px, 1.5vw, 24px);
+  font-size: clamp(17px, 1.6vw, 28px);
   color: #9c7e21;
-  line-height: 1.45;
+  line-height: 1.41;
   margin: 0;
   letter-spacing: -0.2px;
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.85);
 }
 
 .text-crimson-hua {
   color: #990000;
   font-weight: 700;
+  text-shadow: 0 0 10px rgba(153, 0, 0, 0.5);
 }
 
 /* 2 Action Buttons (1195:78478) */
