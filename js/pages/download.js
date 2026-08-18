@@ -109,69 +109,78 @@ export async function renderDownload(container) {
 
             </div>
 
-            <!-- Bottom 4 Feature Tiles Strip (1195:78481) -->
-            <div class="dl-hero-bottom-strip" data-node-id="1195:78481">
-              <!-- Panel Background (1195:78483) -->
-              <div class="dl-strip-bg-panel" data-node-id="1195:78483">
-                <img src="./assets/67aec6f569e9c46b6c54699002eed1e0eed782fb.png" alt="" />
+            <!-- Bottom 4 Feature Tiles Strip with Secret Dossier (1195:78481 & 1195:78572) -->
+            <div class="dl-hero-bottom-strip-wrap">
+              <div class="dl-hero-bottom-strip" data-node-id="1195:78481">
+                <!-- Panel Background (1195:78483) -->
+                <div class="dl-strip-bg-panel" data-node-id="1195:78483">
+                  <img src="./assets/67aec6f569e9c46b6c54699002eed1e0eed782fb.png" alt="" />
+                </div>
+                <div class="dl-strip-blur-shadow" data-node-id="1195:78484"></div>
+
+                <!-- 4 Tiles Container (1195:78485) -->
+                <div class="dl-strip-tiles-flex" data-node-id="1195:78485">
+                  
+                  <!-- Tile 1: GHI LẠI (1195:1711) -->
+                  <button type="button" class="dl-strip-tile" data-node-id="1195:1711" onclick="window.location.hash='storyline'">
+                    <div class="dl-tile-icon-box" data-node-id="1195:1709">
+                      <div class="dl-tile-icon-crop icon-crop-1" data-node-id="1195:1667">
+                        <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Ghi lại" />
+                      </div>
+                    </div>
+                    <div class="dl-tile-text-col" data-node-id="1195:1707">
+                      <h3 class="dl-tile-title" data-node-id="1195:1705">GHI LẠI</h3>
+                      <p class="dl-tile-sub" data-node-id="1195:1706">Mọi dấu vết</p>
+                    </div>
+                  </button>
+
+                  <!-- Tile 2: PHÂN TÍCH (1195:78487) -->
+                  <button type="button" class="dl-strip-tile" data-node-id="1195:78487" onclick="window.location.hash='gameplay'">
+                    <div class="dl-tile-icon-box" data-node-id="I1195:78487;1195:1709">
+                      <div class="dl-tile-icon-crop icon-crop-2" data-node-id="I1195:78487;1195:1703;1195:1669">
+                        <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Phân tích" />
+                      </div>
+                    </div>
+                    <div class="dl-tile-text-col" data-node-id="I1195:78487;1195:1707">
+                      <h3 class="dl-tile-title" data-node-id="I1195:78487;1195:1705">PHÂN TÍCH</h3>
+                      <p class="dl-tile-sub" data-node-id="I1195:78487;1195:1706">Lời thì thầm</p>
+                    </div>
+                  </button>
+
+                  <!-- Tile 3: KHÁM PHÁ (1195:78488) -->
+                  <button type="button" class="dl-strip-tile" data-node-id="1195:78488" onclick="window.location.hash='trailer'">
+                    <div class="dl-tile-icon-box" data-node-id="I1195:78488;1195:1709">
+                      <div class="dl-tile-icon-crop icon-crop-3" data-node-id="I1195:78488;1195:1703;1195:1670">
+                        <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Khám phá" />
+                      </div>
+                    </div>
+                    <div class="dl-tile-text-col" data-node-id="I1195:78488;1195:1707">
+                      <h3 class="dl-tile-title" data-node-id="I1195:78488;1195:1705">KHÁM PHÁ</h3>
+                      <p class="dl-tile-sub" data-node-id="I1195:78488;1195:1706">Ngôi Nhà Hứa</p>
+                    </div>
+                  </button>
+
+                  <!-- Tile 4: ĐỐI MẶT (1195:78489) -->
+                  <button type="button" class="dl-strip-tile" data-node-id="1195:78489" onclick="window.location.hash='character'">
+                    <div class="dl-tile-icon-box" data-node-id="I1195:78489;1195:1709">
+                      <div class="dl-tile-icon-crop icon-crop-4" data-node-id="I1195:78489;1195:1703;1195:1671">
+                        <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Đối mặt" />
+                      </div>
+                    </div>
+                    <div class="dl-tile-text-col" data-node-id="I1195:78489;1195:1707">
+                      <h3 class="dl-tile-title" data-node-id="I1195:78489;1195:1705">ĐỐI MẶT</h3>
+                      <p class="dl-tile-sub" data-node-id="I1195:78489;1195:1706">Sự thật</p>
+                    </div>
+                  </button>
+
+                </div>
               </div>
-              <div class="dl-strip-blur-shadow" data-node-id="1195:78484"></div>
 
-              <!-- 4 Tiles Container (1195:78485) -->
-              <div class="dl-strip-tiles-flex" data-node-id="1195:78485">
-                
-                <!-- Tile 1: GHI LẠI (1195:1711) -->
-                <button type="button" class="dl-strip-tile" data-node-id="1195:1711" onclick="window.location.hash='storyline'">
-                  <div class="dl-tile-icon-box" data-node-id="1195:1709">
-                    <div class="dl-tile-icon-crop icon-crop-1" data-node-id="1195:1667">
-                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Ghi lại" />
-                    </div>
-                  </div>
-                  <div class="dl-tile-text-col" data-node-id="1195:1707">
-                    <h3 class="dl-tile-title" data-node-id="1195:1705">GHI LẠI</h3>
-                    <p class="dl-tile-sub" data-node-id="1195:1706">Mọi dấu vết</p>
-                  </div>
-                </button>
-
-                <!-- Tile 2: PHÂN TÍCH (1195:78487) -->
-                <button type="button" class="dl-strip-tile" data-node-id="1195:78487" onclick="window.location.hash='gameplay'">
-                  <div class="dl-tile-icon-box" data-node-id="I1195:78487;1195:1709">
-                    <div class="dl-tile-icon-crop icon-crop-2" data-node-id="I1195:78487;1195:1703;1195:1669">
-                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Phân tích" />
-                    </div>
-                  </div>
-                  <div class="dl-tile-text-col" data-node-id="I1195:78487;1195:1707">
-                    <h3 class="dl-tile-title" data-node-id="I1195:78487;1195:1705">PHÂN TÍCH</h3>
-                    <p class="dl-tile-sub" data-node-id="I1195:78487;1195:1706">Lời thì thầm</p>
-                  </div>
-                </button>
-
-                <!-- Tile 3: KHÁM PHÁ (1195:78488) -->
-                <button type="button" class="dl-strip-tile" data-node-id="1195:78488" onclick="window.location.hash='trailer'">
-                  <div class="dl-tile-icon-box" data-node-id="I1195:78488;1195:1709">
-                    <div class="dl-tile-icon-crop icon-crop-3" data-node-id="I1195:78488;1195:1703;1195:1670">
-                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Khám phá" />
-                    </div>
-                  </div>
-                  <div class="dl-tile-text-col" data-node-id="I1195:78488;1195:1707">
-                    <h3 class="dl-tile-title" data-node-id="I1195:78488;1195:1705">KHÁM PHÁ</h3>
-                    <p class="dl-tile-sub" data-node-id="I1195:78488;1195:1706">Ngôi Nhà Hứa</p>
-                  </div>
-                </button>
-
-                <!-- Tile 4: ĐỐI MẶT (1195:78489) -->
-                <button type="button" class="dl-strip-tile" data-node-id="1195:78489" onclick="window.location.hash='character'">
-                  <div class="dl-tile-icon-box" data-node-id="I1195:78489;1195:1709">
-                    <div class="dl-tile-icon-crop icon-crop-4" data-node-id="I1195:78489;1195:1703;1195:1671">
-                      <img src="./assets/07bedc5ee991bde9d08e92352475b5536e5b5c5b.png" alt="Đối mặt" />
-                    </div>
-                  </div>
-                  <div class="dl-tile-text-col" data-node-id="I1195:78489;1195:1707">
-                    <h3 class="dl-tile-title" data-node-id="I1195:78489;1195:1705">ĐỐI MẶT</h3>
-                    <p class="dl-tile-sub" data-node-id="I1195:78489;1195:1706">Sự thật</p>
-                  </div>
-                </button>
-
+              <!-- Secret Document / Envelope under Tile 4 on bottom right (1195:78572 - image 63) -->
+              <div class="dl-hero-secret-dossier" data-node-id="1195:78572">
+                <div class="dl-secret-dossier-crop">
+                  <img src="./assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png" alt="Hồ sơ mật Nhà Hứa" />
+                </div>
               </div>
             </div>
 
@@ -208,13 +217,6 @@ export async function renderDownload(container) {
                 <span>Không có gì là mãi mãi</span>
               </div>
             </button>
-          </div>
-
-          <!-- Secret Document / Envelope under strip on bottom right (1195:78572 - image 63) -->
-          <div class="dl-hero-secret-dossier" data-node-id="1195:78572">
-            <div class="dl-secret-dossier-crop">
-              <img src="./assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png" alt="image 63" />
-            </div>
           </div>
 
         </div>

@@ -448,17 +448,25 @@
   transform: translateX(0);
 }
 
-/* Bottom 4 Feature Tiles Strip (1195:78481) */
-.dl-hero-bottom-strip {
+/* Bottom 4 Feature Tiles Strip Wrap (1195:78481 & 1195:78572) */
+.dl-hero-bottom-strip-wrap {
   position: relative;
   width: 100%;
   max-width: 1050px;
+  margin-top: clamp(10px, 1.5vh, 20px);
+  overflow: visible;
+}
+
+.dl-hero-bottom-strip {
+  position: relative;
+  width: 100%;
   height: clamp(190px, 30vh, 260px);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  z-index: 3;
 }
 
 .dl-strip-bg-panel {
@@ -774,15 +782,15 @@
 /* Secret Document / Envelope under strip on bottom right (1195:78572 - image 63) */
 .dl-hero-secret-dossier {
   position: absolute;
-  right: clamp(10px, 3vw, 40px);
-  bottom: clamp(10px, 2vh, 30px);
-  width: clamp(220px, 22vw, 340px);
+  right: clamp(-60px, -4vw, -20px);
+  bottom: clamp(-40px, -3vh, -15px);
+  width: clamp(240px, 24vw, 380px);
   height: auto;
   aspect-ratio: 437 / 279;
   pointer-events: none;
-  z-index: 2;
-  opacity: 0.92;
-  transform: rotate(-3deg);
+  z-index: 1;
+  opacity: 0.95;
+  transform: rotate(2deg);
 }
 
 .dl-secret-dossier-crop {
@@ -798,7 +806,7 @@
   left: -130.54%;
   top: -149.15%;
   max-width: none;
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.98));
 }
 
 @media (max-width: 1200px) {
