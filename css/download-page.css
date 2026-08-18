@@ -172,12 +172,21 @@
   flex-wrap: wrap;
 }
 
+/* 2 Action Buttons (1191:80345 & 1191:80341) */
+.dl-hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 1.8vw, 24px);
+  flex-wrap: wrap;
+  padding: 4px 0;
+}
+
 /* Button 1: TẢI NGAY (1191:80345) */
 .btn-dl-metal-crimson {
   position: relative;
-  width: clamp(220px, 20vw, 320px);
+  width: clamp(200px, 20vw, 290px);
   max-width: 100%;
-  height: clamp(72px, 8vh, 96px);
+  height: clamp(64px, 7vh, 88px);
   border: 2px solid #802510;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -212,7 +221,7 @@
   position: absolute;
   top: -4px;
   left: 10px;
-  width: 60%;
+  width: 62%;
   height: 6px;
   z-index: 4;
   pointer-events: none;
@@ -223,7 +232,7 @@
   position: absolute;
   bottom: -4px;
   right: 10px;
-  width: 60%;
+  width: 62%;
   height: 6px;
   z-index: 4;
   pointer-events: none;
@@ -269,8 +278,8 @@
 /* Ornate Corner Brackets */
 .btn-bracket {
   position: absolute;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   pointer-events: none;
   z-index: 1;
   opacity: 0.85;
@@ -311,12 +320,13 @@
   z-index: 2;
   display: flex;
   align-items: center;
-  gap: clamp(10px, 1.2vw, 16px);
+  justify-content: center;
+  gap: clamp(8px, 1.1vw, 14px);
 }
 
 .btn-dl-metal-crimson .btn-metal-icon {
-  width: clamp(36px, 3.2vw, 52px);
-  height: clamp(36px, 3.2vw, 52px);
+  width: clamp(30px, 2.8vw, 44px);
+  height: clamp(30px, 2.8vw, 44px);
   flex-shrink: 0;
   position: relative;
 }
@@ -345,7 +355,7 @@
 
 .btn-dl-metal-crimson .btn-metal-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2vw, 32px);
+  font-size: clamp(18px, 1.8vw, 26px);
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.3px;
@@ -360,9 +370,9 @@
 /* Button 2: CẤU HÌNH HỆ THỐNG (1191:80341) */
 .btn-dl-metal-stone {
   position: relative;
-  width: clamp(340px, 32vw, 520px);
+  width: clamp(320px, 32vw, 490px);
   max-width: 100%;
-  height: clamp(72px, 8vh, 96px);
+  height: clamp(64px, 7vh, 88px);
   border: 2px solid #616161;
   box-sizing: border-box;
   padding: 6px 8px;
@@ -412,12 +422,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .btn-dl-metal-stone .btn-metal-stone-label {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(18px, 1.8vw, 28px);
+  font-size: clamp(16px, 1.6vw, 24px);
   font-weight: 700;
   color: #990000;
   letter-spacing: -0.3px;
@@ -427,8 +437,8 @@
 }
 
 .btn-metal-stone-arrow {
-  width: clamp(24px, 2.5vw, 36px);
-  height: clamp(24px, 2.5vw, 36px);
+  width: clamp(22px, 2.2vw, 32px);
+  height: clamp(22px, 2.2vw, 32px);
   display: flex;
   align-items: center;
   justify-content: center;
