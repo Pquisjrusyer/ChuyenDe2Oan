@@ -65,7 +65,7 @@ export function renderNavbar(container, currentHash) {
 
           <!-- Auth CTA Buttons (906:1781) -->
           <div class="navbar-auth-buttons" data-node-id="I1363:86771;906:1781">
-            <!-- Button 1: ĐĂNG KÝ / USER ID (906:1714 with Title background 982de4...png) -->
+            <!-- Button 1: ĐĂNG KÝ / USER PROFILE (906:1714) -->
             ${(() => {
               let user = null;
               try {
@@ -75,10 +75,41 @@ export function renderNavbar(container, currentHash) {
 
               if (user && user.username) {
                 return `
-                  <a href="#home" class="btn-nav-register-figma is-logged-in" id="navUserBtn" data-node-id="I1363:86771;906:1727;906:1714" title="Tài khoản: ${user.username} (Nhấp để đăng xuất)">
-                    <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-register-bg-img" />
-                    <span class="nav-register-caption">${user.username.toUpperCase()}</span>
-                  </a>
+                  <div class="nav-user-dropdown-wrapper" id="navUserDropdownWrapper">
+                    <button type="button" class="nav-user-profile-btn" id="navUserBtn" aria-label="Menu người dùng ${user.username}" title="Tài khoản: ${user.username}">
+                      <div class="nav-user-avatar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                          <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                      </div>
+                      <span class="nav-user-name">${user.username.toUpperCase()}</span>
+                      <svg class="nav-user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </button>
+
+                    <div class="nav-user-dropdown-menu" id="navUserMenu">
+                      <div class="nav-user-menu-header">
+                        <p class="nav-user-menu-title">${user.username}</p>
+                        <p class="nav-user-menu-email">${user.email || 'Lữ khách Nhà Hứa'}</p>
+                      </div>
+                      <div class="nav-user-menu-divider"></div>
+                      <a href="#character" class="nav-user-menu-item" id="navItemProfile">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span>Hồ sơ nhân vật</span>
+                      </a>
+                      <a href="#collection" class="nav-user-menu-item" id="navItemCollection">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span>Bộ sưu tập manh mối</span>
+                      </a>
+                      <div class="nav-user-menu-divider"></div>
+                      <button type="button" class="nav-user-menu-item nav-user-logout" id="navItemLogout">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        <span>Đăng xuất</span>
+                      </button>
+                    </div>
+                  </div>
                 `;
               }
 
@@ -165,23 +196,33 @@ export function renderNavbar(container, currentHash) {
     });
   }
 
-  // Logged-in user badge click handler
+  // Logged-in user dropdown toggle & actions
   const navUserBtn = document.getElementById('navUserBtn');
-  if (navUserBtn) {
+  const navUserMenu = document.getElementById('navUserMenu');
+  if (navUserBtn && navUserMenu) {
     navUserBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      let user = null;
-      try {
-        user = JSON.parse(localStorage.getItem('OAN_LOGGED_IN_USER') || '{}');
-      } catch (err) {}
-      const username = user?.username || 'Lữ khách';
-      const doLogout = confirm(`Tài khoản hiện tại: ${username}\n\nBạn có muốn đăng xuất khỏi Nhà Hứa không?`);
-      if (doLogout) {
-        localStorage.removeItem('OAN_LOGGED_IN_USER');
-        renderNavbar(container, currentHash);
-        window.location.hash = 'login';
+      e.stopPropagation();
+      const isOpen = navUserMenu.classList.contains('is-open');
+      navUserMenu.classList.toggle('is-open', !isOpen);
+      navUserBtn.classList.toggle('is-active', !isOpen);
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navUserBtn.contains(e.target) && !navUserMenu.contains(e.target)) {
+        navUserMenu.classList.remove('is-open');
+        navUserBtn.classList.remove('is-active');
       }
     });
+
+    const navItemLogout = document.getElementById('navItemLogout');
+    if (navItemLogout) {
+      navItemLogout.addEventListener('click', (e) => {
+        e.preventDefault();
+        localStorage.removeItem('OAN_LOGGED_IN_USER');
+        window.dispatchEvent(new CustomEvent('auth-state-changed'));
+        window.location.hash = 'login';
+      });
+    }
   }
 
   // Listen to external auth-state-changed events
