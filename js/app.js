@@ -31,6 +31,7 @@ import { renderGameplay } from './pages/gameplay.js';
 import { renderInvestigation } from './pages/investigation.js';
 import { renderPuzzle } from './pages/puzzle.js';
 import { renderCollection } from './pages/collection.js';
+import { renderProfile } from './pages/profile.js';
 import { renderFullscreen } from './pages/fullscreen.js';
 import { renderPrivacy, renderTerms, renderCookiePolicy } from './pages/legal.js';
 import { initCookieBanner } from './components/cookie-banner.js';
@@ -58,6 +59,7 @@ function initApp() {
   router.addRoute('check-inbox', renderCheckInbox);
   router.addRoute('mail-confirm', renderMailConfirm);
   router.addRoute('character', renderCharacter);
+  router.addRoute('profile', renderProfile);
   router.addRoute('storyline', renderStoryline);
   router.addRoute('gameplay', renderGameplay);
   router.addRoute('investigation', renderInvestigation);
