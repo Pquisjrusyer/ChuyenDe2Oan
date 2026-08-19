@@ -5778,6 +5778,285 @@
   box-shadow: 0 0 25px rgba(217, 183, 76, 0.7);
 }
 
+
+
+/* Sub-Section: NHÀ HỨA (1301:81889 & 1301:81891) */
+.nha-hua-fear-subblock {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.nha-hua-fear-hallway-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920 / 640;
+  min-height: 360px;
+  max-height: 640px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.hallway-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hallway-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, #030508 100%);
+  pointer-events: none;
+}
+
+/* ========================================================
+   HORROR GLITCH & PULSE FOR "NỖI SỢ BAO TRÙM" (1301:81893)
+   ======================================================== */
+.hallway-fear-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(48px, 6.5vw, 96px);
+  font-weight: 700;
+  color: #c6a02a;
+  text-align: center;
+  letter-spacing: 4px;
+  margin: 0;
+  white-space: nowrap;
+  text-shadow: 0 0 15px rgba(238, 27, 16, 0.9), 0 0 35px rgba(198, 160, 42, 0.7), 0 0 70px rgba(0, 0, 0, 0.95);
+  animation: fearGlitchShake 4s ease-in-out infinite, fearBloodPulse 3s ease-in-out infinite alternate;
+  user-select: none;
+}
+
+.hallway-fear-text::before,
+.hallway-fear-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Cyan chromatic aberration & slice twitch */
+.hallway-fear-text::before {
+  color: #00ffff;
+  z-index: -1;
+  opacity: 0.75;
+  animation: fearGlitchCyan 3.2s infinite ease-in-out alternate-reverse;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+/* Red blood chromatic aberration & slice twitch */
+.hallway-fear-text::after {
+  color: #ff0033;
+  z-index: -2;
+  opacity: 0.85;
+  animation: fearGlitchRed 2.8s infinite ease-in-out alternate-reverse;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+@keyframes fearGlitchShake {
+
+  0%,
+  100% {
+    transform: translate(0, 0) skew(0deg);
+  }
+
+  20% {
+    transform: translate(-2px, 1px) skew(-0.5deg);
+  }
+
+  21% {
+    transform: translate(3px, -2px) skew(1deg);
+  }
+
+  22% {
+    transform: translate(-1px, 2px) skew(-1deg);
+  }
+
+  23% {
+    transform: translate(0, 0) skew(0deg);
+  }
+
+  50% {
+    transform: translate(1px, -1px) skew(0.5deg);
+  }
+
+  70% {
+    transform: translate(0, 0) skew(0deg);
+  }
+
+  71% {
+    transform: translate(-3px, 2px) skew(1.5deg);
+  }
+
+  72% {
+    transform: translate(2px, -3px) skew(-1.5deg);
+  }
+
+  73% {
+    transform: translate(0, 0) skew(0deg);
+  }
+}
+
+@keyframes fearGlitchCyan {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-3px, 2px);
+    opacity: 0.75;
+  }
+
+  22% {
+    transform: translate(4px, -1px);
+    opacity: 0.9;
+  }
+
+  24% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translate(3px, -2px);
+    opacity: 0.85;
+  }
+
+  73% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes fearGlitchRed {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(3px, -2px);
+    opacity: 0.85;
+  }
+
+  22% {
+    transform: translate(-4px, 1px);
+    opacity: 0.95;
+  }
+
+  24% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translate(-3px, 2px);
+    opacity: 0.85;
+  }
+
+  73% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes fearBloodPulse {
+  0% {
+    text-shadow: 0 0 15px rgba(238, 27, 16, 0.7), 0 0 30px rgba(198, 160, 42, 0.5), 0 0 50px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
+  }
+
+  50% {
+    text-shadow: 0 0 25px rgba(255, 0, 0, 0.95), 0 0 50px rgba(238, 27, 16, 0.85), 0 0 80px rgba(0, 0, 0, 0.98);
+    letter-spacing: 6px;
+  }
+
+  100% {
+    text-shadow: 0 0 15px rgba(238, 27, 16, 0.7), 0 0 30px rgba(198, 160, 42, 0.5), 0 0 50px rgba(0, 0, 0, 0.9);
+    letter-spacing: 3px;
+  }
+}
+
+/* In-Page Character Dossier Modal Overlay (1301:79930 / 1332:82867) */
+.home-char-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 40px);
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.home-char-modal-overlay.hidden {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.home-char-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 1560px;
+  max-height: 92vh;
+  background: radial-gradient(circle at center, #240505 0%, #110000 65%, #050000 100%);
+  border: 2px solid #9c7e21;
+  border-radius: 8px;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.95), 0 0 40px rgba(153, 0, 0, 0.6);
+  overflow-y: auto;
+  padding: clamp(24px, 4vw, 50px);
+  box-sizing: border-box;
+}
+
+.home-char-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(40, 0, 0, 0.8);
+  border: 2px solid #9c7e21;
+  color: #ffd700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 20;
+}
+
+.home-char-modal-close:hover {
+  background: #990000;
+  border-color: #ffd700;
+  color: #ffffff;
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 0 15px #ffd700;
+}
+
+
+
 /* ---- 6. NHÃ€ Há»¨A & MEDIA GALLERY (1363:86582) ---- */
 .figma-nha-hua-section {
   padding: clamp(60px, 8vw, 100px) 0;
