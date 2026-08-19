@@ -37,43 +37,47 @@
 /* ========================================================
    1. HERO SECTION (1060:75035)
    ======================================================== */
-/* ========================================================
-   1. HERO SECTION (1060:75035)
-   ======================================================== */
 .gameplay-hero-section {
   position: relative;
   width: 100%;
-  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 120px) clamp(80px, 10vh, 120px);
+  min-height: 100vh;
+  padding: clamp(30px, 4vh, 60px) clamp(20px, 4vw, 80px) clamp(40px, 5vh, 60px);
   box-sizing: border-box;
   background: linear-gradient(180deg, #000000 17.3%, #000000 49.2%, #060000 86.1%);
   z-index: 2;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .gameplay-hero-container {
-  max-width: 1680px;
+  max-width: 1360px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: clamp(40px, 5vh, 60px);
+  gap: clamp(20px, 3vh, 36px);
 }
 
 .gameplay-hero-top-row {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(320px, 896px) minmax(280px, 434px);
+  grid-template-columns: minmax(280px, 1fr) minmax(200px, 300px);
   justify-content: space-between;
-  align-items: flex-start;
-  gap: clamp(30px, 4vw, 60px);
+  align-items: flex-end;
+  gap: clamp(20px, 3vw, 40px);
 }
 
 .gameplay-hero-main-media {
   position: relative;
   width: 100%;
-  max-width: 896px;
-  aspect-ratio: 896 / 504;
+  max-width: 760px;
+  max-height: 420px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.95);
+  border-radius: 4px;
 }
 
 .gameplay-hero-main-media img {
@@ -91,10 +95,13 @@
 .gameplay-hero-side-poster {
   position: relative;
   width: 100%;
-  max-width: 434px;
+  max-width: 290px;
+  max-height: 435px;
   aspect-ratio: 434 / 651;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95);
+  margin-left: auto;
+  border-radius: 4px;
 }
 
 .gameplay-hero-side-poster img {
@@ -115,29 +122,29 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  gap: clamp(30px, 4vw, 60px);
+  gap: clamp(20px, 3vw, 40px);
   flex-wrap: wrap;
-  padding: 0 10px;
+  padding: 0;
   box-sizing: border-box;
 }
 
 .gameplay-hero-text-col {
-  max-width: 576px;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .gameplay-hero-heading {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(48px, 5.5vw, 80px);
+  font-size: clamp(36px, 4vw, 56px);
   font-weight: 700;
   color: #ffffff;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  line-height: 80px;
+  line-height: 1.05;
   margin: 0;
-  text-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.9);
 }
 
 .gameplay-hero-sub-box {
@@ -146,18 +153,18 @@
 
 .gameplay-hero-sub {
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-size: clamp(13px, 1vw, 15px);
   font-weight: 400;
   color: #c4c7c8;
-  line-height: 24px;
+  line-height: 1.5;
   margin: 0;
 }
 
 .gameplay-hero-btns-col {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  width: 369px;
+  gap: 14px;
+  width: clamp(240px, 22vw, 300px);
   flex-shrink: 0;
 }
 
@@ -165,7 +172,7 @@
 .gameplay-btn-tai-game {
   position: relative;
   width: 100%;
-  height: 70px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,29 +193,29 @@
 }
 
 .tg-fp1, .tg-fp5 {
-  height: 70px;
+  height: 56px;
   flex-shrink: 0;
 }
-.tg-fp1 { width: 15px; }
-.tg-fp5 { width: 30px; }
+.tg-fp1 { width: 12px; }
+.tg-fp5 { width: 24px; }
 .tg-fp1 img, .tg-fp5 img { width: 100%; height: 100%; object-fit: cover; }
 
 .tg-fp2, .tg-fp4 {
   flex: 1 0 0;
-  height: 70px;
-  background-size: auto 70px;
+  height: 56px;
+  background-size: auto 56px;
 }
 
 .tg-fp3 {
-  width: 146px;
-  height: 70px;
+  width: 116px;
+  height: 56px;
   flex-shrink: 0;
 }
 .tg-fp3 img { width: 100%; height: 100%; object-fit: cover; }
 
 .tai-game-inner-body {
   position: absolute;
-  inset: 3px 4px;
+  inset: 2px 3px;
   background: linear-gradient(180deg, #593b0c 0%, #b10e07 100%);
   border: 1px solid #000000;
   overflow: hidden;
@@ -228,7 +235,7 @@
 
 .tai-game-glow-1 {
   position: absolute;
-  inset: 6px 6px;
+  inset: 4px 4px;
   border: 0.6px solid #c0552f;
   pointer-events: none;
   z-index: 2;
@@ -236,8 +243,8 @@
 
 .tai-game-glow-2 {
   position: absolute;
-  inset: 6px 6px;
-  border: 3px solid #ee1b10;
+  inset: 4px 4px;
+  border: 2px solid #ee1b10;
   box-shadow: 0 0 3px red;
   pointer-events: none;
   z-index: 2;
@@ -245,8 +252,8 @@
 
 .tai-game-glow-3 {
   position: absolute;
-  inset: 6px 6px;
-  border: 5px solid #ee1b10;
+  inset: 4px 4px;
+  border: 4px solid #ee1b10;
   filter: blur(1.2px);
   pointer-events: none;
   z-index: 2;
@@ -256,7 +263,7 @@
   position: relative;
   z-index: 4;
   font-family: 'Space Mono', monospace;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
   letter-spacing: -0.4px;
@@ -266,18 +273,18 @@
 
 .gameplay-btn-tai-game:hover {
   transform: translateY(-2px) scale(1.02);
-  filter: drop-shadow(0 0 15px rgba(238, 27, 16, 0.8));
+  filter: drop-shadow(0 0 12px rgba(238, 27, 16, 0.8));
 }
 
 /* Button 2: XEM TRAILER (1060:75250) */
 .gameplay-btn-xem-trailer {
   position: relative;
   width: 100%;
-  height: 91px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 17px;
+  padding: 0 12px;
   text-decoration: none;
   cursor: pointer;
   box-sizing: border-box;
@@ -287,9 +294,9 @@
 .trailer-corner-left,
 .trailer-corner-right {
   position: absolute;
-  top: 4px;
-  bottom: 4px;
-  width: 80px;
+  top: 2px;
+  bottom: 2px;
+  width: 64px;
   display: flex;
   align-items: center;
   pointer-events: none;
@@ -303,12 +310,12 @@
 .trailer-btn-field {
   position: relative;
   width: 100%;
-  height: 60px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px 20px;
-  border: 2px solid #9c7e21;
+  padding: 10px 16px;
+  border: 1.5px solid #9c7e21;
   background: #161a1a;
   background-image: url('./assets/de199cd00f2de8d3061f6e4a81dc16eff89caf6c.png');
   background-size: cover;
@@ -319,7 +326,7 @@
 
 .trailer-btn-text {
   font-family: 'Space Mono', monospace;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   color: #ffffff;
   letter-spacing: -0.48px;
@@ -329,7 +336,7 @@
 .gameplay-btn-xem-trailer:hover .trailer-btn-field {
   border-color: #ffd700;
   background-color: #250303;
-  box-shadow: 0 0 25px rgba(217, 183, 76, 0.5), 0 0 15px rgba(153, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(217, 183, 76, 0.5), 0 0 12px rgba(153, 0, 0, 0.4);
 }
 
 .gameplay-btn-xem-trailer:hover {
