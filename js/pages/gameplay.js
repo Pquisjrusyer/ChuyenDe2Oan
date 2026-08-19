@@ -243,34 +243,14 @@ export async function renderGameplay(container) {
           </h2>
         </div>
 
-        <!-- 3 Feature Cards -->
-        <div class="gameplay-experience-grid">
-          
-          <div class="gameplay-exp-card trailer-scroll-reveal trailer-reveal-left">
-            <div class="gameplay-exp-icon">🕯️</div>
-            <h3 class="gameplay-exp-title">Ánh Sáng & Bóng Tối</h3>
-            <p class="gameplay-exp-desc">
-              Ngọn đèn dầu leo lét là nguồn sáng duy nhất trong bóng đêm. Quản lý tài nguyên dầu cẩn thận nếu không muốn chìm vào bóng tối vô tận.
-            </p>
+        <!-- Cinematic Media Showcase Frame (1060:75502) -->
+        <div class="gameplay-experience-showcase-wrap trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1060:75502">
+          <div class="gameplay-experience-showcase-frame">
+            <img src="./assets/gameplay-trainghiem-frame.png" alt="Trải nghiệm chân thực - Không gian kinh dị Nhà Hứa" class="gameplay-experience-showcase-img" />
+            <div class="gameplay-experience-showcase-overlay"></div>
           </div>
-
-          <div class="gameplay-exp-card trailer-scroll-reveal trailer-reveal-fade-up">
-            <div class="gameplay-exp-icon">🎧</div>
-            <h3 class="gameplay-exp-title">Âm Thanh Không Gian 3D</h3>
-            <p class="gameplay-exp-desc">
-              Từng tiếng cót két của ván sàn gỗ, tiếng gió hú ngoài rừng tre và hơi thở lạnh lẽo sau gáy được tái hiện sống động với công nghệ Spatial Audio.
-            </p>
-          </div>
-
-          <div class="gameplay-exp-card trailer-scroll-reveal trailer-reveal-right">
-            <div class="gameplay-exp-icon">📜</div>
-            <h3 class="gameplay-exp-title">Tâm Linh Dân Gian</h3>
-            <p class="gameplay-exp-desc">
-              Bùa chú, bát hương, chuông đồng và gương soi bát quái được thiết kế chân thực theo văn hóa tâm linh truyền thống Việt Nam.
-            </p>
-          </div>
-
         </div>
+
       </section>
 
       <!-- ========================================================
