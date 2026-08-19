@@ -138,63 +138,23 @@ export async function renderCharacter(container) {
         <div class="char-cards-grid" data-node-id="1332:82338">
           
           <!-- Card 1: MINH (1332:82290) -->
-          <div class="char-card-item trailer-scroll-reveal" data-char-id="minh" data-node-id="1332:82290">
-            <div class="char-card-bg-img">
-              <img src="./assets/f17bf481c11882705bf65d21a504734bf8854437.png" alt="Minh" />
-            </div>
-            <div class="char-card-overlay"></div>
-            <div class="char-card-info-box">
-              <span class="char-card-role-label">Nhân vật chính</span>
-              <h3 class="char-card-name">MINH</h3>
-              <p class="char-card-class">Blogger - Người khám phá</p>
-              <p class="char-card-desc">Một người đam mê khám phá để lấy ý tưởng làm content</p>
-              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
-            </div>
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="minh" data-node-id="1332:82290" title="Nhấn để xem hồ sơ mật Minh">
+            <img src="./assets/card_minh.svg" alt="Thẻ nhân vật Minh" class="char-card-svg" />
           </div>
 
           <!-- Card 2: KHANG (1332:82423) -->
-          <div class="char-card-item trailer-scroll-reveal" data-char-id="khang" data-node-id="1332:82423">
-            <div class="char-card-bg-img">
-              <img src="./assets/2ff2f842537b4557c87e171d1175da9e0045cdb8.png" alt="Khang" />
-            </div>
-            <div class="char-card-overlay"></div>
-            <div class="char-card-info-box">
-              <span class="char-card-role-label">Bạn đồng hành</span>
-              <h3 class="char-card-name">KHANG</h3>
-              <p class="char-card-class">Sinh viên kỹ thuật</p>
-              <p class="char-card-desc">Cẩn trọng, am hiểu thiết bị ghi hình và đo đạc tần số tâm linh</p>
-              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
-            </div>
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="khang" data-node-id="1332:82423" title="Nhấn để xem hồ sơ mật Khang">
+            <img src="./assets/card_khang.svg" alt="Thẻ nhân vật Khang" class="char-card-svg" />
           </div>
 
           <!-- Card 3: HỨA VĂN LỘC (1332:82435) -->
-          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-van-loc" data-node-id="1332:82435">
-            <div class="char-card-bg-img">
-              <img src="./assets/9a458f3a1eff44dee77b77385682efd57863dbae.png" alt="Hứa Văn Lộc" />
-            </div>
-            <div class="char-card-overlay"></div>
-            <div class="char-card-info-box">
-              <span class="char-card-role-label">Trưởng tộc Hứa Gia</span>
-              <h3 class="char-card-name">HỨA VĂN LỘC</h3>
-              <p class="char-card-class">Chủ nhân dinh thự</p>
-              <p class="char-card-desc">Gia trưởng, quyền lực, ám ảnh bởi việc bảo vệ danh dự dòng tộc</p>
-              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
-            </div>
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-van-loc" data-node-id="1332:82435" title="Nhấn để xem hồ sơ mật Hứa Văn Lộc">
+            <img src="./assets/card_loc.svg" alt="Thẻ nhân vật Hứa Văn Lộc" class="char-card-svg" />
           </div>
 
           <!-- Card 4: HỨA NGỌC (1332:82447) -->
-          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-ngoc" data-node-id="1332:82447">
-            <div class="char-card-bg-img">
-              <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="Hứa Ngọc" />
-            </div>
-            <div class="char-card-overlay"></div>
-            <div class="char-card-info-box">
-              <span class="char-card-role-label">Oán hồn nữ</span>
-              <h3 class="char-card-name">HỨA NGỌC</h3>
-              <p class="char-card-class">Tiểu thư Hứa Gia</p>
-              <p class="char-card-desc">Người phụ nữ mang mặc cảm tội lỗi và oán niệm suốt 20 năm</p>
-              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
-            </div>
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-ngoc" data-node-id="1332:82447" title="Nhấn để xem hồ sơ mật Hứa Ngọc">
+            <img src="./assets/card_ngoc.svg" alt="Thẻ nhân vật Hứa Ngọc" class="char-card-svg" />
           </div>
 
         </div>
