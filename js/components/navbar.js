@@ -113,16 +113,19 @@ export function renderNavbar(container, currentHash) {
                 return `
                   <div class="nav-user-dropdown-wrapper" id="navUserDropdownWrapper">
                     <button type="button" class="nav-user-profile-btn" id="navUserBtn" aria-label="Menu người dùng ${user.username}" title="Tài khoản: ${user.username}">
-                      <div class="nav-user-avatar">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                          <circle cx="12" cy="7" r="4"></circle>
+                      <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-user-bg-img" />
+                      <div class="nav-user-btn-content">
+                        <div class="nav-user-avatar-gold">
+                          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </div>
+                        <span class="nav-user-name">${user.username.toUpperCase()}</span>
+                        <svg class="nav-user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2.5">
+                          <polyline points="6 9 12 15 18 9"></polyline>
                         </svg>
                       </div>
-                      <span class="nav-user-name">${user.username.toUpperCase()}</span>
-                      <svg class="nav-user-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="6 9 12 15 18 9"></polyline>
-                      </svg>
                     </button>
 
                     <div class="nav-user-dropdown-menu" id="navUserMenu">
@@ -132,16 +135,16 @@ export function renderNavbar(container, currentHash) {
                       </div>
                       <div class="nav-user-menu-divider"></div>
                       <a href="#character" class="nav-user-menu-item" id="navItemProfile">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span class="nav-menu-icon">👤</span>
                         <span>Hồ sơ nhân vật</span>
                       </a>
                       <a href="#collection" class="nav-user-menu-item" id="navItemCollection">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <span class="nav-menu-icon">🗂️</span>
                         <span>Bộ sưu tập manh mối</span>
                       </a>
                       <div class="nav-user-menu-divider"></div>
                       <button type="button" class="nav-user-menu-item nav-user-logout" id="navItemLogout">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                        <span class="nav-menu-icon">🚪</span>
                         <span>Đăng xuất</span>
                       </button>
                     </div>
