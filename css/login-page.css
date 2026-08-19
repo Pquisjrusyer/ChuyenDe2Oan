@@ -1,0 +1,404 @@
+/* ========================================================
+   OAN — LOGIN PAGE STYLES (Figma Node 1286:79841)
+   ======================================================== */
+
+.login-page-wrapper {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* ========================================================
+   1. MAIN LOGIN FORM SECTION (1286:79869)
+   ======================================================== */
+.login-main-section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(650px, 80vh, 962px);
+  background: linear-gradient(180deg, #0e0000 0%, rgba(9, 0, 0, 0.5) 25%, #0f0202 50%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(60px, 8vh, 90px) 20px clamp(40px, 6vh, 60px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.login-main-grid {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1580px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(40px, 6vw, 100px);
+}
+
+/* Left Column: Heading & Quick Register Link (1286:79870) */
+.login-left-col {
+  flex: 1 1 500px;
+  max-width: 651px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 4.5vh, 44px);
+}
+
+.login-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-title-big {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(36px, 4.2vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.8px;
+  line-height: 1.15;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.login-title-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Alt Register Callout Box (1286:79875) */
+.login-alt-register-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(22, 26, 26, 0.6);
+  border: 1px solid rgba(217, 183, 76, 0.35);
+  padding: 20px 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  max-width: 440px;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-alt-register-box:hover {
+  border-color: #d9b74c;
+  box-shadow: 0 0 20px rgba(217, 183, 76, 0.25);
+}
+
+.login-alt-register-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-alt-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+
+.login-alt-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.login-alt-sub:hover {
+  color: #d9b74c;
+}
+
+.login-alt-lock-icon {
+  width: 78px;
+  height: 78px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.login-alt-lock-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Right Column: 2 Inputs + Forgot Password + Submit Button (1286:79881) */
+.login-form-right-col {
+  flex: 1 1 550px;
+  max-width: 881px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.login-field-label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #d9b74c;
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+
+.login-field-input-box {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  border: 2px solid #767676;
+  background: #161a1a;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.login-field-input-box:focus-within {
+  border-color: #d9b74c;
+  box-shadow: 0 0 15px rgba(217, 183, 76, 0.4);
+}
+
+.login-input-element {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+}
+
+.login-input-element::placeholder {
+  color: #cdbda0;
+  opacity: 0.7;
+}
+
+.login-password-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cdbda0;
+  transition: color 0.25s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  outline: none;
+}
+
+.login-password-toggle-btn:hover {
+  color: #d9b74c;
+  transform: scale(1.1);
+}
+
+.login-password-toggle-btn .eye-off-icon {
+  display: none;
+}
+
+.login-password-toggle-btn.active .eye-icon {
+  display: none;
+}
+
+.login-password-toggle-btn.active .eye-off-icon {
+  display: block;
+  color: #d9b74c;
+}
+
+/* Forgot Password Link (1286:80399) */
+.login-forgot-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.login-forgot-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #990000;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+  transition: color 0.25s, text-shadow 0.25s;
+}
+
+.login-forgot-link:hover {
+  color: #e62217;
+  text-shadow: 0 0 12px rgba(230, 34, 23, 0.7);
+}
+
+/* Submit Button (1286:79887) */
+.login-submit-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.login-submit-btn {
+  border: 1px solid #b3b3b3;
+  background: transparent;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 237px;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.login-submit-btn:hover {
+  transform: scale(1.05);
+  border-color: #d9b74c;
+}
+
+.login-submit-btn-inner {
+  position: relative;
+  width: 217px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-submit-btn-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.login-submit-btn-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.login-submit-btn-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  margin: 0;
+}
+
+/* ========================================================
+   2. THIRD PARTY LOGIN SECTION (1286:79891)
+   ======================================================== */
+.login-third-party-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #180101 0%, #050101 100%);
+  padding: clamp(60px, 8vh, 100px) 20px clamp(80px, 10vh, 120px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(40px, 6vh, 64px);
+  overflow: hidden;
+}
+
+.login-third-party-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 700;
+  color: #990000;
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  text-shadow: 0 0 15px rgba(153, 0, 0, 0.6);
+}
+
+.login-platform-icons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(32px, 7vw, 131px);
+  flex-wrap: wrap;
+}
+
+.login-platform-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.login-platform-btn.btn-platform-steam {
+  width: clamp(90px, 9vw, 134px);
+  height: clamp(90px, 9vw, 134px);
+}
+
+.login-platform-btn.btn-platform-epic {
+  width: clamp(80px, 8vw, 120px);
+  height: clamp(90px, 9vw, 134px);
+}
+
+.login-platform-btn.btn-platform-xbox {
+  width: clamp(90px, 9vw, 134px);
+  height: clamp(90px, 9vw, 134px);
+}
+
+.login-platform-btn:hover {
+  transform: translateY(-6px) scale(1.08);
+  filter: brightness(1.25) drop-shadow(0 0 25px rgba(217, 183, 76, 0.6));
+}
+
+.login-platform-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ========================================================
+   RESPONSIVE BREAKPOINTS
+   ======================================================== */
+@media (max-width: 1024px) {
+  .login-main-grid {
+    flex-direction: column;
+  }
+
+  .login-left-col,
+  .login-form-right-col {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .login-alt-register-box {
+    max-width: 100%;
+  }
+}
