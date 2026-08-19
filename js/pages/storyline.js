@@ -106,11 +106,11 @@ export async function renderStoryline(container) {
         <div class="storyline-tl-vector-right" data-node-id="987:73051">
           <img src="./assets/febc28debbde6ce0955b130159a4939fb55c34ca.svg" alt="" />
         </div>
-        <div class="storyline-tl-ghost-right" data-node-id="989:73126">
-          <img src="./assets/07e106d153239fd57a876804d473b2e2a93ac6cc.png" alt="" />
+        <div class="storyline-tl-char-left trailer-scroll-reveal trailer-reveal-left" data-node-id="989:73129">
+          <img src="./assets/70e35fdf5cfd155e343a92c93dd0336941674795.png" alt="Nhân vật cốt truyện" />
         </div>
-        <div class="storyline-tl-ghost-left" data-node-id="989:73129">
-          <img src="./assets/70e35fdf5cfd155e343a92c93dd0336941674795.png" alt="" />
+        <div class="storyline-tl-char-right trailer-scroll-reveal trailer-reveal-right" data-node-id="989:73126">
+          <img src="./assets/07e106d153239fd57a876804d473b2e2a93ac6cc.png" alt="Nhân vật cốt truyện" />
         </div>
         <div class="storyline-tl-top-fade" data-node-id="1040:76491"></div>
         <div class="storyline-tl-bottom-fade" data-node-id="989:73170"></div>
