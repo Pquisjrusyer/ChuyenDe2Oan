@@ -13,7 +13,7 @@
 }
 
 /* ========================================================
-   GLOBAL AMBIENT & GRUNGE BACKGROUND
+   GLOBAL AMBIENT & GRUNGE BACKGROUND (Figma Node 957:430263)
    ======================================================== */
 .storyline-bg-ambient {
   position: absolute;
@@ -26,13 +26,30 @@
   overflow: hidden;
 }
 
+.storyline-bg-scratched-grunge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  min-width: 1984px;
+  height: 100%;
+  background-image: url('./assets/2ccae5c37964aff1c768a42db477654661a5b837.png');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 1984px auto;
+  mix-blend-mode: color-dodge;
+  opacity: 0.30;
+  pointer-events: none;
+}
+
 .storyline-grunge-overlay {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 50% 30%, rgba(51, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 70%),
-              radial-gradient(circle at 80% 70%, rgba(80, 5, 5, 0.15) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 20%, rgba(51, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.85) 60%),
+              radial-gradient(circle at 80% 60%, rgba(80, 5, 5, 0.15) 0%, transparent 60%);
   pointer-events: none;
 }
 

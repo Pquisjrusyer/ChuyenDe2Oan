@@ -6,8 +6,9 @@ export async function renderStoryline(container) {
   container.innerHTML = `
     <div class="storyline-page-figma" data-node-id="928:2111">
       
-      <!-- Ambient Background Layers (957:430263) -->
+      <!-- Ambient Background Layer (957:430263) -->
       <div class="storyline-bg-ambient" data-node-id="957:430263">
+        <div class="storyline-bg-scratched-grunge" data-node-id="957:430259"></div>
         <div class="storyline-grunge-overlay"></div>
       </div>
 
