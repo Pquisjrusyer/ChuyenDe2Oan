@@ -136,11 +136,21 @@ export async function renderProfile(container) {
 
             <!-- Right: Fast Actions -->
             <div class="profile-quick-actions">
-              <a href="#gameplay" class="btn-profile-primary">
-                <span class="btn-text">VÀO GAME TIẾP TỤC</span>
+              <a href="#gameplay" class="profile-submit-btn">
+                <div class="profile-submit-btn-inner">
+                  <div class="profile-submit-btn-bg">
+                    <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" />
+                  </div>
+                  <span class="profile-submit-btn-text">VÀO GAME TIẾP TỤC</span>
+                </div>
               </a>
-              <a href="#collection" class="btn-profile-secondary">
-                <span class="btn-text">BỘ SƯU TẬP MANH MỐI</span>
+              <a href="#collection" class="profile-submit-btn profile-btn-secondary">
+                <div class="profile-submit-btn-inner">
+                  <div class="profile-submit-btn-bg">
+                    <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" />
+                  </div>
+                  <span class="profile-submit-btn-text">BỘ SƯU TẬP MANH MỐI</span>
+                </div>
               </a>
             </div>
           </div>
@@ -327,13 +337,13 @@ export async function renderProfile(container) {
             <p class="profile-security-desc">Tài khoản được mã hóa bảo vệ theo tiêu chuẩn Dinh Thự OAN.</p>
           </div>
           <div class="profile-footer-right">
-            <button type="button" class="btn-profile-logout" id="profilePageLogoutBtn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                <polyline points="16 17 21 12 16 7"></polyline>
-                <line x1="21" y1="12" x2="9" y2="12"></line>
-              </svg>
-              <span>ĐĂNG XUẤT TÀI KHOẢN</span>
+            <button type="button" class="profile-submit-btn profile-btn-logout" id="profilePageLogoutBtn">
+              <div class="profile-submit-btn-inner">
+                <div class="profile-submit-btn-bg">
+                  <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" />
+                </div>
+                <span class="profile-submit-btn-text">ĐĂNG XUẤT</span>
+              </div>
             </button>
           </div>
         </div>
