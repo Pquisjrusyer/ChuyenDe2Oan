@@ -15,39 +15,71 @@ export async function renderGameplay(container) {
            1. HERO SECTION (1060:75035)
            ======================================================== -->
       <section class="gameplay-hero-section" data-node-id="1060:75035">
-        <div class="gameplay-hero-grid">
+        <div class="gameplay-hero-container">
           
-          <!-- Left: Main Media Frame (1060:75231) -->
-          <div class="gameplay-hero-main-media trailer-scroll-reveal trailer-reveal-left" data-node-id="1060:75231">
-            <img src="./assets/9c9a7497ed3669bfc77c7d6b21c3f49d9cf0d8db.png" alt="OAN Gameplay Main" data-node-id="1060:75299" />
+          <!-- Top Row: Main Media (Left) & Spirit Poster (Right) -->
+          <div class="gameplay-hero-top-row">
+            <!-- Left: Main Media Frame (1060:75231) -->
+            <div class="gameplay-hero-main-media trailer-scroll-reveal trailer-reveal-left" data-node-id="1060:75231">
+              <img src="./assets/9c9a7497ed3669bfc77c7d6b21c3f49d9cf0d8db.png" alt="OAN Gameplay Main" data-node-id="1060:75299" />
+            </div>
+
+            <!-- Right: Side Character / Spirit Poster (1060:75841) -->
+            <div class="gameplay-hero-side-poster trailer-scroll-reveal trailer-reveal-right" data-node-id="1060:75841">
+              <img src="./assets/ddeaeac97a526f71e1066933785c0335eb3b18e6.png" alt="OAN Gameplay Spirit" />
+            </div>
           </div>
 
-          <!-- Right: Side Character / Spirit Poster (1060:75841) -->
-          <div class="gameplay-hero-side-poster trailer-scroll-reveal trailer-reveal-right" data-node-id="1060:75841">
-            <img src="./assets/ddeaeac97a526f71e1066933785c0335eb3b18e6.png" alt="OAN Gameplay Spirit" />
-          </div>
+          <!-- Bottom Row: Title, Subtitle & Action Buttons (1060:75297) -->
+          <div class="gameplay-hero-bottom-bar trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1060:75297">
+            
+            <!-- Left: Title & Subtitle (1060:75237) -->
+            <div class="gameplay-hero-text-col" data-node-id="1060:75237">
+              <h1 class="gameplay-hero-heading" data-node-id="1060:75232">GAMEPLAY</h1>
+              <div class="gameplay-hero-sub-box" data-node-id="1060:75234">
+                <p class="gameplay-hero-sub" data-node-id="1060:75235">
+                  Khám phá cách bạn sẽ sinh tồn trong thế giới của OÁN. Một hành trình<br />
+                  tâm linh đầy rẫy những uẩn khúc và nỗi kinh hoàng từ văn hóa Việt Nam.
+                </p>
+              </div>
+            </div>
 
-        </div>
+            <!-- Right: 2 CTA Buttons (1060:75296) -->
+            <div class="gameplay-hero-btns-col" data-node-id="1060:75296">
+              
+              <!-- Button 1: TẢI GAME (1060:75238) -->
+              <a href="#download" class="gameplay-btn-tai-game" data-node-id="1060:75238" title="Tải game OÁN">
+                <div class="tai-game-frame-parts">
+                  <div class="tg-fp1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
+                  <div class="tg-fp2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                  <div class="tg-fp3"><img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" /></div>
+                  <div class="tg-fp4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                  <div class="tg-fp5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
+                </div>
+                <div class="tai-game-inner-body">
+                  <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" class="tai-game-texture" alt="" />
+                </div>
+                <div class="tai-game-glow-3"></div>
+                <div class="tai-game-glow-2"></div>
+                <div class="tai-game-glow-1"></div>
+                <span class="tai-game-text" data-node-id="I1060:75238;906:1557">TẢI GAME</span>
+              </a>
 
-        <!-- Bottom Row: Title, Subtitle & Action Buttons (1060:75297) -->
-        <div class="gameplay-hero-bottom-bar trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1060:75297">
-          
-          <!-- Left: Title & Subtitle (1060:75237) -->
-          <div class="gameplay-hero-text-col" data-node-id="1060:75237">
-            <h1 class="gameplay-hero-heading" data-node-id="1060:75232">GAMEPLAY</h1>
-            <p class="gameplay-hero-sub" data-node-id="1060:75235">
-              Khám phá cách bạn sẽ sinh tồn trong thế giới của OÁN. Một hành trình tâm linh đầy rẫy những uẩn khúc và nỗi kinh hoàng từ văn hóa Việt Nam.
-            </p>
-          </div>
+              <!-- Button 2: XEM TRAILER (1060:75250) -->
+              <a href="#trailer" class="gameplay-btn-xem-trailer" data-node-id="1060:75250" title="Xem trailer">
+                <div class="trailer-corner-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="trailer-btn-field" data-node-id="I1060:75250;708:582">
+                  <span class="trailer-btn-text" data-node-id="I1060:75250;708:606">XEM TRAILER</span>
+                </div>
+                <div class="trailer-corner-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
+              </a>
 
-          <!-- Right: CTA Buttons (1060:75296) -->
-          <div class="gameplay-hero-btns-col" data-node-id="1060:75296">
-            <a href="#download" class="gameplay-cta-red-btn" data-node-id="1060:75238">
-              <span class="gameplay-cta-red-text">TẢI GAME</span>
-            </a>
-            <a href="#trailer" class="gameplay-trailer-btn" data-node-id="1060:75250">
-              <span class="gameplay-trailer-text">XEM TRAILER</span>
-            </a>
+            </div>
+
           </div>
 
         </div>
