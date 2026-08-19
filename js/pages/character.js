@@ -117,29 +117,13 @@ export async function renderCharacter(container) {
             <div class="char-hero-actions" data-node-id="1307:82388">
               
               <!-- Button 1: Xem trailer (1307:82311) -->
-              <a href="#trailer" class="char-horror-btn char-btn-trailer" data-node-id="1307:82311">
-                <div class="char-btn-bracket-left">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
-                </div>
-                <div class="char-btn-field" data-node-id="I1307:82311;708:582">
-                  <span class="char-btn-text" data-node-id="I1307:82311;708:606">Xem trailer</span>
-                </div>
-                <div class="char-btn-bracket-right">
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
-                </div>
+              <a href="#trailer" class="char-hero-svg-btn" data-node-id="1307:82311" title="Xem trailer">
+                <img src="./assets/btn_xem_trailer.svg" alt="Xem trailer" />
               </a>
 
               <!-- Button 2: Khám phá câu chuyện (1307:82329) -->
-              <button type="button" class="char-horror-btn char-btn-explore" id="btnOpenHuaAnDossier" data-node-id="1307:82329">
-                <div class="char-btn-bracket-left">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
-                </div>
-                <div class="char-btn-field" data-node-id="I1307:82329;708:582">
-                  <span class="char-btn-text" data-node-id="I1307:82329;708:606">Khám phá câu chuyện</span>
-                </div>
-                <div class="char-btn-bracket-right">
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
-                </div>
+              <button type="button" class="char-hero-svg-btn" id="btnOpenHuaAnDossier" data-node-id="1307:82329" title="Khám phá câu chuyện">
+                <img src="./assets/btn_kham_pha_cau_chuyen.svg" alt="Khám phá câu chuyện" />
               </button>
 
             </div>

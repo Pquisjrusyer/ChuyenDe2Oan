@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at 50% 15%, rgba(51, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.9) 65%),
-              radial-gradient(circle at 80% 60%, rgba(80, 5, 5, 0.25) 0%, transparent 60%);
+    radial-gradient(circle at 80% 60%, rgba(80, 5, 5, 0.25) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -75,7 +75,7 @@
   height: 1375px;
   mix-blend-mode: soft-light;
   pointer-events: none;
-  z-index: 2;
+  z-index: 5;
 }
 
 .char-hero-bg-grunge img {
@@ -157,92 +157,29 @@
   margin-top: 10px;
 }
 
-/* Horror Buttons */
-.char-horror-btn {
-  position: relative;
-  display: flex;
+/* SVG Buttons from ico/btn */
+.char-hero-svg-btn {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 91px;
-  padding: 0 17px;
   background: transparent;
   border: none;
-  text-decoration: none;
+  padding: 0;
   cursor: pointer;
-  box-sizing: border-box;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
 }
 
-.char-btn-trailer {
-  width: 225px;
-}
-
-.char-btn-explore {
-  width: 336px;
-}
-
-.char-btn-bracket-left,
-.char-btn-bracket-right {
-  position: absolute;
-  top: 4px;
-  bottom: 4px;
-  width: 80px;
-  display: flex;
-  align-items: center;
+.char-hero-svg-btn img {
+  display: block;
+  height: 91px;
+  width: auto;
   pointer-events: none;
-  z-index: 2;
 }
 
-.char-btn-bracket-left {
-  left: 0;
-}
-
-.char-btn-bracket-right {
-  right: 0;
-  transform: scaleX(-1);
-}
-
-.char-btn-bracket-left img,
-.char-btn-bracket-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.char-btn-field {
-  position: relative;
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 20px;
-  border: 2px solid #9c7e21;
-  background: #161a1a;
-  background-image: url('./assets/de199cd00f2de8d3061f6e4a81dc16eff89caf6c.png');
-  background-size: cover;
-  box-sizing: border-box;
-  z-index: 1;
-  transition: all 0.3s ease;
-}
-
-.char-horror-btn:hover .char-btn-field {
-  border-color: #ffd700;
-  background-color: #250303;
-  box-shadow: 0 0 25px rgba(217, 183, 76, 0.5), 0 0 15px rgba(153, 0, 0, 0.4);
-}
-
-.char-horror-btn:hover {
-  transform: translateY(-2px);
-}
-
-.char-btn-text {
-  font-family: 'Space Mono', monospace;
-  font-size: 24px;
-  font-weight: 400;
-  color: #ffffff;
-  letter-spacing: -0.48px;
-  white-space: nowrap;
+.char-hero-svg-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  filter: drop-shadow(0 0 20px rgba(217, 183, 76, 0.6)) drop-shadow(0 0 10px rgba(153, 0, 0, 0.5));
 }
 
 .char-hero-portrait-wrap {
@@ -763,21 +700,21 @@
   .char-hero-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .char-hero-portrait-wrap {
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .char-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .char-concept-grid {
     grid-template-columns: 1fr;
     max-width: 600px;
   }
-  
+
   .char-modal-box {
     grid-template-columns: 1fr;
   }
@@ -787,7 +724,7 @@
   .char-hero-section {
     padding: 100px 20px 40px;
   }
-  
+
   .char-cards-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
