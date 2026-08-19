@@ -1,0 +1,16 @@
+{
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "<frame id=\"1363:87501\" name=\"đăng ký thành công\" x=\"15373\" y=\"1517\" width=\"1920\" height=\"1461\">\n  <frame id=\"1363:87502\" name=\"hero\" x=\"0\" y=\"0\" width=\"1920\" height=\"854\">\n    <frame id=\"1363:87503\" name=\"Frame 427319044\" x=\"603\" y=\"220\" width=\"715\" height=\"535\">\n      <text id=\"1363:87504\" name=\"ĐĂNG NHẬP THÀNH CÔNG\" x=\"0\" y=\"0\" width=\"715\" height=\"166\" />\n      <frame id=\"1363:87505\" name=\"Chield_check_fill\" x=\"231.5\" y=\"179\" width=\"252\" height=\"252\" />\n      <instance id=\"1363:87509\" name=\"Button 1\" x=\"0\" y=\"444\" width=\"715\" height=\"91\" />\n    </frame>\n    <rounded-rectangle id=\"1363:87510\" name=\"grunge-texture-background 2\" x=\"-229\" y=\"-425\" width=\"2379\" height=\"1703\" />\n  </frame>\n  <instance id=\"1363:87511\" name=\"Footer (Desktop)\" x=\"0\" y=\"854\" width=\"1920\" height=\"607\" />\n  <instance id=\"1363:87512\" name=\"Menu/Navbar\" x=\"0\" y=\"0\" width=\"1920\" height=\"103\" />\n</frame>"
+      },
+      {
+        "type": "text",
+        "text": "IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design."
+      }
+    ]
+  },
+  "jsonrpc": "2.0",
+  "id": 2
+}

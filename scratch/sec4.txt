@@ -1,0 +1,74 @@
+const imgNntaggaeme1 = "http://localhost:3845/assets/efe9683bc85804059d472260803fb9d037a6894d.png";
+const imgNntaggaeme2 = "http://localhost:3845/assets/0ba3f8714f3943a121ff8f7c2df272a3410e25a4.png";
+const imgNntaggaeme3 = "http://localhost:3845/assets/6554ae6fd57b46bda098add06ae5d7f16e378a1d.png";
+const imgLeft = "http://localhost:3845/assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg";
+const imgLeft1 = "http://localhost:3845/assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg";
+type IconNeefnTangProps = {
+  className?: string;
+  property1?: "icon epic" | "icon steam" | "icon xbox";
+};
+
+function IconNeefnTang({ className, property1 = "icon steam" }: IconNeefnTangProps) {
+  const isIconEpic = property1 === "icon epic";
+  const isIconXbox = property1 === "icon xbox";
+  return (
+    <div className={className || `relative ${isIconEpic ? "h-[134px] w-[120px]" : "size-[134px]"}`} id={isIconXbox ? "node-1284_79472" : isIconEpic ? "node-1284_79473" : "node-1284_79474"}>
+      {property1 === "icon steam" && (
+        <div className="absolute left-0 size-[134px] top-0" data-node-id="1284:79465" data-name="nẻntaggaeme 1">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgNntaggaeme1} />
+        </div>
+      )}
+      {isIconEpic && (
+        <div className="absolute h-[134px] left-0 top-0 w-[120px]" data-node-id="1284:79467" data-name="nẻntaggaeme 2">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgNntaggaeme2} />
+        </div>
+      )}
+      {isIconXbox && (
+        <div className="absolute left-0 size-[134px] top-0" data-node-id="1284:79468" data-name="nẻntaggaeme 3">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgNntaggaeme3} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Frame() {
+  return (
+    <div className="bg-gradient-to-b from-[#180101] relative size-full to-[#050101]" data-node-id="1284:79446">
+      <div className="-translate-x-1/2 absolute flex items-center justify-center left-1/2 top-[122px] w-[1896px]" data-node-id="1284:79447">
+        <div className="-scale-y-100 flex-none rotate-180">
+          <div className="content-stretch flex gap-[10px] items-center justify-center px-[282px] py-[10px] relative w-[1896px]" data-name="ctaline">
+            <div className="flex items-center justify-center relative shrink-0" data-node-id="1284:79448">
+              <div className="-scale-y-100 flex-none rotate-180">
+                <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative text-[#900] text-[40px] text-center tracking-[-0.8px] whitespace-nowrap">
+                  <p className="leading-[1.3]">Đăng ký với</p>
+                </div>
+              </div>
+            </div>
+            <div className="absolute h-[79px] left-[121px] top-0 w-[1653px]" data-node-id="1284:79449" data-name="Horror frame 1">
+              <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1284:79449;708:35" data-name="Left">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft} />
+              </div>
+              <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1284:79449;708:38" data-name="Spacer left" />
+              <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1284:79449;708:42" data-name="Spacer right" />
+              <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1284:79449;708:43" style={{ containerType: "size" }}>
+                <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+                  <div className="relative size-full" data-name="Left">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft1} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute content-stretch flex items-center justify-center left-[calc(50%+0.5px)] top-[294px] w-[1575px]" data-node-id="1284:79485">
+        <div className="content-stretch flex gap-[131px] items-center relative shrink-0" data-node-id="1284:79484">
+          <IconNeefnTang className="relative shrink-0 size-[134px]" />
+          <IconNeefnTang className="h-[134px] relative shrink-0 w-[120px]" property1="icon epic" />
+          <IconNeefnTang className="relative shrink-0 size-[134px]" property1="icon xbox" />
+        </div>
+      </div>
+    </div>
+  );
+}

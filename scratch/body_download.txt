@@ -1,0 +1,824 @@
+export default function TiGameDesktop() {
+  return (
+    <div className="bg-gradient-to-b content-stretch flex flex-col from-[#1d0000] items-center relative size-full to-black" data-node-id="1170:80024" data-name="Tải game desktop">
+      <div className="h-[1417px] overflow-clip relative shrink-0 w-full" data-node-id="1170:80129" data-name="herosection">
+        <KhungDiChuyn className="absolute block cursor-pointer h-[756px] left-[calc(58.33%+120px)] top-[162px] w-[727px]" />
+        <div className="absolute h-[279px] left-[calc(58.33%+14px)] top-[1138px] w-[437px]" data-node-id="1195:78572" data-name="image 63">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[249.15%] left-[-130.54%] max-w-none top-[-149.15%] w-[238.14%]" src={imgImage76} />
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[89px] items-start justify-center left-[calc(8.33%+41px)] top-[105px] w-[1255px]" data-node-id="1195:78465">
+          <div className="content-stretch flex flex-col gap-[86px] items-start relative shrink-0" data-node-id="1195:78466" data-name="title tải áon">
+            <div className="content-stretch flex gap-[71px] items-end p-[20px] relative shrink-0" data-node-id="1195:78467" data-name="TẢI OÁN">
+              <div className="h-[198.172px] relative shrink-0 w-[368.124px]" data-node-id="1195:78468">
+                <div className="absolute inset-[-0.5%_-0.27%_-1.01%_-0.54%]">
+                  <img alt="" className="block max-w-none size-full" src={imgFrame427318949} />
+                </div>
+              </div>
+              <div className="h-[187.46px] relative shrink-0 w-[375.128px]" data-node-id="1195:78472">
+                <div className="absolute inset-[-0.53%_-0.27%]">
+                  <img alt="" className="block max-w-none size-full" src={imgFrame427318948} />
+                </div>
+              </div>
+            </div>
+            <div className="border-[#900] border-l-2 border-solid content-stretch flex items-center justify-center pl-[20px] pr-[142px] py-[10px] relative shrink-0 w-full" data-node-id="1195:78476">
+              <div className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[0] not-italic relative shrink-0 text-[#9c7e21] text-[32px] w-[907px]" data-node-id="1195:78477">
+                <p className="leading-[141.16000366210938%] mb-0">Bóng tối không chỉ là nơi sự thật bị chôn vùi.</p>
+                <p>
+                  <span className="leading-[141.16000366210938%]">{`Hãy cầm đèn pin, ghi lại dấu vết và khám phá bí ẩn trong `}</span>
+                  <span className="leading-[141.16000366210938%] text-[#900]">Ngôi Nhà Hứa.</span>
+                </p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[20px] items-center justify-center relative shrink-0" data-node-id="1195:78478" data-name="btn">
+              <TiNgayBtnNe className="border-2 border-[#802510] border-solid content-stretch flex flex-col gap-[10px] items-start overflow-clip px-[10px] py-[8px] relative shrink-0 w-[384px]" />
+              <CuHinhBtn className="border-2 border-[#616161] border-solid content-stretch cursor-pointer flex flex-col gap-[10px] items-start overflow-clip px-[10px] py-[8px] relative shrink-0 w-[713px]" />
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1195:78481" data-name="frame tong">
+            <div className="h-[367px] overflow-clip relative shrink-0 w-[1255px]" data-node-id="1195:78482" data-name="frame diwosi">
+              <div className="absolute h-[402px] left-0 top-[-19px] w-[1260.115px]" data-node-id="1195:78483" data-name="image 68">
+                <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage68} />
+              </div>
+              <div className="absolute bg-black blur-[126.7px] h-[445px] left-[132px] opacity-80 top-[-39px] w-[904px]" data-node-id="1195:78484" />
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[23px] items-center left-1/2 top-[calc(50%-0.5px)] w-[1135px]" data-node-id="1195:78485">
+                <IconNoiDungNho className="content-stretch flex flex-col items-center justify-center overflow-clip px-[20px] relative shrink-0" />
+                <div className="content-stretch flex flex-col items-center justify-center overflow-clip px-[20px] relative shrink-0" data-node-id="1195:78487" data-name="icon noi dung nho">
+                  <div className="content-stretch flex flex-col h-[202px] items-center justify-center relative shrink-0 w-[215px]" data-node-id="I1195:78487;1195:1709">
+                    <button className="block cursor-pointer h-[278px] relative shrink-0 w-[297px]" data-node-id="I1195:78487;1195:1703" data-name="icontaioan">
+                      <div className="absolute h-[138px] left-[75px] top-[70px] w-[147px]" data-node-id="I1195:78487;1195:1703;1195:1669" data-name="image 71">
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                          <img alt="" className="absolute h-[368.35%] left-[-148.76%] max-w-none top-[-127.34%] w-[517.17%]" src={imgImage74} />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div className="[word-break:break-word] content-stretch flex flex-col items-center leading-[141.16000366210938%] not-italic relative shrink-0 text-[#98826e] text-center w-[216px]" data-node-id="I1195:78487;1195:1707" data-name="title nhỏ">
+                    <p className="font-['Space_Mono:Bold'] h-[53px] relative shrink-0 text-[32px] w-full" data-node-id="I1195:78487;1195:1705">
+                      PHÂN TÍCH
+                    </p>
+                    <p className="font-['Space_Mono:Regular'] h-[57px] relative shrink-0 text-[24px] w-full" data-node-id="I1195:78487;1195:1706">
+                      Lời thì thầm
+                    </p>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col items-center justify-center overflow-clip px-[20px] relative shrink-0" data-node-id="1195:78488" data-name="icon noi dung nho">
+                  <div className="content-stretch flex flex-col h-[202px] items-center justify-center relative shrink-0 w-[215px]" data-node-id="I1195:78488;1195:1709">
+                    <button className="block cursor-pointer h-[278px] relative shrink-0 w-[297px]" data-node-id="I1195:78488;1195:1703" data-name="icontaioan">
+                      <div className="absolute h-[138px] left-[75px] top-[70px] w-[147px]" data-node-id="I1195:78488;1195:1703;1195:1670" data-name="image 72">
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                          <img alt="" className="absolute h-[368.35%] left-[-272.14%] max-w-none top-[-127.34%] w-[517.17%]" src={imgImage74} />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div className="[word-break:break-word] content-stretch flex flex-col items-center leading-[141.16000366210938%] not-italic relative shrink-0 text-[#98826e] text-center w-[216px]" data-node-id="I1195:78488;1195:1707" data-name="title nhỏ">
+                    <p className="font-['Space_Mono:Bold'] h-[53px] relative shrink-0 text-[32px] w-full" data-node-id="I1195:78488;1195:1705">
+                      KHÁM PHÁ
+                    </p>
+                    <p className="font-['Space_Mono:Regular'] h-[57px] relative shrink-0 text-[24px] w-full" data-node-id="I1195:78488;1195:1706">
+                      Ngôi Nhà Hứa
+                    </p>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-col items-center justify-center overflow-clip px-[20px] relative shrink-0" data-node-id="1195:78489" data-name="icon noi dung nho">
+                  <div className="content-stretch flex flex-col h-[202px] items-center justify-center relative shrink-0 w-[215px]" data-node-id="I1195:78489;1195:1709">
+                    <button className="block cursor-pointer h-[278px] relative shrink-0 w-[297px]" data-node-id="I1195:78489;1195:1703" data-name="icontaioan">
+                      <div className="absolute h-[138px] left-[75px] top-[70px] w-[147px]" data-node-id="I1195:78489;1195:1703;1195:1671" data-name="image 73">
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                          <img alt="" className="absolute h-[368.35%] left-[-390.84%] max-w-none top-[-127.34%] w-[517.17%]" src={imgImage74} />
+                        </div>
+                      </div>
+                    </button>
+                  </div>
+                  <div className="[word-break:break-word] content-stretch flex flex-col items-center leading-[141.16000366210938%] not-italic relative shrink-0 text-[#98826e] text-center w-[216px]" data-node-id="I1195:78489;1195:1707" data-name="title nhỏ">
+                    <p className="font-['Space_Mono:Bold'] h-[53px] relative shrink-0 text-[32px] w-full" data-node-id="I1195:78489;1195:1705">
+                      ĐỐI MẶT
+                    </p>
+                    <p className="font-['Space_Mono:Regular'] h-[57px] relative shrink-0 text-[24px] w-full" data-node-id="I1195:78489;1195:1706">
+                      Sự thật
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[1997px] left-1/2 mix-blend-overlay top-1/2 w-[1996px]" data-node-id="1195:78612" data-name="78042 2">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute left-0 max-w-none size-full top-0" src={img780422} />
+          </div>
+        </div>
+        <div className="absolute bg-gradient-to-l from-[#130101] h-[1539px] left-[calc(66.67%+116px)] to-[rgba(0,0,0,0)] top-[-46px] w-[591px]" data-node-id="1195:78613" />
+        <div className="absolute flex h-[1539px] items-center justify-center left-[-212px] top-[-46px] w-[591px]" data-node-id="1195:78614">
+          <div className="-scale-y-100 flex-none rotate-180">
+            <div className="bg-gradient-to-l from-[#130101] h-[1539px] relative to-[rgba(0,0,0,0)] w-[591px]" />
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute bottom-[-280px] flex h-[591px] items-center justify-center left-[calc(50%-0.5px)] w-[1539px]" data-node-id="1195:78618">
+          <div className="-scale-y-100 flex-none rotate-90">
+            <div className="bg-gradient-to-l from-[#130101] h-[1539px] relative to-[rgba(0,0,0,0)] w-[591px]" />
+          </div>
+        </div>
+      </div>
+      <div className="h-[1308px] overflow-clip relative shrink-0 w-full" data-node-id="1195:78620" data-name="platform section">
+        <div className="-translate-x-1/2 absolute flex h-[1180px] items-center justify-center left-[calc(50%-0.5px)] top-[-70px] w-[1921px]" data-node-id="1195:78621">
+          <div className="-rotate-90 flex-none">
+            <div className="bg-gradient-to-l from-[#130101] h-[1921px] relative to-[rgba(0,0,0,0)] w-[1180px]" />
+          </div>
+        </div>
+        <div className="absolute h-0 left-[calc(8.33%+35.5px)] top-[253px] w-[344.5px]" data-node-id="1218:78497">
+          <div className="absolute inset-[-0.5px_-0.15%]">
+            <img alt="" className="block max-w-none size-full" src={imgVector161} />
+          </div>
+        </div>
+        <div className="[word-break:break-word] absolute content-stretch flex flex-col gap-[20px] items-start leading-[normal] left-[calc(8.33%+12px)] not-italic p-[20px] top-[65px] w-[461px]" data-node-id="1218:78496">
+          <p className="font-['Space_Mono:Bold'] relative shrink-0 text-[#d9b74c] text-[48px] w-full" data-node-id="1218:78494">{`KHÁM PHÁ THÊM `}</p>
+          <p className="font-['Space_Mono:Regular'] relative shrink-0 text-[#9ca3af] text-[16px] w-full" data-node-id="1218:78495">
+            Tải xuống Trò chơi đang có mặt tại các nền tảng
+          </p>
+        </div>
+        <div className="-translate-x-1/2 absolute content-stretch flex gap-[60px] items-center justify-center left-[calc(50%+0.5px)] p-[20px] top-[271px]" data-node-id="1218:78516">
+          <BTagIconPlatform className="h-[712px] relative shrink-0 w-[521px]" />
+          <div className="content-stretch flex items-center pt-[20px] relative shrink-0" data-node-id="1218:78527">
+            <BTagIconPlatform className="h-[680px] relative shrink-0 w-[470px]" property1="steam icon" />
+          </div>
+          <div className="content-stretch flex items-center pt-[20px] relative shrink-0" data-node-id="1218:78528">
+            <BTagIconPlatform className="h-[680px] relative shrink-0 w-[497px]" property1="epicgame icon" />
+          </div>
+        </div>
+        <div className="-translate-x-1/2 [word-break:break-word] absolute content-stretch flex gap-[328px] items-center justify-center leading-[normal] left-1/2 not-italic p-[20px] text-center top-[1005px]" data-node-id="1218:78538">
+          <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[226px]" data-node-id="1218:78535">
+            <p className="font-['Space_Mono:Bold'] relative shrink-0 text-[32px] text-white w-full" data-node-id="1218:78529">{`Window PC `}</p>
+            <p className="font-['Space_Mono:Regular'] relative shrink-0 text-[#c6a02a] text-[16px] w-full" data-node-id="1218:78532">
+              Trình cài đặt trực tiếp
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[20px] items-start relative shrink-0 w-[216px]" data-node-id="1218:78536">
+            <p className="font-['Space_Mono:Bold'] relative shrink-0 text-[32px] text-white w-full" data-node-id="1218:78530">
+              Steam Store
+            </p>
+            <p className="font-['Space_Mono:Regular'] relative shrink-0 text-[#c6a02a] text-[16px] w-full" data-node-id="1218:78533">
+              Xem thêm trên Steam
+            </p>
+          </div>
+          <div className="content-stretch flex flex-col gap-[20px] items-start justify-center relative shrink-0 w-[226px]" data-node-id="1218:78537">
+            <p className="font-['Space_Mono:Bold'] relative shrink-0 text-[32px] text-white w-full" data-node-id="1218:78531">
+              Epic Store
+            </p>
+            <p className="font-['Space_Mono:Regular'] relative shrink-0 text-[#c6a02a] text-[16px] w-full" data-node-id="1218:78534">
+              Xem thêm trên Epic Game
+            </p>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[1997px] left-1/2 mix-blend-overlay top-[calc(50%-0.5px)] w-[1996px]" data-node-id="1218:78657" data-name="78042 2">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute left-0 max-w-none size-full top-0" src={img780422} />
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute bottom-[1044px] flex h-[591px] items-center justify-center left-[calc(50%-0.5px)] w-[1951px]" data-node-id="1218:78658">
+          <div className="-rotate-90 flex-none">
+            <div className="bg-gradient-to-l from-[#130101] h-[1951px] relative to-[rgba(0,0,0,0)] w-[591px]" />
+          </div>
+        </div>
+      </div>
+      <div className="h-[892px] overflow-clip relative shrink-0 w-full" data-node-id="1218:78659">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[64px] h-[606px] items-start justify-center left-[calc(50%+1px)] p-[20px] top-[calc(50%+129px)] w-[1256px]" data-node-id="1170:79837" data-name="Container">
+          <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[508px]" data-node-id="1170:79838" data-name="Minimum">
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79839" data-name="Heading 2">
+              <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] not-italic relative shrink-0 text-[#d9b74c] text-[64px] tracking-[0.96px] w-full" data-node-id="1170:79840">
+                <p className="leading-[56px]">TỐI THIỂU</p>
+              </div>
+            </div>
+            <div className="border-[#9c7e21] border-l border-solid content-stretch flex flex-col gap-[24px] items-start pl-[33px] relative shrink-0 w-full" data-node-id="1170:79841" data-name="VerticalBorder">
+              <div className="relative shrink-0 w-full" data-node-id="1170:79842" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79843" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79844">
+                      <p className="leading-[16px]">HỆ ĐIỀU HÀNH</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79845" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79846" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">Windows 10 64-bit</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79847" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79848" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79849">
+                      <p className="leading-[16px]">Phần cứng</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79850" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79851" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">Intel Core i5-8400 / AMD Ryzen 5 1600</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79852" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79853" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79854">
+                      <p className="leading-[16px]">BỘ NHỚ</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79855" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79856" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">12 GB RAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79857" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79858" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79859">
+                      <p className="leading-[16px]">ĐỒ HỌA</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79860" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79861" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">NVIDIA GeForce GTX 1060 (6GB) / AMD Radeon RX 580</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79862" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79863" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79864">
+                      <p className="leading-[16px]">DUNG LƯỢNG</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79865" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79866" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">50 GB available space (SSD Recommended)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[508px]" data-node-id="1170:79867" data-name="Recommended">
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79868" data-name="Heading 2">
+              <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] not-italic relative shrink-0 text-[#d9b74c] text-[64px] tracking-[0.96px] w-full" data-node-id="1170:79869">
+                <p className="leading-[56px]">ĐỀ NGHỊ</p>
+              </div>
+            </div>
+            <div className="border-[#9c7e21] border-l border-solid content-stretch flex flex-col gap-[24px] items-start pl-[33px] relative shrink-0 w-full" data-node-id="1170:79870" data-name="VerticalBorder">
+              <div className="relative shrink-0 w-full" data-node-id="1170:79871" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79872" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79873">
+                      <p className="leading-[16px]">HỆ ĐIỀU HÀNH</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79874" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79875" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">Windows 11 64-bit</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79876" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79877" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79878">
+                      <p className="leading-[16px]">Phần cứng</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79879" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79880" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">Intel Core i7-10700 / AMD Ryzen 7 3700X</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79881" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79882" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79883">
+                      <p className="leading-[16px]">BỘ NHỚ</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79884" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79885" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">16 GB RAM</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79886" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79887" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79888">
+                      <p className="leading-[16px]">ĐỒ HỌA</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79889" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79890" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">NVIDIA RTX 3060 Ti / AMD RX 6700 XT</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative shrink-0 w-full" data-node-id="1170:79891" data-name="Container">
+                <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[4px] items-start relative size-full">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79892" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c7c6c6] text-[16px] uppercase w-full" data-node-id="1170:79893">
+                      <p className="leading-[16px]">DUNG LƯỢNG</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="1170:79894" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#e2e2e2] text-[24px] tracking-[-0.48px] w-full" data-node-id="1170:79895" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[1.3]">50 GB available space (NVMe SSD)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute flex items-center justify-center left-1/2 top-[72px] w-[1896px]" data-node-id="1218:78660">
+          <div className="-scale-y-100 flex-none rotate-180">
+            <div className="content-stretch flex gap-[10px] items-center justify-center px-[282px] py-[10px] relative w-[1896px]" data-name="ctaline">
+              <div className="flex items-center justify-center relative shrink-0" data-node-id="1218:78661">
+                <div className="-scale-y-100 flex-none rotate-180">
+                  <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative text-[#900] text-[40px] text-center tracking-[-0.8px] whitespace-nowrap">
+                    <p className="leading-[1.3]">CẤU HÌNH</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute h-[79px] left-[121px] top-0 w-[1653px]" data-node-id="1218:78662" data-name="Horror frame 1">
+                <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1218:78662;708:35" data-name="Left">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft} />
+                </div>
+                <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1218:78662;708:38" data-name="Spacer left" />
+                <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1218:78662;708:42" data-name="Spacer right" />
+                <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1218:78662;708:43" style={{ containerType: "size" }}>
+                  <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+                    <div className="relative size-full" data-name="Left">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft1} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[1997px] items-center justify-center left-1/2 mix-blend-overlay top-[calc(50%-0.5px)] w-[1996px]" data-node-id="1332:84621">
+          <div className="-scale-y-100 flex-none">
+            <div className="h-[1997px] relative w-[1996px]" data-name="78042 2">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <img alt="" className="absolute left-0 max-w-none size-full top-0" src={img780422} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="h-[828px] overflow-clip relative shrink-0 w-full" data-node-id="1218:78671">
+        <Options className="-translate-x-1/2 absolute content-stretch cursor-pointer flex flex-col items-start left-1/2 top-[125px] w-[1120px]" />
+      </div>
+      <div className="bg-gradient-to-b from-[#010101] h-[599px] overflow-clip relative shrink-0 to-[#030000] w-full" data-node-id="1218:78984" data-name="CAT">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[48px] items-center justify-center left-[calc(50%+0.5px)] px-[80px] top-1/2" data-node-id="1218:78985" data-name="CTA">
+          <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1218:78986" data-name="Heading 2">
+            <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-center text-white tracking-[0.96px] whitespace-nowrap" data-node-id="1218:78987">
+              <p className="leading-[87px] mb-0 text-[24px]">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</p>
+              <p className="font-['Space_Mono:Bold'] leading-[87px] text-[48px]">HÃY ĐẾN VỚI NỖI SỢ ĐỂ KHÁM PHÁ</p>
+            </div>
+          </div>
+          <div className="h-[68px] relative shrink-0 w-[383px]" data-node-id="1218:79027" data-name="CTA btn">
+            <div className="absolute content-stretch flex inset-0 items-center justify-center" data-node-id="I1218:79027;906:1550" data-name="Button background">
+              <div className="h-[70px] relative shrink-0 w-[15px]" data-node-id="I1218:79027;906:1551" data-name="frame_part_1">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart1} />
+              </div>
+              <div className="bg-size-[25px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79027;906:1552" style={{ backgroundImage: `url("${imgFramePart2}")` }} data-name="frame_part_2" />
+              <div className="h-[70px] relative shrink-0 w-[146px]" data-node-id="I1218:79027;906:1553" data-name="frame_part_3">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart3} />
+              </div>
+              <div className="bg-size-[18px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79027;906:1554" style={{ backgroundImage: `url("${imgFramePart4}")` }} data-name="frame_part_4" />
+              <div className="h-[70px] relative shrink-0 w-[30px]" data-node-id="I1218:79027;906:1555" data-name="frame_part_5">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart5} />
+              </div>
+            </div>
+            <div className="absolute border border-black border-solid inset-[4.29%_4px]" data-node-id="I1218:79027;906:1556">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-gradient-to-b from-[#593b0c] inset-0 to-[#b10e07]" />
+                <div className="absolute inset-0 mix-blend-multiply opacity-50 overflow-hidden">
+                  <img alt="" className="absolute h-[489.23%] left-[-7.94%] max-w-none top-[-180.33%] w-[192.27%]" src={imgRectangle37} />
+                </div>
+                <div className="absolute bg-gradient-to-b from-[rgba(45,1,0,0.53)] inset-0 to-[rgba(177,14,7,0)]" />
+              </div>
+            </div>
+            <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[1.3] left-[calc(50%-0.26px)] not-italic text-[32px] text-center text-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] text-white top-[calc(50%-13px)] tracking-[-0.64px] w-[208.48px]" data-node-id="I1218:79027;906:1557">
+              TẢI XUỐNG
+            </p>
+            <div className="absolute blur-[1.2px] border-5 border-[#ee1b10] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79027;906:1558" data-name="Button frame 3" />
+            <div className="absolute border-3 border-[#ee1b10] border-solid inset-[8.57%_1.58%] shadow-[0px_0px_2.5px_0px_red]" data-node-id="I1218:79027;906:1559" data-name="Button frame 2" />
+            <div className="absolute border-[#c0552f] border-[0.6px] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79027;906:1560" data-name="Button frame 1" />
+          </div>
+          <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1218:78991" data-name="Container">
+            <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] text-center tracking-[-0.32px] whitespace-nowrap" data-node-id="1218:78992" style={{ fontVariationSettings: '"wdth" 100' }}>
+              <p className="leading-[20px]">YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-col h-[607px] isolate items-center overflow-x-clip overflow-y-auto relative shrink-0 w-[1920px]" data-node-id="1218:79039" data-name="Footer (Desktop)">
+        <div className="content-stretch flex flex-col items-start overflow-clip relative shrink-0 w-full z-[1]" data-node-id="I1218:79039;838:1879" style={{ backgroundImage: "linear-gradient(180.39843233475537deg, rgb(34, 0, 0) 1.0119%, rgb(0, 0, 0) 115.49%)" }} data-name="Footer - FOOTER WIREFRAME">
+          <div className="absolute bottom-0 h-[240px] opacity-3 right-0 w-[441px]" data-node-id="I1218:79039;838:1983" data-name="Decorative Branded Element" />
+          <div className="relative shrink-0 w-full" data-node-id="I1218:79039;838:1880" data-name="Container">
+            <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col gap-[64px] items-start px-[80px] py-[64px] relative size-full">
+              <div className="absolute h-[403px] left-[1585px] mix-blend-difference top-[3px] w-[347px]" data-node-id="I1218:79039;1020:73526" data-name="OÁN">
+                <div className="absolute inset-[16.48%_3.81%_20.95%_74.95%]" data-node-id="I1218:79039;1020:73526;953:1471" data-name="Vector">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector50} />
+                </div>
+                <div className="absolute inset-[0_0_0_38.15%]" data-node-id="I1218:79039;1020:73526;953:1472" data-name="Vector">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector51} />
+                </div>
+                <div className="absolute inset-[18.38%_55.09%_23.43%_0]" data-node-id="I1218:79039;1020:73526;953:1473" data-name="Vector">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgVector52} />
+                </div>
+              </div>
+              <div className="absolute h-[3325px] left-[-1262px] opacity-40 top-[-1278px] w-[3323px]" data-node-id="I1218:79039;1030:75937" data-name="78042 2">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={img780422} />
+              </div>
+              <div className="-translate-x-1/2 -translate-y-1/2 absolute bg-gradient-to-b from-black h-[692px] left-[calc(50%-0.5px)] to-[26.961%] to-[rgba(0,0,0,0)] top-[calc(50%-0.38px)] w-[2041px]" data-node-id="I1218:79039;1030:75943" />
+              <div className="gap-x-[24px] gap-y-[24px] grid grid-cols-[repeat(12,minmax(0,1fr))] grid-rows-[_377.75px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1881" data-name="Top Footer Grid">
+                <div className="col-[1/span_4] content-stretch flex flex-col gap-[24px] items-start justify-self-stretch relative row-1 self-start shrink-0" data-node-id="I1218:79039;838:1882" data-name="Brand & Tagline Section (4 Columns)">
+                  <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-node-id="I1218:79039;838:1883" data-name="Container">
+                    <LogoCd className="overflow-clip relative shrink-0 size-[70px]" />
+                    <Oan className="h-[65px] relative shrink-0 w-[55px]" />
+                  </div>
+                  <div className="content-stretch flex flex-col items-start max-w-[384px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1889" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[20px] tracking-[-0.4px] w-full" data-node-id="I1218:79039;838:1890" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[28px] mb-0">{`"Có những căn nhà bị ma ám. Và có`}</p>
+                      <p className="leading-[28px] mb-0">những căn nhà được xây để nhốt thứ còn</p>
+                      <p className="leading-[28px]">{`đáng sợ hơn ma."`}</p>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col items-center justify-center relative shrink-0" data-node-id="I1218:79039;838:1891" data-name="Newsletter Section:margin">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0 w-[375px]" data-node-id="I1218:79039;838:1892" data-name="Newsletter Section">
+                      <div className="content-stretch flex flex-col gap-[19px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1893" data-name="Heading 4">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] min-w-full not-italic relative shrink-0 text-[12px] text-white tracking-[1.2px] uppercase w-[min-content]" data-node-id="I1218:79039;838:1894">
+                          <p className="leading-[16px]">NHẬN TIN TỨC MỚI NHẤT</p>
+                        </div>
+                        <div className="border-2 border-[#767676] border-solid content-stretch flex items-center px-[20px] py-[16px] relative shrink-0 w-[375px]" data-node-id="I1218:79039;838:2155" data-name="Field">
+                          <div aria-hidden className="absolute inset-0 pointer-events-none">
+                            <div className="absolute bg-[#161a1a] inset-0" />
+                            <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgField}")` }} />
+                            <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgField1}")` }} />
+                            <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgField2}")` }} />
+                          </div>
+                          <p className="[word-break:break-word] font-['Roboto:Light'] font-light leading-[28px] relative shrink-0 text-[#cdbda0] text-[20px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1218:79039;838:2155;838:2099" style={{ fontVariationSettings: '"wdth" 100' }}>
+                            Nhập Email của bạn ở đây
+                          </p>
+                          <div className="flex flex-row items-center self-stretch" data-node-id="I1218:79039;838:2155;838:2100">
+                            <div className="bg-[#cdbda0] h-full relative rounded-[1px] shrink-0 w-px" data-name="Indicator Right" />
+                          </div>
+                          <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1218:79039;838:2155;838:2101" data-name="Spacer" />
+                        </div>
+                        <button className="block cursor-pointer h-[70px] relative shrink-0 w-[322px]" data-node-id="I1218:79039;838:2210" data-name="Button">
+                          <div className="absolute content-stretch flex inset-0 items-center justify-center" data-node-id="I1218:79039;838:2210;708:2875" data-name="Button background">
+                            <div className="h-[70px] relative shrink-0 w-[15px]" data-node-id="I1218:79039;838:2210;708:2876" data-name="frame_part_1">
+                              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart1} />
+                            </div>
+                            <div className="bg-size-[25px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79039;838:2210;708:2877" style={{ backgroundImage: `url("${imgFramePart2}")` }} data-name="frame_part_2" />
+                            <div className="h-[70px] relative shrink-0 w-[146px]" data-node-id="I1218:79039;838:2210;708:2878" data-name="frame_part_3">
+                              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart3} />
+                            </div>
+                            <div className="bg-size-[74px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79039;838:2210;708:2879" style={{ backgroundImage: `url("${imgFramePart6}")` }} data-name="frame_part_4" />
+                            <div className="h-[70px] relative shrink-0 w-[136px]" data-node-id="I1218:79039;838:2210;708:2880" data-name="frame_part_5">
+                              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart7} />
+                            </div>
+                            <div className="bg-size-[18px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79039;838:2210;708:2881" style={{ backgroundImage: `url("${imgFramePart4}")` }} data-name="frame_part_4" />
+                            <div className="h-[70px] relative shrink-0 w-[30px]" data-node-id="I1218:79039;838:2210;708:2882" data-name="frame_part_5">
+                              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart5} />
+                            </div>
+                          </div>
+                          <div className="absolute border border-black border-solid inset-[4.29%_4px]" data-node-id="I1218:79039;838:2210;708:2883">
+                            <div aria-hidden className="absolute inset-0 pointer-events-none">
+                              <div className="absolute bg-gradient-to-b from-[#593b0c] inset-0 to-[#b10e07]" />
+                              <div className="absolute inset-0 mix-blend-multiply opacity-50 overflow-hidden">
+                                <img alt="" className="absolute h-[489.23%] left-[-7.94%] max-w-none top-[-180.33%] w-[192.27%]" src={imgRectangle37} />
+                              </div>
+                              <div className="absolute bg-gradient-to-b from-[rgba(45,1,0,0.53)] inset-0 to-[rgba(177,14,7,0)]" />
+                            </div>
+                          </div>
+                          <p className="[word-break:break-word] absolute font-['Space_Mono:Regular'] inset-[35.71%_9.46%_27.14%_8.78%] leading-[1.3] not-italic text-[20px] text-center text-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] text-white tracking-[-0.4px]" data-node-id="I1218:79039;838:2210;708:2884">
+                            Gửi ngay
+                          </p>
+                          <div className="absolute blur-[1.2px] border-5 border-[#ee1b10] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79039;838:2210;708:2885" data-name="Button frame 3" />
+                          <div className="absolute border-3 border-[#ee1b10] border-solid inset-[8.57%_1.58%] shadow-[0px_0px_2.5px_0px_red]" data-node-id="I1218:79039;838:2210;708:2886" data-name="Button frame 2" />
+                          <div className="absolute border-[#c0552f] border-[0.6px] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79039;838:2210;708:2887" data-name="Button frame 1" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-[5/span_6] content-stretch flex gap-[24px] h-[377.75px] items-center justify-end justify-self-stretch relative row-1 shrink-0" data-node-id="I1218:79039;838:1901" data-name="Navigation Columns (6 Columns Total)">
+                  <div className="content-stretch flex flex-col gap-[8px] items-start pb-[113.75px] relative shrink-0 w-[166.66px]" data-node-id="I1218:79039;838:1902" data-name="Khám ph">
+                    <div className="content-stretch flex flex-col items-start pb-[8px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1903" data-name="Heading 4:margin">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1904" data-name="Heading 4">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1.2px] uppercase w-full" data-node-id="I1218:79039;838:1905">
+                          <p className="leading-[16px]">KHÁM PHÁ</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1906" data-name="List">
+                      <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I1218:79039;838:1907" data-name="Item → Link">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1218:79039;838:1908" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Home</p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start pb-[2.5px] pt-[5.5px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1909" data-name="Item">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1910" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Trailer</p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start pb-[2.5px] pt-[5.5px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1911" data-name="Item">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1912" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Info</p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start pb-[2.5px] pt-[5.5px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1913" data-name="Item">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1914" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Gameplay</p>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start pb-[2.5px] pt-[5.5px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1915" data-name="Item">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1916" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Characters</p>
+                        </div>
+                      </div>
+                      <div className="h-[24px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1917" data-name="Item" />
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[8px] h-[370px] items-start pb-[215.75px] relative shrink-0 w-[167px]" data-node-id="I1218:79039;838:1921" data-name="Trò chơi">
+                    <div className="content-stretch flex flex-col items-start pb-[8px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1922" data-name="Heading 4:margin">
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1923" data-name="Heading 4">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1.2px] uppercase w-full" data-node-id="I1218:79039;838:1924">
+                          <p className="leading-[16px]">TRÒ CHƠI</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-[12px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1925" data-name="List">
+                      <div className="content-stretch flex flex-col items-start pt-[8px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1932" data-name="Item">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1933" data-name="Link">
+                          <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c4c7c8] text-[12px] w-full" data-node-id="I1218:79039;838:1934">
+                            <p className="leading-[16px]">Cấu hình</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1935" data-name="Item → Link">
+                        <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1936" style={{ fontVariationSettings: '"wdth" 100' }}>
+                          <p className="leading-[20px]">Hướng dẫn cài đặt</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="content-stretch flex flex-col gap-[64px] items-start pb-[139.75px] relative shrink-0 w-[166.67px]" data-node-id="I1218:79039;838:1937" data-name="Liên hệ & Community">
+                    <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1938" data-name="Contact">
+                      <div className="content-stretch flex flex-col items-start pb-[8px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1939" data-name="Heading 4:margin">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1940" data-name="Heading 4">
+                          <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1.2px] uppercase w-full" data-node-id="I1218:79039;838:1941">
+                            <p className="leading-[16px]">LIÊN HỆ</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1942" data-name="Container">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1943" data-name="Container">
+                          <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1944" style={{ fontVariationSettings: '"wdth" 100' }}>
+                            <p className="leading-[20px]">thegrudge@gmail.com</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1945" data-name="Container">
+                          <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1946" style={{ fontVariationSettings: '"wdth" 100' }}>
+                            <p className="leading-[20px]">+84 900 666 999</p>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1947" data-name="Container">
+                          <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] w-full" data-node-id="I1218:79039;838:1948" style={{ fontVariationSettings: '"wdth" 100' }}>
+                            <p className="leading-[20px]">Đường số 1, Quận số 2, HCMC</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1949" data-name="Cộng đồng">
+                      <div className="content-stretch flex flex-col items-start pb-[8px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1950" data-name="Heading 4:margin">
+                        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="I1218:79039;838:1951" data-name="Heading 4">
+                          <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-white tracking-[1.2px] uppercase w-full" data-node-id="I1218:79039;838:1952">
+                            <p className="leading-[16px]">CỘNG ĐỒNG</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex gap-[16px] items-center relative shrink-0 w-full" data-node-id="I1218:79039;838:1953" data-name="Container">
+                        <div className="border border-[#444748] border-solid content-stretch flex h-[32px] items-center justify-center p-px relative shrink-0 w-[20.55px]" data-node-id="I1218:79039;838:1954" data-name="Link - Social Icons">
+                          <div className="relative shrink-0 size-[13.5px]" data-node-id="I1218:79039;838:1955" data-name="Container">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContainer1} />
+                          </div>
+                        </div>
+                        <div className="border border-[#444748] border-solid content-stretch flex h-[32px] items-center justify-center p-px relative shrink-0 w-[20.53px]" data-node-id="I1218:79039;838:1957" data-name="Link">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="I1218:79039;838:1958" data-name="Container">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContainer2} />
+                          </div>
+                        </div>
+                        <div className="border border-[#444748] border-solid content-stretch flex h-[32px] items-center justify-center p-px relative shrink-0 w-[20.53px]" data-node-id="I1218:79039;838:1960" data-name="Link">
+                          <div className="h-[12px] relative shrink-0 w-[15px]" data-node-id="I1218:79039;838:1961" data-name="Container">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContainer3} />
+                          </div>
+                        </div>
+                        <div className="border border-[#444748] border-solid content-stretch flex h-[32px] items-center justify-center p-px relative shrink-0 w-[20.53px]" data-node-id="I1218:79039;838:1963" data-name="Link">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="I1218:79039;838:1964" data-name="Container">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContainer4} />
+                          </div>
+                        </div>
+                        <div className="border border-[#444748] border-solid content-stretch flex h-[32px] items-center justify-center p-px relative shrink-0 w-[20.53px]" data-node-id="I1218:79039;838:1966" data-name="Link">
+                          <div className="relative shrink-0 size-[15px]" data-node-id="I1218:79039;838:1967" data-name="Container">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgContainer5} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-[11/span_2] h-[377.75px] justify-self-stretch relative row-1 shrink-0" data-node-id="I1218:79039;838:1969" data-name="Auxiliary Information (2 Columns)" />
+              </div>
+              <div className="border-[#444748] border-solid border-t content-stretch flex items-center justify-between pt-[25px] relative shrink-0 w-full" data-node-id="I1218:79039;838:1973" data-name="Bottom Bar">
+                <div className="opacity-60 relative shrink-0" data-node-id="I1218:79039;838:1974" data-name="Container">
+                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex flex-col items-start relative size-full">
+                    <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1218:79039;838:1975" style={{ fontVariationSettings: '"wdth" 100' }}>
+                      <p className="leading-[20px]">© 2026 OÁN HORROR EXPERIENCE. ALL RIGHTS RESERVED.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[16px] relative shrink-0" data-node-id="I1218:79039;838:1976" data-name="Container">
+                  <div className="bg-clip-padding border-0 border-[transparent] border-solid content-stretch flex gap-[24px] items-center justify-end relative size-full">
+                    <div className="flex flex-row items-center self-stretch" data-node-id="I1218:79039;838:1977">
+                      <div className="content-stretch flex flex-col h-full items-end justify-center relative shrink-0" data-name="Link">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c4c7c8] text-[12px] whitespace-nowrap" data-node-id="I1218:79039;838:1978">
+                          <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-[#444748] decoration-from-font decoration-solid leading-[16px] underline">CHÍNH SÁCH BẢO MẬT</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-center self-stretch" data-node-id="I1218:79039;838:1979">
+                      <div className="content-stretch flex flex-col h-full items-start relative shrink-0" data-name="Link">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c4c7c8] text-[12px] whitespace-nowrap" data-node-id="I1218:79039;838:1980">
+                          <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-[#444748] decoration-from-font decoration-solid leading-[16px] underline">ĐIỀU KHOẢN DỊCH VỤ</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-row items-center self-stretch" data-node-id="I1218:79039;838:1981">
+                      <div className="content-stretch flex flex-col h-full items-start relative shrink-0" data-name="Link">
+                        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c4c7c8] text-[12px] whitespace-nowrap" data-node-id="I1218:79039;838:1982">
+                          <p className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-[#444748] decoration-from-font decoration-solid leading-[16px] underline">COOKIE POLICY</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="absolute bottom-0 h-[5651px] left-1/2 pointer-events-none top-0" data-node-id="1170:80025">
+        <div className="-translate-x-1/2 h-[103px] opacity-90 pointer-events-auto sticky top-0 w-[1920px]" data-name="Menu/Navbar">
+          <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgMenuNavbar} />
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[120px] items-center left-[calc(50%+0.5px)] top-1/2" data-node-id="I1170:80025;782:1498">
+            <div className="content-stretch flex gap-[50px] items-center relative shrink-0" data-node-id="I1170:80025;782:1403">
+              <div className="relative shrink-0 size-[62px]" data-node-id="I1170:80025;719:1288" data-name="logo cd2 2">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoCd22} />
+              </div>
+              <div className="content-stretch flex gap-[71px] items-center relative shrink-0" data-node-id="I1170:80025;782:1711" data-name="Menu">
+                <div className="h-[31px] relative shrink-0 w-[129px]" data-node-id="I1170:80025;782:1711;987:73063">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] left-0 text-[#9c7e21] text-[20px] top-[15px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1170:80025;782:1711;987:73064" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    <p className="leading-[28px]">TRANG CHỦ</p>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[90px]" data-node-id="I1170:80025;782:1711;987:73065">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] left-0 text-[#9c7e21] text-[20px] top-[15px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1170:80025;782:1711;987:73066" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    <p className="leading-[28px]">TRAILER</p>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[121px]" data-node-id="I1170:80025;782:1711;987:73067">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] left-0 text-[#9c7e21] text-[20px] top-[15px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1170:80025;782:1711;987:73068" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    <p className="leading-[28px]">THÔNG TIN</p>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[134px]" data-node-id="I1170:80025;782:1711;987:73069">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] left-0 text-[#c6a02a] text-[20px] top-[15px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1170:80025;782:1711;987:73070" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    <p className="leading-[28px]">CỘNG ĐỒNG</p>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[42px]" data-node-id="I1170:80025;782:1711;987:73071">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] left-0 text-[#c6a02a] text-[20px] top-[15px] tracking-[-0.4px] whitespace-nowrap" data-node-id="I1170:80025;782:1711;987:73072" style={{ fontVariationSettings: '"wdth" 100' }}>
+                    <p className="leading-[28px]">FAQ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I1170:80025;782:1310">
+              <div className="content-stretch flex gap-[20px] items-center justify-center relative shrink-0" data-node-id="I1170:80025;719:1388" data-name="rightbar">
+                <Speaker className="block cursor-pointer relative shrink-0 size-[20px]" />
+                <div className="content-stretch flex items-center relative shrink-0" data-node-id="I1170:80025;719:998" data-name="Lien he">
+                  <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="I1170:80025;719:999" data-name="Container">
+                    <div className="[word-break:break-word] flex flex-col font-['Iceberg:Regular'] font-normal justify-center leading-[0] relative shrink-0 text-[#c6a02a] text-[14px] tracking-[-0.28px] whitespace-nowrap" data-node-id="I1170:80025;719:1000" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+                      <p className="leading-[1.3]">Liên Hệ</p>
+                    </div>
+                  </div>
+                </div>
+                <button className="block cursor-pointer h-[18px] overflow-clip relative shrink-0 w-[87px]" data-node-id="I1170:80025;719:1378" data-name="ngon ngu">
+                  <div className="absolute content-stretch flex gap-[8.01px] items-center left-0 right-[-0.01px] top-0" data-node-id="I1170:80025;719:1378;719:1001" data-name="ngon ngu">
+                    <div className="content-stretch flex flex-col items-start relative shrink-0" data-node-id="I1170:80025;719:1378;719:1002" data-name="Container">
+                      <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c6a02a] text-[14px] text-left tracking-[-0.28px] whitespace-nowrap" data-node-id="I1170:80025;719:1378;719:1003">
+                        <p className="leading-[1.3]">NGÔN NGỮ</p>
+                      </div>
+                    </div>
+                    <div className="content-stretch flex flex-col items-start py-[2px] relative shrink-0" data-node-id="I1170:80025;719:1378;719:1004" data-name="Container">
+                      <div className="relative shrink-0 size-[8px]" data-node-id="I1170:80025;719:1378;719:1005" data-name="Img">
+                        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgImg} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="[word-break:break-word] absolute bg-[#4b5563] border-[#c6a02a] border-solid border-t-5 content-stretch flex flex-col font-['Iceberg:Regular'] gap-[4px] items-center justify-center leading-[0] left-[25px] overflow-clip p-[4px] text-[12px] text-center text-white top-[29px] tracking-[-0.24px] w-[57px]" data-node-id="I1170:80025;719:1378;719:1359" data-name="ngon ngu">
+                    <div className="flex flex-col justify-center not-italic relative shrink-0 w-full" data-node-id="I1170:80025;719:1378;719:1360">
+                      <p className="leading-[1.3]">English</p>
+                    </div>
+                    <div className="flex flex-col font-normal justify-center relative shrink-0 w-full" data-node-id="I1170:80025;719:1378;719:1361" style={{ fontVariationSettings: '"CTGR" 0, "wdth" 100' }}>
+                      <p className="leading-[1.3]">Tiếng Việt</p>
+                    </div>
+                  </div>
+                </button>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[22px] items-center relative shrink-0" data-node-id="I1170:80025;906:1781">
+              <div className="content-stretch flex items-center relative shrink-0" data-node-id="I1170:80025;906:1727" data-name="Đang ký tải xún">
+                <div className="content-stretch flex flex-col gap-[10px] h-[57px] items-center justify-center px-[76px] py-[13px] relative shrink-0 w-[217px]" data-node-id="I1170:80025;906:1727;906:1714" data-name="Dang ngap">
+                  <div className="absolute h-[57px] left-0 top-0 w-[217px]" data-node-id="I1170:80025;906:1727;906:1715">
+                    <div className="absolute h-[57px] left-0 right-0 top-0" data-node-id="I1170:80025;906:1727;906:1716" data-name="Title background">
+                      <div className="absolute inset-[0_1.05%_0_0]">
+                        <img alt="" className="block max-w-none size-full" height="57" src={imgTitleBackground} width="214.724" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="h-[31px] relative shrink-0 w-[64px]" data-node-id="I1170:80025;906:1727;906:1717">
+                    <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] left-[calc(50%-49.5px)] not-italic text-[24px] text-white top-[15.5px] tracking-[-0.48px] whitespace-nowrap" data-node-id="I1170:80025;906:1727;906:1718">
+                      <p className="leading-[1.3]">ĐĂNG KÝ</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="h-[70px] opacity-0 relative shrink-0 w-[255px]" data-node-id="I1170:80025;906:1739" data-name="CTA btn">
+                <div className="absolute content-stretch flex inset-0 items-center justify-center" data-node-id="I1170:80025;906:1739;906:1550" data-name="Button background">
+                  <div className="h-[70px] relative shrink-0 w-[15px]" data-node-id="I1170:80025;906:1739;906:1551" data-name="frame_part_1">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart1} />
+                  </div>
+                  <div className="bg-size-[25px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1170:80025;906:1739;906:1552" style={{ backgroundImage: `url("${imgFramePart2}")` }} data-name="frame_part_2" />
+                  <div className="h-[70px] relative shrink-0 w-[146px]" data-node-id="I1170:80025;906:1739;906:1553" data-name="frame_part_3">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart3} />
+                  </div>
+                  <div className="bg-size-[18px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1170:80025;906:1739;906:1554" style={{ backgroundImage: `url("${imgFramePart4}")` }} data-name="frame_part_4" />
+                  <div className="h-[70px] relative shrink-0 w-[30px]" data-node-id="I1170:80025;906:1739;906:1555" data-name="frame_part_5">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart5} />
+                  </div>
+                </div>
+                <div className="absolute border border-black border-solid inset-[4.29%_4px]" data-node-id="I1170:80025;906:1739;906:1556">
+                  <div aria-hidden className="absolute inset-0 pointer-events-none">
+                    <div className="absolute bg-gradient-to-b from-[#593b0c] inset-0 to-[#b10e07]" />
+                    <div className="absolute inset-0 mix-blend-multiply opacity-50 overflow-hidden">
+                      <img alt="" className="absolute h-[489.23%] left-[-7.94%] max-w-none top-[-180.33%] w-[192.27%]" src={imgRectangle37} />
+                    </div>
+                    <div className="absolute bg-gradient-to-b from-[rgba(45,1,0,0.53)] inset-0 to-[rgba(177,14,7,0)]" />
+                  </div>
+                </div>
+                <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[1.3] left-[calc(50%-0.26px)] not-italic text-[20px] text-center text-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] text-white top-[calc(50%-13px)] tracking-[-0.4px] w-[208.48px]" data-node-id="I1170:80025;906:1739;906:1557">
+                  TẢI XUỐNG
+                </p>
+                <div className="absolute blur-[1.2px] border-5 border-[#ee1b10] border-solid inset-[8.57%_1.58%]" data-node-id="I1170:80025;906:1739;906:1558" data-name="Button frame 3" />
+                <div className="absolute border-3 border-[#ee1b10] border-solid inset-[8.57%_1.58%] shadow-[0px_0px_2.5px_0px_red]" data-node-id="I1170:80025;906:1739;906:1559" data-name="Button frame 2" />
+                <div className="absolute border-[#c0552f] border-[0.6px] border-solid inset-[8.57%_1.58%]" data-node-id="I1170:80025;906:1739;906:1560" data-name="Button frame 1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: tải oán fill: , tải oán stroke: , Primary/Gold 600: #9C7E21, Secondary/Red 700: #990000, Line_icon: #33363F, Neutral/Gray 200: #E5E7EB, Neutral/Gray 400: #9CA3AF, Primary/Gold 400: #D9B74C, for frame: , Primary/Gold 500: #C6A02A, Desktop/Heading 2/h2-reg: Font(family: "Roboto", style: Regular, size: 24, weight: 400, lineHeight: 1.2999999523162842, letterSpacing: -2), Secondary/Red 800: #660000, Desktop/Heading 4/h4-light: Font(family: "Roboto", style: Light, size: 16, weight: 300, lineHeight: 20, letterSpacing: -2), Desktop/Heading 3/h3-light: Font(family: "Roboto", style: Light, size: 20, weight: 300, lineHeight: 28, letterSpacing: -2), Neutral/Gray 600: #4B5563.
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

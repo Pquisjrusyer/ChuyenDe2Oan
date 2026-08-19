@@ -1,0 +1,96 @@
+const imgChatGptImage1918526Thg820262 = "http://localhost:3845/assets/eb7e2c24bc667dcc681ba145776c1294e88a3296.png";
+const imgDetailedScratchedGrungeTextureBackground2 = "http://localhost:3845/assets/2ccae5c37964aff1c768a42db477654661a5b837.png";
+const imgVector200 = "http://localhost:3845/assets/d61eae068c3e51883d98791797beb053ea2a3ffc.svg";
+type TherCuooisProps = {
+  className?: string;
+  property1?: "Article" | "Article 1" | "Article 2" | "Article 3";
+};
+
+function TherCuoois({ className, property1 = "Article" }: TherCuooisProps) {
+  const isArticle1 = property1 === "Article 1";
+  const isArticle2 = property1 === "Article 2";
+  const isArticle3 = property1 === "Article 3";
+  return (
+    <div className={className || `border-[rgba(232,223,207,0.2)] border-b border-r border-solid h-[255px] overflow-clip relative ${isArticle1 ? "w-[359px]" : "w-[358px]"}`} id={isArticle3 ? "node-1250_79177" : isArticle2 ? "node-1250_79178" : isArticle1 ? "node-1250_79176" : "node-1250_79179"} style={isArticle1 ? { backgroundImage: "linear-gradient(144.61357787437356deg, rgba(87, 7, 7, 0.28) 0%, rgba(87, 7, 7, 0) 62%)" } : { backgroundImage: "linear-gradient(144.53809018754762deg, rgba(87, 7, 7, 0.28) 0%, rgba(87, 7, 7, 0) 62%)" }}>
+      <div className="absolute h-[254px] left-0 opacity-60 top-0 w-[529px]" id={isArticle3 ? "node-1250_79169" : isArticle2 ? "node-1250_79162" : isArticle1 ? "node-1250_79155" : "node-1250_79148"} data-name="Text" />
+      <p className="[word-break:break-word] absolute font-['Space_Mono:Regular'] leading-[normal] left-[25px] not-italic text-[#c69b3c] text-[10px] top-[25px] whitespace-nowrap" id={isArticle3 ? "node-1250_79170" : isArticle2 ? "node-1250_79163" : isArticle1 ? "node-1250_79156" : "node-1250_79149"}>
+        {isArticle3 ? "04" : isArticle2 ? "03" : isArticle1 ? "02" : "01"}
+      </p>
+      <p className="[word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[normal] left-[25px] not-italic text-[#e8dfcf] text-[30px] top-[85px] tracking-[1.2px] whitespace-nowrap" id={isArticle3 ? "node-1250_79171" : isArticle2 ? "node-1250_79164" : isArticle1 ? "node-1250_79157" : "node-1250_79150"}>
+        {isArticle3 ? "NHÂN VẬT" : isArticle2 ? "HỆ ĐỊA LINH" : isArticle1 ? "NHÀ HỨA" : "CỐT TRUYỆN"}
+      </p>
+      <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[20px] left-[25px] text-[#b3a99d] text-[16px] top-[137.75px] tracking-[-0.32px] whitespace-nowrap" id={isArticle3 ? "node-1250_79172" : isArticle2 ? "node-1250_79165" : isArticle1 ? "node-1250_79158" : "node-1250_79151"} style={{ fontVariationSettings: '"wdth" 100' }}>
+        {isArticle3 ? "Những kẻ lạc lối trong cõi tạm." : isArticle2 ? "Thế giới tâm linh và các thực thể." : isArticle1 ? "Kiến trúc kinh dị đầy ám ảnh." : "Tìm hiểu về khởi nguồn của cơn ác mộng."}
+      </p>
+      <div className="absolute content-stretch flex flex-col items-start justify-center left-[25px] pt-[24px] top-[181px] w-[479px]" id={isArticle3 ? "node-1250_79173" : isArticle2 ? "node-1250_79166" : isArticle1 ? "node-1250_79159" : "node-1250_79152"} data-name="Button">
+        <p className="[word-break:break-word] font-['Space_Mono:Regular'] leading-[0] not-italic relative shrink-0 text-[#e8dfcf] text-[0px] tracking-[1px] whitespace-nowrap" id={isArticle3 ? "node-1250_79174" : isArticle2 ? "node-1250_79167" : isArticle1 ? "node-1250_79160" : "node-1250_79153"}>
+          <span className="leading-[normal] text-[10px]">{isArticle3 ? "XEM NHÂN VẬT " : isArticle2 ? "TÌM HIỂU " : isArticle1 ? "XEM CHI TIẾT " : "KHÁM PHÁ "}</span>
+          <span className="font-['Space_Mono:Bold'] leading-[normal] text-[#b11313] text-[16px]">↗</span>
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function CtaToTaiKhon() {
+  return (
+    <div className="relative size-full" data-node-id="1250:79066" data-name="cta tạo tài khoản">
+      <div className="-translate-x-1/2 absolute flex h-[238px] items-center justify-center left-1/2 top-0 w-[1986px]" data-node-id="1250:79068">
+        <div className="-scale-y-100 flex-none">
+          <div className="bg-gradient-to-b from-[17.017%] from-[rgba(0,0,0,0)] h-[238px] relative to-black w-[1986px]" />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute bg-gradient-to-b from-[17.017%] from-[rgba(0,0,0,0)] h-[238px] left-1/2 to-black top-[776px] w-[1986px]" data-node-id="1250:79261" />
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[60px] items-center justify-center left-[calc(50%+0.5px)] overflow-clip px-[20px] py-[60px] top-[calc(50%-180.5px)] w-[1577px]" data-node-id="1250:79069" data-name="Contents">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-[689px]" data-node-id="1250:79070" data-name="container">
+          <p className="font-['Space_Mono:Bold'] leading-[48px] not-italic relative shrink-0 text-[#d9b74c] text-[40px] w-full" data-node-id="1250:79071">
+            Tạo tài khoản để khám phá thế giới của OÁN và nhận những cập nhật mới nhất.
+          </p>
+          <p className="font-['Roboto:Regular'] font-normal leading-[20px] relative shrink-0 text-[16px] text-white tracking-[-0.32px] w-full" data-node-id="1250:79072" style={{ fontVariationSettings: '"wdth" 100' }}>
+            Placeholder nội dung mô tả • Tối giản • Hiện đại
+          </p>
+        </div>
+        <div className="border border-solid border-white content-stretch flex flex-[1_0_0] flex-col items-center justify-center min-w-px p-[20px] relative" data-node-id="1250:79073" data-name="list">
+          <div className="border border-solid border-white content-stretch flex items-center relative shrink-0 w-full" data-node-id="1250:79074" data-name="row">
+            <div className="border border-[rgba(255,255,255,0.1)] border-solid content-stretch flex flex-[1_0_0] gap-[16px] items-start justify-center min-w-px p-[16px] relative rounded-[6px]" data-node-id="1250:79075" data-name="article">
+              <div className="content-stretch flex h-[100px] items-start overflow-clip relative shrink-0 w-[174px]" data-node-id="1250:79076" data-name="image container">
+                <div className="bg-[rgba(217,217,217,0.5)] flex-[1_0_0] h-full min-w-px relative" data-node-id="1250:79077" data-name="image">
+                  <div className="absolute h-[107px] left-0 top-[-2px] w-[174px]" data-node-id="1250:79084" data-name="ChatGPT Image 19_18_52 6 thg 8, 2026 2">
+                    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                      <img alt="" className="absolute h-[258.26%] left-[-136.54%] max-w-none top-[-158.26%] w-[281.82%]" src={imgChatGptImage1918526Thg820262} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px relative" data-node-id="1250:79078">
+                <p className="font-['Space_Mono:Regular'] leading-[28px] not-italic relative shrink-0 text-[20px] text-white w-full" data-node-id="1250:79079">
+                  Đăng ký
+                </p>
+                <p className="font-['Roboto:Light'] font-light leading-[20px] relative shrink-0 text-[16px] text-[rgba(255,255,255,0.5)] tracking-[-0.32px] w-full" data-node-id="1250:79080" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Trải nghiệm sớm • Cập nhật sự kiện • Tin tức từ OÁN
+                </p>
+                <p className="font-['Roboto:Regular'] font-normal leading-[20px] relative shrink-0 text-[16px] text-white tracking-[-0.32px] w-full" data-node-id="1250:79081" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Tạo tài khoản để tham gia cộng đồng và nhận thông tin từ game.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 h-0 left-0 right-0" data-node-id="1250:79082">
+          <div className="absolute inset-[-0.5px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgVector200} />
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute left-1/2 mix-blend-color-burn size-[2368px] top-[calc(50%-0.5px)]" data-node-id="1250:79145" data-name="detailed-scratched-grunge-texture-background 2">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgDetailedScratchedGrungeTextureBackground2} />
+      </div>
+      <div className="-translate-x-1/2 absolute border-[rgba(232,223,207,0.25)] border-solid border-t content-center flex flex-wrap gap-0 h-[374px] items-center justify-center left-[calc(50%+0.5px)] p-[20px] top-[521px] w-[1575px]" data-node-id="1250:79213" data-name="Container">
+        <TherCuoois className="border-[rgba(232,223,207,0.2)] border-b border-r border-solid h-[255px] overflow-clip relative shrink-0 w-[358px]" />
+        <TherCuoois className="border-[rgba(232,223,207,0.2)] border-b border-r border-solid h-[255px] overflow-clip relative shrink-0 w-[359px]" property1="Article 1" />
+        <TherCuoois className="border-[rgba(232,223,207,0.2)] border-b border-r border-solid h-[255px] overflow-clip relative shrink-0 w-[358px]" property1="Article 2" />
+        <TherCuoois className="border-[rgba(232,223,207,0.2)] border-b border-r border-solid h-[255px] overflow-clip relative shrink-0 w-[358px]" property1="Article 3" />
+      </div>
+    </div>
+  );
+}

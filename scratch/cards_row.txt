@@ -1,0 +1,103 @@
+const imgImage77 = "http://localhost:3845/assets/8125135145016de6d6938ba0751148484d32d775.png";
+const imgImage70 = "http://localhost:3845/assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png";
+const imgImage71 = "http://localhost:3845/assets/396fb7eb2459880afb4fb6d8cbb13aadca0cfc8e.png";
+const imgImage72 = "http://localhost:3845/assets/f0bd77fc2b99127f1c30b1e9a618569a04ed519f.png";
+const imgImage73 = "http://localhost:3845/assets/1c6cda58361a8d0ab3edc74677ddbcd773711e4d.png";
+type BoIconPlatformProps = {
+  className?: string;
+  property1?: "epic" | "steam" | "win";
+};
+
+function BoIconPlatform({ className, property1 = "win" }: BoIconPlatformProps) {
+  const isEpic = property1 === "epic";
+  const isSteam = property1 === "steam";
+  return (
+    <div className={className || `h-[602px] relative ${isEpic ? "w-[456px]" : isSteam ? "w-[510px]" : "w-[462px]"}`} id={isEpic ? "node-1218_78443" : isSteam ? "node-1218_78442" : "node-1218_78444"}>
+      {property1 === "win" && (
+        <div className="absolute h-[322px] left-[107px] top-[140px] w-[248px]" data-node-id="1218:78435" data-name="image 77">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-11.26%] max-w-none top-[-31.23%] w-[332.47%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+      {isSteam && (
+        <div className="absolute h-[322px] left-[119px] top-[140px] w-[272px]" data-node-id="1218:78437" data-name="image 78">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-100.56%] max-w-none top-[-31.23%] w-[301.18%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+      {isEpic && (
+        <div className="absolute h-[322px] left-[106px] top-[140px] w-[244px]" data-node-id="1218:78438" data-name="image 79">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-227.59%] max-w-none top-[-31.23%] w-[336.84%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+type BTagIconPlatformProps = {
+  className?: string;
+  property1?: "epicgame icon" | "steam icon" | "window icon";
+};
+
+function BTagIconPlatform({ className, property1 = "window icon" }: BTagIconPlatformProps) {
+  const isEpicgameIcon = property1 === "epicgame icon";
+  const isSteamIcon = property1 === "steam icon";
+  const isWindowIcon = property1 === "window icon";
+  return (
+    <div className={className || `relative ${isWindowIcon ? "h-[712px] w-[521px]" : isEpicgameIcon ? "h-[680px] w-[497px]" : "h-[680px] w-[470px]"}`} id={isWindowIcon ? "node-1218_78471" : isEpicgameIcon ? "node-1218_78472" : "node-1218_78473"}>
+      <div className={`absolute bg-gradient-to-b from-[#100] overflow-clip to-[#1b0000] ${isWindowIcon ? "h-[631px] left-[61px] top-[65px] w-[433px]" : isEpicgameIcon ? "h-[632px] left-[32px] top-[27px] w-[418px]" : "h-[634px] left-[19px] top-[21px] w-[437px]"}`} id={isWindowIcon ? "node-1218_78424" : isEpicgameIcon ? "node-1218_78421" : "node-1218_78418"}>
+        <div className={`-translate-x-1/2 -translate-y-1/2 absolute flex h-[838px] items-center justify-center mix-blend-difference w-[558.667px] ${isWindowIcon ? "left-[calc(50%+0.5px)] top-[calc(50%-0.5px)]" : isEpicgameIcon ? "left-[calc(50%+0.67px)] top-1/2" : "left-[calc(50%+0.17px)] top-1/2"}`} id={isWindowIcon ? "node-1218_78427" : isEpicgameIcon ? "node-1218_78463" : "node-1218_78462"}>
+          <div className="flex-none rotate-90">
+            <div className="h-[558.667px] relative w-[838px]" data-name="image 70">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage70} />
+            </div>
+          </div>
+        </div>
+        <BoIconPlatform className={`-translate-x-1/2 -translate-y-1/2 absolute h-[602px] ${isWindowIcon ? "left-[calc(50%+0.5px)] top-[calc(50%-0.5px)] w-[462px]" : isEpicgameIcon ? "left-[calc(50%-3px)] top-1/2 w-[456px]" : "left-[calc(50%+0.5px)] top-1/2 w-[510px]"}`} property1={isEpicgameIcon ? "epic" : isSteamIcon ? "steam" : undefined} />
+      </div>
+      {isSteamIcon && (
+        <div className="absolute h-[680px] left-0 top-0 w-[470px]" data-node-id="1218:78419" data-name="image 71">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage71} />
+        </div>
+      )}
+      {isEpicgameIcon && (
+        <div className="absolute h-[680px] left-0 top-0 w-[497px]" data-node-id="1218:78422" data-name="image 72">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage72} />
+        </div>
+      )}
+      {isWindowIcon && (
+        <div className="absolute h-[712px] left-0 top-0 w-[521px]" data-node-id="1218:78425" data-name="image 70">
+          <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage73} />
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function Frame() {
+  return (
+    <div className="content-stretch flex gap-[60px] items-center justify-center p-[20px] relative size-full" data-node-id="1218:78516">
+      <BTagIconPlatform className="h-[712px] relative shrink-0 w-[521px]" />
+      <div className="content-stretch flex items-center pt-[20px] relative shrink-0" data-node-id="1218:78527">
+        <BTagIconPlatform className="h-[680px] relative shrink-0 w-[470px]" property1="steam icon" />
+      </div>
+      <div className="content-stretch flex items-center pt-[20px] relative shrink-0" data-node-id="1218:78528">
+        <BTagIconPlatform className="h-[680px] relative shrink-0 w-[497px]" property1="epicgame icon" />
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: for frame: .
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

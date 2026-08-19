@@ -1,0 +1,89 @@
+const imgImage3 = "http://localhost:3845/assets/9d2c1d4893b4588362b331a915cdf59b07e9c40a.png";
+const imgImage4 = "http://localhost:3845/assets/faa5318b0c96bbbc58ac7c92fbed4e6131a85f11.png";
+const imgImage6 = "http://localhost:3845/assets/c4c37be083bde9786d096c773d05f1c7ab10b771.png";
+const imgImage67 = "http://localhost:3845/assets/f010562a6a64f04aa83734d2abbffe57b1cd728c.png";
+const imgImage5 = "http://localhost:3845/assets/6708c3ababfa699494fe07311f2e92a329315f00.svg";
+type CuHinhBtnProps = {
+  className?: string;
+  property1?: "Cấu hình";
+};
+
+function CuHinhBtn({ className, property1 = "Cấu hình" }: CuHinhBtnProps) {
+  return (
+    <div className={className || "border-2 border-[#616161] border-solid content-stretch flex flex-col gap-[10px] items-start overflow-clip px-[10px] py-[8px] relative w-[713px]"} data-node-id="1191:80340">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[360px] left-[calc(50%+0.5px)] mix-blend-lighten top-1/2 w-[728px]" data-node-id="1191:80232" data-name="image 3">
+        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="border-4 border-[#747474] border-solid content-stretch flex flex-col items-start overflow-clip p-[6px] relative shrink-0 w-full" data-node-id="1191:80233">
+        <div className="bg-gradient-to-b border border-[#707070] border-solid from-[#595959] h-[112px] overflow-clip relative shrink-0 to-[#3a3a3a] w-full" data-node-id="1191:80234">
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[471px] left-[calc(50%+52px)] mix-blend-overlay top-[calc(50%-0.5px)] w-[953px]" data-node-id="1191:80245" data-name="image 3">
+            <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage4} />
+          </div>
+          <div className="absolute contents left-[-12px] top-[-4px]" data-node-id="1191:80246" data-name="Mask group">
+            <div className="absolute contents left-[-30.32px] top-[-28.34px]" data-node-id="1191:80248">
+              <div className="absolute h-[256.959px] left-[-30.32px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[19.322px_25.345px] mask-size-[67px_48.055px] top-[-28.34px] w-[385.438px]" data-node-id="1191:80249" style={{ maskImage: `url("${imgImage5}")` }} data-name="image 3">
+                <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+              </div>
+            </div>
+          </div>
+          <div className="absolute contents left-[-12px] top-[65px]" data-node-id="1191:80250" data-name="Mask group">
+            <div className="absolute contents left-[-30.32px] top-[-117.56px]" data-node-id="1191:80252">
+              <div className="absolute flex h-[256.959px] items-center justify-center left-[-30.32px] top-[-117.56px] w-[385.438px]" data-node-id="1191:80253">
+                <div className="-scale-y-100 flex-none">
+                  <div className="h-[256.959px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[19.322px_183.559px] mask-size-[67px_48.055px] relative w-[385.438px]" style={{ maskImage: `url("${imgImage5}")` }} data-name="image 3">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute contents left-[616px] top-[-4px]" data-node-id="1191:80254" data-name="Mask group">
+            <div className="absolute contents left-[317.88px] top-[-28.34px]" data-node-id="1191:80256">
+              <div className="absolute flex h-[256.959px] items-center justify-center left-[317.88px] top-[-28.34px] w-[385.438px]" data-node-id="1191:80257">
+                <div className="-scale-y-100 flex-none rotate-180">
+                  <div className="h-[256.959px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[299.116px_25.345px] mask-size-[67px_48.055px] relative w-[385.438px]" style={{ maskImage: `url("${imgImage5}")` }} data-name="image 3">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute contents left-[616px] top-[65px]" data-node-id="1191:80258" data-name="Mask group">
+            <div className="absolute contents left-[317.88px] top-[-117.56px]" data-node-id="1191:80260">
+              <div className="absolute flex h-[256.959px] items-center justify-center left-[317.88px] top-[-117.56px] w-[385.438px]" data-node-id="1191:80261">
+                <div className="flex-none rotate-180">
+                  <div className="h-[256.959px] mask-alpha mask-intersect mask-no-clip mask-no-repeat mask-position-[299.116px_183.559px] mask-size-[67px_48.055px] relative w-[385.438px]" style={{ maskImage: `url("${imgImage5}")` }} data-name="image 3">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage6} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex gap-[18px] items-center left-[calc(50%+0.5px)] top-1/2" data-node-id="1191:80235" data-name="tải">
+            <p className="[word-break:break-word] font-['Space_Mono:Bold'] leading-[normal] not-italic relative shrink-0 text-[#900] text-[48px] whitespace-nowrap" data-node-id="1191:80244">
+              CẤU HÌNH HỆ THỐNG
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[255px] left-[calc(50%+0.5px)] mix-blend-hard-light opacity-30 top-[calc(50%-0.5px)] w-[728.571px]" data-node-id="1191:80262" data-name="image 67">
+        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage67} />
+      </div>
+    </div>
+  );
+}
+
+export default function CuHinhBtn1() {
+  return <CuHinhBtn className="border-2 border-[#616161] border-solid content-stretch cursor-pointer flex flex-col gap-[10px] items-start px-[10px] py-[8px] relative size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Secondary/Red 700: #990000.
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

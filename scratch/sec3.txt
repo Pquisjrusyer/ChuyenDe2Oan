@@ -1,0 +1,251 @@
+const imgVector200 = "http://localhost:3845/assets/8109393253570b7f317c300c0128b0a0468d7a6f.svg";
+const imgFieldDin = "http://localhost:3845/assets/de199cd00f2de8d3061f6e4a81dc16eff89caf6c.png";
+const imgFieldDin1 = "http://localhost:3845/assets/2a7f7a6f7f25bf8fa8035a56e87eeb105e0f7a2a.png";
+const imgFieldDin2 = "http://localhost:3845/assets/05c551376248ffa1592286380f2c9be7d8fca9cf.png";
+const imgTitleBackground = "http://localhost:3845/assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png";
+const imgEllipse107 = "http://localhost:3845/assets/2fd6740789269a111901c3b875028f46678edd8c.svg";
+const imgGroup8 = "http://localhost:3845/assets/1c0f4dbd536ea47ce8450c7e426305ec82efa5d9.svg";
+const imgEllipse45 = "http://localhost:3845/assets/e9cd6b734b2fbe9c3862831727b50dead03e1062.svg";
+const imgEllipse46 = "http://localhost:3845/assets/540bd993841c7c9521e04c53f107cb5a17073ecd.svg";
+const imgSubtract = "http://localhost:3845/assets/9ae98ae786012dd54df4858a1c665e8234c61ca9.svg";
+const imgVector109 = "http://localhost:3845/assets/04a789c0fee4d96471d8eb4d0e40c785d0f1e21f.svg";
+type DiuKhonProps = {
+  className?: string;
+  property1?: "Default";
+};
+
+function DiuKhon({ className, property1 = "Default" }: DiuKhonProps) {
+  return (
+    <div className={className || "content-stretch flex h-[100px] items-start relative w-[520px]"} data-node-id="1284:79399">
+      <div className="content-stretch flex flex-[1_0_0] gap-[16px] items-center justify-center min-w-px py-[20px] relative self-stretch" data-node-id="1284:79387" data-name="item">
+        <div className="bg-[rgba(0,0,0,0.05)] relative rounded-[30px] shrink-0 size-[60px]" data-node-id="1284:79388" data-name="frame">
+          <button className="-translate-x-1/2 -translate-y-1/2 [word-break:break-word] absolute cursor-pointer flex flex-col font-['Roboto:Regular'] font-normal justify-center leading-[0] left-1/2 overflow-hidden size-[60px] text-[#900] text-[37.5px] text-center text-ellipsis top-1/2 whitespace-nowrap" data-node-id="1284:79389" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="leading-[60px] overflow-hidden text-ellipsis">☐</p>
+          </button>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-[1_0_0] flex-col font-['Roboto:Regular'] font-normal items-start min-w-px relative text-[16px]" data-node-id="1284:79390">
+          <p className="leading-[28px] relative shrink-0 text-white w-full" data-node-id="1284:79391" style={{ fontVariationSettings: '"wdth" 100' }}>
+            Tôi đồng ý với Điều khoản sử dụng và Chính sách bảo mật.
+          </p>
+          <p className="leading-[0] relative shrink-0 text-[rgba(255,255,255,0.5)] w-full" data-node-id="1284:79392" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <span className="leading-[24px]">{`Xem `}</span>
+            <span className="leading-[24px] text-[#9c7e21]">điều khoản</span>
+          </p>
+        </div>
+        <div className="absolute bottom-0 h-0 left-0 right-0" data-node-id="1284:79393">
+          <div className="absolute inset-[-0.5px_0]">
+            <img alt="" className="block max-w-none size-full" src={imgVector200} />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function DangKyTaiKhon() {
+  return (
+    <div className="bg-gradient-to-b content-stretch flex from-[#0e0000] gap-[10px] items-start justify-center px-[169px] py-[20px] relative size-full to-[#0f0202] to-[49.519%] via-[24.76%] via-[rgba(9,0,0,0.5)]" data-node-id="1250:79262" data-name="đăng ký tài khoản">
+      <div className="content-stretch flex flex-col gap-[40px] h-full items-start justify-center relative shrink-0 w-[651px]" data-node-id="1218:79289" data-name="container">
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[24px] items-start relative shrink-0 text-white w-full" data-node-id="1284:79425">
+          <div className="font-['Space_Mono:Bold'] leading-[0] not-italic relative shrink-0 text-[0px] w-full whitespace-pre-wrap" data-node-id="1218:79290">
+            <p className="leading-[60px] mb-0 text-[64px]">{`ĐĂNG KÝ `}</p>
+            <p className="leading-[60px] text-[36px]">NGAY TÀI KHOẢN TRÒ CHƠI</p>
+          </div>
+          <p className="font-['Roboto:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] w-full" data-node-id="1218:79291" style={{ fontVariationSettings: '"wdth" 100' }}>{`Liên kết tài khoản Steam hoặc Epic game `}</p>
+        </div>
+        <DiuKhon className="content-stretch flex h-[100px] items-start relative shrink-0 w-[520px]" />
+        <div className="content-stretch flex gap-[58px] items-center justify-center p-[20px] relative shrink-0" data-node-id="1284:79544" data-name="tài khảon">
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[10px] items-start justify-center relative shrink-0 text-white w-[186px]" data-node-id="1284:79427" data-name="container">
+            <p className="font-['Roboto:Medium'] font-medium leading-[1.3] relative shrink-0 text-[24px] tracking-[-0.48px] w-full" data-node-id="1284:79428" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Đã có tài khoản?
+            </p>
+            <p className="font-['Roboto:Regular'] font-normal leading-[24px] relative shrink-0 text-[16px] w-full" data-node-id="1284:79429" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Trợ giúp đăng nhập nhanh
+            </p>
+          </div>
+          <div className="relative shrink-0 size-[116px]" data-node-id="1284:79543">
+            <div className="absolute left-0 overflow-clip size-[116px] top-0" data-node-id="1284:79533" data-name="tài khoản">
+              <div className="absolute left-0 size-[116px] top-0" data-node-id="I1284:79533;1284:79493">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse107} />
+              </div>
+              <div className="absolute left-[19px] size-[78px] top-[17px]" data-node-id="I1284:79533;1284:79511" data-name="Lock_fill">
+                <div className="absolute inset-[12.5%_12.5%_8.33%_12.5%]" data-node-id="I1284:79533;1284:79512">
+                  <div className="absolute inset-[-1.62%_0_0_0]">
+                    <img alt="" className="block max-w-none size-full" src={imgGroup8} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-[1_0_0] flex-col gap-[20px] h-full items-center justify-center min-w-px p-[20px] relative" data-node-id="1283:79146">
+        <div className="content-stretch flex flex-col items-start opacity-80 p-[10px] relative shrink-0 w-full" data-node-id="1283:79098" data-name="filed">
+          <div className="content-stretch flex flex-col gap-[9px] items-start justify-center relative shrink-0 w-full" data-node-id="I1283:79098;1231:1992" data-name="field">
+            <p className="[word-break:break-word] font-['Roboto:Bold'] font-bold leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1283:79098;1231:1990" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Họ và tên
+            </p>
+            <div className="border-2 border-[#767676] border-solid content-stretch flex items-center opacity-60 px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="I1283:79098;1227:79708" data-name="Field điền">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-[#161a1a] inset-0" />
+                <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin}")` }} />
+                <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin1}")` }} />
+                <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgFieldDin2}")` }} />
+              </div>
+              <div className="flex flex-row items-center self-stretch" data-node-id="I1283:79098;1227:79714">
+                <div className="h-full relative rounded-[1px] shrink-0 w-[2px]" data-name="Indicator Right" />
+              </div>
+              <div className="flex-[1_0_0] h-[28px] min-w-px relative" data-node-id="I1283:79098;1231:2381">
+                <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[28px] left-0 text-[#cdbda0] text-[20px] top-0 tracking-[-0.4px] whitespace-nowrap" data-node-id="I1283:79098;1227:79713" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Họ và tên
+                </p>
+              </div>
+              <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1283:79098;1227:79715" data-name="Spacer" />
+              <div className="relative shrink-0 size-[24px]" data-node-id="I1283:79098;1231:2168" data-name="boicons">
+                <div className="absolute inset-[58.33%_13.78%_12.5%_13.78%]" data-node-id="I1283:79098;1231:2168;1231:2132">
+                  <div className="absolute inset-[0_1.93%_11.51%_1.93%]">
+                    <img alt="" className="block max-w-none size-full" src={imgEllipse45} />
+                  </div>
+                </div>
+                <div className="absolute inset-[12.5%_29.17%_45.83%_29.17%]" data-node-id="I1283:79098;1231:2168;1231:2133">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgEllipse46} />
+                </div>
+              </div>
+            </div>
+            <div className="h-[20px] relative shrink-0 w-full" data-node-id="I1283:79098;1231:2387" />
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col items-start opacity-80 p-[10px] relative shrink-0 w-full" data-node-id="1283:79147" data-name="filed">
+          <div className="content-stretch flex flex-col gap-[9px] items-start justify-center relative shrink-0 w-full" data-node-id="I1283:79147;1231:1992" data-name="field">
+            <p className="[word-break:break-word] font-['Roboto:Bold'] font-bold leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1283:79147;1231:1990" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Tên đăng nhập
+            </p>
+            <div className="border-2 border-[#767676] border-solid content-stretch flex items-center opacity-60 px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="I1283:79147;1227:79708" data-name="Field điền">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-[#161a1a] inset-0" />
+                <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin}")` }} />
+                <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin1}")` }} />
+                <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgFieldDin2}")` }} />
+              </div>
+              <div className="flex flex-row items-center self-stretch" data-node-id="I1283:79147;1227:79714">
+                <div className="h-full relative rounded-[1px] shrink-0 w-[2px]" data-name="Indicator Right" />
+              </div>
+              <div className="flex-[1_0_0] h-[28px] min-w-px relative" data-node-id="I1283:79147;1231:2381">
+                <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[28px] left-0 text-[#cdbda0] text-[20px] top-0 tracking-[-0.4px] whitespace-nowrap" data-node-id="I1283:79147;1227:79713" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Tên đăng nhập
+                </p>
+              </div>
+              <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1283:79147;1227:79715" data-name="Spacer" />
+              <div className="relative shrink-0 size-[24px]" data-node-id="I1283:79147;1231:2168" data-name="boicons">
+                <div className="absolute bottom-1/4 left-[16.67%] right-1/4 top-[16.67%]" data-node-id="I1283:79147;1231:2168;1231:2149" data-name="Subtract">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSubtract} />
+                </div>
+                <div className="absolute bottom-[16.67%] left-3/4 right-[16.67%] top-3/4" data-node-id="I1283:79147;1231:2168;1231:2152">
+                  <div className="absolute inset-[-50%]">
+                    <img alt="" className="block max-w-none size-full" src={imgVector109} />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="h-[20px] relative shrink-0 w-full" data-node-id="I1283:79147;1231:2387" />
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col items-start opacity-80 p-[10px] relative shrink-0 w-full" data-node-id="1283:79166" data-name="filed">
+          <div className="content-stretch flex flex-col gap-[9px] items-start justify-center relative shrink-0 w-full" data-node-id="I1283:79166;1231:1992" data-name="field">
+            <p className="[word-break:break-word] font-['Roboto:Bold'] font-bold leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1283:79166;1231:1990" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Email
+            </p>
+            <div className="border-2 border-[#767676] border-solid content-stretch flex items-center opacity-60 px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="I1283:79166;1227:79708" data-name="Field điền">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-[#161a1a] inset-0" />
+                <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin}")` }} />
+                <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin1}")` }} />
+                <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgFieldDin2}")` }} />
+              </div>
+              <div className="flex flex-row items-center self-stretch" data-node-id="I1283:79166;1227:79714">
+                <div className="h-full relative rounded-[1px] shrink-0 w-[2px]" data-name="Indicator Right" />
+              </div>
+              <div className="flex-[1_0_0] h-[28px] min-w-px relative" data-node-id="I1283:79166;1231:2381">
+                <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[28px] left-0 text-[#cdbda0] text-[20px] top-0 tracking-[-0.4px] whitespace-nowrap" data-node-id="I1283:79166;1227:79713" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  user@gmail.com
+                </p>
+              </div>
+              <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1283:79166;1227:79715" data-name="Spacer" />
+            </div>
+            <div className="h-[20px] relative shrink-0 w-full" data-node-id="I1283:79166;1231:2387" />
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col items-start opacity-80 p-[10px] relative shrink-0 w-full" data-node-id="1283:79185" data-name="filed">
+          <div className="content-stretch flex flex-col gap-[9px] items-start justify-center relative shrink-0 w-full" data-node-id="I1283:79185;1231:1992" data-name="field">
+            <p className="[word-break:break-word] font-['Roboto:Bold'] font-bold leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1283:79185;1231:1990" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Mật khẩu
+            </p>
+            <div className="border-2 border-[#767676] border-solid content-stretch flex items-center opacity-60 px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="I1283:79185;1227:79708" data-name="Field điền">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-[#161a1a] inset-0" />
+                <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin}")` }} />
+                <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin1}")` }} />
+                <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgFieldDin2}")` }} />
+              </div>
+              <div className="flex flex-row items-center self-stretch" data-node-id="I1283:79185;1227:79714">
+                <div className="h-full relative rounded-[1px] shrink-0 w-[2px]" data-name="Indicator Right" />
+              </div>
+              <div className="flex-[1_0_0] h-[28px] min-w-px relative" data-node-id="I1283:79185;1231:2381">
+                <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[28px] left-0 text-[#cdbda0] text-[20px] top-0 tracking-[-0.4px] whitespace-nowrap" data-node-id="I1283:79185;1227:79713" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Tối thiểu 8 ký tự
+                </p>
+              </div>
+              <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1283:79185;1227:79715" data-name="Spacer" />
+            </div>
+            <div className="h-[20px] relative shrink-0 w-full" data-node-id="I1283:79185;1231:2387" />
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col items-start opacity-80 p-[10px] relative shrink-0 w-full" data-node-id="1283:79204" data-name="filed">
+          <div className="content-stretch flex flex-col gap-[9px] items-start justify-center relative shrink-0 w-full" data-node-id="I1283:79204;1231:1992" data-name="field">
+            <p className="[word-break:break-word] font-['Roboto:Bold'] font-bold leading-[20px] relative shrink-0 text-[#d9b74c] text-[16px] tracking-[-0.32px] whitespace-nowrap" data-node-id="I1283:79204;1231:1990" style={{ fontVariationSettings: '"wdth" 100' }}>
+              Xác nhận mật khẩu
+            </p>
+            <div className="border-2 border-[#767676] border-solid content-stretch flex items-center opacity-60 px-[20px] py-[16px] relative shrink-0 w-full" data-node-id="I1283:79204;1227:79708" data-name="Field điền">
+              <div aria-hidden className="absolute inset-0 pointer-events-none">
+                <div className="absolute bg-[#161a1a] inset-0" />
+                <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin}")` }} />
+                <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgFieldDin1}")` }} />
+                <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgFieldDin2}")` }} />
+              </div>
+              <div className="flex flex-row items-center self-stretch" data-node-id="I1283:79204;1227:79714">
+                <div className="h-full relative rounded-[1px] shrink-0 w-[2px]" data-name="Indicator Right" />
+              </div>
+              <div className="flex-[1_0_0] h-[28px] min-w-px relative" data-node-id="I1283:79204;1231:2381">
+                <p className="[word-break:break-word] absolute font-['Roboto:Light'] font-light leading-[28px] left-0 text-[#cdbda0] text-[20px] top-0 tracking-[-0.4px] whitespace-nowrap" data-node-id="I1283:79204;1227:79713" style={{ fontVariationSettings: '"wdth" 100' }}>
+                  Nhập lại mật khẩu
+                </p>
+              </div>
+              <div className="flex-[1_0_0] h-[22px] min-w-px relative" data-node-id="I1283:79204;1227:79715" data-name="Spacer" />
+            </div>
+            <div className="h-[20px] relative shrink-0 w-full" data-node-id="I1283:79204;1231:2387" />
+          </div>
+        </div>
+        <div className="content-stretch flex items-center justify-center relative shrink-0 w-full" data-node-id="1283:79300" data-name="btn">
+          <div className="border border-[#b3b3b3] border-solid content-stretch flex flex-col items-center justify-center p-[10px] relative shrink-0 w-[237px]" data-node-id="1283:79247" data-name="đăng ký btn">
+            <div className="content-stretch flex items-center justify-center relative shrink-0 w-full" data-node-id="1283:79241" data-name="Đang ký tải xún">
+              <div className="content-stretch flex flex-col gap-[10px] h-[57px] items-center justify-center px-[76px] py-[13px] relative shrink-0 w-[217px]" data-node-id="I1283:79241;906:1714" data-name="Dang ngap">
+                <div className="absolute h-[57px] left-0 top-0 w-[217px]" data-node-id="I1283:79241;906:1715">
+                  <div className="absolute h-[57px] left-0 right-0 top-0" data-node-id="I1283:79241;906:1716" data-name="Title background">
+                    <div className="absolute inset-[0_1.05%_0_0]">
+                      <img alt="" className="block max-w-none size-full" height="57" src={imgTitleBackground} width="214.724" />
+                    </div>
+                  </div>
+                </div>
+                <div className="h-[31px] relative shrink-0 w-[64px]" data-node-id="I1283:79241;906:1717">
+                  <div className="-translate-y-1/2 [word-break:break-word] absolute flex flex-col font-['Space_Mono:Bold'] justify-center leading-[0] left-[calc(50%-49.5px)] not-italic text-[24px] text-white top-[15.5px] tracking-[-0.48px] whitespace-nowrap" data-node-id="I1283:79241;906:1718">
+                    <p className="leading-[1.3]">ĐĂNG KÝ</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

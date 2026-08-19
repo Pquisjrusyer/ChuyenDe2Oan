@@ -1,0 +1,16 @@
+{
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "<frame id=\"1316:80681\" name=\"quên mật khẩu\" x=\"15401\" y=\"5746\" width=\"1920\" height=\"1628\">\n  <frame id=\"1316:80785\" name=\"hero\" x=\"0\" y=\"0\" width=\"1920\" height=\"1021\">\n    <frame id=\"1316:80881\" name=\"Frame 427319044\" x=\"603\" y=\"135.5\" width=\"715\" height=\"750\">\n      <text id=\"1316:80786\" name=\"QUÊN MẬT KHẨU\" x=\"0\" y=\"0\" width=\"715\" height=\"310\" />\n      <text id=\"1316:80789\" name=\"Chúng tôi đã gửi một liên kết đặt lại mật khẩu đến email của bạn.\" x=\"137\" y=\"350\" width=\"441\" height=\"20\" />\n      <instance id=\"1316:80791\" name=\"filed\" x=\"0\" y=\"410\" width=\"715\" height=\"138\" />\n      <instance id=\"1316:80810\" name=\"Button 1\" x=\"0\" y=\"588\" width=\"715\" height=\"91\" />\n      <text id=\"1316:80883\" name=\"Hỗ trợ kỹ thuật\" x=\"250.5\" y=\"719\" width=\"214\" height=\"31\" />\n    </frame>\n    <rounded-rectangle id=\"1316:80882\" name=\"grunge-texture-background 2\" x=\"-229\" y=\"-341\" width=\"2379\" height=\"1703\" />\n  </frame>\n  <instance id=\"1316:80884\" name=\"Footer (Desktop)\" x=\"0\" y=\"1021\" width=\"1920\" height=\"607\" />\n  <instance id=\"1316:80682\" name=\"Menu/Navbar\" x=\"0\" y=\"0\" width=\"1920\" height=\"103\" />\n</frame>"
+      },
+      {
+        "type": "text",
+        "text": "IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design."
+      }
+    ]
+  },
+  "jsonrpc": "2.0",
+  "id": 2
+}

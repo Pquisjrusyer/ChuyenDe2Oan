@@ -1,0 +1,48 @@
+Currently selected nodes:
+- 1170:80129: herosection
+
+
+<frame id="1170:80129" name="herosection" x="0" y="0" width="1920" height="1417">
+  <instance id="1195:78596" name="Khung di chuyển" x="1240" y="162" width="727" height="756" />
+  <rounded-rectangle id="1195:78572" name="image 63" x="1134" y="1138" width="437" height="279" />
+  <frame id="1195:78465" name="Frame 427318953" x="201" y="105" width="1255" height="1235.1719970703125">
+    <frame id="1195:78466" name="title tải áon" x="0" y="0" width="1117" height="779.1719970703125">
+      <frame id="1195:78467" name="TẢI OÁN" x="0" y="0" width="854.2518310546875" height="238.17201232910156">
+        <frame id="1195:78468" name="Frame 427318949" x="20" y="20" width="368.1238098144531" height="198.17201232910156">
+          <vector id="1195:78469" name="Vector" x="0" y="53.97200012207031" width="103.82400512695312" height="144.20001220703125" />
+          <vector id="1195:78470" name="Vector" x="127.82421875" y="0" width="119.89199829101562" height="198.17201232910156" />
+          <vector id="1195:78471" name="Vector" x="271.71600341796875" y="53.97200012207031" width="96.40798950195312" height="144.20001220703125" />
+        </frame>
+        <frame id="1195:78472" name="Frame 427318948" x="459.1238098144531" y="30.711807250976562" width="375.12799072265625" height="187.460205078125">
+          <vector id="1195:78473" name="Vector" x="0" y="37.4921875" width="106.2960205078125" height="149.968017578125" />
+          <vector id="1195:78474" name="Vector" x="130.2958984375" y="0" width="119.8919677734375" height="187.4600067138672" />
+          <vector id="1195:78475" name="Vector" x="274.18798828125" y="43.259765625" width="100.94000244140625" height="144.20001220703125" />
+        </frame>
+      </frame>
+      <frame id="1195:78476" name="Frame 427318947" x="0" y="324.1719970703125" width="1117" height="221">
+        <text id="1195:78477" name="Bóng tối không chỉ là nơi sự thật bị chôn vùi. Hãy cầm đèn pin, ghi lại dấu vết và khám phá bí ẩn trong Ngôi Nhà Hứa." x="45" y="10" width="907" height="201" />
+      </frame>
+      <frame id="1195:78478" name="btn" x="0" y="631.1719970703125" width="1117" height="148">
+        <instance id="1195:78479" name="tải ngày btn ne" x="0" y="0" width="384" height="148" />
+        <instance id="1195:78480" name="cấu hình btn" x="404" y="0" width="713" height="148" />
+      </frame>
+    </frame>
+    <frame id="1195:78481" name="frame tong" x="0" y="868.1719970703125" width="1255" height="367">
+      <frame id="1195:78482" name="frame diwosi" x="0" y="0" width="1255" height="367">
+        <rounded-rectangle id="1195:78483" name="image 68" x="0" y="-19" width="1260.1153564453125" height="402" />
+        <rounded-rectangle id="1195:78484" name="Rectangle 4016" x="132" y="-39" width="904" height="445" />
+        <frame id="1195:78485" name="Frame 427318952" x="60" y="27" width="1135" height="312">
+          <instance id="1195:78486" name="icon noi dung nho" x="0" y="0" width="256" height="312" />
+          <instance id="1195:78487" name="icon noi dung nho" x="279" y="0" width="256" height="312" />
+          <instance id="1195:78488" name="icon noi dung nho" x="558" y="0" width="256" height="312" />
+          <instance id="1195:78489" name="icon noi dung nho" x="837" y="0" width="256" height="312" />
+        </frame>
+      </frame>
+    </frame>
+  </frame>
+  <rounded-rectangle id="1195:78612" name="78042 2" x="-38" y="-290" width="1996" height="1997" />
+  <rounded-rectangle id="1195:78613" name="Rectangle 4017" x="1396" y="-46" width="591" height="1539" />
+  <rounded-rectangle id="1195:78614" name="Rectangle 4018" x="379" y="-46" width="591" height="1539" />
+  <rounded-rectangle id="1195:78618" name="Rectangle 4019" x="190" y="1106" width="1539.000025833433" height="591.000067271832" />
+</frame>
+IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design.

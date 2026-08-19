@@ -1,0 +1,76 @@
+const imgImage77 = "http://localhost:3845/assets/8125135145016de6d6938ba0751148484d32d775.png";
+const imgImage70 = "http://localhost:3845/assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png";
+const imgImage71 = "http://localhost:3845/assets/1c6cda58361a8d0ab3edc74677ddbcd773711e4d.png";
+type BoIconPlatformProps = {
+  className?: string;
+  property1?: "epic" | "steam" | "win";
+};
+
+function BoIconPlatform({ className, property1 = "win" }: BoIconPlatformProps) {
+  const isEpic = property1 === "epic";
+  const isSteam = property1 === "steam";
+  return (
+    <div className={className || `h-[602px] relative ${isEpic ? "w-[456px]" : isSteam ? "w-[510px]" : "w-[462px]"}`} id={isEpic ? "node-1218_78443" : isSteam ? "node-1218_78442" : "node-1218_78444"}>
+      {property1 === "win" && (
+        <div className="absolute h-[322px] left-[107px] top-[140px] w-[248px]" data-node-id="1218:78435" data-name="image 77">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-11.26%] max-w-none top-[-31.23%] w-[332.47%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+      {isSteam && (
+        <div className="absolute h-[322px] left-[119px] top-[140px] w-[272px]" data-node-id="1218:78437" data-name="image 78">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-100.56%] max-w-none top-[-31.23%] w-[301.18%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+      {isEpic && (
+        <div className="absolute h-[322px] left-[106px] top-[140px] w-[244px]" data-node-id="1218:78438" data-name="image 79">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[170.1%] left-[-227.59%] max-w-none top-[-31.23%] w-[336.84%]" src={imgImage77} />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+type BTagIconPlatformProps = {
+  className?: string;
+  property1?: "window icon";
+};
+
+function BTagIconPlatform({ className, property1 = "window icon" }: BTagIconPlatformProps) {
+  return (
+    <div className={className || "h-[712px] relative w-[521px]"} data-node-id="1218:78471">
+      <div className="absolute bg-gradient-to-b from-[#100] h-[631px] left-[61px] overflow-clip to-[#1b0000] top-[65px] w-[433px]" data-node-id="1218:78424">
+        <div className="-translate-x-1/2 -translate-y-1/2 absolute flex h-[838px] items-center justify-center left-[calc(50%+0.5px)] mix-blend-difference top-[calc(50%-0.5px)] w-[558.667px]" data-node-id="1218:78427">
+          <div className="flex-none rotate-90">
+            <div className="h-[558.667px] relative w-[838px]" data-name="image 70">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage70} />
+            </div>
+          </div>
+        </div>
+        <BoIconPlatform className="-translate-x-1/2 -translate-y-1/2 absolute h-[602px] left-[calc(50%+0.5px)] top-[calc(50%-0.5px)] w-[462px]" />
+      </div>
+      <div className="absolute h-[712px] left-0 top-0 w-[521px]" data-node-id="1218:78425" data-name="image 70">
+        <img alt="" className="absolute inset-0 max-w-none object-bottom pointer-events-none size-full" src={imgImage71} />
+      </div>
+    </div>
+  );
+}
+
+export default function BTagIconPlatform1() {
+  return <BTagIconPlatform className="relative size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: for frame: .
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

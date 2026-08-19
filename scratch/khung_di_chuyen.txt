@@ -1,0 +1,70 @@
+const imgImage71 = "http://localhost:3845/assets/286cec571aa8011cf80113fa5908c160d2cc1808.png";
+const imgImage70 = "http://localhost:3845/assets/d0f9c63c0860f8dc1a9bf30bb3e3817e5d99f99e.png";
+type KhungDiChuynProps = {
+  className?: string;
+  property1?: "Default" | "Variant2";
+};
+
+export default function KhungDiChuyn({ className, property1 = "Default" }: KhungDiChuynProps) {
+  if (property1 === "Variant2") {
+    return (
+      <div className={className || "h-[756px] relative w-[727px]"} data-node-id="1195:78588" data-name="Property 1=Variant2">
+        <div className="absolute h-[435px] left-[169px] top-[550px] w-[642px]" data-node-id="1195:78589" data-name="image 71">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[264.6%] left-[-155.94%] max-w-none top-[-164.6%] w-[268.53%]" src={imgImage71} />
+          </div>
+        </div>
+        <div className="absolute h-[756px] left-0 top-0 w-[727px]" data-node-id="1195:78590" data-name="image 70">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[138.38%] left-[-17.81%] max-w-none top-[-33.46%] w-[216.03%]" src={imgImage70} />
+          </div>
+        </div>
+        <div className="-translate-x-1/2 absolute h-[228px] left-1/2 top-[-67px] w-[661px]" data-node-id="1195:78591" data-name="ảnh 2">
+          <div className="absolute aspect-[661/228] left-0 right-0 top-0" data-node-id="1195:78592" data-name="image 3">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <img alt="" className="absolute h-[449.12%] left-[-15.73%] max-w-none top-[-318.42%] w-[232.38%]" src={imgImage71} />
+            </div>
+          </div>
+          <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[141.16000366210938%] left-1/2 not-italic text-[#600] text-[64px] text-center top-[calc(50%-67px)] whitespace-nowrap" data-node-id="1195:78593">
+            NHÀ HỨA
+          </p>
+        </div>
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[141.16000366210938%] left-[470px] not-italic text-[#900] text-[32px] text-center top-[739px] whitespace-nowrap" data-node-id="1195:78594">
+          Không có gì là mãi mãi
+        </p>
+      </div>
+    );
+  }
+  return (
+    <button className={className || "block cursor-pointer h-[756px] relative w-[727px]"} data-node-id="1195:78583" data-name="Property 1=Default">
+      <div className="absolute h-[435px] left-[169px] top-[391px] w-[642px]" data-node-id="1195:78578" data-name="image 71">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[264.6%] left-[-155.94%] max-w-none top-[-164.6%] w-[268.53%]" src={imgImage71} />
+        </div>
+      </div>
+      <div className="absolute h-[756px] left-0 top-0 w-[727px]" data-node-id="1195:78577" data-name="image 70">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[138.38%] left-[-17.81%] max-w-none top-[-33.46%] w-[216.03%]" src={imgImage70} />
+        </div>
+      </div>
+      <div className="-translate-x-1/2 absolute h-[110px] left-1/2 top-[687px] w-[317px]" data-node-id="1195:78581" data-name="ảnh 2">
+        <div className="absolute aspect-[661/228] left-0 right-0 top-0" data-node-id="1187:80132" data-name="image 3">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[449.12%] left-[-15.73%] max-w-none top-[-318.42%] w-[232.38%]" src={imgImage71} />
+          </div>
+        </div>
+      </div>
+    </button>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Secondary/Red 800: #660000, Secondary/Red 700: #990000.
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

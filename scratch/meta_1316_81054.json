@@ -1,0 +1,16 @@
+{
+  "result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "<frame id=\"1316:81054\" name=\"quên mật khẩu xác nhận\" x=\"15401\" y=\"3584\" width=\"1920\" height=\"1628\">\n  <frame id=\"1316:81055\" name=\"hero\" x=\"0\" y=\"0\" width=\"1920\" height=\"1021\">\n    <frame id=\"1316:81056\" name=\"Frame 427319044\" x=\"603\" y=\"131\" width=\"715\" height=\"759\">\n      <text id=\"1316:81057\" name=\"KIỂM TRA HỘP THƯ CỦA BẠN\" x=\"0\" y=\"0\" width=\"715\" height=\"166\" />\n      <frame id=\"1316:81377\" name=\"Chield_check_fill\" x=\"231.5\" y=\"194\" width=\"252\" height=\"252\" />\n      <text id=\"1316:81058\" name=\"Chúng tôi đã gửi một liên kết đặt lại mật khẩu đến email của bạn.\" x=\"137\" y=\"474\" width=\"441\" height=\"20\" />\n      <text id=\"1316:81367\" name=\"THỜI GIAN HIỆU LỰC 15 PHÚT\" x=\"252\" y=\"522\" width=\"211\" height=\"20\" />\n      <instance id=\"1316:81060\" name=\"Button 1\" x=\"0\" y=\"570\" width=\"715\" height=\"91\" />\n      <frame id=\"1316:81411\" name=\"Frame 427319045\" x=\"83\" y=\"689\" width=\"549\" height=\"21\">\n        <vector id=\"1316:81410\" name=\"Vector 202\" x=\"0\" y=\"10.5\" width=\"138\" height=\"0\" />\n        <text id=\"1316:81061\" name=\"Không nhận được email ?\" x=\"165\" y=\"0\" width=\"219\" height=\"21\" />\n        <vector id=\"1316:81381\" name=\"Vector 201\" x=\"411\" y=\"10.5\" width=\"138\" height=\"0\" />\n      </frame>\n      <text id=\"1316:81412\" name=\"Gửi lại email\" x=\"295.5\" y=\"738\" width=\"124\" height=\"21\" />\n    </frame>\n    <rounded-rectangle id=\"1316:81062\" name=\"grunge-texture-background 2\" x=\"-229\" y=\"-341\" width=\"2379\" height=\"1703\" />\n  </frame>\n  <instance id=\"1316:81063\" name=\"Footer (Desktop)\" x=\"0\" y=\"1021\" width=\"1920\" height=\"607\" />\n  <instance id=\"1316:81064\" name=\"Menu/Navbar\" x=\"0\" y=\"0\" width=\"1920\" height=\"103\" />\n</frame>"
+      },
+      {
+        "type": "text",
+        "text": "IMPORTANT: After you call this tool, you MUST call get_design_context if trying to implement the design, since this tool only returns metadata. If you do not call get_design_context, the agent will not be able to implement the design."
+      }
+    ]
+  },
+  "jsonrpc": "2.0",
+  "id": 3
+}

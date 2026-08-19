@@ -44,27 +44,62 @@ export function renderNavbar(container, currentHash) {
               </a>
               <div class="nav-sub-dropdown-menu" id="navInfoSubMenu">
                 <a class="nav-sub-item ${currentHash === 'storyline' ? 'active' : ''}" href="#storyline">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Cốt truyện</span>
                 </a>
                 <a class="nav-sub-item ${currentHash === 'gameplay' ? 'active' : ''}" href="#gameplay">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="6" width="20" height="12" rx="6"></rect>
+                      <line x1="6" y1="12" x2="10" y2="12"></line>
+                      <line x1="8" y1="10" x2="8" y2="14"></line>
+                      <line x1="15" y1="13" x2="15.01" y2="13"></line>
+                      <line x1="18" y1="11" x2="18.01" y2="11"></line>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Gameplay</span>
                 </a>
                 <a class="nav-sub-item ${currentHash === 'character' ? 'active' : ''}" href="#character">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Nhân vật</span>
                 </a>
                 <a class="nav-sub-item ${currentHash === 'investigation' ? 'active' : ''}" href="#investigation">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Điều tra</span>
                 </a>
                 <a class="nav-sub-item ${currentHash === 'puzzle' ? 'active' : ''}" href="#puzzle">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 2l-2 2m-1.5 1.5L14 9l-3-3 2-2 3.5 1.5 3-3.5L21 2z"></path>
+                      <path d="M15.5 15.5L19 19m-4.5-4.5l-2-2"></path>
+                      <circle cx="7.5" cy="16.5" r="5.5"></circle>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Giải đố</span>
                 </a>
                 <a class="nav-sub-item ${currentHash === 'collection' ? 'active' : ''}" href="#collection">
-                  <span class="sub-item-accent">◆</span>
+                  <div class="nav-sub-item-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                      <rect x="1" y="3" width="22" height="5"></rect>
+                      <line x1="10" y1="12" x2="14" y2="12"></line>
+                    </svg>
+                  </div>
                   <span class="sub-item-text">Thu thập</span>
                 </a>
               </div>
@@ -135,16 +170,33 @@ export function renderNavbar(container, currentHash) {
                       </div>
                       <div class="nav-user-menu-divider"></div>
                       <a href="#character" class="nav-user-menu-item" id="navItemProfile">
-                        <span class="nav-menu-icon">👤</span>
+                        <div class="nav-sub-item-icon">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </div>
                         <span>Hồ sơ nhân vật</span>
                       </a>
                       <a href="#collection" class="nav-user-menu-item" id="navItemCollection">
-                        <span class="nav-menu-icon">🗂️</span>
+                        <div class="nav-sub-item-icon">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                            <rect x="1" y="3" width="22" height="5"></rect>
+                            <line x1="10" y1="12" x2="14" y2="12"></line>
+                          </svg>
+                        </div>
                         <span>Bộ sưu tập manh mối</span>
                       </a>
                       <div class="nav-user-menu-divider"></div>
                       <button type="button" class="nav-user-menu-item nav-user-logout" id="navItemLogout">
-                        <span class="nav-menu-icon">🚪</span>
+                        <div class="nav-sub-item-icon">
+                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ff4d4d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                          </svg>
+                        </div>
                         <span>Đăng xuất</span>
                       </button>
                     </div>

@@ -1,0 +1,76 @@
+const imgField = "http://localhost:3845/assets/de199cd00f2de8d3061f6e4a81dc16eff89caf6c.png";
+const imgField1 = "http://localhost:3845/assets/2a7f7a6f7f25bf8fa8035a56e87eeb105e0f7a2a.png";
+const imgField2 = "http://localhost:3845/assets/05c551376248ffa1592286380f2c9be7d8fca9cf.png";
+const imgLeft = "http://localhost:3845/assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg";
+const imgLeft1 = "http://localhost:3845/assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg";
+const imgLeft2 = "http://localhost:3845/assets/57b0bf322aa2948f965f666152adf35b2ac6baad.svg";
+const imgLeft3 = "http://localhost:3845/assets/8b5546e740a3ef3af9459d8cf1cd40e775958d8f.svg";
+
+function LienHHTr({ className }: { className?: string }) {
+  return (
+    <div className={className || "content-stretch flex flex-col gap-[27px] h-[320px] items-center justify-center opacity-90 px-[18px] py-[40px] relative w-[601px]"} data-node-id="1058:77749" data-name="Liên hệ hỗ trợ">
+      <div className="content-stretch flex flex-col items-center justify-center relative shrink-0 w-[364.33px]" data-node-id="1058:77703" data-name="Container">
+        <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[#c4c7c8] text-[12px] text-center tracking-[4.8px] uppercase whitespace-nowrap" data-node-id="1058:77704">
+          <p className="leading-[16px]">TÔI CHƯA TÌM THẤY CÂU TRẢ LỜI.</p>
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[10px] h-[91px] items-center justify-center px-[17px] py-[12px] relative shrink-0 w-[335px]" data-node-id="1058:77708" data-name="Button 1">
+        <div className="absolute h-[91px] left-0 right-0 top-0" data-node-id="I1058:77708;708:592" data-name="Horror frame 2">
+          <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1058:77708;708:592;708:35" data-name="Left">
+            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft} />
+          </div>
+          <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1058:77708;708:592;708:38" data-name="Spacer left" />
+          <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1058:77708;708:592;708:42" data-name="Spacer right" />
+          <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1058:77708;708:592;708:43" style={{ containerType: "size" }}>
+            <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+              <div className="relative size-full" data-name="Left">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft1} />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="border-2 border-[#9c7e21] border-solid content-stretch flex flex-[1_0_0] gap-[10px] items-center justify-center min-w-px overflow-clip px-[20px] py-[16px] relative" data-node-id="I1058:77708;708:582" data-name="Field">
+          <div aria-hidden className="absolute inset-0 pointer-events-none">
+            <div className="absolute bg-[#161a1a] inset-0" />
+            <div className="absolute bg-size-[347.9999899864197px_195.92399436235428px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgField}")` }} />
+            <div className="absolute bg-size-[277.00000512599945px_390.968994140625px] bg-top-left inset-0 mix-blend-soft-light opacity-10" style={{ backgroundImage: `url("${imgField1}")` }} />
+            <div className="absolute bg-size-[546.999990940094px_364.8489939570427px] bg-top-left inset-0 mix-blend-multiply opacity-25" style={{ backgroundImage: `url("${imgField2}")` }} />
+          </div>
+          <p className="[word-break:break-word] font-['Space_Mono:Bold'] leading-[1.3] not-italic relative shrink-0 text-[24px] text-center text-white tracking-[-0.48px] whitespace-nowrap" data-node-id="I1058:77708;708:606">
+            LIÊN HỆ HỖ TRỢ
+          </p>
+          <div className="-translate-x-1/2 -translate-y-1/2 absolute blur-[23.4px] h-[62px] left-1/2 mix-blend-plus-lighter overflow-clip top-[calc(50%-0.5px)] w-[195px]" data-node-id="I1058:77708;879:1077" />
+        </div>
+      </div>
+      <div className="absolute inset-[0_0_-3px_0]" data-node-id="1058:77726" data-name="Horror frame 1">
+        <div className="absolute inset-[4.05%_65.14%_4.05%_0]" data-node-id="I1058:77726;708:35" data-name="Left">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft2} />
+        </div>
+        <div className="absolute bottom-0 left-[34.86%] right-1/2 top-0" data-node-id="I1058:77726;708:38" data-name="Spacer left" />
+        <div className="absolute bottom-0 left-1/2 right-[34.86%] top-0" data-node-id="I1058:77726;708:42" data-name="Spacer right" />
+        <div className="absolute flex inset-[4.05%_0_4.05%_65.14%] items-center justify-center" data-node-id="I1058:77726;708:43" style={{ containerType: "size" }}>
+          <div className="-scale-x-100 flex-none h-[100cqh] w-[100cqw]">
+            <div className="relative size-full" data-name="Left">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLeft3} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function LienHhTr() {
+  return <LienHHTr className="content-stretch flex flex-col gap-[27px] items-center justify-center opacity-90 px-[18px] py-[40px] relative size-full" />;
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Secondary/Red 900: #330000, Primary/Gold 600: #9C7E21.
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

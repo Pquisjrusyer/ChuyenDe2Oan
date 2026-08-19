@@ -1,0 +1,67 @@
+const imgFramePart1 = "http://localhost:3845/assets/105ebc7cda031fdb485695b18a341cec252f1d95.png";
+const imgFramePart2 = "http://localhost:3845/assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png";
+const imgFramePart3 = "http://localhost:3845/assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png";
+const imgFramePart4 = "http://localhost:3845/assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png";
+const imgFramePart5 = "http://localhost:3845/assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png";
+const imgRectangle37 = "http://localhost:3845/assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png";
+
+export default function Cat() {
+  return (
+    <div className="bg-gradient-to-b from-[#010101] relative size-full to-[#030000]" data-node-id="1218:78984" data-name="CAT">
+      <div className="-translate-x-1/2 -translate-y-1/2 absolute content-stretch flex flex-col gap-[48px] items-center justify-center left-[calc(50%+0.5px)] px-[80px] top-1/2" data-node-id="1218:78985" data-name="CTA">
+        <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1218:78986" data-name="Heading 2">
+          <div className="[word-break:break-word] flex flex-col font-['Space_Mono:Regular'] justify-center leading-[0] not-italic relative shrink-0 text-[0px] text-center text-white tracking-[0.96px] whitespace-nowrap" data-node-id="1218:78987">
+            <p className="leading-[87px] mb-0 text-[24px]">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</p>
+            <p className="font-['Space_Mono:Bold'] leading-[87px] text-[48px]">HÃY ĐẾN VỚI NỖI SỢ ĐỂ KHÁM PHÁ</p>
+          </div>
+        </div>
+        <div className="h-[68px] relative shrink-0 w-[383px]" data-node-id="1218:79027" data-name="CTA btn">
+          <div className="absolute content-stretch flex inset-0 items-center justify-center" data-node-id="I1218:79027;906:1550" data-name="Button background">
+            <div className="h-[70px] relative shrink-0 w-[15px]" data-node-id="I1218:79027;906:1551" data-name="frame_part_1">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart1} />
+            </div>
+            <div className="bg-size-[25px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79027;906:1552" style={{ backgroundImage: `url("${imgFramePart2}")` }} data-name="frame_part_2" />
+            <div className="h-[70px] relative shrink-0 w-[146px]" data-node-id="I1218:79027;906:1553" data-name="frame_part_3">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart3} />
+            </div>
+            <div className="bg-size-[18px_70px] bg-top-left flex-[1_0_0] h-[70px] min-w-px relative" data-node-id="I1218:79027;906:1554" style={{ backgroundImage: `url("${imgFramePart4}")` }} data-name="frame_part_4" />
+            <div className="h-[70px] relative shrink-0 w-[30px]" data-node-id="I1218:79027;906:1555" data-name="frame_part_5">
+              <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgFramePart5} />
+            </div>
+          </div>
+          <div className="absolute border border-black border-solid inset-[4.29%_4px]" data-node-id="I1218:79027;906:1556">
+            <div aria-hidden className="absolute inset-0 pointer-events-none">
+              <div className="absolute bg-gradient-to-b from-[#593b0c] inset-0 to-[#b10e07]" />
+              <div className="absolute inset-0 mix-blend-multiply opacity-50 overflow-hidden">
+                <img alt="" className="absolute h-[489.23%] left-[-7.94%] max-w-none top-[-180.33%] w-[192.27%]" src={imgRectangle37} />
+              </div>
+              <div className="absolute bg-gradient-to-b from-[rgba(45,1,0,0.53)] inset-0 to-[rgba(177,14,7,0)]" />
+            </div>
+          </div>
+          <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Space_Mono:Bold'] leading-[1.3] left-[calc(50%-0.26px)] not-italic text-[32px] text-center text-shadow-[0px_0px_4px_rgba(0,0,0,0.5)] text-white top-[calc(50%-13px)] tracking-[-0.64px] w-[208.48px]" data-node-id="I1218:79027;906:1557">
+            TẢI XUỐNG
+          </p>
+          <div className="absolute blur-[1.2px] border-5 border-[#ee1b10] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79027;906:1558" data-name="Button frame 3" />
+          <div className="absolute border-3 border-[#ee1b10] border-solid inset-[8.57%_1.58%] shadow-[0px_0px_2.5px_0px_red]" data-node-id="I1218:79027;906:1559" data-name="Button frame 2" />
+          <div className="absolute border-[#c0552f] border-[0.6px] border-solid inset-[8.57%_1.58%]" data-node-id="I1218:79027;906:1560" data-name="Button frame 1" />
+        </div>
+        <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-node-id="1218:78991" data-name="Container">
+          <div className="[word-break:break-word] flex flex-col font-['Roboto:Light'] font-light justify-center leading-[0] relative shrink-0 text-[#c4c7c8] text-[16px] text-center tracking-[-0.32px] whitespace-nowrap" data-node-id="1218:78992" style={{ fontVariationSettings: '"wdth" 100' }}>
+            <p className="leading-[20px]">YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Secondary/Red 800: #660000, Desktop/Heading 4/h4-light: Font(family: "Roboto", style: Light, size: 16, weight: 300, lineHeight: 20, letterSpacing: -2).
+Image assets are stored on a localhost server. Clients can use these images directly in code as a way to view the image assets the same way they would other remote servers. Images and SVGs will be stored as constants, e.g. const image = 'http://localhost:3845/assets/10c13ac1a228a365cb98a0064b1d5afbc84887b2.png' These constants will be used in the code as the source for the image, e.g. <img src={image} /> This is true for both images and SVGs, so you can use the same approach for both types of assets.
+IMPORTANT: After you call this tool, you MUST call get_screenshot to get a screenshot of the node for context.

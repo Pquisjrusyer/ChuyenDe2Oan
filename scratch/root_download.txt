@@ -1,0 +1,22 @@
+w-[232.38%]" src={imgImage75} />
+          </div>
+        </div>
+      </div>
+    </button>
+  );
+}
+
+export default function TiGameDesktop() {
+  return (
+    <div className="bg-gradient-to-b content-stretch flex flex-col from-[#1d0000] items-center relative size-full to-black" data-node-id="1170:80024" data-name="Tải game desktop">
+      <div className="h-[1417px] overflow-clip relative shrink-0 w-full" data-node-id="1170:80129" data-name="herosection">
+        <KhungDiChuyn className="absolute block cursor-pointer h-[756px] left-[calc(58.33%+120px)] top-[162px] w-[727px]" />
+        <div className="absolute h-[279px] left-[calc(58.33%+14px)] top-[1138px] w-[437px]" data-node-id="1195:78572" data-name="image 63">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="" className="absolute h-[249.15%] left-[-130.54%] max-w-none top-[-149.15%] w-[238.14%]" src={imgImage76} />
+          </div>
+        </div>
+        <div className="absolute content-stretch flex flex-col gap-[89px] items-start justify-center left-[calc(8.33%+41px)] top-[105px] w-[1255px]" data-node-id="1195:78465">
+          <div className="content-stretch flex flex-col gap-[86px] items-start relative shrink-0" data-node-id="1195:78466" data-name="title tải áon">
+       
+---SPLIT---
