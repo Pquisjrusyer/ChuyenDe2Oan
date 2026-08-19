@@ -258,25 +258,22 @@ export async function renderGameplay(container) {
            ======================================================== -->
       <section class="gameplay-faq-section" data-node-id="1060:75760">
         
-        <!-- FAQ Title Frame (1060:75761) -->
+        <!-- Horror Header Banner (1060:75761) -->
         <div class="gameplay-faq-header trailer-scroll-reveal" data-node-id="1060:75761">
-          <h2 class="gameplay-faq-header-text" data-node-id="1060:75762">
-            CÂU HỎI THƯỜNG GẶP
-          </h2>
+          <img src="./assets/gameplay-faq-horror-frame.png" alt="" class="gameplay-faq-horror-frame-bg" data-node-id="1060:75763" />
+          <h2 class="gameplay-faq-header-text" data-node-id="1060:75762">CÂU HỎI THƯỜNG GẶP</h2>
         </div>
 
-        <!-- FAQ Accordion List (1060:75836) -->
-        <div class="gameplay-faq-list" id="gameplayFaqList" data-node-id="1060:75836">
+        <!-- Options Container (1060:75772) -->
+        <div class="gameplay-faq-options-container trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1060:75772">
           
-          <!-- FAQ Item 1 (1060:75505) -->
-          <div class="gameplay-faq-item trailer-scroll-reveal" data-node-id="1060:75505">
-            <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <h3 class="gameplay-faq-question" data-node-id="I1060:75505;1040:76539">
+          <!-- FAQ Item 1 (1711:7319) -->
+          <div class="gameplay-faq-item active" data-node-id="1711:7319">
+            <button type="button" class="gameplay-faq-trigger" aria-expanded="true">
+              <span class="gameplay-faq-question" data-node-id="1711:7324">
                 OÁN CÓ HỖ TRỢ TAY CẦM KHÔNG?
-              </h3>
-              <svg class="gameplay-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              </span>
+              <span class="gameplay-faq-icon" data-node-id="1711:7326">+</span>
             </button>
             <div class="gameplay-faq-answer">
               <div class="gameplay-faq-answer-inner">
@@ -287,18 +284,16 @@ export async function renderGameplay(container) {
             </div>
           </div>
 
-          <!-- FAQ Item 2 (1060:75506) -->
-          <div class="gameplay-faq-item trailer-scroll-reveal" data-node-id="1060:75506">
+          <!-- FAQ Item 2 (1711:7340) -->
+          <div class="gameplay-faq-item" data-node-id="1711:7340">
             <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <h3 class="gameplay-faq-question" data-node-id="I1060:75506;1040:76539">
+              <span class="gameplay-faq-question" data-node-id="1711:7345">
                 CẤU HÌNH TỐI THIỂU ĐỂ TRẢI NGHIỆM GAME?
-              </h3>
-              <svg class="gameplay-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              </span>
+              <span class="gameplay-faq-icon" data-node-id="1711:7347">+</span>
             </button>
             <div class="gameplay-faq-answer">
-              <div class="gameplay-faq-answer-inner" data-node-id="I1060:75506;1040:76550">
+              <div class="gameplay-faq-answer-inner" data-node-id="1711:7349">
                 <p>Để trải nghiệm không gian kinh dị của OÁN một cách trọn vẹn nhất, chúng tôi khuyến nghị cấu hình tối thiểu sau:</p>
                 <ul>
                   <li>• CPU: Intel Core i5-8400 / AMD Ryzen 5 2600</li>
@@ -310,39 +305,18 @@ export async function renderGameplay(container) {
             </div>
           </div>
 
-          <!-- FAQ Item 3 -->
-          <div class="gameplay-faq-item trailer-scroll-reveal">
+          <!-- FAQ Item 3 (1711:7361) -->
+          <div class="gameplay-faq-item" data-node-id="1711:7361">
             <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <h3 class="gameplay-faq-question">
-                GAME CÓ BAO NHIÊU CHƯƠNG HỒI?
-              </h3>
-              <svg class="gameplay-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
+              <span class="gameplay-faq-question" data-node-id="1711:7366">
+                THỜI LƯỢNG CHƠI TRUNG BÌNH LÀ BAO LÂU?
+              </span>
+              <span class="gameplay-faq-icon" data-node-id="1711:7368">+</span>
             </button>
             <div class="gameplay-faq-answer">
               <div class="gameplay-faq-answer-inner">
                 <p>
-                  OÁN gồm 4 chương hồi chính cùng các khu vực bí mật ẩn giấu. Thời lượng trải nghiệm ước tính từ 8 đến 12 tiếng, kèm theo 3 cái kết khác nhau phụ thuộc vào những quyết định và cổ vật bạn thu thập được.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="gameplay-faq-item trailer-scroll-reveal">
-            <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <h3 class="gameplay-faq-question">
-                LÀM SAO ĐỂ LƯU TIẾN TRÌNH TRONG GAME?
-              </h3>
-              <svg class="gameplay-faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-            <div class="gameplay-faq-answer">
-              <div class="gameplay-faq-answer-inner">
-                <p>
-                  Trò chơi lưu tiến trình tự động tại các bàn thờ gia tiên và ngọn nến phong ấn linh hồn đặt rải rác ở những gian phòng an toàn trong dinh thự.
+                  Thời lượng hoàn thành cốt truyện chính kéo dài khoảng 8 - 12 giờ. Nếu bạn muốn khám phá toàn bộ các kết thúc ẩn, giải mã tất cả manh mối và tìm kiếm toàn bộ cổ vật trong Nhà Hứa, thời lượng có thể lên đến 18 - 25 giờ.
                 </p>
               </div>
             </div>
