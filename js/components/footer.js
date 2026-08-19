@@ -1,7 +1,7 @@
 import { sendSubscriptionEmail } from '../services/email-service.js';
 
 export function renderFooter(container, currentHash) {
-  const hideFooter = ['intro', 'mail-confirm', 'fullscreen', 'character'].includes(currentHash);
+  const hideFooter = ['intro', 'mail-confirm', 'fullscreen'].includes(currentHash);
   
   if (hideFooter) {
     container.innerHTML = '';
