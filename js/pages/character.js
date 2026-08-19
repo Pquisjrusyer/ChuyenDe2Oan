@@ -142,7 +142,7 @@ export async function renderCharacter(container) {
             <div class="char-card-visual">
               <img src="./assets/nv_minh.svg" alt="Thẻ nhân vật Minh" class="char-card-base-img" />
               <div class="char-card-drawer">
-                <div class="char-drawer-bg"></div>
+                <img src="./assets/nv_drawer_texture_only.svg" class="char-drawer-bg-img" alt="" />
                 <div class="char-drawer-content">
                   <span class="char-drawer-role">Nhân vật chính</span>
                   <h3 class="char-drawer-name">MINH</h3>
@@ -158,7 +158,7 @@ export async function renderCharacter(container) {
             <div class="char-card-visual">
               <img src="./assets/nv_khang.svg" alt="Thẻ nhân vật Khang" class="char-card-base-img" />
               <div class="char-card-drawer">
-                <div class="char-drawer-bg"></div>
+                <img src="./assets/nv_drawer_texture_only.svg" class="char-drawer-bg-img" alt="" />
                 <div class="char-drawer-content">
                   <span class="char-drawer-role">Bạn đồng hành</span>
                   <h3 class="char-drawer-name">KHANG</h3>
@@ -174,7 +174,7 @@ export async function renderCharacter(container) {
             <div class="char-card-visual">
               <img src="./assets/nv_loc.svg" alt="Thẻ nhân vật Hứa Văn Lộc" class="char-card-base-img" />
               <div class="char-card-drawer">
-                <div class="char-drawer-bg"></div>
+                <img src="./assets/nv_drawer_texture_only.svg" class="char-drawer-bg-img" alt="" />
                 <div class="char-drawer-content">
                   <span class="char-drawer-role">Trưởng tộc Hứa Gia</span>
                   <h3 class="char-drawer-name">LỘC</h3>
@@ -190,7 +190,7 @@ export async function renderCharacter(container) {
             <div class="char-card-visual">
               <img src="./assets/nv_ngoc.svg" alt="Thẻ nhân vật Hứa Ngọc" class="char-card-base-img" />
               <div class="char-card-drawer">
-                <div class="char-drawer-bg"></div>
+                <img src="./assets/nv_drawer_texture_only.svg" class="char-drawer-bg-img" alt="" />
                 <div class="char-drawer-content">
                   <span class="char-drawer-role">Oán hồn nữ</span>
                   <h3 class="char-drawer-name">NGỌC</h3>
