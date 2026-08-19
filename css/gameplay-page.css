@@ -30,7 +30,7 @@
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at 50% 20%, rgba(51, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 70%),
-              radial-gradient(circle at 20% 60%, rgba(80, 5, 5, 0.2) 0%, transparent 60%);
+    radial-gradient(circle at 20% 60%, rgba(80, 5, 5, 0.2) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -355,35 +355,35 @@
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .gameplay-survive-media {
     width: 100%;
     max-width: 600px;
     height: auto;
     aspect-ratio: 931 / 696;
   }
-  
+
   .gameplay-survive-image-container {
     width: 100%;
     height: 100%;
   }
-  
+
   .gameplay-survive-content {
     width: 100%;
     max-width: 500px;
     height: auto;
   }
-  
+
   .gameplay-survive-text-wrapper {
     height: auto;
     text-align: center;
   }
-  
+
   .gameplay-survive-title {
     width: 100%;
     height: auto;
   }
-  
+
   .gameplay-survive-desc {
     width: 100%;
     text-align: center;
@@ -394,18 +394,18 @@
   .gameplay-survive-media {
     max-width: 100%;
   }
-  
+
   .gameplay-survive-title .survive-main,
   .gameplay-survive-title .survive-sub {
     font-size: 48px;
     line-height: 50px;
   }
-  
+
   .gameplay-survive-title .regular {
     font-size: 32px;
     line-height: 40px;
   }
-  
+
   .gameplay-survive-desc {
     font-size: 14px;
   }
@@ -667,7 +667,7 @@
   position: absolute;
   inset: 0;
   background: radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.7) 100%),
-              linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.6) 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, transparent 20%, transparent 80%, rgba(0, 0, 0, 0.6) 100%);
   pointer-events: none;
 }
 
@@ -718,6 +718,7 @@
   width: clamp(140px, 32vw, 576px);
   object-fit: fill;
   object-position: right center;
+  transform: scaleX(-1);
 }
 
 .gameplay-faq-header-text {
@@ -939,7 +940,7 @@
 .gameplay-related-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 75%, #000000 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 75%, #000000 100%);
   z-index: 2;
   pointer-events: none;
 }
@@ -1067,33 +1068,33 @@
   .gameplay-hero-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gameplay-hero-side-poster {
     max-width: 500px;
     margin: 0 auto;
   }
-  
+
   .gameplay-survive-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .gameplay-survive-content {
     text-align: left;
   }
-  
+
   .gameplay-survive-desc {
     margin: 0;
   }
-  
+
   .gameplay-tags-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .gameplay-experience-grid {
     grid-template-columns: 1fr;
     max-width: 600px;
   }
-  
+
   .gameplay-related-grid {
     grid-template-columns: 1fr;
     max-width: 500px;
@@ -1104,7 +1105,7 @@
   .gameplay-hero-section {
     padding: 100px 20px 40px;
   }
-  
+
   .gameplay-tags-grid {
     grid-template-columns: 1fr;
     max-width: 420px;

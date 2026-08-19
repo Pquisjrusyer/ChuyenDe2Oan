@@ -659,7 +659,7 @@
   position: relative;
   border: 1px solid transparent;
   background: linear-gradient(#0d0d0d, #0d0d0d) padding-box,
-              linear-gradient(135deg, rgba(68, 71, 72, 1) 0%, rgba(137, 0, 0, 1) 100%) border-box;
+    linear-gradient(135deg, rgba(68, 71, 72, 1) 0%, rgba(137, 0, 0, 1) 100%) border-box;
   min-height: 210px;
   padding: 25px;
   box-sizing: border-box;
@@ -692,7 +692,7 @@
 .storyline-chapter-card:hover {
   transform: translateY(-5px);
   background: linear-gradient(#140808, #140808) padding-box,
-              linear-gradient(135deg, rgba(217, 183, 76, 1) 0%, rgba(180, 0, 0, 1) 100%) border-box;
+    linear-gradient(135deg, rgba(217, 183, 76, 1) 0%, rgba(180, 0, 0, 1) 100%) border-box;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(137, 0, 0, 0.4);
 }
 
@@ -782,7 +782,8 @@
   width: 100%;
   padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 100px) clamp(100px, 12vh, 180px);
   box-sizing: border-box;
-  background: linear-gradient(180deg, #000000 0%, #1a0303 50%, #000000 100%);
+  background: black;
+  /* background: linear-gradient(180deg, #000000 0%, #1a0303 50%, #000000 100%); */
   z-index: 2;
   min-height: 600px;
 }
@@ -997,7 +998,7 @@
     width: 80%;
     height: auto;
   }
-  
+
   .storyline-journey-indicator {
     display: none;
   }
@@ -1009,16 +1010,16 @@
     gap: 30px;
     margin-top: 200px;
   }
-  
+
   .storyline-location-card-new {
     width: 100%;
     max-width: 320px;
   }
-  
+
   .storyline-location-footer-new {
     gap: 60px;
   }
-  
+
   .storyline-location-title-new {
     font-size: 16px;
   }

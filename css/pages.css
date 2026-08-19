@@ -6187,7 +6187,7 @@
 /* ---- 7. TIN Tá»¨C & Káº¾T Ná»I (1363:86595) ---- */
 .figma-news-connect-section {
   padding: clamp(60px, 8vw, 100px) 0;
-  background: #030508;
+  background: black;
 }
 
 .news-connect-grid-layout {
@@ -6512,7 +6512,7 @@
 /* ---- 8. TRAILER SECTION (1363:86754) ---- */
 .figma-trailer-official-section {
   padding: clamp(60px, 8vw, 100px) 0;
-  background: #030508;
+  background: black;
   position: relative;
   overflow: hidden;
 }
