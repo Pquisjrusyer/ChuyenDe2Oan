@@ -80,9 +80,19 @@ export async function renderStoryline(container) {
             </div>
 
             <!-- CTA Button: Khám phá nhà Hứa (957:430339) -->
-            <div class="storyline-curse-cta-frame" data-node-id="957:430339">
-              <a href="#character" class="storyline-curse-cta-btn" id="btnExploreMansion">
-                <span class="storyline-curse-cta-text" data-node-id="I957:430339;708:606">Khám phá nhà Hứa</span>
+            <div class="storyline-curse-cta-container" data-node-id="957:430339">
+              <a href="#character" class="storyline-curse-horror-btn" id="btnExploreMansion">
+                <div class="storyline-btn-bracket-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                
+                <div class="storyline-btn-field" data-node-id="I957:430339;708:582">
+                  <span class="storyline-btn-label" data-node-id="I957:430339;708:606">Khám phá nhà Hứa</span>
+                </div>
+
+                <div class="storyline-btn-bracket-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
               </a>
             </div>
           </div>
