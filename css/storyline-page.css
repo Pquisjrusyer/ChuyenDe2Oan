@@ -657,8 +657,9 @@
 
 .storyline-chapter-card {
   position: relative;
-  border: 1px solid #444748;
-  background: #0d0d0d;
+  border: 1px solid transparent;
+  background: linear-gradient(#0d0d0d, #0d0d0d) padding-box,
+              linear-gradient(135deg, rgba(68, 71, 72, 1) 0%, rgba(137, 0, 0, 1) 100%) border-box;
   min-height: 210px;
   padding: 25px;
   box-sizing: border-box;
@@ -667,7 +668,7 @@
   gap: clamp(20px, 2.5vw, 44px);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, background 0.35s ease;
 }
 
 .storyline-chapter-card-bg {
@@ -689,9 +690,10 @@
 }
 
 .storyline-chapter-card:hover {
-  border-color: #d9b74c;
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(217, 183, 76, 0.25);
+  background: linear-gradient(#140808, #140808) padding-box,
+              linear-gradient(135deg, rgba(217, 183, 76, 1) 0%, rgba(180, 0, 0, 1) 100%) border-box;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(137, 0, 0, 0.4);
 }
 
 .storyline-chapter-thumb {
