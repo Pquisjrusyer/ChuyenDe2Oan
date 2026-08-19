@@ -224,31 +224,63 @@ export async function renderCharacter(container) {
            ======================================================== -->
       <section class="char-concept-section" data-node-id="1332:81848">
         
-        <!-- Concept Header Bar (1332:81853) -->
-        <div class="char-concept-header trailer-scroll-reveal" data-node-id="1332:81853">
-          <h2 class="char-concept-header-text" data-node-id="1332:81854">CONCEPT</h2>
+        <!-- Background Grunge Layer (1332:81864) -->
+        <div class="char-concept-bg-grunge" data-node-id="1332:81864">
+          <img src="./assets/ac40410bbfc293811b934b94c7f9b725d661badc.png" alt="" />
         </div>
 
-        <!-- Concept Art Grid (1332:82136) -->
-        <div class="char-concept-grid" data-node-id="1332:82136">
-          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-left">
-            <img src="./assets/2ddc9b279685ffe3617af903449f6f6ae92dc214.png" alt="Concept 1" />
+        <!-- Top Transition Gradient (1332:81868) -->
+        <div class="char-concept-top-fade" data-node-id="1332:81868"></div>
+
+        <div class="char-concept-container">
+          
+          <!-- Concept Header Horror Frame (1332:81853) -->
+          <div class="char-concept-header-wrap trailer-scroll-reveal trailer-reveal-scale" data-node-id="1332:81853">
+            <div class="char-concept-horror-frame" data-node-id="1332:81855">
+              <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" class="concept-corner-left" />
+              <h2 class="char-concept-title" data-node-id="1332:81854">CONCEPT</h2>
+              <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" class="concept-corner-right" />
+            </div>
           </div>
-          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-fade-up">
-            <img src="./assets/f02483b1b7f8d5f1db09640a5ad25c99e1170184.png" alt="Concept 2" />
+
+          <!-- Concept Art Grid Structure (1332:82136) -->
+          <div class="char-concept-rows" data-node-id="1332:82136">
+            
+            <!-- Row 1: 3 Medium Cards (1332:82118) -->
+            <div class="char-concept-row row-3-cols" data-node-id="1332:82118">
+              <div class="char-concept-card card-3 trailer-scroll-reveal trailer-reveal-left" data-node-id="1332:82119">
+                <img src="./assets/2ddc9b279685ffe3617af903449f6f6ae92dc214.png" alt="Concept Art 1" />
+              </div>
+              <div class="char-concept-card card-3 trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1332:82121">
+                <img src="./assets/f02483b1b7f8d5f1db09640a5ad25c99e1170184.png" alt="Concept Art 2" />
+              </div>
+              <div class="char-concept-card card-3 trailer-scroll-reveal trailer-reveal-right" data-node-id="1332:82123">
+                <img src="./assets/716c511c460f8c7b5f5c7a97d7cda134e2236ac4.png" alt="Concept Art 3" />
+              </div>
+            </div>
+
+            <!-- Row 2: 2 Wide Cards (1332:82125) -->
+            <div class="char-concept-row row-2-cols" data-node-id="1332:82125">
+              <div class="char-concept-card card-2 trailer-scroll-reveal trailer-reveal-left" data-node-id="1332:82126">
+                <img src="./assets/6a0df64a3ab46e239afd98ad3edcb0ca5f0ea710.png" alt="Concept Art 4" />
+              </div>
+              <div class="char-concept-card card-2 trailer-scroll-reveal trailer-reveal-right" data-node-id="1332:82128">
+                <img src="./assets/ffe2275f92abce276fcf0c8024c69730714f75cd.png" alt="Concept Art 5" />
+              </div>
+            </div>
+
+            <!-- Row 3: 2 Wide Cards (1332:82130) -->
+            <div class="char-concept-row row-2-cols" data-node-id="1332:82130">
+              <div class="char-concept-card card-2 trailer-scroll-reveal trailer-reveal-left" data-node-id="1332:82131">
+                <img src="./assets/5ef898942f6c3fe61d5c383c503a097913cfba7b.png" alt="Concept Art 6" />
+              </div>
+              <div class="char-concept-card card-2 trailer-scroll-reveal trailer-reveal-right" data-node-id="1332:82133">
+                <img src="./assets/2d414018e235dec3a8d72460bf616eb216e9c59e.png" alt="Concept Art 7" />
+              </div>
+            </div>
+
           </div>
-          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-right">
-            <img src="./assets/716c511c460f8c7b5f5c7a97d7cda134e2236ac4.png" alt="Concept 3" />
-          </div>
-          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-left">
-            <img src="./assets/6a0df64a3ab46e239afd98ad3edcb0ca5f0ea710.png" alt="Concept 4" />
-          </div>
-          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-fade-up">
-            <img src="./assets/ffe2275f92abce276fcf0c8024c69730714f75cd.png" alt="Concept 5" />
-          </div>
-          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-right">
-            <img src="./assets/5ef898942f6c3fe61d5c383c503a097913cfba7b.png" alt="Concept 6" />
-          </div>
+
         </div>
       </section>
 
