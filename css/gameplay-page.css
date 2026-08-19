@@ -685,6 +685,7 @@
 
 .gameplay-faq-header {
   position: relative;
+  width: 100%;
   max-width: 1653px;
   min-height: 79px;
   margin: 0 auto clamp(40px, 6vh, 70px);
@@ -693,27 +694,46 @@
   justify-content: center;
 }
 
-.gameplay-faq-horror-frame-bg {
+.gameplay-faq-horror-frame {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   pointer-events: none;
+  z-index: 1;
+}
+
+.gameplay-faq-horror-left {
+  height: clamp(45px, 5vw, 72px);
+  width: clamp(140px, 32vw, 576px);
+  object-fit: fill;
+  object-position: left center;
+}
+
+.gameplay-faq-horror-right {
+  height: clamp(45px, 5vw, 72px);
+  width: clamp(140px, 32vw, 576px);
+  object-fit: fill;
+  object-position: right center;
 }
 
 .gameplay-faq-header-text {
   position: relative;
   z-index: 2;
   font-family: 'Space Mono', monospace;
-  font-size: clamp(20px, 2.5vw, 36px);
+  font-size: clamp(20px, 2.4vw, 40px);
   font-weight: 700;
-  color: #ee1b10;
-  letter-spacing: 2px;
+  color: #990000;
+  letter-spacing: -0.8px;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  text-shadow: 0 0 15px rgba(238, 27, 16, 0.7), 0 0 30px rgba(0, 0, 0, 0.9);
+  padding: 0 clamp(10px, 2vw, 24px);
+  white-space: nowrap;
+  text-shadow: 0 0 15px rgba(153, 0, 0, 0.4);
 }
 
 .gameplay-faq-options-container {

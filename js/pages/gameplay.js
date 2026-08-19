@@ -260,7 +260,10 @@ export async function renderGameplay(container) {
         
         <!-- Horror Header Banner (1060:75761) -->
         <div class="gameplay-faq-header trailer-scroll-reveal" data-node-id="1060:75761">
-          <img src="./assets/gameplay-faq-horror-frame.png" alt="" class="gameplay-faq-horror-frame-bg" data-node-id="1060:75763" />
+          <div class="gameplay-faq-horror-frame" data-node-id="1060:75763">
+            <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" class="gameplay-faq-horror-left" />
+            <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" class="gameplay-faq-horror-right" />
+          </div>
           <h2 class="gameplay-faq-header-text" data-node-id="1060:75762">CÂU HỎI THƯỜNG GẶP</h2>
         </div>
 
