@@ -402,3 +402,114 @@
     max-width: 100%;
   }
 }
+
+/* ========================================================
+   3. FORGOT PASSWORD & CHECK INBOX STYLES (1316:80681 / 1316:81054)
+   ======================================================== */
+.forgot-desc-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #c4c7c8;
+  margin: 0;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.forgot-form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 715px;
+  margin-top: 8px;
+}
+
+.forgot-support-wrap {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.forgot-support-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #c4c7c8;
+  text-decoration: none;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  transition: color 0.25s, text-shadow 0.25s;
+}
+
+.forgot-support-link:hover {
+  color: #d9b74c;
+  text-shadow: 0 0 10px rgba(217, 183, 76, 0.5);
+}
+
+.inbox-validity-note {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #e62217;
+  letter-spacing: 1.2px;
+  margin: 10px 0 0 0;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(230, 34, 23, 0.4);
+}
+
+.inbox-divider-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 550px;
+  margin-top: 14px;
+}
+
+.inbox-divider-line {
+  flex: 1 1 auto;
+  height: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.inbox-divider-line img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inbox-divider-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.inbox-resend-btn {
+  background: transparent;
+  border: none;
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #9c7e21;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.25s, transform 0.2s;
+  padding: 6px 12px;
+  outline: none;
+}
+
+.inbox-resend-btn:hover {
+  color: #d9b74c;
+  transform: scale(1.05);
+}
+
+.inbox-resend-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
