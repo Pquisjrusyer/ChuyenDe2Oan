@@ -385,18 +385,65 @@ export async function renderStoryline(container) {
     </div>
   `;
 
-  // Timeline Carousel Interaction
+  // Timeline Carousel Drag-to-Scroll & Button Navigation
   const track = container.querySelector('#storylineTimelineTrack');
   const prevBtn = container.querySelector('#btnTimelinePrev');
   const nextBtn = container.querySelector('#btnTimelineNext');
 
-  if (track && prevBtn && nextBtn) {
-    prevBtn.addEventListener('click', () => {
-      track.scrollBy({ left: -420, behavior: 'smooth' });
+  if (track) {
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        track.scrollBy({ left: -420, behavior: 'smooth' });
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        track.scrollBy({ left: 420, behavior: 'smooth' });
+      });
+    }
+
+    // Mouse drag-to-scroll interaction
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let hasMoved = false;
+
+    track.addEventListener('mousedown', (e) => {
+      isDown = true;
+      hasMoved = false;
+      track.classList.add('is-dragging');
+      startX = e.pageX - track.offsetLeft;
+      scrollLeft = track.scrollLeft;
     });
-    nextBtn.addEventListener('click', () => {
-      track.scrollBy({ left: 420, behavior: 'smooth' });
+
+    window.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('is-dragging');
     });
+
+    track.addEventListener('mouseleave', () => {
+      if (isDown) {
+        isDown = false;
+        track.classList.remove('is-dragging');
+      }
+    });
+
+    track.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5;
+      if (Math.abs(walk) > 5) hasMoved = true;
+      track.scrollLeft = scrollLeft - walk;
+    });
+
+    track.addEventListener('click', (e) => {
+      if (hasMoved) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
   }
 
   // Scroll Reveal Observer

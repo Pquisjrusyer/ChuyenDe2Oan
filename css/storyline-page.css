@@ -458,6 +458,14 @@
   scrollbar-width: thin;
   scrollbar-color: #9c7e21 #161a1a;
   max-width: 100%;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.storyline-timeline-track.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
 }
 
 .storyline-timeline-card {
@@ -475,7 +483,14 @@
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+.storyline-timeline-track.is-dragging .storyline-timeline-card {
+  cursor: grabbing;
 }
 
 .timeline-card-bg-overlay {
