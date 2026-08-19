@@ -5,6 +5,7 @@
 import { router } from './router.js';
 import { renderNavbar } from './components/navbar.js';
 import { renderFooter } from './components/footer.js';
+import { renderBreadcrumb } from './components/breadcrumb.js';
 import { initSmoothScroll, getLenis } from './utils/smooth-scroll.js';
 import { initBGM, initSFX, handleRouteBGM } from './utils/audio.js';
 import { initSpiderCursor } from './utils/spider-cursor.js';
@@ -38,6 +39,7 @@ import { initCookieBanner } from './components/cookie-banner.js';
 function initApp() {
   const pageRoot = document.getElementById('page-root');
   const navbarRoot = document.getElementById('navbar-root');
+  const breadcrumbRoot = document.getElementById('breadcrumb-root');
   const footerRoot = document.getElementById('footer-root');
 
   // Register routes
@@ -106,6 +108,7 @@ function initApp() {
     }
 
     renderNavbar(navbarRoot, hash);
+    renderBreadcrumb(breadcrumbRoot, hash);
     renderFooter(footerRoot, hash);
     
     // Update background music based on active route
