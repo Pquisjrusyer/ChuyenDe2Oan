@@ -2,6 +2,8 @@
    OAN — REGISTER PAGE (Figma Node 1227:79552 "Đăng ký déktop")
    ======================================================== */
 
+import { sendRegistrationEmail } from '../services/email-service.js';
+
 export async function renderRegister(container) {
   container.innerHTML = `
     <div class="reg-page-wrapper" data-node-id="1227:79552">
@@ -368,12 +370,35 @@ export async function renderRegister(container) {
         alert('Vui lòng đồng ý với Điều khoản sử dụng và Chính sách bảo mật trước khi tiếp tục.');
         return;
       }
-      const pass = container.querySelector('#regPassword').value;
-      const confirmPass = container.querySelector('#regConfirmPassword').value;
+      const lastName = container.querySelector('#regLastName')?.value || '';
+      const firstName = container.querySelector('#regFirstName')?.value || '';
+      const username = container.querySelector('#regUsername')?.value || '';
+      const email = container.querySelector('#regEmail')?.value || '';
+      const pass = container.querySelector('#regPassword')?.value || '';
+      const confirmPass = container.querySelector('#regConfirmPassword')?.value || '';
+
       if (pass !== confirmPass) {
         alert('Mật khẩu xác nhận không khớp! Vui lòng kiểm tra lại.');
         return;
       }
+
+      const fullName = `${lastName} ${firstName}`.trim();
+
+      // Trigger automatic confirmation email to user's registered email with username and email
+      sendRegistrationEmail({ username, email, fullName });
+
+      // Save to localStorage for persistence
+      try {
+        localStorage.setItem('OAN_LAST_REGISTERED_USER', JSON.stringify({
+          username,
+          email,
+          fullName,
+          date: new Date().toISOString()
+        }));
+      } catch (err) {
+        console.warn(err);
+      }
+
       // Navigate to Register Success Page (Figma 1332:84911)
       window.location.hash = 'register-success';
     });

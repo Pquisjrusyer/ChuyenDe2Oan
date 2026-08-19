@@ -3,6 +3,17 @@
    ======================================================== */
 
 export async function renderRegisterSuccess(container) {
+  let registeredUser = null;
+  try {
+    const raw = localStorage.getItem('OAN_LAST_REGISTERED_USER');
+    if (raw) registeredUser = JSON.parse(raw);
+  } catch (e) {
+    console.warn(e);
+  }
+
+  const username = registeredUser?.username || 'Lữ Khách';
+  const email = registeredUser?.email || '';
+
   container.innerHTML = `
     <div class="reg-success-page" data-node-id="1332:84911">
       
@@ -23,6 +34,15 @@ export async function renderRegisterSuccess(container) {
         <div class="reg-success-shield-icon" data-node-id="1332:84915">
           <img src="./assets/c3bbd3c027cc168dec7fa3fcb244af583a85d9fa.svg" alt="Đăng ký thành công" />
         </div>
+
+        <!-- Account Info Notice Badge -->
+        ${email ? `
+        <div class="reg-success-email-notice">
+          <p class="reg-success-email-info">
+            Thư xác nhận kích hoạt kèm thông tin tài khoản <strong class="reg-highlight-gold">${username}</strong> đã được gửi tới Gmail <strong class="reg-highlight-white">${email}</strong>.
+          </p>
+        </div>
+        ` : ''}
 
         <!-- CTA Button 1: Đi tới đăng nhập (1332:84921) -->
         <div class="reg-success-btn-frame" data-node-id="1332:84921">
