@@ -261,7 +261,7 @@
 }
 
 .login-submit-btn {
-  border: 1px solid #b3b3b3;
+  /* border: 1px solid #b3b3b3; */
   background: transparent;
   padding: 10px;
   cursor: pointer;
@@ -275,7 +275,7 @@
 
 .login-submit-btn:hover {
   transform: scale(1.05);
-  border-color: #d9b74c;
+  filter: drop-shadow(0 0 12px rgba(217, 183, 76, 0.7));
 }
 
 .login-submit-btn-inner {

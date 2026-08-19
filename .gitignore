@@ -54,3 +54,5 @@ Thumbs.db
 *.temp
 tmp/
 temp/
+scratch/
+recover/

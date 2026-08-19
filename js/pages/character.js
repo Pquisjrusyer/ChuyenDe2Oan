@@ -142,10 +142,7 @@ export async function renderCharacter(container) {
            ======================================================== -->
       <section class="char-list-section" data-node-id="1307:82392">
         
-        <!-- Base Red Atmospheric Background -->
-        <div class="char-list-bg-media">
-          <img src="./assets/81b10c2dd1eb6e78408e5818a088176c9cd7536b.png" alt="" />
-        </div>
+    
 
         <!-- Background Grunge Layer (1332:81777) -->
         <div class="char-list-bg-grunge" data-node-id="1332:81777">
