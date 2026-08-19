@@ -48,60 +48,102 @@ export default defineConfig(({ mode }) => {
                   return;
                 }
 
-              const payload = JSON.stringify({
-                from: from || 'OAN Game <onboarding@resend.dev>',
-                to: Array.isArray(to) ? to : [to],
-                subject: subject || '📜 [OÁN] Thư Tri Ân & Phong Ấn Giao Ước Nhà Hứa',
-                html: html,
-              });
-
-              const options = {
-                hostname: 'api.resend.com',
-                path: '/emails',
-                method: 'POST',
-                headers: {
-                  'Authorization': `Bearer ${activeApiKey}`,
-                  'Content-Type': 'application/json',
-                  'Content-Length': Buffer.byteLength(payload),
-                },
-              };
-
-              const apiReq = https.request(options, apiRes => {
-                let apiBody = '';
-                apiRes.on('data', chunk => {
-                  apiBody += chunk;
+                const payload = JSON.stringify({
+                  from: from || 'OAN Game <onboarding@resend.dev>',
+                  to: Array.isArray(to) ? to : [to],
+                  subject: subject || '📜 [OÁN] Thư Tri Ân & Phong Ấn Giao Ước Nhà Hứa',
+                  html: html,
                 });
-                apiRes.on('end', () => {
+
+                const options = {
+                  hostname: 'api.resend.com',
+                  path: '/emails',
+                  method: 'POST',
+                  headers: {
+                    'Authorization': `Bearer ${activeApiKey}`,
+                    'Content-Type': 'application/json',
+                    'Content-Length': Buffer.byteLength(payload),
+                  },
+                };
+
+                const apiReq = https.request(options, apiRes => {
+                  let apiBody = '';
+                  apiRes.on('data', chunk => {
+                    apiBody += chunk;
+                  });
+                  apiRes.on('end', () => {
+                    res.setHeader('Content-Type', 'application/json');
+                    try {
+                      const result = JSON.parse(apiBody);
+
+                      // Handle Resend Sandbox limitation (only delivers to account owner's email)
+                      if (apiRes.statusCode === 403 && result.message && result.message.includes('only send testing emails to your own email address')) {
+                        const ownerEmailMatch = result.message.match(/\(([^)]+)\)/);
+                        const ownerEmail = (ownerEmailMatch && ownerEmailMatch[1]) || 'hpq.graphicdesign.afitel.15022003@gmail.com';
+
+                        const fallbackPayload = JSON.stringify({
+                          from: from || 'OAN Game <onboarding@resend.dev>',
+                          to: [ownerEmail],
+                          subject: `${subject || '📜 [OÁN] Thư Phong Ấn'} [Test gửi cho: ${Array.isArray(to) ? to.join(', ') : to}]`,
+                          html: `
+                            <div style="background:#2a0505;border:1px solid #9c7e21;padding:12px;margin-bottom:20px;border-radius:4px;color:#ffffff;font-family:sans-serif;font-size:13px;">
+                              🔔 <strong>[Resend Sandbox Notice]:</strong> Email này được chuyển tiếp tự động về hòm thư chủ tài khoản (<strong>${ownerEmail}</strong>) vì bạn đang dùng gói Resend Sandbox thử nghiệm. Người nhận đăng ký ban đầu là: <strong>${Array.isArray(to) ? to.join(', ') : to}</strong>.
+                            </div>
+                            ${html}
+                          `,
+                        });
+
+                        const fallbackReq = https.request({
+                          ...options,
+                          headers: {
+                            ...options.headers,
+                            'Content-Length': Buffer.byteLength(fallbackPayload),
+                          }
+                        }, fbRes => {
+                          let fbBody = '';
+                          fbRes.on('data', c => fbBody += c);
+                          fbRes.on('end', () => {
+                            res.statusCode = 200;
+                            res.end(JSON.stringify({
+                              success: true,
+                              sandboxRedirected: true,
+                              ownerEmail: ownerEmail,
+                              originalRecipient: to,
+                              id: JSON.parse(fbBody || '{}').id
+                            }));
+                          });
+                        });
+                        fallbackReq.write(fallbackPayload);
+                        fallbackReq.end();
+                        return;
+                      }
+
+                      res.statusCode = apiRes.statusCode || 200;
+                      res.end(JSON.stringify(result));
+                    } catch {
+                      res.statusCode = apiRes.statusCode || 200;
+                      res.end(apiBody);
+                    }
+                  });
+                });
+
+                apiReq.on('error', err => {
                   res.setHeader('Content-Type', 'application/json');
-                  res.statusCode = apiRes.statusCode || 200;
-                  try {
-                    const result = JSON.parse(apiBody);
-                    res.end(JSON.stringify(result));
-                  } catch {
-                    res.end(apiBody);
-                  }
+                  res.statusCode = 500;
+                  res.end(JSON.stringify({ success: false, error: err.message }));
                 });
-              });
 
-              apiReq.on('error', err => {
+                apiReq.write(payload);
+                apiReq.end();
+              } catch (err) {
                 res.setHeader('Content-Type', 'application/json');
-                res.statusCode = 500;
+                res.statusCode = 400;
                 res.end(JSON.stringify({ success: false, error: err.message }));
-              });
-
-              apiReq.write(payload);
-              apiReq.end();
-            } catch (err) {
-              res.setHeader('Content-Type', 'application/json');
-              res.statusCode = 400;
-              res.end(JSON.stringify({ success: false, error: err.message }));
-            }
+              }
+            });
           });
-        });
+        },
       },
-    },
-  ],
-};
+    ],
+  };
 });
-
-
