@@ -273,18 +273,18 @@ export async function renderRegister(container) {
         <div class="reg-platform-icons-row trailer-scroll-reveal trailer-reveal-fade-up delay-150" data-node-id="1284:79484">
           
           <!-- Steam (1284:79476) -->
-          <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79476" aria-label="Đăng ký với Steam">
-            <img src="./assets/platform_steam_true_circle.png" alt="Steam" />
+          <a href="https://store.steampowered.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn btn-platform-steam" data-node-id="1284:79476" aria-label="Đăng ký với Steam">
+            <img src="./assets/icon_nen_tang_steam.png" alt="Steam" />
           </a>
 
           <!-- Epic Games (1284:79478) -->
-          <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79478" aria-label="Đăng ký với Epic Games">
-            <img src="./assets/platform_epic_true_circle.png" alt="Epic Games" />
+          <a href="https://epicgames.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn btn-platform-epic" data-node-id="1284:79478" aria-label="Đăng ký với Epic Games">
+            <img src="./assets/icon_nen_tang_epic.png" alt="Epic Games" />
           </a>
 
           <!-- Xbox (1284:79480) -->
-          <a href="https://xbox.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn" data-node-id="1284:79480" aria-label="Đăng ký với Xbox">
-            <img src="./assets/platform_xbox_true_circle.png" alt="Xbox" />
+          <a href="https://xbox.com" target="_blank" rel="noopener noreferrer" class="reg-platform-btn btn-platform-xbox" data-node-id="1284:79480" aria-label="Đăng ký với Xbox">
+            <img src="./assets/icon_nen_tang_xbox.png" alt="Xbox" />
           </a>
 
         </div>

@@ -703,16 +703,26 @@
 
 .reg-platform-btn {
   position: relative;
-  width: clamp(20px, 5vw, 114px);
-  height: clamp(80px, 7.5vw, 114px);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
-  overflow: hidden;
+}
+
+.reg-platform-btn.btn-platform-steam {
+  width: clamp(90px, 9vw, 134px);
+  height: clamp(90px, 9vw, 134px);
+}
+
+.reg-platform-btn.btn-platform-epic {
+  width: clamp(80px, 8vw, 120px);
+  height: clamp(90px, 9vw, 134px);
+}
+
+.reg-platform-btn.btn-platform-xbox {
+  width: clamp(90px, 9vw, 134px);
+  height: clamp(90px, 9vw, 134px);
 }
 
 .reg-platform-btn:hover {
@@ -721,10 +731,9 @@
 }
 
 .reg-platform-btn img {
-  width: 20%;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
   display: block;
 }
 
