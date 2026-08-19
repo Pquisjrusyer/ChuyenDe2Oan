@@ -374,7 +374,8 @@ export async function renderRegister(container) {
         alert('Mật khẩu xác nhận không khớp! Vui lòng kiểm tra lại.');
         return;
       }
-      alert('Đăng ký tài khoản thành công! Chào mừng bạn gia nhập thế giới OÁN.');
+      // Navigate to Register Success Page (Figma 1332:84911)
+      window.location.hash = 'register-success';
     });
   }
 

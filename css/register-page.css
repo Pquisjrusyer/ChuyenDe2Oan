@@ -703,7 +703,7 @@
 
 .reg-platform-btn {
   position: relative;
-  width: clamp(80px, 7.5vw, 114px);
+  width: clamp(20px, 5vw, 114px);
   height: clamp(80px, 7.5vw, 114px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -721,7 +721,7 @@
 }
 
 .reg-platform-btn img {
-  width: 100%;
+  width: 20%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
@@ -759,4 +759,157 @@
   .reg-title-sub {
     font-size: 22px;
   }
+}
+
+/* ========================================================
+   5. REGISTER SUCCESS PAGE (1332:84911)
+   ======================================================== */
+.reg-success-page {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 103px);
+  background: linear-gradient(180deg, #000000 0%, #250000 50%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(80px, 10vh, 120px) 20px 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.reg-success-grunge-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: color-dodge;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.reg-success-grunge-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.reg-success-content {
+  position: relative;
+  z-index: 2;
+  max-width: 715px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(24px, 3.5vh, 36px);
+  text-align: center;
+}
+
+.reg-success-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(32px, 3.8vw, 64px);
+  font-weight: 700;
+  color: #9c7e21;
+  letter-spacing: 1.2px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 30px rgba(156, 126, 33, 0.5);
+}
+
+.reg-success-shield-icon {
+  position: relative;
+  width: clamp(160px, 16vw, 252px);
+  height: clamp(160px, 16vw, 252px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 25px rgba(217, 183, 76, 0.45));
+  animation: successShieldPulse 3s ease-in-out infinite alternate;
+}
+
+.reg-success-shield-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes successShieldPulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(217, 183, 76, 0.35));
+  }
+  100% {
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 35px rgba(217, 183, 76, 0.65)) drop-shadow(0 0 15px rgba(153, 0, 0, 0.5));
+  }
+}
+
+.reg-success-btn-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 715px;
+  margin-top: 8px;
+}
+
+.reg-success-bracket-left,
+.reg-success-bracket-right {
+  height: clamp(60px, 7vh, 80px);
+  width: clamp(30px, 4vw, 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.reg-success-bracket-left img,
+.reg-success-bracket-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.reg-success-cta-btn {
+  flex: 1 1 auto;
+  border: 2px solid #9c7e21;
+  background: #161a1a;
+  padding: clamp(14px, 2vh, 18px) clamp(20px, 3vw, 40px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reg-success-cta-btn:hover {
+  background: #250303;
+  border-color: #d9b74c;
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(217, 183, 76, 0.5), 0 0 15px rgba(153, 0, 0, 0.4);
+}
+
+.reg-success-btn-text {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  margin: 0;
+  transition: color 0.25s ease;
+}
+
+.reg-success-cta-btn:hover .reg-success-btn-text {
+  color: #d9b74c;
 }

@@ -18,6 +18,7 @@ import { renderCommunity } from './pages/community.js';
 import { renderFaq } from './pages/faq.js';
 import { renderDownload } from './pages/download.js';
 import { renderRegister } from './pages/register.js';
+import { renderRegisterSuccess } from './pages/register-success.js';
 import { renderLogin } from './pages/login.js';
 import { renderForgotPassword } from './pages/forgot-password.js';
 import { renderCheckInbox } from './pages/check-inbox.js';
@@ -47,6 +48,7 @@ function initApp() {
   router.addRoute('faq', renderFaq);
   router.addRoute('download', renderDownload);
   router.addRoute('register', renderRegister);
+  router.addRoute('register-success', renderRegisterSuccess);
   router.addRoute('login', renderLogin);
   router.addRoute('forgot-password', renderForgotPassword);
   router.addRoute('check-inbox', renderCheckInbox);
