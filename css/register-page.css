@@ -600,6 +600,41 @@
   object-fit: contain;
 }
 
+.reg-password-toggle-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cdbda0;
+  transition: color 0.25s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  outline: none;
+}
+
+.reg-password-toggle-btn:hover {
+  color: #d9b74c;
+  transform: scale(1.1);
+}
+
+.reg-password-toggle-btn .eye-off-icon {
+  display: none;
+}
+
+.reg-password-toggle-btn.active .eye-icon {
+  display: none;
+}
+
+.reg-password-toggle-btn.active .eye-off-icon {
+  display: block;
+  color: #d9b74c;
+}
+
 /* Submit Button (1283:79247) */
 .reg-submit-btn-wrap {
   display: flex;
