@@ -47,35 +47,14 @@ export async function renderGameplay(container) {
             <!-- Right: 2 CTA Buttons (1060:75296) -->
             <div class="gameplay-hero-btns-col" data-node-id="1060:75296">
               
-              <!-- Button 1: TẢI GAME (1060:75238) -->
-              <a href="#download" class="gameplay-btn-tai-game" data-node-id="1060:75238" title="Tải game OÁN">
-                <div class="tai-game-frame-parts">
-                  <div class="tg-fp1"><img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" /></div>
-                  <div class="tg-fp2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
-                  <div class="tg-fp3"><img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" /></div>
-                  <div class="tg-fp4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
-                  <div class="tg-fp5"><img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" /></div>
-                </div>
-                <div class="tai-game-inner-body">
-                  <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" class="tai-game-texture" alt="" />
-                </div>
-                <div class="tai-game-glow-3"></div>
-                <div class="tai-game-glow-2"></div>
-                <div class="tai-game-glow-1"></div>
-                <span class="tai-game-text" data-node-id="I1060:75238;906:1557">TẢI GAME</span>
+              <!-- Button 1: XEM TRAILER (1060:75250) -->
+              <a href="#trailer" class="gameplay-btn-xem-trailer" data-node-id="1060:75250" title="Xem trailer">
+                <img src="./assets/cta-btn-new.svg" alt="Xem Trailer" class="gameplay-btn-new-2" />
               </a>
 
-              <!-- Button 2: XEM TRAILER (1060:75250) -->
-              <a href="#trailer" class="gameplay-btn-xem-trailer" data-node-id="1060:75250" title="Xem trailer">
-                <div class="trailer-corner-left">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
-                </div>
-                <div class="trailer-btn-field" data-node-id="I1060:75250;708:582">
-                  <span class="trailer-btn-text" data-node-id="I1060:75250;708:606">XEM TRAILER</span>
-                </div>
-                <div class="trailer-corner-right">
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
-                </div>
+              <!-- Button 2: TẢI GAME (1060:75238) -->
+              <a href="#download" class="gameplay-btn-tai-game" data-node-id="1060:75238" title="Tải game OÁN">
+                <img src="./assets/button-1-new.svg" alt="Tải Game" class="gameplay-btn-new-1" />
               </a>
 
             </div>
@@ -93,17 +72,22 @@ export async function renderGameplay(container) {
           
           <!-- Left: Cinematic Image (1060:75314) -->
           <div class="gameplay-survive-media trailer-scroll-reveal trailer-reveal-left" data-node-id="1060:75314">
-            <img src="./assets/b76c78172d6e968ff30b0ac750540bc810f0b636.png" alt="Sống sót qua màn đêm" data-node-id="1060:75315" />
+            <div class="gameplay-survive-image-container" data-node-id="1060:75315">
+              <img src="./assets/b76c78172d6e968ff30b0ac750540bc810f0b636.png" alt="Sống sót qua màn đêm" />
+            </div>
           </div>
 
           <!-- Right: Typography & Story (1060:75321) -->
           <div class="gameplay-survive-content trailer-scroll-reveal trailer-reveal-right" data-node-id="1060:75321">
-            <h2 class="gameplay-survive-title" data-node-id="1060:75317">
-              SỐNG SÓT <span class="regular">QUA</span><br />MÀN ĐÊM
-            </h2>
-            <p class="gameplay-survive-desc" data-node-id="1060:75318">
-              OÁN kết hợp các yếu tố kinh dị sinh tồn truyền thống với các cơ chế điều tra tâm linh độc đáo. Người chơi không chỉ phải trốn thoát khỏi những thực thể siêu nhiên mà còn phải tìm hiểu nguồn cơn của "Oán khí" để hóa giải những lời nguyền cổ xưa.
-            </p>
+            <div class="gameplay-survive-text-wrapper" data-node-id="1060:75320">
+              <h2 class="gameplay-survive-title" data-node-id="1060:75317">
+                <span class="survive-main">SỐNG SÓT <span class="regular">QUA</span></span>
+                <span class="survive-sub">MÀN ĐÊM</span>
+              </h2>
+              <p class="gameplay-survive-desc" data-node-id="1060:75318">
+                OÁN kết hợp các yếu tố kinh dị sinh tồn truyền thống với các cơ chế điều tra tâm linh độc đáo. Người chơi không chỉ phải trốn thoát khỏi những thực thể siêu nhiên mà còn phải tìm hiểu nguồn cơn của "Oán khí" để hóa giải những lời nguyền cổ xưa.
+              </p>
+            </div>
           </div>
 
         </div>
@@ -117,57 +101,129 @@ export async function renderGameplay(container) {
           
           <!-- Card 1: ĐIỀU TRA (1060:75368) -->
           <a href="#investigation" class="gameplay-tag-card trailer-scroll-reveal" data-node-id="1060:75368">
-            <div class="gameplay-tag-thumb" data-node-id="1060:75334">
-              <img src="./assets/9efa1cecb8231d52751451000865c82eba95d56d.png" alt="Điều tra" />
+            <!-- Layered Images -->
+            <div class="gameplay-tag-layers" data-node-id="1060:75334">
+              <div class="gameplay-tag-layer-1" data-node-id="1060:75366">
+                <img src="./assets/ct1-1.png" alt="Layer 1" />
+              </div>
+              <div class="gameplay-tag-layer-2" data-node-id="1060:75365">
+                <img src="./assets/mieu-vuong-1.png" alt="Layer 2" />
+              </div>
+              <div class="gameplay-tag-layer-3" data-node-id="1060:75364">
+                <img src="./assets/rung-tre-vuong-1.png" alt="Layer 3" />
+              </div>
+              <div class="gameplay-tag-layer-4" data-node-id="1060:75487">
+                <img src="./assets/a8-1.png" alt="Layer 4" />
+              </div>
             </div>
-            <div class="gameplay-tag-body">
+            <!-- Overlay -->
+            <div class="gameplay-tag-overlay" data-node-id="1060:75367">
+              <img src="./assets/overlay-78042-new.png" alt="Overlay" />
+            </div>
+            <!-- Content -->
+            <div class="gameplay-tag-content-wrapper" data-node-id="1060:75325">
               <h3 class="gameplay-tag-title" data-node-id="1060:75327">ĐIỀU TRA</h3>
+            </div>
+            <div class="gameplay-tag-desc-wrapper" data-node-id="1060:75328">
               <p class="gameplay-tag-desc" data-node-id="1060:75330">
-                Sử dụng các công cụ tâm linh truyền thống để phát hiện các dấu vết của vong hồn trong môi trường.
+                Sử dụng các công cụ tâm linh truyền<br />
+                thống để phát hiện các dấu vết của<br />
+                vong hồn trong môi trường.
               </p>
-              <span class="gameplay-tag-btn">KHÁM PHÁ ›</span>
+            </div>
+            <div class="gameplay-tag-btn-wrapper" data-node-id="1060:75331">
+              <span class="gameplay-tag-btn" data-node-id="1060:75332">KHÁM PHÁ</span>
             </div>
           </a>
 
           <!-- Card 2: GIẢI ĐỐ (1060:75411) -->
           <a href="#puzzle" class="gameplay-tag-card trailer-scroll-reveal" data-node-id="1060:75411">
-            <div class="gameplay-tag-thumb">
-              <img src="./assets/c51f291ddc15e024bd03460e74e2d322318268b1.png" alt="Giải đố" />
+            <!-- Layered Images -->
+            <div class="gameplay-tag-layers">
+              <div class="gameplay-tag-layer-1">
+                <img src="./assets/ct1-1.png" alt="Layer 1" />
+              </div>
+              <div class="gameplay-tag-layer-2">
+                <img src="./assets/mieu-vuong-1.png" alt="Layer 2" />
+              </div>
+              <div class="gameplay-tag-layer-3">
+                <img src="./assets/rung-tre-vuong-1.png" alt="Layer 3" />
+              </div>
             </div>
-            <div class="gameplay-tag-body">
+            <!-- Overlay -->
+            <div class="gameplay-tag-overlay">
+              <img src="./assets/overlay-78042-new.png" alt="Overlay" />
+            </div>
+            <!-- Content -->
+            <div class="gameplay-tag-content-wrapper">
               <h3 class="gameplay-tag-title">GIẢI ĐỐ</h3>
+            </div>
+            <div class="gameplay-tag-desc-wrapper">
               <p class="gameplay-tag-desc">
-                Hóa giải các trận pháp cổ và giải mã những bí mật được ẩn giấu trong các đồ vật tâm linh.
+                Hóa giải các trận pháp cổ và giải mã<br />
+                những bí mật được ẩn giấu trong các<br />
+                đồ vật tâm linh.
               </p>
-              <span class="gameplay-tag-btn">KHÁM PHÁ ›</span>
+            </div>
+            <div class="gameplay-tag-btn-wrapper">
+              <span class="gameplay-tag-btn">KHÁM PHÁ</span>
             </div>
           </a>
 
           <!-- Card 3: THU THẬP (1060:75456) -->
           <a href="#collection" class="gameplay-tag-card trailer-scroll-reveal" data-node-id="1060:75456">
-            <div class="gameplay-tag-thumb">
-              <img src="./assets/8068a61224d3a50a26763b3b6be5955e2aab6d7d.png" alt="Thu thập" />
+            <!-- Layered Images -->
+            <div class="gameplay-tag-layers">
+              <div class="gameplay-tag-layer-1">
+                <img src="./assets/ct1-1.png" alt="Layer 1" />
+              </div>
+              <div class="gameplay-tag-layer-2">
+                <img src="./assets/mieu-vuong-1.png" alt="Layer 2" />
+              </div>
             </div>
-            <div class="gameplay-tag-body">
+            <!-- Overlay -->
+            <div class="gameplay-tag-overlay">
+              <img src="./assets/overlay-78042-new.png" alt="Overlay" />
+            </div>
+            <!-- Content -->
+            <div class="gameplay-tag-content-wrapper">
               <h3 class="gameplay-tag-title">THU THẬP</h3>
+            </div>
+            <div class="gameplay-tag-desc-wrapper">
               <p class="gameplay-tag-desc">
-                Ghép nối các đoạn hồi ức và tài liệu rải rác để xây dựng lại câu chuyện đằng sau bi kịch.
+                Ghép nối các đoạn hồi ức và tài liệu rải<br />
+                rác để xây dựng lại câu chuyện đằng<br />
+                sau bi kịch.
               </p>
-              <span class="gameplay-tag-btn">KHÁM PHÁ ›</span>
+            </div>
+            <div class="gameplay-tag-btn-wrapper">
+              <span class="gameplay-tag-btn">KHÁM PHÁ</span>
             </div>
           </a>
 
           <!-- Card 4: MANH MỐI (1060:75471) -->
           <a href="#character" class="gameplay-tag-card trailer-scroll-reveal" data-node-id="1060:75471">
-            <div class="gameplay-tag-thumb">
-              <img src="./assets/07fd7948797fd90018e152cdfab149aa3c336479.png" alt="Manh mối" />
+            <!-- Layered Images -->
+            <div class="gameplay-tag-layers">
+              <div class="gameplay-tag-layer-1">
+                <img src="./assets/ct1-1.png" alt="Layer 1" />
+              </div>
             </div>
-            <div class="gameplay-tag-body">
+            <!-- Overlay -->
+            <div class="gameplay-tag-overlay">
+              <img src="./assets/overlay-78042-new.png" alt="Overlay" />
+            </div>
+            <!-- Content -->
+            <div class="gameplay-tag-content-wrapper">
               <h3 class="gameplay-tag-title">MANH MỐI</h3>
+            </div>
+            <div class="gameplay-tag-desc-wrapper">
               <p class="gameplay-tag-desc">
                 Đi theo chỉ dẫn và thực hiện các nhiệm vụ trong từng màn để có thể thu thập được các manh mối dựa trên từng đặc điểm và quá khứ của nhân vật.
               </p>
-              <span class="gameplay-tag-btn">KHÁM PHÁ ›</span>
+            </div>
+            <div class="gameplay-tag-btn-wrapper">
+              <span class="gameplay-tag-btn">KHÁM PHÁ</span>
             </div>
           </a>
 

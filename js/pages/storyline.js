@@ -310,67 +310,100 @@ export async function renderStoryline(container) {
            ======================================================== -->
       <section class="storyline-locations-section" data-node-id="1020:73152">
         
-        <!-- Header (1020:73443) -->
-        <div class="storyline-locations-header trailer-scroll-reveal" data-node-id="1020:73443">
-          <div class="storyline-locations-header-crest">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-              <polygon points="50,15 62,38 88,38 67,54 75,78 50,63 25,78 33,54 12,38 38,38" fill="rgba(156, 126, 33, 0.3)" stroke="#d9b74c" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <h2 class="storyline-locations-title" data-node-id="1020:73449">
-            ĐỊA DANH THEN CHỐT
-          </h2>
-          <div class="storyline-locations-header-crest" style="transform: scaleX(-1);">
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-              <polygon points="50,15 62,38 88,38 67,54 75,78 50,63 25,78 33,54 12,38 38,38" fill="rgba(156, 126, 33, 0.3)" stroke="#d9b74c" stroke-width="1.5"/>
-            </svg>
-          </div>
+        <!-- Header Frame (1020:73443) -->
+        <div class="storyline-locations-header-frame trailer-scroll-reveal" data-node-id="1020:73443">
+          <img src="./assets/header-frame.svg" alt="Địa danh header frame" class="storyline-locations-header-img" />
         </div>
 
-        <!-- 3 Location Cards (1021:73481) -->
-        <div class="storyline-locations-grid" data-node-id="1021:73481">
+        <!-- Journey Indicator (1020:73480) -->
+        <div class="storyline-journey-indicator trailer-scroll-reveal" data-node-id="1020:73480">
+          <img src="./assets/journey-indicator.svg" alt="Hành trình 1" class="storyline-journey-img" />
+        </div>
+
+        <!-- Location Cards Row (1021:73481) -->
+        <div class="storyline-locations-row" data-node-id="1021:73481">
           
           <!-- Location 1: NHÀ HỨA (1021:73445) -->
-          <a href="#character" class="storyline-location-card trailer-scroll-reveal trailer-reveal-left" data-node-id="1021:73445">
-            <div class="storyline-location-img-wrap">
-              <img src="./assets/0eb4668ed3b21f4bc7a616ec5fe4f183e2289e56.png" alt="Nhà Hứa" />
-            </div>
-            <div class="storyline-location-overlay"></div>
-            <div class="storyline-location-footer">
-              <h3 class="storyline-location-name">NHÀ HỨA</h3>
-              <svg class="storyline-location-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
+          <a href="#character" class="storyline-location-card-new trailer-scroll-reveal trailer-reveal-left" data-node-id="1021:73445">
+            <div class="storyline-location-card-inner" data-node-id="I1021:73445;1020:73413">
+              <!-- Base layered images -->
+              <div class="storyline-location-layers" data-node-id="I1021:73445;1021:73415">
+                <div class="location-layer-base" data-node-id="I1021:73445;1030:75953">
+                  <img src="./assets/tr-ngang-1.png" alt="Base layer" class="location-img-base" />
+                </div>
+                <div class="location-layer-main" data-node-id="I1021:73445;1030:75958">
+                  <img src="./assets/image-3.png" alt="Main image" class="location-img-main" />
+                </div>
+              </div>
+              <!-- Overlay with blend mode -->
+              <div class="storyline-location-overlay-blend" data-node-id="I1021:73445;1021:73414">
+                <img src="./assets/overlay-78042.png" alt="Overlay" class="location-img-overlay" />
+              </div>
+              <!-- Footer content -->
+              <div class="storyline-location-footer-new" data-node-id="I1021:73445;1021:73413">
+                <div class="location-title-wrap" data-node-id="I1021:73445;1020:73416">
+                  <h3 class="storyline-location-title-new" data-node-id="I1021:73445;1020:73417">NHÀ HỨA</h3>
+                </div>
+                <div class="location-button" data-node-id="I1021:73445;1020:73418">
+                  <img src="./assets/button-arrow.svg" alt="Arrow" class="location-arrow-img" />
+                </div>
+              </div>
             </div>
           </a>
 
           <!-- Location 2: MIẾU HOANG (1021:73457) -->
-          <a href="#puzzle" class="storyline-location-card trailer-scroll-reveal trailer-reveal-scale" data-node-id="1021:73457">
-            <div class="storyline-location-img-wrap">
-              <img src="./assets/c94f432040d13aafe0507e10240fe4cc288bc6f0.png" alt="Miếu Hoang" />
-            </div>
-            <div class="storyline-location-overlay"></div>
-            <div class="storyline-location-footer">
-              <h3 class="storyline-location-name">MIẾU HOANG</h3>
-              <svg class="storyline-location-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
+          <a href="#puzzle" class="storyline-location-card-new trailer-scroll-reveal trailer-reveal-scale" data-node-id="1021:73457">
+            <div class="storyline-location-card-inner" data-node-id="I1021:73457;1020:73413">
+              <!-- Base layered images -->
+              <div class="storyline-location-layers" data-node-id="I1021:73457;1021:73415">
+                <div class="location-layer-base" data-node-id="I1021:73457;1030:75953">
+                  <img src="./assets/tr-ngang-1.png" alt="Base layer" class="location-img-base" />
+                </div>
+                <div class="location-layer-main" data-node-id="I1021:73457;1030:75958">
+                  <img src="./assets/image-3.png" alt="Main image" class="location-img-main" />
+                </div>
+                <div class="location-layer-extra" data-node-id="I1021:73457;1030:75963">
+                  <img src="./assets/mieu-ngang-1.png" alt="Miếu layer" class="location-img-extra" />
+                </div>
+              </div>
+              <!-- Overlay with blend mode -->
+              <div class="storyline-location-overlay-blend" data-node-id="I1021:73457;1021:73414">
+                <img src="./assets/overlay-78042.png" alt="Overlay" class="location-img-overlay" />
+              </div>
+              <!-- Footer content -->
+              <div class="storyline-location-footer-new" data-node-id="I1021:73457;1021:73413">
+                <div class="location-title-wrap" data-node-id="I1021:73457;1020:73416">
+                  <h3 class="storyline-location-title-new" data-node-id="I1021:73457;1020:73417">miếu hoang</h3>
+                </div>
+                <div class="location-button" data-node-id="I1021:73457;1020:73418">
+                  <img src="./assets/button-arrow.svg" alt="Arrow" class="location-arrow-img" />
+                </div>
+              </div>
             </div>
           </a>
 
           <!-- Location 3: RỪNG GIÀ (1021:73469) -->
-          <a href="#investigation" class="storyline-location-card trailer-scroll-reveal trailer-reveal-right" data-node-id="1021:73469">
-            <div class="storyline-location-img-wrap">
-              <img src="./assets/0eb4668ed3b21f4bc7a616ec5fe4f183e2289e56.png" alt="Rừng Già" />
-            </div>
-            <div class="storyline-location-overlay"></div>
-            <div class="storyline-location-footer">
-              <h3 class="storyline-location-name">RỪNG GIÀ</h3>
-              <svg class="storyline-location-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
+          <a href="#investigation" class="storyline-location-card-new trailer-scroll-reveal trailer-reveal-right" data-node-id="1021:73469">
+            <div class="storyline-location-card-inner" data-node-id="I1021:73469;1020:73413">
+              <!-- Base layered images -->
+              <div class="storyline-location-layers" data-node-id="I1021:73469;1021:73415">
+                <div class="location-layer-base" data-node-id="I1021:73469;1030:75953">
+                  <img src="./assets/tr-ngang-1.png" alt="Base layer" class="location-img-base" />
+                </div>
+              </div>
+              <!-- Overlay with blend mode -->
+              <div class="storyline-location-overlay-blend" data-node-id="I1021:73469;1021:73414">
+                <img src="./assets/overlay-78042.png" alt="Overlay" class="location-img-overlay" />
+              </div>
+              <!-- Footer content -->
+              <div class="storyline-location-footer-new" data-node-id="I1021:73469;1021:73413">
+                <div class="location-title-wrap" data-node-id="I1021:73469;1020:73416">
+                  <h3 class="storyline-location-title-new" data-node-id="I1021:73469;1020:73417">rừng già</h3>
+                </div>
+                <div class="location-button" data-node-id="I1021:73469;1020:73418">
+                  <img src="./assets/button-arrow.svg" alt="Arrow" class="location-arrow-img" />
+                </div>
+              </div>
             </div>
           </a>
 
