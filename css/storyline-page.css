@@ -316,24 +316,24 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: clamp(280px, 26vw, 418px);
+  width: clamp(260px, 22vw, 380px);
   height: auto;
   pointer-events: none;
-  z-index: 3;
+  z-index: 8;
   opacity: 1;
-  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.95));
+  filter: drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
 }
 
 .storyline-tl-char-right {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: clamp(320px, 32vw, 532px);
+  width: clamp(300px, 26vw, 460px);
   height: auto;
   pointer-events: none;
-  z-index: 3;
+  z-index: 8;
   opacity: 1;
-  filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.95));
+  filter: drop-shadow(0 0 35px rgba(0, 0, 0, 0.95));
 }
 
 .storyline-tl-vector-left img,
@@ -365,23 +365,24 @@
   height: 201px;
   background: linear-gradient(180deg, rgba(1, 0, 0, 0) 6.47%, #030000 80.18%);
   pointer-events: none;
-  z-index: 6;
+  z-index: 9;
 }
 
 .storyline-timeline-inner-container {
   position: relative;
   z-index: 4;
-  max-width: 1540px;
+  max-width: 1360px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: clamp(30px, 4vh, 50px);
 }
 
 /* Header Badge with Horror Frame 1 (957:430415) */
 .storyline-timeline-header-wrap {
   width: fit-content;
-  margin-left: clamp(0px, 3vw, 40px);
+  margin: 0 auto;
 }
 
 .storyline-timeline-badge {
@@ -427,34 +428,39 @@
 .storyline-timeline-carousel-container {
   position: relative;
   width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
+  z-index: 4;
 }
 
 .storyline-timeline-track {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  padding: 20px 8px;
+  padding: 16px 8px;
   box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #9c7e21 #161a1a;
+  max-width: 100%;
 }
 
 .storyline-timeline-card {
   position: relative;
-  width: clamp(380px, 42vw, 656px);
-  min-height: 491px;
+  width: clamp(320px, 36vw, 480px);
+  min-height: 440px;
   flex-shrink: 0;
   border: 1px solid #5c0101;
   background-color: #0c0202;
-  padding: 21px 21px 24px;
+  padding: 16px 16px 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
@@ -488,7 +494,7 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  height: 339px;
+  height: 250px;
   border: 1px solid #444748;
   background: #1a1a1a;
   overflow: hidden;
@@ -522,7 +528,7 @@
   position: relative;
   z-index: 2;
   font-family: 'Space Mono', monospace;
-  font-size: clamp(24px, 2.2vw, 36px);
+  font-size: clamp(20px, 1.8vw, 28px);
   font-weight: 700;
   color: #e2e2e2;
   letter-spacing: -0.72px;
@@ -534,7 +540,7 @@
   position: relative;
   z-index: 2;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
   color: #c4c7c8;
   letter-spacing: -0.32px;
