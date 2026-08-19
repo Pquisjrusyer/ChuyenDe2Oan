@@ -361,7 +361,7 @@
 .reg-form-section {
   position: relative;
   width: 100%;
-  background: linear-gradient(180deg, #0e0000 0%, rgba(9,0,0,0.6) 45%, #0f0202 100%);
+  background: linear-gradient(180deg, #0e0000 0%, rgba(9, 0, 0, 0.6) 45%, #0f0202 100%);
   padding: clamp(60px, 8vh, 100px) clamp(20px, 6vw, 169px);
   box-sizing: border-box;
   overflow: hidden;
@@ -703,8 +703,8 @@
 
 .reg-platform-btn {
   position: relative;
-  width: clamp(100px, 9vw, 134px);
-  height: clamp(100px, 9vw, 134px);
+  width: clamp(80px, 7.5vw, 114px);
+  height: clamp(80px, 7.5vw, 114px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   display: flex;
