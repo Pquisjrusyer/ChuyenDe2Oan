@@ -1,4 +1,4 @@
-/* ============================================
+﻿/* ============================================
    OAN Horror Game â€” Page-Specific Styles
    ============================================ */
 
@@ -37,7 +37,7 @@
 .intro-logo-box {
   position: absolute;
   top: clamp(20px, 5vh, 90px);
-  left: clamp(20px, 6vw, 140px);
+  left: clamp(20px, 20vw, 250px);
   width: clamp(100px, 13vw, 200px);
   height: auto;
   aspect-ratio: 1/1;

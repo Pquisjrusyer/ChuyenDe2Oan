@@ -183,10 +183,21 @@ export async function renderIntro(container) {
   }
 
   function attachEvents() {
-    // Cancel / Close top right button
+    // 1. Click anywhere on banner screen -> trigger age verification modal (just like clicking X)
+    const introPage = container.querySelector('.page-intro-figma');
+    if (introPage && currentState === 'banner') {
+      introPage.style.cursor = 'pointer';
+      introPage.addEventListener('click', () => {
+        currentState = 'prompt';
+        render();
+      });
+    }
+
+    // 2. Cancel / Close top right button
     const cancelBtn = container.querySelector('#intro-cancel-btn');
     if (cancelBtn) {
-      cancelBtn.addEventListener('click', () => {
+      cancelBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (currentState === 'banner') {
           currentState = 'prompt';
         } else {
@@ -196,19 +207,40 @@ export async function renderIntro(container) {
       });
     }
 
+    // 3. Stop propagation on modal boxes so clicking inputs/buttons inside doesn't close modal
+    const modalBoxes = container.querySelectorAll('.figma-age-modal-box, .figma-birthyear-modal-box, .figma-underage-modal-box');
+    modalBoxes.forEach(box => {
+      box.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    });
+
+    // 4. Clicking outside modal on dark backdrop closes back to banner
+    const overlayWrapper = container.querySelector('.intro-modal-center-wrapper');
+    if (overlayWrapper) {
+      overlayWrapper.addEventListener('click', (e) => {
+        if (e.target === overlayWrapper) {
+          currentState = 'banner';
+          render();
+        }
+      });
+    }
+
     // Prompt state buttons
     const btnOver18 = container.querySelector('#btn-over-18');
     const btnUnder18 = container.querySelector('#btn-under-18');
 
     if (btnOver18) {
-      btnOver18.addEventListener('click', () => {
+      btnOver18.addEventListener('click', (e) => {
+        e.stopPropagation();
         currentState = 'birthyear';
         render();
       });
     }
 
     if (btnUnder18) {
-      btnUnder18.addEventListener('click', () => {
+      btnUnder18.addEventListener('click', (e) => {
+        e.stopPropagation();
         currentState = 'underage';
         render();
       });
@@ -218,7 +250,8 @@ export async function renderIntro(container) {
     const confirmYearBtn = container.querySelector('#btn-confirm-year');
     const yearInput = container.querySelector('#birth-year-input');
 
-    const handleConfirmYear = () => {
+    const handleConfirmYear = (e) => {
+      if (e) e.stopPropagation();
       const year = parseInt(yearInput ? yearInput.value.trim() : '0', 10);
       const currentYear = new Date().getFullYear();
       if (year > 1900 && (currentYear - year) >= 18) {
@@ -237,14 +270,15 @@ export async function renderIntro(container) {
     }
     if (yearInput) {
       yearInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') handleConfirmYear();
+        if (e.key === 'Enter') handleConfirmYear(e);
       });
     }
 
     // Underage state retry button
     const retryBtn = container.querySelector('#btn-underage-retry');
     if (retryBtn) {
-      retryBtn.addEventListener('click', () => {
+      retryBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         currentState = 'prompt';
         render();
       });
