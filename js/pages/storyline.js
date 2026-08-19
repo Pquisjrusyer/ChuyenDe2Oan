@@ -221,10 +221,13 @@ export async function renderStoryline(container) {
         <!-- Chapters 2x2 Grid (1006:73293) -->
         <div class="storyline-chapters-grid" data-node-id="1006:73293">
           
-          <!-- Chapter 1 (1006:73083) -->
-          <div class="storyline-chapter-card trailer-scroll-reveal trailer-reveal-left" data-node-id="1006:73083">
+          <!-- Chapter 1 (1006:73077) -->
+          <div class="storyline-chapter-card trailer-scroll-reveal trailer-reveal-left" data-node-id="1006:73077">
+            <div class="storyline-chapter-card-bg" data-node-id="1006:72977">
+              <img src="./assets/ff9d543cf73586d43ba0141f3e6b83922ae6ff93.png" alt="" />
+            </div>
             <div class="storyline-chapter-thumb" data-node-id="1006:72959">
-              <img src="./assets/9efa1cecb8231d52751451000865c82eba95d56d.png" alt="Chương 1" />
+              <img src="./assets/9efa1cecb8231d52751451000865c82eba95d56d.png" alt="Chương 1" data-node-id="1006:72973" />
             </div>
             <div class="storyline-chapter-body" data-node-id="1006:72971">
               <h3 class="storyline-chapter-title" data-node-id="1006:72969">CHƯƠNG 1: KHỞI NGUỒN</h3>
@@ -235,13 +238,16 @@ export async function renderStoryline(container) {
             <div class="storyline-chapter-crest" data-node-id="1006:73035">
               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-                <polygon points="50,15 62,38 88,38 67,54 75,78 50,63 25,78 33,54 12,38 38,38" fill="rgba(156, 126, 33, 0.2)" stroke="#d9b74c" stroke-width="1.5"/>
+                <polygon points="50,15 62,38 88,38 67,54 75,78 50,63 25,78 33,54 12,38 38,38" fill="rgba(156, 126, 33, 0.25)" stroke="#d9b74c" stroke-width="1.5"/>
               </svg>
             </div>
           </div>
 
           <!-- Chapter 2 (1006:73135) -->
           <div class="storyline-chapter-card trailer-scroll-reveal trailer-reveal-right" data-node-id="1006:73135">
+            <div class="storyline-chapter-card-bg">
+              <img src="./assets/ff9d543cf73586d43ba0141f3e6b83922ae6ff93.png" alt="" />
+            </div>
             <div class="storyline-chapter-thumb">
               <img src="./assets/10d658b193d39b5a3f16abed9c1a208f7c835572.png" alt="Chương 2" />
             </div>
@@ -262,6 +268,9 @@ export async function renderStoryline(container) {
 
           <!-- Chapter 3 (1006:73187) -->
           <div class="storyline-chapter-card trailer-scroll-reveal trailer-reveal-left" data-node-id="1006:73187">
+            <div class="storyline-chapter-card-bg">
+              <img src="./assets/ff9d543cf73586d43ba0141f3e6b83922ae6ff93.png" alt="" />
+            </div>
             <div class="storyline-chapter-thumb">
               <img src="./assets/2cdc59b18d22124f9e3fa1601ea0562d3bb5fe91.png" alt="Chương 3" />
             </div>
@@ -282,6 +291,9 @@ export async function renderStoryline(container) {
 
           <!-- Chapter 4 (1006:73188) -->
           <div class="storyline-chapter-card trailer-scroll-reveal trailer-reveal-right" data-node-id="1006:73188">
+            <div class="storyline-chapter-card-bg">
+              <img src="./assets/ff9d543cf73586d43ba0141f3e6b83922ae6ff93.png" alt="" />
+            </div>
             <div class="storyline-chapter-thumb">
               <img src="./assets/ec49aaa98ea541c95d49fe2efde86ff621ffcbce.png" alt="Chương 4" />
             </div>
