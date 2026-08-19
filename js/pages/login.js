@@ -169,8 +169,23 @@ export async function renderLogin(container) {
       }
 
       const loggedName = userFound ? userFound.username : identifier;
-      alert(`Đăng nhập thành công! Chào mừng Lữ khách ${loggedName} trở lại Nhà Hứa.`);
-      window.location.hash = 'home';
+      
+      // Save logged in user state
+      try {
+        localStorage.setItem('OAN_LOGGED_IN_USER', JSON.stringify({
+          username: loggedName,
+          email: userFound ? userFound.email : (identifier.includes('@') ? identifier : ''),
+          loggedInAt: new Date().toISOString()
+        }));
+      } catch (err) {
+        console.warn(err);
+      }
+
+      // Notify global auth state change
+      window.dispatchEvent(new CustomEvent('auth-state-changed'));
+
+      // Redirect to Login Success Page (Figma 1363:87501)
+      window.location.hash = 'login-success';
     });
   }
 

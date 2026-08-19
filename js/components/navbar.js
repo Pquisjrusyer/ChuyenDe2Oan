@@ -65,11 +65,30 @@ export function renderNavbar(container, currentHash) {
 
           <!-- Auth CTA Buttons (906:1781) -->
           <div class="navbar-auth-buttons" data-node-id="I1363:86771;906:1781">
-            <!-- Button 1: ĐĂNG KÝ (906:1714 with Title background 982de4...png) -->
-            <a href="#register" class="btn-nav-register-figma" data-node-id="I1363:86771;906:1727;906:1714">
-              <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-register-bg-img" />
-              <span class="nav-register-caption">ĐĂNG KÝ</span>
-            </a>
+            <!-- Button 1: ĐĂNG KÝ / USER ID (906:1714 with Title background 982de4...png) -->
+            ${(() => {
+              let user = null;
+              try {
+                const raw = localStorage.getItem('OAN_LOGGED_IN_USER');
+                if (raw) user = JSON.parse(raw);
+              } catch (e) {}
+
+              if (user && user.username) {
+                return `
+                  <a href="#home" class="btn-nav-register-figma is-logged-in" id="navUserBtn" data-node-id="I1363:86771;906:1727;906:1714" title="Tài khoản: ${user.username} (Nhấp để đăng xuất)">
+                    <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-register-bg-img" />
+                    <span class="nav-register-caption">${user.username.toUpperCase()}</span>
+                  </a>
+                `;
+              }
+
+              return `
+                <a href="#register" class="btn-nav-register-figma" data-node-id="I1363:86771;906:1727;906:1714">
+                  <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-register-bg-img" />
+                  <span class="nav-register-caption">ĐĂNG KÝ</span>
+                </a>
+              `;
+            })()}
 
             <!-- Button 2: TẢI XUỐNG (906:1739 with Multi-frame parts & Glow) -->
             <a href="#download" class="btn-nav-download-figma" data-node-id="I1363:86771;906:1739">
@@ -145,6 +164,32 @@ export function renderNavbar(container, currentHash) {
       toggleBGM();
     });
   }
+
+  // Logged-in user badge click handler
+  const navUserBtn = document.getElementById('navUserBtn');
+  if (navUserBtn) {
+    navUserBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      let user = null;
+      try {
+        user = JSON.parse(localStorage.getItem('OAN_LOGGED_IN_USER') || '{}');
+      } catch (err) {}
+      const username = user?.username || 'Lữ khách';
+      const doLogout = confirm(`Tài khoản hiện tại: ${username}\n\nBạn có muốn đăng xuất khỏi Nhà Hứa không?`);
+      if (doLogout) {
+        localStorage.removeItem('OAN_LOGGED_IN_USER');
+        renderNavbar(container, currentHash);
+        window.location.hash = 'login';
+      }
+    });
+  }
+
+  // Listen to external auth-state-changed events
+  const onAuthChanged = () => {
+    renderNavbar(container, (window.location.hash || '#home').replace('#', ''));
+  };
+  window.removeEventListener('auth-state-changed', onAuthChanged);
+  window.addEventListener('auth-state-changed', onAuthChanged);
 
   // Smooth scroll to top when clicking on the menu item of the active / current page
   const navClickables = container.querySelectorAll('.nav-item, .navbar-brand-logo');

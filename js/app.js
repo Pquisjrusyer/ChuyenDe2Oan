@@ -20,6 +20,7 @@ import { renderDownload } from './pages/download.js';
 import { renderRegister } from './pages/register.js';
 import { renderRegisterSuccess } from './pages/register-success.js';
 import { renderLogin } from './pages/login.js';
+import { renderLoginSuccess } from './pages/login-success.js';
 import { renderForgotPassword } from './pages/forgot-password.js';
 import { renderCheckInbox } from './pages/check-inbox.js';
 import { renderMailConfirm } from './pages/mail-confirm.js';
@@ -50,6 +51,7 @@ function initApp() {
   router.addRoute('register', renderRegister);
   router.addRoute('register-success', renderRegisterSuccess);
   router.addRoute('login', renderLogin);
+  router.addRoute('login-success', renderLoginSuccess);
   router.addRoute('forgot-password', renderForgotPassword);
   router.addRoute('check-inbox', renderCheckInbox);
   router.addRoute('mail-confirm', renderMailConfirm);
