@@ -283,11 +283,15 @@
 .storyline-timeline-section {
   position: relative;
   width: 100%;
-  padding: clamp(80px, 10vh, 140px) clamp(20px, 5vw, 80px) clamp(100px, 12vh, 160px);
+  min-height: 100vh;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 5vw, 80px);
   box-sizing: border-box;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #020000 100%), #000000;
   z-index: 2;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .storyline-tl-vector-left {
