@@ -2,6 +2,7 @@
    OAN HORROR GAME — CỐT TRUYỆN / STORYLINE PAGE (Figma Node 928:2111)
    ======================================================== */
 
+import { gsap } from 'gsap';
 import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderStoryline(container) {
@@ -382,58 +383,109 @@ export async function renderStoryline(container) {
     </div>
   `;
 
-  // Timeline Carousel Drag-to-Scroll & Button Navigation
+  // GSAP Smooth Drag-to-Scroll & Button Navigation for Timeline Track
   const track = container.querySelector('#storylineTimelineTrack');
   const prevBtn = container.querySelector('#btnTimelinePrev');
   const nextBtn = container.querySelector('#btnTimelineNext');
 
   if (track) {
+    const getStep = () => {
+      const firstCard = track.querySelector('.storyline-timeline-card');
+      return firstCard ? firstCard.offsetWidth + 20 : 460;
+    };
+
     if (prevBtn) {
       prevBtn.addEventListener('click', () => {
-        track.scrollBy({ left: -420, behavior: 'smooth' });
-      });
-    }
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        track.scrollBy({ left: 420, behavior: 'smooth' });
+        const step = getStep();
+        const target = Math.max(0, track.scrollLeft - step);
+        gsap.to(track, {
+          scrollLeft: target,
+          duration: 0.75,
+          ease: 'power3.out',
+          overwrite: 'auto'
+        });
       });
     }
 
-    // Mouse drag-to-scroll interaction
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const step = getStep();
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        const target = Math.min(maxScroll, track.scrollLeft + step);
+        gsap.to(track, {
+          scrollLeft: target,
+          duration: 0.75,
+          ease: 'power3.out',
+          overwrite: 'auto'
+        });
+      });
+    }
+
+    // GSAP Inertia / Momentum Drag Interaction
     let isDown = false;
     let startX = 0;
-    let scrollLeft = 0;
+    let scrollStart = 0;
     let hasMoved = false;
+    let lastX = 0;
+    let lastTime = 0;
+    let velocity = 0;
+    let proxy = { scroll: 0 };
+    let tween = null;
 
     track.addEventListener('mousedown', (e) => {
       isDown = true;
       hasMoved = false;
       track.classList.add('is-dragging');
-      startX = e.pageX - track.offsetLeft;
-      scrollLeft = track.scrollLeft;
+      startX = e.pageX;
+      scrollStart = track.scrollLeft;
+      lastX = e.pageX;
+      lastTime = performance.now();
+      velocity = 0;
+      if (tween) tween.kill();
     });
 
-    window.addEventListener('mouseup', () => {
+    const onPointerMove = (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const currentX = e.pageX;
+      const now = performance.now();
+      const dt = now - lastTime || 16;
+      const dx = currentX - lastX;
+
+      velocity = dx / dt; // pixels per ms
+      lastX = currentX;
+      lastTime = now;
+
+      const totalDist = currentX - startX;
+      if (Math.abs(totalDist) > 5) hasMoved = true;
+
+      track.scrollLeft = scrollStart - totalDist;
+    };
+
+    const onPointerUp = () => {
       if (!isDown) return;
       isDown = false;
       track.classList.remove('is-dragging');
-    });
 
-    track.addEventListener('mouseleave', () => {
-      if (isDown) {
-        isDown = false;
-        track.classList.remove('is-dragging');
-      }
-    });
+      // GSAP smooth inertia throw
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      const momentumDistance = velocity * 450; // Smooth throw distance
+      const targetScroll = Math.max(0, Math.min(maxScroll, track.scrollLeft - momentumDistance));
 
-    track.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - track.offsetLeft;
-      const walk = (x - startX) * 1.5;
-      if (Math.abs(walk) > 5) hasMoved = true;
-      track.scrollLeft = scrollLeft - walk;
-    });
+      proxy.scroll = track.scrollLeft;
+      tween = gsap.to(proxy, {
+        scroll: targetScroll,
+        duration: Math.min(1.4, Math.max(0.6, Math.abs(velocity) * 0.8)),
+        ease: 'power3.out',
+        overwrite: 'auto',
+        onUpdate: () => {
+          track.scrollLeft = proxy.scroll;
+        }
+      });
+    };
+
+    window.addEventListener('mousemove', onPointerMove);
+    window.addEventListener('mouseup', onPointerUp);
 
     track.addEventListener('click', (e) => {
       if (hasMoved) {
