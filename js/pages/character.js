@@ -139,22 +139,66 @@ export async function renderCharacter(container) {
           
           <!-- Card 1: MINH (1332:82290) -->
           <div class="char-card-item trailer-scroll-reveal" data-char-id="minh" data-node-id="1332:82290" title="Nhấn để xem hồ sơ mật Minh">
-            <img src="./assets/card_minh.svg" alt="Thẻ nhân vật Minh" class="char-card-svg" />
+            <div class="char-card-visual">
+              <img src="./assets/nv_minh.svg" alt="Thẻ nhân vật Minh" class="char-card-base-img" />
+              <div class="char-card-drawer">
+                <div class="char-drawer-bg"></div>
+                <div class="char-drawer-content">
+                  <span class="char-drawer-role">Nhân vật chính</span>
+                  <h3 class="char-drawer-name">MINH</h3>
+                  <p class="char-drawer-sub">Blogger - Người khám phá</p>
+                  <p class="char-drawer-desc">Một người đam mê khám phá để lấy ý tưởng làm content</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Card 2: KHANG (1332:82423) -->
           <div class="char-card-item trailer-scroll-reveal" data-char-id="khang" data-node-id="1332:82423" title="Nhấn để xem hồ sơ mật Khang">
-            <img src="./assets/card_khang.svg" alt="Thẻ nhân vật Khang" class="char-card-svg" />
+            <div class="char-card-visual">
+              <img src="./assets/nv_khang.svg" alt="Thẻ nhân vật Khang" class="char-card-base-img" />
+              <div class="char-card-drawer">
+                <div class="char-drawer-bg"></div>
+                <div class="char-drawer-content">
+                  <span class="char-drawer-role">Bạn đồng hành</span>
+                  <h3 class="char-drawer-name">KHANG</h3>
+                  <p class="char-drawer-sub">Sinh viên kỹ thuật</p>
+                  <p class="char-drawer-desc">Cẩn trọng, am hiểu thiết bị ghi hình và đo đạc tần số tâm linh</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Card 3: HỨA VĂN LỘC (1332:82435) -->
           <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-van-loc" data-node-id="1332:82435" title="Nhấn để xem hồ sơ mật Hứa Văn Lộc">
-            <img src="./assets/card_loc.svg" alt="Thẻ nhân vật Hứa Văn Lộc" class="char-card-svg" />
+            <div class="char-card-visual">
+              <img src="./assets/nv_loc.svg" alt="Thẻ nhân vật Hứa Văn Lộc" class="char-card-base-img" />
+              <div class="char-card-drawer">
+                <div class="char-drawer-bg"></div>
+                <div class="char-drawer-content">
+                  <span class="char-drawer-role">Trưởng tộc Hứa Gia</span>
+                  <h3 class="char-drawer-name">LỘC</h3>
+                  <p class="char-drawer-sub">Chủ nhân dinh thự</p>
+                  <p class="char-drawer-desc">Gia trưởng, quyền lực, ám ảnh bởi việc bảo vệ danh dự dòng tộc</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Card 4: HỨA NGỌC (1332:82447) -->
           <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-ngoc" data-node-id="1332:82447" title="Nhấn để xem hồ sơ mật Hứa Ngọc">
-            <img src="./assets/card_ngoc.svg" alt="Thẻ nhân vật Hứa Ngọc" class="char-card-svg" />
+            <div class="char-card-visual">
+              <img src="./assets/nv_ngoc.svg" alt="Thẻ nhân vật Hứa Ngọc" class="char-card-base-img" />
+              <div class="char-card-drawer">
+                <div class="char-drawer-bg"></div>
+                <div class="char-drawer-content">
+                  <span class="char-drawer-role">Oán hồn nữ</span>
+                  <h3 class="char-drawer-name">NGỌC</h3>
+                  <p class="char-drawer-sub">Tiểu thư Hứa Gia</p>
+                  <p class="char-drawer-desc">Người phụ nữ mang mặc cảm tội lỗi và oán niệm suốt 20 năm</p>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
