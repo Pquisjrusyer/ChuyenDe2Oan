@@ -236,10 +236,7 @@ export async function renderStoryline(container) {
               </p>
             </div>
             <div class="storyline-chapter-crest" data-node-id="1006:73035">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-                <polygon points="50,15 62,38 88,38 67,54 75,78 50,63 25,78 33,54 12,38 38,38" fill="rgba(156, 126, 33, 0.25)" stroke="#d9b74c" stroke-width="1.5"/>
-              </svg>
+              <img src="./assets/chapter_emblem_1.svg" alt="Biểu tượng Chương 1" class="storyline-chapter-crest-img" />
             </div>
           </div>
 
@@ -258,11 +255,7 @@ export async function renderStoryline(container) {
               </p>
             </div>
             <div class="storyline-chapter-crest">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-                <circle cx="50" cy="50" r="30" stroke="#d9b74c" stroke-dasharray="6 4" stroke-width="1.5"/>
-                <path d="M50 20 V80 M20 50 H80" stroke="#d9b74c" stroke-width="1.5"/>
-              </svg>
+              <img src="./assets/chapter_emblem_2.svg" alt="Biểu tượng Chương 2" class="storyline-chapter-crest-img" />
             </div>
           </div>
 
@@ -281,11 +274,7 @@ export async function renderStoryline(container) {
               </p>
             </div>
             <div class="storyline-chapter-crest">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-                <path d="M50 18 L82 78 H18 Z" fill="rgba(153, 0, 0, 0.25)" stroke="#d9b74c" stroke-width="1.5"/>
-                <circle cx="50" cy="55" r="12" stroke="#d9b74c" stroke-width="1.5"/>
-              </svg>
+              <img src="./assets/chapter_emblem_2.svg" alt="Biểu tượng Chương 3" class="storyline-chapter-crest-img" />
             </div>
           </div>
 
@@ -304,11 +293,7 @@ export async function renderStoryline(container) {
               </p>
             </div>
             <div class="storyline-chapter-crest">
-              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="45" stroke="#9c7e21" stroke-width="2"/>
-                <polygon points="50,15 85,50 50,85 15,50" fill="rgba(156, 126, 33, 0.2)" stroke="#d9b74c" stroke-width="1.5"/>
-                <polygon points="50,30 70,50 50,70 30,50" stroke="#d9b74c" stroke-width="1.5"/>
-              </svg>
+              <img src="./assets/chapter_emblem_2.svg" alt="Biểu tượng Chương 4" class="storyline-chapter-crest-img" />
             </div>
           </div>
 
