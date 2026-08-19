@@ -2,6 +2,8 @@
    OAN HORROR GAME — NHÂN VẬT / CHARACTER PAGE (Figma Node 1301:82193)
    ======================================================== */
 
+import { getReadySectionHTML } from '../components/ready-section.js';
+
 export const CHARACTERS_DATA = {
   'hua-an': {
     id: 'hua-an',
@@ -267,30 +269,9 @@ export async function renderCharacter(container) {
       </section>
 
       <!-- ========================================================
-           4. CTA SECTION (1317:81572)
+           4. READY SECTION: BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA? (1363:86758)
            ======================================================== -->
-      <section class="char-cta-section" data-node-id="1317:81572">
-        <div class="char-cta-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1317:81573">
-          
-          <h2 class="char-cta-heading" data-node-id="1317:81575">
-            BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?
-          </h2>
-
-          <div class="char-cta-buttons-row" data-node-id="1317:81576">
-            <a href="#gameplay" class="char-cta-btn" data-node-id="1317:81577">
-              <span class="char-cta-btn-text">CHƠI NGAY</span>
-            </a>
-            <a href="#download" class="char-cta-btn" data-node-id="1317:81578">
-              <span class="char-cta-btn-text">TẢI NGAY</span>
-            </a>
-          </div>
-
-          <p class="char-cta-requirement" data-node-id="1317:81580">
-            YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
-          </p>
-
-        </div>
-      </section>
+      ${getReadySectionHTML()}
 
       <!-- ========================================================
            5. CONFIDENTIAL DOSSIER MODAL (1332:82869)
