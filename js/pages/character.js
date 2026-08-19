@@ -142,15 +142,21 @@ export async function renderCharacter(container) {
            ======================================================== -->
       <section class="char-list-section" data-node-id="1307:82392">
         
-        <!-- Header (1332:81765) -->
-        <div class="char-list-header trailer-scroll-reveal" data-node-id="1332:81765">
-          <span class="char-list-tag" data-node-id="1332:81764">NHÂN VẬT</span>
-          <h2 class="char-list-heading" data-node-id="1332:81763">CÁC NHÂN VẬT LIÊN QUAN</h2>
-          <p class="char-list-sub" data-node-id="1332:81766">Những nhân vật bị cuốn vào vòng xoáy bí ẩn</p>
+        <!-- Background Grunge Layer (1332:81777) -->
+        <div class="char-list-bg-grunge" data-node-id="1332:81777">
+          <img src="./assets/ac40410bbfc293811b934b94c7f9b725d661badc.png" alt="" />
         </div>
 
-        <!-- 4 Character Cards Grid (1332:82338) -->
-        <div class="char-cards-grid" data-node-id="1332:82338">
+        <div class="char-list-content-container">
+          <!-- Header (1332:81765) -->
+          <div class="char-list-header trailer-scroll-reveal" data-node-id="1332:81765">
+            <span class="char-list-tag" data-node-id="1332:81764">NHÂN VẬT</span>
+            <h2 class="char-list-heading" data-node-id="1332:81763">CÁC NHÂN VẬT LIÊN QUAN</h2>
+            <p class="char-list-sub" data-node-id="1332:81766">Những nhân vật bị cuốn vào vòng xoáy bí ẩn</p>
+          </div>
+
+          <!-- 4 Character Cards Grid (1332:82338) -->
+          <div class="char-cards-grid" data-node-id="1332:82338">
           
           <!-- Card 1: MINH (1332:82290) -->
           <div class="char-card-item trailer-scroll-reveal" data-char-id="minh" data-node-id="1332:82290" title="Nhấn để xem hồ sơ mật Minh">
@@ -215,7 +221,6 @@ export async function renderCharacter(container) {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
