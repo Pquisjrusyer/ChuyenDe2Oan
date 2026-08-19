@@ -685,7 +685,6 @@ export async function renderHome(container) {
           </div>
         </div>
       </section>
-
       <!-- ========================================================
            7. TIN TỨC & CẬP NHẬT + KẾT NỐI (1363:86595)
            ======================================================== -->
@@ -1335,7 +1334,7 @@ export async function renderHome(container) {
   const trailerPreviewVid = container.querySelector('.trailer-preview-video');
   if (trailerPreviewVid) {
     trailerPreviewVid.muted = true;
-    trailerPreviewVid.play().catch(() => {});
+    trailerPreviewVid.play().catch(() => { });
   }
 }
 
