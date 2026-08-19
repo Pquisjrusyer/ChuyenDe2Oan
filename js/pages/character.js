@@ -83,9 +83,19 @@ export async function renderCharacter(container) {
            1. HERO SECTION: HỨA AN (1301:82297)
            ======================================================== -->
       <section class="char-hero-section" data-node-id="1301:82297">
-        <div class="char-hero-bg-texture" data-node-id="1322:81648">
+        
+        <!-- Background 1: 602dec43... (1322:81648) -->
+        <div class="char-hero-bg-media" data-node-id="1322:81648">
           <img src="./assets/81b10c2dd1eb6e78408e5818a088176c9cd7536b.png" alt="" />
         </div>
+
+        <!-- Background 2: Grunge Texture (1315:78897) -->
+        <div class="char-hero-bg-grunge" data-node-id="1315:78897">
+          <img src="./assets/ac40410bbfc293811b934b94c7f9b725d661badc.png" alt="" />
+        </div>
+
+        <!-- Bottom Fade Gradient (1332:81813) -->
+        <div class="char-hero-bottom-fade" data-node-id="1332:81813"></div>
 
         <div class="char-hero-grid" data-node-id="1315:78895">
           
@@ -97,26 +107,45 @@ export async function renderCharacter(container) {
 
             <div class="char-hero-quote-box" data-node-id="1307:82303">
               <p class="char-hero-quote" data-node-id="1307:82304">
-                "LỜI HỨA NÀY SẼ THEO TA ĐẾN TẬN CÙNG CỦA SỰ THẬT."
+                "LỜI HỨA NÀY SẼ THEO TA ĐẾN<br />TẬN CÙNG CỦA SỰ THẬT."
               </p>
             </div>
 
             <!-- Action Buttons (1307:82388) -->
             <div class="char-hero-actions" data-node-id="1307:82388">
-              <a href="#trailer" class="char-hero-btn" data-node-id="1307:82311">
-                <span class="char-hero-btn-text">Xem trailer</span>
+              
+              <!-- Button 1: Xem trailer (1307:82311) -->
+              <a href="#trailer" class="char-horror-btn char-btn-trailer" data-node-id="1307:82311">
+                <div class="char-btn-bracket-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="char-btn-field" data-node-id="I1307:82311;708:582">
+                  <span class="char-btn-text" data-node-id="I1307:82311;708:606">Xem trailer</span>
+                </div>
+                <div class="char-btn-bracket-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
               </a>
-              <button type="button" class="char-hero-btn" id="btnOpenHuaAnDossier" data-node-id="1307:82329">
-                <span class="char-hero-btn-text">Khám phá câu chuyện</span>
+
+              <!-- Button 2: Khám phá câu chuyện (1307:82329) -->
+              <button type="button" class="char-horror-btn char-btn-explore" id="btnOpenHuaAnDossier" data-node-id="1307:82329">
+                <div class="char-btn-bracket-left">
+                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="char-btn-field" data-node-id="I1307:82329;708:582">
+                  <span class="char-btn-text" data-node-id="I1307:82329;708:606">Khám phá câu chuyện</span>
+                </div>
+                <div class="char-btn-bracket-right">
+                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
               </button>
+
             </div>
           </div>
 
-          <!-- Right: Hero Portrait (1315:78893) -->
+          <!-- Right: Hero Portrait Image 69 (1315:78893) -->
           <div class="char-hero-portrait-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1315:78893">
-            <div class="char-hero-portrait">
-              <img src="./assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png" alt="Hứa An" />
-            </div>
+            <img src="./assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png" alt="Hứa An" class="char-hero-image-69" />
           </div>
 
         </div>
