@@ -1,0 +1,855 @@
+/* ========================================================
+   OAN HORROR GAME — GAMEPLAY PAGE (Figma Node 1058:78289)
+   ======================================================== */
+
+.gameplay-page-figma {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #e2e2e2;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Ambient Background Layer (1058:78392) */
+.gameplay-bg-ambient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.gameplay-grunge-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 20%, rgba(51, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.9) 70%),
+              radial-gradient(circle at 20% 60%, rgba(80, 5, 5, 0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ========================================================
+   1. HERO SECTION (1060:75035)
+   ======================================================== */
+.gameplay-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 1000px;
+  padding: clamp(100px, 12vh, 140px) clamp(20px, 6vw, 120px) clamp(60px, 8vh, 80px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #000000 17%, #000000 49%, #060000 86%);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.gameplay-hero-grid {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 434px;
+  gap: clamp(30px, 4vw, 60px);
+  align-items: flex-start;
+  position: relative;
+}
+
+.gameplay-hero-main-media {
+  position: relative;
+  width: 100%;
+  max-width: 984px;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #780000;
+  background: #0d0404;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(120, 0, 0, 0.3);
+}
+
+.gameplay-hero-main-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gameplay-hero-main-media:hover img {
+  transform: scale(1.04);
+}
+
+.gameplay-hero-side-poster {
+  position: relative;
+  width: 100%;
+  max-width: 434px;
+  aspect-ratio: 434 / 651;
+  border: 1px solid #550000;
+  background: #0d0404;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(153, 0, 0, 0.25);
+}
+
+.gameplay-hero-side-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gameplay-hero-side-poster:hover img {
+  transform: scale(1.05);
+}
+
+.gameplay-hero-bottom-bar {
+  max-width: 1680px;
+  margin: clamp(40px, 6vh, 60px) auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.gameplay-hero-text-col {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gameplay-hero-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(48px, 5.5vw, 80px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(217, 183, 76, 0.3);
+}
+
+.gameplay-hero-sub {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 400;
+  color: #c4c7c8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gameplay-hero-btns-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 320px;
+}
+
+.gameplay-cta-red-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: linear-gradient(180deg, #593b0c 0%, #b10e07 100%);
+  border: 1px solid #ee1b10;
+  box-shadow: 0 0 15px rgba(238, 27, 16, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.gameplay-cta-red-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(238, 27, 16, 0.8), 0 0 15px rgba(217, 183, 76, 0.5);
+  border-color: #d9b74c;
+}
+
+.gameplay-cta-red-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.9);
+}
+
+.gameplay-trailer-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: #161a1a;
+  border: 2px solid #9c7e21;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.gameplay-trailer-btn:hover {
+  border-color: #d9b74c;
+  background: #250303;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(217, 183, 76, 0.5);
+}
+
+.gameplay-trailer-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+}
+
+/* ========================================================
+   2. SURVIVE SECTION: SỐNG SÓT QUA MÀN ĐÊM (1060:75303)
+   ======================================================== */
+.gameplay-survive-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 120px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #060101 0%, #000000 50%, #010000 100%);
+  z-index: 2;
+}
+
+.gameplay-survive-grid {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(340px, 931px) 1fr;
+  gap: clamp(40px, 5vw, 80px);
+  align-items: center;
+}
+
+.gameplay-survive-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 931 / 696;
+  border: 1px solid #820000;
+  background: #0d0404;
+  overflow: hidden;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(130, 0, 0, 0.35);
+}
+
+.gameplay-survive-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gameplay-survive-media:hover img {
+  transform: scale(1.04);
+}
+
+.gameplay-survive-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3.5vh, 40px);
+  text-align: right;
+}
+
+.gameplay-survive-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(48px, 5.5vw, 96px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.96px;
+  line-height: 1.05;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(156, 126, 33, 0.35);
+}
+
+.gameplay-survive-title span.regular {
+  font-size: clamp(36px, 4vw, 64px);
+  font-weight: 400;
+  color: #d9b74c;
+}
+
+.gameplay-survive-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(15px, 1.1vw, 18px);
+  font-weight: 400;
+  color: #c4c7c8;
+  letter-spacing: -0.32px;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 0 0 auto;
+}
+
+/* ========================================================
+   3. TAGS SECTION: 4 CORE MECHANICS (1060:75369)
+   ======================================================== */
+.gameplay-tags-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 100px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #010000 0%, #110000 50%, #060000 100%);
+  z-index: 2;
+}
+
+.gameplay-tags-grid {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.5vw, 40px);
+}
+
+.gameplay-tag-card {
+  position: relative;
+  min-height: 533px;
+  border: 1px solid #660000;
+  background: linear-gradient(180deg, #410808 0%, #110000 100%);
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+
+.gameplay-tag-card:hover {
+  border-color: #d9b74c;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(217, 183, 76, 0.35);
+}
+
+.gameplay-tag-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid #660000;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.gameplay-tag-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gameplay-tag-card:hover .gameplay-tag-thumb img {
+  transform: scale(1.08);
+}
+
+.gameplay-tag-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.gameplay-tag-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(20px, 1.5vw, 24px);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gameplay-tag-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(13px, 1vw, 15px);
+  font-weight: 400;
+  color: #c4c7c8;
+  letter-spacing: -0.32px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gameplay-tag-btn {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #d9b74c;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 12px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.gameplay-tag-card:hover .gameplay-tag-btn {
+  color: #ffffff;
+}
+
+/* ========================================================
+   4. AUTHENTIC EXPERIENCE SECTION: TRẢI NGHIỆM CHÂN THỰC (1060:75496)
+   ======================================================== */
+.gameplay-experience-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 100px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(9, 0, 0, 0.5) 0%, #020000 100%);
+  z-index: 2;
+}
+
+.gameplay-experience-header-wrap {
+  position: relative;
+  max-width: 794px;
+  min-height: 149px;
+  margin: 0 auto clamp(40px, 6vh, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameplay-experience-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gameplay-experience-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(36px, 4.5vw, 72px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1.44px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(156, 126, 33, 0.35);
+}
+
+.gameplay-experience-grid {
+  max-width: 1680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px);
+}
+
+.gameplay-exp-card {
+  position: relative;
+  border: 1px solid #440000;
+  background: linear-gradient(180deg, rgba(30, 6, 6, 0.8) 0%, rgba(10, 2, 2, 0.95) 100%);
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+.gameplay-exp-card:hover {
+  border-color: #9c7e21;
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(156, 126, 33, 0.3);
+}
+
+.gameplay-exp-icon {
+  font-size: 36px;
+  color: #d9b74c;
+}
+
+.gameplay-exp-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(20px, 1.4vw, 24px);
+  font-weight: 700;
+  color: #e2e2e2;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.gameplay-exp-desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  font-weight: 300;
+  color: #c4c7c8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================================
+   5. FAQ SECTION: CÂU HỎI THƯỜNG GẶP (1060:75760)
+   ======================================================== */
+.gameplay-faq-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 100px);
+  box-sizing: border-box;
+  background: #000000;
+  z-index: 2;
+}
+
+.gameplay-faq-header {
+  position: relative;
+  max-width: 1653px;
+  margin: 0 auto clamp(40px, 6vh, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameplay-faq-header-text {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 700;
+  color: #d9b74c;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 0 0 25px rgba(217, 183, 76, 0.45);
+}
+
+.gameplay-faq-list {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gameplay-faq-item {
+  border: 1px solid #440000;
+  background: linear-gradient(93deg, #080302 0%, #1a0606 100%);
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.gameplay-faq-item.active {
+  border-color: #9c7e21;
+}
+
+.gameplay-faq-trigger {
+  width: 100%;
+  padding: 24px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+}
+
+.gameplay-faq-question {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(18px, 1.8vw, 24px);
+  font-weight: 700;
+  color: #e2e2e2;
+  text-transform: uppercase;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.gameplay-faq-item.active .gameplay-faq-question {
+  color: #d9b74c;
+}
+
+.gameplay-faq-chevron {
+  width: 20px;
+  height: 20px;
+  color: #d9b74c;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.gameplay-faq-item.active .gameplay-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.gameplay-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
+  padding: 0 30px;
+}
+
+.gameplay-faq-item.active .gameplay-faq-answer {
+  max-height: 500px;
+  padding: 0 30px 24px;
+}
+
+.gameplay-faq-answer-inner {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(14px, 1vw, 16px);
+  color: #c4c7c8;
+  line-height: 1.6;
+  border-top: 1px dashed rgba(156, 126, 33, 0.25);
+  padding-top: 16px;
+}
+
+.gameplay-faq-answer-inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gameplay-faq-answer-inner li {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  color: #d9b74c;
+}
+
+/* ========================================================
+   6. RELATED FEATURES SECTION: KHÁM PHÁ THÊM (1060:75864)
+   ======================================================== */
+.gameplay-related-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 6vw, 100px);
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #000000 0%, #150202 50%, #000000 100%);
+  z-index: 2;
+}
+
+.gameplay-related-grid {
+  max-width: 1534px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 3.5vw, 60px);
+}
+
+.gameplay-related-card {
+  position: relative;
+  min-height: 486px;
+  border: 1px solid #330000;
+  background: #0d0202;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gameplay-related-card:hover {
+  border-color: #d9b74c;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(217, 183, 76, 0.35);
+}
+
+.gameplay-related-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.gameplay-related-card-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gameplay-related-card:hover .gameplay-related-card-bg img {
+  transform: scale(1.08);
+}
+
+.gameplay-related-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.85) 75%, #000000 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.gameplay-related-card-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.gameplay-related-card-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(22px, 1.8vw, 28px);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.gameplay-related-card-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #d9b74c;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ========================================================
+   7. CTA SECTION (1093:76522)
+   ======================================================== */
+.gameplay-cta-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(80px, 10vh, 140px) clamp(20px, 6vw, 100px);
+  box-sizing: border-box;
+  background: radial-gradient(circle at 50% 50%, #200000 0%, #050000 70%, #000000 100%);
+  text-align: center;
+  z-index: 2;
+}
+
+.gameplay-cta-container {
+  max-width: 1161px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(28px, 4vh, 48px);
+}
+
+.gameplay-cta-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.96px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 30px rgba(217, 183, 76, 0.4);
+}
+
+.gameplay-cta-buttons-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2.5vw, 32px);
+  flex-wrap: wrap;
+}
+
+.gameplay-cta-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(200px, 15vw, 240px);
+  height: clamp(54px, 6vh, 64px);
+  border: 2px solid #9c7e21;
+  background: #161a1a;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.gameplay-cta-btn:hover {
+  border-color: #d9b74c;
+  background: #330000;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(217, 183, 76, 0.6), 0 0 20px rgba(153, 0, 0, 0.5);
+}
+
+.gameplay-cta-btn-text {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(18px, 1.4vw, 24px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.gameplay-cta-requirement {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(13px, 1vw, 16px);
+  font-weight: 300;
+  color: #c4c7c8;
+  letter-spacing: -0.32px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* ========================================================
+   RESPONSIVE ADAPTATIONS
+   ======================================================== */
+@media (max-width: 1200px) {
+  .gameplay-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gameplay-hero-side-poster {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .gameplay-survive-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .gameplay-survive-content {
+    text-align: left;
+  }
+  
+  .gameplay-survive-desc {
+    margin: 0;
+  }
+  
+  .gameplay-tags-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gameplay-experience-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+  
+  .gameplay-related-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gameplay-hero-section {
+    padding: 100px 20px 40px;
+  }
+  
+  .gameplay-tags-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
