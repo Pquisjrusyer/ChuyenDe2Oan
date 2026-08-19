@@ -142,6 +142,11 @@ export async function renderCharacter(container) {
            ======================================================== -->
       <section class="char-list-section" data-node-id="1307:82392">
         
+        <!-- Base Red Atmospheric Background -->
+        <div class="char-list-bg-media">
+          <img src="./assets/81b10c2dd1eb6e78408e5818a088176c9cd7536b.png" alt="" />
+        </div>
+
         <!-- Background Grunge Layer (1332:81777) -->
         <div class="char-list-bg-grunge" data-node-id="1332:81777">
           <img src="./assets/ac40410bbfc293811b934b94c7f9b725d661badc.png" alt="" />
@@ -229,6 +234,11 @@ export async function renderCharacter(container) {
            ======================================================== -->
       <section class="char-concept-section" data-node-id="1332:81848">
         
+        <!-- Base Red Atmospheric Background -->
+        <div class="char-concept-bg-media">
+          <img src="./assets/81b10c2dd1eb6e78408e5818a088176c9cd7536b.png" alt="" />
+        </div>
+
         <!-- Background Grunge Layer (1332:81864) -->
         <div class="char-concept-bg-grunge" data-node-id="1332:81864">
           <img src="./assets/ac40410bbfc293811b934b94c7f9b725d661badc.png" alt="" />
@@ -236,6 +246,9 @@ export async function renderCharacter(container) {
 
         <!-- Top Transition Gradient (1332:81868) -->
         <div class="char-concept-top-fade" data-node-id="1332:81868"></div>
+
+        <!-- Bottom Transition Gradient -->
+        <div class="char-concept-bottom-fade"></div>
 
         <div class="char-concept-container">
           
