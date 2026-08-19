@@ -1,8 +1,21 @@
-/* ============================================
-   OAN Horror Game — Character Dossier & Detail View (Figma 1301:82044 / 1332:82867)
-   ============================================ */
+/* ========================================================
+   OAN HORROR GAME — NHÂN VẬT / CHARACTER PAGE (Figma Node 1301:82193)
+   ======================================================== */
 
 export const CHARACTERS_DATA = {
+  'hua-an': {
+    id: 'hua-an',
+    role: 'NHÂN VẬT TRỌNG TÂM',
+    name: 'HỨA AN',
+    class: 'NGƯỜI KẾ THỪA',
+    quote: '“Lời hứa này sẽ theo ta đến tận cùng của sự thật.”',
+    age: '26',
+    height: '1.75m',
+    hometown: 'Sài Gòn - Đà Lạt',
+    tags: ['KẾ THỪA', 'HUYẾT THỐNG', 'BÍ ẨN'],
+    summary: 'Hậu duệ trực hệ của dòng tộc họ Hứa. Trở về ngôi biệt thự cổ hoang phế sau khi nhận được bức thư tuyệt mệnh kỳ lạ, An phải đối mặt với những lời nguyền gia tộc khủng khiếp suốt nửa thế kỷ.',
+    photo: './assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png',
+  },
   minh: {
     id: 'minh',
     role: 'NHÂN VẬT CHÍNH',
@@ -14,9 +27,7 @@ export const CHARACTERS_DATA = {
     hometown: 'Hà Nội',
     tags: ['SINH VIÊN', 'BLOGGER', 'CONTENT'],
     summary: 'Là một sinh viên đam mê phiêu lưu và săn tìm các hiện tượng siêu nhiên, Minh quyết định cùng nhóm bạn khám phá dinh thự cổ Nhà Họ Hứa để quay vlog, không ngờ lại vướng vào một vòng xoáy nguyền rủa đen tối.',
-    photo: './assets/72cb7e1d35b96eac40bc86451109f1fb5fc22dd7.png',
-    has3D: true,
-    outfits: ['Trang phục 1', 'Trang phục 2', 'Trang phục 3'],
+    photo: './assets/f17bf481c11882705bf65d21a504734bf8854437.png',
   },
   khang: {
     id: 'khang',
@@ -29,9 +40,7 @@ export const CHARACTERS_DATA = {
     hometown: 'Hải Phòng',
     tags: ['SINH VIÊN', 'KỸ THUẬT', 'ĐỒNG HÀNH'],
     summary: 'Người bạn thân cẩn trọng và điềm tĩnh của Minh. Khang chịu trách nhiệm điều khiển các thiết bị đo lường và camera hồng ngoại trong suốt chuyến thám hiểm định mệnh.',
-    photo: './assets/06108d6a32c6b959fbb88b8e7fcc55f617e6b82d.png',
-    has3D: false,
-    outfits: ['Trang phục thường', 'Áo khoác gió'],
+    photo: './assets/2ff2f842537b4557c87e171d1175da9e0045cdb8.png',
   },
   'hua-van-loc': {
     id: 'hua-van-loc',
@@ -44,9 +53,7 @@ export const CHARACTERS_DATA = {
     hometown: 'Sài Gòn xưa',
     tags: ['GIA TRƯỞNG', 'QUYỀN LỰC', 'HỨA GIA'],
     summary: 'Người đứng đầu gia tộc họ Hứa giàu có nức tiếng một thời. Sự gia trưởng và cuồng tín bảo vệ danh dự dòng tộc đã đẩy gia đình vào thảm kịch kinh hoàng không lối thoát.',
-    photo: './assets/24688bb05ebb5d4e8b2b074d60bc3cc966dfa17c.png',
-    has3D: false,
-    outfits: ['Áo dài truyền thống', 'Âu phục cổ điển'],
+    photo: './assets/9a458f3a1eff44dee77b77385682efd57863dbae.png',
   },
   'hua-ngoc': {
     id: 'hua-ngoc',
@@ -59,262 +66,328 @@ export const CHARACTERS_DATA = {
     hometown: 'Sài Gòn xưa',
     tags: ['BI KỊCH', 'TỘI LỖI', 'OÁN HỒN'],
     summary: 'Tiểu thư con gái gia tộc họ Hứa bị giam cầm trong căn phòng áp mái suốt nhiều năm sau khi mắc bệnh lạ, mang theo oán niệm sâu nặng vương vấn khắp tòa dinh thự cổ.',
-    photo: './assets/2c9d80e984a0e3cf97699642b5308eecc1791abe.png',
-    has3D: false,
-    outfits: ['Áo bà ba trắng', 'Váy lụa đỏ'],
+    photo: './assets/286cec571aa8011cf80113fa5908c160d2cc1808.png',
   }
 };
 
 export async function renderCharacter(container) {
-  const hash = window.location.hash;
-  const params = new URLSearchParams(hash.includes('?') ? hash.split('?')[1] : '');
-  let charKey = params.get('id') || 'minh';
-  if (!CHARACTERS_DATA[charKey]) {
-    if (charKey === 'hua-an') charKey = 'hua-van-loc';
-    else if (charKey === 'female') charKey = 'hua-ngoc';
-    else charKey = 'minh';
-  }
-
-  const char = CHARACTERS_DATA[charKey];
-
   container.innerHTML = `
-    <div class="figma-char-dossier-page" data-node-id="1332:82867">
+    <div class="char-page-figma" data-node-id="1301:82193">
       
-      <!-- Top Close Button with Golden Seal (1332:82462 / 1317:81400) -->
-      <a href="#home" class="dossier-close-btn" title="Đóng hồ sơ" id="dossier-close-btn">
-        <svg width="42" height="42" viewBox="0 0 36 36" fill="none" class="dossier-close-icon">
-          <circle cx="18" cy="18" r="16" stroke="#9c7e21" stroke-width="2" fill="rgba(30,0,0,0.85)"/>
-          <path d="M11 11L25 25M25 11L11 25" stroke="#d9b74c" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-
-      <!-- Bottom-Left Confidential Stamp (1332:82460 / 1332:82461) -->
-      <div class="confidential-stamp-badge" data-node-id="1332:82460">
-        <div class="stamp-inner-border">
-          <p class="stamp-title">HỒ SƠ MẬT</p>
-          <p class="stamp-sub">CONFIDENTIAL</p>
-        </div>
+      <!-- Ambient Background Layer -->
+      <div class="char-bg-ambient">
+        <div class="char-grunge-overlay"></div>
       </div>
 
-      <!-- Character Quick Switcher Tabs -->
-      <div class="dossier-char-tabs-strip">
-        <button class="dossier-tab-btn ${charKey === 'minh' ? 'active' : ''}" data-char="minh">MINH</button>
-        <button class="dossier-tab-btn ${charKey === 'khang' ? 'active' : ''}" data-char="khang">KHANG</button>
-        <button class="dossier-tab-btn ${charKey === 'hua-van-loc' ? 'active' : ''}" data-char="hua-van-loc">HỨA VĂN LỘC</button>
-        <button class="dossier-tab-btn ${charKey === 'hua-ngoc' ? 'active' : ''}" data-char="hua-ngoc">HỨA NGỌC</button>
-      </div>
-
-      <!-- Main 3-Column Dossier Content Grid (1332:82867) -->
-      <div class="dossier-grid-layout">
-        
-        <!-- LEFT COLUMN: Roles, Big Name, Quote, Action Buttons (1332:82463) -->
-        <div class="dossier-col-left" data-node-id="1332:82463">
-          <div class="dossier-role-tag" data-node-id="1332:82464">
-            <span>${char.role}</span>
-          </div>
-
-          <h1 class="dossier-char-name" data-node-id="1332:82466">${char.name}</h1>
-
-          <div class="dossier-class-tag" data-node-id="1332:82468">
-            <span>${char.class}</span>
-          </div>
-
-          <blockquote class="dossier-char-quote" data-node-id="1332:82470">
-            ${char.quote}
-          </blockquote>
-
-          <div class="dossier-actions-group" data-node-id="1332:82472">
-            <!-- Action 1: Khám phá cốt truyện -->
-            <a href="#storyline" class="btn-dossier-action btn-dossier-gold">
-              <span class="btn-dossier-text">KHÁM PHÁ CỐT TRUYỆN</span>
-            </a>
-
-            <!-- Action 2: Xem Trailer -->
-            <a href="#trailer" class="btn-dossier-action btn-dossier-ghost">
-              <span class="btn-dossier-text">XEM TRAILER</span>
-            </a>
-          </div>
+      <!-- ========================================================
+           1. HERO SECTION: HỨA AN (1301:82297)
+           ======================================================== -->
+      <section class="char-hero-section" data-node-id="1301:82297">
+        <div class="char-hero-bg-texture" data-node-id="1322:81648">
+          <img src="./assets/81b10c2dd1eb6e78408e5818a088176c9cd7536b.png" alt="" />
         </div>
 
-        <!-- CENTER COLUMN: Interactive 3D Model / Portrait Visual & Outfits (1317:81386) -->
-        <div class="dossier-col-center" data-node-id="1317:81386">
-          <div class="dossier-visual-frame">
-            <div class="frame-ambient-glow"></div>
-            
-            ${char.has3D ? `
-              <!-- 3D Turntable Player for Minh (82 Rendered frames) -->
-              <div class="turntable-3d-wrapper" id="turntable-3d-box" title="Kéo chuột ngang để xoay 360 độ nhân vật">
-                <img src="./assets/minh-3d/0001.png" alt="Minh 3D" id="turntable-frame-img" class="turntable-img" />
-                <div class="turntable-hint">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2">
-                    <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
-                    <path d="M3 3v5h5"/>
-                    <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/>
-                    <path d="M16 21h5v-5"/>
-                  </svg>
-                  <span>Kéo chuột để xoay 3D (360°)</span>
-                </div>
-              </div>
-            ` : `
-              <!-- High-res Portrait Visual for Other Characters -->
-              <div class="dossier-static-portrait">
-                <img src="${char.photo}" alt="${char.name}" class="static-portrait-img" />
-              </div>
-            `}
-
-            <!-- Outfits Selector Tabs (Trang phục 1, 2, 3) -->
-            <div class="dossier-outfits-row">
-              ${char.outfits.map((outfit, index) => `
-                <button class="outfit-tab-btn ${index === 0 ? 'active' : ''}" data-outfit="${index}">
-                  ${outfit}
-                </button>
-              `).join('')}
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT COLUMN: Dossier Information Panels (1317:81322) -->
-        <div class="dossier-col-right" data-node-id="1317:81322">
+        <div class="char-hero-grid" data-node-id="1315:78895">
           
-          <!-- Block 1: THÔNG TIN CƠ BẢN (1317:81244) -->
-          <div class="dossier-info-card" data-node-id="1317:81244">
-            <div class="info-card-header">
-              <h3 class="info-card-title">THÔNG TIN CƠ BẢN</h3>
-            </div>
-            <div class="info-card-body">
-              <div class="info-data-row">
-                <span class="info-data-label">TUỔI</span>
-                <span class="info-data-value">${char.age}</span>
-              </div>
-              <div class="info-data-row">
-                <span class="info-data-label">CHIỀU CAO</span>
-                <span class="info-data-value">${char.height}</span>
-              </div>
-              <div class="info-data-row">
-                <span class="info-data-label">QUÊ QUÁN</span>
-                <span class="info-data-value">${char.hometown}</span>
-              </div>
-            </div>
-          </div>
+          <!-- Left: Hero Text & Info (1307:82298) -->
+          <div class="char-hero-content trailer-scroll-reveal trailer-reveal-left" data-node-id="1307:82298">
+            <span class="char-hero-role" data-node-id="1307:82300">NHÂN VẬT CHÍNH</span>
+            
+            <h1 class="char-hero-name" data-node-id="1307:82302">HỨA AN</h1>
 
-          <!-- Block 2: LỚP NHÂN VẬT (1317:81290) -->
-          <div class="dossier-info-card" data-node-id="1317:81290">
-            <div class="info-card-header">
-              <h3 class="info-card-title">LỚP NHÂN VẬT</h3>
-            </div>
-            <div class="info-card-body tags-grid">
-              ${char.tags.map(tag => `
-                <div class="char-class-badge">
-                  <span>${tag}</span>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-
-          <!-- Block 3: HỒ SƠ TÓM TẮT (1317:81307) -->
-          <div class="dossier-info-card" data-node-id="1317:81307">
-            <div class="info-card-header">
-              <h3 class="info-card-title">HỒ SƠ TÓM TẮT</h3>
-            </div>
-            <div class="info-card-body">
-              <p class="summary-paragraph-text">
-                ${char.summary}
+            <div class="char-hero-quote-box" data-node-id="1307:82303">
+              <p class="char-hero-quote" data-node-id="1307:82304">
+                "LỜI HỨA NÀY SẼ THEO TA ĐẾN TẬN CÙNG CỦA SỰ THẬT."
               </p>
             </div>
+
+            <!-- Action Buttons (1307:82388) -->
+            <div class="char-hero-actions" data-node-id="1307:82388">
+              <a href="#trailer" class="char-hero-btn" data-node-id="1307:82311">
+                <span class="char-hero-btn-text">Xem trailer</span>
+              </a>
+              <button type="button" class="char-hero-btn" id="btnOpenHuaAnDossier" data-node-id="1307:82329">
+                <span class="char-hero-btn-text">Khám phá câu chuyện</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Hero Portrait (1315:78893) -->
+          <div class="char-hero-portrait-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1315:78893">
+            <div class="char-hero-portrait">
+              <img src="./assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png" alt="Hứa An" />
+            </div>
           </div>
 
         </div>
+      </section>
 
+      <!-- ========================================================
+           2. RELATED CHARACTERS SECTION (1307:82392)
+           ======================================================== -->
+      <section class="char-list-section" data-node-id="1307:82392">
+        
+        <!-- Header (1332:81765) -->
+        <div class="char-list-header trailer-scroll-reveal" data-node-id="1332:81765">
+          <span class="char-list-tag" data-node-id="1332:81764">NHÂN VẬT</span>
+          <h2 class="char-list-heading" data-node-id="1332:81763">CÁC NHÂN VẬT LIÊN QUAN</h2>
+          <p class="char-list-sub" data-node-id="1332:81766">Những nhân vật bị cuốn vào vòng xoáy bí ẩn</p>
+        </div>
+
+        <!-- 4 Character Cards Grid (1332:82338) -->
+        <div class="char-cards-grid" data-node-id="1332:82338">
+          
+          <!-- Card 1: MINH (1332:82290) -->
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="minh" data-node-id="1332:82290">
+            <div class="char-card-bg-img">
+              <img src="./assets/f17bf481c11882705bf65d21a504734bf8854437.png" alt="Minh" />
+            </div>
+            <div class="char-card-overlay"></div>
+            <div class="char-card-info-box">
+              <span class="char-card-role-label">Nhân vật chính</span>
+              <h3 class="char-card-name">MINH</h3>
+              <p class="char-card-class">Blogger - Người khám phá</p>
+              <p class="char-card-desc">Một người đam mê khám phá để lấy ý tưởng làm content</p>
+              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
+            </div>
+          </div>
+
+          <!-- Card 2: KHANG (1332:82423) -->
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="khang" data-node-id="1332:82423">
+            <div class="char-card-bg-img">
+              <img src="./assets/2ff2f842537b4557c87e171d1175da9e0045cdb8.png" alt="Khang" />
+            </div>
+            <div class="char-card-overlay"></div>
+            <div class="char-card-info-box">
+              <span class="char-card-role-label">Bạn đồng hành</span>
+              <h3 class="char-card-name">KHANG</h3>
+              <p class="char-card-class">Sinh viên kỹ thuật</p>
+              <p class="char-card-desc">Cẩn trọng, am hiểu thiết bị ghi hình và đo đạc tần số tâm linh</p>
+              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
+            </div>
+          </div>
+
+          <!-- Card 3: HỨA VĂN LỘC (1332:82435) -->
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-van-loc" data-node-id="1332:82435">
+            <div class="char-card-bg-img">
+              <img src="./assets/9a458f3a1eff44dee77b77385682efd57863dbae.png" alt="Hứa Văn Lộc" />
+            </div>
+            <div class="char-card-overlay"></div>
+            <div class="char-card-info-box">
+              <span class="char-card-role-label">Trưởng tộc Hứa Gia</span>
+              <h3 class="char-card-name">HỨA VĂN LỘC</h3>
+              <p class="char-card-class">Chủ nhân dinh thự</p>
+              <p class="char-card-desc">Gia trưởng, quyền lực, ám ảnh bởi việc bảo vệ danh dự dòng tộc</p>
+              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
+            </div>
+          </div>
+
+          <!-- Card 4: HỨA NGỌC (1332:82447) -->
+          <div class="char-card-item trailer-scroll-reveal" data-char-id="hua-ngoc" data-node-id="1332:82447">
+            <div class="char-card-bg-img">
+              <img src="./assets/286cec571aa8011cf80113fa5908c160d2cc1808.png" alt="Hứa Ngọc" />
+            </div>
+            <div class="char-card-overlay"></div>
+            <div class="char-card-info-box">
+              <span class="char-card-role-label">Oán hồn nữ</span>
+              <h3 class="char-card-name">HỨA NGỌC</h3>
+              <p class="char-card-class">Tiểu thư Hứa Gia</p>
+              <p class="char-card-desc">Người phụ nữ mang mặc cảm tội lỗi và oán niệm suốt 20 năm</p>
+              <span class="char-card-view-btn">XEM HỒ SƠ ›</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================
+           3. CONCEPT ART SECTION (1332:81848)
+           ======================================================== -->
+      <section class="char-concept-section" data-node-id="1332:81848">
+        
+        <!-- Concept Header Bar (1332:81853) -->
+        <div class="char-concept-header trailer-scroll-reveal" data-node-id="1332:81853">
+          <h2 class="char-concept-header-text" data-node-id="1332:81854">CONCEPT</h2>
+        </div>
+
+        <!-- Concept Art Grid (1332:82136) -->
+        <div class="char-concept-grid" data-node-id="1332:82136">
+          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-left">
+            <img src="./assets/2ddc9b279685ffe3617af903449f6f6ae92dc214.png" alt="Concept 1" />
+          </div>
+          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-fade-up">
+            <img src="./assets/f02483b1b7f8d5f1db09640a5ad25c99e1170184.png" alt="Concept 2" />
+          </div>
+          <div class="char-concept-item trailer-scroll-reveal trailer-reveal-right">
+            <img src="./assets/716c511c460f8c7b5f5c7a97d7cda134e2236ac4.png" alt="Concept 3" />
+          </div>
+          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-left">
+            <img src="./assets/6a0df64a3ab46e239afd98ad3edcb0ca5f0ea710.png" alt="Concept 4" />
+          </div>
+          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-fade-up">
+            <img src="./assets/ffe2275f92abce276fcf0c8024c69730714f75cd.png" alt="Concept 5" />
+          </div>
+          <div class="char-concept-item wide trailer-scroll-reveal trailer-reveal-right">
+            <img src="./assets/5ef898942f6c3fe61d5c383c503a097913cfba7b.png" alt="Concept 6" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================================
+           4. CTA SECTION (1317:81572)
+           ======================================================== -->
+      <section class="char-cta-section" data-node-id="1317:81572">
+        <div class="char-cta-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1317:81573">
+          
+          <h2 class="char-cta-heading" data-node-id="1317:81575">
+            BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?
+          </h2>
+
+          <div class="char-cta-buttons-row" data-node-id="1317:81576">
+            <a href="#gameplay" class="char-cta-btn" data-node-id="1317:81577">
+              <span class="char-cta-btn-text">CHƠI NGAY</span>
+            </a>
+            <a href="#download" class="char-cta-btn" data-node-id="1317:81578">
+              <span class="char-cta-btn-text">TẢI NGAY</span>
+            </a>
+          </div>
+
+          <p class="char-cta-requirement" data-node-id="1317:81580">
+            YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
+          </p>
+
+        </div>
+      </section>
+
+      <!-- ========================================================
+           5. CONFIDENTIAL DOSSIER MODAL (1332:82869)
+           ======================================================== -->
+      <div class="char-modal-backdrop" id="charModalBackdrop">
+        <div class="char-modal-box" id="charModalBox">
+          <button type="button" class="char-modal-close-btn" id="charModalCloseBtn" aria-label="Đóng hồ sơ">✕</button>
+          
+          <div class="char-modal-left">
+            <img id="charModalPhoto" src="./assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png" alt="Hồ sơ nhân vật" />
+          </div>
+
+          <div class="char-modal-right">
+            <div class="char-modal-header">
+              <span class="char-modal-role" id="charModalRole">NHÂN VẬT CHÍNH</span>
+              <h2 class="char-modal-name" id="charModalName">HỨA AN</h2>
+              <p class="char-modal-quote" id="charModalQuote">“Lời hứa này sẽ theo ta đến tận cùng của sự thật.”</p>
+            </div>
+
+            <div class="char-modal-stats-table">
+              <div class="char-stat-row">
+                <span class="char-stat-label">TUỔI</span>
+                <span class="char-stat-val" id="charModalAge">26</span>
+              </div>
+              <div class="char-stat-row">
+                <span class="char-stat-label">CHIỀU CAO</span>
+                <span class="char-stat-val" id="charModalHeight">1.75m</span>
+              </div>
+              <div class="char-stat-row">
+                <span class="char-stat-label">QUÊ QUÁN</span>
+                <span class="char-stat-val" id="charModalHometown">Sài Gòn - Đà Lạt</span>
+              </div>
+            </div>
+
+            <div class="char-modal-tags" id="charModalTags">
+              <span class="char-modal-tag-badge">KẾ THỪA</span>
+              <span class="char-modal-tag-badge">HUYẾT THỐNG</span>
+            </div>
+
+            <p class="char-modal-bio" id="charModalBio">
+              Hậu duệ trực hệ của dòng tộc họ Hứa...
+            </p>
+
+            <div style="display:flex;gap:16px;margin-top:10px;">
+              <a href="#storyline" class="char-hero-btn" style="flex:1;">
+                <span class="char-hero-btn-text">KHÁM PHÁ CỐT TRUYỆN</span>
+              </a>
+              <a href="#trailer" class="char-hero-btn" style="flex:1;">
+                <span class="char-hero-btn-text">XEM TRAILER</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
   `;
 
-  // Setup Tab Switchers
-  const charTabBtns = container.querySelectorAll('.dossier-tab-btn');
-  charTabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const selected = btn.getAttribute('data-char');
-      window.location.hash = `character?id=${selected}`;
-    });
-  });
+  // Modal Controller
+  const backdrop = container.querySelector('#charModalBackdrop');
+  const closeBtn = container.querySelector('#charModalCloseBtn');
 
-  // Setup Outfit Switcher
-  const outfitBtns = container.querySelectorAll('.outfit-tab-btn');
-  outfitBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      outfitBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
+  function openDossier(charId) {
+    const data = CHARACTERS_DATA[charId] || CHARACTERS_DATA['hua-an'];
+    if (!data) return;
 
-  // Setup 3D Interactive Turntable for Minh
-  if (char.has3D) {
-    init3DTurntable(container);
-  }
-}
+    container.querySelector('#charModalRole').textContent = data.role;
+    container.querySelector('#charModalName').textContent = data.name;
+    container.querySelector('#charModalQuote').textContent = data.quote;
+    container.querySelector('#charModalAge').textContent = data.age;
+    container.querySelector('#charModalHeight').textContent = data.height;
+    container.querySelector('#charModalHometown').textContent = data.hometown;
+    container.querySelector('#charModalBio').textContent = data.summary;
+    container.querySelector('#charModalPhoto').src = data.photo;
 
-function init3DTurntable(container) {
-  const box = container.querySelector('#turntable-3d-box');
-  const img = container.querySelector('#turntable-frame-img');
-  if (!box || !img) return;
-
-  const totalFrames = 82;
-  let currentFrame = 1;
-  let isDragging = false;
-  let startX = 0;
-  let startFrame = 1;
-  let autoRotateInterval = null;
-
-  function updateFrame(frameIndex) {
-    currentFrame = ((frameIndex - 1) % totalFrames + totalFrames) % totalFrames + 1;
-    const padded = String(currentFrame).padStart(4, '0');
-    img.src = `./assets/minh-3d/${padded}.png`;
-  }
-
-  // Drag listeners
-  box.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-    startFrame = currentFrame;
-    if (autoRotateInterval) clearInterval(autoRotateInterval);
-  });
-
-  window.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const deltaX = e.clientX - startX;
-    const sensitivity = 8; // pixels per frame
-    const frameDelta = Math.floor(deltaX / sensitivity);
-    updateFrame(startFrame - frameDelta);
-  });
-
-  window.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-
-  // Touch support
-  box.addEventListener('touchstart', (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    startFrame = currentFrame;
-    if (autoRotateInterval) clearInterval(autoRotateInterval);
-  });
-
-  window.addEventListener('touchmove', (e) => {
-    if (!isDragging) return;
-    const deltaX = e.touches[0].clientX - startX;
-    const sensitivity = 8;
-    const frameDelta = Math.floor(deltaX / sensitivity);
-    updateFrame(startFrame - frameDelta);
-  });
-
-  window.addEventListener('touchend', () => {
-    isDragging = false;
-  });
-
-  // Slow ambient auto-rotate when idle
-  autoRotateInterval = setInterval(() => {
-    if (!isDragging) {
-      updateFrame(currentFrame + 1);
+    const tagsContainer = container.querySelector('#charModalTags');
+    if (tagsContainer && data.tags) {
+      tagsContainer.innerHTML = data.tags.map(t => `<span class="char-modal-tag-badge">${t}</span>`).join('');
     }
-  }, 120);
+
+    backdrop.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDossier() {
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  // Open on Hua An Button
+  const btnHuaAn = container.querySelector('#btnOpenHuaAnDossier');
+  if (btnHuaAn) {
+    btnHuaAn.addEventListener('click', () => openDossier('hua-an'));
+  }
+
+  // Open on Character Cards
+  const cards = container.querySelectorAll('.char-card-item');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const charId = card.getAttribute('data-char-id');
+      openDossier(charId);
+    });
+  });
+
+  // Close handlers
+  if (closeBtn) closeBtn.addEventListener('click', closeDossier);
+  if (backdrop) {
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closeDossier();
+    });
+  }
+
+  // Scroll Reveal Observer
+  const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  scrollTargets.forEach(el => scrollObserver.observe(el));
+
+  setTimeout(() => {
+    scrollTargets.forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) {
+        el.classList.add('revealed');
+      }
+    });
+  }, 100);
 }
