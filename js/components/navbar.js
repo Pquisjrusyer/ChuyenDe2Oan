@@ -232,6 +232,40 @@ export function renderNavbar(container, currentHash) {
     });
   }
 
+  // THÔNG TIN Dropdown with 3-second grace period before deactivating
+  const infoWrapper = document.getElementById('navInfoDropdownWrapper');
+  if (infoWrapper) {
+    let leaveTimer = null;
+
+    const showMenu = () => {
+      if (leaveTimer) {
+        clearTimeout(leaveTimer);
+        leaveTimer = null;
+      }
+      infoWrapper.classList.add('is-open');
+    };
+
+    const scheduleHideMenu = () => {
+      if (leaveTimer) clearTimeout(leaveTimer);
+      leaveTimer = setTimeout(() => {
+        infoWrapper.classList.remove('is-open');
+        leaveTimer = null;
+      }, 3000); // 3 seconds grace period before closing
+    };
+
+    infoWrapper.addEventListener('mouseenter', showMenu);
+    infoWrapper.addEventListener('mouseleave', scheduleHideMenu);
+
+    // Hide immediately when a link inside is clicked
+    const subLinks = infoWrapper.querySelectorAll('.nav-sub-item');
+    subLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (leaveTimer) clearTimeout(leaveTimer);
+        infoWrapper.classList.remove('is-open');
+      });
+    });
+  }
+
   // Logged-in user dropdown toggle & actions
   const navUserBtn = document.getElementById('navUserBtn');
   const navUserMenu = document.getElementById('navUserMenu');
