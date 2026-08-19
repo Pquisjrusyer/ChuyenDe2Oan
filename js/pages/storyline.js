@@ -99,76 +99,109 @@ export async function renderStoryline(container) {
            ======================================================== -->
       <section class="storyline-timeline-section" data-node-id="957:430401">
         
-        <!-- Section Header Badge (957:430415) -->
-        <div class="storyline-timeline-header-wrap trailer-scroll-reveal" data-node-id="957:430415">
-          <div class="storyline-timeline-badge" data-node-id="957:430413">
-            <span class="storyline-timeline-badge-text" data-node-id="957:430412">Dòng thời gian</span>
-          </div>
+        <!-- Ambient Background Layers (957:430401) -->
+        <div class="storyline-tl-vector-left" data-node-id="987:73049">
+          <img src="./assets/bfba5bd560fe80614d9e676c08b62a0192fee777.svg" alt="" />
         </div>
+        <div class="storyline-tl-vector-right" data-node-id="987:73051">
+          <img src="./assets/febc28debbde6ce0955b130159a4939fb55c34ca.svg" alt="" />
+        </div>
+        <div class="storyline-tl-ghost-right" data-node-id="989:73126">
+          <img src="./assets/07e106d153239fd57a876804d473b2e2a93ac6cc.png" alt="" />
+        </div>
+        <div class="storyline-tl-ghost-left" data-node-id="989:73129">
+          <img src="./assets/70e35fdf5cfd155e343a92c93dd0336941674795.png" alt="" />
+        </div>
+        <div class="storyline-tl-top-fade" data-node-id="1040:76491"></div>
+        <div class="storyline-tl-bottom-fade" data-node-id="989:73170"></div>
 
-        <!-- Carousel Track with Navigation Buttons -->
-        <div class="storyline-timeline-carousel-container" data-node-id="957:430457">
-          <button type="button" class="storyline-timeline-nav-btn" id="btnTimelinePrev" aria-label="Lùi dòng thời gian">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="storyline-timeline-track" id="storylineTimelineTrack">
-            
-            <!-- Timeline Item 1 (957:430427) -->
-            <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430427">
-              <div class="storyline-timeline-card-img" data-node-id="957:430422">
-                <img src="./assets/681560f862120946a2ec7d0f1c4d672bd8f6a502.png" alt="Lời Hứa Định Mệnh" />
-              </div>
-              <span class="storyline-timeline-year" data-node-id="957:430424">1952</span>
-              <h3 class="storyline-timeline-title" data-node-id="957:430425">Lời Hứa Định Mệnh</h3>
-              <p class="storyline-timeline-desc" data-node-id="957:430426">
-                Ông nội họ Hứa lập ra giao ước với thế lực bóng tối để cứu lấy gia tộc khỏi cảnh lầm than.
-              </p>
+        <div class="storyline-timeline-inner-container">
+          
+          <!-- Section Header Badge with Horror Frame 1 (957:430415) -->
+          <div class="storyline-timeline-header-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="957:430415">
+            <div class="storyline-timeline-badge" data-node-id="957:430413">
+              <img src="./assets/ebfe6dda13717378e326b16cc9a90c342ad682ea.svg" alt="" class="timeline-bracket-left" />
+              <h2 class="storyline-timeline-title-main" data-node-id="957:430412">Dòng thời gian</h2>
+              <img src="./assets/bed5bbc8356fc39117b000c195ec884427ed7dca.svg" alt="" class="timeline-bracket-right" />
             </div>
-
-            <!-- Timeline Item 2 (957:430435) -->
-            <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430435">
-              <div class="storyline-timeline-card-img">
-                <img src="./assets/490f35dd0cfd6be6cfd4964695c25a5df027a590.png" alt="Bóng Ma Quá Khứ" />
-              </div>
-              <span class="storyline-timeline-year">1952</span>
-              <h3 class="storyline-timeline-title">Bóng Ma Quá Khứ</h3>
-              <p class="storyline-timeline-desc">
-                Sự xuất hiện của những thực thể không thuộc về thế giới này và những manh mối đầu tiên.
-              </p>
-            </div>
-
-            <!-- Timeline Item 3 (957:430442) -->
-            <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430442">
-              <div class="storyline-timeline-card-img">
-                <img src="./assets/e0fc3aff82a19bb11168f1b69d0cd57854bc0b63.png" alt="Giao Ước Máu" />
-              </div>
-              <span class="storyline-timeline-year">1952</span>
-              <h3 class="storyline-timeline-title">Giao Ước Máu</h3>
-              <p class="storyline-timeline-desc">
-                Đối mặt với sự thật đằng sau giao ước cổ xưa và cái giá phải trả của dòng tộc.
-              </p>
-            </div>
-
-            <!-- Timeline Item 4 (957:430449) -->
-            <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430449">
-              <div class="storyline-timeline-card-img">
-                <img src="./assets/e3a639baefb40e04cdb3e9dcea62a8712877f085.png" alt="Lối Thoát Duy Nhất" />
-              </div>
-              <span class="storyline-timeline-year">1952</span>
-              <h3 class="storyline-timeline-title">Lối Thoát Duy Nhất</h3>
-              <p class="storyline-timeline-desc">
-                Trận chiến cuối cùng để phá vỡ xiềng xích oán hận hoặc bị nuốt chửng mãi mãi.
-              </p>
-            </div>
-
           </div>
 
-          <button type="button" class="storyline-timeline-nav-btn" id="btnTimelineNext" aria-label="Tiến dòng thời gian">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
+          <!-- Carousel Track with Navigation Buttons (957:430457) -->
+          <div class="storyline-timeline-carousel-container" data-node-id="957:430457">
+            <button type="button" class="storyline-timeline-nav-btn" id="btnTimelinePrev" aria-label="Lùi dòng thời gian">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+            </button>
 
+            <div class="storyline-timeline-track" id="storylineTimelineTrack" data-node-id="957:430456">
+              
+              <!-- Timeline Item 1 (957:430427) -->
+              <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430427">
+                <div class="timeline-card-bg-overlay" data-node-id="957:430421">
+                  <img src="./assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png" alt="" />
+                </div>
+                <div class="storyline-timeline-card-img" data-node-id="957:430422">
+                  <img src="./assets/681560f862120946a2ec7d0f1c4d672bd8f6a502.png" alt="Lời Hứa Định Mệnh" data-node-id="957:430423" />
+                </div>
+                <span class="storyline-timeline-year" data-node-id="957:430424">1952</span>
+                <h3 class="storyline-timeline-title" data-node-id="957:430425">Lời Hứa Định Mệnh</h3>
+                <p class="storyline-timeline-desc" data-node-id="957:430426">
+                  Ông nội họ Hứa lập ra giao ước với thế lực bóng tối để cứu lấy gia tộc khỏi cảnh lầm than.
+                </p>
+              </div>
+
+              <!-- Timeline Item 2 (957:430435) -->
+              <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430435">
+                <div class="timeline-card-bg-overlay">
+                  <img src="./assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png" alt="" />
+                </div>
+                <div class="storyline-timeline-card-img">
+                  <img src="./assets/e3a639baefb40e04cdb3e9dcea62a8712877f085.png" alt="Bóng Ma Quá Khứ" />
+                </div>
+                <span class="storyline-timeline-year">1952</span>
+                <h3 class="storyline-timeline-title">Bóng Ma Quá Khứ</h3>
+                <p class="storyline-timeline-desc">
+                  Sự xuất hiện của những thực thể không thuộc về thế giới này và những manh mối đầu tiên.
+                </p>
+              </div>
+
+              <!-- Timeline Item 3 (957:430442) -->
+              <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430442">
+                <div class="timeline-card-bg-overlay">
+                  <img src="./assets/e0fc3aff82a19bb11168f1b69d0cd57854bc0b63.png" alt="Giao Ước Máu" />
+                </div>
+                <div class="storyline-timeline-card-img">
+                  <img src="./assets/e0fc3aff82a19bb11168f1b69d0cd57854bc0b63.png" alt="Giao Ước Máu" />
+                </div>
+                <span class="storyline-timeline-year">1952</span>
+                <h3 class="storyline-timeline-title">Giao Ước Máu</h3>
+                <p class="storyline-timeline-desc">
+                  Đối mặt với sự thật đằng sau giao ước cổ xưa và cái giá phải trả của dòng tộc.
+                </p>
+              </div>
+
+              <!-- Timeline Item 4 (957:430449) -->
+              <div class="storyline-timeline-card trailer-scroll-reveal" data-node-id="957:430449">
+                <div class="timeline-card-bg-overlay">
+                  <img src="./assets/17d332d1aa4cfc528c757faf993b50210a3622ee.png" alt="" />
+                </div>
+                <div class="storyline-timeline-card-img">
+                  <img src="./assets/490f35dd0cfd6be6cfd4964695c25a5df027a590.png" alt="Lối Thoát Duy Nhất" />
+                </div>
+                <span class="storyline-timeline-year">1952</span>
+                <h3 class="storyline-timeline-title">Lối Thoát Duy Nhất</h3>
+                <p class="storyline-timeline-desc">
+                  Trận chiến cuối cùng để phá vỡ xiềng xích oán hận hoặc bị nuốt chửng mãi mãi.
+                </p>
+              </div>
+
+            </div>
+
+            <button type="button" class="storyline-timeline-nav-btn" id="btnTimelineNext" aria-label="Tiến dòng thời gian">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </button>
+          </div>
+
+        </div>
       </section>
 
       <!-- ========================================================
