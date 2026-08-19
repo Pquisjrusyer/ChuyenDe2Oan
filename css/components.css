@@ -101,6 +101,98 @@
   font-weight: 400;
 }
 
+/* Navbar Info Dropdown */
+.nav-dropdown-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.nav-dropdown-caret {
+  transition: transform 0.25s ease;
+  color: #9c7e21;
+}
+
+.nav-dropdown-wrapper:hover .nav-dropdown-caret,
+.nav-dropdown-wrapper.is-open .nav-dropdown-caret {
+  transform: rotate(180deg);
+  color: var(--color-gold-400);
+}
+
+.nav-sub-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: #140505;
+  border: 1px solid rgba(217, 183, 76, 0.4);
+  border-top: 3px solid #9c7e21;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 20px rgba(156, 126, 33, 0.25);
+  border-radius: 4px;
+  padding: 8px 0;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 1000;
+}
+
+.nav-dropdown-wrapper:hover .nav-sub-dropdown-menu,
+.nav-dropdown-wrapper.is-open .nav-sub-dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-sub-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  font-family: var(--font-body), 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.sub-item-accent {
+  font-size: 8px;
+  color: #9c7e21;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-sub-item:hover {
+  background: rgba(217, 183, 76, 0.15);
+  color: #d9b74c;
+  padding-left: 22px;
+}
+
+.nav-sub-item:hover .sub-item-accent {
+  color: #e62217;
+  transform: scale(1.3);
+}
+
+.nav-sub-item.active {
+  color: #d9b74c;
+  background: rgba(153, 0, 0, 0.25);
+  border-left: 3px solid #d9b74c;
+}
+
 .navbar-right-group {
   display: flex;
   align-items: center;

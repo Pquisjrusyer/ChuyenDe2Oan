@@ -33,7 +33,43 @@ export function renderNavbar(container, currentHash) {
           <nav class="navbar-nav-links" id="nav-links-menu" data-node-id="I1363:86771;782:1711">
             <a class="nav-item ${currentHash === 'home' ? 'active' : ''}" href="#home" data-node-id="I1363:86771;782:1711;987:73063">TRANG CHỦ</a>
             <a class="nav-item ${currentHash === 'trailer' ? 'active' : ''}" href="#trailer" data-node-id="I1363:86771;782:1711;987:73065">TRAILER</a>
-            <a class="nav-item ${currentHash === 'info' ? 'active' : ''}" href="#info" data-node-id="I1363:86771;782:1711;987:73067">THÔNG TIN</a>
+            
+            <!-- Dropdown Menu: THÔNG TIN (cốt truyện, gameplay, nhân vật, điều tra, giải đố, thu thập) -->
+            <div class="nav-dropdown-wrapper" id="navInfoDropdownWrapper">
+              <a class="nav-item nav-dropdown-trigger ${['info', 'storyline', 'gameplay', 'character', 'investigation', 'puzzle', 'collection'].includes(currentHash) ? 'active' : ''}" href="#info" data-node-id="I1363:86771;782:1711;987:73067">
+                <span>THÔNG TIN</span>
+                <svg class="nav-dropdown-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <div class="nav-sub-dropdown-menu" id="navInfoSubMenu">
+                <a class="nav-sub-item ${currentHash === 'storyline' ? 'active' : ''}" href="#storyline">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Cốt truyện</span>
+                </a>
+                <a class="nav-sub-item ${currentHash === 'gameplay' ? 'active' : ''}" href="#gameplay">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Gameplay</span>
+                </a>
+                <a class="nav-sub-item ${currentHash === 'character' ? 'active' : ''}" href="#character">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Nhân vật</span>
+                </a>
+                <a class="nav-sub-item ${currentHash === 'investigation' ? 'active' : ''}" href="#investigation">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Điều tra</span>
+                </a>
+                <a class="nav-sub-item ${currentHash === 'puzzle' ? 'active' : ''}" href="#puzzle">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Giải đố</span>
+                </a>
+                <a class="nav-sub-item ${currentHash === 'collection' ? 'active' : ''}" href="#collection">
+                  <span class="sub-item-accent">◆</span>
+                  <span class="sub-item-text">Thu thập</span>
+                </a>
+              </div>
+            </div>
+
             <a class="nav-item ${currentHash === 'community' ? 'active' : ''}" href="#community" data-node-id="I1363:86771;782:1711;987:73069">CỘNG ĐỒNG</a>
             <a class="nav-item ${currentHash === 'faq' ? 'active' : ''}" href="#faq" data-node-id="I1363:86771;782:1711;987:73071">FAQ</a>
           </nav>
@@ -233,7 +269,7 @@ export function renderNavbar(container, currentHash) {
   window.addEventListener('auth-state-changed', onAuthChanged);
 
   // Smooth scroll to top when clicking on the menu item of the active / current page
-  const navClickables = container.querySelectorAll('.nav-item, .navbar-brand-logo');
+  const navClickables = container.querySelectorAll('.nav-item, .nav-sub-item, .navbar-brand-logo');
   navClickables.forEach((item) => {
     item.addEventListener('click', (e) => {
       const targetHash = (item.getAttribute('href') || '').replace('#', '');
