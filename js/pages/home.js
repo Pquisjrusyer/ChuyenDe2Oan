@@ -1217,7 +1217,6 @@ export async function renderHome(container) {
   const interactiveCards = container.querySelectorAll('.char-card-interactive-item');
   const cardsFlexWrapper = container.querySelector('#char-cards-flex-wrapper');
   const wantedBoard = container.querySelector('#wanted-dossier-board');
-  const charSection = container.querySelector('#characters');
   const wantedCancelBtn = container.querySelector('#wanted-board-cancel-btn');
   const wantedCloseBtn = container.querySelector('#wanted-board-close-btn');
   const wantedCoverTrigger = container.querySelector('#wanted-cover-trigger');
@@ -1227,9 +1226,6 @@ export async function renderHome(container) {
   function activateCharacterVariant(charKey) {
     currentActiveChar = charKey;
     const data = characterData[charKey] || characterData.minh;
-    if (charSection) {
-      charSection.classList.add('char-active');
-    }
     if (cardsFlexWrapper) {
       cardsFlexWrapper.classList.remove('state-default');
       cardsFlexWrapper.classList.add('state-selected');
@@ -1276,9 +1272,6 @@ export async function renderHome(container) {
   }
 
   function resetCharacterSectionToDefault() {
-    if (charSection) {
-      charSection.classList.remove('char-active');
-    }
     if (wantedBoard) {
       wantedBoard.classList.remove('active-board');
       wantedBoard.classList.remove('has-character-selected');
