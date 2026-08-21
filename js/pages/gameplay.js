@@ -2,6 +2,7 @@
    OAN HORROR GAME — GAMEPLAY PAGE (Figma Node 1058:78289)
    ======================================================== */
 
+import { gsap } from 'gsap';
 import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderGameplay(container) {
@@ -470,6 +471,30 @@ export async function renderGameplay(container) {
     const firstTrigger = faqItems[0].querySelector('.gameplay-faq-trigger');
     if (firstTrigger) firstTrigger.setAttribute('aria-expanded', 'true');
   }
+
+  // GSAP Smooth Rotate Effect on Emblem when Hovering Related Cards
+  const relatedCardWraps = container.querySelectorAll('.gameplay-related-card-wrap');
+  relatedCardWraps.forEach(wrap => {
+    const emblem = wrap.querySelector('.gameplay-card-emblem-img');
+    if (emblem) {
+      wrap.addEventListener('mouseenter', () => {
+        gsap.to(emblem, {
+          rotation: '+=360',
+          duration: 0.8,
+          ease: 'power2.out',
+          overwrite: 'auto'
+        });
+      });
+      wrap.addEventListener('mouseleave', () => {
+        gsap.to(emblem, {
+          rotation: 0,
+          duration: 0.65,
+          ease: 'power2.out',
+          overwrite: 'auto'
+        });
+      });
+    }
+  });
 
   // Scroll Reveal Observer
   const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
