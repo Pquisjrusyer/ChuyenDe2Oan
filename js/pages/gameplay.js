@@ -363,7 +363,7 @@ export async function renderGameplay(container) {
           <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="1093:76453">
             <a href="#storyline" class="gameplay-related-card" data-node-id="I1093:76453;1076:75609">
               <div class="gameplay-card-emblem-box" data-node-id="I1093:76453;1093:76047">
-                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+                <img src="./assets/rotatehover.svg" alt="" class="gameplay-card-emblem-img" />
               </div>
               <div class="gameplay-related-card-bg">
                 <img src="./assets/8334f9d9bb4805b30b192a13a4fe61b7f9e365bb.png" alt="Cốt truyện" data-node-id="I1093:76453;1093:75690" />
@@ -386,7 +386,7 @@ export async function renderGameplay(container) {
           <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:76317">
             <a href="#character" class="gameplay-related-card" data-node-id="I1093:76317;1076:75609">
               <div class="gameplay-card-emblem-box" data-node-id="I1093:76317;1093:76047">
-                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+                <img src="./assets/rotatehover.svg" alt="" class="gameplay-card-emblem-img" />
               </div>
               <div class="gameplay-related-card-bg">
                 <img src="./assets/07dcfc800b6483d6076f8badf09a03ca6c24b840.png" alt="Nhân vật" data-node-id="I1093:76317;1093:75690" />
@@ -409,7 +409,7 @@ export async function renderGameplay(container) {
           <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1093:76385">
             <a href="#download" class="gameplay-related-card" data-node-id="I1093:76385;1076:75609">
               <div class="gameplay-card-emblem-box" data-node-id="I1093:76385;1093:76047">
-                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+                <img src="./assets/rotatehover.svg" alt="" class="gameplay-card-emblem-img" />
               </div>
               <div class="gameplay-related-card-bg">
                 <img src="./assets/ba23e6b9d0c1cc8a61815a4c60ce5140df4f2aed.png" alt="Tải xuống" data-node-id="I1093:76385;1093:75690" />
