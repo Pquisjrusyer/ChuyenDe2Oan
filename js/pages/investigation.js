@@ -10,49 +10,52 @@ export async function renderInvestigation(container) {
   container.innerHTML = `
     <div class="investigation-page-figma" data-node-id="1093:76943">
 
-      <!-- Ambient Background Layer with Scratch Grunge Overlay -->
-      <div class="inv-bg-ambient">
-        <div class="inv-grunge-overlay">
-          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-        </div>
-      </div>
-
       <!-- ========================================================
            1. HERO SECTION: ĐIỀU TRA & HỒ SƠ VỤ ÁN (1093:77148)
            ======================================================== -->
       <section class="inv-hero-section" data-node-id="1093:77148">
         
-        <!-- Left Bloodied Hand Envelope Silhouette (1104:76543) -->
-        <div class="inv-hero-left-silhouette trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76543">
-          <img src="./assets/def6f3adcc382baac3f4eab6502c43f4f54febee.png" alt="" class="inv-hero-left-hand-img" />
-        </div>
-
-        <!-- Right Bloodied Envelope (1104:76787) -->
-        <div class="inv-hero-right-silhouette trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76787">
-          <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" class="inv-hero-right-envelope-img" />
-        </div>
-
-        <div class="inv-hero-container">
-          
-          <!-- Left: Big Title (1093:77153) -->
-          <div class="inv-hero-title-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
-            <h1 class="inv-hero-title" data-node-id="1093:77149">
-              <span>ĐIỀU</span>
-              <span>TRA</span>
-            </h1>
-            <p class="inv-hero-subtitle" data-node-id="1093:77151">
-              Tìm kiếm sự thật ẩn giấu
-            </p>
+        <!-- Background Scratch Texture (1104:76537) -->
+        <div class="inv-hero-bg-texture" data-node-id="1104:76537">
+          <div class="inv-hero-bg-texture-inner">
+            <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
           </div>
-
-          <!-- Right: Antique Case File Dossier (1104:76542) -->
-          <div class="inv-hero-dossier-wrap trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
-            <div class="inv-hero-dossier-frame" data-node-id="1104:76540">
-              <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ Sơ Vụ Án" class="inv-hero-dossier-img" />
-            </div>
-          </div>
-
         </div>
+
+        <!-- Left Bloodied Envelope with Clip (Eletrai - 1104:76520) -->
+        <div class="inv-hero-eletrai trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76520">
+          <div class="inv-hero-eletrai-inner">
+            <img src="./assets/f1e85a77e34ae1945a4b41859193ae004d4ff992.png" alt="" class="inv-eletrai-img1" />
+            <img src="./assets/def6f3adcc382baac3f4eab6502c43f4f54febee.png" alt="" class="inv-eletrai-img2" />
+            <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" class="inv-eletrai-img3" />
+          </div>
+        </div>
+
+        <!-- Hero Title (1093:77153) -->
+        <div class="inv-hero-title-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
+          <div class="inv-hero-title" data-node-id="1093:77149">
+            <span class="inv-hero-title-line">ĐIỀU</span>
+            <span class="inv-hero-title-line">TRA</span>
+          </div>
+          <div class="inv-hero-subtitle" data-node-id="1093:77151">
+            <p>Tìm kiếm sự thật ẩn giấu</p>
+          </div>
+        </div>
+
+        <!-- Right: Case File Dossier (H - 1104:76542) -->
+        <div class="inv-hero-dossier-wrap trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
+          <div class="inv-hero-dossier-inner" data-node-id="1104:76540">
+            <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ sơ vụ án - Biệt thự họ Hứa" class="inv-hero-dossier-img" />
+          </div>
+        </div>
+
+        <!-- Right Bloodied Accent (1104:76787) -->
+        <div class="inv-hero-right-accent trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76787">
+          <div class="inv-hero-right-accent-inner">
+            <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" />
+          </div>
+        </div>
+
       </section>
 
       <!-- ========================================================
@@ -69,7 +72,6 @@ export async function renderInvestigation(container) {
               <div class="inv-coche-monitor-screen">
                 <img src="./assets/59c372722edcc8bbca852f01b65d1d8ce34c06c0.png" alt="Crime Scene Investigation" />
               </div>
-              <div class="inv-coche-monitor-hud-border"></div>
             </div>
 
             <!-- Occult Evidence Board (1093:77180) -->
