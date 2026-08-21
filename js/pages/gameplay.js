@@ -390,7 +390,7 @@ export async function renderGameplay(container) {
                 <img src="./assets/roatebox.svg" alt="" class="gameplay-card-emblem-img" />
               </div>
               <div class="gameplay-related-card-bg">
-                <img src="./assets/07dcfc800b6483d6076f8badf09a03ca6c24b840.png" alt="Nhân vật" data-node-id="I1093:76317;1093:75690" />
+                <img src="./assets/8334f9d9bb4805b30b192a13a4fe61b7f9e365bb.png" alt="Nhân vật" data-node-id="I1093:76317;1093:75690" />
               </div>
               <div class="gameplay-related-card-texture" data-node-id="I1093:76317;1093:76090">
                 <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
@@ -413,7 +413,7 @@ export async function renderGameplay(container) {
                 <img src="./assets/roatebox.svg" alt="" class="gameplay-card-emblem-img" />
               </div>
               <div class="gameplay-related-card-bg">
-                <img src="./assets/ba23e6b9d0c1cc8a61815a4c60ce5140df4f2aed.png" alt="Tải xuống" data-node-id="I1093:76385;1093:75690" />
+                <img src="./assets/07dcfc800b6483d6076f8badf09a03ca6c24b840.png" alt="Tải xuống" data-node-id="I1093:76385;1093:75690" />
               </div>
               <div class="gameplay-card-download-center-icon" data-node-id="I1093:76385;1093:76164">
                 <img src="./assets/gameplay-card-download-icon.png" alt="" />
