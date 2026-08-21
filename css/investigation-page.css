@@ -13,156 +13,202 @@
   box-sizing: border-box;
 }
 
-/* Ambient Background Layer with Scratch Texture */
-.inv-bg-ambient {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.inv-grunge-overlay {
-  position: absolute;
-  inset: 0;
-  mix-blend-mode: multiply;
-  opacity: 0.65;
-}
-
-.inv-grunge-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* ========================================================
    1. HERO SECTION (1093:77148)
    ======================================================== */
 .inv-hero-section {
   position: relative;
   width: 100%;
-  min-height: clamp(650px, 85vh, 1080px);
-  padding: clamp(120px, 15vh, 180px) clamp(20px, 6vw, 120px) clamp(60px, 8vh, 100px);
+  max-width: 1920px;
+  min-height: 1079px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Multiplied Grunge Texture (1104:76537) */
+.inv-hero-bg-texture {
+  position: absolute;
+  left: -547px;
+  top: 42px;
+  width: 1815px;
+  height: 1814px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inv-hero-bg-texture-inner {
+  width: 100%;
+  height: 100%;
+  transform: rotate(90deg);
+}
+
+.inv-hero-bg-texture-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Hero Title Block (1093:77153) */
+.inv-hero-title-box {
+  position: absolute;
+  left: calc(8.33% + 12px);
+  top: 138px;
+  width: 648px;
+  max-width: 90vw;
+  padding: 20px;
   box-sizing: border-box;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  overflow: hidden;
-}
-
-/* Left Bloodied Hand Envelope Silhouette (1104:76543) */
-.inv-hero-left-silhouette {
-  position: absolute;
-  top: 40%;
-  left: -120px;
-  width: clamp(350px, 45vw, 860px);
-  max-width: 860px;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.85;
-}
-
-.inv-hero-left-hand-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
-}
-
-/* Right Bloodied Envelope Silhouette (1104:76787) */
-.inv-hero-right-silhouette {
-  position: absolute;
-  top: 55%;
-  right: -100px;
-  width: clamp(300px, 40vw, 767px);
-  max-width: 767px;
-  pointer-events: none;
-  z-index: 2;
-  opacity: 0.85;
-}
-
-.inv-hero-right-envelope-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
-}
-
-.inv-hero-container {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  max-width: 1534px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  align-items: center;
-  gap: clamp(30px, 5vw, 80px);
-}
-
-.inv-hero-title-box {
-  display: flex;
   flex-direction: column;
-  gap: clamp(16px, 2.5vw, 24px);
+  gap: 19px;
+  z-index: 5;
 }
 
 .inv-hero-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(56px, 7.5vw, 128px);
+  font-size: clamp(64px, 7vw, 128px);
   font-weight: 700;
-  line-height: 1.15;
-  color: #ffffff;
+  line-height: clamp(80px, 8.5vw, 159px);
   letter-spacing: -2.56px;
+  color: #ffffff;
   text-transform: uppercase;
   margin: 0;
   display: flex;
   flex-direction: column;
-  text-shadow: 0 0 35px rgba(238, 27, 16, 0.5), 0 10px 40px rgba(0, 0, 0, 0.95);
+  text-shadow: 0 0 35px rgba(238, 27, 16, 0.4), 0 10px 40px rgba(0, 0, 0, 0.95);
+}
+
+.inv-hero-title-line {
+  display: block;
+  white-space: pre;
 }
 
 .inv-hero-subtitle {
   font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(18px, 1.5vw, 24px);
+  font-size: clamp(18px, 1.3vw, 24px);
   font-weight: 300;
-  color: #ffffff;
   letter-spacing: -0.48px;
+  line-height: 1.3;
+  color: #ffffff;
   margin: 0;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  text-shadow: 0 0 12px rgba(0, 0, 0, 0.9);
 }
 
-/* Antique Case File Dossier (1104:76542) */
+.inv-hero-subtitle p {
+  margin: 0;
+}
+
+/* Left Stacked Bloodied Envelope with Clip (Eletrai - 1104:76520) */
+.inv-hero-eletrai {
+  position: absolute;
+  left: -303px;
+  top: 464px;
+  width: 860px;
+  max-width: 55vw;
+  padding: 94px 99px;
+  box-sizing: border-box;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.inv-hero-eletrai-inner {
+  position: relative;
+  width: 100%;
+  height: 660px;
+}
+
+.inv-eletrai-img1,
+.inv-eletrai-img2,
+.inv-eletrai-img3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(26.06deg) scaleY(-1);
+  width: 662px;
+  height: 410px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.95));
+}
+
+.inv-eletrai-img1 {
+  z-index: 1;
+}
+
+.inv-eletrai-img2 {
+  z-index: 2;
+}
+
+.inv-eletrai-img3 {
+  z-index: 3;
+}
+
+/* Right Case File Dossier (H - 1104:76542) */
 .inv-hero-dossier-wrap {
-  position: relative;
-  width: 100%;
-  max-width: 946px;
+  position: absolute;
+  left: calc(25% + 110px);
+  top: calc(50% - 9.5px);
+  transform: translateY(-50%);
+  width: 1022px;
+  max-width: 60vw;
+  height: 838px;
+  padding: 10px;
+  box-sizing: border-box;
   display: flex;
+  align-items: center;
   justify-content: center;
-  perspective: 1000px;
+  z-index: 4;
+  cursor: pointer;
+  perspective: 1200px;
 }
 
-.inv-hero-dossier-frame {
+.inv-hero-dossier-inner {
   position: relative;
-  width: 100%;
-  max-width: 946px;
-  border-radius: 6px;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 40px rgba(139, 0, 0, 0.35);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+  width: 946px;
+  max-width: 100%;
+  height: 789px;
+  max-height: 100%;
+  border-radius: 4px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.98), 0 0 45px rgba(139, 0, 0, 0.4);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
 }
 
-.inv-hero-dossier-frame:hover {
-  transform: translateY(-8px) rotate(-0.5deg) scale(1.02);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.98), 0 0 60px rgba(217, 183, 76, 0.35);
+.inv-hero-dossier-wrap:hover .inv-hero-dossier-inner {
+  transform: translateY(-8px) scale(1.025) rotate(-0.5deg);
+  box-shadow: 0 45px 110px rgba(0, 0, 0, 0.98), 0 0 60px rgba(217, 183, 76, 0.45);
 }
 
 .inv-hero-dossier-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
   display: block;
-  border-radius: 6px;
+}
+
+/* Right Bloodied Accent (1104:76787) */
+.inv-hero-right-accent {
+  position: absolute;
+  left: calc(75% + 85px);
+  top: 645px;
+  width: 767px;
+  height: 864px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.inv-hero-right-accent-inner {
+  transform: rotate(118.37deg);
+  width: 722px;
+  height: 482px;
+}
+
+.inv-hero-right-accent-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* ========================================================
@@ -889,18 +935,56 @@
 /* ========================================================
    RESPONSIVE ADAPTATIONS
    ======================================================== */
-@media (max-width: 1200px) {
-  .inv-hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .inv-hero-title-box {
-    align-items: center;
+@media (max-width: 1400px) {
+  .inv-hero-section {
+    min-height: 850px;
   }
 
   .inv-hero-dossier-wrap {
-    margin: 0 auto;
+    left: 45%;
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .inv-hero-section {
+    min-height: auto;
+    padding: 120px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inv-hero-title-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .inv-hero-dossier-wrap {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+  }
+
+  .inv-hero-dossier-inner {
+    height: auto;
+  }
+
+  .inv-hero-eletrai {
+    display: none;
+  }
+
+  .inv-hero-right-accent {
+    display: none;
   }
 
   .inv-coche-container {
