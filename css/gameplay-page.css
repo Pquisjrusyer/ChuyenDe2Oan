@@ -965,6 +965,13 @@
   overflow: hidden;
   text-decoration: none;
   background: #080202;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gameplay-related-card-wrap:hover .gameplay-related-card,
+.gameplay-related-card:hover {
+  border: 10px solid transparent;
+  border-image: linear-gradient(45deg, rgba(48, 1, 1, 1), rgba(92, 1, 1, 1), rgba(224, 224, 224, 1)) 1;
 }
 
 .gameplay-card-emblem-box {
