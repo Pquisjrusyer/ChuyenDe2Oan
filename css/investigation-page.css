@@ -1,0 +1,935 @@
+/* ========================================================
+   OAN HORROR GAME — INVESTIGATION PAGE CSS (Figma Node 1093:76943)
+   "ĐIỀU TRA DESKTOP"
+   ======================================================== */
+
+.investigation-page-figma {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #180505 0%, #000000 50%, #370000 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Ambient Background Layer with Scratch Texture */
+.inv-bg-ambient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.inv-grunge-overlay {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.65;
+}
+
+.inv-grunge-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================================================
+   1. HERO SECTION (1093:77148)
+   ======================================================== */
+.inv-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: clamp(650px, 85vh, 1080px);
+  padding: clamp(120px, 15vh, 180px) clamp(20px, 6vw, 120px) clamp(60px, 8vh, 100px);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Left Bloodied Hand Envelope Silhouette (1104:76543) */
+.inv-hero-left-silhouette {
+  position: absolute;
+  top: 40%;
+  left: -120px;
+  width: clamp(350px, 45vw, 860px);
+  max-width: 860px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.inv-hero-left-hand-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+/* Right Bloodied Envelope Silhouette (1104:76787) */
+.inv-hero-right-silhouette {
+  position: absolute;
+  top: 55%;
+  right: -100px;
+  width: clamp(300px, 40vw, 767px);
+  max-width: 767px;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.85;
+}
+
+.inv-hero-right-envelope-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+.inv-hero-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1534px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  align-items: center;
+  gap: clamp(30px, 5vw, 80px);
+}
+
+.inv-hero-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.inv-hero-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(56px, 7.5vw, 128px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  letter-spacing: -2.56px;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0 0 35px rgba(238, 27, 16, 0.5), 0 10px 40px rgba(0, 0, 0, 0.95);
+}
+
+.inv-hero-subtitle {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: clamp(18px, 1.5vw, 24px);
+  font-weight: 300;
+  color: #ffffff;
+  letter-spacing: -0.48px;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+/* Antique Case File Dossier (1104:76542) */
+.inv-hero-dossier-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 946px;
+  display: flex;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.inv-hero-dossier-frame {
+  position: relative;
+  width: 100%;
+  max-width: 946px;
+  border-radius: 6px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 40px rgba(139, 0, 0, 0.35);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+.inv-hero-dossier-frame:hover {
+  transform: translateY(-8px) rotate(-0.5deg) scale(1.02);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.98), 0 0 60px rgba(217, 183, 76, 0.35);
+}
+
+.inv-hero-dossier-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 6px;
+}
+
+/* ========================================================
+   2. CORE MECHANISM: CƠ CHẾ CỐT LÕI (1093:77154)
+   ======================================================== */
+.inv-coche-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(80px, 10vh, 140px) clamp(20px, 6vw, 120px);
+  box-sizing: border-box;
+  background: radial-gradient(circle at center, rgba(30, 4, 4, 0.9) 0%, rgba(10, 1, 1, 0.95) 70%, #000000 100%);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.inv-coche-container {
+  position: relative;
+  width: 100%;
+  max-width: 1534px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+/* Left: Crime Scene Monitor & Evidence Board */
+.inv-coche-left-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.inv-coche-monitor-frame {
+  position: relative;
+  width: 100%;
+  max-width: 740px;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(153, 0, 0, 0.4);
+  background: #0d0101;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.inv-coche-monitor-screen {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.inv-coche-monitor-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Occult Evidence Board (1093:77180) */
+.inv-coche-evidence-board {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: clamp(180px, 25vw, 260px);
+  margin-top: -40px;
+  margin-left: 20px;
+}
+
+.inv-evidence-polaroid {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: clamp(140px, 18vw, 200px);
+  z-index: 2;
+  transform: rotate(-8deg);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
+  transition: transform 0.4s ease;
+}
+
+.inv-evidence-polaroid:hover {
+  transform: rotate(0deg) scale(1.06);
+  z-index: 10;
+}
+
+.inv-evidence-polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inv-evidence-letter {
+  position: absolute;
+  top: 0;
+  left: clamp(110px, 14vw, 150px);
+  width: clamp(240px, 30vw, 360px);
+  z-index: 1;
+  transform: rotate(3deg);
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
+  transition: transform 0.4s ease;
+}
+
+.inv-evidence-letter:hover {
+  transform: rotate(0deg) scale(1.04);
+  z-index: 9;
+}
+
+.inv-evidence-letter img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.inv-evidence-pins {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.inv-evidence-pins img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Right: Core Mechanism Details */
+.inv-coche-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.2vw, 24px);
+}
+
+.inv-coche-case-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border: 1px solid #ee1b10;
+  background: rgba(238, 27, 16, 0.1);
+  border-radius: 2px;
+}
+
+.inv-coche-case-badge span {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ee1b10;
+  letter-spacing: 1px;
+}
+
+.inv-coche-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.96px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(217, 183, 76, 0.4);
+}
+
+.inv-coche-intro {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 400;
+  color: #c4c7c8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.inv-coche-director-box {
+  padding: 14px 18px;
+  background: rgba(48, 1, 1, 0.4);
+  border-left: 3px solid #ee1b10;
+  border-radius: 0 4px 4px 0;
+}
+
+.inv-coche-director-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ee1b10;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.inv-coche-director-quote {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #e2e2e2;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* 4 Interaction Cards */
+.inv-coche-cards-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.inv-coche-item-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: rgba(15, 3, 3, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inv-coche-item-card:hover {
+  border-color: #d9b74c;
+  background: rgba(30, 6, 6, 0.95);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(217, 183, 76, 0.25);
+}
+
+.inv-coche-item-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.inv-coche-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.inv-coche-item-text h3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  line-height: 1.35;
+}
+
+.inv-coche-item-text p {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bottom Quote Banner */
+.inv-coche-bottom-quote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(130, 0, 0, 0.4);
+  border-radius: 4px;
+}
+
+.inv-quote-mark {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px;
+  color: #d9b74c;
+  line-height: 1;
+}
+
+.inv-coche-bottom-quote p {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(12px, 1vw, 14px);
+  color: #e2e2e2;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ========================================================
+   3. INVESTIGATION PROCESS: QUY TRÌNH ĐIỀU TRA (1093:77227)
+   ======================================================== */
+.inv-process-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(80px, 10vh, 140px) clamp(20px, 6vw, 120px);
+  box-sizing: border-box;
+  background: #000000;
+  z-index: 2;
+}
+
+/* Plaque Banner Header (1093:77229) */
+.inv-process-header-box {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 80px;
+  margin: 0 auto clamp(50px, 7vh, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inv-process-header-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.inv-process-header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.inv-process-header-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-align: center;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+/* 4 Step Cards (1093:77237) */
+.inv-process-cards-grid {
+  width: 100%;
+  max-width: 1534px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.5vw, 32px);
+}
+
+.inv-step-card {
+  position: relative;
+  border: 1px solid #330000;
+  border-radius: 4px;
+  padding: 8px;
+  background: #050000;
+  box-sizing: border-box;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+.inv-step-card:hover {
+  border: 1px solid transparent;
+  background: linear-gradient(#050000, #050000) padding-box,
+              linear-gradient(45deg, rgba(48, 1, 1, 1), rgba(92, 1, 1, 1), rgba(224, 224, 224, 1)) border-box;
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(153, 0, 0, 0.45);
+}
+
+.inv-step-card-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 8px solid #300101;
+  background: #080202;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.inv-step-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.inv-step-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.inv-step-card:hover .inv-step-card-media img {
+  transform: scale(1.08);
+}
+
+.inv-step-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.75) 100%);
+  pointer-events: none;
+}
+
+.inv-step-card-content {
+  padding: 16px 14px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inv-step-card-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 700;
+  color: #ffd700;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.inv-step-card-desc {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========================================================
+   4. SUPPORT TOOLS & SURVIVAL TIPS (1093:77284 & 1093:77344)
+   ======================================================== */
+.inv-tools-section,
+.inv-tips-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 6vw, 120px);
+  box-sizing: border-box;
+  background: #000000;
+  z-index: 2;
+}
+
+/* Horror Wing Bracket Header */
+.inv-tools-header {
+  position: relative;
+  width: 100%;
+  max-width: 1534px;
+  min-height: 70px;
+  margin: 0 auto clamp(40px, 6vh, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inv-tools-horror-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.inv-tools-horror-left {
+  height: clamp(35px, 4vw, 55px);
+  width: clamp(120px, 30vw, 500px);
+  object-fit: fill;
+  object-position: left center;
+}
+
+.inv-tools-horror-right {
+  height: clamp(35px, 4vw, 55px);
+  width: clamp(120px, 30vw, 500px);
+  object-fit: fill;
+  object-position: right center;
+  transform: scaleX(-1);
+}
+
+.inv-tools-header-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(18px, 2.2vw, 32px);
+  font-weight: 700;
+  color: #ee1b10;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0 clamp(16px, 3vw, 36px);
+  background: #000000;
+  white-space: nowrap;
+  text-shadow: 0 0 15px rgba(238, 27, 16, 0.4);
+}
+
+/* 4 Support Tool Cards (1093:77292) */
+.inv-tools-grid {
+  width: 100%;
+  max-width: 1534px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.5vw, 28px);
+}
+
+.inv-tool-card {
+  position: relative;
+  background: linear-gradient(135deg, #100202 0%, #050000 100%);
+  border: 1px solid rgba(130, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+}
+
+.inv-tool-card:hover {
+  border-color: #ee1b10;
+  background: linear-gradient(135deg, #200404 0%, #0d0000 100%);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95), 0 0 25px rgba(238, 27, 16, 0.35);
+}
+
+.inv-tool-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ee1b10;
+  padding: 4px 10px;
+  background: rgba(238, 27, 16, 0.12);
+  border: 1px solid rgba(238, 27, 16, 0.35);
+  border-radius: 3px;
+}
+
+.inv-tool-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(14px, 1.2vw, 17px);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.inv-tool-desc {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* 3 Survival Tip Cards (1093:77351) */
+.inv-tips-grid {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 36px);
+}
+
+.inv-tip-card {
+  position: relative;
+  background: linear-gradient(135deg, #100202 0%, #050000 100%);
+  border: 1px solid rgba(130, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+}
+
+.inv-tip-card:hover {
+  border-color: #ffd700;
+  background: linear-gradient(135deg, #200404 0%, #0d0000 100%);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.35);
+}
+
+.inv-tip-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.inv-tip-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: #ee1b10;
+  padding: 3px 8px;
+  background: rgba(238, 27, 16, 0.12);
+  border: 1px solid rgba(238, 27, 16, 0.3);
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.inv-tip-speaker {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.inv-tip-card:hover .inv-tip-speaker {
+  opacity: 1;
+}
+
+.inv-tip-speaker img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.inv-tip-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(15px, 1.3vw, 18px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.inv-tip-desc {
+  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================================
+   6. CONTINUE JOURNEY: TIẾP TỤC HÀNH TRÌNH? (1093:77395)
+   ======================================================== */
+.inv-continue-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 100px) 20px;
+  box-sizing: border-box;
+  background: #000000;
+  text-align: center;
+  z-index: 2;
+}
+
+.inv-continue-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.inv-continue-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(24px, 3vw, 40px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(238, 27, 16, 0.4);
+}
+
+.inv-continue-subtitle {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  font-weight: 300;
+  color: #c4c7c8;
+  margin: 0 0 16px;
+}
+
+.inv-continue-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  background: #100202;
+  border: 1px solid #ee1b10;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8), 0 0 20px rgba(238, 27, 16, 0.3);
+}
+
+.inv-continue-btn:hover {
+  background: #330000;
+  border-color: #ffd700;
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9), 0 0 30px rgba(217, 183, 76, 0.5);
+}
+
+.inv-continue-btn-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.inv-continue-btn-arrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffd700;
+  transition: transform 0.3s ease;
+}
+
+.inv-continue-btn:hover .inv-continue-btn-arrow {
+  transform: translateX(4px);
+}
+
+/* ========================================================
+   RESPONSIVE ADAPTATIONS
+   ======================================================== */
+@media (max-width: 1200px) {
+  .inv-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .inv-hero-title-box {
+    align-items: center;
+  }
+
+  .inv-hero-dossier-wrap {
+    margin: 0 auto;
+  }
+
+  .inv-coche-container {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-process-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inv-tools-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-coche-cards-list {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-process-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inv-tips-grid {
+    grid-template-columns: 1fr;
+  }
+}
