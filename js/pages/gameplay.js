@@ -2,6 +2,8 @@
    OAN HORROR GAME — GAMEPLAY PAGE (Figma Node 1058:78289)
    ======================================================== */
 
+import { getReadySectionHTML } from '../components/ready-section.js';
+
 export async function renderGameplay(container) {
   container.innerHTML = `
     <div class="gameplay-page-figma" data-node-id="1058:78289">
@@ -397,30 +399,9 @@ export async function renderGameplay(container) {
       </section>
 
       <!-- ========================================================
-           7. CTA SECTION: BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA? (1093:76522)
+           7. READY SECTION: BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA? (1363:86758 / 1093:76522)
            ======================================================== -->
-      <section class="gameplay-cta-section" data-node-id="1093:76522">
-        <div class="gameplay-cta-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1093:76523">
-          
-          <h2 class="gameplay-cta-heading" data-node-id="1093:76525">
-            BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?
-          </h2>
-
-          <div class="gameplay-cta-buttons-row" data-node-id="1093:76526">
-            <a href="#download" class="gameplay-cta-btn" data-node-id="1093:76527">
-              <span class="gameplay-cta-btn-text">CHƠI NGAY</span>
-            </a>
-            <a href="#download" class="gameplay-cta-btn" data-node-id="1093:76528">
-              <span class="gameplay-cta-btn-text">TẢI NGAY</span>
-            </a>
-          </div>
-
-          <p class="gameplay-cta-requirement" data-node-id="1093:76530">
-            YÊU CẦU: CORE I5 / 8GB RAM / GTX 1060+
-          </p>
-
-        </div>
-      </section>
+      ${getReadySectionHTML()}
 
     </div>
   `;
