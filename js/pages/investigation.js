@@ -24,11 +24,7 @@ export async function renderInvestigation(container) {
 
         <!-- Left Bloodied Envelope with Clip (Eletrai - 1104:76520) -->
         <div class="inv-hero-eletrai trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76520">
-          <div class="inv-hero-eletrai-inner">
-            <img src="./assets/f1e85a77e34ae1945a4b41859193ae004d4ff992.png" alt="" class="inv-eletrai-img1" />
-            <img src="./assets/def6f3adcc382baac3f4eab6502c43f4f54febee.png" alt="" class="inv-eletrai-img2" />
-            <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" class="inv-eletrai-img3" />
-          </div>
+          <img src="./assets/inv_hero_eletrai.png" alt="" class="inv-eletrai-img" />
         </div>
 
         <!-- Hero Title (1093:77153) -->
@@ -49,11 +45,9 @@ export async function renderInvestigation(container) {
           </div>
         </div>
 
-        <!-- Right Bloodied Accent (1104:76787) -->
+        <!-- Right Bloodied Envelope Accent (1104:76787) -->
         <div class="inv-hero-right-accent trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76787">
-          <div class="inv-hero-right-accent-inner">
-            <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" />
-          </div>
+          <img src="./assets/inv_hero_right_envelope.png" alt="" class="inv-right-accent-img" />
         </div>
 
       </section>
