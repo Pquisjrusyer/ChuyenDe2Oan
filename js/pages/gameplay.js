@@ -270,35 +270,49 @@ export async function renderGameplay(container) {
         <!-- Options Container (1060:75772) -->
         <div class="gameplay-faq-options-container trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1060:75772">
           
-          <!-- FAQ Item 1 (1711:7319) -->
-          <div class="gameplay-faq-item active" data-node-id="1711:7319">
-            <button type="button" class="gameplay-faq-trigger" aria-expanded="true">
-              <span class="gameplay-faq-question" data-node-id="1711:7324">
+          <!-- FAQ Item 1 (1060:75505) -->
+          <div class="gameplay-faq-item active" data-node-id="1060:75505">
+            <div class="gameplay-faq-texture" data-node-id="I1060:75505;1040:76546">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="gameplay-faq-texture-img" />
+            </div>
+            <button type="button" class="gameplay-faq-trigger" aria-expanded="true" data-node-id="I1060:75505;1040:76537">
+              <span class="gameplay-faq-question" data-node-id="I1060:75505;1040:76539">
                 OÁN CÓ HỖ TRỢ TAY CẦM KHÔNG?
               </span>
-              <span class="gameplay-faq-icon" data-node-id="1711:7326">+</span>
+              <div class="gameplay-faq-icon-wrap" data-node-id="I1060:75505;1040:76540">
+                <img src="./assets/5d19871acf78102b7372cbc87b67bc12d21f8a04.svg" alt="" class="gameplay-faq-icon-svg" />
+              </div>
             </button>
             <div class="gameplay-faq-answer">
-              <div class="gameplay-faq-answer-inner">
-                <p>
-                  Có, OÁN hỗ trợ đầy đủ các dòng tay cầm phổ biến như PlayStation DualSense/DualShock 4, Xbox Controller và các thiết bị tay cầm chuẩn XInput. Game cũng tích hợp tính năng rung phản hồi xúc giác theo từng nhịp tim và tiếng bước chân ma quái.
-                </p>
+              <div class="gameplay-faq-answer-inner" data-node-id="I1060:75505;1040:76548">
+                <p class="gameplay-faq-answer-intro">OÁN hỗ trợ đầy đủ các dòng tay cầm phổ biến trên thị trường để mang lại trải nghiệm nhập vai tốt nhất:</p>
+                <ul class="gameplay-faq-answer-list">
+                  <li>• Hỗ trợ hoàn toàn: PlayStation DualSense / DualShock 4, Xbox Wireless Controller</li>
+                  <li>• Chuẩn kết nối: Tương thích DirectInput & XInput tự động nhận diện thiết bị</li>
+                  <li>• Phản hồi xúc giác: Rung cảm ứng haptic theo từng nhịp tim và tiếng bước chân</li>
+                  <li>• Tùy biến: Tự do gán lại toàn bộ nút điều khiển trong mục Cài đặt</li>
+                </ul>
               </div>
             </div>
           </div>
 
-          <!-- FAQ Item 2 (1711:7340) -->
-          <div class="gameplay-faq-item" data-node-id="1711:7340">
-            <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <span class="gameplay-faq-question" data-node-id="1711:7345">
+          <!-- FAQ Item 2 (1060:75506) -->
+          <div class="gameplay-faq-item" data-node-id="1060:75506">
+            <div class="gameplay-faq-texture" data-node-id="I1060:75506;1040:76546">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="gameplay-faq-texture-img" />
+            </div>
+            <button type="button" class="gameplay-faq-trigger" aria-expanded="false" data-node-id="I1060:75506;1040:76537">
+              <span class="gameplay-faq-question" data-node-id="I1060:75506;1040:76539">
                 CẤU HÌNH TỐI THIỂU ĐỂ TRẢI NGHIỆM GAME?
               </span>
-              <span class="gameplay-faq-icon" data-node-id="1711:7347">+</span>
+              <div class="gameplay-faq-icon-wrap" data-node-id="I1060:75506;1040:76540">
+                <img src="./assets/5d19871acf78102b7372cbc87b67bc12d21f8a04.svg" alt="" class="gameplay-faq-icon-svg" />
+              </div>
             </button>
             <div class="gameplay-faq-answer">
-              <div class="gameplay-faq-answer-inner" data-node-id="1711:7349">
-                <p>Để trải nghiệm không gian kinh dị của OÁN một cách trọn vẹn nhất, chúng tôi khuyến nghị cấu hình tối thiểu sau:</p>
-                <ul>
+              <div class="gameplay-faq-answer-inner" data-node-id="I1060:75506;1040:76548">
+                <p class="gameplay-faq-answer-intro" data-node-id="I1060:75506;1040:76550">Để trải nghiệm không gian kinh dị của OÁN một cách trọn vẹn nhất, chúng tôi khuyến nghị cấu hình tối thiểu sau:</p>
+                <ul class="gameplay-faq-answer-list" data-node-id="I1060:75506;1040:76551">
                   <li>• CPU: Intel Core i5-8400 / AMD Ryzen 5 2600</li>
                   <li>• GPU: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580</li>
                   <li>• RAM: 12GB</li>
@@ -308,19 +322,28 @@ export async function renderGameplay(container) {
             </div>
           </div>
 
-          <!-- FAQ Item 3 (1711:7361) -->
-          <div class="gameplay-faq-item" data-node-id="1711:7361">
-            <button type="button" class="gameplay-faq-trigger" aria-expanded="false">
-              <span class="gameplay-faq-question" data-node-id="1711:7366">
+          <!-- FAQ Item 3 (1060:75507) -->
+          <div class="gameplay-faq-item" data-node-id="1060:75507">
+            <div class="gameplay-faq-texture" data-node-id="I1060:75507;1040:76546">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="gameplay-faq-texture-img" />
+            </div>
+            <button type="button" class="gameplay-faq-trigger" aria-expanded="false" data-node-id="I1060:75507;1040:76537">
+              <span class="gameplay-faq-question" data-node-id="I1060:75507;1040:76539">
                 THỜI LƯỢNG CHƠI TRUNG BÌNH LÀ BAO LÂU?
               </span>
-              <span class="gameplay-faq-icon" data-node-id="1711:7368">+</span>
+              <div class="gameplay-faq-icon-wrap" data-node-id="I1060:75507;1040:76540">
+                <img src="./assets/5d19871acf78102b7372cbc87b67bc12d21f8a04.svg" alt="" class="gameplay-faq-icon-svg" />
+              </div>
             </button>
             <div class="gameplay-faq-answer">
-              <div class="gameplay-faq-answer-inner">
-                <p>
-                  Thời lượng hoàn thành cốt truyện chính kéo dài khoảng 8 - 12 giờ. Nếu bạn muốn khám phá toàn bộ các kết thúc ẩn, giải mã tất cả manh mối và tìm kiếm toàn bộ cổ vật trong Nhà Hứa, thời lượng có thể lên đến 18 - 25 giờ.
-                </p>
+              <div class="gameplay-faq-answer-inner" data-node-id="I1060:75507;1040:76548">
+                <p class="gameplay-faq-answer-intro">Thời lượng hoàn thành trò chơi phụ thuộc vào phong cách trải nghiệm của bạn:</p>
+                <ul class="gameplay-faq-answer-list">
+                  <li>• Cốt truyện chính: Khoảng 8 - 12 giờ cho lần chơi đầu tiên</li>
+                  <li>• Khám phá toàn diện: 18 - 25 giờ để tìm đủ cổ vật và giải mã toàn bộ bí mật Nhà Hứa</li>
+                  <li>• Kết thúc ẩn: Gồm 3 kết thúc khác nhau dựa trên các lựa chọn then chốt</li>
+                  <li>• Chế độ Ác Mộng: Mở khóa sau khi phá đảo game với độ khó cao nhất</li>
+                </ul>
               </div>
             </div>
           </div>
