@@ -104,14 +104,23 @@
 /* Left Stacked Bloodied Envelope with Clip (Eletrai - 1104:76520) */
 .inv-hero-eletrai {
   position: absolute;
-  left: -303px;
-  top: 464px;
-  width: 860px;
-  max-width: 55vw;
-  padding: 94px 99px;
+  left: -220px;
+  top: 460px;
+  width: clamp(480px, 45vw, 760px);
   box-sizing: border-box;
   pointer-events: none;
-  z-index: 3;
+  z-index: 10;
+  background: transparent;
+  display: block;
+}
+
+.inv-eletrai-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+  transform: rotate(26.06deg) scaleY(-1);
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95));
 }
 
 .inv-hero-eletrai-inner {
@@ -979,11 +988,23 @@
   }
 
   .inv-hero-eletrai {
-    display: none;
+    display: block;
+    position: absolute;
+    left: -120px;
+    top: 55%;
+    width: clamp(280px, 35vw, 420px);
+    z-index: 10;
+    opacity: 0.9;
   }
 
   .inv-hero-right-accent {
-    display: none;
+    display: block;
+    position: absolute;
+    right: -100px;
+    top: 65%;
+    width: clamp(240px, 30vw, 360px);
+    z-index: 10;
+    opacity: 0.85;
   }
 
   .inv-coche-container {

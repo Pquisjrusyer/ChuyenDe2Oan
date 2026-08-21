@@ -24,7 +24,7 @@ export async function renderInvestigation(container) {
 
         <!-- Left Bloodied Envelope with Clip (Eletrai - 1104:76520) -->
         <div class="inv-hero-eletrai trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76520">
-          <img src="./assets/inv_hero_eletrai.png" alt="" class="inv-eletrai-img" />
+          <img src="./assets/def6f3adcc382baac3f4eab6502c43f4f54febee.png" alt="" class="inv-eletrai-img" />
         </div>
 
         <!-- Hero Title (1093:77153) -->
