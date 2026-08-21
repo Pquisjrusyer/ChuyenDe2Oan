@@ -359,41 +359,77 @@ export async function renderGameplay(container) {
       <section class="gameplay-related-section" data-node-id="1060:75864">
         <div class="gameplay-related-grid" data-node-id="1093:76521">
           
-          <!-- Card 1: CỐT TRUYỆN (1093:76453) -->
-          <a href="#storyline" class="gameplay-related-card trailer-scroll-reveal trailer-reveal-left" data-node-id="1093:76453">
-            <div class="gameplay-related-card-bg">
-              <img src="./assets/8334f9d9bb4805b30b192a13a4fe61b7f9e365bb.png" alt="Cốt truyện" />
-            </div>
-            <div class="gameplay-related-card-overlay"></div>
-            <div class="gameplay-related-card-content">
-              <h3 class="gameplay-related-card-title">CỐT TRUYỆN</h3>
-              <span class="gameplay-related-card-link">KHÁM PHÁ ›</span>
-            </div>
-          </a>
+          <!-- Card 1: CỐT TRUYỆN (1093:76453) -> Links to #storyline -->
+          <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="1093:76453">
+            <a href="#storyline" class="gameplay-related-card" data-node-id="I1093:76453;1076:75609">
+              <div class="gameplay-card-emblem-box" data-node-id="I1093:76453;1093:76047">
+                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+              </div>
+              <div class="gameplay-related-card-bg">
+                <img src="./assets/8334f9d9bb4805b30b192a13a4fe61b7f9e365bb.png" alt="Cốt truyện" data-node-id="I1093:76453;1093:75690" />
+              </div>
+              <div class="gameplay-related-card-texture" data-node-id="I1093:76453;1093:76090">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+              <div class="gameplay-related-card-overlay"></div>
+              <div class="gameplay-related-card-content">
+                <h3 class="gameplay-related-card-title" data-node-id="I1093:76453;1076:75615">CỐT TRUYỆN</h3>
+                <div class="gameplay-related-card-link" data-node-id="I1093:76453;1093:76091">
+                  <span>TÌM HIỂU THÊM</span>
+                  <img src="./assets/gameplay-card-arrow.png" alt="" class="gameplay-card-arrow-icon" />
+                </div>
+              </div>
+            </a>
+          </div>
 
-          <!-- Card 2: NHÂN VẬT (1093:76317) -->
-          <a href="#character" class="gameplay-related-card trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:76317">
-            <div class="gameplay-related-card-bg">
-              <img src="./assets/07dcfc800b6483d6076f8badf09a03ca6c24b840.png" alt="Nhân vật" />
-            </div>
-            <div class="gameplay-related-card-overlay"></div>
-            <div class="gameplay-related-card-content">
-              <h3 class="gameplay-related-card-title">NHÂN VẬT</h3>
-              <span class="gameplay-related-card-link">KHÁM PHÁ ›</span>
-            </div>
-          </a>
+          <!-- Card 2: NHÂN VẬT (1093:76317) -> Links to #character -->
+          <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:76317">
+            <a href="#character" class="gameplay-related-card" data-node-id="I1093:76317;1076:75609">
+              <div class="gameplay-card-emblem-box" data-node-id="I1093:76317;1093:76047">
+                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+              </div>
+              <div class="gameplay-related-card-bg">
+                <img src="./assets/07dcfc800b6483d6076f8badf09a03ca6c24b840.png" alt="Nhân vật" data-node-id="I1093:76317;1093:75690" />
+              </div>
+              <div class="gameplay-related-card-texture" data-node-id="I1093:76317;1093:76090">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+              <div class="gameplay-related-card-overlay"></div>
+              <div class="gameplay-related-card-content">
+                <h3 class="gameplay-related-card-title" data-node-id="I1093:76317;1076:75615">NHÂN VẬT</h3>
+                <div class="gameplay-related-card-link" data-node-id="I1093:76317;1093:76091">
+                  <span>TÌM HIỂU THÊM</span>
+                  <img src="./assets/gameplay-card-arrow.png" alt="" class="gameplay-card-arrow-icon" />
+                </div>
+              </div>
+            </a>
+          </div>
 
-          <!-- Card 3: TẢI XUỐNG (1093:76385) -->
-          <a href="#download" class="gameplay-related-card trailer-scroll-reveal trailer-reveal-right" data-node-id="1093:76385">
-            <div class="gameplay-related-card-bg">
-              <img src="./assets/ba23e6b9d0c1cc8a61815a4c60ce5140df4f2aed.png" alt="Tải xuống" />
-            </div>
-            <div class="gameplay-related-card-overlay"></div>
-            <div class="gameplay-related-card-content">
-              <h3 class="gameplay-related-card-title">TẢI XUỐNG</h3>
-              <span class="gameplay-related-card-link">TẢI NGAY ›</span>
-            </div>
-          </a>
+          <!-- Card 3: TẢI XUỐNG (1093:76385) -> Links to #download -->
+          <div class="gameplay-related-card-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1093:76385">
+            <a href="#download" class="gameplay-related-card" data-node-id="I1093:76385;1076:75609">
+              <div class="gameplay-card-emblem-box" data-node-id="I1093:76385;1093:76047">
+                <img src="./assets/gameplay-card-emblem.png" alt="" class="gameplay-card-emblem-img" />
+              </div>
+              <div class="gameplay-related-card-bg">
+                <img src="./assets/ba23e6b9d0c1cc8a61815a4c60ce5140df4f2aed.png" alt="Tải xuống" data-node-id="I1093:76385;1093:75690" />
+              </div>
+              <div class="gameplay-card-download-center-icon" data-node-id="I1093:76385;1093:76164">
+                <img src="./assets/gameplay-card-download-icon.png" alt="" />
+              </div>
+              <div class="gameplay-related-card-texture" data-node-id="I1093:76385;1093:76090">
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+              </div>
+              <div class="gameplay-related-card-overlay"></div>
+              <div class="gameplay-related-card-content">
+                <h3 class="gameplay-related-card-title" data-node-id="I1093:76385;1076:75615">TẢI XUỐNG</h3>
+                <div class="gameplay-related-card-link" data-node-id="I1093:76385;1093:76097">
+                  <span>TẢI NGAY</span>
+                  <img src="./assets/gameplay-card-arrow.png" alt="" class="gameplay-card-arrow-icon" />
+                </div>
+              </div>
+            </a>
+          </div>
 
         </div>
       </section>
