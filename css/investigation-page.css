@@ -257,7 +257,8 @@
   max-width: 936px;
   aspect-ratio: 936 / 574;
   margin-top: 20px;
-  border: 2px solid #784e0e;
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #784e0e 0%, #000000 50%, #7d5d2c 100%) 1;
   background: rgba(15, 5, 5, 0.6);
   padding: clamp(20px, 3.5vw, 46px) clamp(16px, 3vw, 40px);
   box-sizing: border-box;
@@ -270,7 +271,7 @@
 }
 
 .inv-coche-monitor-wrap:hover {
-  border-color: #7d5d2c;
+  border-image: linear-gradient(45deg, #a6701f 0%, #2a0505 50%, #cca33b 100%) 1;
   transform: translateY(-4px) scale(1.005);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.98), 0 0 50px rgba(204, 163, 59, 0.45);
 }
