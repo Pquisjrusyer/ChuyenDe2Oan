@@ -53,119 +53,115 @@ export async function renderInvestigation(container) {
       </section>
 
       <!-- ========================================================
-           2. CORE MECHANISM: CƠ CHẾ CỐT LÕI (1093:77154)
+           2. CORE MECHANISM: CƠ CHẾ CỐT LÕI (1104:76446)
            ======================================================== -->
-      <section class="inv-coche-section" data-node-id="1093:77154">
-        <div class="inv-coche-container">
+      <section class="inv-coche-section" data-node-id="1104:76446">
+        
+        <!-- Multiplied Grunge Background Texture (1104:76785) -->
+        <div class="inv-coche-bg-texture" data-node-id="1104:76785">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+
+        <div class="inv-coche-container" data-node-id="1104:76447">
           
-          <!-- Left: Crime Scene Monitor & Evidence Board -->
-          <div class="inv-coche-left-col trailer-scroll-reveal trailer-reveal-left">
+          <!-- Left Column: Video Monitor & Evidence Board (1104:76448) -->
+          <div class="inv-coche-left-col trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76448">
             
-            <!-- Monitor Frame (1093:77169) -->
-            <div class="inv-coche-monitor-frame" data-node-id="1093:77169">
-              <div class="inv-coche-monitor-screen">
-                <img src="./assets/59c372722edcc8bbca852f01b65d1d8ce34c06c0.png" alt="Crime Scene Investigation" />
-              </div>
+            <!-- Video Monitor Frame (1104:76367) -->
+            <div class="inv-coche-monitor-wrap" data-node-id="1104:76367">
+              <img src="./assets/inv_coche_monitor.png" alt="Investigation Monitor" class="inv-coche-monitor-img" />
             </div>
 
-            <!-- Occult Evidence Board (1093:77180) -->
-            <div class="inv-coche-evidence-board" data-node-id="1093:77180">
-              <!-- Doll Polaroid -->
-              <div class="inv-evidence-polaroid">
-                <img src="./assets/6cb0e3ad7943c352a01b609395fd8553913b9ec5.png" alt="Polaroid Evidence" />
-              </div>
-              <!-- Ritual Letter -->
-              <div class="inv-evidence-letter">
-                <img src="./assets/17d05d4a5da492841a813a3a61de000275d38e15.png" alt="Occult Ritual Letter" />
-              </div>
-              <!-- Red Pins & Connecting Strings -->
-              <div class="inv-evidence-pins">
-                <img src="./assets/6ae3364c73d5503d6ac86b283f1544b95e624f09.png" alt="" />
-              </div>
+            <!-- Polaroid & Occult Evidence Board (1104:76450) -->
+            <div class="inv-coche-evidence-board" data-node-id="1104:76450">
+              <img src="./assets/59c372722edcc8bbca852f01b65d1d8ce34c06c0.png" alt="Polaroid Evidence Board" class="inv-coche-evidence-img" />
             </div>
 
           </div>
 
-          <!-- Right: Core Mechanism Details -->
-          <div class="inv-coche-right-col trailer-scroll-reveal trailer-reveal-right">
+          <!-- Right Column: Core Mechanism Details (1104:76451) -->
+          <div class="inv-coche-right-col trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76451">
             
-            <!-- Badge Case File #01 -->
-            <div class="inv-coche-case-badge" data-node-id="1093:77226">
-              <span>CASE FILE #01</span>
+            <!-- Stamped Badge CASE FILE #01 (1104:76497) -->
+            <div class="inv-coche-tag-wrap" data-node-id="1104:76497">
+              <img src="./assets/inv_tag_casefile.png" alt="CASE FILE #01" class="inv-coche-tag-img" />
             </div>
 
-            <!-- Title -->
-            <h2 class="inv-coche-heading" data-node-id="1093:77160">
+            <!-- Title (1104:76455) -->
+            <h2 class="inv-coche-heading" data-node-id="1104:76455">
               CƠ CHẾ CỐT LÕI
             </h2>
 
-            <!-- Intro text -->
-            <p class="inv-coche-intro" data-node-id="1093:77162">
+            <!-- Intro text (1104:76458) -->
+            <p class="inv-coche-intro" data-node-id="1104:76458">
               Trong thế giới của OÁN, mỗi đồ vật đều mang theo một ký ức đau thương. Người chơi phải tương tác với môi trường để tìm ra những mảnh ghép của câu chuyện.
             </p>
 
-            <!-- Director Note Box -->
-            <div class="inv-coche-director-box" data-node-id="1093:77163">
-              <span class="inv-coche-director-label">GHI CHÚ TỪ ĐẠO DIỄN:</span>
-              <p class="inv-coche-director-quote">
+            <!-- Director Note Box (1104:76459) -->
+            <div class="inv-coche-director-box" data-node-id="1104:76459">
+              <span class="inv-coche-director-label" data-node-id="1104:76461">GHI CHÚ TỪ ĐẠO DIỄN:</span>
+              <p class="inv-coche-director-quote" data-node-id="1104:76463">
                 "Sự im lặng đôi khi nói lên nhiều điều hơn tiếng hét."
               </p>
             </div>
 
-            <!-- 4 Interaction Cards -->
-            <div class="inv-coche-cards-list">
+            <!-- 4 Interaction Cards (1104:76465) -->
+            <div class="inv-coche-cards-list" data-node-id="1104:76465">
               
               <!-- Item 1: Khám phá & Tương tác -->
-              <div class="inv-coche-item-card" data-node-id="1093:77189">
-                <div class="inv-coche-item-icon">
-                  <img src="./assets/fe62d22e616b81c08bba3fd07bc6d12a12bb7d3b.svg" alt="" />
+              <div class="inv-coche-card-row" data-node-id="1104:76466">
+                <div class="inv-coche-card-icon">
+                  <img src="./assets/inv_icon_denpin.png" alt="" />
                 </div>
-                <div class="inv-coche-item-text">
-                  <h3>KHÁM PHÁ & TƯƠNG TÁC</h3>
-                  <p>Môi trường luôn ẩn chứa những manh mối quan trọng để hé lộ sự thật.</p>
+                <div class="inv-coche-card-body">
+                  <h3 class="inv-coche-card-title">KHÁM PHÁ & TƯƠNG TÁC</h3>
+                  <p class="inv-coche-card-desc">Môi trường luôn ẩn chứa những manh mối quan trọng để hé lộ sự thật.</p>
                 </div>
               </div>
 
               <!-- Item 2: Thu thập ký ức -->
-              <div class="inv-coche-item-card" data-node-id="1093:77197">
-                <div class="inv-coche-item-icon">
-                  <img src="./assets/ead19dab0eb3568c8623cea514a410f92e6b48a5.svg" alt="" />
+              <div class="inv-coche-card-row" data-node-id="1104:76473">
+                <div class="inv-coche-card-icon">
+                  <img src="./assets/inv_icon_sach.png" alt="" />
                 </div>
-                <div class="inv-coche-item-text">
-                  <h3>THU THẬP KÝ ỨC</h3>
-                  <p>Thu thập các mảnh ký ức rải rác để hiểu rõ quá khứ đằng sau bi kịch.</p>
+                <div class="inv-coche-card-body">
+                  <h3 class="inv-coche-card-title">THU THẬP KÝ ỨC</h3>
+                  <p class="inv-coche-card-desc">Thu thập các mảnh ký ức rải rác để hiểu rõ quá khứ đằng sau bi kịch.</p>
                 </div>
               </div>
 
               <!-- Item 3: Giải mã bí ẩn -->
-              <div class="inv-coche-item-card" data-node-id="1093:77205">
-                <div class="inv-coche-item-icon">
-                  <img src="./assets/169f48fe22a9f35609e253e66be8d9ec6eb769ad.svg" alt="" />
+              <div class="inv-coche-card-row" data-node-id="1104:76480">
+                <div class="inv-coche-card-icon">
+                  <img src="./assets/inv_icon_manhghep.png" alt="" />
                 </div>
-                <div class="inv-coche-item-text">
-                  <h3>GIẢI MÃ BÍ ẨN</h3>
-                  <p>Giải các câu đố dựa trên ký ức và hiện vật để mở ra những cánh cửa chôn vùi.</p>
+                <div class="inv-coche-card-body">
+                  <h3 class="inv-coche-card-title">GIẢI MÃ BÍ ẨN</h3>
+                  <p class="inv-coche-card-desc">Giải các câu đố dựa trên ký ức và hiện vật để mở ra những cánh cửa chôn vùi.</p>
                 </div>
               </div>
 
               <!-- Item 4: Sinh tồn & Chạy trốn -->
-              <div class="inv-coche-item-card" data-node-id="1093:77213">
-                <div class="inv-coche-item-icon">
-                  <img src="./assets/510903028f9bb3763f751d2681b979c661a8b00d.svg" alt="" />
+              <div class="inv-coche-card-row" data-node-id="1104:76487">
+                <div class="inv-coche-card-icon">
+                  <img src="./assets/inv_icon_nhanvat.png" alt="" />
                 </div>
-                <div class="inv-coche-item-text">
-                  <h3>SINH TỒN & CHẠY TRỐN</h3>
-                  <p>Bóng tối luôn rình rập. Không phải lúc nào chạy trốn cũng toàn vẹn.</p>
+                <div class="inv-coche-card-body">
+                  <h3 class="inv-coche-card-title">SINH TỒN & CHẠY TRỐN</h3>
+                  <p class="inv-coche-card-desc">Bóng tối luôn rình rập. Không phải lúc nào chạy trốn cũng toàn vẹn.</p>
                 </div>
               </div>
 
             </div>
 
-            <!-- Bottom Quote Banner -->
-            <div class="inv-coche-bottom-quote" data-node-id="1093:77166">
-              <span class="inv-quote-mark">“</span>
-              <p>Sự im lặng đôi khi nói nhiều hơn tiếng hét.</p>
-              <span class="inv-quote-mark">”</span>
+            <!-- Bottom Quote Banner (1104:76494) -->
+            <div class="inv-coche-bottom-quote" data-node-id="1104:76495">
+              <span class="inv-quote-mark-left">“</span>
+              <div class="inv-quote-text-group">
+                <span class="inv-quote-line-1">Sự im lặng đôi khi</span>
+                <span class="inv-quote-line-2">nói nhiều hơn tiếng hét.</span>
+              </div>
+              <span class="inv-quote-mark-right">”</span>
             </div>
 
           </div>

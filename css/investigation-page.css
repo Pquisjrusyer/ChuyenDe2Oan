@@ -195,283 +195,271 @@
 }
 
 /* ========================================================
-   2. CORE MECHANISM: CƠ CHẾ CỐT LÕI (1093:77154)
+   2. CORE MECHANISM: CƠ CHẾ CỐT LÕI (1104:76446)
    ======================================================== */
 .inv-coche-section {
   position: relative;
   width: 100%;
-  padding: clamp(80px, 10vh, 140px) clamp(20px, 6vw, 120px);
-  box-sizing: border-box;
-  background: radial-gradient(circle at center, rgba(30, 4, 4, 0.9) 0%, rgba(10, 1, 1, 0.95) 70%, #000000 100%);
-  z-index: 2;
-  overflow: hidden;
-}
-
-.inv-coche-container {
-  position: relative;
-  width: 100%;
-  max-width: 1534px;
+  max-width: 1920px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  align-items: center;
-  gap: clamp(40px, 6vw, 90px);
-}
-
-/* Left: Crime Scene Monitor & Evidence Board */
-.inv-coche-left-col {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.inv-coche-monitor-frame {
-  position: relative;
-  width: 100%;
-  max-width: 740px;
-  border: 1px solid rgba(255, 0, 0, 0.4);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(153, 0, 0, 0.4);
-  background: #0d0101;
-  border-radius: 4px;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 4vw, 80px) 100px;
+  box-sizing: border-box;
   overflow: hidden;
+  z-index: 5;
 }
 
-.inv-coche-monitor-screen {
-  position: relative;
+/* Background Multiply Grunge (1104:76785) */
+.inv-coche-bg-texture {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.inv-coche-monitor-screen img {
+.inv-coche-bg-texture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Occult Evidence Board (1093:77180) */
+.inv-coche-container {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(500px, 1.25fr) minmax(420px, 0.75fr);
+  gap: clamp(30px, 4vw, 60px);
+  align-items: start;
+}
+
+/* Left Column: Monitor & Evidence Board */
+.inv-coche-left-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.inv-coche-monitor-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 936px;
+  margin-top: 20px;
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 35px rgba(120, 78, 14, 0.35));
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.inv-coche-monitor-wrap:hover {
+  transform: translateY(-4px) scale(1.01);
+  filter: drop-shadow(0 30px 80px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 50px rgba(180, 100, 20, 0.5));
+}
+
+.inv-coche-monitor-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .inv-coche-evidence-board {
   position: relative;
   width: 100%;
-  max-width: 600px;
-  height: clamp(180px, 25vw, 260px);
-  margin-top: -40px;
-  margin-left: 20px;
-}
-
-.inv-evidence-polaroid {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: clamp(140px, 18vw, 200px);
-  z-index: 2;
-  transform: rotate(-8deg);
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
-  transition: transform 0.4s ease;
-}
-
-.inv-evidence-polaroid:hover {
-  transform: rotate(0deg) scale(1.06);
-  z-index: 10;
-}
-
-.inv-evidence-polaroid img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.inv-evidence-letter {
-  position: absolute;
-  top: 0;
-  left: clamp(110px, 14vw, 150px);
-  width: clamp(240px, 30vw, 360px);
-  z-index: 1;
-  transform: rotate(3deg);
-  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.95));
-  transition: transform 0.4s ease;
-}
-
-.inv-evidence-letter:hover {
-  transform: rotate(0deg) scale(1.04);
-  z-index: 9;
-}
-
-.inv-evidence-letter img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.inv-evidence-pins {
-  position: absolute;
-  inset: 0;
+  max-width: 1128px;
+  margin-top: -60px;
   pointer-events: none;
-  z-index: 3;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.95));
 }
 
-.inv-evidence-pins img {
+.inv-coche-evidence-img {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: auto;
+  display: block;
 }
 
-/* Right: Core Mechanism Details */
+/* Right Column: Details */
 .inv-coche-right-col {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: clamp(16px, 2.2vw, 24px);
+  gap: 20px;
+  width: 100%;
+  max-width: 608px;
 }
 
-.inv-coche-case-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: flex-start;
-  padding: 6px 14px;
-  border: 1px solid #ee1b10;
-  background: rgba(238, 27, 16, 0.1);
-  border-radius: 2px;
+.inv-coche-tag-wrap {
+  position: relative;
+  width: 234px;
+  height: auto;
+  margin-bottom: -10px;
+  margin-left: -10px;
 }
 
-.inv-coche-case-badge span {
-  font-family: 'Space Mono', monospace;
-  font-size: 13px;
-  font-weight: 700;
-  color: #ee1b10;
-  letter-spacing: 1px;
+.inv-coche-tag-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .inv-coche-heading {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(32px, 3.5vw, 48px);
   font-weight: 700;
-  color: #ffffff;
+  font-size: clamp(38px, 4vw, 64px);
+  line-height: 1.1;
   letter-spacing: 0.96px;
-  line-height: 1.2;
   text-transform: uppercase;
+  color: #ffffff;
   margin: 0;
-  text-shadow: 0 0 20px rgba(217, 183, 76, 0.4);
+  text-shadow: 0 0 25px rgba(238, 27, 16, 0.4), 0 5px 20px rgba(0, 0, 0, 0.9);
 }
 
 .inv-coche-intro {
-  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
   font-weight: 400;
-  color: #c4c7c8;
-  line-height: 1.65;
+  font-size: 16px;
+  line-height: 24px;
+  color: #c7c6c6;
+  letter-spacing: -0.32px;
   margin: 0;
 }
 
 .inv-coche-director-box {
-  padding: 14px 18px;
-  background: rgba(48, 1, 1, 0.4);
-  border-left: 3px solid #ee1b10;
-  border-radius: 0 4px 4px 0;
+  border-left: 2px solid #4d0101;
+  padding: 8px 0 8px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 8px 0 16px;
 }
 
 .inv-coche-director-label {
   font-family: 'Space Mono', monospace;
   font-size: 12px;
-  font-weight: 700;
-  color: #ee1b10;
+  line-height: 16px;
+  color: #8e9192;
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 4px;
+  letter-spacing: 0.5px;
 }
 
 .inv-coche-director-quote {
-  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
-  font-size: 14px;
+  font-family: 'Space Mono', monospace;
   font-style: italic;
-  color: #e2e2e2;
-  line-height: 1.5;
+  font-size: 16px;
+  line-height: 24px;
+  color: #aa2222;
   margin: 0;
 }
 
 /* 4 Interaction Cards */
 .inv-coche-cards-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.inv-coche-item-card {
   display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 16px;
-  background: rgba(15, 3, 3, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 4px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.inv-coche-item-card:hover {
-  border-color: #d9b74c;
-  background: rgba(30, 6, 6, 0.95);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(217, 183, 76, 0.25);
-}
-
-.inv-coche-item-icon {
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.inv-coche-item-icon img {
+  flex-direction: column;
+  gap: 12px;
   width: 100%;
-  height: 100%;
+}
+
+.inv-coche-card-row {
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(10, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px 18px;
+  border-radius: 2px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+.inv-coche-card-row:hover {
+  border-color: #ffd700;
+  background: rgba(35, 2, 2, 0.85);
+  transform: translateX(8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.4);
+}
+
+.inv-coche-card-icon {
+  width: 120px;
+  height: 90px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inv-coche-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.9));
 }
 
-.inv-coche-item-text h3 {
+.inv-coche-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inv-coche-card-title {
   font-family: 'Space Mono', monospace;
-  font-size: 13px;
   font-weight: 700;
-  color: #ffffff;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #e5e7eb;
+  margin: 0;
   text-transform: uppercase;
-  margin: 0 0 6px;
-  line-height: 1.35;
 }
 
-.inv-coche-item-text p {
-  font-family: 'Be Vietnam Pro', 'Roboto', sans-serif;
-  font-size: 12px;
-  color: #9ca3af;
+.inv-coche-card-desc {
+  font-family: 'Space Mono', monospace;
+  font-style: italic;
+  font-size: 13.5px;
   line-height: 1.5;
+  color: #9c7e21;
   margin: 0;
 }
 
 /* Bottom Quote Banner */
 .inv-coche-bottom-quote {
+  margin-top: 30px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-  padding: 16px 20px;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(130, 0, 0, 0.4);
-  border-radius: 4px;
-}
-
-.inv-quote-mark {
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
   font-family: 'Space Mono', monospace;
-  font-size: 28px;
-  color: #d9b74c;
-  line-height: 1;
-}
-
-.inv-coche-bottom-quote p {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(12px, 1vw, 14px);
-  color: #e2e2e2;
-  margin: 0;
   font-style: italic;
+  color: #9ca3af;
+}
+
+.inv-quote-mark-left {
+  font-size: 64px;
+  line-height: 1;
+  color: #9ca3af;
+}
+
+.inv-quote-mark-right {
+  font-size: 96px;
+  line-height: 1;
+  color: #9ca3af;
+}
+
+.inv-quote-text-group {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(20px, 2.2vw, 36px);
+  line-height: 1.25;
+  font-weight: 700;
 }
 
 /* ========================================================
