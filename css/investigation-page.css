@@ -194,7 +194,7 @@
   position: relative;
   width: 100%;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 90px 0 0 auto;
   padding: clamp(60px, 8vh, 120px) clamp(20px, 4vw, 80px) 100px;
   box-sizing: border-box;
   overflow: hidden;
@@ -430,7 +430,7 @@
 /* Stamped Badge CASE FILE #01 (Free Top Floating Position - 1104:76497) */
 .inv-coche-tag-wrap {
   position: absolute;
-  top: clamp(20px, 3vh, 50px);
+  top: 50px;
   left: clamp(52%, 58vw, 63%);
   width: clamp(130px, 10vw, 170px);
   height: auto;
