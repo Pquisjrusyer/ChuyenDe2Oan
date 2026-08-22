@@ -62,9 +62,32 @@ export async function renderInvestigation(container) {
           <!-- Left Column: Video Monitor & Evidence Board (1104:76448) -->
           <div class="inv-coche-left-col trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76448">
             
-            <!-- Video Monitor Frame (1104:76367) -->
+            <!-- Video Monitor Frame (Videokd - 1104:76367 / 1104:76368) -->
             <div class="inv-coche-monitor-wrap" data-node-id="1104:76367">
-              <img src="./assets/inv_coche_monitor.png" alt="Investigation Monitor" class="inv-coche-monitor-img" />
+              
+              <!-- Top Spline Tape Banner Plaque (1104:76364) -->
+              <div class="inv-monitor-tape-plaque" data-node-id="1104:76364">
+                <img src="./assets/inv_tape_spline_plaque.png" alt="" class="inv-tape-bg" />
+                <span class="inv-tape-text">DỪNG LẠI</span>
+              </div>
+
+              <!-- Inner Monitor Screen (1104:76288) -->
+              <div class="inv-monitor-inner-screen" data-node-id="1104:76288">
+                
+                <!-- Layer 1: In-game Camera Feed (1104:76341) -->
+                <img src="./assets/inv_monitor_camera_screen.png" alt="In-Game Investigation Cam" class="inv-monitor-cam-img" data-node-id="1104:76341" />
+
+                <!-- Layer 2: Soft Light Red Gradient Overlay (1104:76351) -->
+                <div class="inv-monitor-softlight-overlay" data-node-id="1104:76351"></div>
+
+                <!-- Layer 3: 4 Camera Reticle Brackets (1104:76343, 76345, 76344, 76346) -->
+                <div class="inv-reticle-bracket inv-bracket-top-left" data-node-id="1104:76345"></div>
+                <div class="inv-reticle-bracket inv-bracket-top-right" data-node-id="1104:76343"></div>
+                <div class="inv-reticle-bracket inv-bracket-bottom-left" data-node-id="1104:76346"></div>
+                <div class="inv-reticle-bracket inv-bracket-bottom-right" data-node-id="1104:76344"></div>
+
+              </div>
+
             </div>
 
             <!-- Polaroid & Occult Evidence Board (1104:76450) -->
