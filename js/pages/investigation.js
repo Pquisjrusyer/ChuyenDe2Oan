@@ -57,6 +57,11 @@ export async function renderInvestigation(container) {
            ======================================================== -->
       <section class="inv-coche-section" data-node-id="1104:76446">
         
+        <!-- Stamped Badge CASE FILE #01 - Freely positioned on top (1104:76497) -->
+        <div class="inv-coche-tag-wrap trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1104:76497">
+          <img src="./assets/inv_tag_casefile.png" alt="CASE FILE #01" class="inv-coche-tag-img" />
+        </div>
+
         <div class="inv-coche-container" data-node-id="1104:76447">
           
           <!-- Left Column: Video Monitor & Evidence Board (1104:76448) -->
@@ -100,11 +105,6 @@ export async function renderInvestigation(container) {
           <!-- Right Column: Core Mechanism Details (1104:76451) -->
           <div class="inv-coche-right-col trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76451">
             
-            <!-- Stamped Badge CASE FILE #01 (1104:76497) -->
-            <div class="inv-coche-tag-wrap" data-node-id="1104:76497">
-              <img src="./assets/inv_tag_casefile.png" alt="CASE FILE #01" class="inv-coche-tag-img" />
-            </div>
-
             <!-- Title (1104:76455) -->
             <h2 class="inv-coche-heading" data-node-id="1104:76455">
               CƠ CHẾ CỐT LÕI

@@ -229,12 +229,14 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  max-width: 1800px;
+  max-width: 1720px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(500px, 1.25fr) minmax(420px, 0.75fr);
+  grid-template-columns: minmax(480px, 1.15fr) minmax(420px, 0.85fr);
   gap: clamp(30px, 4vw, 60px);
-  align-items: start;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 /* Left Column: Monitor & Evidence Board */
@@ -243,7 +245,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
+  max-width: 936px;
+  margin: 0 auto;
 }
 
 .inv-coche-monitor-wrap {
@@ -414,17 +419,25 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 20px;
   width: 100%;
-  max-width: 608px;
+  max-width: 580px;
+  margin: 0 auto;
 }
 
+/* Stamped Badge CASE FILE #01 (Free Top Floating Position - 1104:76497) */
 .inv-coche-tag-wrap {
-  position: relative;
-  width: 234px;
+  position: absolute;
+  top: clamp(20px, 3vh, 50px);
+  left: clamp(52%, 58vw, 63%);
+  width: clamp(130px, 10vw, 170px);
   height: auto;
-  margin-bottom: -10px;
-  margin-left: -10px;
+  z-index: 15;
+  transform: rotate(-20.69deg);
+  pointer-events: none;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.95));
 }
 
 .inv-coche-tag-img {
