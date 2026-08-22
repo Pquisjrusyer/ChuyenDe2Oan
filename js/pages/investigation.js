@@ -15,13 +15,6 @@ export async function renderInvestigation(container) {
            ======================================================== -->
       <section class="inv-hero-section" data-node-id="1093:77148">
         
-        <!-- Background Scratch Texture (1104:76537) -->
-        <div class="inv-hero-bg-texture" data-node-id="1104:76537">
-          <div class="inv-hero-bg-texture-rotate">
-            <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-          </div>
-        </div>
-
         <!-- Left Title (1093:77153) -->
         <div class="inv-hero-title-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
           <div class="inv-hero-title" data-node-id="1093:77149">
@@ -50,6 +43,13 @@ export async function renderInvestigation(container) {
           <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" class="inv-right-accent-img" />
         </div>
 
+        <!-- Topmost Multiplied Grunge Texture (1104:76537) -->
+        <div class="inv-hero-bg-texture" data-node-id="1104:76537">
+          <div class="inv-hero-bg-texture-rotate">
+            <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+          </div>
+        </div>
+
       </section>
 
       <!-- ========================================================
@@ -57,11 +57,6 @@ export async function renderInvestigation(container) {
            ======================================================== -->
       <section class="inv-coche-section" data-node-id="1104:76446">
         
-        <!-- Multiplied Grunge Background Texture (1104:76785) -->
-        <div class="inv-coche-bg-texture" data-node-id="1104:76785">
-          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-        </div>
-
         <div class="inv-coche-container" data-node-id="1104:76447">
           
           <!-- Left Column: Video Monitor & Evidence Board (1104:76448) -->
@@ -167,6 +162,12 @@ export async function renderInvestigation(container) {
           </div>
 
         </div>
+
+        <!-- Topmost Multiplied Grunge Texture (1104:76785) -->
+        <div class="inv-coche-bg-texture" data-node-id="1104:76785">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+        </div>
+
       </section>
 
       <!-- ========================================================
