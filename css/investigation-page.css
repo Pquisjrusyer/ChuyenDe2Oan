@@ -20,9 +20,9 @@
   position: relative;
   width: 100%;
   max-width: 1920px;
-  min-height: 100vh;
+  min-height: clamp(800px, 92vh, 1080px);
   margin: 0 auto;
-  padding: 120px clamp(20px, 4vw, 80px) 60px;
+  padding: 100px 20px 40px;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -57,31 +57,21 @@
   display: block;
 }
 
-/* Grid Layout: Left Title & Right Dossier */
-.inv-hero-grid-layout {
-  position: relative;
-  z-index: 4;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(320px, 1fr) minmax(500px, 1.7fr);
-  align-items: center;
-  gap: clamp(20px, 4vw, 60px);
-}
-
-/* Left Title Column */
-.inv-hero-left-col {
+/* Left Title Block (1093:77153) */
+.inv-hero-title-box {
+  position: absolute;
+  left: clamp(30px, 6.5vw, 160px);
+  top: clamp(120px, 16vh, 170px);
   display: flex;
   flex-direction: column;
-  gap: 19px;
-  padding-left: clamp(0px, 2vw, 40px);
-  z-index: 5;
+  gap: 16px;
+  z-index: 6;
+  pointer-events: none;
 }
 
 .inv-hero-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(60px, 6.8vw, 128px);
+  font-size: clamp(56px, 6.5vw, 128px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: -2.56px;
@@ -104,7 +94,7 @@
 
 .inv-hero-subtitle {
   font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(18px, 1.4vw, 24px);
+  font-size: clamp(16px, 1.3vw, 24px);
   font-weight: 300;
   letter-spacing: -0.48px;
   line-height: 1.3;
@@ -117,19 +107,23 @@
   margin: 0;
 }
 
-/* Right Dossier Column (H - 1104:76542) */
-.inv-hero-right-col {
+/* Center Case File Dossier (H - 1104:76542) */
+.inv-hero-dossier-wrap {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: clamp(500px, 50vw, 880px);
+  margin-left: auto;
+  margin-right: clamp(20px, 6vw, 120px);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   perspective: 1200px;
 }
 
 .inv-hero-dossier-card {
   position: relative;
   width: 100%;
-  max-width: 946px;
   border-radius: 4px;
   box-shadow: 0 35px 90px rgba(0, 0, 0, 0.98), 0 0 45px rgba(139, 0, 0, 0.45);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
@@ -152,11 +146,11 @@
 /* Left Bottom Bloodied Envelope with Paperclip (Eletrai - 1104:76520) */
 .inv-hero-eletrai {
   position: absolute;
-  left: clamp(-160px, -8vw, -50px);
-  bottom: clamp(-100px, -6vh, -30px);
-  width: clamp(380px, 36vw, 680px);
+  left: clamp(-140px, -6vw, -30px);
+  bottom: clamp(-60px, -5vh, 0px);
+  width: clamp(320px, 32vw, 560px);
   pointer-events: none;
-  z-index: 6;
+  z-index: 7;
   background: transparent;
 }
 
@@ -171,9 +165,9 @@
 /* Right Bottom Bloodied Envelope Accent (1104:76787) */
 .inv-hero-right-accent {
   position: absolute;
-  right: clamp(-160px, -8vw, -50px);
-  bottom: clamp(-80px, -5vh, -20px);
-  width: clamp(340px, 32vw, 620px);
+  right: clamp(-140px, -6vw, -30px);
+  bottom: clamp(-60px, -5vh, 0px);
+  width: clamp(280px, 28vw, 500px);
   pointer-events: none;
   z-index: 5;
   background: transparent;
@@ -915,21 +909,21 @@
   .inv-hero-section {
     min-height: auto;
     padding: 120px 20px 60px;
+    flex-direction: column;
+    gap: 30px;
   }
 
-  .inv-hero-grid-layout {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 40px;
-  }
-
-  .inv-hero-left-col {
-    padding-left: 0;
+  .inv-hero-title-box {
+    position: relative;
+    left: auto;
+    top: auto;
     align-items: center;
     text-align: center;
+    pointer-events: auto;
   }
 
-  .inv-hero-dossier-card {
+  .inv-hero-dossier-wrap {
+    margin: 0 auto;
     max-width: 720px;
   }
 
