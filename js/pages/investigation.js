@@ -22,27 +22,22 @@ export async function renderInvestigation(container) {
           </div>
         </div>
 
-        <!-- Grid Layout: Left Title & Right Dossier -->
-        <div class="inv-hero-grid-layout">
-          
-          <!-- Left Column: Title (1093:77153) -->
-          <div class="inv-hero-left-col trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
-            <div class="inv-hero-title" data-node-id="1093:77149">
-              <span class="inv-hero-title-line">ĐIỀU</span>
-              <span class="inv-hero-title-line">TRA</span>
-            </div>
-            <div class="inv-hero-subtitle" data-node-id="1093:77151">
-              <p>Tìm kiếm sự thật ẩn giấu</p>
-            </div>
+        <!-- Left Title (1093:77153) -->
+        <div class="inv-hero-title-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
+          <div class="inv-hero-title" data-node-id="1093:77149">
+            <span class="inv-hero-title-line">ĐIỀU</span>
+            <span class="inv-hero-title-line">TRA</span>
           </div>
-
-          <!-- Right Column: Case File Dossier (H - 1104:76542) -->
-          <div class="inv-hero-right-col trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
-            <div class="inv-hero-dossier-card" data-node-id="1104:76540">
-              <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ sơ vụ án - Biệt thự họ Hứa" class="inv-hero-dossier-img" />
-            </div>
+          <div class="inv-hero-subtitle" data-node-id="1093:77151">
+            <p>Tìm kiếm sự thật ẩn giấu</p>
           </div>
+        </div>
 
+        <!-- Center: Case File Dossier (H - 1104:76542) -->
+        <div class="inv-hero-dossier-wrap trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
+          <div class="inv-hero-dossier-card" data-node-id="1104:76540">
+            <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ sơ vụ án - Biệt thự họ Hứa" class="inv-hero-dossier-img" />
+          </div>
         </div>
 
         <!-- Left Bottom Bloodied Envelope with Paperclip (Eletrai - 1104:76520) -->
