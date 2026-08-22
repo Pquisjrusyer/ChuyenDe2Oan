@@ -24,12 +24,12 @@
   margin: 0 auto;
   padding: 100px 20px 40px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(180deg, #180505 0%, #000000 50%, #370000 100%);
-  z-index: 2;
+  z-index: 10;
 }
 
 /* Multiplied Grunge Texture Overlay (1104:76537) */
@@ -147,12 +147,13 @@
 /* Left Bottom Bloodied Envelope with Paperclip (Eletrai - 1104:76520) */
 .inv-hero-eletrai {
   position: absolute;
-  left: clamp(-140px, -6vw, -30px);
-  bottom: clamp(-60px, -5vh, 0px);
-  width: clamp(320px, 32vw, 560px);
+  left: clamp(-160px, -7vw, -40px);
+  bottom: clamp(-140px, -15vh, -60px);
+  width: clamp(380px, 35vw, 640px);
   pointer-events: none;
-  z-index: 7;
+  z-index: 15;
   background: transparent;
+  display: block;
 }
 
 .inv-eletrai-img {
@@ -166,12 +167,13 @@
 /* Right Bottom Bloodied Envelope Accent (1104:76787) */
 .inv-hero-right-accent {
   position: absolute;
-  right: clamp(-140px, -6vw, -30px);
-  bottom: clamp(-60px, -5vh, 0px);
-  width: clamp(280px, 28vw, 500px);
+  right: clamp(-160px, -7vw, -40px);
+  bottom: clamp(-120px, -12vh, -50px);
+  width: clamp(320px, 30vw, 560px);
   pointer-events: none;
-  z-index: 5;
+  z-index: 14;
   background: transparent;
+  display: block;
 }
 
 .inv-right-accent-img {
@@ -930,20 +932,20 @@
 
   .inv-hero-eletrai {
     display: block;
-    left: -80px;
-    bottom: -40px;
-    width: 320px;
-    opacity: 0.85;
-    z-index: 6;
+    left: -60px;
+    bottom: -80px;
+    width: clamp(280px, 35vw, 420px);
+    opacity: 0.95;
+    z-index: 15;
   }
 
   .inv-hero-right-accent {
     display: block;
-    right: -80px;
-    bottom: -40px;
-    width: 280px;
-    opacity: 0.85;
-    z-index: 5;
+    right: -60px;
+    bottom: -70px;
+    width: clamp(240px, 30vw, 360px);
+    opacity: 0.95;
+    z-index: 14;
   }
 
   .inv-coche-container {
