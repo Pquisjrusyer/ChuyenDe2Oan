@@ -20,65 +20,81 @@
   position: relative;
   width: 100%;
   max-width: 1920px;
-  min-height: 1079px;
+  min-height: 100vh;
   margin: 0 auto;
+  padding: 120px clamp(20px, 4vw, 80px) 60px;
   box-sizing: border-box;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
 }
 
 /* Multiplied Grunge Texture (1104:76537) */
 .inv-hero-bg-texture {
   position: absolute;
-  left: -547px;
-  top: 42px;
-  width: 1815px;
-  height: 1814px;
+  left: -20%;
+  top: 0;
+  width: 140%;
+  height: 140%;
   mix-blend-mode: multiply;
   pointer-events: none;
   z-index: 1;
+  opacity: 0.85;
 }
 
-.inv-hero-bg-texture-inner {
+.inv-hero-bg-texture-rotate {
+  transform: rotate(90deg);
   width: 100%;
   height: 100%;
-  transform: rotate(90deg);
 }
 
-.inv-hero-bg-texture-inner img {
+.inv-hero-bg-texture-rotate img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* Hero Title Block (1093:77153) */
-.inv-hero-title-box {
-  position: absolute;
-  left: calc(8.33% + 12px);
-  top: 138px;
-  width: 648px;
-  max-width: 90vw;
-  padding: 20px;
-  box-sizing: border-box;
+/* Grid Layout: Left Title & Right Dossier */
+.inv-hero-grid-layout {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 1fr) minmax(500px, 1.7fr);
+  align-items: center;
+  gap: clamp(20px, 4vw, 60px);
+}
+
+/* Left Title Column */
+.inv-hero-left-col {
   display: flex;
   flex-direction: column;
   gap: 19px;
+  padding-left: clamp(0px, 2vw, 40px);
   z-index: 5;
 }
 
 .inv-hero-title {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(64px, 7vw, 128px);
+  font-size: clamp(60px, 6.8vw, 128px);
   font-weight: 700;
-  line-height: clamp(80px, 8.5vw, 159px);
+  line-height: 1.15;
   letter-spacing: -2.56px;
-  color: #ffffff;
   text-transform: uppercase;
   margin: 0;
   display: flex;
   flex-direction: column;
-  text-shadow: 0 0 35px rgba(238, 27, 16, 0.4), 0 10px 40px rgba(0, 0, 0, 0.95);
+  background-image: url('./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png'), linear-gradient(180deg, #ffffff 0%, #a8a8a8 100%);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.95));
 }
 
 .inv-hero-title-line {
@@ -88,7 +104,7 @@
 
 .inv-hero-subtitle {
   font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(18px, 1.3vw, 24px);
+  font-size: clamp(18px, 1.4vw, 24px);
   font-weight: 300;
   letter-spacing: -0.48px;
   line-height: 1.3;
@@ -101,91 +117,28 @@
   margin: 0;
 }
 
-/* Left Stacked Bloodied Envelope with Clip (Eletrai - 1104:76520) */
-.inv-hero-eletrai {
-  position: absolute;
-  left: -220px;
-  top: 460px;
-  width: clamp(480px, 45vw, 760px);
-  box-sizing: border-box;
-  pointer-events: none;
-  z-index: 10;
-  background: transparent;
-  display: block;
-}
-
-.inv-eletrai-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  background: transparent;
-  transform: rotate(26.06deg) scaleY(-1);
-  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95));
-}
-
-.inv-hero-eletrai-inner {
-  position: relative;
-  width: 100%;
-  height: 660px;
-}
-
-.inv-eletrai-img1,
-.inv-eletrai-img2,
-.inv-eletrai-img3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(26.06deg) scaleY(-1);
-  width: 662px;
-  height: 410px;
-  object-fit: contain;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.95));
-}
-
-.inv-eletrai-img1 {
-  z-index: 1;
-}
-
-.inv-eletrai-img2 {
-  z-index: 2;
-}
-
-.inv-eletrai-img3 {
-  z-index: 3;
-}
-
-/* Right Case File Dossier (H - 1104:76542) */
-.inv-hero-dossier-wrap {
-  position: absolute;
-  left: 58%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 680px;
-  height: auto;
-  padding: 10px;
-  box-sizing: border-box;
+/* Right Dossier Column (H - 1104:76542) */
+.inv-hero-right-col {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 4;
-  cursor: pointer;
+  width: 100%;
   perspective: 1200px;
 }
 
-.inv-hero-dossier-inner {
+.inv-hero-dossier-card {
   position: relative;
   width: 100%;
-  max-width: 640px;
-  height: auto;
+  max-width: 946px;
   border-radius: 4px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.98), 0 0 40px rgba(139, 0, 0, 0.4);
+  box-shadow: 0 35px 90px rgba(0, 0, 0, 0.98), 0 0 45px rgba(139, 0, 0, 0.45);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  cursor: pointer;
 }
 
-.inv-hero-dossier-wrap:hover .inv-hero-dossier-inner {
-  transform: translateY(-8px) scale(1.03) rotate(-0.5deg);
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.98), 0 0 55px rgba(217, 183, 76, 0.45);
+.inv-hero-dossier-card:hover {
+  transform: translateY(-8px) scale(1.02) rotate(-0.5deg);
+  box-shadow: 0 45px 120px rgba(0, 0, 0, 0.98), 0 0 65px rgba(217, 183, 76, 0.45);
 }
 
 .inv-hero-dossier-img {
@@ -193,30 +146,45 @@
   height: auto;
   object-fit: contain;
   display: block;
+  border-radius: 4px;
 }
 
-/* Right Bloodied Accent (1104:76787) */
+/* Left Bottom Bloodied Envelope with Paperclip (Eletrai - 1104:76520) */
+.inv-hero-eletrai {
+  position: absolute;
+  left: clamp(-160px, -8vw, -50px);
+  bottom: clamp(-100px, -6vh, -30px);
+  width: clamp(380px, 36vw, 680px);
+  pointer-events: none;
+  z-index: 6;
+  background: transparent;
+}
+
+.inv-eletrai-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: rotate(26.06deg) scaleY(-1);
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.95));
+}
+
+/* Right Bottom Bloodied Envelope Accent (1104:76787) */
 .inv-hero-right-accent {
   position: absolute;
-  left: calc(75% + 85px);
-  top: 645px;
-  width: 767px;
-  height: 864px;
+  right: clamp(-160px, -8vw, -50px);
+  bottom: clamp(-80px, -5vh, -20px);
+  width: clamp(340px, 32vw, 620px);
   pointer-events: none;
-  z-index: 3;
+  z-index: 5;
+  background: transparent;
 }
 
-.inv-hero-right-accent-inner {
-  transform: rotate(118.37deg);
-  width: 722px;
-  height: 482px;
-}
-
-.inv-hero-right-accent-inner img {
+.inv-right-accent-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
+  transform: rotate(118.37deg);
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.95));
 }
 
 /* ========================================================
@@ -943,68 +911,44 @@
 /* ========================================================
    RESPONSIVE ADAPTATIONS
    ======================================================== */
-@media (max-width: 1400px) {
-  .inv-hero-section {
-    min-height: 850px;
-  }
-
-  .inv-hero-dossier-wrap {
-    left: 45%;
-    width: 55vw;
-  }
-}
-
 @media (max-width: 1200px) {
   .inv-hero-section {
     min-height: auto;
     padding: 120px 20px 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
-  .inv-hero-title-box {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 100%;
+  .inv-hero-grid-layout {
+    grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
+  }
+
+  .inv-hero-left-col {
+    padding-left: 0;
     align-items: center;
-    margin-bottom: 40px;
+    text-align: center;
   }
 
-  .inv-hero-dossier-wrap {
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-  }
-
-  .inv-hero-dossier-inner {
-    height: auto;
+  .inv-hero-dossier-card {
+    max-width: 720px;
   }
 
   .inv-hero-eletrai {
     display: block;
-    position: absolute;
-    left: -120px;
-    top: 55%;
-    width: clamp(280px, 35vw, 420px);
-    z-index: 10;
-    opacity: 0.9;
+    left: -80px;
+    bottom: -40px;
+    width: 320px;
+    opacity: 0.85;
+    z-index: 6;
   }
 
   .inv-hero-right-accent {
     display: block;
-    position: absolute;
-    right: -100px;
-    top: 65%;
-    width: clamp(240px, 30vw, 360px);
-    z-index: 10;
+    right: -80px;
+    bottom: -40px;
+    width: 280px;
     opacity: 0.85;
+    z-index: 5;
   }
 
   .inv-coche-container {
@@ -1021,6 +965,10 @@
 }
 
 @media (max-width: 768px) {
+  .inv-hero-title {
+    font-size: clamp(48px, 12vw, 72px);
+  }
+
   .inv-coche-cards-list {
     grid-template-columns: 1fr;
   }
