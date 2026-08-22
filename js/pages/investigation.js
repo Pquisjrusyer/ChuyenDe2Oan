@@ -17,37 +17,42 @@ export async function renderInvestigation(container) {
         
         <!-- Background Scratch Texture (1104:76537) -->
         <div class="inv-hero-bg-texture" data-node-id="1104:76537">
-          <div class="inv-hero-bg-texture-inner">
+          <div class="inv-hero-bg-texture-rotate">
             <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
           </div>
         </div>
 
-        <!-- Left Bloodied Envelope with Clip (Eletrai - 1104:76520) -->
+        <!-- Grid Layout: Left Title & Right Dossier -->
+        <div class="inv-hero-grid-layout">
+          
+          <!-- Left Column: Title (1093:77153) -->
+          <div class="inv-hero-left-col trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
+            <div class="inv-hero-title" data-node-id="1093:77149">
+              <span class="inv-hero-title-line">ĐIỀU</span>
+              <span class="inv-hero-title-line">TRA</span>
+            </div>
+            <div class="inv-hero-subtitle" data-node-id="1093:77151">
+              <p>Tìm kiếm sự thật ẩn giấu</p>
+            </div>
+          </div>
+
+          <!-- Right Column: Case File Dossier (H - 1104:76542) -->
+          <div class="inv-hero-right-col trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
+            <div class="inv-hero-dossier-card" data-node-id="1104:76540">
+              <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ sơ vụ án - Biệt thự họ Hứa" class="inv-hero-dossier-img" />
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Left Bottom Bloodied Envelope with Paperclip (Eletrai - 1104:76520) -->
         <div class="inv-hero-eletrai trailer-scroll-reveal trailer-reveal-left" data-node-id="1104:76520">
           <img src="./assets/def6f3adcc382baac3f4eab6502c43f4f54febee.png" alt="" class="inv-eletrai-img" />
         </div>
 
-        <!-- Hero Title (1093:77153) -->
-        <div class="inv-hero-title-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77153">
-          <div class="inv-hero-title" data-node-id="1093:77149">
-            <span class="inv-hero-title-line">ĐIỀU</span>
-            <span class="inv-hero-title-line">TRA</span>
-          </div>
-          <div class="inv-hero-subtitle" data-node-id="1093:77151">
-            <p>Tìm kiếm sự thật ẩn giấu</p>
-          </div>
-        </div>
-
-        <!-- Right: Case File Dossier (H - 1104:76542) -->
-        <div class="inv-hero-dossier-wrap trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:76542">
-          <div class="inv-hero-dossier-inner" data-node-id="1104:76540">
-            <img src="./assets/ba3b96c8ee4218a79a5ba6185a7c89130240ad9b.png" alt="Hồ sơ vụ án - Biệt thự họ Hứa" class="inv-hero-dossier-img" />
-          </div>
-        </div>
-
-        <!-- Right Bloodied Envelope Accent (1104:76787) -->
+        <!-- Right Bottom Bloodied Envelope Accent (1104:76787) -->
         <div class="inv-hero-right-accent trailer-scroll-reveal trailer-reveal-right" data-node-id="1104:76787">
-          <img src="./assets/inv_hero_right_envelope.png" alt="" class="inv-right-accent-img" />
+          <img src="./assets/f1fd2ea2cd9d2ad80bdbe2160136cd909dc859c2.png" alt="" class="inv-right-accent-img" />
         </div>
 
       </section>
