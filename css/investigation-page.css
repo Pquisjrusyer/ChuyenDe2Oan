@@ -112,8 +112,7 @@
   z-index: 4;
   width: 100%;
   max-width: clamp(500px, 50vw, 880px);
-  margin-left: auto;
-  margin-right: clamp(20px, 6vw, 120px);
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,6 +126,7 @@
   box-shadow: 0 35px 90px rgba(0, 0, 0, 0.98), 0 0 45px rgba(139, 0, 0, 0.45);
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
   cursor: pointer;
+  align-items: center;
 }
 
 .inv-hero-dossier-card:hover {
@@ -536,7 +536,7 @@
 .inv-step-card:hover {
   border: 1px solid transparent;
   background: linear-gradient(#050000, #050000) padding-box,
-              linear-gradient(45deg, rgba(48, 1, 1, 1), rgba(92, 1, 1, 1), rgba(224, 224, 224, 1)) border-box;
+    linear-gradient(45deg, rgba(48, 1, 1, 1), rgba(92, 1, 1, 1), rgba(224, 224, 224, 1)) border-box;
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 30px rgba(153, 0, 0, 0.45);
 }
