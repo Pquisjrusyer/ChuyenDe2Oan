@@ -211,15 +211,22 @@
 /* Background Multiply Grunge (1104:76785) */
 .inv-coche-bg-texture {
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   mix-blend-mode: multiply;
-  opacity: 0.6;
   pointer-events: none;
-  z-index: 1;
+  z-index: 50;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 45%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 45%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
 .inv-coche-bg-texture img {
