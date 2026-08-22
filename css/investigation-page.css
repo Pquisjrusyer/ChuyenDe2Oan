@@ -430,7 +430,7 @@
 /* Stamped Badge CASE FILE #01 (Free Top Floating Position - 1104:76497) */
 .inv-coche-tag-wrap {
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: clamp(52%, 58vw, 63%);
   width: clamp(130px, 10vw, 170px);
   height: auto;
