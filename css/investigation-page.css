@@ -833,7 +833,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* Horror Frame Header (ctaline - 1104:77037, 1104:77085) */
@@ -842,10 +842,11 @@
   width: 100%;
   max-width: 806px;
   min-height: 79px;
-  margin: 0 auto clamp(30px, 4vh, 50px);
+  margin: 0 0 clamp(30px, 4vh, 50px) 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;
 }
 
 .inv-ctaline-frame {
