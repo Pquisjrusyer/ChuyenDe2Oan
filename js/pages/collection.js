@@ -97,98 +97,22 @@ export async function renderCollection(container) {
           
           <!-- Card 1: VĂN BẢN (1135:78597) -->
           <div class="col-card-item" data-node-id="1135:78597">
-            <div class="col-card-bg-layer">
-              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
-            </div>
-            <div class="col-card-icon-crop" data-node-id="1135:78518">
-              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Văn Bản" class="col-card-sprite col-card-sprite--doc" />
-            </div>
-            <div class="col-card-title-wrap" data-node-id="1135:78490">
-              <h3 class="col-card-title-text" data-node-id="1135:78479">VĂN BẢN</h3>
-            </div>
-            <div class="col-card-line-wrap" data-node-id="1135:78495">
-              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
-            </div>
-            <div class="col-card-desc-wrap" data-node-id="1135:78477">
-              <p class="col-card-desc-text" data-node-id="1135:78466">
-                Thư từ, nhật ký,<br/>tài liệu cũ
-              </p>
-            </div>
-            <div class="col-card-grunge-overlay" data-node-id="1135:78530">
-              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
-            </div>
+            <img src="./assets/col-card-1.svg" alt="VĂN BẢN - Thư từ, nhật ký, tài liệu cũ" class="col-card-svg-full" />
           </div>
 
           <!-- Card 2: HÌNH ẢNH (1135:78608) -->
           <div class="col-card-item" data-node-id="1135:78608">
-            <div class="col-card-bg-layer">
-              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
-            </div>
-            <div class="col-card-icon-crop" data-node-id="I1135:78608;1135:78520">
-              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Hình Ảnh" class="col-card-sprite col-card-sprite--photo" />
-            </div>
-            <div class="col-card-title-wrap" data-node-id="I1135:78608;1135:78524">
-              <h3 class="col-card-title-text" data-node-id="I1135:78608;1135:78482">HÌNH ẢNH</h3>
-            </div>
-            <div class="col-card-line-wrap">
-              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
-            </div>
-            <div class="col-card-desc-wrap" data-node-id="I1135:78608;1135:78526">
-              <p class="col-card-desc-text" data-node-id="I1135:78608;1135:78469">
-                Ảnh chụp hiện<br/>trường, tư liệu
-              </p>
-            </div>
-            <div class="col-card-grunge-overlay" data-node-id="I1135:78608;1135:78530">
-              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
-            </div>
+            <img src="./assets/col-card-2.svg" alt="HÌNH ẢNH - Ảnh chụp hiện trường, tư liệu" class="col-card-svg-full" />
           </div>
 
           <!-- Card 3: VẬT DỤNG (1135:78619) -->
           <div class="col-card-item" data-node-id="1135:78619">
-            <div class="col-card-bg-layer">
-              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
-            </div>
-            <div class="col-card-icon-crop" data-node-id="I1135:78619;1135:78520">
-              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Vật Dụng" class="col-card-sprite col-card-sprite--item" />
-            </div>
-            <div class="col-card-title-wrap" data-node-id="I1135:78619;1135:78524">
-              <h3 class="col-card-title-text" data-node-id="I1135:78619;1135:78484">VẬT DỤNG</h3>
-            </div>
-            <div class="col-card-line-wrap">
-              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
-            </div>
-            <div class="col-card-desc-wrap" data-node-id="I1135:78619;1135:78526">
-              <p class="col-card-desc-text" data-node-id="I1135:78619;1135:78471">
-                Đồ cá nhân, cổ vật,<br/>công cụ
-              </p>
-            </div>
-            <div class="col-card-grunge-overlay" data-node-id="I1135:78619;1135:78530">
-              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
-            </div>
+            <img src="./assets/col-card-3.svg" alt="VẬT DỤNG - Đồ cá nhân, cổ vật, công cụ" class="col-card-svg-full" />
           </div>
 
           <!-- Card 4: TÂM LINH (1135:78630) -->
           <div class="col-card-item" data-node-id="1135:78630">
-            <div class="col-card-bg-layer">
-              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
-            </div>
-            <div class="col-card-icon-crop" data-node-id="I1135:78630;1135:78520">
-              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Tâm Linh" class="col-card-sprite col-card-sprite--spirit" />
-            </div>
-            <div class="col-card-title-wrap" data-node-id="I1135:78630;1135:78524">
-              <h3 class="col-card-title-text" data-node-id="I1135:78630;1135:78486">TÂM LINH</h3>
-            </div>
-            <div class="col-card-line-wrap">
-              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
-            </div>
-            <div class="col-card-desc-wrap" data-node-id="I1135:78630;1135:78526">
-              <p class="col-card-desc-text" data-node-id="I1135:78630;1135:78473">
-                Bùa chú, tàn tích,<br/>dấu ấn
-              </p>
-            </div>
-            <div class="col-card-grunge-overlay" data-node-id="I1135:78630;1135:78530">
-              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
-            </div>
+            <img src="./assets/col-card-4.svg" alt="TÂM LINH - Bùa chú, tàn tích, dấu ấn" class="col-card-svg-full" />
           </div>
 
         </div>
