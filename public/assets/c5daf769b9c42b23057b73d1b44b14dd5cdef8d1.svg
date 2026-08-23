@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="205" height="5" viewBox="0 0 205 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Vector 158 (Stroke)" d="M102.5 0C133.25 0 164 0.675391 194.75 2.02539C198.167 2.17539 201.583 2.33333 205 2.5C201.583 2.66667 198.167 2.82461 194.75 2.97461C164 4.32461 133.25 5 102.5 5C71.75 5 41 4.32461 10.25 2.97461C6.83334 2.82461 3.41666 2.66667 0 2.5C3.41666 2.33333 6.83334 2.17539 10.25 2.02539C41 0.675391 71.75 0 102.5 0Z" fill="url(#paint0_linear_1825_99416)"/>
+<defs>
+<linearGradient id="paint0_linear_1825_99416" x1="0" y1="3" x2="205" y2="3" gradientUnits="userSpaceOnUse">
+<stop stop-color="#6E0000"/>
+<stop offset="0.475962" stop-color="#A10000"/>
+<stop offset="0.841346" stop-color="#620000"/>
+</linearGradient>
+</defs>
+</svg>
