@@ -46,46 +46,9 @@ export async function renderPuzzle(container) {
           <!-- Left Column: Tilted REC Monitor & Tags (1135:76884) -->
           <div class="puz-coche-left-col trailer-scroll-reveal trailer-reveal-left">
             
-            <!-- Tilted Monitor Frame (1135:76885) -->
+            <!-- Tilted Monitor Frame with Plaque (farm ngoài.svg - 1135:76885) -->
             <div class="puz-coche-monitor-wrap" data-node-id="1135:76885">
-              
-              <!-- Floating Header Wooden Tape Plaque: #02 CƠ CHẾ CỐT LÕI (1135:76896) -->
-              <div class="puz-coche-plaque-tag" data-node-id="1135:76896">
-                <div class="puz-coche-plaque-bg">
-                  <img src="./assets/d8809587d3698ce712d4fc207feeb7613be0ca4b.png" alt="" class="puz-coche-plaque-img" />
-                </div>
-                <div class="puz-coche-plaque-text-wrap" data-node-id="1135:76898">
-                  <span class="puz-coche-tag-number" data-node-id="1135:76899">#02</span>
-                  <span class="puz-coche-tag-text" data-node-id="1135:76901">CƠ CHẾ CỐT LÕI</span>
-                </div>
-              </div>
-
-              <!-- Outer Frame (farm ngoài) -->
-              <div class="puz-coche-outer-frame">
-                <!-- Monitor Screen Frame (1135:76886) -->
-                <div class="puz-coche-screen-box" data-node-id="1135:76886">
-                  
-                  <!-- Screen Image (1135:76887) -->
-                  <img src="./assets/15a6f683190f3ec6cff80a4065f1046ffd59d9a0.png" alt="Mystery Investigation Table" class="puz-coche-screen-img" />
-                  
-                  <!-- Scanlines & Noise Overlay -->
-                  <div class="puz-coche-scanlines"></div>
-
-                  <!-- REC Live Recording Tag (1135:76888) -->
-                  <div class="puz-coche-rec-badge" data-node-id="1135:76888">
-                    <span class="puz-coche-rec-dot" data-node-id="1135:76889"></span>
-                    <span class="puz-coche-rec-text" data-node-id="1135:76890">REC</span>
-                  </div>
-
-                  <!-- Battery Status Indicator (1135:76891) -->
-                  <div class="puz-coche-battery-badge" data-node-id="1135:76891">
-                    <div class="puz-coche-battery-icon">
-                      <span class="puz-coche-battery-level"></span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+              <img src="./assets/farm-ngoai.svg" alt="Cơ chế cốt lõi - Giải đố" class="puz-coche-farm-ngoai-svg" />
             </div>
 
             <!-- 3 Cut-Corner Tag Buttons (1135:76902) -->
