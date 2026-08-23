@@ -192,52 +192,28 @@ export async function renderPuzzle(container) {
           <!-- Card 1: Object Puzzle (1135:77043) -->
           <div class="puz-type-card-outer" data-node-id="1135:77043">
             <div class="puz-type-card-svg-wrap">
-              <img src="./assets/cau-do.svg" alt="Object Puzzle" class="puz-type-card-svg-bg" />
-            </div>
-            <div class="puz-type-card-text-content">
-              <h3 class="puz-card-heading-gold" data-node-id="1135:77035">OBJECT PUZZLE</h3>
-              <p class="puz-card-desc-mono" data-node-id="1135:77038">
-                Tương tác trực tiếp với các cổ vật, xoay chuyển và tìm ra cơ quan ẩn giấu bên trong.
-              </p>
+              <img src="./assets/cau-do-1.svg" alt="Object Puzzle" class="puz-type-card-svg-bg" />
             </div>
           </div>
 
           <!-- Card 2: Logic Puzzle (1135:77110) -->
           <div class="puz-type-card-outer" data-node-id="1135:77110">
             <div class="puz-type-card-svg-wrap">
-              <img src="./assets/cau-do.svg" alt="Logic Puzzle" class="puz-type-card-svg-bg" />
-            </div>
-            <div class="puz-type-card-text-content">
-              <h3 class="puz-card-heading-gold" data-node-id="I1135:77110;1135:77035">LOGIC PUZZLE</h3>
-              <p class="puz-card-desc-mono" data-node-id="I1135:77110;1135:77038">
-                Sử dụng tài liệu thu thập được để giải mã những quy luật huyền bí và trình tự nghi lễ.
-              </p>
+              <img src="./assets/cau-do-2.svg" alt="Logic Puzzle" class="puz-type-card-svg-bg" />
             </div>
           </div>
 
           <!-- Card 3: Environmental (1135:77122) -->
           <div class="puz-type-card-outer" data-node-id="1135:77122">
             <div class="puz-type-card-svg-wrap">
-              <img src="./assets/cau-do.svg" alt="Environmental Puzzle" class="puz-type-card-svg-bg" />
-            </div>
-            <div class="puz-type-card-text-content">
-              <h3 class="puz-card-heading-gold" data-node-id="I1135:77122;1135:77035">ENVIRONMENTAL</h3>
-              <p class="puz-card-desc-mono" data-node-id="I1135:77122;1135:77038">
-                Thay đổi cấu trúc căn nhà bằng cách kích hoạt các cơ quan cổ xưa hoặc thắp nến.
-              </p>
+              <img src="./assets/cau-do-3.svg" alt="Environmental Puzzle" class="puz-type-card-svg-bg" />
             </div>
           </div>
 
           <!-- Card 4: Symbol Puzzle (1135:77134) -->
           <div class="puz-type-card-outer" data-node-id="1135:77134">
             <div class="puz-type-card-svg-wrap">
-              <img src="./assets/cau-do.svg" alt="Symbol Puzzle" class="puz-type-card-svg-bg" />
-            </div>
-            <div class="puz-type-card-text-content">
-              <h3 class="puz-card-heading-gold" data-node-id="I1135:77134;1135:77035">SYMBOL PUZZLE</h3>
-              <p class="puz-card-desc-mono" data-node-id="I1135:77134;1135:77038">
-                Giải mã hệ thống ký tự "Địa Linh" xuất hiện trên tường và trong các giấc mộng.
-              </p>
+              <img src="./assets/cau-do-4.svg" alt="Symbol Puzzle" class="puz-type-card-svg-bg" />
             </div>
           </div>
 
