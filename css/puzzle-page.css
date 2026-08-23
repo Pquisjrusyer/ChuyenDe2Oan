@@ -517,13 +517,34 @@
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
   cursor: pointer;
+  transform-origin: center center;
+}
+
+.puz-type-card-outer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  padding: 2px;
+  background: linear-gradient(135deg, #a1a1aa 0%, #b91c1c 50%, #4b5563 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .puz-type-card-outer:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.35);
+  transform: translateY(-10px) rotate(2.5deg) scale(1.02);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.98), 0 0 30px rgba(185, 28, 28, 0.45);
+}
+
+.puz-type-card-outer:hover::before {
+  opacity: 1;
 }
 
 .puz-type-card-svg-wrap {
