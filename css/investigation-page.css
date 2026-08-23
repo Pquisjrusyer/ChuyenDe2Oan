@@ -153,10 +153,24 @@
   left: clamp(-160px, -7vw, -40px);
   bottom: clamp(-140px, -15vh, -60px);
   width: clamp(380px, 35vw, 640px);
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
   z-index: 15;
   background: transparent;
   display: block;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
+}
+
+.inv-hero-eletrai.trailer-reveal-left {
+  transform: translateX(-180px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.inv-hero-eletrai.trailer-reveal-left.revealed {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 
 .inv-eletrai-img {
@@ -165,6 +179,13 @@
   display: block;
   transform: rotate(26.06deg) scaleY(-1);
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.95));
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+  transform-origin: center center;
+}
+
+.inv-hero-eletrai:hover .inv-eletrai-img {
+  transform: rotate(71.06deg) scaleY(-1) scale(1.08);
+  filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 30px rgba(217, 183, 76, 0.45));
 }
 
 /* Right Bottom Bloodied Envelope Accent (1104:76787) */
@@ -173,10 +194,24 @@
   right: clamp(-160px, -7vw, -40px);
   bottom: clamp(-120px, -12vh, -50px);
   width: clamp(320px, 30vw, 560px);
-  pointer-events: none;
+  pointer-events: auto;
+  cursor: pointer;
   z-index: 14;
   background: transparent;
   display: block;
+  transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 1.2s ease;
+}
+
+.inv-hero-right-accent.trailer-reveal-right {
+  transform: translateX(180px);
+  opacity: 0;
+  filter: blur(10px);
+}
+
+.inv-hero-right-accent.trailer-reveal-right.revealed {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+  filter: blur(0px) !important;
 }
 
 .inv-right-accent-img {
@@ -185,6 +220,13 @@
   display: block;
   transform: rotate(118.37deg);
   filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.95));
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.4s ease;
+  transform-origin: center center;
+}
+
+.inv-hero-right-accent:hover .inv-right-accent-img {
+  transform: rotate(163.37deg) scale(1.08);
+  filter: drop-shadow(0 35px 70px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 30px rgba(217, 183, 76, 0.45));
 }
 
 /* ========================================================
