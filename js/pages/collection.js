@@ -38,22 +38,33 @@ export async function renderCollection(container) {
            ======================================================== -->
       <section class="col-truth-section" data-node-id="1135:78574">
         
+        <!-- Background Glow Ellipses (1135:78651 -> 1135:78657) -->
+        <div class="col-truth-bg-glows">
+          <img src="./assets/392387e2253c1bc9141f12c2c1530c7cbb028e58.svg" alt="" class="col-glow-ellipse col-glow-1" />
+          <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-glow-ellipse col-glow-2" />
+          <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-glow-ellipse col-glow-3" />
+          <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-glow-ellipse col-glow-4" />
+          <img src="./assets/dd24e34069b945e8c9e3d666c7a3ac041e5e4876.svg" alt="" class="col-glow-ellipse col-glow-5" />
+        </div>
+
         <!-- Top Split: Photo & Narrative (1135:78588) -->
-        <div class="col-truth-top-row">
+        <div class="col-truth-top-row" data-node-id="1135:78588">
           
-          <!-- Left Photo Frame with Tape (1135:78577) -->
+          <!-- Left Photo Frame (1135:78577) -->
           <div class="col-truth-photo-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="1135:78577">
-            <div class="col-truth-photo-inner">
-              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Bóc tách lớp vỏ sự thật" class="col-truth-photo-img" data-node-id="1135:78575" />
+            <div class="col-truth-photo-inner" data-node-id="1135:78575">
+              <img src="./assets/4b61077399c45a2c9a245fffbd7d5b2b0de19ff8.png" alt="Bóc tách lớp vỏ sự thật" class="col-truth-photo-img" />
             </div>
           </div>
 
-          <!-- Right Text Column (1135:78587) -->
+          <!-- Right Typography Column (1135:78587) -->
           <div class="col-truth-text-col trailer-scroll-reveal trailer-reveal-right" data-node-id="1135:78587">
             <h2 class="col-truth-title" data-node-id="1135:78578">
               BÓC TÁCH LỚP <span class="col-title-accent">VỎ</span><br/>SỰ THẬT
             </h2>
-            <div class="col-truth-red-line" data-node-id="1135:78584"></div>
+            <div class="col-truth-red-line-wrap" data-node-id="1135:78584">
+              <img src="./assets/d8257fe818600172f5a43ec310fddc2308217757.svg" alt="" class="col-truth-red-line-svg" />
+            </div>
             <div class="col-truth-paragraphs" data-node-id="1135:78581">
               <p class="col-truth-p1" data-node-id="1135:78579">
                 Trong thế giới của OÁN, manh mối không chỉ là những vật phẩm tĩnh lặng. Chúng là những mảnh vỡ của quá khứ, những tiếng vọng của những linh hồn chưa siêu thoát. Việc thu thập và phân tích tỉ mỉ từng đồ vật sẽ mở khóa các nút thắt trong cốt truyện, cho phép bạn nhìn thấy những gì kẻ khác cố tình che giấu.
@@ -68,9 +79,13 @@ export async function renderCollection(container) {
 
         <!-- Category Divider Line (1135:78596) -->
         <div class="col-category-divider-row trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:78596">
-          <div class="col-divider-line col-divider-line--left"></div>
+          <div class="col-divider-line col-divider-line--left" data-node-id="1135:78593">
+            <img src="./assets/b178258681efdabb9aae37ef22f48050a3808838.svg" alt="" class="col-divider-svg" />
+          </div>
           <span class="col-category-divider-label" data-node-id="1135:78595">Danh mục manh mối</span>
-          <div class="col-divider-line col-divider-line--right"></div>
+          <div class="col-divider-line col-divider-line--right" data-node-id="1135:78594">
+            <img src="./assets/7dabe33aa8257b98c2bef388e36be62c03390449.svg" alt="" class="col-divider-svg" />
+          </div>
         </div>
 
         <!-- 4 Category Cards Grid (1135:78641) -->
@@ -78,57 +93,97 @@ export async function renderCollection(container) {
           
           <!-- Card 1: VĂN BẢN (1135:78597) -->
           <div class="col-card-item" data-node-id="1135:78597">
-            <div class="col-card-bg">
+            <div class="col-card-bg-layer">
               <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
             </div>
-            <div class="col-card-content">
-              <div class="col-card-icon-wrap">
-                <img src="./assets/d8257fe818600172f5a43ec310fddc2308217757.svg" alt="Văn Bản" class="col-card-stamp-icon" />
-              </div>
-              <h3 class="col-card-title">VĂN BẢN</h3>
-              <p class="col-card-desc">Thư từ, nhật ký, tài liệu cũ</p>
+            <div class="col-card-icon-crop" data-node-id="1135:78518">
+              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Văn Bản" class="col-card-sprite col-card-sprite--doc" />
+            </div>
+            <div class="col-card-title-wrap" data-node-id="1135:78490">
+              <h3 class="col-card-title-text" data-node-id="1135:78479">VĂN BẢN</h3>
+            </div>
+            <div class="col-card-line-wrap" data-node-id="1135:78495">
+              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
+            </div>
+            <div class="col-card-desc-wrap" data-node-id="1135:78477">
+              <p class="col-card-desc-text" data-node-id="1135:78466">
+                Thư từ, nhật ký,<br/>tài liệu cũ
+              </p>
+            </div>
+            <div class="col-card-grunge-overlay" data-node-id="1135:78530">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
             </div>
           </div>
 
           <!-- Card 2: HÌNH ẢNH (1135:78608) -->
           <div class="col-card-item" data-node-id="1135:78608">
-            <div class="col-card-bg">
+            <div class="col-card-bg-layer">
               <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
             </div>
-            <div class="col-card-content">
-              <div class="col-card-icon-wrap">
-                <img src="./assets/b178258681efdabb9aae37ef22f48050a3808838.svg" alt="Hình Ảnh" class="col-card-stamp-icon" />
-              </div>
-              <h3 class="col-card-title">HÌNH ẢNH</h3>
-              <p class="col-card-desc">Ảnh chụp hiện trường, tư liệu</p>
+            <div class="col-card-icon-crop" data-node-id="I1135:78608;1135:78520">
+              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Hình Ảnh" class="col-card-sprite col-card-sprite--photo" />
+            </div>
+            <div class="col-card-title-wrap" data-node-id="I1135:78608;1135:78524">
+              <h3 class="col-card-title-text" data-node-id="I1135:78608;1135:78482">HÌNH ẢNH</h3>
+            </div>
+            <div class="col-card-line-wrap">
+              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
+            </div>
+            <div class="col-card-desc-wrap" data-node-id="I1135:78608;1135:78526">
+              <p class="col-card-desc-text" data-node-id="I1135:78608;1135:78469">
+                Ảnh chụp hiện<br/>trường, tư liệu
+              </p>
+            </div>
+            <div class="col-card-grunge-overlay" data-node-id="I1135:78608;1135:78530">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
             </div>
           </div>
 
           <!-- Card 3: VẬT DỤNG (1135:78619) -->
           <div class="col-card-item" data-node-id="1135:78619">
-            <div class="col-card-bg">
+            <div class="col-card-bg-layer">
               <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
             </div>
-            <div class="col-card-content">
-              <div class="col-card-icon-wrap">
-                <img src="./assets/7dabe33aa8257b98c2bef388e36be62c03390449.svg" alt="Vật Dụng" class="col-card-stamp-icon" />
-              </div>
-              <h3 class="col-card-title">VẬT DỤNG</h3>
-              <p class="col-card-desc">Đồ cá nhân, cổ vật, công cụ</p>
+            <div class="col-card-icon-crop" data-node-id="I1135:78619;1135:78520">
+              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Vật Dụng" class="col-card-sprite col-card-sprite--item" />
+            </div>
+            <div class="col-card-title-wrap" data-node-id="I1135:78619;1135:78524">
+              <h3 class="col-card-title-text" data-node-id="I1135:78619;1135:78484">VẬT DỤNG</h3>
+            </div>
+            <div class="col-card-line-wrap">
+              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
+            </div>
+            <div class="col-card-desc-wrap" data-node-id="I1135:78619;1135:78526">
+              <p class="col-card-desc-text" data-node-id="I1135:78619;1135:78471">
+                Đồ cá nhân, cổ vật,<br/>công cụ
+              </p>
+            </div>
+            <div class="col-card-grunge-overlay" data-node-id="I1135:78619;1135:78530">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
             </div>
           </div>
 
           <!-- Card 4: TÂM LINH (1135:78630) -->
           <div class="col-card-item" data-node-id="1135:78630">
-            <div class="col-card-bg">
+            <div class="col-card-bg-layer">
               <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
             </div>
-            <div class="col-card-content">
-              <div class="col-card-icon-wrap">
-                <img src="./assets/392387e2253c1bc9141f12c2c1530c7cbb028e58.svg" alt="Tâm Linh" class="col-card-stamp-icon" />
-              </div>
-              <h3 class="col-card-title">TÂM LINH</h3>
-              <p class="col-card-desc">Bùa chú, tàn tích, dấu ấn</p>
+            <div class="col-card-icon-crop" data-node-id="I1135:78630;1135:78520">
+              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Tâm Linh" class="col-card-sprite col-card-sprite--spirit" />
+            </div>
+            <div class="col-card-title-wrap" data-node-id="I1135:78630;1135:78524">
+              <h3 class="col-card-title-text" data-node-id="I1135:78630;1135:78486">TÂM LINH</h3>
+            </div>
+            <div class="col-card-line-wrap">
+              <img src="./assets/c5daf769b9c42b23057b73d1b44b14dd5cdef8d1.svg" alt="" class="col-card-line-svg" />
+            </div>
+            <div class="col-card-desc-wrap" data-node-id="I1135:78630;1135:78526">
+              <p class="col-card-desc-text" data-node-id="I1135:78630;1135:78473">
+                Bùa chú, tàn tích,<br/>dấu ấn
+              </p>
+            </div>
+            <div class="col-card-grunge-overlay" data-node-id="I1135:78630;1135:78530">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-card-grunge-img" />
             </div>
           </div>
 
