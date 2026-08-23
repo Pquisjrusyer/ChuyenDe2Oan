@@ -204,17 +204,19 @@ export async function renderPuzzle(container) {
           </div>
 
           <!-- Card 3: Environmental (1135:77122) -->
-          <div class="puz-type-card-outer" data-node-id="1135:77122">
+          <div class="puz-type-card-outer puz-type-card-outer--locked" data-node-id="1135:77122">
             <div class="puz-type-card-svg-wrap">
               <img src="./assets/cau-do-3.svg" alt="Environmental Puzzle" class="puz-type-card-svg-bg" />
             </div>
+            <div class="puz-card-question-mark" data-node-id="1135:77147">?</div>
           </div>
 
           <!-- Card 4: Symbol Puzzle (1135:77134) -->
-          <div class="puz-type-card-outer" data-node-id="1135:77134">
+          <div class="puz-type-card-outer puz-type-card-outer--locked" data-node-id="1135:77134">
             <div class="puz-type-card-svg-wrap">
               <img src="./assets/cau-do-4.svg" alt="Symbol Puzzle" class="puz-type-card-svg-bg" />
             </div>
+            <div class="puz-card-question-mark" data-node-id="1135:77149">?</div>
           </div>
 
         </div>
