@@ -1,138 +1,330 @@
-/* ============================================
-   OAN — Collection Page (Design 23: 1135-78166)
-   ============================================ */
+/* ========================================================
+   OAN — Collection Page (Design 23: 1135-78166 "Thu thập desktop")
+   ======================================================== */
+
+import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderCollection(container) {
   container.innerHTML = `
-    <div class="page-home" style="padding-top:var(--nav-height);">
-      <!-- Hero -->
-      <section class="feature-hero">
-        <div class="animate-fade-in-left">
-          <div style="font-family:var(--font-display);font-size:12px;text-transform:uppercase;color:var(--color-gray-500);letter-spacing:2px;margin-bottom:8px;">
-            KHÁM PHÁ · Tìm hiểu sẻ sẻ
-          </div>
-          <h1 class="feature-hero__title" style="font-size:64px;">THU THẬP</h1>
-        </div>
-      </section>
-
-      <!-- Collect Truth -->
-      <section class="section">
-        <div class="container">
-          <div class="feature-split reveal">
-            <div>
-              <div style="border:2px solid rgba(139,0,0,0.3);aspect-ratio:4/3;background:linear-gradient(135deg, #1a0505, #0d0000);display:flex;align-items:center;justify-content:center;">
-                <span style="font-size:48px;opacity:0.3;">📦</span>
-              </div>
-            </div>
-            <div>
-              <h2 style="font-family:var(--font-display);font-size:32px;font-weight:700;color:var(--color-white);text-transform:uppercase;line-height:1.2;margin-bottom:20px;">
-                BÓC TÁCH LỚP VỎ<br/>SỰ THẬT
-              </h2>
-              <p style="font-size:14px;color:var(--color-gray-400);line-height:1.8;margin-bottom:24px;">
-                Trong ngôi nhà cổ Hứa, xuyên có những thần vĩ đài phía sau
-                cả phiến tầm bể trưng. Chúng ta không chỉ xem ở một kẻ đần đặc bí ẩn
-                Khám, gặp thu thập và phân tích những bí ẩn xả và kết
-                luận, ghi nhớ mọi dữ kiện để có thể khám phá bí mật 
-                thêm, hiểu rõ hồ thắc, cỏ biến vẫn giọt.
-              </p>
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
-                ${['Vật Phẩm', 'Hình Ảnh', 'Vũ Dụng', 'Tê Liệu Hinh'].map((name, i) => `
-                  <div style="text-align:center;padding:12px 8px;border:1px solid rgba(255,255,255,0.06);cursor:pointer;" class="hover-lift">
-                    <div style="font-size:20px;margin-bottom:6px;opacity:0.5;">📎</div>
-                    <div style="font-family:var(--font-display);font-size:10px;color:var(--color-gray-400);text-transform:uppercase;">${name}</div>
-                  </div>
-                `).join('')}
-              </div>
-            </div>
+    <div class="collection-page-wrapper" data-node-id="1135:78166">
+      
+      <!-- ========================================================
+           1. HERO SECTION (1135:78270)
+           ======================================================== -->
+      <section class="col-hero-section" data-node-id="1135:78270">
+        
+        <!-- Flashlight Media Frame (1135:78271) -->
+        <div class="col-hero-frame-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1135:78271">
+          <div class="col-hero-bg-media">
+            <img src="./assets/840963d39cbbb21402855cef5eb1c4589a943e70.png" alt="Flashlight & Lamp Investigation" class="col-hero-bg-img" />
           </div>
         </div>
+
+        <!-- Main Title & Subtitle (1135:78273) -->
+        <div class="col-hero-content-bottom trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:78273">
+          <h1 class="col-hero-main-title" data-node-id="1135:78274">THU THẬP</h1>
+          <p class="col-hero-subtitle" data-node-id="1135:78275">MỖI CHI TIẾT ĐỀU CÓ THỂ THAY ĐỔI SỰ THẬT.</p>
+        </div>
+
+        <!-- Grunge Texture Overlay (1135:78288) -->
+        <div class="col-hero-grunge-overlay" data-node-id="1135:78288">
+          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-hero-grunge-img" />
+        </div>
+
       </section>
 
-      <!-- Inventory Management -->
-      <section class="section section--dark">
-        <div class="container">
-          <div class="reveal">
-            <h2 style="font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--color-white);text-transform:uppercase;margin-bottom:8px;">
-              QUẢN LÝ<br/>TÚI ĐỒ
+      <!-- ========================================================
+           2. TRUTH & CATEGORIES SECTION (1135:78574)
+           ======================================================== -->
+      <section class="col-truth-section" data-node-id="1135:78574">
+        
+        <!-- Top Split: Photo & Narrative (1135:78588) -->
+        <div class="col-truth-top-row">
+          
+          <!-- Left Photo Frame with Tape (1135:78577) -->
+          <div class="col-truth-photo-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="1135:78577">
+            <div class="col-truth-photo-inner">
+              <img src="./assets/d8760e5beda24cc60979f437392fcb3a856949e2.png" alt="Bóc tách lớp vỏ sự thật" class="col-truth-photo-img" data-node-id="1135:78575" />
+            </div>
+          </div>
+
+          <!-- Right Text Column (1135:78587) -->
+          <div class="col-truth-text-col trailer-scroll-reveal trailer-reveal-right" data-node-id="1135:78587">
+            <h2 class="col-truth-title" data-node-id="1135:78578">
+              BÓC TÁCH LỚP <span class="col-title-accent">VỎ</span><br/>SỰ THẬT
             </h2>
-            <p style="font-size:13px;color:var(--color-gray-400);margin-bottom:24px;">
-              Tích cực thu thập vật phẩm và tư liệu
-            </p>
-            <p style="font-size:12px;color:var(--color-gray-500);margin-bottom:32px;">
-              Phân tích ........
-            </p>
-            <!-- Inventory Grid -->
-            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:4px;max-width:600px;">
-              ${Array(10).fill(0).map((_, i) => `
-                <div style="aspect-ratio:1;border:2px solid ${i < 3 ? 'var(--color-gold-600)' : 'rgba(255,255,255,0.08)'};background:${i < 3 ? 'rgba(156,126,33,0.1)' : 'rgba(20,10,10,0.5)'};display:flex;align-items:center;justify-content:center;cursor:pointer;">
-                  ${i < 3 ? '<span style="font-size:20px;">🔑</span>' : ''}
-                </div>
-              `).join('')}
+            <div class="col-truth-red-line" data-node-id="1135:78584"></div>
+            <div class="col-truth-paragraphs" data-node-id="1135:78581">
+              <p class="col-truth-p1" data-node-id="1135:78579">
+                Trong thế giới của OÁN, manh mối không chỉ là những vật phẩm tĩnh lặng. Chúng là những mảnh vỡ của quá khứ, những tiếng vọng của những linh hồn chưa siêu thoát. Việc thu thập và phân tích tỉ mỉ từng đồ vật sẽ mở khóa các nút thắt trong cốt truyện, cho phép bạn nhìn thấy những gì kẻ khác cố tình che giấu.
+              </p>
+              <p class="col-truth-p2" data-node-id="1135:78580">
+                Hãy cẩn trọng: một bước thu thập xé nữa hay một tấm ảnh ở vòng có thể xoay chuyển hoàn toàn hiểu biết của bạn về các nhân vật xung quanh.
+              </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Progress -->
-      <section class="section">
-        <div class="container">
-          <div class="section__header reveal">
-            <div style="display:flex;align-items:center;gap:16px;justify-content:center;">
-              <div style="flex:1;height:2px;background:linear-gradient(90deg,transparent,var(--color-gold-600));max-width:200px;"></div>
-              <h2 class="section__title" style="margin-bottom:0;white-space:nowrap;font-size:16px;">TIẾN TRÌNH GIẢI MÃ</h2>
-              <div style="flex:1;height:2px;background:linear-gradient(90deg,var(--color-gold-600),transparent);max-width:200px;"></div>
+        </div>
+
+        <!-- Category Divider Line (1135:78596) -->
+        <div class="col-category-divider-row trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:78596">
+          <div class="col-divider-line col-divider-line--left"></div>
+          <span class="col-category-divider-label" data-node-id="1135:78595">Danh mục manh mối</span>
+          <div class="col-divider-line col-divider-line--right"></div>
+        </div>
+
+        <!-- 4 Category Cards Grid (1135:78641) -->
+        <div class="col-cards-grid trailer-scroll-reveal trailer-reveal-scale" data-node-id="1135:78641">
+          
+          <!-- Card 1: VĂN BẢN (1135:78597) -->
+          <div class="col-card-item" data-node-id="1135:78597">
+            <div class="col-card-bg">
+              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
             </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;" class="reveal">
-            ${[
-              { title: 'HỒI TƯỞNG', desc: 'Lần đầu nhật ký' },
-              { title: 'NHẬN THỨC', desc: 'Pha trộ kỳ câu hỏi' },
-              { title: 'GIẢI MÃ', desc: 'Cần kiếm được' },
-              { title: 'HIỂU ĐƯỢC TRUY', desc: 'Hãy đi tìm sám sần' },
-            ].map(item => `
-              <div style="text-align:center;padding:16px;border:1px solid rgba(255,255,255,0.06);">
-                <div style="font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--color-white);text-transform:uppercase;margin-bottom:4px;">${item.title}</div>
-                <div style="font-size:11px;color:var(--color-gray-500);">${item.desc}</div>
+            <div class="col-card-content">
+              <div class="col-card-icon-wrap">
+                <img src="./assets/d8257fe818600172f5a43ec310fddc2308217757.svg" alt="Văn Bản" class="col-card-stamp-icon" />
               </div>
-            `).join('')}
+              <h3 class="col-card-title">VĂN BẢN</h3>
+              <p class="col-card-desc">Thư từ, nhật ký, tài liệu cũ</p>
+            </div>
           </div>
+
+          <!-- Card 2: HÌNH ẢNH (1135:78608) -->
+          <div class="col-card-item" data-node-id="1135:78608">
+            <div class="col-card-bg">
+              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
+            </div>
+            <div class="col-card-content">
+              <div class="col-card-icon-wrap">
+                <img src="./assets/b178258681efdabb9aae37ef22f48050a3808838.svg" alt="Hình Ảnh" class="col-card-stamp-icon" />
+              </div>
+              <h3 class="col-card-title">HÌNH ẢNH</h3>
+              <p class="col-card-desc">Ảnh chụp hiện trường, tư liệu</p>
+            </div>
+          </div>
+
+          <!-- Card 3: VẬT DỤNG (1135:78619) -->
+          <div class="col-card-item" data-node-id="1135:78619">
+            <div class="col-card-bg">
+              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
+            </div>
+            <div class="col-card-content">
+              <div class="col-card-icon-wrap">
+                <img src="./assets/7dabe33aa8257b98c2bef388e36be62c03390449.svg" alt="Vật Dụng" class="col-card-stamp-icon" />
+              </div>
+              <h3 class="col-card-title">VẬT DỤNG</h3>
+              <p class="col-card-desc">Đồ cá nhân, cổ vật, công cụ</p>
+            </div>
+          </div>
+
+          <!-- Card 4: TÂM LINH (1135:78630) -->
+          <div class="col-card-item" data-node-id="1135:78630">
+            <div class="col-card-bg">
+              <img src="./assets/66c7d6a69e7a75e7832de8c46f4b4170fafabe68.png" alt="" class="col-card-bg-img" />
+            </div>
+            <div class="col-card-content">
+              <div class="col-card-icon-wrap">
+                <img src="./assets/392387e2253c1bc9141f12c2c1530c7cbb028e58.svg" alt="Tâm Linh" class="col-card-stamp-icon" />
+              </div>
+              <h3 class="col-card-title">TÂM LINH</h3>
+              <p class="col-card-desc">Bùa chú, tàn tích, dấu ấn</p>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ========================================================
+           3. INVENTORY MANAGEMENT SECTION (1135:78658)
+           ======================================================== -->
+      <section class="col-invent-section" data-node-id="1135:78658">
+        <div class="col-invent-container">
+          
+          <!-- Left Info Box (1170:78206) -->
+          <div class="col-invent-left-box trailer-scroll-reveal trailer-reveal-left" data-node-id="1170:78206">
+            <div class="col-invent-title-wrap" data-node-id="1170:78196">
+              <h2 class="col-invent-title" data-node-id="1170:78194">QUẢN LÝ<br/>TÚI ĐỒ</h2>
+              <p class="col-invent-desc" data-node-id="1135:78013">
+                Giao diện tối giản giúp bạn tập trung vào việc phân tích. Kết hợp các manh mối để tạo ra chìa khóa mới cho câu chuyện.
+              </p>
+            </div>
+            <div class="col-invent-capacity-row" data-node-id="1170:78201">
+              <span class="col-invent-capacity-label" data-node-id="1170:78202">Sức chứa</span>
+              <div class="col-invent-capacity-badge" data-node-id="1170:78203">
+                <span class="col-invent-capacity-num" data-node-id="1170:78204">5 / 20</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Inventory Chest Frame (1170:77990) -->
+          <div class="col-invent-grid-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1170:77990">
+            <div class="col-invent-grid-body" data-node-id="1170:77992">
+              <div class="col-invent-slots-grid" data-node-id="1170:77994">
+                
+                <!-- 5 Active Golden Slots (1170:77995 -> 1170:77999) -->
+                <div class="col-slot col-slot--active" title="Cổ vật 1">
+                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
+                </div>
+                <div class="col-slot col-slot--active" title="Cổ vật 2">
+                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
+                </div>
+                <div class="col-slot col-slot--active" title="Cổ vật 3">
+                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
+                </div>
+                <div class="col-slot col-slot--active" title="Cổ vật 4">
+                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
+                </div>
+                <div class="col-slot col-slot--active" title="Cổ vật 5">
+                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
+                </div>
+
+                <!-- 15 Empty Dark Slots (1170:78000 -> 1170:78014) -->
+                ${Array(15).fill(0).map((_, i) => `
+                  <div class="col-slot" title="Ô trống ${i + 6}"></div>
+                `).join('')}
+
+              </div>
+
+              <!-- Bottom Tape Plaque Label (1170:78190) -->
+              <div class="col-invent-bottom-tape" data-node-id="1170:78190">
+                <span class="col-invent-tape-text" data-node-id="1170:78188">THỨ GÌ CŨNG CÓ CÁI GIÁ CỦA NÓ</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <!-- Explore More CTA -->
-      <section class="section section--dark">
-        <div class="container" style="text-align:center;">
-          <div class="reveal">
-            <p style="font-family:var(--font-display);font-size:18px;color:var(--color-white);text-transform:uppercase;margin-bottom:8px;">
-              BẠN ĐÃ RỐI CHUÔNG KHUNG CỦA GAMEPLAY NÀY,
-            </p>
-            <p style="font-family:var(--font-display);font-size:18px;color:var(--color-white);text-transform:uppercase;margin-bottom:8px;">
-              BẠN CÓ THỂ HIỂU HƠN VỀ CÁCH CHƠI.
-            </p>
-            <h3 style="font-family:var(--font-display);font-size:24px;font-weight:700;color:var(--color-text-gold);text-transform:uppercase;margin-bottom:24px;">
-              BẠN CÓ MUỐN KHÁM PHÁ THÊM KHÔNG?
-            </h3>
-            <div style="display:flex;gap:16px;justify-content:center;">
-              <a href="#investigation" class="btn btn-cta" style="font-size:12px;">Đi Đến Điều Tra</a>
-              <a href="#puzzle" class="btn btn-secondary" style="font-size:12px;">Đi Đến Giải Đố</a>
+      <!-- ========================================================
+           4. PROGRESS STEPPER & GAMEPLAY END (1170:78210)
+           ======================================================== -->
+      <section class="col-progress-section" data-node-id="1170:78210">
+        
+        <!-- Banner Header (1170:78211) -->
+        <div class="col-progress-header-wrap trailer-scroll-reveal trailer-reveal-fade-up">
+          <div class="col-progress-bracket col-progress-bracket--left">{</div>
+          <h2 class="col-progress-header-title" data-node-id="1170:78212">TIẾN TRÌNH ĐIỀU TRA</h2>
+          <div class="col-progress-bracket col-progress-bracket--right">}</div>
+        </div>
+
+        <!-- Stepper 4 Steps (1170:79540) -->
+        <div class="col-stepper-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1170:79540">
+          <div class="col-stepper-track-line"></div>
+          <div class="col-stepper-steps-grid">
+            
+            <!-- Step 1: THU THẬP (1170:79527) -->
+            <div class="col-step-item" data-node-id="1170:79527">
+              <div class="col-step-circle">
+                <img src="./assets/a98344b85db2f7ee11ba740c88aef874e1501b43.svg" alt="Kính lúp" class="col-step-icon" />
+              </div>
+              <div class="col-step-info">
+                <h3 class="col-step-title" data-node-id="1170:78908">THU THẬP</h3>
+                <p class="col-step-desc" data-node-id="1170:78910">Thu thập manh mối từ hiện trường.</p>
+              </div>
             </div>
+
+            <!-- Step 2: PHÂN TÍCH (1170:79528) -->
+            <div class="col-step-item" data-node-id="1170:79528">
+              <div class="col-step-circle">
+                <img src="./assets/70ecff6273a19428a34c4c21847e0480466a2c78.svg" alt="Kính hiển vi" class="col-step-icon" />
+              </div>
+              <div class="col-step-info">
+                <h3 class="col-step-title" data-node-id="1170:79529">PHÂN TÍCH</h3>
+                <p class="col-step-desc" data-node-id="1170:79530">Phân tích chi tiết tại phòng thí nghiệm.</p>
+              </div>
+            </div>
+
+            <!-- Step 3: KẾT NỐI (1170:79532) -->
+            <div class="col-step-item" data-node-id="1170:79532">
+              <div class="col-step-circle">
+                <img src="./assets/ac8ed7f557af218b5a03a63cbb2c09f857bcc61b.svg" alt="Mạng lưới" class="col-step-icon" />
+              </div>
+              <div class="col-step-info">
+                <h3 class="col-step-title" data-node-id="1170:79533">KẾT NỐI</h3>
+                <p class="col-step-desc" data-node-id="1170:79534">Kết nối các mảnh vỡ thông tin.</p>
+              </div>
+            </div>
+
+            <!-- Step 4: GIẢI QUYẾT (1170:79535) -->
+            <div class="col-step-item" data-node-id="1170:79535">
+              <div class="col-step-circle">
+                <img src="./assets/dd24e34069b945e8c9e3d666c7a3ac041e5e4876.svg" alt="Dấu kiểm" class="col-step-icon" />
+              </div>
+              <div class="col-step-info">
+                <h3 class="col-step-title" data-node-id="1170:79536">GIẢI QUYẾT</h3>
+                <p class="col-step-desc" data-node-id="1170:79537">Tìm ra sự thật cuối cùng.</p>
+              </div>
+            </div>
+
           </div>
         </div>
+
+        <!-- End Gameplay Milestone Block (1170:79541) -->
+        <div class="col-end-milestone-block trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1170:79541">
+          <div class="col-milestone-sub">
+            BẠN ĐÃ ĐI CUỐI CHẶNG ĐƯỜNG CỦA GAMEPLAY RỒI,<br/>
+            BẠN CÓ THỂ HIỂU SƠ VỀ CÁCH CHƠI.
+          </div>
+          <h2 class="col-milestone-main" data-node-id="1170:79578">
+            BẠN CÓ MUỐN KHÁM PHÁ THÊM KHÔNG?
+          </h2>
+          <div class="col-milestone-actions" data-node-id="1170:79594">
+            <a href="#investigation" class="col-horror-cta-btn" data-node-id="1170:79582">
+              <span class="col-horror-btn-text">Đi đến Điều Tra</span>
+            </a>
+            <a href="#puzzle" class="col-horror-cta-btn" data-node-id="1170:79561">
+              <span class="col-horror-btn-text">Đi đến Giải Đố</span>
+            </a>
+          </div>
+        </div>
+
       </section>
 
-      <!-- CTA -->
-      <section class="section">
-        <div class="container">
-          <div class="cta-banner reveal">
-            <h2 class="cta-banner__title">BẠN ĐÃ SẴN SÀNG BƯỚC VÀO NHÀ HỨA?</h2>
-            <div class="cta-banner__actions">
-              <a href="#download" class="btn btn-secondary">Chơi Ngay</a>
-              <a href="#download" class="btn btn-secondary">Tải Ngay</a>
-            </div>
-            <p class="cta-banner__note">HÃY ĐẾN VỚI NỖI SỢ ĐỂ KHÁM PHÁ</p>
-          </div>
-        </div>
-      </section>
+      <!-- ========================================================
+           5. READY DOWNLOAD SECTION (1170:79595)
+           ======================================================== -->
+      ${getReadySectionHTML()}
+
     </div>
   `;
+
+  // Scroll Reveal Observer
+  const scrollTargets = container.querySelectorAll('.trailer-scroll-reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.15 });
+    scrollTargets.forEach(el => observer.observe(el));
+  } else {
+    scrollTargets.forEach(el => el.classList.add('revealed'));
+  }
+
+  // Interactive Inventory Slots
+  const slots = container.querySelectorAll('.col-slot');
+  const capacityNum = container.querySelector('.col-invent-capacity-num');
+  slots.forEach(slot => {
+    slot.addEventListener('click', () => {
+      slot.classList.toggle('col-slot--active');
+      if (slot.classList.contains('col-slot--active') && !slot.querySelector('img')) {
+        const img = document.createElement('img');
+        img.src = './assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg';
+        img.className = 'col-slot-icon';
+        slot.appendChild(img);
+      } else if (!slot.classList.contains('col-slot--active')) {
+        const img = slot.querySelector('img');
+        if (img) img.remove();
+      }
+      const activeCount = container.querySelectorAll('.col-slot--active').length;
+      if (capacityNum) {
+        capacityNum.textContent = `${activeCount} / 20`;
+      }
+    });
+  });
 }
