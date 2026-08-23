@@ -269,122 +269,172 @@ export async function renderInvestigation(container) {
       </section>
 
       <!-- ========================================================
-           4. SUPPORT TOOLS: CÔNG CỤ HỖ TRỢ (1093:77284)
+           4, 5, 6. TOOLS, TIPS & CONTINUE SECTION (1104:76910)
            ======================================================== -->
-      <section class="inv-tools-section" data-node-id="1093:77284">
-        
-        <!-- Horror Frame Header (1093:77285) -->
-        <div class="inv-tools-header trailer-scroll-reveal" data-node-id="1093:77285">
-          <div class="inv-tools-horror-frame">
-            <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="inv-tools-horror-left" />
-            <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="inv-tools-horror-right" />
-          </div>
-          <h2 class="inv-tools-header-text" data-node-id="1093:77286">CÔNG CỤ HỖ TRỢ</h2>
-        </div>
+      <section class="inv-tools-tips-section" data-node-id="1104:76910">
+        <div class="inv-tools-tips-container">
 
-        <!-- 4 Support Tool Cards (1093:77292) -->
-        <div class="inv-tools-grid trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1093:77292">
-          
-          <!-- Card A: Evidence Cards (1093:77293) -->
-          <div class="inv-tool-card" data-node-id="1093:77293">
-            <div class="inv-tool-badge">A</div>
-            <h3 class="inv-tool-title">EVIDENCE CARDS</h3>
-            <p class="inv-tool-desc">Hồ sơ chi tiết về các vật chứng đã tìm thấy.</p>
-          </div>
-
-          <!-- Card B: Audio Logs (1093:77305) -->
-          <div class="inv-tool-card" data-node-id="1093:77305">
-            <div class="inv-tool-badge">B</div>
-            <h3 class="inv-tool-title">AUDIO LOGS</h3>
-            <p class="inv-tool-desc">Băng ghi âm lưu giữ những lời trăn trối cuối cùng.</p>
-          </div>
-
-          <!-- Card C: Occult Journal (1093:77317) -->
-          <div class="inv-tool-card" data-node-id="1093:77317">
-            <div class="inv-tool-badge">C</div>
-            <h3 class="inv-tool-title">OCCULT JOURNAL</h3>
-            <p class="inv-tool-desc">Sổ tay ghi chép các nghi thức tà thuật và phong ấn.</p>
-          </div>
-
-          <!-- Card D: Flashlight & UV (1093:77329) -->
-          <div class="inv-tool-card" data-node-id="1093:77329">
-            <div class="inv-tool-badge">D</div>
-            <h3 class="inv-tool-title">FLASHLIGHT & UV</h3>
-            <p class="inv-tool-desc">Đèn pin soi rọi ký hiệu ẩn trong bóng tối.</p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ========================================================
-           5. SURVIVAL TIPS: MẸO SINH TỒN (1093:77344)
-           ======================================================== -->
-      <section class="inv-tips-section" data-node-id="1093:77344">
-        
-        <!-- Horror Frame Header (1093:77345) -->
-        <div class="inv-tools-header trailer-scroll-reveal" data-node-id="1093:77345">
-          <div class="inv-tools-horror-frame">
-            <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="inv-tools-horror-left" />
-            <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="inv-tools-horror-right" />
-          </div>
-          <h2 class="inv-tools-header-text" data-node-id="1093:77346">MẸO SINH TỒN</h2>
-        </div>
-
-        <!-- 3 Survival Tip Cards (1093:77351) -->
-        <div class="inv-tips-grid trailer-scroll-reveal trailer-reveal-scale" data-node-id="1093:77351">
-          
-          <!-- Tip 1 (1093:77352) -->
-          <div class="inv-tip-card" data-node-id="1093:77352">
-            <div class="inv-tip-header-row">
-              <span class="inv-tip-badge">TIP 01</span>
-              <div class="inv-tip-speaker">
-                <img src="./assets/5280884719d4359c523e1bb78c45cf2c8b6ffab0.svg" alt="Speaker" />
+          <!-- 4.1 CÔNG CỤ HỖ TRỢ (1104:77037) -->
+          <div class="inv-tools-block">
+            
+            <!-- Horror Frame Header (1104:77037) -->
+            <div class="inv-figma-ctaline-header trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1104:77037">
+              <div class="inv-ctaline-frame">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="inv-ctaline-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="inv-ctaline-right" />
               </div>
+              <h2 class="inv-ctaline-text" data-node-id="1104:77038">CÔNG CỤ HỖ TRỢ</h2>
             </div>
-            <h3 class="inv-tip-title">Lắng nghe âm thanh</h3>
-            <p class="inv-tip-desc">Vật thể quan trọng thường phát ra những tiếng động lạ khi bạn ở gần.</p>
-          </div>
 
-          <!-- Tip 2 (1093:77366) -->
-          <div class="inv-tip-card" data-node-id="1093:77366">
-            <div class="inv-tip-header-row">
-              <span class="inv-tip-badge">TIP 02</span>
-              <div class="inv-tip-speaker">
-                <img src="./assets/5280884719d4359c523e1bb78c45cf2c8b6ffab0.svg" alt="Speaker" />
+            <!-- 4 Support Tool ItemCards (1104:77084) -->
+            <div class="inv-figma-itemcards-row trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:77084">
+              
+              <!-- ItemCard 1: Evidence Cards (1104:77025) -->
+              <div class="inv-figma-itemcard" data-node-id="1104:77025">
+                <div class="inv-itemcard-icon-box" data-node-id="1104:76997">
+                  <img src="./assets/e705f4ca885844be584dcf92fbd95c1450d35232.svg" alt="" class="inv-itemcard-svg-icon" />
+                </div>
+                <div class="inv-itemcard-text-group">
+                  <h3 class="inv-itemcard-title" data-node-id="1104:76925">EVIDENCE CARDS</h3>
+                  <p class="inv-itemcard-desc" data-node-id="1104:76927">Hồ sơ chi tiết về các vật chứng đã tìm thấy.</p>
+                </div>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-itemcard-texture" data-node-id="1104:77005" />
               </div>
-            </div>
-            <h3 class="inv-tip-title">Quản lý nguồn sáng</h3>
-            <p class="inv-tip-desc">Đèn pin có giới hạn pin, chỉ bật khi cần thiết để tránh thu hút thực thể.</p>
-          </div>
 
-          <!-- Tip 3 (1093:77380) -->
-          <div class="inv-tip-card" data-node-id="1093:77380">
-            <div class="inv-tip-header-row">
-              <span class="inv-tip-badge">TIP 03</span>
-              <div class="inv-tip-speaker">
-                <img src="./assets/5280884719d4359c523e1bb78c45cf2c8b6ffab0.svg" alt="Speaker" />
+              <!-- ItemCard 2: Audio Logs -->
+              <div class="inv-figma-itemcard" data-node-id="1104:77084">
+                <div class="inv-itemcard-icon-box">
+                  <img src="./assets/e705f4ca885844be584dcf92fbd95c1450d35232.svg" alt="" class="inv-itemcard-svg-icon" />
+                </div>
+                <div class="inv-itemcard-text-group">
+                  <h3 class="inv-itemcard-title">AUDIO LOGS</h3>
+                  <p class="inv-itemcard-desc">Băng ghi âm lưu giữ những lời trăn trối cuối cùng.</p>
+                </div>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-itemcard-texture" />
               </div>
+
+              <!-- ItemCard 3: Occult Journal -->
+              <div class="inv-figma-itemcard" data-node-id="1104:77084">
+                <div class="inv-itemcard-icon-box">
+                  <img src="./assets/e705f4ca885844be584dcf92fbd95c1450d35232.svg" alt="" class="inv-itemcard-svg-icon" />
+                </div>
+                <div class="inv-itemcard-text-group">
+                  <h3 class="inv-itemcard-title">OCCULT JOURNAL</h3>
+                  <p class="inv-itemcard-desc">Sổ tay ghi chép các nghi thức tà thuật và phong ấn.</p>
+                </div>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-itemcard-texture" />
+              </div>
+
+              <!-- ItemCard 4: Flashlight & UV -->
+              <div class="inv-figma-itemcard" data-node-id="1104:77084">
+                <div class="inv-itemcard-icon-box">
+                  <img src="./assets/e705f4ca885844be584dcf92fbd95c1450d35232.svg" alt="" class="inv-itemcard-svg-icon" />
+                </div>
+                <div class="inv-itemcard-text-group">
+                  <h3 class="inv-itemcard-title">FLASHLIGHT & UV</h3>
+                  <p class="inv-itemcard-desc">Đèn pin soi rọi ký hiệu ẩn trong bóng tối.</p>
+                </div>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-itemcard-texture" />
+              </div>
+
             </div>
-            <h3 class="inv-tip-title">Ghi nhớ lối thoát</h3>
-            <p class="inv-tip-desc">Luôn xác định đường rút lui trước khi bước sâu vào căn phòng bị phong ấn.</p>
           </div>
 
-        </div>
-      </section>
+          <!-- 4.2 MẸO SINH TỒN (1104:77085) -->
+          <div class="inv-tips-block">
+            
+            <!-- Horror Frame Header (1104:77085) -->
+            <div class="inv-figma-ctaline-header trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1104:77085">
+              <div class="inv-ctaline-frame">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="inv-ctaline-left" />
+                <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="inv-ctaline-right" />
+              </div>
+              <h2 class="inv-ctaline-text" data-node-id="1104:77086">MẸO SINH TỒN</h2>
+            </div>
 
-      <!-- ========================================================
-           6. CONTINUE JOURNEY: TIẾP TỤC HÀNH TRÌNH? (1093:77395)
-           ======================================================== -->
-      <section class="inv-continue-section" data-node-id="1093:77395">
-        <div class="inv-continue-container trailer-scroll-reveal trailer-reveal-fade-up">
-          <h2 class="inv-continue-title" data-node-id="1093:77397">TIẾP TỤC HÀNH TRÌNH?</h2>
-          <p class="inv-continue-subtitle" data-node-id="1093:77398">Khám phá thêm các trang để hiểu rõ hơn về thế giới OÁN</p>
-          
-          <!-- Horror Styled Button (1093:77399) -->
-          <a href="#puzzle" class="inv-continue-btn" data-node-id="1093:77399">
-            <span class="inv-continue-btn-text">TIẾP TỤC TÌM GIẢI ĐỐ</span>
-            <span class="inv-continue-btn-arrow">›</span>
-          </a>
+            <!-- 3 Survival Tip Cards (Mo - 1104:77132) -->
+            <div class="inv-figma-mo-row trailer-scroll-reveal trailer-reveal-scale" data-node-id="1104:77132">
+              
+              <!-- Mo Card 1: Tip 01 (1104:77097) -->
+              <div class="inv-figma-mo-card" data-node-id="1104:77097">
+                <div class="inv-mo-badge" data-node-id="1104:76966">TIP 01</div>
+                <h3 class="inv-mo-title" data-node-id="1104:76968">Lắng nghe âm thanh</h3>
+                <p class="inv-mo-desc" data-node-id="1104:76970">
+                  Vật thể quan trọng thường phát ra những tiếng động lạ khi bạn ở gần.
+                </p>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-mo-texture" data-node-id="1104:77096" />
+              </div>
+
+              <!-- Mo Card 2: Tip 02 -->
+              <div class="inv-figma-mo-card" data-node-id="1104:77132">
+                <div class="inv-mo-badge">TIP 02</div>
+                <h3 class="inv-mo-title">Quản lý nguồn sáng</h3>
+                <p class="inv-mo-desc">
+                  Đèn pin có giới hạn pin, chỉ bật khi cần thiết để tránh thu hút thực thể.
+                </p>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-mo-texture" />
+              </div>
+
+              <!-- Mo Card 3: Tip 03 -->
+              <div class="inv-figma-mo-card" data-node-id="1104:77132">
+                <div class="inv-mo-badge">TIP 03</div>
+                <h3 class="inv-mo-title">Ghi nhớ lối thoát</h3>
+                <p class="inv-mo-desc">
+                  Luôn xác định đường rút lui trước khi bước sâu vào căn phòng bị phong ấn.
+                </p>
+                <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="inv-mo-texture" />
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 4.3 TIẾP TỤC HÀNH TRÌNH? (1104:77402) -->
+          <div class="inv-figma-continue-block trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1104:77402">
+            
+            <!-- Heading -->
+            <h2 class="inv-figma-continue-heading" data-node-id="I1104:77402;1104:77379">
+              TIẾP TỤC HÀNH TRÌNH?
+            </h2>
+
+            <!-- Subtitle -->
+            <p class="inv-figma-continue-subtitle" data-node-id="I1104:77402;1104:77382">
+              Sau khi thu thập đủ manh mối, bạn sẽ phải đối mặt với những câu đố hóc búa để tiến sâu hơn vào sự thật.
+            </p>
+
+            <!-- Multi-layered Horror CTA Button (1104:77388) -->
+            <a href="#puzzle" class="inv-figma-cta-btn" data-node-id="I1104:77402;1104:77388" aria-label="Tiếp tục đến Giải Đố">
+              
+              <!-- Layer 1: Frame Parts -->
+              <div class="inv-btn-frame-bg" data-node-id="I1104:77402;1104:77388;906:1550">
+                <img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" class="inv-btn-part-1" />
+                <div class="inv-btn-part-2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                <img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" class="inv-btn-part-3" />
+                <div class="inv-btn-part-4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                <img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" class="inv-btn-part-5" />
+              </div>
+
+              <!-- Layer 2: Inner Blood & Grunge Texture -->
+              <div class="inv-btn-inner-body">
+                <div class="inv-btn-grad-overlay"></div>
+                <div class="inv-btn-texture-wrap">
+                  <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" alt="" class="inv-btn-texture-img" />
+                </div>
+              </div>
+
+              <!-- Layer 3: Neon Red Glowing Borders -->
+              <div class="inv-btn-glow-frame-3"></div>
+              <div class="inv-btn-glow-frame-2"></div>
+              <div class="inv-btn-glow-frame-1"></div>
+
+              <!-- Layer 4: Button Label -->
+              <span class="inv-btn-label-text" data-node-id="I1104:77402;1104:77388;906:1557">
+                Tiếp tục đến Giải Đố
+              </span>
+
+            </a>
+
+          </div>
+
         </div>
       </section>
 
