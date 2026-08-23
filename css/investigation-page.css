@@ -44,8 +44,8 @@
   z-index: 99;
   opacity: 0.9;
   display: block;
-  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.4) 85%, rgba(0, 0, 0, 0.15) 100%);
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.4) 85%, rgba(0, 0, 0, 0.15) 100%);
+  -webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.4) 85%, rgba(0, 0, 0, 0.15) 100%);
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 30%, rgba(0, 0, 0, 0.4) 85%, rgba(0, 0, 0, 0.15) 100%);
 }
 
 .inv-hero-bg-texture-rotate {
@@ -866,6 +866,7 @@
   width: auto;
   max-width: 42%;
   object-fit: contain;
+  color: #9C7E21;
 }
 
 .inv-ctaline-right {
@@ -906,7 +907,9 @@
 
 .inv-figma-itemcard {
   position: relative;
-  border: 1px solid #3c0101;
+  /* border: 1px solid #3c0101; */
+  border: 1px solid;
+  border-image: linear-gradient(40deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%) 1;
   background: linear-gradient(-54.88deg, #310000 0.77%, #000000 103.47%);
   border-radius: 4px;
   padding: 25px;
