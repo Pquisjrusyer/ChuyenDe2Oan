@@ -2,11 +2,38 @@
    OAN — Collection Page (Design 23: 1135-78166 "Thu thập desktop")
    ======================================================== */
 
+import gsap from 'gsap';
 import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderCollection(container) {
   container.innerHTML = `
     <div class="collection-page-wrapper" data-node-id="1135:78166">
+      
+      <!-- SVG Liquid Melting Distortion Filters for Cards and Photos -->
+      <svg class="col-melt-svg-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; pointer-events: none;">
+        <defs>
+          <filter id="col-photo-melt-filter" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="col-photo-turb" type="fractalNoise" baseFrequency="0.012 0.05" numOctaves="3" result="noise" seed="42" />
+            <feDisplacementMap id="col-photo-disp" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="col-melt-filter-1" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="col-melt-turb-1" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="1" />
+            <feDisplacementMap id="col-melt-disp-1" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="col-melt-filter-2" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="col-melt-turb-2" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="2" />
+            <feDisplacementMap id="col-melt-disp-2" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="col-melt-filter-3" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="col-melt-turb-3" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="3" />
+            <feDisplacementMap id="col-melt-disp-3" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="col-melt-filter-4" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="col-melt-turb-4" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="4" />
+            <feDisplacementMap id="col-melt-disp-4" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
       
       <!-- ========================================================
            1. HERO SECTION (1135:78270)
@@ -30,6 +57,9 @@ export async function renderCollection(container) {
         <div class="col-hero-grunge-overlay" data-node-id="1135:78288">
           <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="col-hero-grunge-img" />
         </div>
+
+        <!-- Dark Gradient Transition Overlay -->
+        <div class="col-hero-bottom-gradient" aria-hidden="true"></div>
 
       </section>
 
@@ -487,4 +517,98 @@ export async function renderCollection(container) {
       }
     });
   });
+
+  // GSAP Melting / Liquifying Horror Distortion on 4 Category Cards
+  const meltCards = container.querySelectorAll('.col-card-item');
+  meltCards.forEach((card, idx) => {
+    const cardIndex = idx + 1;
+    const disp = container.querySelector(`#col-melt-disp-${cardIndex}`);
+    const turb = container.querySelector(`#col-melt-turb-${cardIndex}`);
+    if (!disp || !turb) return;
+
+    let tween = null;
+    let raf = null;
+    let offset = 0;
+
+    function renderMelt() {
+      offset += 0.035;
+      const freqY = 0.06 + Math.sin(offset) * 0.025;
+      turb.setAttribute('baseFrequency', `0.012 ${freqY.toFixed(4)}`);
+      turb.setAttribute('seed', Math.floor((offset * 15) % 100 + 1));
+      raf = requestAnimationFrame(renderMelt);
+    }
+
+    card.addEventListener('mouseenter', () => {
+      card.style.filter = `url(#col-melt-filter-${cardIndex}) drop-shadow(0 15px 40px rgba(220, 20, 20, 0.85)) drop-shadow(0 0 25px rgba(255, 0, 0, 0.5))`;
+      
+      if (tween) tween.kill();
+      tween = gsap.to(disp, {
+        attr: { scale: 38 },
+        duration: 0.65,
+        ease: 'power2.out'
+      });
+
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(renderMelt);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (tween) tween.kill();
+      tween = gsap.to(disp, {
+        attr: { scale: 0 },
+        duration: 0.45,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          cancelAnimationFrame(raf);
+          card.style.filter = '';
+        }
+      });
+    });
+  });
+
+  // GSAP Horror Melting & Spectral Distortion on col-truth-photo-inner
+  const truthPhotoInner = container.querySelector('.col-truth-photo-inner');
+  const photoDisp = container.querySelector('#col-photo-disp');
+  const photoTurb = container.querySelector('#col-photo-turb');
+
+  if (truthPhotoInner && photoDisp && photoTurb) {
+    let photoTween = null;
+    let photoRaf = null;
+    let photoOffset = 0;
+
+    function renderPhotoMelt() {
+      photoOffset += 0.03;
+      const freqY = 0.05 + Math.sin(photoOffset) * 0.02;
+      photoTurb.setAttribute('baseFrequency', `0.01 ${freqY.toFixed(4)}`);
+      photoTurb.setAttribute('seed', Math.floor((photoOffset * 15) % 100 + 1));
+      photoRaf = requestAnimationFrame(renderPhotoMelt);
+    }
+
+    truthPhotoInner.addEventListener('mouseenter', () => {
+      truthPhotoInner.style.filter = 'url(#col-photo-melt-filter) drop-shadow(0 20px 60px rgba(220, 20, 20, 0.85)) drop-shadow(0 0 30px rgba(255, 0, 0, 0.5))';
+
+      if (photoTween) photoTween.kill();
+      photoTween = gsap.to(photoDisp, {
+        attr: { scale: 32 },
+        duration: 0.65,
+        ease: 'power2.out'
+      });
+
+      cancelAnimationFrame(photoRaf);
+      photoRaf = requestAnimationFrame(renderPhotoMelt);
+    });
+
+    truthPhotoInner.addEventListener('mouseleave', () => {
+      if (photoTween) photoTween.kill();
+      photoTween = gsap.to(photoDisp, {
+        attr: { scale: 0 },
+        duration: 0.45,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          cancelAnimationFrame(photoRaf);
+          truthPhotoInner.style.filter = '';
+        }
+      });
+    });
+  }
 }

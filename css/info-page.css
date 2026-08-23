@@ -684,6 +684,10 @@
   transform: none;
 }
 
+.news-card-cta-btn .corner-svg-right {
+  transform: scaleX(-1);
+}
+
 .news-cta-body {
   position: relative;
   z-index: 2;

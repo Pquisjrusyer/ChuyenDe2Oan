@@ -3,11 +3,34 @@
    Figma Node: 1104:77421 (Desktop)
    ======================================================== */
 
+import gsap from 'gsap';
 import { getReadySectionHTML } from '../components/ready-section.js';
 
 export async function renderPuzzle(container) {
   container.innerHTML = `
     <div class="puzzle-page-wrapper" data-node-id="1104:77421">
+
+      <!-- SVG Liquid Melting / Horror Distortion Filters for 4 Puzzle Cards -->
+      <svg class="puz-melt-svg-filters" aria-hidden="true" style="position: absolute; width: 0; height: 0; pointer-events: none;">
+        <defs>
+          <filter id="puz-card-melt-1" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="puz-turb-1" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="11" />
+            <feDisplacementMap id="puz-disp-1" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="puz-card-melt-2" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="puz-turb-2" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="12" />
+            <feDisplacementMap id="puz-disp-2" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="puz-card-melt-3" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="puz-turb-3" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="13" />
+            <feDisplacementMap id="puz-disp-3" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+          <filter id="puz-card-melt-4" x="-30%" y="-30%" width="160%" height="160%">
+            <feTurbulence id="puz-turb-4" type="fractalNoise" baseFrequency="0.012 0.06" numOctaves="3" result="noise" seed="14" />
+            <feDisplacementMap id="puz-disp-4" in="SourceGraphic" in2="noise" scale="0" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+      </svg>
 
       <!-- ========================================================
            1. HERO SECTION: GIẢI ĐỐ (1104:77669)
@@ -48,7 +71,36 @@ export async function renderPuzzle(container) {
             
             <!-- Tilted Monitor Frame with Plaque (farm ngoài.svg - 1135:76885) -->
             <div class="puz-coche-monitor-wrap" data-node-id="1135:76885">
-              <img src="./assets/farm-ngoai.svg" alt="Cơ chế cốt lõi - Giải đố" class="puz-coche-farm-ngoai-svg" />
+              <img src="./assets/farm-ngoai.svg" alt="Cơ chế cốt lõi - Giải đố" class="puz-coche-farm-ngoai-svg puz-coche-base-img" />
+              
+              <!-- 5 Gentle Broken Mirror Shards (Pure CSS GPU Hardware-Accelerated) -->
+              <div class="puz-mirror-shards-wrap" aria-hidden="true">
+                <div class="puz-shard puz-shard-1">
+                  <img src="./assets/farm-ngoai.svg" alt="" class="puz-shard-img" />
+                </div>
+                <div class="puz-shard puz-shard-2">
+                  <img src="./assets/farm-ngoai.svg" alt="" class="puz-shard-img" />
+                </div>
+                <div class="puz-shard puz-shard-3">
+                  <img src="./assets/farm-ngoai.svg" alt="" class="puz-shard-img" />
+                </div>
+                <div class="puz-shard puz-shard-4">
+                  <img src="./assets/farm-ngoai.svg" alt="" class="puz-shard-img" />
+                </div>
+                <div class="puz-shard puz-shard-5">
+                  <img src="./assets/farm-ngoai.svg" alt="" class="puz-shard-img" />
+                </div>
+              </div>
+
+              <!-- Subtle Glass Seam Lines Overlay -->
+              <svg class="puz-mirror-cracks-svg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                <line x1="56" y1="0" x2="48" y2="52" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+                <line x1="48" y1="52" x2="0" y2="44" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+                <line x1="48" y1="52" x2="38" y2="100" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+                <line x1="48" y1="52" x2="74" y2="58" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+                <line x1="74" y1="58" x2="100" y2="54" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+                <line x1="74" y1="58" x2="68" y2="100" stroke="rgba(255, 255, 255, 0.7)" stroke-width="0.5" />
+              </svg>
             </div>
 
             <!-- 3 Cut-Corner Tag Buttons (1135:76902) -->
@@ -421,6 +473,54 @@ export async function renderPuzzle(container) {
     card.addEventListener('click', () => {
       tagCards.forEach(c => c.classList.remove('puz-tag-card--active'));
       card.classList.add('puz-tag-card--active');
+    });
+  });
+
+  // GSAP Horror Melting & Distortion Effect on 4 Puzzle Type Cards
+  const puzCards = container.querySelectorAll('.puz-type-card-outer');
+  puzCards.forEach((card, idx) => {
+    const cardIndex = idx + 1;
+    const disp = container.querySelector(`#puz-disp-${cardIndex}`);
+    const turb = container.querySelector(`#puz-turb-${cardIndex}`);
+    if (!disp || !turb) return;
+
+    let tween = null;
+    let raf = null;
+    let offset = 0;
+
+    function renderMelt() {
+      offset += 0.035;
+      const freqY = 0.06 + Math.sin(offset) * 0.025;
+      turb.setAttribute('baseFrequency', `0.012 ${freqY.toFixed(4)}`);
+      turb.setAttribute('seed', Math.floor((offset * 15) % 100 + 1));
+      raf = requestAnimationFrame(renderMelt);
+    }
+
+    card.addEventListener('mouseenter', () => {
+      card.style.filter = `url(#puz-card-melt-${cardIndex}) drop-shadow(0 20px 50px rgba(220, 20, 20, 0.85)) drop-shadow(0 0 25px rgba(255, 0, 0, 0.5))`;
+
+      if (tween) tween.kill();
+      tween = gsap.to(disp, {
+        attr: { scale: 35 },
+        duration: 0.65,
+        ease: 'power2.out'
+      });
+
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(renderMelt);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (tween) tween.kill();
+      tween = gsap.to(disp, {
+        attr: { scale: 0 },
+        duration: 0.45,
+        ease: 'power2.inOut',
+        onComplete: () => {
+          cancelAnimationFrame(raf);
+          card.style.filter = '';
+        }
+      });
     });
   });
 }
