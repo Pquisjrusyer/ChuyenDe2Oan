@@ -357,7 +357,11 @@ export async function renderPuzzle(container) {
             </div>
             <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77296;1040:76537">
               <span class="puz-accordion-title" data-node-id="I1135:77296;1040:76539">TÂM NHÃN</span>
-              <span class="puz-accordion-icon" data-node-id="I1135:77296;1040:76540">+</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77296;1040:76540">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.875 11.125H0V8.875H8.875V0H11.125V8.875H20V11.125H11.125V20H8.875V11.125Z" fill="currentColor"/>
+                </svg>
+              </span>
             </button>
             <div class="puz-accordion-body" data-node-id="I1135:77296;1040:76547">
               <p class="puz-accordion-text" data-node-id="I1135:77296;1040:76550">
@@ -373,7 +377,11 @@ export async function renderPuzzle(container) {
             </div>
             <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77297;1040:76537">
               <span class="puz-accordion-title" data-node-id="I1135:77297;1040:76539">SỔ TAY MANH MỐI</span>
-              <span class="puz-accordion-icon" data-node-id="I1135:77297;1040:76540">+</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77297;1040:76540">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.875 11.125H0V8.875H8.875V0H11.125V8.875H20V11.125H11.125V20H8.875V11.125Z" fill="currentColor"/>
+                </svg>
+              </span>
             </button>
             <div class="puz-accordion-body" data-node-id="I1135:77297;1040:76547">
               <p class="puz-accordion-text" data-node-id="I1135:77297;1040:76550">
@@ -389,7 +397,11 @@ export async function renderPuzzle(container) {
             </div>
             <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77298;1040:76537">
               <span class="puz-accordion-title" data-node-id="I1135:77298;1040:76539">ÂM THANH CHỈ HƯỚNG</span>
-              <span class="puz-accordion-icon" data-node-id="I1135:77298;1040:76540">+</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77298;1040:76540">
+                <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.875 11.125H0V8.875H8.875V0H11.125V8.875H20V11.125H11.125V20H8.875V11.125Z" fill="currentColor"/>
+                </svg>
+              </span>
             </button>
             <div class="puz-accordion-body" data-node-id="I1135:77298;1040:76547">
               <p class="puz-accordion-text" data-node-id="I1135:77298;1040:76550">
@@ -484,13 +496,11 @@ export async function renderPuzzle(container) {
       accordionItems.forEach(other => {
         if (other !== item) {
           other.querySelector('.puz-accordion-header').setAttribute('aria-expanded', 'false');
-          other.querySelector('.puz-accordion-icon').textContent = '+';
           other.classList.remove('puz-accordion-item--open');
         }
       });
       // Toggle current
       btn.setAttribute('aria-expanded', !isExpanded);
-      item.querySelector('.puz-accordion-icon').textContent = isExpanded ? '+' : '−';
       item.classList.toggle('puz-accordion-item--open', !isExpanded);
     });
   });
