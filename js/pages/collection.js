@@ -186,81 +186,151 @@ export async function renderCollection(container) {
            ======================================================== -->
       <section class="col-progress-section" data-node-id="1170:78210">
         
-        <!-- Banner Header (1170:78211) -->
-        <div class="col-progress-header-wrap trailer-scroll-reveal trailer-reveal-fade-up">
-          <div class="col-progress-bracket col-progress-bracket--left">{</div>
+        <!-- Header Plaque / Banner (1170:78211) -->
+        <div class="col-progress-header-wrap trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1170:78211">
+          <div class="col-progress-frame-decor col-progress-frame--left" data-node-id="I1170:78213;708:35">
+            <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" />
+          </div>
           <h2 class="col-progress-header-title" data-node-id="1170:78212">TIẾN TRÌNH ĐIỀU TRA</h2>
-          <div class="col-progress-bracket col-progress-bracket--right">}</div>
+          <div class="col-progress-frame-decor col-progress-frame--right" data-node-id="I1170:78213;708:43">
+            <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" />
+          </div>
         </div>
 
-        <!-- Stepper 4 Steps (1170:79540) -->
+        <!-- Stepper: 3 Process Stages (1170:79540) -->
         <div class="col-stepper-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1170:79540">
-          <div class="col-stepper-track-line"></div>
-          <div class="col-stepper-steps-grid">
+          
+          <!-- Stepper Visual Track & Circles (1170:79500) -->
+          <div class="col-stepper-track-row" data-node-id="1170:79500">
             
-            <!-- Step 1: THU THẬP (1170:79527) -->
-            <div class="col-step-item" data-node-id="1170:79527">
-              <div class="col-step-circle">
-                <img src="./assets/a98344b85db2f7ee11ba740c88aef874e1501b43.svg" alt="Kính lúp" class="col-step-icon" />
-              </div>
-              <div class="col-step-info">
-                <h3 class="col-step-title" data-node-id="1170:78908">THU THẬP</h3>
-                <p class="col-step-desc" data-node-id="1170:78910">Thu thập manh mối từ hiện trường.</p>
-              </div>
-            </div>
-
-            <!-- Step 2: PHÂN TÍCH (1170:79528) -->
-            <div class="col-step-item" data-node-id="1170:79528">
-              <div class="col-step-circle">
-                <img src="./assets/70ecff6273a19428a34c4c21847e0480466a2c78.svg" alt="Kính hiển vi" class="col-step-icon" />
-              </div>
-              <div class="col-step-info">
-                <h3 class="col-step-title" data-node-id="1170:79529">PHÂN TÍCH</h3>
-                <p class="col-step-desc" data-node-id="1170:79530">Phân tích chi tiết tại phòng thí nghiệm.</p>
+            <!-- Stage 1 Circle: THU THẬP (1170:78982) -->
+            <div class="col-stage-circle-wrap" data-node-id="1170:78982">
+              <div class="col-stage-circle-inner">
+                <div class="col-stage-icon-box">
+                  <img src="./assets/ac8ed7f557af218b5a03a63cbb2c09f857bcc61b.svg" alt="Thu thập" class="col-stage-icon" />
+                </div>
+                <div class="col-stage-circle-texture">
+                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                </div>
               </div>
             </div>
 
-            <!-- Step 3: KẾT NỐI (1170:79532) -->
-            <div class="col-step-item" data-node-id="1170:79532">
-              <div class="col-step-circle">
-                <img src="./assets/ac8ed7f557af218b5a03a63cbb2c09f857bcc61b.svg" alt="Mạng lưới" class="col-step-icon" />
-              </div>
-              <div class="col-step-info">
-                <h3 class="col-step-title" data-node-id="1170:79533">KẾT NỐI</h3>
-                <p class="col-step-desc" data-node-id="1170:79534">Kết nối các mảnh vỡ thông tin.</p>
+            <!-- Connecting Line 1 (1170:79005) -->
+            <div class="col-stage-connector-line" data-node-id="I1170:79500;1170:79005"></div>
+
+            <!-- Stage 2 Circle: KẾT NỐI (1170:78989) -->
+            <div class="col-stage-circle-wrap" data-node-id="I1170:79500;1170:78989">
+              <div class="col-stage-circle-inner">
+                <div class="col-stage-icon-box">
+                  <img src="./assets/98d176cb29c473c45bd0ee21d7d1947a70520c26.svg" alt="Kết nối" class="col-stage-icon" />
+                </div>
+                <div class="col-stage-circle-texture">
+                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                </div>
               </div>
             </div>
 
-            <!-- Step 4: GIẢI QUYẾT (1170:79535) -->
-            <div class="col-step-item" data-node-id="1170:79535">
-              <div class="col-step-circle">
-                <img src="./assets/dd24e34069b945e8c9e3d666c7a3ac041e5e4876.svg" alt="Dấu kiểm" class="col-step-icon" />
-              </div>
-              <div class="col-step-info">
-                <h3 class="col-step-title" data-node-id="1170:79536">GIẢI QUYẾT</h3>
-                <p class="col-step-desc" data-node-id="1170:79537">Tìm ra sự thật cuối cùng.</p>
+            <!-- Connecting Line 2 (1170:79006) -->
+            <div class="col-stage-connector-line" data-node-id="I1170:79500;1170:79006"></div>
+
+            <!-- Stage 3 Circle: GIẢI QUYẾT (1170:78994) -->
+            <div class="col-stage-circle-wrap" data-node-id="I1170:79500;1170:78994">
+              <div class="col-stage-circle-inner">
+                <div class="col-stage-icon-box">
+                  <img src="./assets/bbecf51c2645f989c575bfc5c9cb5a0bbb758a0c.svg" alt="Giải quyết" class="col-stage-icon" />
+                </div>
+                <div class="col-stage-circle-texture">
+                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                </div>
               </div>
             </div>
 
           </div>
+
+          <!-- Stepper Text Descriptions (1170:79538) -->
+          <div class="col-stepper-labels-row" data-node-id="1170:79538">
+            
+            <!-- Stage 1 Label (1170:79527) -->
+            <div class="col-stage-label-box" data-node-id="1170:79527">
+              <h3 class="col-stage-label-title" data-node-id="1170:78908">THU THẬP</h3>
+              <p class="col-stage-label-desc" data-node-id="1170:78910">
+                Tìm kiếm mọi đồ vật khả nghi.
+              </p>
+            </div>
+
+            <!-- Stage 2 Label (1170:79532) -->
+            <div class="col-stage-label-box" data-node-id="1170:79532">
+              <h3 class="col-stage-label-title" data-node-id="1170:79533">KẾT NỐI</h3>
+              <p class="col-stage-label-desc" data-node-id="1170:79534">
+                Kết nối các mảnh vỡ thông tin.
+              </p>
+            </div>
+
+            <!-- Stage 3 Label (1170:79535) -->
+            <div class="col-stage-label-box" data-node-id="1170:79535">
+              <h3 class="col-stage-label-title" data-node-id="1170:79536">GIẢI QUYẾT</h3>
+              <p class="col-stage-label-desc" data-node-id="1170:79537">
+                Tìm ra sự thật cuối cùng.
+              </p>
+            </div>
+
+          </div>
+
         </div>
 
         <!-- End Gameplay Milestone Block (1170:79541) -->
         <div class="col-end-milestone-block trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1170:79541">
           <div class="col-milestone-sub">
-            BẠN ĐÃ ĐI CUỐI CHẶNG ĐƯỜNG CỦA GAMEPLAY RỒI,<br/>
-            BẠN CÓ THỂ HIỂU SƠ VỀ CÁCH CHƠI.
+            <p class="col-milestone-sub-line">BẠN ĐÃ ĐI CUỐI CHẶNG ĐƯỜNG CỦA GAMEPLAY RỒI,</p>
+            <p class="col-milestone-sub-line">BẠN CÓ THỂ HIỂU SƠ VỀ CÁCH CHƠI.</p>
           </div>
           <h2 class="col-milestone-main" data-node-id="1170:79578">
             BẠN CÓ MUỐN KHÁM PHÁ THÊM KHÔNG?
           </h2>
           <div class="col-milestone-actions" data-node-id="1170:79594">
-            <a href="#investigation" class="col-horror-cta-btn" data-node-id="1170:79582">
-              <span class="col-horror-btn-text">Đi đến Điều Tra</span>
+            
+            <!-- Button 1: Đi đến Điều Tra (1170:79582) -->
+            <a href="#investigation" class="col-horror-cta-btn" data-node-id="1170:79582" aria-label="Đi đến Điều Tra">
+              <div class="col-btn-frame-bg">
+                <img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" class="col-btn-part-1" />
+                <div class="col-btn-part-2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                <img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" class="col-btn-part-3" />
+                <div class="col-btn-part-4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                <img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" class="col-btn-part-5" />
+              </div>
+              <div class="col-btn-inner-body">
+                <div class="col-btn-grad-overlay"></div>
+                <div class="col-btn-texture-wrap">
+                  <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" alt="" class="col-btn-texture-img" />
+                </div>
+              </div>
+              <div class="col-btn-glow-frame-3"></div>
+              <div class="col-btn-glow-frame-2"></div>
+              <div class="col-btn-glow-frame-1"></div>
+              <span class="col-btn-label-text">Đi đến Điều Tra</span>
             </a>
-            <a href="#puzzle" class="col-horror-cta-btn" data-node-id="1170:79561">
-              <span class="col-horror-btn-text">Đi đến Giải Đố</span>
+
+            <!-- Button 2: Đi đến Giải Đố (1170:79561) -->
+            <a href="#puzzle" class="col-horror-cta-btn" data-node-id="1170:79561" aria-label="Đi đến Giải Đố">
+              <div class="col-btn-frame-bg">
+                <img src="./assets/105ebc7cda031fdb485695b18a341cec252f1d95.png" alt="" class="col-btn-part-1" />
+                <div class="col-btn-part-2" style="background-image: url('./assets/a1b7e3991a46b5a64f1f7dac3536b09a9e87a8ba.png');"></div>
+                <img src="./assets/0d6b9966ff2827a216126f97de3fae66e8b0f69d.png" alt="" class="col-btn-part-3" />
+                <div class="col-btn-part-4" style="background-image: url('./assets/a52a7c4b8dc8beffb2f5577f0501b16b1cfce647.png');"></div>
+                <img src="./assets/18c99e59fbe5fb1f1a0cf0ff28f9c309e0b87822.png" alt="" class="col-btn-part-5" />
+              </div>
+              <div class="col-btn-inner-body">
+                <div class="col-btn-grad-overlay"></div>
+                <div class="col-btn-texture-wrap">
+                  <img src="./assets/ea8df93482c54ccfe7b61d0a530fea954eb54fd3.png" alt="" class="col-btn-texture-img" />
+                </div>
+              </div>
+              <div class="col-btn-glow-frame-3"></div>
+              <div class="col-btn-glow-frame-2"></div>
+              <div class="col-btn-glow-frame-1"></div>
+              <span class="col-btn-label-text">Đi đến Giải Đố</span>
             </a>
+
           </div>
         </div>
 
