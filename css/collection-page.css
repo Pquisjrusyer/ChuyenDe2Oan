@@ -354,8 +354,8 @@
 
 .col-card-item {
   position: relative;
-  width: 308px;
-  height: 457px;
+  width: 312px;
+  height: 461px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
@@ -373,7 +373,7 @@
 .col-card-svg-full {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
   display: block;
   pointer-events: none;
 }
