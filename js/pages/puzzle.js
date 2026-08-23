@@ -16,13 +16,12 @@ export async function renderPuzzle(container) {
         <div class="puz-hero-frame-container trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1104:77670">
           
           <!-- Cryptex Dossier Collage Background (1104:77687) -->
-          <div class="puz-hero-bg-media">
+          <div class="puz-hero-bg-media" data-node-id="1104:77687">
             <img src="./assets/65a0dd2d91ef9f5c23b145b3fda30ee1285a3e8a.png" alt="Cryptex Dossier" class="puz-hero-bg-img" />
-            <div class="puz-hero-bg-gradient-vignette"></div>
           </div>
 
           <!-- Hero Typography Right (1104:77675) -->
-          <div class="puz-hero-content-right">
+          <div class="puz-hero-content-right" data-node-id="1104:77675">
             <h1 class="puz-hero-main-title" data-node-id="1104:77671">GIẢI ĐỐ</h1>
             <div class="puz-hero-subtitle-box" data-node-id="1104:77672">
               <p class="puz-hero-subtitle-line">Quan sát, suy luận và tìm ra lời giải. Những bí mật ẩn giấu trong bóng tối chỉ</p>
