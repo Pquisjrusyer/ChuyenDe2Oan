@@ -200,14 +200,33 @@
   box-sizing: border-box;
 }
 
+/* Shadow / Ambient Overlay Ellipse under Photo (1135:78657) */
+.col-truth-photo-shadow-overlay {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%) rotate(179.3deg);
+  width: 105%;
+  max-width: 950px;
+  height: 240px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.col-truth-photo-shadow-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
 .col-truth-photo-inner {
   position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 896 / 568;
-  border: 2px solid #5a0000;
   box-sizing: border-box;
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
   border-radius: 4px;
 }
 

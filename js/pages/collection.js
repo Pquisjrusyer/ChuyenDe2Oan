@@ -52,6 +52,10 @@ export async function renderCollection(container) {
           
           <!-- Left Photo Frame (1135:78577) -->
           <div class="col-truth-photo-wrap trailer-scroll-reveal trailer-reveal-left" data-node-id="1135:78577">
+            <!-- Shadow Overlay Under Photo (1135:78657) -->
+            <div class="col-truth-photo-shadow-overlay" data-node-id="1135:78657">
+              <img src="./assets/dd24e34069b945e8c9e3d666c7a3ac041e5e4876.svg" alt="" class="col-truth-photo-shadow-img" />
+            </div>
             <div class="col-truth-photo-inner" data-node-id="1135:78575">
               <img src="./assets/4b61077399c45a2c9a245fffbd7d5b2b0de19ff8.png" alt="Bóc tách lớp vỏ sự thật" class="col-truth-photo-img" />
             </div>
