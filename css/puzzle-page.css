@@ -663,6 +663,7 @@
   width: 100%;
   padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px) 120px;
   box-sizing: border-box;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75%, #010101 100%);
   overflow: hidden;
 }
 
