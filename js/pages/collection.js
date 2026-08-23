@@ -197,77 +197,114 @@ export async function renderCollection(container) {
           </div>
         </div>
 
-        <!-- Stepper: 3 Process Stages (1170:79540) -->
+        <!-- Stepper: 4 Process Stages (1170:79540) -->
         <div class="col-stepper-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1170:79540">
           
-          <!-- Stepper Visual Track & Circles (1170:79500) -->
+          <!-- Stepper Visual Track & 4 Circles (1170:79500) -->
           <div class="col-stepper-track-row" data-node-id="1170:79500">
             
-            <!-- Stage 1 Circle: THU THẬP (1170:78982) -->
-            <div class="col-stage-circle-wrap" data-node-id="1170:78982">
-              <div class="col-stage-circle-inner">
-                <div class="col-stage-icon-box">
-                  <img src="./assets/ac8ed7f557af218b5a03a63cbb2c09f857bcc61b.svg" alt="Thu thập" class="col-stage-icon" />
-                </div>
-                <div class="col-stage-circle-texture">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+            <!-- Stage 1: THU THẬP (1170:78982) -->
+            <div class="col-stage-node col-stage-node--active" data-step="1" data-node-id="1170:78982">
+              <div class="col-stage-circle-wrap">
+                <div class="col-stage-circle-inner">
+                  <div class="col-stage-icon-box">
+                    <img src="./assets/ac8ed7f557af218b5a03a63cbb2c09f857bcc61b.svg" alt="Thu thập" class="col-stage-icon" />
+                  </div>
+                  <div class="col-stage-circle-texture">
+                    <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Connecting Line 1 (1170:79005) -->
-            <div class="col-stage-connector-line" data-node-id="I1170:79500;1170:79005"></div>
+            <div class="col-stage-connector-line col-stage-connector-line--active" data-line="1" data-node-id="I1170:79500;1170:79005">
+              <div class="col-stage-connector-fill"></div>
+            </div>
 
-            <!-- Stage 2 Circle: KẾT NỐI (1170:78989) -->
-            <div class="col-stage-circle-wrap" data-node-id="I1170:79500;1170:78989">
-              <div class="col-stage-circle-inner">
-                <div class="col-stage-icon-box">
-                  <img src="./assets/98d176cb29c473c45bd0ee21d7d1947a70520c26.svg" alt="Kết nối" class="col-stage-icon" />
-                </div>
-                <div class="col-stage-circle-texture">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+            <!-- Stage 2: PHÂN TÍCH (1170:78989) -->
+            <div class="col-stage-node" data-step="2" data-node-id="I1170:79500;1170:78989">
+              <div class="col-stage-circle-wrap">
+                <div class="col-stage-circle-inner">
+                  <div class="col-stage-icon-box">
+                    <img src="./assets/98d176cb29c473c45bd0ee21d7d1947a70520c26.svg" alt="Phân tích" class="col-stage-icon" />
+                  </div>
+                  <div class="col-stage-circle-texture">
+                    <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- Connecting Line 2 (1170:79006) -->
-            <div class="col-stage-connector-line" data-node-id="I1170:79500;1170:79006"></div>
+            <div class="col-stage-connector-line" data-line="2" data-node-id="I1170:79500;1170:79006">
+              <div class="col-stage-connector-fill"></div>
+            </div>
 
-            <!-- Stage 3 Circle: GIẢI QUYẾT (1170:78994) -->
-            <div class="col-stage-circle-wrap" data-node-id="I1170:79500;1170:78994">
-              <div class="col-stage-circle-inner">
-                <div class="col-stage-icon-box">
-                  <img src="./assets/bbecf51c2645f989c575bfc5c9cb5a0bbb758a0c.svg" alt="Giải quyết" class="col-stage-icon" />
+            <!-- Stage 3: KẾT NỐI (1170:78994) -->
+            <div class="col-stage-node" data-step="3" data-node-id="I1170:79500;1170:78994">
+              <div class="col-stage-circle-wrap">
+                <div class="col-stage-circle-inner">
+                  <div class="col-stage-icon-box">
+                    <img src="./assets/bbecf51c2645f989c575bfc5c9cb5a0bbb758a0c.svg" alt="Kết nối" class="col-stage-icon" />
+                  </div>
+                  <div class="col-stage-circle-texture">
+                    <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                  </div>
                 </div>
-                <div class="col-stage-circle-texture">
-                  <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+              </div>
+            </div>
+
+            <!-- Connecting Line 3 (1170:79007) -->
+            <div class="col-stage-connector-line" data-line="3" data-node-id="I1170:79500;1170:79007">
+              <div class="col-stage-connector-fill"></div>
+            </div>
+
+            <!-- Stage 4: GIẢI QUYẾT (1170:78999) -->
+            <div class="col-stage-node" data-step="4" data-node-id="I1170:79500;1170:78999">
+              <div class="col-stage-circle-wrap">
+                <div class="col-stage-circle-inner">
+                  <div class="col-stage-icon-box">
+                    <img src="./assets/be3296b9ce5ded318ffd6d9bf0f42d1f78b0eb12.svg" alt="Giải quyết" class="col-stage-icon" />
+                  </div>
+                  <div class="col-stage-circle-texture">
+                    <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
 
           </div>
 
-          <!-- Stepper Text Descriptions (1170:79538) -->
+          <!-- Stepper 4 Text Descriptions (1170:79538) -->
           <div class="col-stepper-labels-row" data-node-id="1170:79538">
             
             <!-- Stage 1 Label (1170:79527) -->
-            <div class="col-stage-label-box" data-node-id="1170:79527">
+            <div class="col-stage-label-box col-stage-label-box--active" data-step-label="1" data-node-id="1170:79527">
               <h3 class="col-stage-label-title" data-node-id="1170:78908">THU THẬP</h3>
               <p class="col-stage-label-desc" data-node-id="1170:78910">
-                Tìm kiếm mọi đồ vật khả nghi.
+                Thu thập manh mối từ hiện trường.
               </p>
             </div>
 
-            <!-- Stage 2 Label (1170:79532) -->
-            <div class="col-stage-label-box" data-node-id="1170:79532">
+            <!-- Stage 2 Label (1170:79528) -->
+            <div class="col-stage-label-box" data-step-label="2" data-node-id="1170:79528">
+              <h3 class="col-stage-label-title" data-node-id="1170:79529">PHÂN TÍCH</h3>
+              <p class="col-stage-label-desc" data-node-id="1170:79530">
+                Phân tích chi tiết tại phòng thí nghiệm.
+              </p>
+            </div>
+
+            <!-- Stage 3 Label (1170:79532) -->
+            <div class="col-stage-label-box" data-step-label="3" data-node-id="1170:79532">
               <h3 class="col-stage-label-title" data-node-id="1170:79533">KẾT NỐI</h3>
               <p class="col-stage-label-desc" data-node-id="1170:79534">
                 Kết nối các mảnh vỡ thông tin.
               </p>
             </div>
 
-            <!-- Stage 3 Label (1170:79535) -->
-            <div class="col-stage-label-box" data-node-id="1170:79535">
+            <!-- Stage 4 Label (1170:79535) -->
+            <div class="col-stage-label-box" data-step-label="4" data-node-id="1170:79535">
               <h3 class="col-stage-label-title" data-node-id="1170:79536">GIẢI QUYẾT</h3>
               <p class="col-stage-label-desc" data-node-id="1170:79537">
                 Tìm ra sự thật cuối cùng.
@@ -358,6 +395,76 @@ export async function renderCollection(container) {
   } else {
     scrollTargets.forEach(el => el.classList.add('revealed'));
   }
+
+  // Interactive Progress Stepper (1170:79540)
+  const stageNodes = container.querySelectorAll('.col-stage-node');
+  const stageLabels = container.querySelectorAll('.col-stage-label-box');
+  const connectorLines = container.querySelectorAll('.col-stage-connector-line');
+
+  function setActiveStep(stepNum) {
+    stageNodes.forEach(node => {
+      const step = parseInt(node.getAttribute('data-step'), 10);
+      if (step <= stepNum) {
+        node.classList.add('col-stage-node--active');
+        if (step === stepNum) {
+          node.classList.add('col-stage-node--current');
+        } else {
+          node.classList.remove('col-stage-node--current');
+        }
+      } else {
+        node.classList.remove('col-stage-node--active');
+        node.classList.remove('col-stage-node--current');
+      }
+    });
+
+    stageLabels.forEach(label => {
+      const step = parseInt(label.getAttribute('data-step-label'), 10);
+      if (step === stepNum) {
+        label.classList.add('col-stage-label-box--current');
+        label.classList.add('col-stage-label-box--active');
+      } else if (step < stepNum) {
+        label.classList.add('col-stage-label-box--active');
+        label.classList.remove('col-stage-label-box--current');
+      } else {
+        label.classList.remove('col-stage-label-box--active');
+        label.classList.remove('col-stage-label-box--current');
+      }
+    });
+
+    connectorLines.forEach(line => {
+      const lineIndex = parseInt(line.getAttribute('data-line'), 10);
+      if (lineIndex < stepNum) {
+        line.classList.add('col-stage-connector-line--active');
+      } else {
+        line.classList.remove('col-stage-connector-line--active');
+      }
+    });
+  }
+
+  stageNodes.forEach(node => {
+    node.addEventListener('click', () => {
+      const step = parseInt(node.getAttribute('data-step'), 10);
+      setActiveStep(step);
+    });
+    node.addEventListener('mouseenter', () => {
+      const step = parseInt(node.getAttribute('data-step'), 10);
+      setActiveStep(step);
+    });
+  });
+
+  stageLabels.forEach(label => {
+    label.addEventListener('click', () => {
+      const step = parseInt(label.getAttribute('data-step-label'), 10);
+      setActiveStep(step);
+    });
+    label.addEventListener('mouseenter', () => {
+      const step = parseInt(label.getAttribute('data-step-label'), 10);
+      setActiveStep(step);
+    });
+  });
+
+  // Default active step: 1
+  setActiveStep(1);
 
   // Interactive Inventory Slots
   const slots = container.querySelectorAll('.col-slot');
