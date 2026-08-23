@@ -1,0 +1,944 @@
+/* ========================================================
+   OAN — PUZZLE PAGE (GIẢI ĐỐ) STYLESHEET
+   Figma Node: 1104:77421
+   ======================================================== */
+
+.puzzle-page-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, #000000 0%, #240202 50%, #040101 100%);
+  color: #ffffff;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* ========================================================
+   1. HERO SECTION (1104:77669)
+   ======================================================== */
+.puz-hero-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(100px, 14vh, 180px) clamp(20px, 4vw, 80px) clamp(60px, 8vh, 100px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.puz-hero-frame-container {
+  position: relative;
+  width: 100%;
+  max-width: 1576px;
+  min-height: clamp(480px, 50vw, 696px);
+  margin: 0 auto;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: clamp(30px, 4vw, 60px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.95);
+  z-index: 2;
+}
+
+.puz-hero-bg-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.puz-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  transform: scale(1.02);
+  filter: contrast(1.1) brightness(0.85);
+}
+
+.puz-hero-bg-gradient-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.92) 100%);
+  pointer-events: none;
+}
+
+.puz-hero-content-right {
+  position: relative;
+  z-index: 3;
+  max-width: 988px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: clamp(12px, 1.8vw, 24px);
+}
+
+.puz-hero-main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(48px, 6.5vw, 128px);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: clamp(2px, 0.4vw, 4px);
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.95;
+  text-shadow: 0 0 35px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.puz-hero-subtitle-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.puz-hero-subtitle-line {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: clamp(14px, 1.2vw, 20px);
+  font-weight: 300;
+  color: #c4c7c8;
+  letter-spacing: -0.4px;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.puz-hero-grunge-overlay {
+  position: absolute;
+  inset: -10%;
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  mix-blend-mode: darken;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.puz-hero-grunge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========================================================
+   2. CORE MECHANISM SECTION (1104:77685)
+   ======================================================== */
+.puz-coche-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 4vw, 80px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.puz-coche-inner-container {
+  max-width: 1720px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 5vw, 90px);
+  align-items: center;
+}
+
+/* Left Column: Tilted REC Monitor & Tags */
+.puz-coche-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(40px, 6vh, 60px);
+  width: 100%;
+}
+
+.puz-coche-monitor-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  transform: rotate(-6.86deg);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.puz-coche-monitor-wrap:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* Plaque Tag: #02 CƠ CHẾ CỐT LÕI */
+.puz-coche-plaque-tag {
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  background: linear-gradient(135deg, #2a1805 0%, #150a02 100%);
+  border: 1px solid #784e0e;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(120, 78, 14, 0.4);
+  padding: 6px 20px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
+  transform: rotate(-2deg);
+}
+
+.puz-coche-tag-number {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ee1b10;
+  letter-spacing: 0.5px;
+}
+
+.puz-coche-tag-text {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffd700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Monitor Screen Box */
+.puz-coche-screen-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #b94904;
+  border-image: linear-gradient(45deg, #784e0e 0%, #000000 50%, #7d5d2c 100%) 1;
+  box-sizing: border-box;
+  background: #000000;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
+}
+
+.puz-coche-screen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Scanlines & Noise */
+.puz-coche-scanlines {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* REC Live Recording Tag */
+.puz-coche-rec-badge {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.puz-coche-rec-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff0000;
+  box-shadow: 0 0 10px #ff0000;
+  animation: puzRecBlink 1.2s infinite;
+}
+
+@keyframes puzRecBlink {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.85); }
+}
+
+.puz-coche-rec-text {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Battery Status Indicator */
+.puz-coche-battery-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3;
+}
+
+.puz-coche-battery-icon {
+  width: 32px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  padding: 2px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.puz-coche-battery-icon::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: 4px;
+  width: 2px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0 1px 1px 0;
+}
+
+.puz-coche-battery-level {
+  display: block;
+  width: 65%;
+  height: 100%;
+  background: #00ff66;
+  box-shadow: 0 0 6px rgba(0, 255, 102, 0.6);
+}
+
+/* 3 Cut-Corner Tag Buttons (1135:76902) */
+.puz-coche-tags-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 1.8vw, 20px);
+}
+
+.puz-tag-card {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, rgba(30, 5, 5, 0.8) 0%, rgba(10, 2, 2, 0.9) 100%);
+  padding: 16px 12px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.puz-tag-card:hover,
+.puz-tag-card--active {
+  border-color: #d9b74c;
+  background: linear-gradient(135deg, rgba(60, 10, 10, 0.9) 0%, rgba(20, 5, 5, 0.95) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(217, 183, 76, 0.35);
+}
+
+.puz-tag-icon-wrap {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puz-tag-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.puz-tag-text-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.puz-tag-heading {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 13px;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.puz-tag-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: #d9b74c;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/* Right Column: Narrative & Investigation Note */
+.puz-coche-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(30px, 4vh, 50px);
+  align-items: flex-start;
+}
+
+.puz-coche-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.puz-coche-main-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(36px, 4.2vw, 64px);
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 1px;
+  margin: 0;
+  text-shadow: 0 0 25px rgba(238, 27, 16, 0.4);
+}
+
+.puz-coche-desc {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: clamp(16px, 1.1vw, 20px);
+  font-weight: 400;
+  color: #c4c7c8;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 680px;
+}
+
+.puz-highlight-crimson {
+  color: #ee1b10;
+  font-weight: 700;
+}
+
+/* Investigation Note (1135:76931) */
+.puz-coche-note-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.puz-note-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ee1b10;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.puz-note-quote-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.puz-quote-symbol {
+  font-family: 'Space Mono', monospace;
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.puz-quote-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.puz-quote-line {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(14px, 1.1vw, 18px);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.puz-quote-line--offset {
+  padding-left: 24px;
+}
+
+/* ========================================================
+   3. PUZZLE TYPES: CÁC LOẠI CÂU ĐỐ (1135:76940)
+   ======================================================== */
+.puz-types-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Plaque Banner Header */
+.puz-plaque-header-box {
+  position: relative;
+  width: 100%;
+  max-width: 794px;
+  min-height: 149px;
+  margin: 0 auto clamp(40px, 6vh, 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puz-plaque-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.puz-plaque-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.puz-plaque-header-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(24px, 2.5vw, 40px);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.95);
+  letter-spacing: 0.5px;
+}
+
+/* 4 Puzzle Cards Grid (1135:77146) */
+.puz-types-grid {
+  max-width: 1632px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 2.2vw, 32px);
+}
+
+.puz-type-card {
+  position: relative;
+  border: 2px solid #5a0000;
+  background: linear-gradient(180deg, #180202 0%, #080000 100%);
+  border-radius: 4px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+  cursor: pointer;
+}
+
+.puz-type-card:hover {
+  border-color: #d9b74c;
+  background: linear-gradient(180deg, #260505 0%, #100000 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.35);
+}
+
+.puz-card-media-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(217, 183, 76, 0.3);
+  box-sizing: border-box;
+  background: #000000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.puz-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.puz-type-card:hover .puz-card-img {
+  transform: scale(1.05);
+}
+
+.puz-card-media-box--mystery {
+  background: radial-gradient(circle at center, #1a0000 0%, #050000 100%);
+}
+
+.puz-mystery-mark {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(56px, 5vw, 84px);
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 25px rgba(217, 183, 76, 0.6);
+  animation: puzMysteryFloat 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes puzMysteryFloat {
+  0% { transform: translateY(-4px) scale(0.96); opacity: 0.85; }
+  100% { transform: translateY(4px) scale(1.04); opacity: 1; text-shadow: 0 0 35px rgba(217, 183, 76, 0.8); }
+}
+
+.puz-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.puz-card-title {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(14px, 1.2vw, 18px);
+  color: #d9b74c;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.puz-card-desc {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: #c4c7c8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Bottom Tag Button */
+.puz-types-footer-action {
+  width: 100%;
+  max-width: 1632px;
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.puz-mysteries-tag-btn {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #d9b74c;
+  border: 1.5px solid #d9b74c;
+  padding: 10px 24px;
+  border-radius: 4px;
+  background: rgba(20, 5, 5, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.puz-mysteries-tag-btn:hover {
+  background: #d9b74c;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(217, 183, 76, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ========================================================
+   4. HINT SYSTEM: CƠ CHẾ GỢI Ý & TIẾP TỤC (1135:77268)
+   ======================================================== */
+.puz-hints-section {
+  position: relative;
+  width: 100%;
+  padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px) 120px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Accordion Container */
+.puz-accordion-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto clamp(60px, 8vh, 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.puz-accordion-item {
+  border: 1px solid #3c0101;
+  background: linear-gradient(180deg, #150202 0%, #090000 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85);
+  transition: border-color 0.3s ease;
+}
+
+.puz-accordion-item--open {
+  border-color: #d9b74c;
+}
+
+.puz-accordion-header {
+  width: 100%;
+  padding: 24px 32px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+}
+
+.puz-accordion-title {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(18px, 1.8vw, 24px);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.puz-accordion-icon {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 24px;
+  color: #d9b74c;
+  transition: transform 0.3s ease;
+}
+
+.puz-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.puz-accordion-item--open .puz-accordion-body {
+  max-height: 200px;
+  padding: 0 32px 24px;
+}
+
+.puz-accordion-text {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #c4c7c8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Continue Challenge CTA */
+.puz-continue-challenge-block {
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.puz-continue-title {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(24px, 2.8vw, 40px);
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.25;
+  letter-spacing: 0.8px;
+  margin: 0;
+  text-shadow: 0 0 25px rgba(238, 27, 16, 0.4);
+}
+
+.puz-continue-desc {
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: 14px;
+  color: #c4c7c8;
+  margin: 0;
+}
+
+/* Horror CTA Button */
+.puz-horror-cta-btn {
+  position: relative;
+  width: 374px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.puz-horror-cta-btn:hover {
+  transform: scale(1.05);
+  filter: brightness(1.15) drop-shadow(0 0 25px rgba(238, 27, 16, 0.8));
+}
+
+.puz-btn-frame-bg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.puz-btn-part-1 {
+  width: 15px;
+  height: 70px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.puz-btn-part-2 {
+  flex: 1;
+  height: 70px;
+  background-size: 25px 70px;
+  background-repeat: repeat-x;
+}
+
+.puz-btn-part-3 {
+  width: 146px;
+  height: 70px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.puz-btn-part-4 {
+  flex: 1;
+  height: 70px;
+  background-size: 18px 70px;
+  background-repeat: repeat-x;
+}
+
+.puz-btn-part-5 {
+  width: 30px;
+  height: 70px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.puz-btn-inner-body {
+  position: absolute;
+  inset: 3px 4px;
+  border: 1px solid #000000;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.puz-btn-grad-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #593b0c 0%, #b10e07 100%);
+}
+
+.puz-btn-texture-wrap {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.puz-btn-texture-img {
+  position: absolute;
+  top: -180%;
+  left: -8%;
+  width: 192%;
+  height: 490%;
+  object-fit: cover;
+}
+
+.puz-btn-glow-frame-3 {
+  position: absolute;
+  inset: 6px;
+  border: 5px solid #ee1b10;
+  filter: blur(1.2px);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.puz-btn-glow-frame-2 {
+  position: absolute;
+  inset: 6px;
+  border: 3px solid #ee1b10;
+  box-shadow: 0 0 4px 0px red;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.puz-btn-glow-frame-1 {
+  position: absolute;
+  inset: 6px;
+  border: 0.6px solid #c0552f;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.puz-btn-label-text {
+  position: relative;
+  z-index: 6;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: -0.4px;
+  white-space: nowrap;
+}
+
+/* ========================================================
+   RESPONSIVE ADAPTATIONS
+   ======================================================== */
+@media (max-width: 1200px) {
+  .puz-coche-inner-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .puz-types-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .puz-hero-frame-container {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .puz-hero-content-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .puz-hero-main-title {
+    text-align: center;
+  }
+
+  .puz-hero-subtitle-line {
+    text-align: center;
+  }
+
+  .puz-types-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .puz-coche-tags-row {
+    grid-template-columns: 1fr;
+  }
+
+  .puz-horror-cta-btn {
+    width: 100%;
+    max-width: 340px;
+  }
+}
