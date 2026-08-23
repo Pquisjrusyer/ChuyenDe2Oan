@@ -657,8 +657,37 @@
   overflow: hidden;
 }
 
+/* Vignette Gradients (1135:77604 & 1135:77605) */
+.puz-hints-vignette-left {
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: clamp(280px, 22vw, 420px);
+  height: 968px;
+  background: linear-gradient(270deg, #080302 0%, #200101 100%);
+  filter: blur(42.8px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.puz-hints-vignette-right {
+  position: absolute;
+  top: 49px;
+  right: 0;
+  width: clamp(280px, 23vw, 436px);
+  height: 968px;
+  background: linear-gradient(90deg, #080302 0%, #200101 100%);
+  filter: blur(42.8px);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.9;
+}
+
 /* Accordion Container (Options - 1135:77295) */
 .puz-accordion-container {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 1120px;
   margin: 0 auto clamp(60px, 8vh, 100px);
@@ -783,6 +812,8 @@
 
 /* Continue Challenge CTA (1135:77840) */
 .puz-continue-challenge-block {
+  position: relative;
+  z-index: 2;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;

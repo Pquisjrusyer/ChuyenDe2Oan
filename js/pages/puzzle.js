@@ -265,6 +265,10 @@ export async function renderPuzzle(container) {
            ======================================================== -->
       <section class="puz-hints-section" data-node-id="1135:77268">
         
+        <!-- Vignette Gradients (1135:77604 & 1135:77605) -->
+        <div class="puz-hints-vignette-left" data-node-id="1135:77604"></div>
+        <div class="puz-hints-vignette-right" data-node-id="1135:77605"></div>
+
         <!-- Plaque Banner Header (1135:77599) -->
         <div class="puz-plaque-header-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:77599">
           <div class="puz-plaque-bg" data-node-id="1135:77600">
