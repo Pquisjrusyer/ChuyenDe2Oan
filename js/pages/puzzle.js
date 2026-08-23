@@ -191,125 +191,53 @@ export async function renderPuzzle(container) {
           
           <!-- Card 1: Object Puzzle (1135:77043) -->
           <div class="puz-type-card-outer" data-node-id="1135:77043">
-            <div class="puz-type-card-black-border" data-node-id="1135:77025">
-              <div class="puz-type-card-body" data-node-id="1135:77026">
-                
-                <!-- Square Media Frame (1135:77028) -->
-                <div class="puz-card-media-square" data-node-id="1135:77028">
-                  <img src="./assets/15a6f683190f3ec6cff80a4065f1046ffd59d9a0.png" alt="Object Puzzle" class="puz-card-img" />
-                </div>
-
-                <!-- Title (1135:77035) -->
-                <div class="puz-card-title-wrap" data-node-id="1135:77034">
-                  <h3 class="puz-card-heading-gold" data-node-id="1135:77035">OBJECT PUZZLE</h3>
-                </div>
-
-                <!-- Scratch Overlay (1135:77036) -->
-                <div class="puz-card-scratch-overlay" data-node-id="1135:77036">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
-
-                <!-- Description (1135:77038) -->
-                <div class="puz-card-desc-wrap" data-node-id="1135:77037">
-                  <p class="puz-card-desc-mono" data-node-id="1135:77038">
-                    Tương tác trực tiếp với các cổ vật, xoay chuyển và tìm ra cơ quan ẩn giấu bên trong.
-                  </p>
-                </div>
-
-              </div>
+            <div class="puz-type-card-svg-wrap">
+              <img src="./assets/cau-do.svg" alt="Object Puzzle" class="puz-type-card-svg-bg" />
+            </div>
+            <div class="puz-type-card-text-content">
+              <h3 class="puz-card-heading-gold" data-node-id="1135:77035">OBJECT PUZZLE</h3>
+              <p class="puz-card-desc-mono" data-node-id="1135:77038">
+                Tương tác trực tiếp với các cổ vật, xoay chuyển và tìm ra cơ quan ẩn giấu bên trong.
+              </p>
             </div>
           </div>
 
           <!-- Card 2: Logic Puzzle (1135:77110) -->
           <div class="puz-type-card-outer" data-node-id="1135:77110">
-            <div class="puz-type-card-black-border" data-node-id="I1135:77110;1135:77025">
-              <div class="puz-type-card-body" data-node-id="I1135:77110;1135:77026">
-                
-                <!-- Square Media Frame (1135:77028) -->
-                <div class="puz-card-media-square" data-node-id="I1135:77110;1135:77028">
-                  <img src="./assets/c73dce09bceb4417c3bbff6a505e25fe4de7c8b2.png" alt="Logic Puzzle" class="puz-card-img" />
-                </div>
-
-                <!-- Title (1135:77035) -->
-                <div class="puz-card-title-wrap" data-node-id="I1135:77110;1135:77034">
-                  <h3 class="puz-card-heading-gold" data-node-id="I1135:77110;1135:77035">LOGIC PUZZLE</h3>
-                </div>
-
-                <!-- Scratch Overlay (1135:77036) -->
-                <div class="puz-card-scratch-overlay" data-node-id="I1135:77110;1135:77036">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
-
-                <!-- Description (1135:77038) -->
-                <div class="puz-card-desc-wrap" data-node-id="I1135:77110;1135:77037">
-                  <p class="puz-card-desc-mono" data-node-id="I1135:77110;1135:77038">
-                    Sử dụng tài liệu thu thập được để giải mã những quy luật huyền bí và trình tự nghi lễ.
-                  </p>
-                </div>
-
-              </div>
+            <div class="puz-type-card-svg-wrap">
+              <img src="./assets/cau-do.svg" alt="Logic Puzzle" class="puz-type-card-svg-bg" />
+            </div>
+            <div class="puz-type-card-text-content">
+              <h3 class="puz-card-heading-gold" data-node-id="I1135:77110;1135:77035">LOGIC PUZZLE</h3>
+              <p class="puz-card-desc-mono" data-node-id="I1135:77110;1135:77038">
+                Sử dụng tài liệu thu thập được để giải mã những quy luật huyền bí và trình tự nghi lễ.
+              </p>
             </div>
           </div>
 
           <!-- Card 3: Environmental (1135:77122) -->
           <div class="puz-type-card-outer" data-node-id="1135:77122">
-            <div class="puz-type-card-black-border" data-node-id="I1135:77122;1135:77025">
-              <div class="puz-type-card-body" data-node-id="I1135:77122;1135:77026">
-                
-                <!-- Square Media Frame (1135:77028) -->
-                <div class="puz-card-media-square puz-card-media-square--env" data-node-id="I1135:77122;1135:77028">
-                  <span class="puz-card-qmark-text" data-node-id="1135:77147">?</span>
-                </div>
-
-                <!-- Title (1135:77035) -->
-                <div class="puz-card-title-wrap" data-node-id="I1135:77122;1135:77034">
-                  <h3 class="puz-card-heading-gold" data-node-id="I1135:77122;1135:77035">ENVIRONMENTAL</h3>
-                </div>
-
-                <!-- Scratch Overlay (1135:77036) -->
-                <div class="puz-card-scratch-overlay" data-node-id="I1135:77122;1135:77036">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
-
-                <!-- Description (1135:77038) -->
-                <div class="puz-card-desc-wrap" data-node-id="I1135:77122;1135:77037">
-                  <p class="puz-card-desc-mono" data-node-id="I1135:77122;1135:77038">
-                    Thay đổi cấu trúc căn nhà bằng cách kích hoạt các cơ quan cổ xưa hoặc thắp nến.
-                  </p>
-                </div>
-
-              </div>
+            <div class="puz-type-card-svg-wrap">
+              <img src="./assets/cau-do.svg" alt="Environmental Puzzle" class="puz-type-card-svg-bg" />
+            </div>
+            <div class="puz-type-card-text-content">
+              <h3 class="puz-card-heading-gold" data-node-id="I1135:77122;1135:77035">ENVIRONMENTAL</h3>
+              <p class="puz-card-desc-mono" data-node-id="I1135:77122;1135:77038">
+                Thay đổi cấu trúc căn nhà bằng cách kích hoạt các cơ quan cổ xưa hoặc thắp nến.
+              </p>
             </div>
           </div>
 
           <!-- Card 4: Symbol Puzzle (1135:77134) -->
           <div class="puz-type-card-outer" data-node-id="1135:77134">
-            <div class="puz-type-card-black-border" data-node-id="I1135:77134;1135:77025">
-              <div class="puz-type-card-body" data-node-id="I1135:77134;1135:77026">
-                
-                <!-- Square Media Frame (1135:77028) -->
-                <div class="puz-card-media-square puz-card-media-square--sym" data-node-id="I1135:77134;1135:77028">
-                  <span class="puz-card-qmark-text" data-node-id="1135:77149">?</span>
-                </div>
-
-                <!-- Title (1135:77035) -->
-                <div class="puz-card-title-wrap" data-node-id="I1135:77134;1135:77034">
-                  <h3 class="puz-card-heading-gold" data-node-id="I1135:77134;1135:77035">SYMBOL PUZZLE</h3>
-                </div>
-
-                <!-- Scratch Overlay (1135:77036) -->
-                <div class="puz-card-scratch-overlay" data-node-id="I1135:77134;1135:77036">
-                  <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
-                </div>
-
-                <!-- Description (1135:77038) -->
-                <div class="puz-card-desc-wrap" data-node-id="I1135:77134;1135:77037">
-                  <p class="puz-card-desc-mono" data-node-id="I1135:77134;1135:77038">
-                    Giải mã hệ thống ký tự "Địa Linh" xuất hiện trên tường và trong các giấc mộng.
-                  </p>
-                </div>
-
-              </div>
+            <div class="puz-type-card-svg-wrap">
+              <img src="./assets/cau-do.svg" alt="Symbol Puzzle" class="puz-type-card-svg-bg" />
+            </div>
+            <div class="puz-type-card-text-content">
+              <h3 class="puz-card-heading-gold" data-node-id="I1135:77134;1135:77035">SYMBOL PUZZLE</h3>
+              <p class="puz-card-desc-mono" data-node-id="I1135:77134;1135:77038">
+                Giải mã hệ thống ký tự "Địa Linh" xuất hiện trên tường và trong các giấc mộng.
+              </p>
             </div>
           </div>
 

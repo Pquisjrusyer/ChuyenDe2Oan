@@ -500,154 +500,73 @@
 }
 
 .puz-type-card-outer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   width: 100%;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  aspect-ratio: 344 / 468;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
   cursor: pointer;
 }
 
 .puz-type-card-outer:hover {
   transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.35);
 }
 
-.puz-type-card-black-border {
-  border: 2px solid #000000;
-  padding: 4px;
-  box-sizing: border-box;
+.puz-type-card-svg-wrap {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: transparent;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.puz-type-card-body {
-  background: linear-gradient(180deg, #220000 0%, #320202 100%);
-  border: 1px solid #450000;
-  padding: 20px 16px;
+.puz-type-card-svg-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+.puz-type-card-text-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 18px 22px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-  min-height: 460px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.puz-type-card-outer:hover .puz-type-card-body {
-  border-color: #d9b74c;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 183, 76, 0.35);
-}
-
-.puz-card-media-square {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: 2px solid #aaaeaf;
-  background: #1a1a1a;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-}
-
-.puz-card-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.puz-type-card-outer:hover .puz-card-img {
-  transform: scale(1.06);
-}
-
-.puz-card-media-square--env {
-  background: linear-gradient(180deg, #1b0000 0%, #360202 100%);
-}
-
-.puz-card-media-square--sym {
-  background: linear-gradient(180deg, #2a0000 0%, #000000 100%);
-}
-
-.puz-card-qmark-text {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(64px, 6vw, 108px);
-  color: #ffffff;
-  line-height: 1;
   text-align: center;
-  text-shadow: 0 0 25px rgba(217, 183, 76, 0.6);
-  animation: puzMysteryFloat 2.5s ease-in-out infinite alternate;
-}
-
-@keyframes puzMysteryFloat {
-  0% { transform: translateY(-4px) scale(0.96); opacity: 0.85; }
-  100% { transform: translateY(4px) scale(1.04); opacity: 1; text-shadow: 0 0 35px rgba(217, 183, 76, 0.8); }
-}
-
-.puz-card-title-wrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 4px;
-  z-index: 2;
+  gap: 8px;
 }
 
 .puz-card-heading-gold {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: clamp(16px, 1.4vw, 24px);
-  line-height: 32px;
+  font-size: clamp(16px, 1.35vw, 22px);
+  line-height: 1.2;
   color: #d9b74c;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-}
-
-.puz-card-scratch-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  opacity: 0.7;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.puz-card-scratch-overlay img {
-  width: 180%;
-  height: 180%;
-  object-fit: cover;
-  transform: translate(-20%, -20%);
-}
-
-.puz-card-desc-wrap {
-  width: 100%;
-  padding: 0 8px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
 }
 
 .puz-card-desc-mono {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(12px, 1vw, 14px);
-  line-height: 20px;
+  font-size: clamp(11px, 0.95vw, 13px);
+  line-height: 1.45;
   color: #c7c6c6;
   text-align: center;
   margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 /* Bottom Tag Button (Button - 1135:77227) */
