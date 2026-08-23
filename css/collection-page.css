@@ -116,6 +116,19 @@
   display: block;
 }
 
+/* Dark Gradient Transition Overlay (Hero -> Section 2) */
+.col-hero-bottom-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(2, 0, 0, 0.4) 30%, rgba(5, 0, 0, 0.85) 75%, #050000 100%);
+  pointer-events: none;
+  z-index: 4;
+}
+
 /* ========================================================
    2. TRUTH & CATEGORIES SECTION (1135:78574)
    ======================================================== */
@@ -126,7 +139,7 @@
   margin: 0 auto;
   padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px);
   box-sizing: border-box;
-  background: linear-gradient(180deg, #000000 0%, #1d0000 43.14%, #030201 98.61%);
+  background: linear-gradient(180deg, #050000 0%, #1d0000 43.14%, #030201 98.61%);
   overflow: hidden;
 }
 
@@ -226,8 +239,15 @@
   width: 100%;
   aspect-ratio: 896 / 568;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, filter;
+}
+
+.col-truth-photo-inner:hover {
+  transform: translateY(-8px) scale(1.03);
 }
 
 .col-truth-photo-img {
@@ -235,11 +255,12 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s ease;
+  border-radius: 4px;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
 }
 
-.col-truth-photo-wrap:hover .col-truth-photo-img {
-  transform: scale(1.05);
+.col-truth-photo-inner:hover .col-truth-photo-img {
+  filter: contrast(1.2) brightness(1.08);
 }
 
 .col-truth-text-col {
@@ -357,17 +378,15 @@
   width: 312px;
   height: 461px;
   border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.85);
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   flex-shrink: 0;
   box-sizing: border-box;
+  will-change: transform, filter;
 }
 
 .col-card-item:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.95), 0 0 30px rgba(217, 183, 76, 0.4);
+  transform: translateY(-12px) scale(1.04);
 }
 
 .col-card-svg-full {
@@ -376,6 +395,13 @@
   object-fit: contain;
   display: block;
   pointer-events: none;
+  border-radius: 4px;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.85));
+  transition: filter 0.4s ease;
+}
+
+.col-card-item:hover .col-card-svg-full {
+  filter: contrast(1.15) brightness(1.08) drop-shadow(0 20px 45px rgba(180, 0, 0, 0.7));
 }
 /* ========================================================
    3. INVENTORY MANAGEMENT SECTION (1135:78658)

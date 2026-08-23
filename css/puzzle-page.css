@@ -178,10 +178,13 @@
   transform-origin: center center;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
   cursor: pointer;
+  overflow: visible;
+  will-change: transform, filter;
 }
 
 .puz-coche-monitor-wrap:hover {
   transform: rotate(0deg) scale(1.03);
+  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 25px rgba(220, 20, 20, 0.4));
 }
 
 .puz-coche-farm-ngoai-svg {
@@ -189,11 +192,107 @@
   height: auto;
   display: block;
   filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.95));
-  transition: filter 0.5s ease;
+  transition: filter 0.4s ease, opacity 0.3s ease;
 }
 
-.puz-coche-monitor-wrap:hover .puz-coche-farm-ngoai-svg {
-  filter: drop-shadow(0 25px 60px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 25px rgba(217, 183, 76, 0.35));
+.puz-coche-monitor-wrap:hover .puz-coche-base-img {
+  opacity: 0;
+}
+
+/* Gentle Shattered Mirror Shards Container */
+.puz-mirror-shards-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.puz-coche-monitor-wrap:hover .puz-mirror-shards-wrap {
+  opacity: 1;
+}
+
+.puz-shard {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform, filter;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
+}
+
+.puz-shard-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+}
+
+/* 5 Clean Glass Shard Polygons */
+.puz-shard-1 {
+  clip-path: polygon(0 0, 56% 0, 48% 52%, 0 44%);
+}
+
+.puz-shard-2 {
+  clip-path: polygon(56% 0, 100% 0, 100% 54%, 74% 58%, 48% 52%);
+}
+
+.puz-shard-3 {
+  clip-path: polygon(0 44%, 48% 52%, 38% 100%, 0 100%);
+}
+
+.puz-shard-4 {
+  clip-path: polygon(48% 52%, 74% 58%, 68% 100%, 38% 100%);
+}
+
+.puz-shard-5 {
+  clip-path: polygon(74% 58%, 100% 54%, 100% 100%, 68% 100%);
+}
+
+/* Gentle Separation on Hover */
+.puz-coche-monitor-wrap:hover .puz-shard-1 {
+  transform: translate3d(-5px, -4px, 0) rotate(-0.6deg);
+  filter: drop-shadow(0 0 8px rgba(238, 27, 16, 0.5));
+}
+
+.puz-coche-monitor-wrap:hover .puz-shard-2 {
+  transform: translate3d(5px, -3px, 0) rotate(0.6deg);
+  filter: drop-shadow(0 0 8px rgba(238, 27, 16, 0.5));
+}
+
+.puz-coche-monitor-wrap:hover .puz-shard-3 {
+  transform: translate3d(-4px, 5px, 0) rotate(-0.5deg);
+  filter: drop-shadow(0 0 8px rgba(238, 27, 16, 0.5));
+}
+
+.puz-coche-monitor-wrap:hover .puz-shard-4 {
+  transform: translate3d(2px, 5px, 0) rotate(0.4deg);
+  filter: drop-shadow(0 0 8px rgba(238, 27, 16, 0.5));
+}
+
+.puz-coche-monitor-wrap:hover .puz-shard-5 {
+  transform: translate3d(6px, 4px, 0) rotate(0.6deg);
+  filter: drop-shadow(0 0 8px rgba(238, 27, 16, 0.5));
+}
+
+/* Subtle Glowing Crack Lines Seam */
+.puz-mirror-cracks-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  filter: drop-shadow(0 0 4px rgba(238, 27, 16, 0.8));
+}
+
+.puz-coche-monitor-wrap:hover .puz-mirror-cracks-svg {
+  opacity: 1;
 }
 
 /* 3 Cut-Corner Tag Buttons (1135:76902) */
@@ -515,11 +614,11 @@
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 4px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
   cursor: pointer;
   transform-origin: center center;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+  will-change: transform, filter;
 }
 
 .puz-type-card-outer::before {
@@ -528,7 +627,7 @@
   inset: 0;
   border-radius: 4px;
   padding: 2px;
-  background: linear-gradient(135deg, #a1a1aa 0%, #b91c1c 50%, #4b5563 100%);
+  background: linear-gradient(135deg, #a1a1aa 0%, #ee1b10 50%, #7f1d1d 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -539,8 +638,8 @@
 }
 
 .puz-type-card-outer:hover {
-  transform: translateY(-10px) rotate(2.5deg) scale(1.02);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.98), 0 0 30px rgba(185, 28, 28, 0.45);
+  transform: translateY(-14px) rotate(3deg) scale(1.04);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.98), 0 0 35px rgba(238, 27, 16, 0.6);
 }
 
 .puz-type-card-outer:hover::before {
@@ -561,13 +660,32 @@
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(217, 183, 76, 0.5), 0 4px 15px rgba(0, 0, 0, 0.95);
   pointer-events: none;
   z-index: 3;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.45s ease;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.45s ease, color 0.45s ease;
   user-select: none;
 }
 
 .puz-type-card-outer:hover .puz-card-question-mark {
-  transform: translate(-50%, -50%) scale(1.15);
-  text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(238, 27, 16, 0.8), 0 4px 20px rgba(0, 0, 0, 1);
+  transform: translate(-50%, -50%) scale(1.2);
+  color: #ff3333;
+  text-shadow: 0 0 30px #ffffff, 0 0 50px #ee1b10, 0 0 80px #990000;
+  animation: puz-blood-flicker 0.8s infinite alternate;
+}
+
+@keyframes puz-blood-flicker {
+  0% {
+    opacity: 0.85;
+    filter: drop-shadow(0 0 10px #ff0000);
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 25px #ee1b10);
+  }
+
+  100% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px #990000);
+  }
 }
 
 .puz-type-card-svg-wrap {
