@@ -91,42 +91,84 @@ export async function renderPuzzle(container) {
             <!-- 3 Cut-Corner Tag Buttons (1135:76902) -->
             <div class="puz-coche-tags-row" data-node-id="1135:76902">
               
-              <!-- Tag 1: Khám Phá (1135:76903) -->
+              <!-- Tag 1: Khám Phá (1135:76903) -> Cut corners on LEFT (1135:76904) -->
               <div class="puz-tag-card" data-node-id="1135:76903">
-                <div class="puz-tag-top-row" data-node-id="1135:76906">
-                  <div class="puz-tag-icon-wrap">
-                    <img src="./assets/inv_icon_denpin.png" alt="" class="puz-tag-icon-img" />
+                <svg viewBox="0 0 299 123" fill="none" xmlns="http://www.w3.org/2000/svg" class="puz-tab-frame-svg" preserveAspectRatio="none" data-node-id="1135:76904">
+                  <path d="M24 1.5H297.5V121.5H24L1.5 98.5V24.5L24 1.5Z" fill="url(#tabGrad1)" stroke="#5E2201" stroke-width="1.5" class="puz-tab-svg-path"/>
+                  <defs>
+                    <linearGradient id="tabGrad1" x1="8" y1="3" x2="298" y2="122" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#1C0000"/>
+                      <stop offset="0.5" stop-color="#020000"/>
+                      <stop offset="1" stop-color="#1D0000"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="puz-tag-card-content">
+                  <div class="puz-tag-top-row" data-node-id="1135:76906">
+                    <div class="puz-tab-figma-icon" data-node-id="1104:77701">
+                      <div class="puz-tab-figma-icon-crop">
+                        <img src="./assets/e151534de38dbcb2444bc45349d01c9fed1305e9.png" alt="" class="puz-tab-icon-sprite puz-tab-icon-sprite--eye" />
+                      </div>
+                    </div>
+                    <span class="puz-tag-heading" data-node-id="1135:76908">KHÁM PHÁ</span>
                   </div>
-                  <span class="puz-tag-heading" data-node-id="1135:76908">KHÁM PHÁ</span>
-                </div>
-                <div class="puz-tag-bottom-row" data-node-id="1135:76909">
-                  <span class="puz-tag-sub" data-node-id="1135:76910">ĐI TÌM SỰ THẬT</span>
+                  <div class="puz-tag-bottom-row" data-node-id="1135:76909">
+                    <span class="puz-tag-sub" data-node-id="1135:76910">ĐI TÌM SỰ THẬT</span>
+                  </div>
                 </div>
               </div>
 
-              <!-- Tag 2: Giải Đố - Active (1135:76911) -->
+              <!-- Tag 2: Giải Đố - Active (1135:76911) -> Full Rectangle (1135:76912) -->
               <div class="puz-tag-card puz-tag-card--active" data-node-id="1135:76911">
-                <div class="puz-tag-top-row" data-node-id="1135:76914">
-                  <div class="puz-tag-icon-wrap">
-                    <img src="./assets/inv_icon_manhghep.png" alt="" class="puz-tag-icon-img" />
+                <svg viewBox="0 0 299 123" fill="none" xmlns="http://www.w3.org/2000/svg" class="puz-tab-frame-svg" preserveAspectRatio="none" data-node-id="1135:76912">
+                  <rect x="1.5" y="1.5" width="296" height="120" fill="url(#tabGrad2)" stroke="#5E2201" stroke-width="1.5" class="puz-tab-svg-rect"/>
+                  <defs>
+                    <linearGradient id="tabGrad2" x1="8" y1="3" x2="298" y2="122" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#1C0000"/>
+                      <stop offset="0.5" stop-color="#020000"/>
+                      <stop offset="1" stop-color="#1D0000"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="puz-tag-card-content">
+                  <div class="puz-tag-top-row" data-node-id="1135:76914">
+                    <div class="puz-tab-figma-icon" data-node-id="1104:77698">
+                      <div class="puz-tab-figma-icon-crop">
+                        <img src="./assets/e151534de38dbcb2444bc45349d01c9fed1305e9.png" alt="" class="puz-tab-icon-sprite puz-tab-icon-sprite--puzzle" />
+                      </div>
+                    </div>
+                    <span class="puz-tag-heading" data-node-id="1135:76916">GIẢI ĐỐ</span>
                   </div>
-                  <span class="puz-tag-heading" data-node-id="1135:76916">GIẢI ĐỐ</span>
-                </div>
-                <div class="puz-tag-bottom-row" data-node-id="1135:76917">
-                  <span class="puz-tag-sub" data-node-id="1135:76918">MỞ LỐI BÍ ẨN</span>
+                  <div class="puz-tag-bottom-row" data-node-id="1135:76917">
+                    <span class="puz-tag-sub" data-node-id="1135:76918">MỞ LỐI BÍ ẨN</span>
+                  </div>
                 </div>
               </div>
 
-              <!-- Tag 3: Ký Ức (1135:76919) -->
+              <!-- Tag 3: Ký Ức (1135:76919) -> Cut corners on RIGHT (1135:76920) -->
               <div class="puz-tag-card" data-node-id="1135:76919">
-                <div class="puz-tag-top-row" data-node-id="1135:76922">
-                  <div class="puz-tag-icon-wrap">
-                    <img src="./assets/inv_icon_sach.png" alt="" class="puz-tag-icon-img" />
+                <svg viewBox="0 0 299 123" fill="none" xmlns="http://www.w3.org/2000/svg" class="puz-tab-frame-svg" preserveAspectRatio="none" data-node-id="1135:76920">
+                  <path d="M1.5 1.5H275L297.5 24.5V98.5L275 121.5H1.5V1.5Z" fill="url(#tabGrad3)" stroke="#5E2201" stroke-width="1.5" class="puz-tab-svg-path"/>
+                  <defs>
+                    <linearGradient id="tabGrad3" x1="8" y1="3" x2="298" y2="122" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#1C0000"/>
+                      <stop offset="0.5" stop-color="#020000"/>
+                      <stop offset="1" stop-color="#1D0000"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="puz-tag-card-content">
+                  <div class="puz-tag-top-row" data-node-id="1135:76922">
+                    <div class="puz-tab-figma-icon" data-node-id="1104:77702">
+                      <div class="puz-tab-figma-icon-crop">
+                        <img src="./assets/e151534de38dbcb2444bc45349d01c9fed1305e9.png" alt="" class="puz-tab-icon-sprite puz-tab-icon-sprite--book" />
+                      </div>
+                    </div>
+                    <span class="puz-tag-heading" data-node-id="1135:76924">KÝ ỨC</span>
                   </div>
-                  <span class="puz-tag-heading" data-node-id="1135:76924">KÝ ỨC</span>
-                </div>
-                <div class="puz-tag-bottom-row" data-node-id="1135:76925">
-                  <span class="puz-tag-sub" data-node-id="1135:76926">LẬT LẠI QUÁ KHỨ</span>
+                  <div class="puz-tag-bottom-row" data-node-id="1135:76925">
+                    <span class="puz-tag-sub" data-node-id="1135:76926">LẬT LẠI QUÁ KHỨ</span>
+                  </div>
                 </div>
               </div>
 
