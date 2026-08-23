@@ -547,6 +547,29 @@
   opacity: 1;
 }
 
+/* Question Mark overlay for Locked Cards 3 & 4 (1135:77147 & 1135:77149) */
+.puz-card-question-mark {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  font-size: clamp(60px, 6vw, 100px);
+  line-height: 1;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(217, 183, 76, 0.5), 0 4px 15px rgba(0, 0, 0, 0.95);
+  pointer-events: none;
+  z-index: 3;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.45s ease;
+  user-select: none;
+}
+
+.puz-type-card-outer:hover .puz-card-question-mark {
+  transform: translate(-50%, -50%) scale(1.15);
+  text-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(238, 27, 16, 0.8), 0 4px 20px rgba(0, 0, 0, 1);
+}
+
 .puz-type-card-svg-wrap {
   position: absolute;
   inset: 0;
