@@ -339,50 +339,61 @@ export async function renderPuzzle(container) {
         
         <!-- Plaque Banner Header (1135:77599) -->
         <div class="puz-plaque-header-box trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:77599">
-          <div class="puz-plaque-bg">
+          <div class="puz-plaque-bg" data-node-id="1135:77600">
             <img src="./assets/d8809587d3698ce712d4fc207feeb7613be0ca4b.png" alt="" />
           </div>
-          <h2 class="puz-plaque-header-title" data-node-id="1135:77602">CƠ CHẾ GỢI Ý</h2>
+          <div class="puz-plaque-title-wrap" data-node-id="1135:77601">
+            <h2 class="puz-plaque-header-title" data-node-id="1135:77602">CƠ CHẾ GỢI Ý</h2>
+          </div>
         </div>
 
-        <!-- 3 Interactive Accordion Options (1135:77535) -->
-        <div class="puz-accordion-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1135:77535">
+        <!-- 3 Interactive Accordion Options (Options - 1135:77295) -->
+        <div class="puz-accordion-container trailer-scroll-reveal trailer-reveal-scale" data-node-id="1135:77295">
           
-          <!-- Option 1: Tâm Nhãn -->
-          <div class="puz-accordion-item">
-            <button class="puz-accordion-header" type="button" aria-expanded="false">
-              <span class="puz-accordion-title">TÂM NHÃN</span>
-              <span class="puz-accordion-icon">+</span>
+          <!-- Option 1: Tâm Nhãn (1135:77296) -->
+          <div class="puz-accordion-item" data-node-id="1135:77296">
+            <div class="puz-accordion-texture">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+            </div>
+            <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77296;1040:76537">
+              <span class="puz-accordion-title" data-node-id="I1135:77296;1040:76539">TÂM NHÃN</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77296;1040:76540">+</span>
             </button>
-            <div class="puz-accordion-body">
-              <p class="puz-accordion-text">
+            <div class="puz-accordion-body" data-node-id="I1135:77296;1040:76547">
+              <p class="puz-accordion-text" data-node-id="I1135:77296;1040:76550">
                 Kích hoạt giác quan thứ sáu để nhìn thấy những luồng khí tà ma và ký hiệu ẩn giấu mà mắt thường không thể phát hiện. Giúp nhận biết các vật phẩm tương tác trong bóng tối sâu thẳm.
               </p>
             </div>
           </div>
 
-          <!-- Option 2: Sổ Tay Manh Mối -->
-          <div class="puz-accordion-item">
-            <button class="puz-accordion-header" type="button" aria-expanded="false">
-              <span class="puz-accordion-title">SỔ TAY MANH MỐI</span>
-              <span class="puz-accordion-icon">+</span>
+          <!-- Option 2: Sổ Tay Manh Mối (1135:77297) -->
+          <div class="puz-accordion-item" data-node-id="1135:77297">
+            <div class="puz-accordion-texture">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+            </div>
+            <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77297;1040:76537">
+              <span class="puz-accordion-title" data-node-id="I1135:77297;1040:76539">SỔ TAY MANH MỐI</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77297;1040:76540">+</span>
             </button>
-            <div class="puz-accordion-body">
-              <p class="puz-accordion-text">
-                Tự động lưu lại và xâu chuỗi các trang nhật ký, mảnh ghi chú và quy luật đã tìm thấy để bạn tra cứu bất cứ lúc nào, hỗ trợ ghép nối câu đố phức tạp.
+            <div class="puz-accordion-body" data-node-id="I1135:77297;1040:76547">
+              <p class="puz-accordion-text" data-node-id="I1135:77297;1040:76550">
+                Tự động ghi chép và xâu chuỗi tất cả các tài liệu, hình ảnh, lời khai thu thập được trong quá trình điều tra để gợi mở hướng đi tiếp theo.
               </p>
             </div>
           </div>
 
-          <!-- Option 3: Âm Thanh Chỉ Hướng -->
-          <div class="puz-accordion-item">
-            <button class="puz-accordion-header" type="button" aria-expanded="false">
-              <span class="puz-accordion-title">ÂM THANH CHỈ HƯỚNG</span>
-              <span class="puz-accordion-icon">+</span>
+          <!-- Option 3: Âm Thanh Chỉ Hướng (1135:77298) -->
+          <div class="puz-accordion-item" data-node-id="1135:77298">
+            <div class="puz-accordion-texture">
+              <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" />
+            </div>
+            <button class="puz-accordion-header" type="button" aria-expanded="false" data-node-id="I1135:77298;1040:76537">
+              <span class="puz-accordion-title" data-node-id="I1135:77298;1040:76539">ÂM THANH CHỈ HƯỚNG</span>
+              <span class="puz-accordion-icon" data-node-id="I1135:77298;1040:76540">+</span>
             </button>
-            <div class="puz-accordion-body">
-              <p class="puz-accordion-text">
-                Lắng nghe tiếng chuông gió, tiếng thì thầm hoặc tiếng gõ cửa từ xa để xác định hướng đi chính xác trong mê cung bóng tối và cảnh báo các mối nguy hiểm cận kề.
+            <div class="puz-accordion-body" data-node-id="I1135:77298;1040:76547">
+              <p class="puz-accordion-text" data-node-id="I1135:77298;1040:76550">
+                Lắng nghe các tiếng động bất thường, tiếng thì thầm hoặc tiếng gõ cửa từ không gian xung quanh để định vị chính xác vị trí cần khảo sát.
               </p>
             </div>
           </div>
@@ -392,13 +403,17 @@ export async function renderPuzzle(container) {
         <!-- Continue Challenge CTA (1135:77840) -->
         <div class="puz-continue-challenge-block trailer-scroll-reveal trailer-reveal-fade-up" data-node-id="1135:77840">
           
-          <h2 class="puz-continue-title" data-node-id="I1135:77606;1104:77379">
-            MỌI MANH MỐI ĐÃ SẴN SÀNG. BẠN<br/>ĐÃ ĐỦ CAN ĐẢM ĐỂ KẾT NỐI CHÚNG?
-          </h2>
+          <div class="puz-continue-heading-wrap" data-node-id="I1135:77606;1104:77378">
+            <h2 class="puz-continue-title" data-node-id="I1135:77606;1104:77379">
+              MỌI MANH MỐI ĐÃ SẴN SÀNG. BẠN<br/>ĐÃ ĐỦ CAN ĐẢM ĐỂ KẾT NỐI CHÚNG?
+            </h2>
+          </div>
 
-          <p class="puz-continue-desc" data-node-id="I1135:77606;1104:77382">
-            Sau khi giải đố và có những manh mối
-          </p>
+          <div class="puz-continue-desc-wrap" data-node-id="I1135:77606;1104:77381">
+            <p class="puz-continue-desc" data-node-id="I1135:77606;1104:77382">
+              Sau khi giải  đố và có những manh mối 
+            </p>
+          </div>
 
           <!-- Multi-layered Horror CTA Button (1135:77606) -->
           <a href="#investigation" class="puz-horror-cta-btn" data-node-id="I1135:77606;1104:77388" aria-label="Tiếp tục đến Manh Mối">
