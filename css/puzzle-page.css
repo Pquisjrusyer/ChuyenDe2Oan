@@ -141,17 +141,19 @@
 .puz-coche-section {
   position: relative;
   width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
   padding: clamp(60px, 8vh, 120px) clamp(20px, 4vw, 80px);
   box-sizing: border-box;
   overflow: hidden;
 }
 
 .puz-coche-inner-container {
-  max-width: 1720px;
+  max-width: 1896px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 5vw, 90px);
+  gap: clamp(30px, 4vw, 80px);
   align-items: center;
 }
 
@@ -160,14 +162,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(40px, 6vh, 60px);
+  gap: clamp(40px, 6vh, 90px);
   width: 100%;
 }
 
 .puz-coche-monitor-wrap {
   position: relative;
   width: 100%;
-  max-width: 680px;
+  max-width: 780px;
   transform: rotate(-6.86deg);
   transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -176,47 +178,78 @@
   transform: rotate(0deg) scale(1.02);
 }
 
-/* Plaque Tag: #02 CƠ CHẾ CỐT LÕI */
+/* Plaque Tag: #02 CƠ CHẾ CỐT LÕI (1135:76896) */
 .puz-coche-plaque-tag {
   position: absolute;
-  top: -30px;
-  left: 30px;
-  background: linear-gradient(135deg, #2a1805 0%, #150a02 100%);
-  border: 1px solid #784e0e;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9), 0 0 15px rgba(120, 78, 14, 0.4);
-  padding: 6px 20px;
-  border-radius: 2px;
-  display: inline-flex;
+  top: -65px;
+  left: 60px;
+  width: clamp(300px, 35vw, 530px);
+  height: clamp(80px, 9vw, 132px);
+  display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
   z-index: 10;
-  transform: rotate(-2deg);
+  transform: rotate(0.39deg);
+  pointer-events: none;
+}
+
+.puz-coche-plaque-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.puz-coche-plaque-img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.puz-coche-plaque-text-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.5vw, 40px);
+  padding: 0 20px;
 }
 
 .puz-coche-tag-number {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 14px;
-  color: #ee1b10;
-  letter-spacing: 0.5px;
+  font-size: clamp(20px, 2.2vw, 36px);
+  color: #330000;
+  letter-spacing: -0.72px;
+  margin: 0;
 }
 
 .puz-coche-tag-text {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 14px;
-  color: #ffd700;
-  letter-spacing: 1px;
+  font-size: clamp(20px, 2.2vw, 36px);
+  color: #330000;
+  letter-spacing: -0.72px;
   text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
 }
 
-/* Monitor Screen Box */
+/* Outer Frame (farm ngoài) */
+.puz-coche-outer-frame {
+  border: 2px solid #b94904;
+  padding: 10px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Monitor Screen Box (1135:76886) */
 .puz-coche-screen-box {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border: 2px solid #b94904;
-  border-image: linear-gradient(45deg, #784e0e 0%, #000000 50%, #7d5d2c 100%) 1;
+  border: 2px solid #c95005;
   box-sizing: border-box;
   background: #000000;
   overflow: hidden;
@@ -241,26 +274,23 @@
   z-index: 2;
 }
 
-/* REC Live Recording Tag */
+/* REC Live Recording Tag (1135:76888) */
 .puz-coche-rec-badge {
   position: absolute;
   top: 24px;
   left: 24px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(0, 0, 0, 0.65);
-  padding: 4px 10px;
-  border-radius: 3px;
+  gap: 15px;
   z-index: 3;
 }
 
 .puz-coche-rec-dot {
-  width: 12px;
-  height: 12px;
+  width: clamp(20px, 2.5vw, 32px);
+  height: clamp(20px, 2.5vw, 32px);
   border-radius: 50%;
   background: #ff0000;
-  box-shadow: 0 0 10px #ff0000;
+  box-shadow: 0 0 15px #ff0000;
   animation: puzRecBlink 1.2s infinite;
 }
 
@@ -271,13 +301,15 @@
 
 .puz-coche-rec-text {
   font-family: 'Space Mono', monospace;
+  font-style: italic;
+  font-size: clamp(22px, 2.2vw, 36px);
   font-weight: 700;
-  font-size: 14px;
   color: #ffffff;
-  letter-spacing: 1px;
+  line-height: 24px;
+  text-transform: uppercase;
 }
 
-/* Battery Status Indicator */
+/* Battery Status Indicator (1135:76891) */
 .puz-coche-battery-badge {
   position: absolute;
   bottom: 24px;
@@ -286,8 +318,8 @@
 }
 
 .puz-coche-battery-icon {
-  width: 32px;
-  height: 16px;
+  width: 47px;
+  height: 20px;
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 2px;
   padding: 2px;
@@ -298,10 +330,10 @@
 .puz-coche-battery-icon::after {
   content: '';
   position: absolute;
-  right: -4px;
+  right: -5px;
   top: 4px;
-  width: 2px;
-  height: 4px;
+  width: 3px;
+  height: 8px;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 0 1px 1px 0;
 }
@@ -319,21 +351,22 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(12px, 1.8vw, 20px);
+  gap: clamp(12px, 1.5vw, 21px);
 }
 
 .puz-tag-card {
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: linear-gradient(135deg, rgba(30, 5, 5, 0.8) 0%, rgba(10, 2, 2, 0.9) 100%);
-  padding: 16px 12px;
+  min-height: 122.5px;
+  border: 1px solid #5e2201;
+  background: linear-gradient(111.74deg, #1c0000 2.94%, #020000 49.26%, #1d0000 101.47%);
+  padding: 14px 12px;
   box-sizing: border-box;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
@@ -342,17 +375,26 @@
 .puz-tag-card:hover,
 .puz-tag-card--active {
   border-color: #d9b74c;
-  background: linear-gradient(135deg, rgba(60, 10, 10, 0.9) 0%, rgba(20, 5, 5, 0.95) 100%);
+  background: linear-gradient(111.74deg, #2a0505 2.94%, #0d0000 49.26%, #2e0505 101.47%);
   transform: translateY(-4px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(217, 183, 76, 0.35);
 }
 
-.puz-tag-icon-wrap {
-  width: 36px;
-  height: 36px;
+.puz-tag-top-row {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 11px;
+  width: 100%;
+}
+
+.puz-tag-icon-wrap {
+  width: clamp(36px, 3.5vw, 58px);
+  height: clamp(36px, 3.5vw, 57px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .puz-tag-icon-img {
@@ -361,48 +403,64 @@
   object-fit: contain;
 }
 
-.puz-tag-text-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
 .puz-tag-heading {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: 13px;
-  color: #ffffff;
+  font-size: clamp(16px, 1.4vw, 24px);
+  color: #867a57;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.puz-tag-card--active .puz-tag-heading {
+  color: #d9b74c;
+}
+
+.puz-tag-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .puz-tag-sub {
   font-family: 'Space Mono', monospace;
-  font-size: 10px;
-  color: #d9b74c;
+  font-style: italic;
+  font-size: clamp(12px, 1.1vw, 20px);
+  color: #9ca3af;
   letter-spacing: 0.3px;
   text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
 }
 
-/* Right Column: Narrative & Investigation Note */
+.puz-tag-card--active .puz-tag-sub {
+  color: #ffffff;
+}
+
+/* Right Column: Narrative & Investigation Note (1135:76927) */
 .puz-coche-right-col {
   display: flex;
   flex-direction: column;
-  gap: clamp(30px, 4vh, 50px);
+  gap: clamp(40px, 6vh, 80px);
   align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .puz-coche-title-box {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: clamp(24px, 3vh, 48px);
 }
 
 .puz-coche-main-heading {
   font-family: 'Space Mono', monospace;
-  font-size: clamp(36px, 4.2vw, 64px);
+  font-size: clamp(44px, 5.2vw, 96px);
   font-weight: 700;
-  color: #ffffff;
+  color: #f9fafb;
   text-transform: uppercase;
   line-height: 1.15;
   letter-spacing: 1px;
@@ -412,66 +470,71 @@
 
 .puz-coche-desc {
   font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(16px, 1.1vw, 20px);
+  font-size: clamp(18px, 1.8vw, 36px);
   font-weight: 400;
-  color: #c4c7c8;
-  line-height: 1.65;
+  color: #ffffff;
+  line-height: 1.35;
+  letter-spacing: -0.72px;
   margin: 0;
-  max-width: 680px;
+  max-width: 780px;
 }
 
 .puz-highlight-crimson {
-  color: #ee1b10;
+  font-family: 'Space Mono', monospace;
+  color: #990000;
   font-weight: 700;
+  letter-spacing: -0.72px;
 }
 
 /* Investigation Note (1135:76931) */
 .puz-coche-note-box {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .puz-note-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 14px;
-  font-weight: 700;
-  color: #ee1b10;
+  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
+  font-size: clamp(16px, 1.3vw, 24px);
+  font-weight: 400;
+  color: #990000;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: -0.48px;
 }
 
 .puz-note-quote-block {
   display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.puz-quote-symbol {
-  font-family: 'Space Mono', monospace;
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1;
-}
-
-.puz-quote-text-group {
-  display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
-.puz-quote-line {
-  font-family: 'Space Mono', monospace;
-  font-size: clamp(14px, 1.1vw, 18px);
+.puz-quote-line-1,
+.puz-quote-line-2 {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.puz-quote-line-2 {
+  padding-left: clamp(24px, 3.5vw, 60px);
+}
+
+.puz-quote-mark {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: clamp(48px, 4vw, 72px);
+  color: #e5e7eb;
+  line-height: 1;
+  letter-spacing: -1.44px;
+}
+
+.puz-quote-text {
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: 0.5px;
-}
-
-.puz-quote-line--offset {
-  padding-left: 24px;
+  font-size: clamp(16px, 1.3vw, 24px);
+  color: #e5e7eb;
+  letter-spacing: -0.48px;
+  line-height: 1.2;
 }
 
 /* ========================================================

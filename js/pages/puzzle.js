@@ -49,34 +49,42 @@ export async function renderPuzzle(container) {
             <!-- Tilted Monitor Frame (1135:76885) -->
             <div class="puz-coche-monitor-wrap" data-node-id="1135:76885">
               
-              <!-- Floating Header Badge: #02 CƠ CHẾ CỐT LÕI -->
-              <div class="puz-coche-plaque-tag" data-node-id="1104:77717">
-                <span class="puz-coche-tag-number">#02</span>
-                <span class="puz-coche-tag-text">CƠ CHẾ CỐT LÕI</span>
+              <!-- Floating Header Wooden Tape Plaque: #02 CƠ CHẾ CỐT LÕI (1135:76896) -->
+              <div class="puz-coche-plaque-tag" data-node-id="1135:76896">
+                <div class="puz-coche-plaque-bg">
+                  <img src="./assets/d8809587d3698ce712d4fc207feeb7613be0ca4b.png" alt="" class="puz-coche-plaque-img" />
+                </div>
+                <div class="puz-coche-plaque-text-wrap" data-node-id="1135:76898">
+                  <span class="puz-coche-tag-number" data-node-id="1135:76899">#02</span>
+                  <span class="puz-coche-tag-text" data-node-id="1135:76901">CƠ CHẾ CỐT LÕI</span>
+                </div>
               </div>
 
-              <!-- Monitor Screen Frame (1135:76886) -->
-              <div class="puz-coche-screen-box" data-node-id="1135:76886">
-                
-                <!-- Screen Image (1135:76887) -->
-                <img src="./assets/15a6f683190f3ec6cff80a4065f1046ffd59d9a0.png" alt="Mystery Investigation Table" class="puz-coche-screen-img" />
-                
-                <!-- Scanlines & Noise Overlay -->
-                <div class="puz-coche-scanlines"></div>
+              <!-- Outer Frame (farm ngoài) -->
+              <div class="puz-coche-outer-frame">
+                <!-- Monitor Screen Frame (1135:76886) -->
+                <div class="puz-coche-screen-box" data-node-id="1135:76886">
+                  
+                  <!-- Screen Image (1135:76887) -->
+                  <img src="./assets/15a6f683190f3ec6cff80a4065f1046ffd59d9a0.png" alt="Mystery Investigation Table" class="puz-coche-screen-img" />
+                  
+                  <!-- Scanlines & Noise Overlay -->
+                  <div class="puz-coche-scanlines"></div>
 
-                <!-- REC Live Recording Tag -->
-                <div class="puz-coche-rec-badge">
-                  <span class="puz-coche-rec-dot"></span>
-                  <span class="puz-coche-rec-text">REC</span>
-                </div>
-
-                <!-- Battery Status Indicator -->
-                <div class="puz-coche-battery-badge">
-                  <div class="puz-coche-battery-icon">
-                    <span class="puz-coche-battery-level"></span>
+                  <!-- REC Live Recording Tag (1135:76888) -->
+                  <div class="puz-coche-rec-badge" data-node-id="1135:76888">
+                    <span class="puz-coche-rec-dot" data-node-id="1135:76889"></span>
+                    <span class="puz-coche-rec-text" data-node-id="1135:76890">REC</span>
                   </div>
-                </div>
 
+                  <!-- Battery Status Indicator (1135:76891) -->
+                  <div class="puz-coche-battery-badge" data-node-id="1135:76891">
+                    <div class="puz-coche-battery-icon">
+                      <span class="puz-coche-battery-level"></span>
+                    </div>
+                  </div>
+
+                </div>
               </div>
             </div>
 
@@ -85,33 +93,39 @@ export async function renderPuzzle(container) {
               
               <!-- Tag 1: Khám Phá (1135:76903) -->
               <div class="puz-tag-card" data-node-id="1135:76903">
-                <div class="puz-tag-icon-wrap">
-                  <img src="./assets/inv_icon_denpin.png" alt="" class="puz-tag-icon-img" />
-                </div>
-                <div class="puz-tag-text-wrap">
+                <div class="puz-tag-top-row" data-node-id="1135:76906">
+                  <div class="puz-tag-icon-wrap">
+                    <img src="./assets/inv_icon_denpin.png" alt="" class="puz-tag-icon-img" />
+                  </div>
                   <span class="puz-tag-heading" data-node-id="1135:76908">KHÁM PHÁ</span>
+                </div>
+                <div class="puz-tag-bottom-row" data-node-id="1135:76909">
                   <span class="puz-tag-sub" data-node-id="1135:76910">ĐI TÌM SỰ THẬT</span>
                 </div>
               </div>
 
-              <!-- Tag 2: Giải Đố - Active Glow (1135:76911) -->
+              <!-- Tag 2: Giải Đố - Active (1135:76911) -->
               <div class="puz-tag-card puz-tag-card--active" data-node-id="1135:76911">
-                <div class="puz-tag-icon-wrap">
-                  <img src="./assets/inv_icon_manhghep.png" alt="" class="puz-tag-icon-img" />
-                </div>
-                <div class="puz-tag-text-wrap">
+                <div class="puz-tag-top-row" data-node-id="1135:76914">
+                  <div class="puz-tag-icon-wrap">
+                    <img src="./assets/inv_icon_manhghep.png" alt="" class="puz-tag-icon-img" />
+                  </div>
                   <span class="puz-tag-heading" data-node-id="1135:76916">GIẢI ĐỐ</span>
+                </div>
+                <div class="puz-tag-bottom-row" data-node-id="1135:76917">
                   <span class="puz-tag-sub" data-node-id="1135:76918">MỞ LỐI BÍ ẨN</span>
                 </div>
               </div>
 
               <!-- Tag 3: Ký Ức (1135:76919) -->
               <div class="puz-tag-card" data-node-id="1135:76919">
-                <div class="puz-tag-icon-wrap">
-                  <img src="./assets/inv_icon_sach.png" alt="" class="puz-tag-icon-img" />
-                </div>
-                <div class="puz-tag-text-wrap">
+                <div class="puz-tag-top-row" data-node-id="1135:76922">
+                  <div class="puz-tag-icon-wrap">
+                    <img src="./assets/inv_icon_sach.png" alt="" class="puz-tag-icon-img" />
+                  </div>
                   <span class="puz-tag-heading" data-node-id="1135:76924">KÝ ỨC</span>
+                </div>
+                <div class="puz-tag-bottom-row" data-node-id="1135:76925">
                   <span class="puz-tag-sub" data-node-id="1135:76926">LẬT LẠI QUÁ KHỨ</span>
                 </div>
               </div>
@@ -123,7 +137,7 @@ export async function renderPuzzle(container) {
           <!-- Right Column: Narrative & Investigation Note (1135:76927) -->
           <div class="puz-coche-right-col trailer-scroll-reveal trailer-reveal-right" data-node-id="1135:76927">
             
-            <div class="puz-coche-title-box">
+            <div class="puz-coche-title-box" data-node-id="1135:76928">
               <h2 class="puz-coche-main-heading" data-node-id="1135:76929">
                 ĐỐI MẶT<br/>VỚI SỰ THẬT
               </h2>
@@ -136,12 +150,14 @@ export async function renderPuzzle(container) {
             <div class="puz-coche-note-box" data-node-id="1135:76931">
               <span class="puz-note-label" data-node-id="1135:76932">GHI CHÚ TỪ ĐIỀU TRA</span>
               <div class="puz-note-quote-block" data-node-id="1135:76933">
-                <span class="puz-quote-symbol puz-quote-symbol--open">“</span>
-                <div class="puz-quote-text-group">
-                  <p class="puz-quote-line" data-node-id="1135:76934">Sự im lặng đôi khi nói lên</p>
-                  <p class="puz-quote-line puz-quote-line--offset" data-node-id="1135:76935">nhiều điều hơn tiếng hét</p>
+                <div class="puz-quote-line-1" data-node-id="1135:76934">
+                  <span class="puz-quote-mark">“</span>
+                  <span class="puz-quote-text">Sự im lặng đôi khi nói lên </span>
                 </div>
-                <span class="puz-quote-symbol puz-quote-symbol--close">”</span>
+                <div class="puz-quote-line-2" data-node-id="1135:76935">
+                  <span class="puz-quote-text">nhiều điều hơn tiếng hét</span>
+                  <span class="puz-quote-mark">”</span>
+                </div>
               </div>
             </div>
 
