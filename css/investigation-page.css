@@ -22,7 +22,7 @@
   max-width: 1920px;
   min-height: clamp(800px, 92vh, 1080px);
   margin: 0 auto;
-  padding: 100px 20px 40px;
+  padding: 80px 20px 40px;
   box-sizing: border-box;
   overflow: visible;
   display: flex;
