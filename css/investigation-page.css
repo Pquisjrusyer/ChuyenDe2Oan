@@ -83,7 +83,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  background-image: url('./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png'), linear-gradient(180deg, #ffffff 0%, #a8a8a8 100%);
+  background-image: url('../assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png'), linear-gradient(180deg, #ffffff 0%, #a8a8a8 100%);
   background-size: cover;
   background-position: center;
   -webkit-background-clip: text;
