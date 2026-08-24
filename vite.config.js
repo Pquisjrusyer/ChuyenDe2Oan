@@ -1,5 +1,7 @@
 import { defineConfig, loadEnv } from 'vite';
 import https from 'https';
+import fs from 'fs';
+import path from 'path';
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
@@ -16,6 +18,36 @@ export default defineConfig(({ mode }) => {
       open: true,
     },
     plugins: [
+      {
+        name: 'copy-all-assets-to-dist',
+        closeBundle() {
+          const distAssets = path.resolve(process.cwd(), 'dist/assets');
+          const rootAssets = path.resolve(process.cwd(), 'assets');
+          const publicAssets = path.resolve(process.cwd(), 'public/assets');
+
+          if (!fs.existsSync(distAssets)) {
+            fs.mkdirSync(distAssets, { recursive: true });
+          }
+
+          const copyDir = (src, dest) => {
+            if (!fs.existsSync(src)) return;
+            const entries = fs.readdirSync(src, { withFileTypes: true });
+            for (const entry of entries) {
+              const srcPath = path.join(src, entry.name);
+              const destPath = path.join(dest, entry.name);
+              if (entry.isDirectory()) {
+                if (!fs.existsSync(destPath)) fs.mkdirSync(destPath, { recursive: true });
+                copyDir(srcPath, destPath);
+              } else if (!fs.existsSync(destPath)) {
+                fs.copyFileSync(srcPath, destPath);
+              }
+            }
+          };
+
+          copyDir(rootAssets, distAssets);
+          copyDir(publicAssets, distAssets);
+        },
+      },
       {
         name: 'resend-email-api-server',
         configureServer(server) {
