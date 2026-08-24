@@ -153,8 +153,21 @@ export async function renderCollection(container) {
            3. INVENTORY MANAGEMENT SECTION (1135:78658)
            ======================================================== -->
       <section class="col-invent-section" data-node-id="1135:78658">
-        <div class="col-invent-container">
+        
+        <!-- Left vignette blur overlay (1170:78209) -->
+        <div class="col-invent-vignette-blur" data-node-id="1170:78209" aria-hidden="true"></div>
+
+        <!-- Top-left rotated decorative tape (1170:78177) -->
+        <div class="col-invent-top-tape" data-node-id="1170:78177" aria-hidden="true">
+          <img src="./assets/7dd06e5b36e4786c81fabd8d486c8889c2f31c35.png" alt="" class="col-invent-tape-img" />
+        </div>
+
+        <!-- Main Outer Border Panel (1170:78176) -->
+        <div class="col-invent-main-panel" data-node-id="1170:78176">
           
+          <!-- Background grunge overlay (1170:78183) -->
+          <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" class="col-invent-panel-grunge" aria-hidden="true" />
+
           <!-- Left Info Box (1170:78206) -->
           <div class="col-invent-left-box trailer-scroll-reveal trailer-reveal-left" data-node-id="1170:78206">
             <div class="col-invent-title-wrap" data-node-id="1170:78196">
@@ -166,43 +179,58 @@ export async function renderCollection(container) {
             <div class="col-invent-capacity-row" data-node-id="1170:78201">
               <span class="col-invent-capacity-label" data-node-id="1170:78202">Sức chứa</span>
               <div class="col-invent-capacity-badge" data-node-id="1170:78203">
-                <span class="col-invent-capacity-num" data-node-id="1170:78204">5 / 20</span>
+                <span class="col-invent-capacity-num" data-node-id="1170:78204">
+                  <span class="col-invent-capacity-used">5</span> / 20
+                </span>
               </div>
             </div>
           </div>
 
-          <!-- Right Inventory Chest Frame (1170:77990) -->
-          <div class="col-invent-grid-wrap trailer-scroll-reveal trailer-reveal-right" data-node-id="1170:77990">
-            <div class="col-invent-grid-body" data-node-id="1170:77992">
+          <!-- Right Inventory Chest Outer Frame (1170:77990) -->
+          <div class="col-invent-chest-outer trailer-scroll-reveal trailer-reveal-right" data-node-id="1170:77990">
+            
+            <!-- Chest grunge overlay (1170:77991) -->
+            <img src="./assets/e1af9fa80c544f3d264ae9213ec20b12df359ac6.png" alt="" class="col-invent-chest-grunge" aria-hidden="true" />
+
+            <!-- Inner Chest Frame (1170:77992) -->
+            <div class="col-invent-chest-inner" data-node-id="1170:77992">
+              
+              <!-- Inner texture (1170:77993) -->
+              <img src="./assets/f5efe80012905dd40a5bfaf8750f575c9f2097bc.png" alt="" class="col-invent-inner-texture" aria-hidden="true" />
+
+              <!-- 20 Slots Grid (1170:77994) -->
               <div class="col-invent-slots-grid" data-node-id="1170:77994">
                 
-                <!-- 5 Active Golden Slots (1170:77995 -> 1170:77999) -->
-                <div class="col-slot col-slot--active" title="Cổ vật 1">
-                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
-                </div>
-                <div class="col-slot col-slot--active" title="Cổ vật 2">
-                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
-                </div>
-                <div class="col-slot col-slot--active" title="Cổ vật 3">
-                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
-                </div>
-                <div class="col-slot col-slot--active" title="Cổ vật 4">
-                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
-                </div>
-                <div class="col-slot col-slot--active" title="Cổ vật 5">
-                  <img src="./assets/201b875ec4c385a55fbf7acc247f851ce941a817.svg" alt="" class="col-slot-icon" />
-                </div>
+                <!-- 5 Active Golden Slots with Clover & Hover Artifacts (1170:77600 -> 1170:77674) -->
+                ${[
+                  { title: 'Cây Nến Cổ', file: 'image 58.png' },
+                  { title: 'Máy Ảnh Cũ', file: 'image 60.png' },
+                  { title: 'Gậy Thám Hiểm', file: 'image 61.png' },
+                  { title: 'Mảnh Khắc Gỗ', file: 'image 63.png' },
+                  { title: 'Bức Ảnh Cũ', file: 'image 64.png' }
+                ].map((item, i) => `
+                  <div class="col-invent-slot-outer col-invent-slot--active" title="${item.title}">
+                    <div class="col-invent-slot-inner">
+                      <img src="./assets/5d7ae0a9da6721545028c721b9ff393920bb77ca.png" alt="" class="col-invent-slot-bg" aria-hidden="true" />
+                      <img src="./assets/a98344b85db2f7ee11ba740c88aef874e1501b43.svg" alt="Cỏ 3 lá" class="col-invent-slot-clover" />
+                      <img src="./assets/${item.file}" alt="${item.title}" class="col-invent-slot-item-img" />
+                    </div>
+                  </div>
+                `).join('')}
 
-                <!-- 15 Empty Dark Slots (1170:78000 -> 1170:78014) -->
+                <!-- 15 Empty Dark Slots (1170:77869) -->
                 ${Array(15).fill(0).map((_, i) => `
-                  <div class="col-slot" title="Ô trống ${i + 6}"></div>
+                  <div class="col-invent-slot-outer" title="Ô trống ${i + 6}">
+                    <div class="col-invent-slot-inner col-invent-slot-inner--empty"></div>
+                  </div>
                 `).join('')}
 
               </div>
 
               <!-- Bottom Tape Plaque Label (1170:78190) -->
-              <div class="col-invent-bottom-tape" data-node-id="1170:78190">
-                <span class="col-invent-tape-text" data-node-id="1170:78188">THỨ GÌ CŨNG CÓ CÁI GIÁ CỦA NÓ</span>
+              <div class="col-invent-bottom-tape-wrap" data-node-id="1170:78190">
+                <img src="./assets/618dab0f5eb6ee901a75a9b07293deecd467d34c.png" alt="" class="col-invent-bottom-tape-bg" aria-hidden="true" />
+                <span class="col-invent-bottom-tape-text" data-node-id="1170:78188">THỨ GÌ CŨNG CÓ CÁI GIÁ CỦA NÓ</span>
               </div>
 
             </div>

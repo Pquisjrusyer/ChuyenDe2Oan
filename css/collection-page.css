@@ -140,7 +140,7 @@
   padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px);
   box-sizing: border-box;
   background: linear-gradient(180deg, #050000 0%, #1d0000 43.14%, #030201 98.61%);
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Background Glow Ellipses */
@@ -379,14 +379,55 @@
   height: 461px;
   border-radius: 4px;
   cursor: pointer;
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
   flex-shrink: 0;
   box-sizing: border-box;
   will-change: transform, filter;
 }
 
+.col-card-item::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 8px;
+  background: radial-gradient(circle at 50% 100%, rgba(180, 0, 0, 0.7) 0%, rgba(80, 0, 0, 0) 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.col-card-item::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 10%;
+  width: 80%;
+  height: 25px;
+  background: linear-gradient(180deg, rgba(160, 10, 10, 0.9) 0%, rgba(40, 0, 0, 0) 100%);
+  filter: blur(4px);
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
 .col-card-item:hover {
-  transform: translateY(-12px) scale(1.04);
+  transform: translateY(-14px) scale(1.04);
+  filter: url(#horror-melt-filter) contrast(1.15) brightness(1.08) drop-shadow(0 25px 55px rgba(220, 20, 20, 0.85));
+}
+
+.col-card-item:hover::before {
+  opacity: 1;
+  animation: horrorGlowPulse 1.8s infinite alternate ease-in-out;
+}
+
+.col-card-item:hover::after {
+  opacity: 1;
+  transform: scaleY(1.4);
+  animation: horrorMeltDrip 1.5s infinite ease-in-out;
 }
 
 .col-card-svg-full {
@@ -400,150 +441,364 @@
   transition: filter 0.4s ease;
 }
 
-.col-card-item:hover .col-card-svg-full {
-  filter: contrast(1.15) brightness(1.08) drop-shadow(0 20px 45px rgba(180, 0, 0, 0.7));
-}
 /* ========================================================
-   3. INVENTORY MANAGEMENT SECTION (1135:78658)
+   3. INVENTORY MANAGEMENT SECTION (Figma Node 1135:78658)
    ======================================================== */
 .col-invent-section {
   position: relative;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: clamp(60px, 8vh, 100px) clamp(20px, 4vw, 80px);
+  padding: clamp(60px, 8vh, 120px) clamp(20px, 4vw, 60px);
   box-sizing: border-box;
-  overflow: hidden;
+  background: linear-gradient(to bottom, #040201 0%, #180101 50%, #000000 100%);
+  overflow: visible;
 }
 
-.col-invent-container {
-  max-width: 1680px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  gap: clamp(30px, 4vw, 80px);
+/* Left vignette blur overlay (1170:78209) */
+.col-invent-vignette-blur {
+  position: absolute;
+  left: -147px;
+  top: 0;
+  width: 363px;
+  height: 100%;
+  background: linear-gradient(-87.7deg, rgba(42, 0, 0, 0) 11.4%, #000000 50.5%);
+  filter: blur(23.25px);
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Top-left rotated decorative tape (1170:78177) */
+.col-invent-top-tape {
+  position: absolute;
+  left: clamp(-40px, -2vw, 20px);
+  top: 25px;
+  width: clamp(200px, 18vw, 340px);
+  height: auto;
+  max-height: 85px;
+  transform: rotate(-18.83deg);
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 15;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
 }
 
+.col-invent-tape-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
+  transition: filter 0.4s ease, transform 0.4s ease;
+  will-change: filter, transform;
+}
+
+/* Horror Melting & Liquefying Effect on Hover */
+.col-invent-top-tape:hover {
+  transform: rotate(-18.83deg) translateY(6px) scale(1.08);
+}
+
+.col-invent-top-tape:hover .col-invent-tape-img {
+  animation: horrorTapeMelt 1.6s infinite alternate ease-in-out;
+}
+
+/* Main Outer Border Panel (1170:78176) */
+.col-invent-main-panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1802px;
+  margin: 0 auto;
+  border: 1px solid #330000;
+  border-radius: 20px;
+  background: linear-gradient(237.6deg, rgb(25, 0, 0) 1.36%, rgb(8, 7, 6) 92.8%);
+  padding: clamp(36px, 4vh, 60px) clamp(24px, 3.5vw, 60px);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: clamp(30px, 3.5vw, 80px);
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95);
+}
+
+/* Grunge overlay on main panel (1170:78183) */
+.col-invent-panel-grunge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.6);
+  width: 100%;
+  height: 100%;
+  min-width: 2000px;
+  min-height: 1300px;
+  object-fit: cover;
+  mix-blend-mode: color-dodge;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Left Info Box (1170:78206) */
 .col-invent-left-box {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 32px;
+  padding: 10px;
 }
 
 .col-invent-title-wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .col-invent-title {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  font-size: clamp(36px, 4vw, 64px);
-  line-height: 1.15;
-  color: #ffffff;
+  font-size: clamp(36px, 3.5vw, 64px);
+  line-height: 1.18;
+  color: #e5e7eb;
+  letter-spacing: 0.96px;
   text-transform: uppercase;
   margin: 0;
 }
 
 .col-invent-desc {
-  font-family: 'Roboto', 'Be Vietnam Pro', sans-serif;
-  font-size: clamp(14px, 1.1vw, 16px);
-  color: #c7c6c6;
-  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: clamp(16px, 1.25vw, 24px);
+  color: #9c7e21;
+  letter-spacing: -0.48px;
+  line-height: 1.35;
   margin: 0;
 }
 
 .col-invent-capacity-row {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 28px;
 }
 
 .col-invent-capacity-label {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: clamp(16px, 1.4vw, 24px);
-  color: #d9b74c;
+  font-size: clamp(18px, 1.4vw, 24px);
+  color: #9c7e21;
+  letter-spacing: -0.48px;
 }
 
 .col-invent-capacity-badge {
-  border: 1.5px solid #8b0000;
-  background: rgba(40, 0, 0, 0.6);
-  padding: 6px 16px;
-  border-radius: 4px;
+  border: 1px solid #694b27;
+  background: transparent;
+  padding: 4px 18px;
+  height: 38px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
 }
 
 .col-invent-capacity-num {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
-  font-size: clamp(16px, 1.4vw, 22px);
-  color: #ffffff;
+  font-size: clamp(18px, 1.4vw, 24px);
+  color: #9ca3af;
+  letter-spacing: -0.48px;
 }
 
-/* Right Inventory Chest Frame */
-.col-invent-grid-wrap {
+.col-invent-capacity-used {
+  color: #990000;
+}
+
+/* Right Inventory Chest Outer Frame (1170:77990) */
+.col-invent-chest-outer {
   position: relative;
+  z-index: 2;
   width: 100%;
-  border: 2px solid #5a0000;
-  background: linear-gradient(180deg, #180202 0%, #090000 100%);
-  border-radius: 6px;
-  padding: 24px;
+  max-width: 1185px;
+  border: 1px solid #9e0505;
+  border-radius: 20px;
+  background: radial-gradient(circle at 50% 50%, #000000 0%, #120000 27.5%, #240000 55%, #120000 77.5%, #000000 100%);
+  padding: 20px 25px;
   box-sizing: border-box;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
 }
 
+.col-invent-chest-grunge {
+  position: absolute;
+  inset: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  object-fit: cover;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Inner Chest Frame (1170:77992) */
+.col-invent-chest-inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border: 1px solid #c8c8c8;
+  border-radius: 20px;
+  background: linear-gradient(230.4deg, rgb(0, 0, 0) 4%, rgb(59, 34, 0) 100%);
+  padding: 16px 18px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.col-invent-inner-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: hard-light;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 20 Slots Grid (1170:77994) */
 .col-invent-slots-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  gap: 10px;
+  width: 100%;
 }
 
-.col-slot {
+/* Slot Outer (1170:77869) */
+.col-invent-slot-outer {
+  position: relative;
+  border: 1px solid;
+  border-image: linear-gradient(45deg, #530101, #FFFFFF, #110000) 1;
+  padding: 4px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  cursor: pointer;
+  will-change: transform, filter;
+}
+
+.col-invent-slot-outer:hover {
+  border-image: linear-gradient(45deg, #d94c4c, #8b0000, #ff1a1a) 1;
+  transform: translateY(-5px) scale(1.06);
+  filter: url(#horror-melt-filter) drop-shadow(0 8px 25px rgba(220, 20, 20, 0.85));
+  z-index: 10;
+}
+
+/* Slot Inner (1170:77858) */
+.col-invent-slot-inner {
+  position: relative;
+  width: 100%;
   aspect-ratio: 1 / 1;
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
-  background: rgba(10, 2, 2, 0.8);
-  border-radius: 2px;
+  border: 1px solid #8b4601;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  transition: all 0.25s ease;
-  cursor: pointer;
 }
 
-.col-slot:hover {
-  border-color: #d9b74c;
-  transform: scale(1.04);
+.col-invent-slot-inner--empty {
+  background: #030508;
 }
 
-.col-slot--active {
-  border-color: #9c7e21;
-  background: linear-gradient(180deg, #3d1505 0%, #1a0500 100%);
-  box-shadow: 0 0 15px rgba(217, 183, 76, 0.25);
+.col-invent-slot-bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1.8);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.col-slot-icon {
-  width: 50%;
-  height: 50%;
+.col-invent-slot-clover {
+  position: relative;
+  z-index: 2;
+  width: 28%;
+  height: 28%;
   object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 8px rgba(156, 126, 33, 0.4));
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+  opacity: 1;
 }
 
-.col-invent-bottom-tape {
-  margin-top: 16px;
-  display: flex;
+.col-invent-slot-item-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.65);
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 3;
+  opacity: 0;
+  filter: drop-shadow(0 4px 12px rgba(255, 60, 60, 0.6));
+  transition: opacity 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.col-invent-slot-outer:hover .col-invent-slot-clover {
+  opacity: 0;
+  transform: scale(0.2) rotate(30deg);
+}
+
+.col-invent-slot-outer:hover .col-invent-slot-item-img {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);
+  filter: drop-shadow(0 0 16px rgba(255, 180, 50, 0.85)) drop-shadow(0 4px 15px rgba(220, 20, 20, 0.7));
+}
+
+/* Bottom Tape Plaque Label (1170:78190) */
+.col-invent-bottom-tape-wrap {
+  position: relative;
+  z-index: 1;
+  margin-top: 14px;
+  display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  padding: 8px 16px;
 }
 
-.col-invent-tape-text {
+.col-invent-bottom-tape-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.col-invent-bottom-tape-text {
+  position: relative;
+  z-index: 1;
   font-family: 'Space Mono', monospace;
-  font-size: 13px;
   font-weight: 700;
+  font-size: 12px;
   color: #9ca3af;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 /* ========================================================
@@ -1090,8 +1345,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .col-invent-container {
+  .col-invent-main-panel {
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 40px 24px;
   }
 
   .col-stepper-steps-grid {
@@ -1119,5 +1376,20 @@
 
   .col-invent-slots-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .col-invent-title {
+    font-size: 36px;
+  }
+
+  .col-invent-top-tape {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .col-invent-slots-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
