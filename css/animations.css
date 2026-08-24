@@ -243,3 +243,53 @@
   pointer-events: none;
   background: radial-gradient(ellipse at center, transparent 50%, rgba(51, 0, 0, 0.4) 100%);
 }
+
+/* ---- Horror Melt & Liquid Bleed Keyframes ---- */
+@keyframes horrorMeltDrip {
+  0% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.7;
+    filter: drop-shadow(0 5px 10px rgba(180, 0, 0, 0.8));
+  }
+  50% {
+    transform: translateY(6px) scaleY(1.4) skewX(-1deg);
+    opacity: 1;
+    filter: drop-shadow(0 12px 25px rgba(220, 20, 20, 0.95));
+  }
+  100% {
+    transform: translateY(0) scaleY(1);
+    opacity: 0.7;
+    filter: drop-shadow(0 5px 10px rgba(180, 0, 0, 0.8));
+  }
+}
+
+@keyframes horrorGlowPulse {
+  0% {
+    opacity: 0.5;
+    filter: hue-rotate(0deg) blur(3px);
+  }
+  50% {
+    opacity: 0.95;
+    filter: hue-rotate(15deg) blur(6px);
+  }
+  100% {
+    opacity: 0.6;
+    filter: hue-rotate(-10deg) blur(3px);
+  }
+}
+
+@keyframes horrorTapeMelt {
+  0% {
+    transform: translateY(0) scaleY(1) skewX(0deg);
+    filter: url(#horror-melt-heavy) contrast(1.2) brightness(1.1) drop-shadow(0 12px 25px rgba(220, 20, 20, 0.85));
+  }
+  50% {
+    transform: translateY(5px) scaleY(1.18) skewX(-2.5deg);
+    filter: url(#horror-melt-heavy) contrast(1.4) brightness(1.25) drop-shadow(0 18px 40px rgba(255, 40, 0, 0.95));
+  }
+  100% {
+    transform: translateY(1px) scaleY(0.96) skewX(1.5deg);
+    filter: url(#horror-melt-heavy) contrast(1.2) brightness(1.1) drop-shadow(0 12px 25px rgba(220, 20, 20, 0.85));
+  }
+}
+

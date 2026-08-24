@@ -9,6 +9,7 @@ import { renderBreadcrumb } from './components/breadcrumb.js';
 import { initSmoothScroll, getLenis } from './utils/smooth-scroll.js';
 import { initBGM, initSFX, handleRouteBGM } from './utils/audio.js';
 import { initSpiderCursor } from './utils/spider-cursor.js';
+import { initAgentation } from './utils/agentation.js';
 
 // Page imports
 import { renderIntro } from './pages/intro.js';
@@ -143,6 +144,9 @@ function initApp() {
 
   // Initialize router
   router.init(pageRoot);
+
+  // Initialize Agentation (Visual feedback for dev mode)
+  initAgentation();
 }
 
 // Start app when DOM is ready
