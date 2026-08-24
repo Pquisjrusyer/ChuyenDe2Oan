@@ -3,6 +3,7 @@
    ======================================================== */
 
 import { getReadySectionHTML } from '../components/ready-section.js';
+import { CharacterModelViewer } from '../utils/model-viewer.js';
 
 export const CHARACTERS_DATA = {
   'hua-an': {
@@ -18,6 +19,7 @@ export const CHARACTERS_DATA = {
     summary: 'Hậu duệ trực hệ của dòng tộc họ Hứa. Trở về ngôi biệt thự cổ hoang phế sau khi nhận được bức thư tuyệt mệnh kỳ lạ, An phải đối mặt với những lời nguyền gia tộc khủng khiếp suốt nửa thế kỷ.',
     photo: './assets/4d3ddb8173a39435c6a27c413da7353cc34c65c5.png',
     modelPhoto: './assets/86c04c0ff795955f9835f289c3115761aa360583.png',
+    model3d: './models/minh.glb',
   },
   minh: {
     id: 'minh',
@@ -32,6 +34,7 @@ export const CHARACTERS_DATA = {
     summary: 'Là một sinh viên đam mê phiêu lưu và săn tìm các hiện tượng siêu nhiên, Minh quyết định cùng nhóm bạn khám phá dinh thự cổ Nhà Họ Hứa để quay vlog, không ngờ lại vướng vào một vòng xoáy nguyền rủa đen tối.',
     photo: './assets/f17bf481c11882705bf65d21a504734bf8854437.png',
     modelPhoto: './assets/86c04c0ff795955f9835f289c3115761aa360583.png',
+    model3d: './models/minh.glb',
   },
   khang: {
     id: 'khang',
@@ -46,6 +49,7 @@ export const CHARACTERS_DATA = {
     summary: 'Người bạn thân cẩn trọng và điềm tĩnh của Minh. Khang chịu trách nhiệm điều khiển các thiết bị đo lường và camera hồng ngoại trong suốt chuyến thám hiểm định mệnh.',
     photo: './assets/2ff2f842537b4557c87e171d1175da9e0045cdb8.png',
     modelPhoto: './assets/cd9b1f2516d0abfff014648176c4548e7b6c9fb5.png',
+    model3d: './models/khang.glb',
   },
   'hua-van-loc': {
     id: 'hua-van-loc',
@@ -60,6 +64,7 @@ export const CHARACTERS_DATA = {
     summary: 'Người đứng đầu gia tộc họ Hứa giàu có nức tiếng một thời. Sự gia trưởng và cuồng tín bảo vệ danh dự dòng tộc đã đẩy gia đình vào thảm kịch kinh hoàng không lối thoát.',
     photo: './assets/9a458f3a1eff44dee77b77385682efd57863dbae.png',
     modelPhoto: './assets/2a44e3bf4056cbb11ca99dcd98fd7f33752953a4.png',
+    model3d: './models/cha.glb',
   },
   'hua-ngoc': {
     id: 'hua-ngoc',
@@ -74,6 +79,7 @@ export const CHARACTERS_DATA = {
     summary: 'Tiểu thư con gái gia tộc họ Hứa bị giam cầm trong căn phòng áp mái suốt nhiều năm sau khi mắc bệnh lạ, mang theo oán niệm sâu nặng vương vấn khắp tòa dinh thự cổ.',
     photo: './assets/286cec571aa8011cf80113fa5908c160d2cc1808.png',
     modelPhoto: './assets/46a840ad8acc7ebfefbf2dfee2e7059f3440160a.png',
+    model3d: './models/ngoc.glb',
   }
 };
 
@@ -316,9 +322,9 @@ export async function renderCharacter(container) {
         <div class="char-modal-popup" id="charModalBox" data-node-id="1332:83807">
 
           <!-- Grunge texture overlay (color-dodge) -->
-          <img src="./assets/9378e813187daac56efd25314f49f180eb5ca401.png" alt="" class="char-modal-grunge-overlay" aria-hidden="true" />
+          <img src="./assets/grunge-texture-background 1.png" alt="" class="char-modal-grunge-overlay" aria-hidden="true" />
           <!-- Dark texture overlay (multiply) -->
-          <img src="./assets/c63dd9063c54890bbbf5fbdb7ee95ce6eb923d13.png" alt="" class="char-modal-dark-overlay" aria-hidden="true" />
+          <img src="./assets/78042 1.png" alt="" class="char-modal-dark-overlay" aria-hidden="true" />
 
           <!-- Close Button -->
           <button type="button" class="char-modal-close-btn" id="charModalCloseBtn" aria-label="Đóng hồ sơ">
@@ -341,38 +347,50 @@ export async function renderCharacter(container) {
             </div>
             <div class="char-modal-buttons">
               <a href="#storyline" class="char-modal-btn" data-node-id="1332:82473">
-                <span class="char-modal-btn-frame">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="char-modal-btn-frame-left" />
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="char-modal-btn-frame-right" />
-                </span>
-                <span class="char-modal-btn-field">
+                <div class="char-modal-btn-decor-left" aria-hidden="true">
+                  <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" />
+                </div>
+                <div class="char-modal-btn-field">
                   <span class="char-modal-btn-text">KHÁM PHÁ</span>
-                </span>
+                  <div class="char-modal-btn-glow"></div>
+                </div>
+                <div class="char-modal-btn-decor-right" aria-hidden="true">
+                  <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" />
+                </div>
               </a>
               <a href="#trailer" class="char-modal-btn" data-node-id="1332:82474">
-                <span class="char-modal-btn-frame">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" class="char-modal-btn-frame-left" />
-                  <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" class="char-modal-btn-frame-right" />
-                </span>
-                <span class="char-modal-btn-field">
+                <div class="char-modal-btn-decor-left" aria-hidden="true">
+                  <img src="./assets/5330b79b9e3ec9f5d8e099674f3b9cd251731b0b.svg" alt="" />
+                </div>
+                <div class="char-modal-btn-field">
                   <span class="char-modal-btn-text">XEM TRAILER</span>
-                </span>
+                  <div class="char-modal-btn-glow"></div>
+                </div>
+                <div class="char-modal-btn-decor-right" aria-hidden="true">
+                  <img src="./assets/2a8d91cd956a7b707d91ed3faed539513ed626cf.svg" alt="" />
+                </div>
               </a>
-            </div>
-            <!-- HỒ SƠ MẬT Badge -->
-            <div class="char-modal-confidential" data-node-id="1332:82460">
-              <div class="char-modal-confidential-inner">
-                <span class="char-modal-confidential-title">HỒ SƠ MẬT</span>
-                <span class="char-modal-confidential-sub">CONFIDENTIAL</span>
-              </div>
             </div>
           </div>
 
-          <!-- CENTER COLUMN: Character Portrait -->
-          <div class="char-modal-col-center" data-node-id="1317:81386">
+          <!-- CENTER COLUMN: Character 3D Model Viewer -->
+          <div class="char-modal-col-center" id="charModal3DContainer" data-node-id="1317:81386">
             <div class="char-modal-portrait-gradient"></div>
             <img src="./assets/2ff2f842537b4557c87e171d1175da9e0045cdb8.png" alt="" class="char-modal-portrait-frame" aria-hidden="true" />
-            <img id="charModalPhoto" src="./assets/86c04c0ff795955f9835f289c3115761aa360583.png" alt="Nhân vật" class="char-modal-portrait-model" />
+            
+            <!-- 3D Loading Spinner -->
+            <div class="char-modal-3d-loading" id="charModal3DLoading">
+              <div class="char-modal-3d-spinner"></div>
+              <span>ĐANG TẢI MÔ HÌNH 3D...</span>
+            </div>
+
+            <!-- 3D Hint -->
+            <div class="char-modal-3d-hint">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+              </svg>
+              <span>XOAY 360° ĐỂ QUAN SÁT</span>
+            </div>
           </div>
 
           <!-- RIGHT COLUMN: Stats & Profile -->
@@ -429,6 +447,14 @@ export async function renderCharacter(container) {
             </div>
           </div>
 
+          <!-- HỒ SƠ MẬT Badge (Anchored at Bottom-Left of Modal) -->
+          <div class="char-modal-confidential" data-node-id="1332:82460">
+            <div class="char-modal-confidential-inner">
+              <span class="char-modal-confidential-title">HỒ SƠ MẬT</span>
+              <span class="char-modal-confidential-sub">CONFIDENTIAL</span>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -438,6 +464,7 @@ export async function renderCharacter(container) {
   // Modal Controller
   const backdrop = container.querySelector('#charModalBackdrop');
   const closeBtn = container.querySelector('#charModalCloseBtn');
+  let activeViewer = null;
 
   function openDossier(charId) {
     const data = CHARACTERS_DATA[charId] || CHARACTERS_DATA['hua-an'];
@@ -451,7 +478,6 @@ export async function renderCharacter(container) {
     container.querySelector('#charModalHeight').textContent = data.height;
     container.querySelector('#charModalHometown').textContent = data.hometown;
     container.querySelector('#charModalBio').textContent = data.summary;
-    container.querySelector('#charModalPhoto').src = data.modelPhoto || data.photo;
 
     const tagsContainer = container.querySelector('#charModalTags');
     if (tagsContainer && data.tags) {
@@ -463,6 +489,26 @@ export async function renderCharacter(container) {
       ).join('');
     }
 
+    // 3D Model Loading
+    const modelContainer = container.querySelector('#charModal3DContainer');
+    const loadingElem = container.querySelector('#charModal3DLoading');
+    if (loadingElem) loadingElem.style.display = 'flex';
+
+    if (!activeViewer && modelContainer) {
+      activeViewer = new CharacterModelViewer(modelContainer);
+    }
+
+    if (activeViewer) {
+      activeViewer.show();
+      if (data.model3d) {
+        activeViewer.loadModel(data.model3d, (percent) => {
+          if (percent >= 100 && loadingElem) {
+            loadingElem.style.display = 'none';
+          }
+        });
+      }
+    }
+
     backdrop.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -470,6 +516,9 @@ export async function renderCharacter(container) {
   function closeDossier() {
     backdrop.classList.remove('active');
     document.body.style.overflow = '';
+    if (activeViewer) {
+      activeViewer.hide();
+    }
   }
 
   // Open on Hua An Button
