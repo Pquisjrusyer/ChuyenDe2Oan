@@ -180,8 +180,12 @@ export async function renderFaq(container) {
               <p class="faq-link-card-sub">CƠ CHẾ & THẾ GIỚI</p>
               <div class="faq-btn-go">
                 <div class="faq-btn-go-corners">
-                  <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                <div class="faq-btn-left">
+                <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="faq-btn-right">
                   <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
                 </div>
                 <span class="faq-btn-go-text">Đến ngay</span>
               </div>
@@ -196,8 +200,12 @@ export async function renderFaq(container) {
               <p class="faq-link-card-sub">CÀI ĐẶT & CẬP NHẬT</p>
               <div class="faq-btn-go">
                 <div class="faq-btn-go-corners">
+                <div class="faq-btn-left">
                   <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="faq-btn-right">
                   <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
                 </div>
                 <span class="faq-btn-go-text">Đến ngay</span>
               </div>
@@ -212,8 +220,12 @@ export async function renderFaq(container) {
               <p class="faq-link-card-sub">BẢO MẬT & LIÊN KẾT</p>
               <div class="faq-btn-go">
                 <div class="faq-btn-go-corners">
+                <div class="faq-btn-left">
                   <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="faq-btn-right">
                   <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
                 </div>
                 <span class="faq-btn-go-text">Đến ngay</span>
               </div>
@@ -228,8 +240,12 @@ export async function renderFaq(container) {
               <p class="faq-link-card-sub">LỖI KỸ THUẬT & KẾT NỐI</p>
               <div class="faq-btn-go">
                 <div class="faq-btn-go-corners">
+                <div class="faq-btn-left">
                   <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="faq-btn-right">
                   <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
                 </div>
                 <span class="faq-btn-go-text">Đến ngay</span>
               </div>
@@ -244,8 +260,12 @@ export async function renderFaq(container) {
               <p class="faq-link-card-sub">SỰ KIỆN & CHIA SẺ</p>
               <div class="faq-btn-go">
                 <div class="faq-btn-go-corners">
+                <div class="faq-btn-left">
                   <img src="./assets/00014c9e034cf03185fa6abecbdda1f84052f9ed.svg" alt="" />
+                </div>
+                <div class="faq-btn-right">
                   <img src="./assets/5c728d5be890a1c11dd44ea608aabf2ec504887a.svg" alt="" />
+                </div>
                 </div>
                 <span class="faq-btn-go-text">Đến ngay</span>
               </div>

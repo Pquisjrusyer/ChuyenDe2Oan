@@ -22,11 +22,12 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  min-height: 900px;
+  min-height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 90px 20px 60px;
+  justify-content: flex-start;
+  padding: 85px 24px 40px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -35,7 +36,8 @@
   position: relative;
   width: 100%;
   max-width: 1576px;
-  height: 696px;
+  min-height: 480px;
+  height: clamp(480px, 58vh, 696px);
   margin: 0 auto;
   border: 2px solid #ffffff;
   box-sizing: border-box;
@@ -51,11 +53,10 @@
 
 .puz-hero-bg-media {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1759px;
-  height: 938px;
-  transform: translate(-50%, -50%) rotate(180deg) scaleY(-1);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg) scaleY(-1);
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
@@ -65,6 +66,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -1189,21 +1191,41 @@
 }
 
 @media (max-width: 768px) {
-  .puz-hero-frame-container {
+  .puz-hero-section {
     min-height: auto;
-    padding: 30px 20px;
+    padding: 80px 14px 24px;
+  }
+
+  .puz-hero-frame-container {
+    height: auto;
+    min-height: 380px;
+    padding: 30px 16px;
+    justify-content: center;
+    align-items: center;
   }
 
   .puz-hero-content-right {
     align-items: center;
     text-align: center;
+    gap: 16px;
   }
 
   .puz-hero-main-title {
+    font-size: clamp(36px, 10vw, 56px);
+    line-height: 1.1;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .puz-hero-subtitle-box {
     text-align: center;
   }
 
   .puz-hero-subtitle-line {
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: normal;
     text-align: center;
   }
 
