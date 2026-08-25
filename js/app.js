@@ -84,23 +84,6 @@ function initApp() {
   // Initialize interactive spider cursor effect
   initSpiderCursor();
 
-  // Ensure ALL video elements across the whole website are strictly muted with 0 volume
-  function muteAllVideos() {
-    document.querySelectorAll('video').forEach(video => {
-      video.muted = true;
-      video.volume = 0;
-      video.defaultMuted = true;
-      video.removeAttribute('controls');
-    });
-  }
-
-  // Observe DOM mutations to mute any dynamically injected videos immediately
-  const videoObserver = new MutationObserver(() => {
-    muteAllVideos();
-  });
-  videoObserver.observe(document.body, { childList: true, subtree: true });
-  muteAllVideos();
-
   // Update navbar and footer on navigation
   router.onAfterNavigate = (hash) => {
     // Reset scroll to top smoothly or immediately on page switch
