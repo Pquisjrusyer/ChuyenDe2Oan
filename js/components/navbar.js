@@ -2,6 +2,7 @@
    OAN Horror Game — Navbar Component (Figma 1363:86771)
    ============================================ */
 
+import { gsap } from 'gsap';
 import { toggleBGM, isBGMPlaying, updateSoundButtonsUI } from '../utils/audio.js';
 import { getLenis } from '../utils/smooth-scroll.js';
 
@@ -107,6 +108,56 @@ export function renderNavbar(container, currentHash) {
 
             <a class="nav-item ${currentHash === 'community' ? 'active' : ''}" href="#community" data-node-id="I1363:86771;782:1711;987:73069">CỘNG ĐỒNG</a>
             <a class="nav-item ${currentHash === 'faq' ? 'active' : ''}" href="#faq" data-node-id="I1363:86771;782:1711;987:73071">FAQ</a>
+
+            <!-- Mobile Drawer Extra Actions (Register / User & Controls) -->
+            <div class="nav-mobile-extra-actions">
+              ${(() => {
+                let user = null;
+                try {
+                  const raw = localStorage.getItem('OAN_LOGGED_IN_USER');
+                  if (raw) user = JSON.parse(raw);
+                } catch (e) {}
+
+                if (user && user.username) {
+                  return `
+                    <div class="nav-mobile-user-card">
+                      <div class="nav-mobile-user-head">
+                        <div class="nav-user-avatar-gold">
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d9b74c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </div>
+                        <div class="nav-mobile-user-names">
+                          <span class="nav-mobile-username">${user.username.toUpperCase()}</span>
+                          <span class="nav-mobile-useremail">${user.email || 'Lữ khách Nhà Hứa'}</span>
+                        </div>
+                      </div>
+                      <div class="nav-mobile-user-links">
+                        <a href="#profile" class="nav-mobile-action-link">Hồ sơ người chơi</a>
+                        <a href="#collection" class="nav-mobile-action-link">Bộ sưu tập manh mối</a>
+                        <button type="button" class="nav-mobile-logout-btn" id="navMobileLogoutBtn">Đăng xuất</button>
+                      </div>
+                    </div>
+                  `;
+                }
+
+                return `
+                  <a href="#register" class="btn-nav-register-mobile" data-node-id="I1363:86771;906:1727;906:1714">
+                    <img src="./assets/982de4bcd6a16630803542fbfab99bbf3ff3563d.png" alt="" class="nav-register-bg-img" />
+                    <span class="nav-register-caption">ĐĂNG KÝ</span>
+                  </a>
+                `;
+              })()}
+
+              <div class="nav-mobile-utils-row">
+                <button class="util-btn sound-toggle" id="sound-btn-mobile" title="Âm thanh game">
+                  <img src="./assets/5280884719d4359c523e1bb78c45cf2c8b6ffab0.svg" alt="Sound" class="util-icon" />
+                  <span>ÂM THANH</span>
+                </button>
+                <a href="#faq" class="util-link">LIÊN HỆ</a>
+              </div>
+            </div>
           </nav>
         </div>
 
@@ -255,12 +306,106 @@ export function renderNavbar(container, currentHash) {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 
-  // Mobile menu toggle
+  // Mobile menu GSAP animated toggle
   const mobileBtn = document.getElementById('nav-mobile-btn');
   const navLinks = document.getElementById('nav-links-menu');
+  let isMenuAnimating = false;
+
+  const openMobileMenu = () => {
+    if (isMenuAnimating || !navLinks || !mobileBtn) return;
+    isMenuAnimating = true;
+
+    navLinks.classList.add('is-open');
+    mobileBtn.classList.add('is-active');
+    mobileBtn.textContent = '✕';
+
+    // Animate button icon spin & scale
+    gsap.fromTo(mobileBtn,
+      { rotation: -90, scale: 0.8 },
+      { rotation: 0, scale: 1, duration: 0.35, ease: 'back.out(1.7)' }
+    );
+
+    // Animate menu container sliding down with backdrop blur
+    gsap.fromTo(navLinks,
+      { opacity: 0, y: -25 },
+      { opacity: 1, y: 0, duration: 0.35, ease: 'power3.out' }
+    );
+
+    // Stagger all interactive items inside menu
+    const drawerItems = navLinks.querySelectorAll('.nav-item, .nav-sub-item, .btn-nav-register-mobile, .nav-mobile-user-card, .nav-mobile-utils-row');
+    gsap.fromTo(drawerItems,
+      { opacity: 0, y: 16 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.32,
+        stagger: 0.035,
+        ease: 'power2.out',
+        onComplete: () => {
+          isMenuAnimating = false;
+        }
+      }
+    );
+  };
+
+  const closeMobileMenu = (callback) => {
+    if (!navLinks || !navLinks.classList.contains('is-open')) {
+      if (callback) callback();
+      return;
+    }
+    if (isMenuAnimating) return;
+    isMenuAnimating = true;
+
+    if (mobileBtn) {
+      mobileBtn.classList.remove('is-active');
+      mobileBtn.textContent = '☰';
+      gsap.fromTo(mobileBtn,
+        { rotation: 90, scale: 0.85 },
+        { rotation: 0, scale: 1, duration: 0.28, ease: 'power2.out' }
+      );
+    }
+
+    const drawerItems = navLinks.querySelectorAll('.nav-item, .nav-sub-item, .btn-nav-register-mobile, .nav-mobile-user-card, .nav-mobile-utils-row');
+    gsap.to(drawerItems, {
+      opacity: 0,
+      y: -8,
+      duration: 0.18,
+      stagger: 0.02,
+      ease: 'power2.in'
+    });
+
+    gsap.to(navLinks, {
+      opacity: 0,
+      y: -15,
+      duration: 0.22,
+      ease: 'power2.in',
+      onComplete: () => {
+        navLinks.classList.remove('is-open');
+        gsap.set(navLinks, { clearProps: 'all' });
+        gsap.set(drawerItems, { clearProps: 'all' });
+        isMenuAnimating = false;
+        if (callback) callback();
+      }
+    });
+  };
+
   if (mobileBtn && navLinks) {
-    mobileBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('is-open');
+    mobileBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (navLinks.classList.contains('is-open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('is-open')) {
+        if (!navLinks.contains(e.target) && !mobileBtn.contains(e.target)) {
+          closeMobileMenu();
+        }
+      }
     });
   }
 
@@ -277,13 +422,30 @@ export function renderNavbar(container, currentHash) {
     });
   }
 
-  // Sound toggle effect
+  // Sound toggle effect (Desktop & Mobile)
   const soundBtn = document.getElementById('sound-btn');
+  const soundBtnMobile = document.getElementById('sound-btn-mobile');
+  const onSoundToggle = (e) => {
+    e.preventDefault();
+    toggleBGM();
+  };
   if (soundBtn) {
     updateSoundButtonsUI(isBGMPlaying());
-    soundBtn.addEventListener('click', (e) => {
+    soundBtn.addEventListener('click', onSoundToggle);
+  }
+  if (soundBtnMobile) {
+    soundBtnMobile.addEventListener('click', onSoundToggle);
+  }
+
+  // Mobile logout button
+  const navMobileLogoutBtn = document.getElementById('navMobileLogoutBtn');
+  if (navMobileLogoutBtn) {
+    navMobileLogoutBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      toggleBGM();
+      localStorage.removeItem('OAN_LOGGED_IN_USER');
+      window.dispatchEvent(new CustomEvent('auth-state-changed'));
+      window.location.hash = 'login';
+      closeMobileMenu();
     });
   }
 
@@ -358,15 +520,15 @@ export function renderNavbar(container, currentHash) {
   window.addEventListener('auth-state-changed', onAuthChanged);
 
   // Smooth scroll to top when clicking on the menu item of the active / current page
-  const navClickables = container.querySelectorAll('.nav-item, .nav-sub-item, .navbar-brand-logo');
+  const navClickables = container.querySelectorAll('.nav-item, .nav-sub-item, .navbar-brand-logo, .btn-nav-register-mobile, .nav-mobile-action-link');
   navClickables.forEach((item) => {
     item.addEventListener('click', (e) => {
       const targetHash = (item.getAttribute('href') || '').replace('#', '');
       const currentRoute = (window.location.hash || '#home').replace('#', '');
 
-      // Close mobile menu if open
+      // Close mobile menu if open using GSAP animation
       if (navLinks && navLinks.classList.contains('is-open')) {
-        navLinks.classList.remove('is-open');
+        closeMobileMenu();
       }
 
       // If user is already on this page and clicks the menu link
@@ -382,3 +544,4 @@ export function renderNavbar(container, currentHash) {
     });
   });
 }
+
