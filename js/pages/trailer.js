@@ -2,7 +2,7 @@
    OAN Horror Game — Trailer Page (Figma 928:1608)
    ============================================ */
 
-import { pauseBGM, playBGM, isBGMPlaying } from '../utils/audio.js';
+import { pauseBGM, playBGM, isBGMPlaying, pauseBGMForVideo, restoreBGMAfterVideo } from '../utils/audio.js';
 import { initTrailerScrollTriggers } from '../utils/smooth-scroll.js';
 
 export async function renderTrailer(container) {
@@ -449,19 +449,18 @@ export async function renderTrailer(container) {
       e.preventDefault();
       
       // Pause background music to prevent audio conflict with the trailer
-      const wasBGMPlayingBeforeModal = isBGMPlaying();
-      pauseBGM();
+      const wasBGMPlayingBeforeModal = pauseBGMForVideo();
       
       const modal = document.createElement('div');
       modal.className = 'figma-fullscreen-overlay';
       modal.setAttribute('data-node-id', '1332:84797');
       modal.innerHTML = `
         <div class="fullscreen-video-wrapper">
-          <video class="fullscreen-video-player" id="modal-fullscreen-video" autoplay controls playsinline poster="./assets/scene-explore-ghost.png">
-            <source src="./assets/official-trailer.mp4" type="video/mp4">
-            <source src="./assets/investigation-video.mp4" type="video/mp4">
-            <source src="./assets/scene-explore.mp4" type="video/mp4">
-          </video>
+          <video class="fullscreen-video-player" id="modal-fullscreen-video" controls playsinline preload="auto" poster="./assets/scene-explore-ghost.png" src="./assets/official-trailer.mp4"></video>
+          <button class="modal-unmute-prompt-btn" id="modal-unmute-btn" type="button" style="display: none;">
+            <span class="unmute-icon">🔊</span>
+            <span class="unmute-text">BẬT ÂM THANH</span>
+          </button>
         </div>
         <button class="fullscreen-close-btn" id="btn-modal-close-fullscreen" aria-label="Đóng toàn màn hình" type="button">
           <img src="./assets/16a6446e90ff221cf7fbf200555b281763e34d43.svg" alt="Đóng" class="cancel-icon-img" />
@@ -470,24 +469,64 @@ export async function renderTrailer(container) {
       document.body.appendChild(modal);
 
       const modalVideo = modal.querySelector('#modal-fullscreen-video');
+      const unmuteBtn = modal.querySelector('#modal-unmute-btn');
+
       if (modalVideo) {
         modalVideo.currentTime = 0;
         modalVideo.muted = false;
-        modalVideo.play().catch(() => {
-          modalVideo.muted = true;
-          modalVideo.play().catch(() => {});
+        modalVideo.defaultMuted = false;
+        modalVideo.volume = 1.0;
+
+        // Ensure BGM is paused whenever video is playing
+        modalVideo.addEventListener('play', () => pauseBGMForVideo());
+        modalVideo.addEventListener('playing', () => pauseBGMForVideo());
+
+        // Auto-hide unmute prompt if volume becomes active
+        modalVideo.addEventListener('volumechange', () => {
+          if (!modalVideo.muted && modalVideo.volume > 0) {
+            pauseBGMForVideo();
+            if (unmuteBtn) unmuteBtn.style.display = 'none';
+          }
         });
+        
+        const playPromise = modalVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            // If browser autoplay policy forced mute, show instant unmute helper
+            if (modalVideo.muted && unmuteBtn) {
+              unmuteBtn.style.display = 'flex';
+            }
+          }).catch((err) => {
+            console.log('Autoplay unmuted blocked by policy, fallback to muted with prompt:', err);
+            modalVideo.muted = true;
+            modalVideo.play().then(() => {
+              if (unmuteBtn) unmuteBtn.style.display = 'flex';
+            }).catch(() => {});
+          });
+        }
+
+        if (unmuteBtn) {
+          unmuteBtn.addEventListener('click', (ev) => {
+            ev.stopPropagation();
+            modalVideo.muted = false;
+            modalVideo.volume = 1.0;
+            modalVideo.play().catch(() => {});
+            unmuteBtn.style.display = 'none';
+          });
+        }
       }
 
       const closeModal = () => {
-        if (modalVideo) modalVideo.pause();
+        if (modalVideo) {
+          modalVideo.pause();
+          modalVideo.src = '';
+          modalVideo.load();
+        }
         modal.remove();
         document.removeEventListener('keydown', handleEsc);
 
         // Resume BGM if it was playing before opening fullscreen
-        if (wasBGMPlayingBeforeModal) {
-          playBGM();
-        }
+        restoreBGMAfterVideo(wasBGMPlayingBeforeModal);
       };
 
       const handleEsc = (event) => {
@@ -501,17 +540,43 @@ export async function renderTrailer(container) {
     });
   }
 
+  // Clicking on main hero video display box opens the fullscreen player
+  const trailerVideoBox = container.querySelector('.trailer-video-display-box');
+  if (trailerVideoBox && fullscreenBtn) {
+    trailerVideoBox.style.cursor = 'pointer';
+    trailerVideoBox.addEventListener('click', (e) => {
+      e.stopPropagation();
+      fullscreenBtn.click();
+    });
+  }
+
   // Also prevent audio conflict on inline video player in hero section
   const mainTrailerVideo = container.querySelector('#main-trailer-video');
+  let wasBGMPlayingBeforeInline = false;
   if (mainTrailerVideo) {
     mainTrailerVideo.addEventListener('play', () => {
-      if (!mainTrailerVideo.muted) {
-        pauseBGM();
+      if (!mainTrailerVideo.muted && mainTrailerVideo.volume > 0) {
+        wasBGMPlayingBeforeInline = pauseBGMForVideo();
       }
     });
     mainTrailerVideo.addEventListener('volumechange', () => {
       if (!mainTrailerVideo.muted && mainTrailerVideo.volume > 0 && !mainTrailerVideo.paused) {
-        pauseBGM();
+        wasBGMPlayingBeforeInline = pauseBGMForVideo();
+      } else if ((mainTrailerVideo.muted || mainTrailerVideo.volume === 0 || mainTrailerVideo.paused) && wasBGMPlayingBeforeInline) {
+        restoreBGMAfterVideo(wasBGMPlayingBeforeInline);
+        wasBGMPlayingBeforeInline = false;
+      }
+    });
+    mainTrailerVideo.addEventListener('pause', () => {
+      if (wasBGMPlayingBeforeInline) {
+        restoreBGMAfterVideo(wasBGMPlayingBeforeInline);
+        wasBGMPlayingBeforeInline = false;
+      }
+    });
+    mainTrailerVideo.addEventListener('ended', () => {
+      if (wasBGMPlayingBeforeInline) {
+        restoreBGMAfterVideo(wasBGMPlayingBeforeInline);
+        wasBGMPlayingBeforeInline = false;
       }
     });
   }

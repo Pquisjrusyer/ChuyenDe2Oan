@@ -7,6 +7,7 @@ let transitionSFX = null;
 let clickSFX = null;
 let isAudioMuted = false;
 let hasUserInteracted = false;
+let isBGMSuppressedForVideo = false;
 let currentRoute = 'intro';
 let isFirstRoute = true;
 let isClickAttached = false;
@@ -31,16 +32,20 @@ export function initBGM() {
   // Global unlock for BGM on first user interaction
   const unlockAudio = () => {
     hasUserInteracted = true;
-    if (!SILENT_ROUTES.includes(currentRoute) && !isAudioMuted && bgmAudio && bgmAudio.paused) {
+    window.removeEventListener('click', unlockAudio);
+    window.removeEventListener('keydown', unlockAudio);
+    window.removeEventListener('touchstart', unlockAudio);
+
+    if (!SILENT_ROUTES.includes(currentRoute) && !isAudioMuted && !isBGMSuppressedForVideo && bgmAudio && bgmAudio.paused) {
       bgmAudio.play().then(() => {
         updateSoundButtonsUI(true);
       }).catch(err => console.log('BGM unlock catch:', err));
     }
   };
 
-  window.addEventListener('click', unlockAudio);
-  window.addEventListener('keydown', unlockAudio);
-  window.addEventListener('touchstart', unlockAudio);
+  window.addEventListener('click', unlockAudio, { once: true });
+  window.addEventListener('keydown', unlockAudio, { once: true });
+  window.addEventListener('touchstart', unlockAudio, { once: true });
 
   return bgmAudio;
 }
@@ -151,7 +156,7 @@ export function handleRouteBGM(hash) {
 
 export function playBGM() {
   if (!bgmAudio) initBGM();
-  if (!SILENT_ROUTES.includes(currentRoute)) {
+  if (!SILENT_ROUTES.includes(currentRoute) && !isBGMSuppressedForVideo) {
     isAudioMuted = false;
     bgmAudio.muted = false;
     bgmAudio.play().then(() => {
@@ -165,6 +170,30 @@ export function pauseBGM() {
   if (bgmAudio) {
     bgmAudio.pause();
     updateSoundButtonsUI(false);
+  }
+}
+
+export function pauseBGMForVideo() {
+  const wasPlaying = isBGMPlaying();
+  isBGMSuppressedForVideo = true;
+  if (bgmAudio) {
+    bgmAudio.pause();
+    updateSoundButtonsUI(false);
+  }
+  return wasPlaying;
+}
+
+export function restoreBGMAfterVideo(wasPlaying) {
+  isBGMSuppressedForVideo = false;
+  // If BGM was NOT active before video, or user explicitly muted it, DO NOT touch or turn on BGM
+  if (!wasPlaying) return;
+  const savedState = localStorage.getItem('oan_bgm_muted');
+  if (savedState === 'true' || isAudioMuted) return;
+
+  if (bgmAudio && !SILENT_ROUTES.includes(currentRoute)) {
+    bgmAudio.play().then(() => {
+      updateSoundButtonsUI(true);
+    }).catch(() => {});
   }
 }
 

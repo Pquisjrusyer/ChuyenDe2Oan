@@ -2,21 +2,20 @@
    OAN — Fullscreen Media Viewer (Figma 1332:84797)
    ============================================ */
 
-import { pauseBGM, playBGM, isBGMPlaying } from '../utils/audio.js';
+import { pauseBGMForVideo, restoreBGMAfterVideo } from '../utils/audio.js';
 
 export async function renderFullscreen(container) {
   // Pause BGM to give full priority to trailer audio
-  const wasPlayingBGM = isBGMPlaying();
-  pauseBGM();
+  const wasPlayingBGM = pauseBGMForVideo();
 
   container.innerHTML = `
     <div class="page-fullscreen figma-fullscreen-overlay" data-node-id="1332:84797">
       <div class="fullscreen-video-wrapper">
-        <video class="fullscreen-video-player" id="fullscreen-video" autoplay controls playsinline poster="./assets/scene-explore-ghost.png">
-          <source src="./assets/official-trailer.mp4" type="video/mp4">
-          <source src="./assets/investigation-video.mp4" type="video/mp4">
-          <source src="./assets/scene-explore.mp4" type="video/mp4">
-        </video>
+        <video class="fullscreen-video-player" id="fullscreen-video" controls playsinline preload="auto" poster="./assets/scene-explore-ghost.png" src="./assets/official-trailer.mp4"></video>
+        <button class="modal-unmute-prompt-btn" id="fullscreen-unmute-btn" type="button" style="display: none;">
+          <span class="unmute-icon">🔊</span>
+          <span class="unmute-text">BẬT ÂM THANH</span>
+        </button>
       </div>
 
       <!-- Close / Cancel Button (707:1560) -->
@@ -28,25 +27,58 @@ export async function renderFullscreen(container) {
 
   const video = container.querySelector('#fullscreen-video');
   const closeBtn = container.querySelector('#btn-close-fullscreen');
+  const unmuteBtn = container.querySelector('#fullscreen-unmute-btn');
 
   if (video) {
     video.currentTime = 0;
     video.muted = false;
-    video.play().catch(() => {
-      // If autoplay with sound is blocked by browser policy, try muted
-      video.muted = true;
-      video.play().catch(e => console.log('Fullscreen video autoplay blocked:', e));
+    video.defaultMuted = false;
+    video.volume = 1.0;
+
+    video.addEventListener('play', () => pauseBGMForVideo());
+    video.addEventListener('playing', () => pauseBGMForVideo());
+
+    video.addEventListener('volumechange', () => {
+      if (!video.muted && video.volume > 0) {
+        pauseBGMForVideo();
+        if (unmuteBtn) unmuteBtn.style.display = 'none';
+      }
     });
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        if (video.muted && unmuteBtn) {
+          unmuteBtn.style.display = 'flex';
+        }
+      }).catch((err) => {
+        console.log('Fullscreen video autoplay with audio blocked by policy:', err);
+        video.muted = true;
+        video.play().then(() => {
+          if (unmuteBtn) unmuteBtn.style.display = 'flex';
+        }).catch(() => {});
+      });
+    }
+
+    if (unmuteBtn) {
+      unmuteBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        video.muted = false;
+        video.volume = 1.0;
+        video.play().catch(() => {});
+        unmuteBtn.style.display = 'none';
+      });
+    }
   }
 
   const handleClose = () => {
     if (video) {
       video.pause();
+      video.src = '';
+      video.load();
     }
-    // Resume BGM when exiting fullscreen
-    if (wasPlayingBGM) {
-      playBGM();
-    }
+    // Resume BGM ONLY if it was active before entering fullscreen
+    restoreBGMAfterVideo(wasPlayingBGM);
     window.location.hash = 'trailer';
   };
 
@@ -59,3 +91,4 @@ export async function renderFullscreen(container) {
   };
   window.addEventListener('keydown', handleKeyDown, { once: true });
 }
+
