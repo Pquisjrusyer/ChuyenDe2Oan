@@ -584,6 +584,10 @@
   pointer-events: none;
 }
 
+.faq-btn-right {
+  transform: scaleX(-1);
+}
+
 .faq-btn-go-corners img {
   height: 28px;
   width: auto;
