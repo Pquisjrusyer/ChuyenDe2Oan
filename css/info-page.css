@@ -701,7 +701,422 @@
   letter-spacing: 0.5px;
 }
 
+.info-board-canvas-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.info-board-bg-texture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.info-hero-title-overlay {
+  position: absolute;
+  bottom: clamp(60px, 8vw, 110px);
+  left: clamp(16px, 3.5vw, 48px);
+  max-width: 440px;
+  z-index: 5;
+}
+
+.info-hero-main-title {
+  font-family: 'Space Mono', monospace;
+  font-size: clamp(32px, 3.8vw, 54px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 0 30px rgba(217, 183, 76, 0.4);
+}
+
+.info-hero-sub-desc {
+  font-family: 'Roboto', 'Montserrat', sans-serif;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 1.6;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+}
+
+.info-board-hud-objective {
+  position: absolute;
+  top: clamp(16px, 2.5vw, 36px);
+  left: clamp(16px, 2.5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-left: 3px solid #d9b74c;
+}
+
+.hud-goal-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hud-diamond-icon {
+  color: #d9b74c;
+  font-size: 14px;
+}
+
+.hud-goal-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.hud-status-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #d9b74c;
+}
+
+.hud-subtext {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #a6a6a6;
+}
+
+.info-character-hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.char-hotspot-btn {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #d9b74c;
+  background: rgba(217, 183, 76, 0.25);
+  box-shadow: 0 0 15px rgba(217, 183, 76, 0.7);
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulseHotspot 2s infinite;
+}
+
+.char-hotspot-btn.active,
+.char-hotspot-btn:hover {
+  background: rgba(255, 215, 0, 0.85);
+  border-color: #ffffff;
+  transform: translate(-50%, -50%) scale(1.35);
+  box-shadow: 0 0 25px #ffd700, 0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes pulseHotspot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(217, 183, 76, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(217, 183, 76, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(217, 183, 76, 0);
+  }
+}
+
+.info-profile-sidebar {
+  position: absolute;
+  top: clamp(20px, 3.5vw, 60px);
+  right: clamp(16px, 2.5vw, 40px);
+  width: clamp(220px, 20vw, 290px);
+  background: rgba(10, 4, 4, 0.9);
+  border: 1px solid rgba(120, 20, 20, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 16px;
+  box-sizing: border-box;
+  z-index: 5;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(100, 0, 0, 0.4);
+}
+
+.profile-portrait-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #000;
+  border: 1px solid rgba(217, 183, 76, 0.6);
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.9), 0 0 15px rgba(217, 183, 76, 0.2);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.profile-portrait-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(108%) brightness(96%);
+  transition: opacity 0.25s ease, transform 0.4s ease;
+}
+
+.profile-name-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.profile-years-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #d9b74c;
+  margin-bottom: 12px;
+}
+
+.profile-desc-list {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12.5px;
+  font-weight: 300;
+  color: #c7c6c6;
+  line-height: 18px;
+  margin-bottom: 12px;
+}
+
+.profile-desc-list p {
+  margin: 0 0 6px 0;
+}
+
+.profile-warning-red {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  color: #ff3333;
+  line-height: 15px;
+  text-transform: uppercase;
+  border-top: 1px solid rgba(100, 0, 0, 0.4);
+  padding-top: 8px;
+}
+
+.info-board-hotkey-bar {
+  position: absolute;
+  bottom: clamp(16px, 2.5vw, 36px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 24px);
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  padding: 8px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+.hotkey-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  color: #c7c6c6;
+}
+
+.hk-key {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.hk-icon {
+  font-size: 14px;
+}
+
 @media (max-width: 992px) {
+  .info-hero-board-section {
+    padding: 75px 12px 30px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .info-hero-glass-left,
+  .info-hero-glass-right {
+    display: none !important;
+  }
+
+  .info-board-container {
+    width: 100% !important;
+    max-width: 480px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .info-board-canvas {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    aspect-ratio: auto !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  /* 1. TOP: Interactive Frame with Board Picture & Hotspot Pins & Objective HUD */
+  .info-board-canvas-inner {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    aspect-ratio: 16 / 10 !important;
+    min-height: 230px !important;
+    border: 1px solid rgba(217, 183, 76, 0.4) !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.9) !important;
+    background: #000 !important;
+  }
+
+  .info-board-bg-texture {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .info-board-hud-objective {
+    position: absolute !important;
+    top: 8px !important;
+    left: 8px !important;
+    padding: 6px 10px !important;
+    gap: 4px !important;
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .hud-goal-text {
+    font-size: 11px !important;
+  }
+
+  .hud-status-text {
+    font-size: 10px !important;
+  }
+
+  .hud-subtext {
+    display: none !important;
+  }
+
+  .char-hotspot-btn {
+    width: 20px !important;
+    height: 20px !important;
+    border-width: 1.5px !important;
+  }
+
+  .char-hotspot-btn.active,
+  .char-hotspot-btn:hover {
+    transform: translate(-50%, -50%) scale(1.3) !important;
+  }
+
+  /* 2. MIDDLE: "THÔNG TIN" Title & Description moved DOWN BELOW as requested */
+  .info-hero-title-overlay {
+    position: static !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    text-align: center !important;
+    padding: 16px 8px 4px !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  .info-hero-main-title {
+    font-size: clamp(24px, 6.5vw, 30px) !important;
+    margin: 0 0 6px 0 !important;
+    letter-spacing: 1px !important;
+    color: #ffd700 !important;
+  }
+
+  .info-hero-sub-desc {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    color: #c7c6c6 !important;
+    margin: 0 auto !important;
+  }
+
+  /* 3. BOTTOM: Character Profile Dossier Card */
+  .info-profile-sidebar {
+    position: static !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    margin: 12px auto 0 !important;
+    border-radius: 6px !important;
+    padding: 14px !important;
+    background: rgba(18, 4, 4, 0.96) !important;
+    border: 1px solid rgba(217, 183, 76, 0.45) !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.8), 0 0 15px rgba(153, 0, 0, 0.35) !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  .profile-portrait-box {
+    width: 75px !important;
+    min-width: 75px !important;
+    aspect-ratio: 1 !important;
+    margin-bottom: 0 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .profile-info-body {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .profile-name-text {
+    font-size: 14px !important;
+    margin: 0 0 2px 0 !important;
+  }
+
+  .profile-years-text {
+    font-size: 11px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .profile-desc-list {
+    font-size: 11px !important;
+    line-height: 15px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .profile-desc-list p {
+    margin: 0 0 2px 0 !important;
+  }
+
+  .profile-warning-red {
+    font-size: 10px !important;
+    line-height: 13px !important;
+    padding-top: 4px !important;
+  }
+
+  /* 4. Hide keyboard hotkey bar on mobile touch */
+  .info-board-hotkey-bar {
+    display: none !important;
+  }
+
   .info-story-gallery-grid {
     grid-template-columns: 1fr;
   }

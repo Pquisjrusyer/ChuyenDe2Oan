@@ -842,6 +842,8 @@
 @media (max-width: 992px) {
   .comm-news-cards-grid {
     grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 20px;
   }
 
   .comm-sub-char-figure {
@@ -866,6 +868,148 @@
 
   .comm-form-actions-row {
     flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 640px) {
+  .community-hero-section {
+    padding: 85px 14px 40px;
+    min-height: auto;
+  }
+
+  .community-hero-title {
+    font-size: clamp(28px, 7.5vw, 36px);
+  }
+
+  .community-hero-subtitle {
+    font-size: 13.5px;
+  }
+
+  .community-hero-actions {
+    gap: 16px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-comm-login {
+    width: min(240px, 85vw);
+    height: 52px;
+  }
+
+  .btn-comm-login-text {
+    font-size: 20px;
+  }
+
+  .btn-comm-join-figma {
+    width: min(260px, 90vw);
+    height: 60px;
+  }
+
+  .comm-fp1,
+  .comm-fp3,
+  .comm-fp5 {
+    height: 60px;
+  }
+
+  .comm-fp2,
+  .comm-fp4 {
+    height: 60px;
+    background-size: 25px 60px;
+  }
+
+  .comm-join-caption {
+    font-size: 17px;
+  }
+
+  /* News Section on Mobile */
+  .community-news-section {
+    padding: 40px 0;
+  }
+
+  .comm-header-bracket-row {
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .comm-bracket-left,
+  .comm-bracket-right {
+    height: 18px;
+  }
+
+  .comm-news-main-title {
+    font-size: clamp(20px, 5.5vw, 26px);
+    letter-spacing: -0.4px;
+  }
+
+  .comm-news-subtitle {
+    font-size: 13px;
+  }
+
+  .comm-news-cards-grid {
+    padding: 0 14px;
+    gap: 18px;
+  }
+
+  .comm-article-card {
+    flex-direction: column;
+    padding: 16px;
+    gap: 14px;
+    border-radius: 8px;
+  }
+
+  .comm-card-thumb-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-height: 200px;
+    border-radius: 6px;
+  }
+
+  .comm-card-body {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .comm-card-title {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .comm-card-meta {
+    font-size: 11px;
+  }
+
+  .comm-card-desc {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .comm-card-tags-row {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .comm-card-tag-badge {
+    font-size: 10.5px;
+    padding: 3px 8px;
+  }
+
+  /* Subscribe Section on Mobile */
+  .comm-sub-tag-badge {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    padding: 16px 12px;
+  }
+
+  .comm-sub-heading-bold {
+    font-size: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .comm-sub-subheading-light {
+    font-size: 13px;
   }
 }
 

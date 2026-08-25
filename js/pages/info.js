@@ -182,27 +182,53 @@ export async function renderInfo(container) {
           
           <!-- Board Interactive Canvas Frame -->
           <div class="info-board-canvas" data-node-id="849:765">
-            <img src="./assets/info-hero-board.png" alt="Gia Phả Họ Hứa" class="info-board-bg-texture" />
             
-            <!-- OLD SCRATCHED MIRROR / GLASS REFLECTION ON 2 SIDES (Figma 954:397857) -->
-            <div class="info-hero-glass-left">
-              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
-            </div>
-            <div class="info-hero-glass-right">
-              <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
-            </div>
-
-            <!-- Objective Clue HUD (Top Left) -->
-            <div class="info-board-hud-objective trailer-scroll-reveal trailer-reveal-fade">
-              <div class="hud-goal-badge">
-                <span class="hud-diamond-icon">◇</span>
-                <span class="hud-goal-text">Giải mã gia phả họ Hứa</span>
+            <div class="info-board-canvas-inner">
+              <img src="./assets/info-hero-board.png" alt="Gia Phả Họ Hứa" class="info-board-bg-texture" />
+              
+              <!-- OLD SCRATCHED MIRROR / GLASS REFLECTION ON 2 SIDES (Figma 954:397857) -->
+              <div class="info-hero-glass-left">
+                <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
               </div>
-              <div class="hud-status-text">Đã kết nối: 3/5</div>
-              <div class="hud-subtext">Bí mật gia tộc vẫn còn ẩn giấu.</div>
+              <div class="info-hero-glass-right">
+                <img src="./assets/antique-scratched-mirror-overlay.jpg" alt="" class="glass-flank-img" />
+              </div>
+
+              <!-- Objective Clue HUD (Top Left) -->
+              <div class="info-board-hud-objective trailer-scroll-reveal trailer-reveal-fade">
+                <div class="hud-goal-badge">
+                  <span class="hud-diamond-icon">◇</span>
+                  <span class="hud-goal-text">Giải mã gia phả họ Hứa</span>
+                </div>
+                <div class="hud-status-text">Đã kết nối: 3/5</div>
+                <div class="hud-subtext">Bí mật gia tộc vẫn còn ẩn giấu.</div>
+              </div>
+
+              <!-- All 12 Interactive Character Hotspots on Board -->
+              <div class="info-character-hotspots">
+                <!-- Row 1: Patriarchs -->
+                <button class="char-hotspot-btn" data-char="hua-tong-chi" style="top: 23.4%; left: 38.9%;" title="Hứa Tông Chi (1868 - 1935)"></button>
+                <button class="char-hotspot-btn" data-char="tran-thi-nga" style="top: 23.4%; left: 55.0%;" title="Trần Thị Nga (1870 - 1942)"></button>
+
+                <!-- Row 2: Generation 2 -->
+                <button class="char-hotspot-btn" data-char="hua-ba-thang" style="top: 40.4%; left: 27.8%;" title="Hứa Bá Thắng (1898 - 1972)"></button>
+                <button class="char-hotspot-btn" data-char="hua-ba-tuong" style="top: 40.4%; left: 41.0%;" title="Hứa Bá Tường (1901 - 1960)"></button>
+                <button class="char-hotspot-btn" data-char="hua-ba-kien" style="top: 40.4%; left: 54.4%;" title="Hứa Bá Kiên (1905 - 1984)"></button>
+                <button class="char-hotspot-btn" data-char="hua-thi-lan" style="top: 40.4%; left: 67.6%;" title="Hứa Thị Lan (1908 - 1991)"></button>
+
+                <!-- Row 3: Generation 3 -->
+                <button class="char-hotspot-btn" data-char="hua-van-cuong" style="top: 59.5%; left: 24.8%;" title="Hứa Văn Cường (1928 - 1998)"></button>
+                <button class="char-hotspot-btn" data-char="nguyen-thi-mai" style="top: 59.5%; left: 38.0%;" title="Nguyễn Thị Mai (1932 - ?)"></button>
+                <button class="char-hotspot-btn active" data-char="hua-minh-duc" style="top: 59.5%; left: 52.6%;" title="Hứa Minh Đức (1930 - 2002)"></button>
+                <button class="char-hotspot-btn" data-char="le-thi-phuong" style="top: 59.5%; left: 65.8%;" title="Lê Thị Phượng (1935 - ?)"></button>
+
+                <!-- Row 4: Generation 4 -->
+                <button class="char-hotspot-btn" data-char="hua-an" style="top: 79.7%; left: 38.9%;" title="Hứa An (1965 - 1985)"></button>
+                <button class="char-hotspot-btn" data-char="unknown-descendant" style="top: 79.7%; left: 52.0%;" title="? (1969 - ?)"></button>
+              </div>
             </div>
 
-            <!-- Page Title Overlay (Left Center) -->
+            <!-- Page Title Overlay (Left Center on Desktop, Below Board on Mobile) -->
             <div class="info-hero-title-overlay trailer-scroll-reveal trailer-reveal-fade-up">
               <h1 class="info-hero-main-title" data-node-id="954:413380">THÔNG TIN</h1>
               <p class="info-hero-sub-desc" data-node-id="954:413381">
@@ -210,30 +236,7 @@ export async function renderInfo(container) {
               </p>
             </div>
 
-            <!-- All 12 Interactive Character Hotspots on Board -->
-            <div class="info-character-hotspots">
-              <!-- Row 1: Patriarchs -->
-              <button class="char-hotspot-btn" data-char="hua-tong-chi" style="top: 23.4%; left: 38.9%;" title="Hứa Tông Chi (1868 - 1935)"></button>
-              <button class="char-hotspot-btn" data-char="tran-thi-nga" style="top: 23.4%; left: 55.0%;" title="Trần Thị Nga (1870 - 1942)"></button>
-
-              <!-- Row 2: Generation 2 -->
-              <button class="char-hotspot-btn" data-char="hua-ba-thang" style="top: 40.4%; left: 27.8%;" title="Hứa Bá Thắng (1898 - 1972)"></button>
-              <button class="char-hotspot-btn" data-char="hua-ba-tuong" style="top: 40.4%; left: 41.0%;" title="Hứa Bá Tường (1901 - 1960)"></button>
-              <button class="char-hotspot-btn" data-char="hua-ba-kien" style="top: 40.4%; left: 54.4%;" title="Hứa Bá Kiên (1905 - 1984)"></button>
-              <button class="char-hotspot-btn" data-char="hua-thi-lan" style="top: 40.4%; left: 67.6%;" title="Hứa Thị Lan (1908 - 1991)"></button>
-
-              <!-- Row 3: Generation 3 -->
-              <button class="char-hotspot-btn" data-char="hua-van-cuong" style="top: 59.5%; left: 24.8%;" title="Hứa Văn Cường (1928 - 1998)"></button>
-              <button class="char-hotspot-btn" data-char="nguyen-thi-mai" style="top: 59.5%; left: 38.0%;" title="Nguyễn Thị Mai (1932 - ?)"></button>
-              <button class="char-hotspot-btn active" data-char="hua-minh-duc" style="top: 59.5%; left: 52.6%;" title="Hứa Minh Đức (1930 - 2002)"></button>
-              <button class="char-hotspot-btn" data-char="le-thi-phuong" style="top: 59.5%; left: 65.8%;" title="Lê Thị Phượng (1935 - ?)"></button>
-
-              <!-- Row 4: Generation 4 -->
-              <button class="char-hotspot-btn" data-char="hua-an" style="top: 79.7%; left: 38.9%;" title="Hứa An (1965 - 1985)"></button>
-              <button class="char-hotspot-btn" data-char="unknown-descendant" style="top: 79.7%; left: 52.0%;" title="? (1969 - ?)"></button>
-            </div>
-
-            <!-- Character Profile Sidebar (Right Side of Board) -->
+            <!-- Character Profile Sidebar (Right Side on Desktop, Below Title on Mobile) -->
             <div class="info-profile-sidebar trailer-scroll-reveal trailer-reveal-right" id="info-char-profile-card">
               <div class="profile-portrait-box">
                 <img src="./assets/portrait-hua-minh-duc.jpg" alt="Hứa Minh Đức" class="profile-portrait-img" id="profile-card-img" />

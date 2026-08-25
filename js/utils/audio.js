@@ -195,16 +195,20 @@ export function isBGMPlaying() {
 }
 
 export function updateSoundButtonsUI(isPlaying) {
-  const soundBtns = document.querySelectorAll('.sound-toggle, #sound-btn');
+  const soundBtns = document.querySelectorAll('.sound-toggle, #sound-btn, #sound-btn-mobile');
   soundBtns.forEach(btn => {
+    const textSpan = btn.querySelector('span');
     if (isPlaying) {
       btn.classList.remove('sound-muted');
       btn.classList.add('sound-playing');
       btn.setAttribute('title', 'Tắt âm lượng');
+      if (textSpan) textSpan.textContent = 'ÂM THANH: BẬT';
     } else {
       btn.classList.add('sound-muted');
       btn.classList.remove('sound-playing');
       btn.setAttribute('title', 'Bật âm lượng');
+      if (textSpan) textSpan.textContent = 'ÂM THANH: TẮT';
     }
   });
 }
+
